@@ -11,11 +11,11 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User1',
+    caption: 'Clause Inc.',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/accord_logo.png'.
-    image: '/img/accord_logo.png',
-    infoLink: 'https://accordproject.org',
+    image: 'img/clause-logo-sm.jpg',
+    infoLink: 'http://clause.io',
     pinned: true,
   },
 ];
