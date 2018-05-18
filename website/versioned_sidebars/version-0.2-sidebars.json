@@ -1,0 +1,23 @@
+{
+  "version-0.2-docs": {
+    "Accord Project": [
+      "version-0.2-accordproject"
+    ],
+    "Cicero": [
+      "version-0.2-cicero",
+      "version-0.2-cicero-installation",
+      "version-0.2-cicero-concepts",
+      "version-0.2-cicero-tutorial_001",
+      "version-0.2-cicero-cli",
+      "version-0.2-cicero-tasks"
+    ],
+    "Ergo": [
+      "version-0.2-ergo"
+    ]
+  },
+  "version-0.2-docs-other": {
+    "API": [
+      "version-0.2-api"
+    ]
+  }
+}
