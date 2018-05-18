@@ -1,0 +1,10 @@
+{
+  "docs": {
+    "Accord Project": ["accordproject"],
+    "Cicero": ["cicero", "cicero-installation", "cicero-concepts", "cicero-tutorial_001", "cicero-cli", "cicero-tasks"],
+    "Ergo": ["ergo"]
+  },
+  "docs-other": {
+    "API": ["api"]
+  }
+}
