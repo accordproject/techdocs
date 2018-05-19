@@ -12,7 +12,7 @@ jobs:
   deploy-website:
     docker:
       # specify the version you desire here
-      - image: circleci/node:8.11-stretch
+      - image: circleci/node:8
 
     steps:
       - checkout
