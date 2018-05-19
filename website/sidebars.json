@@ -5,6 +5,6 @@
     "Ergo": ["ergo", "ergo-installation", "ergo-language", "ergo-conditional-expressions", "ergo-match-expressions"]
   },
   "docs-other": {
-    "API": ["api"]
+    "Foo": ["api"]
   }
 }
