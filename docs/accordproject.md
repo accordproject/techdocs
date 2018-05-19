@@ -5,4 +5,8 @@ title: Accord Project
 
 ## Introduction
 
-This is the introduction to the Accord Project and the various sub-projects.
+The Accord Project has created the following Open Source software packages:
+- Cicero
+- Ergo
+- Verbatim
+
