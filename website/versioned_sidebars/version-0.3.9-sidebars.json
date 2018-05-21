@@ -1,0 +1,29 @@
+{
+  "version-0.3.9-docs": {
+    "Accord Project": [
+      "version-0.3.9-accordproject"
+    ],
+    "Cicero": [
+      "version-0.3.9-cicero",
+      "version-0.3.9-cicero-installation",
+      "version-0.3.9-cicero-concepts",
+      "version-0.3.9-cicero-tutorial_001",
+      "version-0.3.9-cicero-cli",
+      "version-0.3.9-cicero-tasks",
+      "version-0.3.9-cicero-api"
+    ],
+    "Ergo": [
+      "version-0.3.9-ergo",
+      "version-0.3.9-ergo-installation",
+      "version-0.3.9-ergo-language",
+      "version-0.3.9-ergo-conditional-expressions",
+      "version-0.3.9-ergo-match-expressions",
+      "version-0.3.9-ergo-api"
+    ]
+  },
+  "version-0.3.9-docs-other": {
+    "Foo": [
+      "version-0.3.9-api"
+    ]
+  }
+}
