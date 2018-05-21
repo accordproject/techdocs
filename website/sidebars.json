@@ -1,8 +1,8 @@
 {
   "docs": {
     "Accord Project": ["accordproject"],
-    "Cicero": ["cicero", "cicero-installation", "cicero-concepts", "cicero-tutorial_001", "cicero-cli", "cicero-tasks"],
-    "Ergo": ["ergo", "ergo-installation", "ergo-language", "ergo-conditional-expressions", "ergo-match-expressions"]
+    "Cicero": ["cicero", "cicero-installation", "cicero-concepts", "cicero-tutorial_001", "cicero-cli", "cicero-tasks", "cicero-api"],
+    "Ergo": ["ergo", "ergo-installation", "ergo-language", "ergo-conditional-expressions", "ergo-match-expressions", "ergo-api"]
   },
   "docs-other": {
     "Foo": ["api"]
