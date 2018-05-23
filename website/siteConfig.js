@@ -22,7 +22,7 @@ const users = [
 
 const siteConfig = {
   title: 'Accord Project' /* title for your website */,
-  tagline: 'Standards and Open Source code for Smart Legal Contracts',
+  tagline: 'Standards and Open Source Code for Smart Legal Contracts',
   url: 'https://accordproject.netlify.com' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -39,9 +39,6 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'accordproject', label: 'Docs'},
-    {doc: 'api', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
   ],
 
   // If you have users set above, you add it here:

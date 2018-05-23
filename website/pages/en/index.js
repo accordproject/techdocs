@@ -103,20 +103,20 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'Template technology',
+        content: `Create templates for executable natural-language legal contracts and clauses using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
         image: imgUrl('accord_logo.png'),
         imageAlign: 'top',
         title: 'Cicero',
       },
       {
-        content: 'Domain-specific language',
-        image: imgUrl('accord_logo.png'),
+        content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
+        image: imgUrl('ergo-logo.svg'),
         imageAlign: 'top',
         title: 'Ergo',
       },
       {
-        content: 'Microsoft Word Add-in',
-        image: imgUrl('accord_logo.png'),
+        content: `Uses the [Verbatim](${siteConfig.baseUrl}docs/verbatim.html) Word Add-in to create Cicero templates from existing legal contracts and clauses without leaving Microsoft Word!`,
+        image: imgUrl('microsoft-word-logo.png'),
         imageAlign: 'top',
         title: 'Verbatim',
       },
@@ -129,7 +129,7 @@ const FeatureCallout = props => (
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
     <h2>Digitize Legal Contracts</h2>
-    <MarkdownBlock>Use Open Source tools and standards from the Accord Project to digitize new or existing legal contracts</MarkdownBlock>
+    <MarkdownBlock>Use Open Source tools and standards from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.</MarkdownBlock>
   </div>
 );
 
@@ -137,10 +137,10 @@ const LearnHow = props => (
   <Block background="light">
     {[
       {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('accord_logo.png'),
+        content: "Cicero templates are composed of three elements: the Template Grammar (the natural language text for the template), the Template Model (the data model that backs the template), the Logic (the executable business logic for the template). When combined these three elements allow templates to be edited, analyzed, queried and executed.",
+        image: imgUrl('../docs/assets/template.png'),
         imageAlign: 'right',
-        title: 'Learn How',
+        title: 'Templates',
       },
     ]}
   </Block>
@@ -150,7 +150,7 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: 'Talk about trying this out',
+        content: 'You can assemble Smart Legal Contracts from existing Cicero templates [created by the Accord Project community](https://github.com/accordproject/cicero-template-library/tree/master/helloworld), or you can use Accord Project tools to create your own bespoke templates. Get involved by joining the Accord Project Technology Working Group!',
         image: imgUrl('accord_logo.png'),
         imageAlign: 'left',
         title: 'Try it Out',
@@ -163,10 +163,10 @@ const Description = props => (
   <Block background="dark">
     {[
       {
-        content: 'This is another description of how this project is useful',
-        image: imgUrl('accord_logo.png'),
+        content: 'Ergo is a strongly-typed functional programming language designed to capture the legal intent of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.',
+        image: imgUrl('ergo-logo.svg'),
         imageAlign: 'right',
-        title: 'Description',
+        title: 'Ergo',
       },
     ]}
   </Block>

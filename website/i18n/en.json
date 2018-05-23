@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "Standards and Open Source code for Smart Legal Contracts",
+    "tagline": "Standards and Open Source Code for Smart Legal Contracts",
     "accordproject": "Accord Project",
     "api": "API Home",
     "cicero-api": "Cicero API Documentation",
@@ -21,13 +21,12 @@
     "ergo": "Introduction to Ergo",
     "doc4": "Other Document",
     "doc5": "Fifth Document",
+    "verbatim": "Introduction to Verbatim",
     "Docs": "Docs",
-    "API": "API",
-    "Help": "Help",
-    "Blog": "Blog",
     "Accord Project": "Accord Project",
     "Cicero": "Cicero",
     "Ergo": "Ergo",
+    "Verbatim": "Verbatim",
     "Foo": "Foo"
   },
   "pages-strings": {
