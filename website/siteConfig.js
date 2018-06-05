@@ -78,6 +78,12 @@ const siteConfig = {
     theme: 'default',
   },
 
+  algolia: {
+    apiKey: '1679802ddfc315329d6b5f4616b30e51',
+    indexName: 'accordproject_api',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },
+
   // Add custom scripts here that would be placed in <script> tags
   scripts: ['https://buttons.github.io/buttons.js'],
 

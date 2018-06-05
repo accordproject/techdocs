@@ -1,6 +1,7 @@
 ---
-id: accordproject
+id: version-0.3.17-accordproject
 title: Accord Project
+original_id: accordproject
 ---
 
 The Accord Project is an Open Source, open standards, non-profit corporation working to transform contract management and contract automation.

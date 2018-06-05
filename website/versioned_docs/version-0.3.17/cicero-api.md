@@ -1,6 +1,7 @@
 ---
-id: cicero-api
+id: version-0.3.17-cicero-api
 title: Cicero API Documentation
+original_id: cicero-api
 ---
 
 <a name="module_cicero-core"></a>
