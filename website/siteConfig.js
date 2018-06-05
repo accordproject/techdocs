@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: 'Accord Project' /* title for your website */,
   tagline: 'Standards and Open Source Code for Smart Legal Contracts',
-  url: 'https://accordproject.netlify.com' /* your website url */,
+  url: 'https://docs.accordproject.org' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
