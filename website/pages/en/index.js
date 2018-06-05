@@ -109,6 +109,12 @@ const Features = props => (
         title: 'Cicero',
       },
       {
+        content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,
+        image: imgUrl('modelrepo_logo.png'),
+        imageAlign: 'top',
+        title: 'Model Repository',
+      },
+      {
         content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
         image: imgUrl('ergo-logo.svg'),
         imageAlign: 'top',
