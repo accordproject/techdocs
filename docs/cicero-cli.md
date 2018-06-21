@@ -28,12 +28,12 @@ Options:
 
     cicero archive
 
-Options:
-  --help         Show help                                             [boolean]
-  --version      Show version number                                   [boolean]
-  --template     path to the directory with the template                [string]
-  --archiveFile  file name for the archive                              [string]
-  --verbose, -v                                                 [default: false]
+    Options:
+    --help         Show help                                             [boolean]
+    --version      Show version number                                   [boolean]
+    --template     path to the directory with the template                [string]
+    --archiveFile  file name for the archive                              [string]
+    --verbose, -v                                                 [default: false]
 
 # cicero execute
 

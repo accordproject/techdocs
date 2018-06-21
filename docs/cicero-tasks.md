@@ -42,6 +42,7 @@ The template generator will create a basic template with the required files and 
 
 Layout:
 
+```
 package.json
     Metadata for the template (name, version, description etc)
 
@@ -66,6 +67,7 @@ lib/
 
 test/
     A collection of unit tests for the template
+```
 
 ## Grammar
 
