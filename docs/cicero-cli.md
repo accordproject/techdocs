@@ -20,6 +20,21 @@ Options:
     --dsl          path to the clause text
     --verbose, -v                                                 [default: false]
 
+# cicero archive
+
+Creates a Cicero Template Archive (.cta) file from a template stored in a local directory.
+
+Options:
+
+    cicero archive
+
+Options:
+  --help         Show help                                             [boolean]
+  --version      Show version number                                   [boolean]
+  --template     path to the directory with the template                [string]
+  --archiveFile  file name for the archive                              [string]
+  --verbose, -v                                                 [default: false]
+
 # cicero execute
 
 Loads a template from a directory on disk and then attempts to create a clause from input
