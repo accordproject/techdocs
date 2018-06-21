@@ -9,12 +9,15 @@ title: Cicero Quick Start Tutorial
 
 ### Download the Template
 
-You can either [download the latest release archive](https://github.com/accordproject/cicero-template-library/releases) or if you have `git`
-installed simply `git clone` the repository::
+You can download a single template from https://templates.accordproject.org as a zip file. Once downloaded unzip the archive so you can inspect the contents.
+
+If you have `git` installed you can `git clone` the template library to download all the templates, or you can use the "Download" button inside GitHub:
 
     git clone https://github.com/accordproject/cicero-template-library
 
-### Parse 
+### Parse
+
+Using your terminal `cd` into the directory that contains the template you would like to test. In the example below we use the `helloworld` template.
 
 Use the `cicero parse` command to load a template from a directory on disk and then use
 it to parse input text, echoing the result of parsing. If the input text is valid the parsing
@@ -31,20 +34,28 @@ Sample.txt:
 Parsing using the command line:
 
 ```
-    cd cicero-template-library cicero parse --template ./helloworld/ --dsl ./helloworld/sample.txt
-    Setting clause data: {"$class":"io.clause.helloworld.TemplateModel","name":"Dan"}
+    cd cicero-template-library 
+    cicero parse
+```
+
+Show print this output:
+
+```
+{"$class":"org.accordproject.helloworld.HelloWorldClause","clauseId":"684efa6b-252a-49fb-8942-1124d4d46980","name":"Fred Blogs"}
 ```
 
 Or, attempting to parse invalid data will result in line and column information for the syntax
 error.
 
-Sample.txt:
+Edit sample.txt to add text that is not in the grammar file (template.tem) for the template:
 
+Modified text:
 ```
     FUBAR Name of the person to greet: "Dan". Thank you!
 ```
 
-Output:
+Rerun `cicero parse`. The output should now be:
+
 
 ```
     { Error: invalid syntax at line 1 col 1:
@@ -54,7 +65,7 @@ Output:
 
 ### Execute
 
-Use the ``cicero execute`` command to load a template from a directory on disk,
+Use the `cicero execute` command to load a template from a directory on disk,
 instantiate a clause based on input text, and then invoke the clause using an incoming JSON
 payload.
 
@@ -70,7 +81,7 @@ Commands:
 
 ```
     cd cicero-template-library 
-    cicero execute --template ./helloworld/ --dsl ./helloworld/sample.txt --data ./helloworld/data.json
+    cicero execute
 ```
 
 The results of execution (a JSON serialized object) are displayed. They include: 
@@ -78,21 +89,30 @@ The results of execution (a JSON serialized object) are displayed. They include:
 * Details of the clause executed (name, version, SHA256 hash of clause data)
 * The incoming request object 
 * The output response object
+* Output state
+* Emitted events
 
 Example:
 
 ```
-    {
-        "clause":"helloworld@0.0.3-c8d9e40fe7c5a479d1a80bce2d2fdc3c8a240ceb44a031d38cbd619e9b795b60",
-        "request":{
-            "$class":"io.clause.helloworld.Request", "input":"World"
-        }, 
-        "response":{
-            "$class":"io.clause.helloworld.Response", "output":"Hello Dan World",
-            "transactionId":"cf1dabb5-d604-4ffa-8a87-8333e77a735a",
-            "timestamp":"2017-10-31T10:47:42.055Z"
-        }
-    }
+{
+    "clause": "helloworld@0.2.0-192e3614d29d9684ec23ad6d3635988e5e37043f5286ed2d1d854dfbf5d2d18e",
+    "request": {
+        "$class": "org.accordproject.helloworld.MyRequest",
+        "input": "Accord Project"
+    },
+    "response": {
+        "$class": "org.accordproject.helloworld.MyResponse",
+        "output": "Hello Fred Blogs Accord Project",
+        "transactionId": "d4ddaef6-c3a0-4738-b14d-426498aaa04a",
+        "timestamp": "2018-06-21T10:36:44.067Z"
+    },
+    "state": {
+        "$class": "org.accordproject.cicero.contract.AccordContractState",
+        "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+    },
+    "emit": []
+}
 ```
 
 Note that in the response data from the template has been combined with data from the request.
@@ -121,6 +141,8 @@ Run the template generator:
 Give your generator a name (no spaces) and then supply a namespace for your template model (again,
 no spaces). The generator will then create the files and directories required for a basic template
 (based on the helloworld template).
+
+> You may find it easier to edit the grammar, model and logic for your template in VS Code, installing the Accord Project and Hyperledger Composer extensions.
 
 ## Edit the Template Grammar
 
@@ -151,10 +173,9 @@ business logic of your template. Similarly edit the definition of the `Response`
 all the data that the business logic for your template will compute and would like to return to the
 caller.
 
+> Note that you can import common types (address, monetary amount, country code, etc.) from the Accord Project Model Repository: https://models.accordproject.org.
+
 ### Edit the Logic of the Template
 
-Now edit the business logic of the template itself. At present this is expressed as ES 2015
-JavaScript functions (other languages may be supported in the future). Open the file `lib/logic.js`
-and edit the `execute` method to perform the calculations your logic requires. Use the
-`context.request` and `context.data` properties to access the incoming request and the template
-data respectively, setting properties on `context.response` to be returned to the caller.
+Now edit the business logic of the template itself. This is expressed in the Ergo language, which is a strongly-typed function language for contract logic. Open the file `lib/logic.ergo`
+and edit the `helloworld` clause to perform the calculations your logic requires.

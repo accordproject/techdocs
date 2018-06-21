@@ -15,6 +15,7 @@ Cicero Core - defines the core data types for Cicero.
     * [.Metadata](#module_cicero-core.Metadata)
         * [new Metadata(packageJson, readme, samples)](#new_module_cicero-core.Metadata_new)
         * [.getTemplateType()](#module_cicero-core.Metadata+getTemplateType) ⇒ <code>number</code>
+        * [.getLanguage()](#module_cicero-core.Metadata+getLanguage) ⇒ <code>number</code>
         * [.getTargetVersion()](#module_cicero-core.Metadata+getTargetVersion) ⇒ <code>string</code>
         * [.satisfiesTargetVersion()](#module_cicero-core.Metadata+satisfiesTargetVersion) ⇒ <code>string</code>
         * [.getSamples()](#module_cicero-core.Metadata+getSamples) ⇒ <code>object</code>
@@ -38,6 +39,7 @@ Cicero Core - defines the core data types for Cicero.
             * *[.cleanChunk(input)](#module_cicero-core.Template+cleanChunk) ⇒ <code>string</code>*
             * *[.findFirstBinding(propertyName, elements)](#module_cicero-core.Template+findFirstBinding) ⇒ <code>int</code>*
             * *[.getGrammar()](#module_cicero-core.Template+getGrammar) ⇒ <code>String</code>*
+            * *[.getTemplatizedGrammar()](#module_cicero-core.Template+getTemplatizedGrammar) ⇒ <code>String</code>*
             * *[.getName()](#module_cicero-core.Template+getName) ⇒ <code>String</code>*
             * *[.getVersion()](#module_cicero-core.Template+getVersion) ⇒ <code>String</code>*
             * *[.getDescription()](#module_cicero-core.Template+getDescription) ⇒ <code>String</code>*
@@ -47,7 +49,9 @@ Cicero Core - defines the core data types for Cicero.
             * *[.getSerializer()](#module_cicero-core.Template+getSerializer) ⇒ <code>Serializer</code>*
             * *[.getRequestTypes()](#module_cicero-core.Template+getRequestTypes) ⇒ <code>Array</code>*
             * *[.getResponseTypes()](#module_cicero-core.Template+getResponseTypes) ⇒ <code>Array</code>*
+            * *[.getEmitTypes()](#module_cicero-core.Template+getEmitTypes) ⇒ <code>Array</code>*
         * _static_
+            * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
             * *[.compileGrammar(sourceCode)](#module_cicero-core.Template.compileGrammar) ⇒ <code>object</code>*
             * *[.fromArchive(Buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise</code>*
             * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise</code>*
@@ -92,6 +96,7 @@ Defines the metadata for a Template, including the name, version, README markdow
 * [.Metadata](#module_cicero-core.Metadata)
     * [new Metadata(packageJson, readme, samples)](#new_module_cicero-core.Metadata_new)
     * [.getTemplateType()](#module_cicero-core.Metadata+getTemplateType) ⇒ <code>number</code>
+    * [.getLanguage()](#module_cicero-core.Metadata+getLanguage) ⇒ <code>number</code>
     * [.getTargetVersion()](#module_cicero-core.Metadata+getTargetVersion) ⇒ <code>string</code>
     * [.satisfiesTargetVersion()](#module_cicero-core.Metadata+satisfiesTargetVersion) ⇒ <code>string</code>
     * [.getSamples()](#module_cicero-core.Metadata+getSamples) ⇒ <code>object</code>
@@ -126,6 +131,13 @@ Returns either a 0 (for a contract template), or 1 (for a clause template)
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
 **Returns**: <code>number</code> - the template type  
+<a name="module_cicero-core.Metadata+getLanguage"></a>
+
+#### metadata.getLanguage() ⇒ <code>number</code>
+Returns either a 0 (for an ergo template), or 1 (for a javascript template)
+
+**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
+**Returns**: <code>number</code> - the template language  
 <a name="module_cicero-core.Metadata+getTargetVersion"></a>
 
 #### metadata.getTargetVersion() ⇒ <code>string</code>
@@ -227,6 +239,7 @@ template.
         * *[.cleanChunk(input)](#module_cicero-core.Template+cleanChunk) ⇒ <code>string</code>*
         * *[.findFirstBinding(propertyName, elements)](#module_cicero-core.Template+findFirstBinding) ⇒ <code>int</code>*
         * *[.getGrammar()](#module_cicero-core.Template+getGrammar) ⇒ <code>String</code>*
+        * *[.getTemplatizedGrammar()](#module_cicero-core.Template+getTemplatizedGrammar) ⇒ <code>String</code>*
         * *[.getName()](#module_cicero-core.Template+getName) ⇒ <code>String</code>*
         * *[.getVersion()](#module_cicero-core.Template+getVersion) ⇒ <code>String</code>*
         * *[.getDescription()](#module_cicero-core.Template+getDescription) ⇒ <code>String</code>*
@@ -236,7 +249,9 @@ template.
         * *[.getSerializer()](#module_cicero-core.Template+getSerializer) ⇒ <code>Serializer</code>*
         * *[.getRequestTypes()](#module_cicero-core.Template+getRequestTypes) ⇒ <code>Array</code>*
         * *[.getResponseTypes()](#module_cicero-core.Template+getResponseTypes) ⇒ <code>Array</code>*
+        * *[.getEmitTypes()](#module_cicero-core.Template+getEmitTypes) ⇒ <code>Array</code>*
     * _static_
+        * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
         * *[.compileGrammar(sourceCode)](#module_cicero-core.Template.compileGrammar) ⇒ <code>object</code>*
         * *[.fromArchive(Buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise</code>*
         * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise</code>*
@@ -353,10 +368,17 @@ Finds the first binding for the given property
 <a name="module_cicero-core.Template+getGrammar"></a>
 
 #### *template.getGrammar() ⇒ <code>String</code>*
-Get the grammar for the template
+Get the (compiled) grammar for the template
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>String</code> - - the grammar for the template  
+<a name="module_cicero-core.Template+getTemplatizedGrammar"></a>
+
+#### *template.getTemplatizedGrammar() ⇒ <code>String</code>*
+Returns the templatized grammar
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>String</code> - the contents of the templatized grammar  
 <a name="module_cicero-core.Template+getName"></a>
 
 #### *template.getName() ⇒ <code>String</code>*
@@ -429,6 +451,28 @@ Provides a list of the return types that of this Template. Types use the fully-q
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>Array</code> - a list of the response types  
+<a name="module_cicero-core.Template+getEmitTypes"></a>
+
+#### *template.getEmitTypes() ⇒ <code>Array</code>*
+Provides a list of the emit types that of this Template. Types use the fully-qualified form.
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>Array</code> - a list of the response types  
+<a name="module_cicero-core.Template.instanceOf"></a>
+
+#### *Template.instanceOf(classDeclaration, fqt) ⇒ <code>boolean</code>*
+Check to see if a ClassDeclaration is an instance of the specified fully qualified
+type name.
+
+**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>boolean</code> - True if classDeclaration an instance of the specified fully
+qualified type name, false otherwise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| classDeclaration | <code>ClassDeclaration</code> | The class to test |
+| fqt | <code>String</code> | The fully qualified type name. |
+
 <a name="module_cicero-core.Template.compileGrammar"></a>
 
 #### *Template.compileGrammar(sourceCode) ⇒ <code>object</code>*

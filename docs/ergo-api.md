@@ -17,6 +17,14 @@ title: Ergo API Documentation
 </dd>
 </dl>
 
+## Functions
+
+<dl>
+<dt><a href="#compare">compare(expected, actual)</a> ⇒ <code>object</code></dt>
+<dd><p>Compare actual result and expected result</p>
+</dd>
+</dl>
+
 <a name="Commands"></a>
 
 ## Commands
@@ -34,7 +42,7 @@ Utility class that implements the commands exposed by the Ergo CLI.
 <a name="Commands.compile"></a>
 
 ### Commands.compile(ergoPath, ctoPaths, target, link) ⇒ <code>object</code>
-Compile Ergo
+Compile Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
 **Returns**: <code>object</code> - Promise to the compiled JavaScript code  
@@ -49,7 +57,7 @@ Compile Ergo
 <a name="Commands.execute"></a>
 
 ### Commands.execute(ergoPath, ctoPaths, contractPath, requestsPath, statePath, contractName) ⇒ <code>object</code>
-Execute Ergo
+Execute Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
 **Returns**: <code>object</code> - Promise to the result of execution  
@@ -237,7 +245,9 @@ Utility class that implements the internals for Ergo.
 
 * [ErgoEngine](#ErgoEngine)
     * [.executeErgoCode(ergoCode, contractJson, requestJson, stateJson, contractName)](#ErgoEngine.executeErgoCode) ⇒ <code>object</code>
+    * [.initErgoCode(ergoCode, contractJson, requestJson, contractName)](#ErgoEngine.initErgoCode) ⇒ <code>object</code>
     * [.execute(ergoText, ctoTexts, contractJson, requestJson, stateJson, contractName)](#ErgoEngine.execute) ⇒ <code>object</code>
+    * [.init(ergoText, ctoTexts, contractJson, requestJson, contractName)](#ErgoEngine.init) ⇒ <code>object</code>
 
 <a name="ErgoEngine.executeErgoCode"></a>
 
@@ -255,6 +265,21 @@ Execute compiled Ergo code
 | stateJson | <code>object</code> | the state in JSON |
 | contractName | <code>string</code> | of the contract to execute |
 
+<a name="ErgoEngine.initErgoCode"></a>
+
+### ErgoEngine.initErgoCode(ergoCode, contractJson, requestJson, contractName) ⇒ <code>object</code>
+Initialize state
+
+**Kind**: static method of [<code>ErgoEngine</code>](#ErgoEngine)  
+**Returns**: <code>object</code> - Promise to the result of initialization  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ergoCode | <code>string</code> | JavaScript code for ergo logic |
+| contractJson | <code>object</code> | the contract data in JSON |
+| requestJson | <code>object</code> | the request transaction in JSON |
+| contractName | <code>string</code> | of the contract to initialize |
+
 <a name="ErgoEngine.execute"></a>
 
 ### ErgoEngine.execute(ergoText, ctoTexts, contractJson, requestJson, stateJson, contractName) ⇒ <code>object</code>
@@ -271,6 +296,35 @@ Execute Ergo (JavaScript)
 | requestJson | <code>object</code> | the request transaction in JSON |
 | stateJson | <code>object</code> | the state in JSON |
 | contractName | <code>string</code> | of the contract to execute |
+
+<a name="ErgoEngine.init"></a>
+
+### ErgoEngine.init(ergoText, ctoTexts, contractJson, requestJson, contractName) ⇒ <code>object</code>
+Initialize Ergo contract state (JavaScript)
+
+**Kind**: static method of [<code>ErgoEngine</code>](#ErgoEngine)  
+**Returns**: <code>object</code> - Promise to the result of execution  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ergoText | <code>string</code> | text for Ergo code |
+| ctoTexts | <code>string</code> | texts for CTO models |
+| contractJson | <code>object</code> | the contract data in JSON |
+| requestJson | <code>object</code> | the request transaction in JSON |
+| contractName | <code>string</code> | of the contract to execute |
+
+<a name="compare"></a>
+
+## compare(expected, actual) ⇒ <code>object</code>
+Compare actual result and expected result
+
+**Kind**: global function  
+**Returns**: <code>object</code> - Promise to the comparison  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| expected | <code>string</code> | the result as specified in the test workload |
+| actual | <code>string</code> | the result as returned by the engine |
 
 
 * * *

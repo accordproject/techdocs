@@ -62,7 +62,7 @@ models/
     and the Request and Response transactions.
 
 lib/
-    A collection of ES 2015 JavaScript files that implement the business logic for the template
+    A collection of Ergo files that implement the business logic for the template
 
 test/
     A collection of unit tests for the template
@@ -90,7 +90,7 @@ popular unit testing frameworks to implement the tests (mocha, chai, sinon etc).
 The Cicero template library is stored in a GitHub repository: https://github.com/accordproject/cicero-template-library
 
 To contribute new templates please fork the repository and then create a pull request. Note that templates
-should have unit tests. See the ``acceptance-of-delivery`` template for an example unit test.
+should have unit tests. See the ``acceptance-of-delivery`` template for an example with unit tests.
 
 # Executing a Clause
 
@@ -107,15 +107,24 @@ To execute a Clause you create an instance of the ``Engine`` and then call ``exe
 clause and the transaction::
 
 ```
-    // create the engine
-    const engine = new Engine();
-    const request = {'$class':'io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest','forceMajeure':false,'agreedDelivery':'2017-10-07T16:38:01.412Z','goodsValue':200,'transactionId':'402c8f50-9e61-433e-a7c1-afe61c06ef00','timestamp':'2017-11-12T17:38:01.412Z'};
-    const result = await engine.execute(clause, request)
+    const request = {
+        '$class': 'org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest',
+        'forceMajeure': false,
+        'agreedDelivery': '2017-10-07T16:38:01.412Z',
+        'goodsValue': 200,
+        'transactionId': '402c8f50-9e61-433e-a7c1-afe61c06ef00',
+        'timestamp': '2017-11-12T17:38:01.412Z'
+    };
+    const state = {};
+    state.$class = 'org.accordproject.cicero.contract.AccordContractState';
+    state.stateId = 'org.accordproject.cicero.contract.AccordContractState#1';
+    const result = await engine.execute(clause, request, state);
 ```
 
 ## Hyperledger Composer
 
-TBD
+A tutorial that shows how to integrate Cicero with Hyperledger Composer is available here:
+https://github.com/accordproject/cicero-perishable-network
 
 ## Hyperledger Fabric 1.1
 
