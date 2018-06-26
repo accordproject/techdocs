@@ -1,0 +1,37 @@
+{
+  "version-0.4.5-docs": {
+    "Accord Project": [
+      "version-0.4.5-accordproject",
+      "version-0.4.5-accordproject-tools"
+    ],
+    "Cicero": [
+      "version-0.4.5-cicero",
+      "version-0.4.5-cicero-concepts",
+      "version-0.4.5-cicero-tutorial_001",
+      "version-0.4.5-cicero-tasks",
+      "version-0.4.5-cicero-cli",
+      "version-0.4.5-cicero-api"
+    ],
+    "Ergo": [
+      "version-0.4.5-ergo-intro-overview",
+      "version-0.4.5-ergo-intro-examples",
+      "version-0.4.5-ergo-lang",
+      "version-0.4.5-ergo-ref-lexical",
+      "version-0.4.5-ergo-ref-conditional-expressions",
+      "version-0.4.5-ergo-ref-match-expressions",
+      "version-0.4.5-ergo-spec-overview",
+      "version-0.4.5-ergo-comp-architecture",
+      "version-0.4.5-ergo-cli",
+      "version-0.4.5-ergo-api"
+    ],
+    "Verbatim": [
+      "version-0.4.5-verbatim"
+    ],
+    "Model Repository": [
+      "version-0.4.5-model-repository"
+    ],
+    "Template Repository": [
+      "version-0.4.5-template-repository"
+    ]
+  }
+}

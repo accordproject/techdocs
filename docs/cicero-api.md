@@ -1,7 +1,23 @@
 ---
 id: cicero-api
-title: Cicero API Documentation
+title: JavaScript API
 ---
+
+## Modules
+
+<dl>
+<dt><a href="#module_cicero-core">cicero-core</a></dt>
+<dd><p>Cicero Core - defines the core data types for Cicero.</p>
+</dd>
+</dl>
+
+## Functions
+
+<dl>
+<dt><a href="#isJSON">isJSON(str)</a> ⇒ <code>boolean</code></dt>
+<dd><p>Helper function to test is a string is a stringified version of a JSON object</p>
+</dd>
+</dl>
 
 <a name="module_cicero-core"></a>
 
@@ -43,6 +59,7 @@ Cicero Core - defines the core data types for Cicero.
             * *[.getName()](#module_cicero-core.Template+getName) ⇒ <code>String</code>*
             * *[.getVersion()](#module_cicero-core.Template+getVersion) ⇒ <code>String</code>*
             * *[.getDescription()](#module_cicero-core.Template+getDescription) ⇒ <code>String</code>*
+            * *[.getHash()](#module_cicero-core.Template+getHash) ⇒ <code>string</code>*
             * *[.toArchive([options])](#module_cicero-core.Template+toArchive) ⇒ <code>Buffer</code>*
             * *[.getIntrospector()](#module_cicero-core.Template+getIntrospector) ⇒ <code>Introspector</code>*
             * *[.getFactory()](#module_cicero-core.Template+getFactory) ⇒ <code>Factory</code>*
@@ -50,10 +67,12 @@ Cicero Core - defines the core data types for Cicero.
             * *[.getRequestTypes()](#module_cicero-core.Template+getRequestTypes) ⇒ <code>Array</code>*
             * *[.getResponseTypes()](#module_cicero-core.Template+getResponseTypes) ⇒ <code>Array</code>*
             * *[.getEmitTypes()](#module_cicero-core.Template+getEmitTypes) ⇒ <code>Array</code>*
+            * *[.getStateTypes()](#module_cicero-core.Template+getStateTypes) ⇒ <code>Array</code>*
         * _static_
             * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
             * *[.compileGrammar(sourceCode)](#module_cicero-core.Template.compileGrammar) ⇒ <code>object</code>*
             * *[.fromArchive(Buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise</code>*
+            * *[.fromUrl(url, options)](#module_cicero-core.Template.fromUrl) ⇒ <code>Promise</code>*
             * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise</code>*
     * *[.TemplateInstance](#module_cicero-core.TemplateInstance)*
         * *[new TemplateInstance(template)](#new_module_cicero-core.TemplateInstance_new)*
@@ -243,6 +262,7 @@ template.
         * *[.getName()](#module_cicero-core.Template+getName) ⇒ <code>String</code>*
         * *[.getVersion()](#module_cicero-core.Template+getVersion) ⇒ <code>String</code>*
         * *[.getDescription()](#module_cicero-core.Template+getDescription) ⇒ <code>String</code>*
+        * *[.getHash()](#module_cicero-core.Template+getHash) ⇒ <code>string</code>*
         * *[.toArchive([options])](#module_cicero-core.Template+toArchive) ⇒ <code>Buffer</code>*
         * *[.getIntrospector()](#module_cicero-core.Template+getIntrospector) ⇒ <code>Introspector</code>*
         * *[.getFactory()](#module_cicero-core.Template+getFactory) ⇒ <code>Factory</code>*
@@ -250,10 +270,12 @@ template.
         * *[.getRequestTypes()](#module_cicero-core.Template+getRequestTypes) ⇒ <code>Array</code>*
         * *[.getResponseTypes()](#module_cicero-core.Template+getResponseTypes) ⇒ <code>Array</code>*
         * *[.getEmitTypes()](#module_cicero-core.Template+getEmitTypes) ⇒ <code>Array</code>*
+        * *[.getStateTypes()](#module_cicero-core.Template+getStateTypes) ⇒ <code>Array</code>*
     * _static_
         * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
         * *[.compileGrammar(sourceCode)](#module_cicero-core.Template.compileGrammar) ⇒ <code>object</code>*
         * *[.fromArchive(Buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise</code>*
+        * *[.fromUrl(url, options)](#module_cicero-core.Template.fromUrl) ⇒ <code>Promise</code>*
         * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise</code>*
 
 <a name="new_module_cicero-core.Template_new"></a>
@@ -401,6 +423,13 @@ Returns the description for this template
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>String</code> - the description of this template  
+<a name="module_cicero-core.Template+getHash"></a>
+
+#### *template.getHash() ⇒ <code>string</code>*
+Gets a content based SHA-256 hash for this template
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>string</code> - the SHA-256 hash in hex format  
 <a name="module_cicero-core.Template+toArchive"></a>
 
 #### *template.toArchive([options]) ⇒ <code>Buffer</code>*
@@ -447,17 +476,24 @@ Provides a list of the input types that are accepted by this Template. Types use
 <a name="module_cicero-core.Template+getResponseTypes"></a>
 
 #### *template.getResponseTypes() ⇒ <code>Array</code>*
-Provides a list of the return types that of this Template. Types use the fully-qualified form.
+Provides a list of the response types that are returned by this Template. Types use the fully-qualified form.
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>Array</code> - a list of the response types  
 <a name="module_cicero-core.Template+getEmitTypes"></a>
 
 #### *template.getEmitTypes() ⇒ <code>Array</code>*
-Provides a list of the emit types that of this Template. Types use the fully-qualified form.
+Provides a list of the emit types that are emitted by this Template. Types use the fully-qualified form.
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Array</code> - a list of the response types  
+**Returns**: <code>Array</code> - a list of the emit types  
+<a name="module_cicero-core.Template+getStateTypes"></a>
+
+#### *template.getStateTypes() ⇒ <code>Array</code>*
+Provides a list of the state types that are expected by this Template. Types use the fully-qualified form.
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>Array</code> - a list of the state types  
 <a name="module_cicero-core.Template.instanceOf"></a>
 
 #### *Template.instanceOf(classDeclaration, fqt) ⇒ <code>boolean</code>*
@@ -488,14 +524,27 @@ Compiles a Nearley grammar to its AST
 <a name="module_cicero-core.Template.fromArchive"></a>
 
 #### *Template.fromArchive(Buffer) ⇒ <code>Promise</code>*
-Create a Clause from an archive.
+Create a template from an archive.
 
 **Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>Promise</code> - a Promise to the instantiated business network  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| Buffer | <code>Buffer</code> | the Buffer to a zip archive |
+| Buffer | <code>Buffer</code> | the Buffer to a zip or cta archive |
+
+<a name="module_cicero-core.Template.fromUrl"></a>
+
+#### *Template.fromUrl(url, options) ⇒ <code>Promise</code>*
+Create a template from an URL.
+
+**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>Promise</code> - a Promise to the instantiated business network  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| url | <code>String</code> | the URL to a zip or cta archive |
+| options | <code>object</code> | additional options |
 
 <a name="module_cicero-core.Template.fromDirectory"></a>
 
@@ -633,7 +682,15 @@ Returns a JSON representation of the clause
 
 **Kind**: instance method of [<code>TemplateInstance</code>](#module_cicero-core.TemplateInstance)  
 **Returns**: <code>object</code> - the JS object for serialization  
+<a name="isJSON"></a>
 
-* * *
+## isJSON(str) ⇒ <code>boolean</code>
+Helper function to test is a string is a stringified version of a JSON object
 
-&copy; Clause Inc.
+**Kind**: global function  
+**Returns**: <code>boolean</code> - - true iff the string can be parsed as JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| str | <code>string</code> | the input string to test |
+

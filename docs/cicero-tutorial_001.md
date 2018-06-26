@@ -1,6 +1,6 @@
 ---
 id: cicero-tutorial_001
-title: Cicero Quick Start Tutorial
+title: Quick Start Tutorial
 ---
 
 # Tutorial 1 : Quick Start
