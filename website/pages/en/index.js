@@ -76,10 +76,14 @@ class HomeSplash extends React.Component {
     let language = this.props.language || '';
     return (
       <SplashContainer>
-        <Logo img_src={imgUrl('accord_logo.png')} />
+        
         <div className="inner">
+          <h2 className="projectTitle">
+                <img style={{width: '100px'}} src={imgUrl('accord_icon.png')} />
+          </h2>
           <ProjectTitle />
           <PromoSection>
+            <Button href={docUrl('accordproject.html', this.props.language)}>Documentation</Button>
             <Button href="#try">Try It Out</Button>
             <Button href="https://github.com/accordproject">Code</Button>
             <Button href="https://accord-project.slack.com/messages/C7U521CTG">Slack</Button>
@@ -104,43 +108,51 @@ const Features = props => (
     {[
       {
         content: `Create templates for executable natural-language legal contracts and clauses using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
-        image: imgUrl('accord_logo.png'),
-        imageAlign: 'top',
         title: 'Cicero',
       },
       {
-        content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,
-        image: imgUrl('modelrepo_logo.png'),
-        imageAlign: 'top',
-        title: 'Model Repository',
-      },
-      {
         content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
-        image: imgUrl('ergo-logo.svg'),
-        imageAlign: 'top',
         title: 'Ergo',
       },
       {
-        content: `Uses the [Verbatim](${siteConfig.baseUrl}docs/verbatim.html) Word Add-in to create Cicero templates from existing legal contracts and clauses without leaving Microsoft Word!`,
-        image: imgUrl('microsoft-word-logo.png'),
-        imageAlign: 'top',
-        title: 'Verbatim',
+        content: `Use Open Source contract templates from the [Template Repository](${siteConfig.baseUrl}docs/template-repository.html).`,
+        title: 'Template Repository',
+      },
+      {
+        content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,
+        title: 'Model Repository',
       },
   ]}
   </Block>
 );
 
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Digitize Legal Contracts</h2>
-    <MarkdownBlock>Use Open Source tools and standards from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.</MarkdownBlock>
-  </div>
+const TryOut = props => (
+  <Block background="light" id="try">
+    {[
+      {
+        content: 'You can try out a live version of Ergo in the <a href="https://accordproject.github.io/ergo-playground">playground</a>. Pick an existing Accord Project legal template and press run to see it execute! <br/><br/>Experiment with changes to the logic or the request to see how it affects the contract response.',
+        image: imgUrl('playground.png'),
+        imageAlign: 'right',
+        title: 'Try Online',
+      },
+    ]}
+  </Block>
 );
 
-const LearnHow = props => (
+
+const FeatureCallout = props => (
   <Block background="light">
+    {[
+      {
+        content: "Use Open Source tools and standards from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.",
+        title: 'Digitize Legal Contracts',
+      }
+    ]}
+  </Block>
+);
+
+const Templates = props => (
+  <Block>
     {[
       {
         content: "Cicero templates are composed of three elements: the Template Grammar (the natural language text for the template), the Template Model (the data model that backs the template), the Logic (the executable business logic for the template). When combined these three elements allow templates to be edited, analyzed, queried and executed.",
@@ -152,27 +164,41 @@ const LearnHow = props => (
   </Block>
 );
 
-const TryOut = props => (
-  <Block id="try">
+
+const Grammar = props => (
+  <Block background="dark" id="accord">
     {[
       {
-        content: 'You can assemble Smart Legal Contracts from existing Cicero templates [created by the Accord Project community](https://github.com/accordproject/cicero-template-library/tree/master/helloworld), or you can use Accord Project tools to create your own bespoke templates. Get involved by joining the Accord Project Technology Working Group!',
-        image: imgUrl('accord_logo.png'),
+        content: 'Bind natural language clauses and contracts to their data and logic through a template grammar.',
+        image: imgUrl('grammar.png'),
         imageAlign: 'left',
-        title: 'Try it Out',
+        title: 'Natural Language',
       },
     ]}
   </Block>
 );
 
-const Description = props => (
+const Ergo = props => (
   <Block background="dark">
     {[
       {
         content: 'Ergo is a strongly-typed functional programming language designed to capture the legal intent of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.',
-        image: imgUrl('ergo-logo.svg'),
-        imageAlign: 'right',
-        title: 'Ergo',
+        image: imgUrl('ergo-vscode.png'),
+        imageAlign: 'left',
+        title: 'Logic',
+      },
+    ]}
+  </Block>
+);
+
+const Model = props => (
+  <Block background="dark">
+    {[
+      {
+        content: 'The template model defines the structure of data that are used in the natural language and logic. <br/><br/>Cicero templates use the <a href="https://hyperledger.github.io/composer/latest/reference/cto_language.htm">Hyperledger Composer Modeling Language</a>.',
+        image: imgUrl('model-vscode.png'),
+        imageAlign: 'left',
+        title: 'Model',
       },
     ]}
   </Block>
@@ -218,9 +244,11 @@ class Index extends React.Component {
         <div className="mainContainer">
           <Features />
           <FeatureCallout />
-          <LearnHow />
+          <Templates />
+          <Grammar />
+          <Ergo />
+          <Model />
           <TryOut />
-          <Description />
           <Showcase language={language} />
         </div>
       </div>

@@ -1,6 +1,6 @@
 ---
 id: cicero-cli
-title: CLI Documentation
+title: Cicero CLI
 ---
 
 # cicero parse

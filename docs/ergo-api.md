@@ -1,6 +1,6 @@
 ---
 id: ergo-api
-title: Ergo API Documentation
+title: JavaScript API
 ---
 
 ## Classes
@@ -326,7 +326,3 @@ Compare actual result and expected result
 | expected | <code>string</code> | the result as specified in the test workload |
 | actual | <code>string</code> | the result as returned by the engine |
 
-
-* * *
-
-&copy; Clause Inc.

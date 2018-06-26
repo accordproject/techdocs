@@ -1,7 +1,9 @@
 ---
 id: cicero-tasks
-title: Cicero Tasks
+title: Usage
 ---
+
+
 
 # Load a Template
 
@@ -130,4 +132,5 @@ https://github.com/accordproject/cicero-perishable-network
 
 ## Hyperledger Fabric 1.1
 
-TBD
+Sample chaincode for Hyperledger Fabric that shows how to execute a Cicero template:
+https://github.com/accordproject/fabric-samples/tree/release-1.1/cicero

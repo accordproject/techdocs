@@ -39,20 +39,23 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'accordproject', label: 'Docs'},
+    { href: "https://accordproject.github.io/ergo-playground", label: "Try" },
+    { href: "https://github.com/accordproject", label: "GitHub" },
+    { search: true },
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/accord_logo.png',
-  footerIcon: 'img/accord_logo.png',
-  favicon: 'img/favicon.png',
+  headerIcon: 'img/accord_icon_white.png',
+  footerIcon: 'img/accord_icon_white.png',
+  favicon: 'img/accord_icon.png',
 
   /* colors for website */
   colors: {
-    primaryColor: '#576075',
-    secondaryColor: '#f4f6f8',
+    primaryColor: '#008B8B',
+    secondaryColor: '#008B8B',
   },
 
   /* custom fonts for website */
