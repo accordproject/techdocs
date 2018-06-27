@@ -7,7 +7,7 @@ title: Usage
 
 # Load a Template
 
-To create a Template instance in memory call the `fromDirectory` or `fromArchive` methods::
+To create a Template instance in memory call the `fromDirectory`, `fromArchive` or `fromUrl` methods:
 
 ```
     const template = await Template.fromDirectory('./test/data/latedeliveryandpenalty');
@@ -20,7 +20,7 @@ the promise to be resolved.
 
 Once a Template has been loaded, you can create a Clause based on the Template. You can either instantiate
 the Clause using source DSL text (by calling `parse`), or you can set an instance of the template model 
-directly (by calling `setData`)::
+as JSON data (by calling `setData`):
 
 ```
     // load the DSL text for the template
@@ -28,6 +28,16 @@ directly (by calling `setData`)::
 
     const clause = new Clause(template);
     clause.parse(testLatePenaltyInput);
+
+    // get the JSON object created from the parse
+    const data = clause.getData();
+```
+
+OR - create a contract and set the data from a JSON object.
+
+```
+    const clause = new Clause(template);
+    clause.setData( {$class: 'org.acme.MyTemplateModel', 'foo': 42 } );
 ```
 
 # Create a Template

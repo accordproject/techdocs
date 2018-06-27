@@ -15,8 +15,10 @@ A template is composed of three elements:
 
 When combined these three elements allow templates to be edited, analyzed, queried and executed.
 
-A complete sample template is available here:
-https://github.com/accordproject/cicero-template-library/tree/master/latedeliveryandpenalty
+Open Source Accord Project templates are published to the Template Library:
+https://templates.accordproject.org
+
+Templates may either be stored on disk in a directory structure, or may be archived into a `.cta` file (Cicero Template Archive).
 
 # Template Grammar 
 
@@ -92,7 +94,7 @@ The logic for a template is written as a set of Ergo functions. The Ergo functio
 invoked by the Cicero engine when transactions are received for processing and return a response. Both the 
 incoming requests and responses are modeled types.
 
-Here is a sample Ergo function:
+Below is a sample Ergo function that operates *over* the `LateDeliveryAndPenaltyClause` model. It contains a single clause called `latedeliveryandpenalty` that produces a `LateDeliveryAndPenaltyResponse` in response to a `LateDeliveryAndPenaltyRequest`. This contract is stateless and does not emit events. See below for a description of contract state and events.
 
 ```
 contract LateDeliveryAndPenalty over LateDeliveryAndPenaltyClause {
@@ -125,13 +127,16 @@ contract LateDeliveryAndPenalty over LateDeliveryAndPenaltyClause {
 }
 ```
 
-You can view and download the Late Delivery and Penalty template [here](https://templates.accordproject.org/latedeliveryandpenalty@0.2.0.html).
+You can view and download the latest Late Delivery and Penalty template [here](https://templates.accordproject.org/latedeliveryandpenalty@0.2.0.html).
 
 # Template Library
 
 Templates may be organized into a Template Library, typically stored on GitHub (either public or private).
-For example, here is the Open Source Accord Project template library:
+For example, here is the source of the Open Source Accord Project template library:
 https://github.com/accordproject/cicero-template-library
+
+The template library is published to:
+https://templates.accordproject.org
 
 # Contract 
 
@@ -142,6 +147,10 @@ template.
 
 A Contract is composed of a set of Clauses. A Contract has state.
 
+# Contract State
+
+Many contracts require state, for example, to remember the last time a contracting party made a payment. A contract may optionally be attached to a state object, giving the logic of the contract read and write access to the contract state.
+
 # Clause 
 
 Clause is an instance of a Clause Template, where the variables for the template have been set to specific values.
@@ -151,10 +160,31 @@ template.
 
 The logic for a Clause is implemented as a function, each of which takes a request and produces a response. The logic for a clause may optionally emit events. A clause has access to the properties and the state of its owning contract.
 
+# Transaction
+
+Transactions are used to model the interactions between a contract or clause and the real world. Transactions are used for both inbound messages and as the synchronous return values from the logic of clauses or contracts.
+
+Example inbound transactions:
+
+- A party has made a payment
+- A party has signed for the goods, accepting delivery
+- A temperature sensor reading from a shipping container
+- A location of a truck from a GPS sensor
+
+Example return value transactions:
+
+- Cost of shipping the goods (minus late penalty) was $256
+- Party A has breached the terms of the contract
+- Volume discount for this quarter is now 3.5%
+
+# Event
+
+The logic of a contract or clause may optionally emit events. Events are typically used by the contract to indicate that some asynchronous action should occur in the real-world, such as notifying a party to the contract that they need to take some action, or even, triggering an automated payment or invoice.
+
 # Engine 
 
 Cicero includes a Node.js VM based execution engine. The engine routes incoming transactions to template functions,
 performs data validation, executes the functions within a sandboxed environment, and then validates the response
-before returning it to the caller.
+before the response, updated state and emitted events to the caller.
 
 ![Execution Context](assets/execution_context.png)

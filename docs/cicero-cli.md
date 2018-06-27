@@ -3,6 +3,8 @@ id: cicero-cli
 title: Cicero CLI
 ---
 
+Install the `@accordproject/cicero-cli` npm package to access the Cicero command line interface (CLI). After installation you can use the `cicero` command and its sub-commands as described below.
+
 # cicero parse
 
 Loads a template from a directory on disk and then parses input DSL text using the template.
