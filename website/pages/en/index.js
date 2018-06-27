@@ -115,8 +115,8 @@ const Features = props => (
         title: `[Ergo](${siteConfig.baseUrl}docs/ergo-intro-overview.html)`,
       },
       {
-        content: `Use Open Source contract templates from the [Template Repository](${siteConfig.baseUrl}docs/template-repository.html).`,
-        title: `[Template Repository](${siteConfig.baseUrl}docs/template-repository.html)`,
+        content: `Use Open Source contract templates from the [Template Repository](${siteConfig.baseUrl}docs/template-library.html).`,
+        title: `[Template Repository](${siteConfig.baseUrl}docs/template-library.html)`,
       },
       {
         content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,

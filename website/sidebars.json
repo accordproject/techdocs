@@ -5,6 +5,6 @@
     "Ergo": ["ergo-intro-overview", "ergo-intro-examples", "ergo-lang", "ergo-ref-lexical", "ergo-ref-conditional-expressions", "ergo-ref-match-expressions","ergo-spec-overview","ergo-comp-architecture","ergo-cli","ergo-api"],
     "Verbatim": ["verbatim"],
     "Model Repository": ["model-repository"],
-    "Template Repository": ["template-repository"]
+    "Template Library": ["template-library"]
   }
 }
