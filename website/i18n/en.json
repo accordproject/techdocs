@@ -26,7 +26,7 @@
     "doc4": "Other Document",
     "doc5": "Fifth Document",
     "model-repository": "Model Repository",
-    "template-repository": "Template Repository",
+    "template-library": "Template Library",
     "verbatim": "Introduction to Verbatim",
     "Docs": "Docs",
     "Try": "Try",
@@ -36,7 +36,7 @@
     "Ergo": "Ergo",
     "Verbatim": "Verbatim",
     "Model Repository": "Model Repository",
-    "Template Repository": "Template Repository",
+    "Template Library": "Template Library",
     "Foo": "Foo"
   },
   "pages-strings": {
