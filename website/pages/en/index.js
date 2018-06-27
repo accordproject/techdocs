@@ -108,19 +108,19 @@ const Features = props => (
     {[
       {
         content: `Create templates for executable natural-language legal contracts and clauses using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
-        title: 'Cicero',
+        title: `[Cicero](${siteConfig.baseUrl}docs/cicero.html)`,
       },
       {
-        content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
-        title: 'Ergo',
+        content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo-intro-overview.html) domain-specific language.`,
+        title: `[Ergo](${siteConfig.baseUrl}docs/ergo-intro-overview.html)`,
       },
       {
-        content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/template-library.html).`,
-        title: 'Template Library',
+        content: `Use Open Source contract templates from the [Template Repository](${siteConfig.baseUrl}docs/template-library.html).`,
+        title: `[Template Repository](${siteConfig.baseUrl}docs/template-library.html)`,
       },
       {
         content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,
-        title: 'Model Repository',
+        title: `[Model Repository](${siteConfig.baseUrl}docs/model-repository.html)`,
       },
   ]}
   </Block>

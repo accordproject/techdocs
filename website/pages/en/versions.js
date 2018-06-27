@@ -33,10 +33,7 @@ class Versions extends React.Component {
                 <tr>
                   <th>{latestVersion}</th>
                   <td>
-                    <a href={''}>Documentation</a>
-                  </td>
-                  <td>
-                    <a href={''}>Release Notes</a>
+                    <a href={'/docs/accordproject.html'}>Documentation</a>
                   </td>
                 </tr>
               </tbody>
@@ -51,10 +48,7 @@ class Versions extends React.Component {
                 <tr>
                   <th>master</th>
                   <td>
-                    <a href={''}>Documentation</a>
-                  </td>
-                  <td>
-                    <a href={''}>Release Notes</a>
+                    <a href={'/docs/next/accordproject.html'}>Documentation</a>
                   </td>
                 </tr>
               </tbody>
@@ -69,10 +63,7 @@ class Versions extends React.Component {
                       <tr>
                         <th>{version}</th>
                         <td>
-                          <a href={''}>Documentation</a>
-                        </td>
-                        <td>
-                          <a href={''}>Release Notes</a>
+                          <a href={`/docs/${version}/accordproject.html`}>Documentation</a>
                         </td>
                       </tr>
                     )
@@ -81,7 +72,7 @@ class Versions extends React.Component {
             </table>
             <p>
               You can find past versions of this project{' '}
-              <a href="https://github.com/"> on GitHub </a>.
+              <a href="https://github.com/accordproject"> on GitHub </a>.
             </p>
           </div>
         </Container>

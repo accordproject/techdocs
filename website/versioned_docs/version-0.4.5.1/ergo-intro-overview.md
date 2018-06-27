@@ -1,6 +1,7 @@
 ---
-id: ergo-intro-overview
+id: version-0.4.5.1-ergo-intro-overview
 title: Introduction to Ergo
+original_id: ergo-intro-overview
 ---
 
 Ergo is a prototype for a domain-specific language (DSL) that captures the execution logic of *legal* contracts. 
