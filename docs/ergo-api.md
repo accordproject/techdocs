@@ -35,7 +35,6 @@ Utility class that implements the commands exposed by the Ergo CLI.
 * [Commands](#Commands)
     * [.compile(ergoPath, ctoPaths, target, link)](#Commands.compile) ⇒ <code>object</code>
     * [.execute(ergoPath, ctoPaths, contractPath, requestsPath, statePath, contractName)](#Commands.execute) ⇒ <code>object</code>
-    * [.parseCTO(ctoPath)](#Commands.parseCTO) ⇒ <code>object</code>
     * [.parseCTOtoFileSync(ctoPath)](#Commands.parseCTOtoFileSync) ⇒ <code>string</code>
     * [.parseCTOtoFile(ctoPath)](#Commands.parseCTOtoFile) ⇒ <code>string</code>
 
@@ -71,18 +70,6 @@ Execute Ergo contract
 | statePath | <code>string</code> | path to the state in JSON |
 | contractName | <code>string</code> | of the contract to execute |
 
-<a name="Commands.parseCTO"></a>
-
-### Commands.parseCTO(ctoPath) ⇒ <code>object</code>
-Parse CTO to JSON
-
-**Kind**: static method of [<code>Commands</code>](#Commands)  
-**Returns**: <code>object</code> - The parsed CTO model syntax tree in JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| ctoPath | <code>string</code> | path to CTO model file |
-
 <a name="Commands.parseCTOtoFileSync"></a>
 
 ### Commands.parseCTOtoFileSync(ctoPath) ⇒ <code>string</code>
@@ -116,14 +103,14 @@ Utility class that implements the internals for Ergo.
 
 * [Ergo](#Ergo)
     * [.parseCTOtoJSON(ctoText)](#Ergo.parseCTOtoJSON) ⇒ <code>object</code>
-    * [.parseCTO(ctoText)](#Ergo.parseCTO) ⇒ <code>object</code>
+    * [.contractCallName(contractName)](#Ergo.contractCallName) ⇒ <code>string</code>
+    * [.contractCallNamePromise(contractName)](#Ergo.contractCallNamePromise) ⇒ <code>string</code>
     * [.compileToJavaScript(ergoText, ctoTexts, target)](#Ergo.compileToJavaScript) ⇒ <code>string</code>
     * [.compileToJavaScriptAndLink(ergoText, ctoTexts, target)](#Ergo.compileToJavaScriptAndLink) ⇒ <code>object</code>
     * [.compile(ergoText, ctoTexts, target)](#Ergo.compile) ⇒ <code>object</code>
     * [.compileAndLink(ergoText, ctoTexts, target)](#Ergo.compileAndLink) ⇒ <code>object</code>
     * [.linkErgoRuntime(ergoCode)](#Ergo.linkErgoRuntime) ⇒ <code>string</code>
     * [.ergoErrorToString(error)](#Ergo.ergoErrorToString) ⇒ <code>string</code>
-    * [.commonCTOs()](#Ergo.commonCTOs) ⇒ <code>Array.&lt;string&gt;</code>
 
 <a name="Ergo.parseCTOtoJSON"></a>
 
@@ -137,17 +124,29 @@ Parse CTO to JSON
 | --- | --- | --- |
 | ctoText | <code>string</code> | text for CTO model |
 
-<a name="Ergo.parseCTO"></a>
+<a name="Ergo.contractCallName"></a>
 
-### Ergo.parseCTO(ctoText) ⇒ <code>object</code>
-Parse CTO
+### Ergo.contractCallName(contractName) ⇒ <code>string</code>
+Contract call name
 
 **Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>object</code> - The parsed CTO model syntax tree in JSON  
+**Returns**: <code>string</code> - name of the JavaScript class  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ctoText | <code>string</code> | text for CTO model |
+| contractName | <code>string</code> | name of the contract |
+
+<a name="Ergo.contractCallNamePromise"></a>
+
+### Ergo.contractCallNamePromise(contractName) ⇒ <code>string</code>
+Contract call name promise
+
+**Kind**: static method of [<code>Ergo</code>](#Ergo)  
+**Returns**: <code>string</code> - a promise to the name of the compiled JavaScript class  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| contractName | <code>string</code> | name of the contract |
 
 <a name="Ergo.compileToJavaScript"></a>
 
@@ -229,13 +228,6 @@ Error message
 | --- | --- | --- |
 | error | <code>object</code> | object returned by Ergo compiler |
 
-<a name="Ergo.commonCTOs"></a>
-
-### Ergo.commonCTOs() ⇒ <code>Array.&lt;string&gt;</code>
-Common CTOs
-
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>Array.&lt;string&gt;</code> - Built-in CTO models  
 <a name="ErgoEngine"></a>
 
 ## ErgoEngine
