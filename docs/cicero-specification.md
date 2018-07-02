@@ -12,13 +12,13 @@ This specification defines the structure of Accord Templates: legally enforceabl
 # Goals
 Accord Project Protocol templates bind legally enforceable natural language text to executable business logic. They provide the foundational technology for legal professionals to formalise a set of legally enforceable executable clauses (smart clauses).
 
-The templates are designed to be easy and quick to create from existing legal contracts by legal professionals, and then made executable by programmers using general purpose programming languages, or legal technologists or programmers using domain specific languages.
+The templates are designed to be easy and quick to create from existing legal contracts by legal professionals, and then made executable by legal technologists or programmers using the [Ergo](ergo) domain specific language.
 
 Templates may support one or more locales, allowing the template to be edited or visualized in different languages, whilst preserving a single locale-neutral executable representation.
 
 Executable smart clauses are easy to hash for storage in content-based addressing systems (out of scope for this specification).
 
-Templates support extensible representations of their business logic, with the initial reference implementation based on execution of Javascript code using a Node.js VM. The Accord Project Protocol encourages contributors to participate in the creation of business logic languages to capture contract logic, as well as the associated runtimes that can plug into the Accord Project Protocol extensibility mechanisms. It is expected that many different paradigms (rule-based, logic inference, temporal, finite state machine, functional) will be tested. It is the opinion of the authors that this phase of experimentation is vital and that it is too early to lock the specification down to a single representation for the business logic for a clause.
+Templates support extensible representations of their business logic, with the initial reference implementation based on execution of Javascript or [Ergo](ergo) code using a Node.js VM. The Accord Project Protocol encourages contributors to participate in the creation of business logic languages to capture contract logic, as well as the associated runtimes that can plug into the Accord Project Protocol extensibility mechanisms. It is expected that many different paradigms (rule-based, logic inference, temporal, finite state machine, functional) will be tested. It is the opinion of the authors that this phase of experimentation is vital and that it is too early to lock the specification down to a single representation for the business logic for a clause.
 
 The Javascript reference engine for the Accord Project Protocol is designed to be easily embeddable across a wide-variety of form factors: web, middleware, SaaS, on-blockchain execution and off-blockchain execution.
 The templates, clauses and the engine are designed to integrate into a traditional DevOps practices and CI/CD, including unit and system testing and code coverage analysis.
@@ -70,9 +70,9 @@ The first step in converting this clause to use Accord Project Protocol is to id
 
 These data elements comprise the Template Model for the clause. The template model is critical in that it defines formal semantics for the clause, and it is a locale neutral representation of the data that a template requires. It also enables powerful search, filtering and organization of templates, for example by finding all templates related to concept X, or all templates that can process a transaction of type Y.
 
-They are captured formally using the [Hyperledger Composer modelling language](https://hyperledger.github.io/composer/latest/reference/cto_language) (CML). CML is a lightweight schema language that defines namespaces, types, and relationships between types. It includes first-class support for modelling participants (individuals or companies), assets, transactions, enumerations, concepts, and events, and includes the typical features of an Object Oriented modelling language, including inheritance, meta-annotations (decorators), and field specific validators. CML also defines a serialization of instances to JSON and a validator for instances, making it easy to integrate with a wide variety of JSON-capable external systems.
+They are captured formally using the [Hyperledger Composer modeling language](https://hyperledger.github.io/composer/latest/reference/cto_language) (CML). CML is a lightweight schema language that defines namespaces, types, and relationships between types. It includes first-class support for modelling participants (individuals or companies), assets, transactions, enumerations, concepts, and events, and includes the typical features of an Object Oriented modelling language, including inheritance, meta-annotations (decorators), and field specific validators. CML also defines a serialization of instances to JSON and a validator for instances, making it easy to integrate with a wide variety of JSON-capable external systems.
 
-Note that even though the CML format is used to describe the template model, the Accord Specification is not limited to executing on Hyperledger Composer. CML is merely a schema language and can be supported on any distributed ledger, or even non-distributed ledger technology, written in any programming language.
+> Note that even though the CML format is used to describe the template model, the Accord Specification is not limited to executing on Hyperledger Composer. CML is merely a schema language and can be supported on any distributed ledger, or even non-distributed ledger technology, written in any programming language.
 
 Hyperledger Composer models may be published to GitHub or any HTTP(S) website, and models can declare dependencies on other models, reducing the technical barrier to entry to creating an eco-system of mutually reinforcing industry standard models.
 
@@ -117,8 +117,7 @@ asset TemplateModel extends AccordClause {
 }
 ```
 
-The template model for the clause captures unambiguously the data types defined by the clause. The Duration data type is imported from an Accord namespace, which defines a library of useful reusable basic types for contracts.
-Note that the @AccordTemplate decorators (aka annotation) is used to bind the CML concept to the clause. Only one concept within the model files for the template may have the @AccordTemplate decorator.
+The template model for the clause captures unambiguously the data types defined by the clause. The Duration data type is imported from an Accord namespace, which defines a library of useful reusable basic types for contracts. Only one asset within the model files for the template may extend the `AccordClause` or `AccordContract` base type.
 
 > Terminology: a Template has a Template Model
 
@@ -145,8 +144,9 @@ To recap, there are currently 2 types of variable definition supported. Support 
 1. Boolean Binding: sets a boolean property in the model based on the presence of text in the clause
 2. Binding: set a property in the model based on a value supplied in the clause
 
-Note that any types within the model may have an associated template grammar file. For example the Duration type may have a template grammar that captures the syntax for how to enter calendar durations in English or French etc. These dependent grammars are merged into the template grammar for the root type for the template (the type with the @AccordTemplate decorator). The implementation of this support is currently in progress. Examples will be added when available.
-Terminology: a Template Grammar is a marked-up template that declares variables. Variables are bound to the Template Model. The Template Grammar and the Template Model are used to generate a parser for the template, allowing syntactically valid instances (clauses) to be created.
+Note that any types within the model may have an associated template grammar file. For example the Duration type may have a template grammar that captures the syntax for how to enter calendar durations in English or French etc. These dependent grammars are merged into the template grammar for the root type for the template (the asset that either extends `AccordClause` or `AccordContract`). The implementation of this support is currently in progress. Examples will be added when available.
+
+> Terminology: a Template Grammar is a marked-up template that declares variables. Variables are bound to the Template Model. The Template Grammar and the Template Model are used to generate a parser for the template, allowing syntactically valid instances (clauses) to be created.
 
 ## Interfacing the Template with the Outside World
 Given the template grammar and the template model above we can now edit (parameterise) the template to create a clause (an instance of the template).
@@ -216,6 +216,14 @@ transaction LateDeliveryAndPenaltyResponse {
 
 Here we are simply stating that execution this template will produce an instance of  LateDeliveryAndPenaltyResponse.
 
+### State
+
+A contract template may optionally be stateful, and declare a state type.
+
+### Emitted Types
+
+The logic for a template may optionally emit event types.
+
 ## Summary
 
 Using the ability to convert CML models to UML we can even visualise the three types (model, request, response) we have modelled graphically:
@@ -236,68 +244,37 @@ Accord Project Protocol is extensible and supports pluggable mechanisms to captu
 Note: the details of the extensibility mechanism are TBD and the subject of discussion with the Accord technology working group.
 
 ## Example
-The example below illustrates using a JavaScript function to implement the template logic. The standard @param and annotations are used to bind the function to the incoming request and response types, while the @AccordClauseLogic annotation indicates to the engine this function is a request processor.
+The example below illustrates using an [Ergo](ergo.md) function to implement the template logic.
 
 ```
-/**
-* Execute the smart clause
-* @param {Context} context - the Accord context
-* @param {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest} context.request - the incoming request
-* @param {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse} context.response - the response
-* @AccordClauseLogic
-*/
+contract LateDeliveryAndPenalty over LateDeliveryAndPenaltyClause {
+  clause latedeliveryandpenalty(request : LateDeliveryAndPenaltyRequest) : LateDeliveryAndPenaltyResponse throws Error {
+    // Guard against calling late delivery clause too early
+    define variable agreed = request.agreedDelivery;
+    enforce momentIsBefore(agreed,now()) else
+    throw new Error{ message : "Cannot exercise late delivery before delivery date" };
+    
+    enforce !contract.forceMajeure or !request.forceMajeure else
+    return new LateDeliveryAndPenaltyResponse{
+      penalty: 0.0,
+      buyerMayTerminate: true
+    };
 
-function execute(context) {
-
-    logger.info(context);
-    var req = context.request;
-    var res = context.response;
-    var data = context.data;
-    var now = moment(req.timestamp);
-    var agreed = moment(req.agreedDelivery);
-
-    res.buyerMayTerminate = false;
-    res.penalty = 0;
-
-    if (req.forceMajeure) {
-	// Can forceMajeure be claimed?
-	if (!data.forceMajeure) {
-            logger.info('forceMajeure cannot be claimed');
-	} else {
-            logger.info('forceMajeure claimed');
-            penalty = 0;
-            res.buyerMayTerminate = true;
-	}
+    // Calculate the time difference between current date and agreed upon date
+    define variable diff = momentDiffDays(now,agreed);
+    // Penalty formula
+    define variable penalty =
+      (diff / contract.penaltyDuration.amount) * contract.penaltyPercentage/100.0 * request.goodsValue;
+    // Penalty may be capped
+    define variable capped = min([penalty, contract.capPercentage/100.0 * request.goodsValue]);
+    // Return the response with the penalty and termination determination
+    return new LateDeliveryAndPenaltyResponse{
+      penalty: capped,
+      buyerMayTerminate: diff > contract.termination.amount
     }
-
-    if ((!req.forceMajeure || !data.forceMajeure) && now.isAfter(agreed)) {
-        logger.info('late');
-        logger.info('penalty duration unit: ' + data.penaltyDuration.unit);
-        logger.info('penalty duration amount: ' + data.penaltyDuration.amount);
-        // the delivery is late
-        var diff = now.diff(agreed, data.penaltyDuration.unit);
-        logger.info('diff:' + diff);
-
-        var penalty = (diff / data.penaltyDuration.amount) * data.penaltyPercentage/100 * req.goodsValue;
-
-        // cap the maximum penalty
-        if (penalty > data.capPercentage/100 * req.goodsValue) {
-            logger.info('capped.');
-            penalty = data.capPercentage/100 * req.goodsValue;
-        }
-
-        res.penalty = penalty;
-
-        // can we terminate?
-        if (diff > data.termination.amount) {
-            logger.info('buyerMayTerminate.');
-            res.buyerMayTerminate = true;
-        }
-    }
+  }
 }
 ```
-
-The context object passed to the execute method encapsulates the request, response and the clause data. In the future the context may be extended to support extension points for access to historical transactions for the clause as well as identity related information. Note that the execution VM also places a logger object into scope allowing the clause to log debug, information, warning or error messages.
 
 ## Packaging
 
@@ -308,10 +285,11 @@ The artefacts that define a template are:
 - A sample instance, used to bootstrap editing, for each supported locale
 - Executable business logic
 
-Templates are typically packaged and distributed as zip archives, however they may also be read from: a directory, a GitHub repository, the npm package manager. Each of these distribution mechanisms support slightly different use cases:
+Templates are typically packaged and distributed as Cicero Template Archive (cta) files, however they may also be read from: a directory, http(s) URL, the Accord Project [template library](https://templates.accordproject.org),  the npm package manager. Each of these distribution mechanisms support slightly different use cases:
 
 - Directory: useful during testing, allows changes to the template to be quickly tested with no need to re-package
-- GitHub: allows templates to be distributed and versioned as publicly or privately accessible libraries
+- URL: allows templates to be published to a stable web address
+- Accord Projecte template library maintains a curated set of Open Source templates
 - npm: allows dependencies on templates to be easily declared for Node.js and browser based applications. Integrates with CI/CD tools.
 
 ## Metadata
@@ -319,49 +297,44 @@ The metadata for a Template is stored in the  /package.json text file in JSON fo
 
 ```
 {
-   "name" : "com.example.MySmartClause",
-   "version" : "0.0.1",
-   "description: "This is my lovely template"
+    "name": "latedeliveryandpenalty",
+    "version": "0.2.0",
+    "description": "A sample Late Delivery And Penalty clause.",
+    "cicero": {
+        "template": "clause",
+        "language": "ergo",
+        "version": "^0.4.4"
+    }
 }
 ```
 
 The name property must consist of [a-z][A-Z][.]. It is strongly recommended that the name be prefixed with the domain name of the author of the smart clause, to minimise naming collisions. The version property must be a semantic version of the form major.minor.micro [0-9].[0-9].[0.9]. Note that this data format ensures that a Template can be published to the npm package manager for either global or private (enterprise-wide) distribution.
+
+The `cicero` property of a template specifies the following metadata:
+- template: must either be `clause` for a clause template or `contract` for a contract templates
+- language: the implementation language for the logic of the language. Current supported values are `ergo` or `javascript`
+- version: the compatability statement with a Cicero engine version. This is an npm [semver](https://semver.npmjs.com) specification.
 
 Note that additional properties such as locales and jurisdictions may be added as future needs arise.
 
 ### README.md
 The root of the template may also contain a markdown file to explain the purpose and semantics of the template. This file may be displayed by tools to preview the template or provide usage instructions.
 
-
 ### Template Grammars
-The grammar files for the domain specific language used by the Template are stored in the  /grammar/ folder. Any grammar files placed directly within the grammar/ folder are considered to be locale neutral and will be used if the user does not specify a locale.
+The grammar files for the template are stored in the  /grammar/ folder.
 
-Locale specific grammars (for templates that support multiple locales) should be be organised by locale, hence a grammar for the English locale should be placed in /grammar/en while a grammar file for the French locale should be placed in /grammar/fr.
-The locale folder may optionally contain a config.json file that describes the template in the language of the locale.
+> Note that support for per-locale grammar files in TBD.
 
-```
-{
-   "description" : "This is a template for the en locale"
-}
-```
+### Data Model
 
-If no config.json file is present then the description of the template is read from the description property of package.json.
-Data Model
-
-The data model for a smart clause is stored in a set of files under the `/model` folder. The data model files must be in the format defined by Hyperledger Composer modelling language. All data models for the template are in-scope and types from all namespaces may be imported.
+The data model for a smart clause is stored in a set of files under the `/model` folder. The data model files must be in the format defined by Hyperledger Composer modeling language. All data models for the template are in-scope and types from all namespaces may be imported.
 
 ### Execution Logic
 The execution logic for a smart clause is stored under the /lib folder.
-The folder may also contain a file config.json that specifies the language and options used to express execution logic.
 
-```
-{
-   "format" : "js"
-}
-```
+The logic for a template may either be specified using Javascript or Ergo.
 
-The only currently supported format is js (other formats may be added in the future). The file may also contain other options specific to the execution of logic.
-
+> Note that support for Javascript logic will be removed in the future.
 
 # Links and References
 

@@ -2,7 +2,7 @@
   "docs": {
     "Accord Project": ["accordproject", "accordproject-tools"],
     "Cicero": ["cicero", "cicero-concepts", "cicero-tutorial_001",  "cicero-tasks", "cicero-cli", "cicero-api", "cicero-specification"],
-    "Ergo": ["ergo-intro-overview", "ergo-intro-examples", "ergo-lang", "ergo-ref-lexical", "ergo-ref-conditional-expressions", "ergo-ref-match-expressions","ergo-spec-overview","ergo-comp-architecture","ergo-cli","ergo-api"],
+    "Ergo": ["ergo", "ergo-intro-examples", "ergo-lang", "ergo-ref-lexical", "ergo-ref-conditional-expressions", "ergo-ref-match-expressions","ergo-spec-overview","ergo-comp-architecture","ergo-cli","ergo-api"],
     "Verbatim": ["verbatim"],
     "Model Repository": ["model-repository"],
     "Template Library": ["template-library"]

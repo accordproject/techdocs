@@ -111,8 +111,8 @@ const Features = props => (
         title: `[Cicero](${siteConfig.baseUrl}docs/cicero.html)`,
       },
       {
-        content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo-intro-overview.html) domain-specific language.`,
-        title: `[Ergo](${siteConfig.baseUrl}docs/ergo-intro-overview.html)`,
+        content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
+        title: `[Ergo](${siteConfig.baseUrl}docs/ergo.html)`,
       },
       {
         content: `Use Open Source contract templates from the [Template Repository](${siteConfig.baseUrl}docs/template-library.html).`,
