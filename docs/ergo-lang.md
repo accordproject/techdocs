@@ -93,13 +93,13 @@ It is possible to declare global variables and functions in Ergo:
 ```
 
 ### Contract Declarations
-In the legal sense the elements of a contract are as follows. The requisite elements that must be established to demonstrate the formation of a legally binding contract are (1) _offer_; (2) _acceptance_; (3) _consideration_; (4) _mutuality of obligation_; (5) _competency and capacity_; and, in certain circumstances, (6) _a written instrument_.
+The legal requirements for a valid contract at law vary by jurisdiction and contract type. The requisite elements that typically necessary for the formation of a legally binding contract are (1) _offer_; (2) _acceptance_; (3) _consideration_; (4) _mutuality of obligation_; (5) _competency and capacity_; and, in certain circumstances, (6) _a written instrument_.
 
 Ergo contacts address consideration, mutuality of obligation, competency and capacity through statements that are described in this document.
 
-Furthermore, an Ergo contract is an immutable written instrument which obviates a good deal of the issues and conflicts which emerge from existing contracts in use today. In Ergo:
-- a contract represents an agreement between parties creating mutual and enforceable obligations. 
-- a contract is a code module that uses conditionals and functions to describe execution by the parties with their obligations. Contracts accept input data either directly from the associated natural language text or through request _transactions_. The contract then uses _clause functions_ to process it, and _return_ a result. 
+Furthermore, an Ergo contract is an immutable written document which obviates a good deal of the issues and conflicts which emerge from existing contracts in use today. In Ergo, a contract:
+- represents an agreement between parties creating mutual and enforceable obligations; and
+- is a code module that uses conditionals and functions to describe execution by the parties with their obligations. Contracts accept input data either directly from the associated natural language text or through request _transactions_. The contract then uses _clause functions_ to process it, and _return_ a result. 
 Once a contract logic has been written within a template, it can be used over and over and over again. 
 
 Instantiated contracts correspond to particular domain agreement. They combine functions and clauses to execute a specific agreement and to allow its automation. Many traditional contracts are “boilerplate” and as such are reusable in their specific legal domain, e.g., sale of goods.
@@ -124,8 +124,6 @@ In Ergo, a logical clause like the example clause noted below is represented as 
 > Functions can be "called" from within other functions or from a clause. 
 > Functions have to be declared before they can be used. So functions "encapsulate" a task. They combine statements and expressions carried out as instructions which accomplish a specific task to allow their execution using a single line of code. Most programming languages provide libraries of built in functions (i.e., commonly used tasks like computing the square root of a number). 
 > Functions accelerate development and facilitate the reuse of code which performs common tasks. 
-
-In traditional clauses, “boilerplate” is standard text that is reused in many different agreement and contract types. In general, we don't care how a function does what it does, only that it "does it" making it a reliable language construct. 
 
 The declaration of a Clause that contains the clause’s name, request type and return type collectively referred to as the ‘signature’ of the function. 
 
