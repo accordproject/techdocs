@@ -92,11 +92,20 @@ It is possible to declare global variables and functions in Ergo:
     area(1.5)
 ```
 
-### Contracts Declarations
+### Contract Declarations
+The legal requirements for a valid contract at law vary by jurisdiction and contract type. The requisite elements that typically necessary for the formation of a legally binding contract are (1) _offer_; (2) _acceptance_; (3) _consideration_; (4) _mutuality of obligation_; (5) _competency and capacity_; and, in certain circumstances, (6) _a written instrument_.
 
-You can declare a contract over a template model as follows:
+Ergo contacts address consideration, mutuality of obligation, competency and capacity through statements that are described in this document.
 
-```
+Furthermore, an Ergo contract is an immutable written document which obviates a good deal of the issues and conflicts which emerge from existing contracts in use today. In Ergo, a contract:
+- represents an agreement between parties creating mutual and enforceable obligations; and
+- is a code module that uses conditionals and functions to describe execution by the parties with their obligations. Contracts accept input data either directly from the associated natural language text or through request _transactions_. The contract then uses _clause functions_ to process it, and _return_ a result. 
+Once a contract logic has been written within a template, it can be used over and over and over again. 
+
+Instantiated contracts correspond to particular domain agreement. They combine functions and clauses to execute a specific agreement and to allow its automation. Many traditional contracts are “boilerplate” and as such are reusable in their specific legal domain, e.g., sale of goods.
+
+You can declare a contract over a template model as follows. The `TemplateModel` is the data model for the parameters of the contract text.
+
     contract ContractName over TemplateModel {
       clause C1(request : ReqType1) : RespType1 {
         // Expression
@@ -106,14 +115,30 @@ You can declare a contract over a template model as follows:
         // Expression
       }
     }
-```
+    
+ 
+### Clauses
+In Ergo, a logical clause like the example clause noted below is represented as a “function” (akin to a “method” in languages like Java) that resides within its parent contract (akin to a “class” in a language like Java). 
 
-When inside a contract, the `contract` variable contains the instance
-of the Template for the current contract.
+> Functions are "self contained" modules of code that accomplish a specific task. Functions usually "take in" data, process it, and "return" a result. Once a function is written, it is reusable , i.e., it can be used over and over and over again. 
+> Functions can be "called" from within other functions or from a clause. 
+> Functions have to be declared before they can be used. So functions "encapsulate" a task. They combine statements and expressions carried out as instructions which accomplish a specific task to allow their execution using a single line of code. Most programming languages provide libraries of built in functions (i.e., commonly used tasks like computing the square root of a number). 
+> Functions accelerate development and facilitate the reuse of code which performs common tasks. 
 
-When inside a clause, the `clause` variable contains the part of the
-Template instance specific to that clause.
+The declaration of a Clause that contains the clause’s name, request type and return type collectively referred to as the ‘signature’ of the function. 
 
+#### Example Prose
+
+Additionally the Equipment should have proper devices on it to record any shock during transportation as any instance of acceleration outside the bounds of -0.5g and 0.5g. Each shock shall reduce the Contract Price by $5.00
+
+#### Syntax
+
+    clause fragileGoods(request DeliveryUpdate) : ContractPrice {
+        ... // An expression computing the result of the clause
+    }
+
+
+Inside a contract, the `contract` variable contains the instance of the template model for the current contract.
 
 ## Statements
 
@@ -127,15 +152,6 @@ Returning a response from a clause can be done by using a return statement:
      return 1                           // Return the integer one
      return new Payout{ amount: 39.99 } // Return a new Payout object
      return                             // Return nothing
-```
-
-### Throw statement
-
-Returning an error can be done by using a throw statement:
-
-```
-     throw "Something went wrong"          // Return an error as a string
-     return new Error{ message: "oops!" }  // Return an error as an object
 ```
 
 ### Enforce statement
