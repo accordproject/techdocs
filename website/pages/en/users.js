@@ -17,7 +17,7 @@ class Users extends React.Component {
     if ((siteConfig.users || []).length === 0) {
       return null;
     }
-    const editUrl = siteConfig.repoUrl + '/edit/master/website/siteConfig.js';
+    const editUrl = 'https://github.com/accordproject/techdocs/edit/master/website/siteConfig.js';
     const showcase = siteConfig.users.map((user, i) => {
       return (
         <a href={user.infoLink} key={i}>
