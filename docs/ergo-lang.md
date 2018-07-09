@@ -92,16 +92,19 @@ It is possible to declare global variables and functions in Ergo:
     area(1.5)
 ```
 
-### Contracts Declarations
-In the legal sense the elements of a contract are as follows. The requisite elements that must be established to demonstrate the formation of a legally binding contract are (1) offer; (2) acceptance; (3) consideration; (4) mutuality of obligation; (5) competency and capacity; and, in certain circumstances, (6) a written instrument.
+### Contract Declarations
+In the legal sense the elements of a contract are as follows. The requisite elements that must be established to demonstrate the formation of a legally binding contract are (1) _offer_; (2) _acceptance_; (3) _consideration_; (4) _mutuality of obligation_; (5) _competency and capacity_; and, in certain circumstances, (6) _a written instrument_.
 
-Ergo will be able to enforce the Accord template resultant code dealing with consideration, mutuality of obligation, competency and capacity through statements we will describe in this document.
+Ergo contacts address consideration, mutuality of obligation, competency and capacity through statements that are described in this document.
 
-The best part is that the Ergo contract is an immutable written instrument which will obviate a good deal of the issues and conflicts which emerge from existing contracts in use today. In Ergo, a contract represents an agreement between parties creating mutual and enforceable obligations. In Ergo , a contract is a specific class of code that uses conditionals and functions to describe execution by the parties with their obligations. Contracts accept input consisting of the parties and the terms as data which matches the parameters defined in the contract. The contract then uses functions to process it, and "return" a result, i.e. how the contract execution proceeds. Once a domain specific contract is written, it can be used over and over and over again. Contracts can be "called" from the inside of other contracts.
+Furthermore, an Ergo contract is an immutable written instrument which obviates a good deal of the issues and conflicts which emerge from existing contracts in use today. In Ergo:
+- a contract represents an agreement between parties creating mutual and enforceable obligations. 
+- a contract is a code module that uses conditionals and functions to describe execution by the parties with their obligations. Contracts accept input data either directly from the associated natural language text or through request _transactions_. The contract then uses _clause functions_ to process it, and _return_ a result. 
+Once a contract logic has been written within a template, it can be used over and over and over again. 
 
-Contracts when created instantiate a particular domain agreement. They combine functions and clauses to execute a specific agreement and to allow its execution using a single line of code. This also bodes well for a legal DSL as many contracts are “boilerplate” and as such are reusable in their specific legal domain, e.g., sale of goods
+Instantiated contracts correspond to particular domain agreement. They combine functions and clauses to execute a specific agreement and to allow its automation. Many traditional contracts are “boilerplate” and as such are reusable in their specific legal domain, e.g., sale of goods.
 
-You can declare a contract over a template model as follows:
+You can declare a contract over a template model as follows. The `TemplateModel` is the data model for the parameters of the contract text.
 
     contract ContractName over TemplateModel {
       clause C1(request : ReqType1) : RespType1 {
@@ -112,20 +115,32 @@ You can declare a contract over a template model as follows:
         // Expression
       }
     }
+    
+ 
 ### Clauses
-In Ergo, a logical clause like the example clause noted below is represented as a “function” (akin to a “method” in languages like Java) that resides within its parent contract (akin to a “class” in a language like Java). Functions are "self contained" modules of code that accomplish a specific task. Functions usually "take in" data, process it, and "return" a result. Once a function is written, it is reusable , i.e., it can be used over and over and over again. Functions can be "called" from within other functions or from a clause. Functions have to be declared before they can be used. So functions "encapsulate" a task. They combine statements and expressions carried out as instructions which accomplish a specific task to allow their execution using a single line of code. Most programming languages provide libraries of built in functions (i.e., commonly used tasks like computing the square root of a number). Functions accelerate development and facilitate the reuse of code which performs common tasks. This bodes well for a legal DSL as many clauses known as “boilerplate” are in effect standards which are reused in many different agreement and contract types. In general, we don't care how a function does what it does, only that it "does it" making it a reliable language construct. When inside a clause, the clause variable contains the part of the Template instance specific to that clause. The interface of a Clause that contains the clause’s name, request type and return type collectively referred to as the ‘signature’ of the function. Example Prose Additionally the Equipment should have proper devices on it to record any shock during transportation as any instance of acceleration outside the bounds of -0.5g and 0.5g. Each shock shall reduce the Contract Price by $5.00
+In Ergo, a logical clause like the example clause noted below is represented as a “function” (akin to a “method” in languages like Java) that resides within its parent contract (akin to a “class” in a language like Java). 
 
-Syntax
+> Functions are "self contained" modules of code that accomplish a specific task. Functions usually "take in" data, process it, and "return" a result. Once a function is written, it is reusable , i.e., it can be used over and over and over again. 
+> Functions can be "called" from within other functions or from a clause. 
+> Functions have to be declared before they can be used. So functions "encapsulate" a task. They combine statements and expressions carried out as instructions which accomplish a specific task to allow their execution using a single line of code. Most programming languages provide libraries of built in functions (i.e., commonly used tasks like computing the square root of a number). 
+> Functions accelerate development and facilitate the reuse of code which performs common tasks. 
+
+In traditional clauses, “boilerplate” is standard text that is reused in many different agreement and contract types. In general, we don't care how a function does what it does, only that it "does it" making it a reliable language construct. 
+
+The declaration of a Clause that contains the clause’s name, request type and return type collectively referred to as the ‘signature’ of the function. 
+
+#### Example Prose
+
+Additionally the Equipment should have proper devices on it to record any shock during transportation as any instance of acceleration outside the bounds of -0.5g and 0.5g. Each shock shall reduce the Contract Price by $5.00
+
+#### Syntax
 
     clause fragileGoods(request DeliveryUpdate) : ContractPrice {
-  ... // An expression computing the result of the clause
-}
-...
+        ... // An expression computing the result of the clause
+    }
 
-When inside a contract, the contract variable contains the instance of the Template for the current contract.
 
-When inside a clause, the clause variable contains the part of the Template instance specific to that clause.
-
+Inside a contract, the `contract` variable contains the instance of the template model for the current contract.
 
 ## Statements
 
@@ -139,15 +154,6 @@ Returning a response from a clause can be done by using a return statement:
      return 1                           // Return the integer one
      return new Payout{ amount: 39.99 } // Return a new Payout object
      return                             // Return nothing
-```
-
-### Throw statement
-
-Returning an error can be done by using a throw statement:
-
-```
-     throw "Something went wrong"          // Return an error as a string
-     return new Error{ message: "oops!" }  // Return an error as an object
 ```
 
 ### Enforce statement
