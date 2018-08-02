@@ -1,6 +1,7 @@
 ---
-id: ergo-lang
+id: version-0.5.0-ergo-lang
 title: Quick Reference
+original_id: ergo-lang
 ---
 
 ## Types
