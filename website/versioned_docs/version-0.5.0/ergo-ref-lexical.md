@@ -1,6 +1,7 @@
 ---
-id: ergo-ref-lexical
+id: version-0.5.0-ergo-ref-lexical
 title: - Lexical Conventions
+original_id: ergo-ref-lexical
 ---
 
 ## File Extension
