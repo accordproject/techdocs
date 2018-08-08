@@ -7,6 +7,12 @@ title: Quick Start Tutorial
 
 ## Using an existing Template
 
+### Install Cicero CLI
+
+In order to access the Cicero command line interface (CLI), install the `@accordproject/cicero-cli` npm package:
+
+`npm i -g @accordproject/cicero-cli@0.4.4` (The template library currently requires cicero-cli version 0.4.4)
+
 ### Download the Template
 
 You can download a single clause or contract template from https://templates.accordproject.org as a zip file. Once downloaded unzip the archive so you can inspect the contents.
