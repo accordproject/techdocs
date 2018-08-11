@@ -11,7 +11,10 @@ title: Quick Start Tutorial
 
 In order to access the Cicero command line interface (CLI), install the `@accordproject/cicero-cli` npm package:
 
-`npm i -g @accordproject/cicero-cli@0.4.4` (The template library currently requires cicero-cli version 0.4.4)
+`npm i -g @accordproject/cicero-cli`
+
+> The version of cicero-cli needs to match the cicero version, that is required by the template.
+> E.g. if the template requires version 0.5, cicero-cli 0.5 must be installed: `npm i -g @accordproject/cicero-cli@0.5`
 
 ### Download the Template
 
@@ -26,7 +29,7 @@ If you have `git` installed you can `git clone` the template library to download
 Using your terminal `cd` into the directory that contains the template you would like to test. In the example below we use the `helloworld` template.
 
 Use the `cicero parse` command to load a template from a directory on disk and then use
-it to parse input text, echoing the result of parsing. By default the file `sample.txt` if parsed. 
+it to parse input text, echoing the result of parsing. By default the file `sample.txt` if parsed.
 If the input text is valid the parsing result will be a JSON serialized instance of the Template Model:
 
 Sample template.tem:
@@ -40,7 +43,7 @@ Sample.txt:
 Parsing using the command line:
 
 ```
-    cd cicero-template-library 
+    cd cicero-template-library
     cicero parse
 ```
 
@@ -65,14 +68,14 @@ Rerun `cicero parse`. The output should now be:
 
 ```
     { Error: invalid syntax at line 1 col 1:
-    FUBAR  Name of the person to greet: "Dan". 
+    FUBAR  Name of the person to greet: "Dan".
     ^ Unexpected "F"
 ```
 
 ### Execute
 
 Use the `cicero execute` command to load a template from a directory on disk,
-instantiate a clause based on input text (defaults to `sample.txt`), and then invoke the clause using an 
+instantiate a clause based on input text (defaults to `sample.txt`), and then invoke the clause using an
 incoming JSON payload (defaults to `data.json`).
 
 data.json::
@@ -86,14 +89,14 @@ data.json::
 Commands:
 
 ```
-    cd cicero-template-library 
+    cd cicero-template-library
     cicero execute
 ```
 
-The results of execution (a JSON serialized object) are displayed. They include: 
+The results of execution (a JSON serialized object) are displayed. They include:
 
 * Details of the clause executed (name, version, SHA256 hash of clause data)
-* The incoming request object 
+* The incoming request object
 * The output response object
 * Output state
 * Emitted events
@@ -125,14 +128,14 @@ Note that in the response data from the template has been combined with data fro
 
 ## Creating a New Template
 
-Now that you have executed an existing template, let's create a new template. 
+Now that you have executed an existing template, let's create a new template.
 
 > If you would like to contribute your template back into the `cicero-template-library` please start by [forking](https://help.github.com/articles/fork-a-repo/) the `cicero-template-library` project on GitHub. This will make it easy for you to submit a pull request to get your new template added to the library.
 
 Install the template generator::
 
 ```
-    npm install -g yo 
+    npm install -g yo
     npm install -g yo @accordproject/generator-cicero-template
 ```
 
@@ -170,11 +173,11 @@ of the variable in the `template.tem` file.
 
 Note that the Hyperledger Composer Modeling Language primitive data types are:
 
-- String 
-- Long 
-- Integer 
-- DateTime 
-- Double 
+- String
+- Long
+- Integer
+- DateTime
+- Double
 - Boolean
 
 > Note that you can import common types (address, monetary amount, country code, etc.) from the Accord Project Model Repository: https://models.accordproject.org.
