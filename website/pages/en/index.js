@@ -144,7 +144,7 @@ const FeatureCallout = props => (
   <Block background="light">
     {[
       {
-        content: "Use Open Source tools and standards from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.",
+        content: "Use Open Source tools and specifications from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.",
         title: 'Digitize Legal Contracts',
       }
     ]}
