@@ -16,6 +16,10 @@ const CWD = process.cwd();
 const siteConfig = require(CWD + '/siteConfig.js');
 const versions = require(CWD + '/versions.json');
 
+const toGitHubTag = (version) => {
+  return version.match(/^\d+\.\d+\.\d+/)[0];
+}
+
 class Versions extends React.Component {
   render() {
     const latestVersion = versions[0];
@@ -34,6 +38,9 @@ class Versions extends React.Component {
                   <th>{latestVersion}</th>
                   <td>
                     <a href={'/docs/accordproject.html'}>Documentation</a>
+                  </td>
+                  <td>
+                    <a href={'https://github.com/accordproject/cicero/releases/v'+toGitHubTag(latestVersion)}>Release Notes</a>
                   </td>
                 </tr>
               </tbody>
@@ -65,7 +72,10 @@ class Versions extends React.Component {
                         <td>
                           <a href={`/docs/${version}/accordproject.html`}>Documentation</a>
                         </td>
-                      </tr>
+                        <td>
+                          <a href={'https://github.com/accordproject/cicero/releases/v'+toGitHubTag(version)}>Release Notes</a>
+                        </td>
+                      </tr>                                        
                     )
                 )}
               </tbody>
