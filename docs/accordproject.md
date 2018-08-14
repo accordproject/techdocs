@@ -3,9 +3,9 @@ id: accordproject
 title: Overview
 ---
 
-The Accord Project is an Open Source, open standards, non-profit corporation working to transform contract management and contract automation by digitizing contracts.
+The Accord Project is an open source, non-profit, initative working to transform contract management and contract automation by digitizing contracts. 
 
-The Accord Project has created the following Open Source software packages:
+The Accord Project provides an open, industry-driven, specification and implementation for smart legal contracts that includes the leading law firms and blockchain technology organizations in the world. The Project has created the following Open Source software packages:
 - [Cicero](cicero.md): reusable executable templates for contracts and clauses. 
 - [Ergo](ergo.md): a functional domain specific language used to define the executable logic for templates
 - [Model Repository](model-repository.md) : a repository of Open Source data models for use in Cicero template and Ergo logic
