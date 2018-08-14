@@ -13,16 +13,21 @@ In order to access the Cicero command line interface (CLI), install the `@accord
 
 `npm i -g @accordproject/cicero-cli`
 
-> The version of cicero-cli needs to match the cicero version, that is required by the template.
-> E.g. if the template requires version 0.5, cicero-cli 0.5 must be installed: `npm i -g @accordproject/cicero-cli@0.5`
+> If you're new to `npm` the [installation instructions](accordproject-tools.md) have some more detailed guidance.  
 
 ### Download the Template
 
-You can download a single clause or contract template from https://templates.accordproject.org as a zip file. Once downloaded unzip the archive so you can inspect the contents.
+You can download a single clause or contract template from the [Accord Project Template Library](https://templates.accordproject.org) as a zip file. Once downloaded unzip the archive so you can inspect the contents.
+
+> Note that the version of `cicero-cli` needs to match the Cicero version that is required by a template.
+> * You can check the version of your CLI with `cicero --version`. 
+> * You can choose a different version of a template with the *Versions* dropdown in the [Accord Project Template Library](https://templates.accordproject.org).
+> * Otherwise, install a specific version of the cli, for example for v0.5, use `npm i -g @accordproject/cicero-cli@0.5`.  
 
 If you have `git` installed you can `git clone` the template library to download all the templates, or you can use the "Download" button inside GitHub:
 
     git clone https://github.com/accordproject/cicero-template-library
+    
 
 ### Parse
 
