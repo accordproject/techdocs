@@ -1,6 +1,7 @@
 ---
-id: cicero-concepts
+id: version-0.6.0-cicero-concepts
 title: Cicero Concepts
+original_id: cicero-concepts
 ---
 
 # Template 

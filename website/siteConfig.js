@@ -77,8 +77,83 @@ const siteConfig = {
     ' Clause Inc.',
 
   highlight: {
-    // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'default',
+    theme: 'atom-one-light',
+    hljs: function(hljs) {
+      hljs.registerLanguage('ergo', function(hljs) {
+        var ERGO_KEYWORDS = {
+            keyword: 'namespace import define function transaction concept event asset ' +
+                'participant enum extends contract over clause throws emits state call ' +
+                'enforce if then else let foreach return in where throw '+
+                'constant match set emit with or and ',
+            literal: 'true false unit none',
+            built_in: 'flatten now dateTimeIsSame dateTimeIsBefore dateTimeIsAfter ' +
+                'dateTimeDiffDays dateTimeDiffSeconds min max average '
+          };
+
+        var TYPE = {
+          className: 'type',
+          begin: '\\b[A-Z]([\\w\']*|{)',
+          relevance: 0
+        };
+        var BLOCK_COMMENT = hljs.COMMENT(
+          '/\\*',
+          '\\*/',
+          {
+            contains: ['self']
+          }
+        );
+        var SUBST = {
+          className: 'subst',
+          begin: /\\\(/, end: '\\)',
+          keywords: ERGO_KEYWORDS,
+          contains: [] // assigned later
+        };
+        var NUMBERS = {
+            className: 'number',
+            begin: '\\b([\\d_]+(\\.[\\deE_]+)?|0x[a-fA-F0-9_]+(\\.[a-fA-F0-9p_]+)?|0b[01_]+|0o[0-7_]+)\\b',
+            relevance: 0
+        };
+        var QUOTE_STRING_MODE = hljs.inherit(hljs.QUOTE_STRING_MODE, {
+          contains: [SUBST, hljs.BACKSLASH_ESCAPE]
+        });
+        SUBST.contains = [NUMBERS];
+
+        return {
+          keywords: ERGO_KEYWORDS,
+          contains: [
+            QUOTE_STRING_MODE,
+            hljs.C_LINE_COMMENT_MODE,
+            BLOCK_COMMENT,
+            TYPE,
+            NUMBERS,
+            // {
+            //   className: 'function',
+            //   beginKeywords: 'function clause', end: '{', excludeEnd: true,
+            //   contains: [
+            //     hljs.inherit(hljs.TITLE_MODE, {
+            //       begin: /[A-Za-z$_][0-9A-Za-z$_]*/,
+            //       illegal: /\(/
+            //     }),
+            //     {
+            //       className: 'params',
+            //       begin: /\s/, end: /\=\>/, endsParent: true, excludeEnd: true,
+            //       keywords: ERGO_KEYWORDS,
+            //       contains: [
+            //         'self',
+            //         NUMBERS,
+            //         QUOTE_STRING_MODE,
+            //         hljs.C_BLOCK_COMMENT_MODE,
+            //         {begin: ':'} // relevance booster
+            //       ],
+            //       illegal: /["]/
+            //     }
+            //   ],
+            //  illegal: /\[|%/
+            //}
+          ]
+        };
+      });
+    }
   },
 
   algolia: {

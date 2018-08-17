@@ -1,6 +1,7 @@
 ---
-id: ergo-ref-conditional-expressions
+id: version-0.6.0-ergo-ref-conditional-expressions
 title: - Condition Expressions
+original_id: ergo-ref-conditional-expressions
 ---
 
 Conditional statements, conditional expressions and conditional constructs are features of a programming language which perform different computations or actions depending on whether a programmer-specified boolean condition evaluates to true or false.  Conditional expressions (also known as `if` statements) allow us to conditionally execute Ergo code depending on the value of a test condition. If the test condition evaluates to `true` then the code on the `then` branch is evaluated. Otherwise, when the test condition evaluates to `false` then the `else` branch is evaluated.

@@ -1,6 +1,7 @@
 ---
-id: ergo-intro-examples
+id: version-0.6.0-ergo-intro-examples
 title: Ergo Example
+original_id: ergo-intro-examples
 ---
 
 ## Hello World
