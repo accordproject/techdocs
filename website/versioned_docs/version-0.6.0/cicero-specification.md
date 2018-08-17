@@ -1,6 +1,7 @@
 ---
-id: cicero-specification
+id: version-0.6.0-cicero-specification
 title: Template Specification
+original_id: cicero-specification
 ---
 
 - Version: 0.6

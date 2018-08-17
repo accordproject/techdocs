@@ -1,6 +1,7 @@
 ---
-id: ergo-ref-match-expressions
+id: version-0.6.0-ergo-ref-match-expressions
 title: - Match Expressions
+original_id: ergo-ref-match-expressions
 ---
 
 Match expressions allow us to check an expression against multiple
