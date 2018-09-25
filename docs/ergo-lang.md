@@ -1,6 +1,6 @@
 ---
 id: ergo-lang
-title: Quick Reference
+title: Language Guide
 ---
 
 ## Types

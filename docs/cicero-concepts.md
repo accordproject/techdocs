@@ -44,7 +44,7 @@ Variables in template grammars are enclosed in ``[{`` and ``}]``.
 # Template Model
 
 The model for a template captures the names and types of the variables. 
-Template models are expressed using the [Hyperledger Composer Modeling Language](https://hyperledger.github.io/composer/latest/reference/cto_language.html), a runtime neutral, 
+Template models are expressed using the [Hyperledger Composer Modeling Language](https://hyperledger.github.io/composer/latest/reference/cto_language), a runtime neutral, 
 text-based data-definition (schema) language.
 
 Here is a sample template model for a clause template:
@@ -97,25 +97,29 @@ incoming requests and responses are modeled types.
 Below is a sample Ergo function that operates *over* the `LateDeliveryAndPenaltyClause` model. It contains a single clause called `latedeliveryandpenalty` that produces a `LateDeliveryAndPenaltyResponse` in response to a `LateDeliveryAndPenaltyRequest`. This contract is stateless and does not emit events. See below for a description of contract state and events.
 
 ```ergo
+namespace org.accordproject.latedeliveryandpenalty
+
+import org.accordproject.cicero.runtime.*
+
 contract LateDeliveryAndPenalty over LateDeliveryAndPenaltyClause {
-  clause latedeliveryandpenalty(request : LateDeliveryAndPenaltyRequest)
-    : LateDeliveryAndPenaltyResponse {
+  clause latedeliveryandpenalty(request : LateDeliveryAndPenaltyRequest) : LateDeliveryAndPenaltyResponse {
     // Guard against calling late delivery clause too early
     let agreed = request.agreedDelivery;
     enforce dateTimeIsBefore(agreed,now()) else
-    throw ErrorResponse{ message : "Cannot exercise late delivery before delivery date" };
-    
+    throw ErgoErrorResponse{ message : "Cannot exercise late delivery before delivery date" };
+
     enforce !contract.forceMajeure or !request.forceMajeure else
     return LateDeliveryAndPenaltyResponse{
       penalty: 0.0,
       buyerMayTerminate: true
-    };
+    }
+    ;
 
     // Calculate the time difference between current date and agreed upon date
-    let diff = dateTimeDiffDays(now(),agreed);
+    let diff = dateTimeDiffDays(now,agreed);
     // Penalty formula
     let penalty =
-        (diff / contract.penaltyDuration.amount)
+      (diff / contract.penaltyDuration.amount)
       * contract.penaltyPercentage/100.0 * request.goodsValue;
     // Penalty may be capped
     let capped = min([penalty, contract.capPercentage/100.0 * request.goodsValue]);
@@ -128,7 +132,7 @@ contract LateDeliveryAndPenalty over LateDeliveryAndPenaltyClause {
 }
 ```
 
-You can view and download the latest Late Delivery and Penalty template [here](https://templates.accordproject.org/latedeliveryandpenalty@0.2.0.html).
+You can view and download the latest Late Delivery and Penalty template [here](https://templates.accordproject.org/latedeliveryandpenalty@0.7.0.html).
 
 # Template Library
 

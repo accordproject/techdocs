@@ -35,3 +35,4 @@ principles:
 ## Status
 
 - The current implementation supports compilation to JavaScript (for use in Cicero Templates and Hyperledger Fabric)
+

@@ -22,11 +22,13 @@ You can download a single clause or contract template from the [Accord Project T
 > Note that the version of `cicero-cli` needs to match the Cicero version that is required by a template.
 > * You can check the version of your CLI with `cicero --version`. 
 > * You can choose a different version of a template with the *Versions* dropdown in the [Accord Project Template Library](https://templates.accordproject.org).
-> * Otherwise, install a specific version of the cli, for example for v0.5, use `npm i -g @accordproject/cicero-cli@0.5`.  
+> * Otherwise, install a specific version of the cli, for example for v0.8, use `npm i -g @accordproject/cicero-cli@0.8`.  
 
 If you have `git` installed you can `git clone` the template library to download all the templates, or you can use the "Download" button inside GitHub:
 
-    git clone https://github.com/accordproject/cicero-template-library
+```sh
+git clone https://github.com/accordproject/cicero-template-library
+```
     
 
 ### Parse
@@ -37,25 +39,33 @@ Use the `cicero parse` command to load a template from a directory on disk and t
 it to parse input text, echoing the result of parsing. By default the file `sample.txt` if parsed.
 If the input text is valid the parsing result will be a JSON serialized instance of the Template Model:
 
-Sample template.tem:
+For the template in `grammar/template.tem`:
 
-    Name of the person to greet: [{name}]. Thank you!
-
-Sample.txt:
-
-    Name of the person to greet: "Dan". Thank you!
-
-Parsing using the command line:
-
-```
-    cd cicero-template-library
-    cicero parse
+```text
+Name of the person to greet: [{name}]. Thank you!
 ```
 
-Should print this output:
+and the sample clause in `sample.txt`:
 
+```text
+Name of the person to greet: "Dan". Thank you!
 ```
-{"$class":"org.accordproject.helloworld.HelloWorldClause","clauseId":"684efa6b-252a-49fb-8942-1124d4d46980","name":"Fred Blogs"}
+
+parsing using the command line:
+
+```sh
+cd cicero-template-library/src/helloworld
+cicero parse
+```
+
+should print this output:
+
+```json
+{
+  "$class": "org.accordproject.helloworld.HelloWorldClause",
+  "clauseId": "234aedae-bc28-4894-b85a-d370793fee48",
+  "name": "Fred Blogs"
+}
 ```
 
 Or, attempting to parse invalid data will result in line and column information for the syntax
@@ -64,38 +74,41 @@ error.
 Edit `sample.txt` to add text that is not in the grammar file (template.tem) for the template:
 
 Modified text:
-```
-    FUBAR Name of the person to greet: "Dan". Thank you!
+```text
+FUBAR Name of the person to greet: "Dan". Thank you!
 ```
 
 Rerun `cicero parse`. The output should now be:
 
 
-```
-    { Error: invalid syntax at line 1 col 1:
-    FUBAR  Name of the person to greet: "Dan".
-    ^ Unexpected "F"
+```text
+23:08:46 - error: invalid syntax at line 1 col 1:
+
+  FUBAR Name of the person to greet: "Fred Blogs".
+  ^
+Unexpected "F"
 ```
 
 ### Execute
 
 Use the `cicero execute` command to load a template from a directory on disk,
 instantiate a clause based on input text (defaults to `sample.txt`), and then invoke the clause using an
-incoming JSON payload (defaults to `data.json`).
+incoming JSON payload (defaults to `request.json`).
 
-data.json::
+request.json::
 
-```
-    {
-        "$class": "io.clause.helloworld.Request", "input": "World"
-    }
+```json
+{
+    "$class": "org.accordproject.helloworld.MyRequest",
+    "input": "Accord Project"
+}
 ```
 
 Commands:
 
-```
-    cd cicero-template-library
-    cicero execute
+```sh
+cd cicero-template-library/src/helloworld
+cicero execute
 ```
 
 The results of execution (a JSON serialized object) are displayed. They include:
@@ -108,24 +121,24 @@ The results of execution (a JSON serialized object) are displayed. They include:
 
 Example:
 
-```
+```json
 {
-    "clause": "helloworld@0.2.0-192e3614d29d9684ec23ad6d3635988e5e37043f5286ed2d1d854dfbf5d2d18e",
-    "request": {
-        "$class": "org.accordproject.helloworld.MyRequest",
-        "input": "Accord Project"
-    },
-    "response": {
-        "$class": "org.accordproject.helloworld.MyResponse",
-        "output": "Hello Fred Blogs Accord Project",
-        "transactionId": "d4ddaef6-c3a0-4738-b14d-426498aaa04a",
-        "timestamp": "2018-06-21T10:36:44.067Z"
-    },
-    "state": {
-        "$class": "org.accordproject.cicero.contract.AccordContractState",
-        "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
-    },
-    "emit": []
+  "clause": "helloworld@0.6.0-20ede4c859c12480fd47781d6fafbfac9879b9f9b650f7d24bf2d385d167753e",
+  "request": {
+    "$class": "org.accordproject.helloworld.MyRequest",
+    "input": "Accord Project"
+  },
+  "response": {
+    "$class": "org.accordproject.helloworld.MyResponse",
+    "output": "Hello Fred Blogs Accord Project",
+    "transactionId": "1e1eb427-fb7a-4a94-901b-590d140ed909",
+    "timestamp": "2018-09-12T03:10:05.660Z"
+  },
+  "state": {
+    "$class": "org.accordproject.cicero.contract.AccordContractState",
+    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+  },
+  "emit": []
 }
 ```
 
