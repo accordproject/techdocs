@@ -14,7 +14,7 @@ const users = [
     caption: 'Clause Inc.',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/accord_logo.png'.
-    image: 'img/clause-logo-sm.jpg',
+    image: 'img/clause-logo-sm.png',
     infoLink: 'http://clause.io',
     pinned: true,
   },
