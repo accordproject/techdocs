@@ -1,6 +1,7 @@
 ---
-id: ergo-lang
+id: version-0.8.0.1-ergo-lang
 title: Language Guide
+original_id: ergo-lang
 ---
 
 Ergo provides a simple expression language to describe computation. From those expressions one can write functions, clauses, and then whole contract logic. This page explains most of the Ergo concepts starting from simple expressions all the way to contracts.
