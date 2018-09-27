@@ -302,6 +302,15 @@
       "version-0.6.0-ergo-ref-match-expressions": {
         "title": "- Match Expressions"
       },
+      "version-0.8.0.1-cicero-concepts": {
+        "title": "Cicero Concepts"
+      },
+      "version-0.8.0.1-ergo-lang": {
+        "title": "Language Guide"
+      },
+      "version-0.8.0.1-ergo-stdlib": {
+        "title": "Standard Library"
+      },
       "version-0.8.0-accordproject-specification": {
         "title": "Template Specification"
       },
