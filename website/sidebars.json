@@ -2,7 +2,7 @@
   "docs": {
     "Accord Project": ["accordproject", "accordproject-tools", "accordproject-specification"],
     "Cicero": ["cicero", "cicero-concepts", "cicero-tutorial_001",  "cicero-tasks", "cicero-cli", "cicero-api"],
-    "Ergo": ["ergo", "ergo-intro-examples", "ergo-lang", "ergo-reference", "ergo-spec-overview", "ergo-cli", "ergo-api"],
+      "Ergo": ["ergo", "ergo-intro-examples", "ergo-lang", "ergo-reference", "ergo-stdlib", "ergo-spec-overview", "ergo-cli", "ergo-api"],
     "Verbatim": ["verbatim"],
     "Model Repository": ["model-repository"],
     "Template Library": ["template-library"]

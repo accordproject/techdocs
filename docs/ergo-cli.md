@@ -163,7 +163,6 @@ $ ergotop ./examples/volumediscount/model.cto ./examples/volumediscount/logic.er
 ergo$ import org.accordproject.cicero.contract.*
 ergo$ import org.accordproject.cicero.runtime.*
 ergo$ import org.accordproject.volumediscount.*
-ergo$ 
 ergo$ set contract VolumeDiscount over TemplateModel{ \
   ...   firstVolume: 1.0, \
   ...   secondVolume: 10.0, \

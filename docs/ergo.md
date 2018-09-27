@@ -3,6 +3,8 @@ id: ergo
 title: Introduction to Ergo
 ---
 
+**_Note: This version of the documentation is based on Ergo 0.4.3_**
+
 Ergo is a domain-specific language (DSL) that captures the execution logic of *legal* contracts. 
 
 A DSL is a computer language that's targeted to a particular kind of problem, rather than a general-purpose language that's aimed at any kind of software problem. For example, HTML is a DSL targeted at developing web pages. Similarly, Ergo is a DSL that captures the execution logic of legal contracts. Ergo is intended to be accessible to Lawyers who create the corresponding prose for computable legal contracts. 
@@ -34,5 +36,6 @@ principles:
 
 ## Status
 
-- The current implementation supports compilation to JavaScript (for use in Cicero Templates and Hyperledger Fabric)
+- The current implementation is considered *in development*, we welcome contributions (be it bug reports, suggestions for new features or improvements, or pull requests)
+- The currently compiler targets JavaScript (either standalone or for use in Cicero Templates and Hyperledger Fabric) and Java (experimental)
 

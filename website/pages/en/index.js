@@ -178,27 +178,27 @@ const Grammar = props => (
   </Block>
 );
 
-const Ergo = props => (
+const Model = props => (
   <Block background="dark">
     {[
       {
-        content: 'Ergo is a strongly-typed functional programming language designed to capture the legal intent of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.',
-        image: imgUrl('ergo-vscode.png'),
-        imageAlign: 'left',
-        title: 'Logic',
+        content: 'The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://hyperledger.github.io/composer/latest/reference/cto_language.htm">Hyperledger Composer Modeling Language</a>.',
+        image: imgUrl('model-vscode.png'),
+        imageAlign: 'right',
+        title: 'Model',
       },
     ]}
   </Block>
 );
 
-const Model = props => (
+const Logic = props => (
   <Block background="dark">
     {[
       {
-        content: 'The template model defines the structure of data that are used in the natural language and logic. <br/><br/>Cicero templates use the <a href="https://hyperledger.github.io/composer/latest/reference/cto_language.htm">Hyperledger Composer Modeling Language</a>.',
-        image: imgUrl('model-vscode.png'),
+        content: 'Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.',
+        image: imgUrl('ergo-vscode.png'),
         imageAlign: 'left',
-        title: 'Model',
+        title: 'Logic',
       },
     ]}
   </Block>
@@ -246,8 +246,8 @@ class Index extends React.Component {
           <FeatureCallout />
           <Templates />
           <Grammar />
-          <Ergo />
           <Model />
+          <Logic />
           <TryOut />
           <Showcase language={language} />
         </div>
