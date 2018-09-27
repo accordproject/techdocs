@@ -1,0 +1,77 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.ErgoNNRC.Lang.ErgoNNRC</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.ErgoNNRC.Lang.ErgoNNRC" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.ErgoNNRC.Lang.ErgoNNRC</h1>
+<div class="coq">
+<br/>
+<div class="doc">ErgoNNRC is an IL with function tables where the body is written in NNRC. It is the main IL interfacing with Q*cert for code-generation. </div>
+<br/>
+<h1> Abstract Syntax </h1>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Types.ErgoType.html">ErgoSpec.Common.Types.ErgoType</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.ErgoBackend.html">ErgoSpec.Backend.ErgoBackend</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="ErgoNNRC">ErgoNNRC</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="kwd">Syntax</span>.<br/>
+<br/>
+<div class="doc">Expression </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="nnrc_expr">nnrc_expr</a></span> := <span class="id"><a href="ErgoSpec.Backend.ErgoBackend.html#ErgoCodeGen.nnrc_expr">ErgoCodeGen.nnrc_expr</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="nnrc_type">nnrc_type</a></span> := <span class="id"><a href="ErgoSpec.Common.Types.ErgoType.html#laergo_type">laergo_type</a></span>. <br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="lambdan">lambdan</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkLambdaN">mkLambdaN</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="lambdan_params">lambdan_params</a></span>: <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_type">nnrc_type</a></span>);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="lambdan_output">lambdan_output</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_type">nnrc_type</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="lambdan_body">lambdan_body</a></span> : <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_expr">nnrc_expr</a></span>; }.<br/>
+<br/>
+<div class="doc">Function </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="nnrc_function">nnrc_function</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkFuncN">mkFuncN</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="functionn_name">functionn_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="functionn_lambda">functionn_lambda</a></span> : <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#lambdan">lambdan</a></span>; }.<br/>
+<br/>
+<div class="doc">Function table </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="nnrc_function_table">nnrc_function_table</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkFuncTableN">mkFuncTableN</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="function_tablen_name">function_tablen_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="function_tablen_funs">function_tablen_funs</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_function">nnrc_function</a></span>; }.<br/>
+<br/>
+<div class="doc">Declaration </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="nnrc_declaration">nnrc_declaration</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DNExpr">DNExpr</a></span> : <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_expr">nnrc_expr</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_declaration">nnrc_declaration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DNConstant">DNConstant</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_expr">nnrc_expr</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_declaration">nnrc_declaration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DNFunc">DNFunc</a></span> : <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_function">nnrc_function</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_declaration">nnrc_declaration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DNFuncTable">DNFuncTable</a></span> : <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_function_table">nnrc_function_table</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_declaration">nnrc_declaration</a></span>.<br/>
+<br/>
+<div class="doc">Module. </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="nnrc_module">nnrc_module</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkModuleN">mkModuleN</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="modulen_namespace">modulen_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="modulen_declarations">modulen_declarations</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_declaration">nnrc_declaration</a></span>; }.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="kwd">Syntax</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="ErgoNNRC.Semantics">Semantics</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#ErgoNNRC.Semantics">Semantics</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="ErgoNNRC.Evaluation">Evaluation</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#ErgoNNRC.Evaluation">Evaluation</a></span>.<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#ErgoNNRC">ErgoNNRC</a></span>.<br/>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

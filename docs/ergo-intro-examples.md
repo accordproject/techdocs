@@ -1,6 +1,6 @@
 ---
 id: ergo-intro-examples
-title: Ergo Example
+title: Ergo Examples
 ---
 
 ## Hello World

@@ -1,5 +1,5 @@
 ---
-id: cicero-specification
+id: accordproject-specification
 title: Template Specification
 ---
 
