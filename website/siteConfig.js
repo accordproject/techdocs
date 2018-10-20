@@ -18,6 +18,12 @@ const users = [
     infoLink: 'http://clause.io',
     pinned: true,
   },
+  {
+    caption: 'ContractPen',
+    image: 'img/contractpen-logo-sm.png',
+    infoLink: 'https://contractpen.io',
+    pinned: true,
+  },  
 ];
 
 const siteConfig = {
