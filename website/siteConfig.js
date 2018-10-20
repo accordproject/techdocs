@@ -18,6 +18,14 @@ const users = [
     infoLink: 'http://clause.io',
     pinned: true,
   },
+  {
+      caption: 'ContractPen',
+      // You will need to prepend the image path with your baseUrl
+      // if it is not '/', like: '/test-site/img/accord_logo.png'.
+      image: 'img/contractpen-logo-sm.png',
+      infoLink: 'https://contractpen.com',
+      pinned: true,
+  },
 ];
 
 const siteConfig = {
