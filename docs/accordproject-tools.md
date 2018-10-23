@@ -3,7 +3,7 @@ id: accordproject-tools
 title: Installation
 ---
 
-The quickest way to experiment with Cicero Templates and the Ergo language is through the [Ergo playground](https://accordproject.github.io/ergo-playground/).
+The quickest way to experiment with Cicero Templates and the Ergo language is through the [Template Studio](https://studio.accordproject.org).
 
 However to experience the full power of Cicero you should install the command-line tools on your own machine.
 

@@ -47,7 +47,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'accordproject', label: 'Docs'},
-    { href: "https://accordproject.github.io/ergo-playground", label: "Try" },
+    { href: "https://studio.accordproject.org", label: "Try"},
     { href: "https://github.com/accordproject", label: "GitHub" },
     { search: true },
   ],
