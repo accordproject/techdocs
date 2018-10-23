@@ -130,8 +130,8 @@ const TryOut = props => (
   <Block background="light" id="try">
     {[
       {
-        content: 'You can try out a live version of Ergo in the <a href="https://accordproject.github.io/ergo-playground">playground</a>. Pick an existing Accord Project legal template and press run to see it execute! <br/><br/>Experiment with changes to the logic or the request to see how it affects the contract response.',
-        image: imgUrl('playground.png'),
+        content: 'You can try Accord Project templates in the <a href="https://studio.accordproject.org">template studio</a>. Search for existing templates, edit the contract text and execute the logic! <br/><br/>Experiment with changes to the natural language or logic and see how it affects the contract\'s behavior.',
+        image: imgUrl('studio.png'),
         imageAlign: 'right',
         title: 'Try Online',
       },
