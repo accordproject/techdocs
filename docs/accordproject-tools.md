@@ -58,13 +58,13 @@ npm install @accordproject/ergo-cli -g
 
 To check that the compiler has been installed, display the version number:
 ```
-ergo --version
+ergoc --version
 ```
 
 To get command line help:
 ```
 ergoc --help
-ergo execute --help
+ergoc execute --help
 ```
 
 ## Using Visual Studio Code
