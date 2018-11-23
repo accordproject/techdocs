@@ -68,6 +68,8 @@ should print this output:
 }
 ```
 
+> Note that `cicero parse` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
+
 Or, attempting to parse invalid data will result in line and column information for the syntax
 error.
 
