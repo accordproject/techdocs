@@ -338,6 +338,6 @@ The logic for a template may either be specified using Javascript or Ergo.
 
 # Links and References
 
-Hyperledger : http://hyperleger.org
+Hyperledger : http://hyperledger.org
 
 Accord Project : https://www.accordproject.org
