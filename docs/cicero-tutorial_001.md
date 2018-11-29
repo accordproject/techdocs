@@ -68,6 +68,8 @@ should print this output:
 }
 ```
 
+> Note that `cicero parse` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
+
 Or, attempting to parse invalid data will result in line and column information for the syntax
 error.
 
@@ -110,6 +112,8 @@ Commands:
 cd cicero-template-library/src/helloworld
 cicero execute
 ```
+
+> Note that `cicero execute` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
 
 The results of execution (a JSON serialized object) are displayed. They include:
 
