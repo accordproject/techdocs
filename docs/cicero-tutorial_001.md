@@ -113,6 +113,8 @@ cd cicero-template-library/src/helloworld
 cicero execute
 ```
 
+> Note that `cicero execute` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
+
 The results of execution (a JSON serialized object) are displayed. They include:
 
 * Details of the clause executed (name, version, SHA256 hash of clause data)
