@@ -1,0 +1,35 @@
+{
+  "version-0.9.9-docs": {
+    "Accord Project": [
+      "version-0.9.9-accordproject",
+      "version-0.9.9-accordproject-gettingstarted",
+      "version-0.9.9-accordproject-specification"
+    ],
+    "Cicero": [
+      "version-0.9.9-cicero",
+      "version-0.9.9-cicero-tutorial",
+      "version-0.9.9-cicero-tasks",
+      "version-0.9.9-cicero-cli",
+      "version-0.9.9-cicero-api"
+    ],
+    "Ergo": [
+      "version-0.9.9-ergo",
+      "version-0.9.9-ergo-intro-examples",
+      "version-0.9.9-ergo-lang",
+      "version-0.9.9-ergo-reference",
+      "version-0.9.9-ergo-stdlib",
+      "version-0.9.9-ergo-spec-overview",
+      "version-0.9.9-ergo-cli",
+      "version-0.9.9-ergo-api"
+    ],
+    "Template Studio": [
+      "version-0.9.9-template-studio"
+    ],
+    "Model Repository": [
+      "version-0.9.9-model-repository"
+    ],
+    "Template Library": [
+      "version-0.9.9-template-library"
+    ]
+  }
+}

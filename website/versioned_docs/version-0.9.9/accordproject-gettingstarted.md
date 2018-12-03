@@ -1,6 +1,7 @@
 ---
-id: accordproject-tools
-title: Installation
+id: version-0.9.9-accordproject-gettingstarted
+title: Getting Started
+original_id: accordproject-gettingstarted
 ---
 
 The quickest way to experiment with Cicero Templates and the Ergo language is through the [Template Studio](https://studio.accordproject.org).
@@ -21,8 +22,6 @@ Before you can use the command-line tools, you must install and configure the fo
 
 ## Creating Cicero Templates
 If you'd like to build templates yourself, you should install the Cicero command-line tool. This will let you parse and execute your templates.
-
-The [Quickstart tutorial](cicero-tutorial_001.md) shows you how to use this tool.
 
 ```
 npm install -g @accordproject/cicero-cli
@@ -47,6 +46,8 @@ cicero parse --help
 cicero execute --help
 ```
 
+The [Quickstart tutorial](cicero-tutorial.md) shows you how to use this tool.
+
 ## Programming in Ergo
 
 If you'd like to compile and execute Ergo code independently of a Cicero template you should install the Ergo command-line tool.
@@ -64,8 +65,10 @@ ergoc --version
 To get command line help:
 ```
 ergoc --help
-ergoc execute --help
+ergorun --help
 ```
+
+The command line tools are described in details in [Ergo CLI](ergo-cli.md). The [Ergo Language Guide](ergo-lang.md) is a good place to get started with Ergo.
 
 ## Using Visual Studio Code
 
@@ -75,3 +78,4 @@ This highlights syntax and parsing errors for Ergo and Template Grammar Files. S
 Install the plugin from the [Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
 
 ![VSCode plugin](/img/ergo-vscode.png)
+

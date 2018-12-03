@@ -5,11 +5,11 @@
     "previous": "Previous",
     "tagline": "Industry-Led Specification and Open Source Code for Smart Legal Contracts",
     "docs": {
+      "accordproject-gettingstarted": {
+        "title": "Getting Started"
+      },
       "accordproject-specification": {
         "title": "Template Specification"
-      },
-      "accordproject-tools": {
-        "title": "Installation"
       },
       "accordproject": {
         "title": "Overview"
@@ -23,13 +23,10 @@
       "cicero-cli": {
         "title": "Cicero CLI"
       },
-      "cicero-concepts": {
-        "title": "Cicero Concepts"
-      },
       "cicero-tasks": {
         "title": "Usage"
       },
-      "cicero-tutorial_001": {
+      "cicero-tutorial": {
         "title": "Quick Start Tutorial"
       },
       "cicero": {
@@ -65,8 +62,8 @@
       "template-library": {
         "title": "Template Library"
       },
-      "verbatim": {
-        "title": "Introduction to Verbatim"
+      "template-studio": {
+        "title": "Introduction to Template Studio"
       },
       "version-0.2.39-accordproject": {
         "title": "Accord Project"
@@ -311,6 +308,12 @@
       "version-0.8.0.1-ergo-stdlib": {
         "title": "Standard Library"
       },
+      "version-0.8.0.2-accordproject-tools": {
+        "title": "Installation"
+      },
+      "version-0.8.0.2-cicero": {
+        "title": "Introduction to Cicero"
+      },
       "version-0.8.0-accordproject-specification": {
         "title": "Template Specification"
       },
@@ -343,6 +346,39 @@
       },
       "version-0.8.0-ergo": {
         "title": "Introduction to Ergo"
+      },
+      "version-0.9.9-accordproject-gettingstarted": {
+        "title": "Getting Started"
+      },
+      "version-0.9.9-accordproject-specification": {
+        "title": "Template Specification"
+      },
+      "version-0.9.9-accordproject": {
+        "title": "Overview"
+      },
+      "version-0.9.9-cicero-api": {
+        "title": "JavaScript API"
+      },
+      "version-0.9.9-cicero-cli": {
+        "title": "Cicero CLI"
+      },
+      "version-0.9.9-cicero-tasks": {
+        "title": "Usage"
+      },
+      "version-0.9.9-cicero-tutorial": {
+        "title": "Quick Start Tutorial"
+      },
+      "version-0.9.9-ergo-api": {
+        "title": "JavaScript API"
+      },
+      "version-0.9.9-ergo-stdlib": {
+        "title": "Standard Library"
+      },
+      "version-0.9.9-ergo": {
+        "title": "Introduction to Ergo"
+      },
+      "version-0.9.9-template-studio": {
+        "title": "Introduction to Template Studio"
       }
     },
     "links": {
@@ -354,9 +390,10 @@
       "Accord Project": "Accord Project",
       "Cicero": "Cicero",
       "Ergo": "Ergo",
-      "Verbatim": "Verbatim",
+      "Template Studio": "Template Studio",
       "Model Repository": "Model Repository",
       "Template Library": "Template Library",
+      "Verbatim": "Verbatim",
       "Foo": "Foo"
     }
   },

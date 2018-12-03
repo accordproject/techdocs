@@ -1,6 +1,7 @@
 ---
-id: accordproject-specification
+id: version-0.9.9-accordproject-specification
 title: Template Specification
+original_id: accordproject-specification
 ---
 
 - Version: 0.7
