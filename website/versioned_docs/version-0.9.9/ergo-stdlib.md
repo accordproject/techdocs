@@ -1,6 +1,7 @@
 ---
-id: ergo-stdlib
+id: version-0.9.9-ergo-stdlib
 title: Standard Library
+original_id: ergo-stdlib
 ---
 
 The following functions are in the `ord.accordproject.ergo.stdlib` namespace and available by default.

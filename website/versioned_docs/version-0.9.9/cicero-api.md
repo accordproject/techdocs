@@ -1,6 +1,7 @@
 ---
-id: cicero-api
+id: version-0.9.9-cicero-api
 title: JavaScript API
+original_id: cicero-api
 ---
 
 <a name="module_cicero-core"></a>

@@ -1,9 +1,7 @@
 ---
-id: cicero-tutorial_001
+id: cicero-tutorial
 title: Quick Start Tutorial
 ---
-
-# Tutorial 1 : Quick Start
 
 ## Using an existing Template
 

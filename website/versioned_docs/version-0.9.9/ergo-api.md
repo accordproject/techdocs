@@ -1,6 +1,7 @@
 ---
-id: ergo-api
+id: version-0.9.9-ergo-api
 title: JavaScript API
+original_id: ergo-api
 ---
 
 ## Classes

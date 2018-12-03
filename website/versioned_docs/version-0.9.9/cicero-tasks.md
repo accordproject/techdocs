@@ -1,6 +1,7 @@
 ---
-id: cicero-tasks
+id: version-0.9.9-cicero-tasks
 title: Usage
+original_id: cicero-tasks
 ---
 
 ## Load a Template

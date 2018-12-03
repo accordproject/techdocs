@@ -1,6 +1,7 @@
 ---
-id: ergo
+id: version-0.9.9-ergo
 title: Introduction to Ergo
+original_id: ergo
 ---
 
 **_Note: This version of the documentation is based on Ergo 0.5.5_**
