@@ -58,7 +58,6 @@ const Logo = props => (
 
 const ProjectTitle = props => (
   <h2 className="projectTitle">
-    {siteConfig.title}
     <small>{siteConfig.tagline}</small>
   </h2>
 );
@@ -79,7 +78,7 @@ class HomeSplash extends React.Component {
         
         <div className="inner">
           <h2 className="projectTitle">
-                <img style={{width: '100px'}} src={imgUrl('accord_icon.png')} />
+                <img style={{height: '100px'}} src={imgUrl('accord_logo.png')} />
           </h2>
           <ProjectTitle />
           <PromoSection>
@@ -115,8 +114,8 @@ const Features = props => (
         title: `[Ergo](${siteConfig.baseUrl}docs/ergo.html)`,
       },
       {
-        content: `Use Open Source contract templates from the [Template Repository](${siteConfig.baseUrl}docs/template-library.html).`,
-        title: `[Template Repository](${siteConfig.baseUrl}docs/template-library.html)`,
+        content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/template-library.html).`,
+        title: `[Template Library](${siteConfig.baseUrl}docs/template-library.html)`,
       },
       {
         content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,
@@ -182,7 +181,7 @@ const Model = props => (
   <Block background="dark">
     {[
       {
-        content: 'The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://hyperledger.github.io/composer/latest/reference/cto_language.htm">Hyperledger Composer Modeling Language</a>.',
+        content: 'The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://github.com/hyperledger/composer-concerto">Composer Concerto Modeling Language</a>.',
         image: imgUrl('model-vscode.png'),
         imageAlign: 'right',
         title: 'Model',
