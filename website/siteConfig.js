@@ -58,7 +58,7 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/accord_icon_white.png',
   footerIcon: 'img/accord_icon_white.png',
-  favicon: 'img/accord_icon.png',
+  favicon: 'img/favicon/favicon.ico',
 
   /* colors for website */
   colors: {

@@ -98,6 +98,9 @@
       "version-0.10.0-template-studio": {
         "title": "Template Studio"
       },
+      "version-0.10.1.1-ergo-stdlib": {
+        "title": "Ergo Libraries"
+      },
       "version-0.10.1-accordproject-gettingstarted": {
         "title": "Getting Started"
       },
