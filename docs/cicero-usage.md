@@ -1,5 +1,5 @@
 ---
-id: cicero-tasks
+id: cicero-usage
 title: Usage
 ---
 
@@ -59,17 +59,17 @@ package.json
 README.md
     A markdown file that describes the purpose and correct usage for the template
 
-data.json (optional)
+request.json (optional)
     A sample valid request transaction for the template
 
 sample.txt (optional)
-    A sample of DSL text that is valid for the template
+    A sample clause or contract text that is valid for the template
 
 grammar/template.tem
     The default template grammar for the template
 
 models/
-    A collection of Hyperledger Composer model files for the template. They define the Template Model
+    A collection of Composer Concerto model files for the template. They define the Template Model
     and the Request and Response transactions.
 
 lib/
@@ -81,15 +81,15 @@ test/
 
 ### Grammar
 
-Please refer to the Concepts documentation.
+Please refer to the [Template Specification](accordproject-specification#grammar) documentation.
 
 ### Model
 
-Please refer to the Concepts documentation.
+Please refer to the [Template Specification](accordproject-specification#model) documentation.
 
 ### Logic
 
-Please refer to the Concepts documentation.
+Please refer to the [Template Specification](accordproject-specification#logic) documentation.
 
 ### Unit Tests
 
@@ -111,7 +111,7 @@ directly from Hyperledger Fabric 1.1 Node.js chaincode.
 
 ### Command Line Interface
 
-Please see the CLI reference documentation for the ``cicero execute`` command.
+Please refer to the the [CLI documentation](cicero-cli#cicero-execute) for the ``cicero execute`` command.
 
 ### Node.js
 

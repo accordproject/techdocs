@@ -23,11 +23,11 @@
       "cicero-cli": {
         "title": "Cicero CLI"
       },
-      "cicero-tasks": {
-        "title": "Usage"
-      },
       "cicero-tutorial": {
         "title": "Quick Start Tutorial"
+      },
+      "cicero-usage": {
+        "title": "Usage"
       },
       "cicero": {
         "title": "Introduction to Cicero"
@@ -51,7 +51,7 @@
         "title": "Compiler Specification"
       },
       "ergo-stdlib": {
-        "title": "Standard Library"
+        "title": "Ergo Libraries"
       },
       "ergo": {
         "title": "Introduction to Ergo"
@@ -63,7 +63,40 @@
         "title": "Template Library"
       },
       "template-studio": {
-        "title": "Introduction to Template Studio"
+        "title": "Template Studio"
+      },
+      "version-0.10.0-accordproject-specification": {
+        "title": "Template Specification"
+      },
+      "version-0.10.0-accordproject": {
+        "title": "Overview"
+      },
+      "version-0.10.0-cicero-cli": {
+        "title": "Cicero CLI"
+      },
+      "version-0.10.0-cicero-usage": {
+        "title": "Usage"
+      },
+      "version-0.10.0-ergo-cli": {
+        "title": "Ergo CLI"
+      },
+      "version-0.10.0-ergo-intro-examples": {
+        "title": "Ergo Examples"
+      },
+      "version-0.10.0-ergo-lang": {
+        "title": "Language Guide"
+      },
+      "version-0.10.0-ergo-reference": {
+        "title": "Language Reference"
+      },
+      "version-0.10.0-ergo-stdlib": {
+        "title": "Ergo Libraries"
+      },
+      "version-0.10.0-ergo": {
+        "title": "Introduction to Ergo"
+      },
+      "version-0.10.0-template-studio": {
+        "title": "Template Studio"
       },
       "version-0.2.39-accordproject": {
         "title": "Accord Project"

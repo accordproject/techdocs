@@ -1,6 +1,7 @@
 ---
-id: accordproject-specification
+id: version-0.10.0-accordproject-specification
 title: Template Specification
+original_id: accordproject-specification
 ---
 
 - Version: 0.7
@@ -390,7 +391,7 @@ The grammar files for the template are stored in the  /grammar/ folder.
 
 ### Data Model
 
-The data model for a smart clause is stored in a set of files under the `/model` folder. The data model files must be in the format defined using the Composer Concerto modeling language. All data models for the template are in-scope and types from all namespaces may be imported.
+The data model for a smart clause is stored in a set of files under the `/model` folder. The data model files must be in the format defined by Hyperledger Composer modeling language. All data models for the template are in-scope and types from all namespaces may be imported.
 
 Using the ability to convert CML models to UML we can even visualise all the required types (model, request, response) we have modelled graphically:
 

@@ -1,6 +1,7 @@
 ---
-id: ergo-cli
+id: version-0.10.0-ergo-cli
 title: Ergo CLI
+original_id: ergo-cli
 ---
 
 To install the Ergo command-line interface (CLI):

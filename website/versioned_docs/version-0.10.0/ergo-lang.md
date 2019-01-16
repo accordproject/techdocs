@@ -1,6 +1,7 @@
 ---
-id: ergo-lang
+id: version-0.10.0-ergo-lang
 title: Language Guide
+original_id: ergo-lang
 ---
 
 Ergo provides a simple expression language to describe computation. From those expressions one can write functions, clauses, and then whole contract logic. This page explains most of the Ergo concepts starting from simple expressions all the way to contracts.
@@ -172,7 +173,7 @@ Since not all the cases of the `if ... then ... else ...` expressions return a v
 
 ## Complex Values & Types
 
-So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Composer Concerto Modeling Language](https://github.com/hyperledger/composer-concerto) (often referred to as CTO files). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.
+So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the Hyperledger [Composer Modeling Language](https://hyperledger.github.io/composer/latest/reference/cto_language) (often referred to as CTO files). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.
 
 In Ergo, you can either import an existing CTO file or declare types directly within your code. Let us look at the different kinds of types you can define and how to create values with those types.
 
