@@ -1,6 +1,7 @@
 ---
-id: accordproject-gettingstarted
+id: version-0.10.1-accordproject-gettingstarted
 title: Getting Started
+original_id: accordproject-gettingstarted
 ---
 
 The quickest way to experiment with Cicero Templates and the Ergo language is through the [Template Studio](https://studio.accordproject.org).

@@ -1,7 +1,7 @@
 {
   "docs": {
     "Accord Project": ["accordproject", "accordproject-gettingstarted", "accordproject-specification"],
-    "Cicero": ["cicero", "cicero-tutorial",  "cicero-tasks", "cicero-cli", "cicero-api"],
+    "Cicero": ["cicero", "cicero-tutorial",  "cicero-usage", "cicero-cli", "cicero-api"],
       "Ergo": ["ergo", "ergo-intro-examples", "ergo-lang", "ergo-reference", "ergo-stdlib", "ergo-spec-overview", "ergo-cli", "ergo-api"],
     "Template Studio": ["template-studio"],
     "Model Repository": ["model-repository"],
