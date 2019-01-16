@@ -98,6 +98,18 @@
       "version-0.10.0-template-studio": {
         "title": "Template Studio"
       },
+      "version-0.10.1-accordproject-gettingstarted": {
+        "title": "Getting Started"
+      },
+      "version-0.10.1-accordproject-specification": {
+        "title": "Template Specification"
+      },
+      "version-0.10.1-ergo-intro-examples": {
+        "title": "Ergo Examples"
+      },
+      "version-0.10.1-ergo-lang": {
+        "title": "Language Guide"
+      },
       "version-0.2.39-accordproject": {
         "title": "Accord Project"
       },
