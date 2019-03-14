@@ -34,7 +34,7 @@ git clone https://github.com/accordproject/cicero-template-library
 Using your terminal `cd` into the directory that contains the template you would like to test. In the example below we use the `helloworld` template.
 
 Use the `cicero parse` command to load a template from a directory on disk and then use
-it to parse input text, echoing the result of parsing. By default the file `sample.txt` if parsed.
+it to parse input text, echoing the result of parsing. By default the file `sample.txt` is parsed.
 If the input text is valid the parsing result will be a JSON serialized instance of the Template Model:
 
 For the template in `grammar/template.tem`:
