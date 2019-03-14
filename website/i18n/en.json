@@ -53,6 +53,9 @@
       "ergo-stdlib": {
         "title": "Ergo Libraries"
       },
+      "ergo-tutorial": {
+        "title": "Ergo: A Tutorial"
+      },
       "ergo": {
         "title": "Introduction to Ergo"
       },
