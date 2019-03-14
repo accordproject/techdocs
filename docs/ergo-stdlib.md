@@ -44,7 +44,7 @@ The following functions are in the `ord.accordproject.ergo.stdlib` namespace and
 | `count` | (x:Any[]) : Integer | Number of elements |
 | `flatten` | (x:Any[][]) : Any[] | Flattens a nested array |
 | `arrayAdd`  | `(x:Any[],y:Any[]) : Any[]` | Array concatenation |
-| `arraySubstract`  | `(x:Any[],y:Any[]) : Any[]` | Removes elements of `y` in `x` |
+| `arraySubtract`  | `(x:Any[],y:Any[]) : Any[]` | Removes elements of `y` in `x` |
 | `inArray`  | `(x:Any,y:Any[]) : Boolean` | Whether `x` is in `y` |
 | `containsAll`  | `(x:Any[],y:Any[]) : Boolean` | Whether all elements of `y` are in `x` |
 | `distinct`  | `(x:Any[]) : Any[]` | Duplicates elimination |
