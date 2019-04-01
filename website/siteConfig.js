@@ -82,7 +82,7 @@ const siteConfig = {
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Clause Inc.',
+    ' Accord Project, LLC.',
 
   highlight: {
     theme: 'atom-one-light',
