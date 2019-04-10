@@ -31,5 +31,5 @@ Once a template has been created (Steps 1 to 4), it can be used to _instantiate_
 
 ![Execution Context](assets/execution_context.png)
 
-[Cicero](cicero.md), which implements the Accord Project specification, includes a Node.js VM based execution engine for contracts created from Accord Project templates. The engine routes incoming requests to template functions, performs data validation, executes the functions within a sandboxed environment, and then validates the response. It can also update the contract state and emit events and/or contract obligations back to the caller.
+> Note that the Accord Project specification does not assume a specific execution environment. [Cicero](https://github.com/accordproject/cicero), which implements the Accord Project specification, includes a Node.js VM based execution engine for contracts created from Accord Project templates. The engine routes incoming requests to template functions, performs data validation, executes the functions within a sandboxed environment, and then validates the response. It can also update the contract state and emit events and/or contract obligations back to the caller.
 

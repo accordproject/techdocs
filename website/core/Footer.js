@@ -41,6 +41,9 @@ class Footer extends React.Component {
             <a href={this.docUrl('accordproject-installation.html')}>
               Installation
             </a>
+            <a href={this.docUrl('spec-overview.html')}>
+              Template Specification
+            </a>
           </div>
           <div>
             <h5>Community</h5>
