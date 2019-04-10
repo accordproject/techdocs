@@ -1,11 +1,11 @@
 ---
 id: ergo-stdlib
-title: Ergo Libraries
+title: Standard Libraries
 ---
 
 The following libraries are provided with the Ergo compiler.
 
-## Standard Library
+## Stdlib
 
 The following functions are in the `ord.accordproject.ergo.stdlib` namespace and available by default.
 
@@ -82,7 +82,7 @@ The following functions are in the `ord.accordproject.ergo.stdlib` namespace and
 | `toString` | `(x:Any) : String` | Prints any value to a string |
 | `failure` | `(x:String) : ErgoErrorResponse` | Ergo error from a string |
 
-## Date, Time and Duration Library
+## Time
 
 The following functions are in the `ord.accordproject.time` namespace and are available by importing that namespace.
 They rely on the [time.cto](https://models.accordproject.org/v2.0/time.html) types from the Accord Project models.

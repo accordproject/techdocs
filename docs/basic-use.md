@@ -1,15 +1,17 @@
 ---
-id: cicero-tutorial-1
+id: basic-use
 title: Using an existing Template
 ---
 
+The simplest way to work with an Accord Project template is through the Cicero command line interface (CLI). In this tutorial, we explain how to download an existing Accord Project template, create an instance of that template and how to execute the contract logic.
+
 ## Install Cicero CLI
 
-In order to access the Cicero command line interface (CLI), install the `@accordproject/cicero-cli` npm package:
+In order to access the Cicero command line interface (CLI), first install the `@accordproject/cicero-cli` npm package:
 
 `npm i -g @accordproject/cicero-cli`
 
-> If you're new to `npm` the [installation instructions](accordproject-gettingstarted) have some more detailed guidance.
+> If you're new to `npm` the [installation instructions](accordproject-installation) have some more detailed guidance.
 
 ## Download a Template
 
@@ -26,7 +28,7 @@ If you have `git` installed you can `git clone` the template library to download
 git clone https://github.com/accordproject/cicero-template-library
 ```
     
-## Parse
+## Parsing a Contract Text
 
 Using your terminal `cd` into the directory that contains the template you would like to test. In the example below we use the `helloworld` template.
 
@@ -86,7 +88,7 @@ Rerun `cicero parse`. The output should now be:
 Unexpected "F"
 ```
 
-## Execute
+## Executing the Clause
 
 Use the `cicero execute` command to load a template from a directory on disk,
 instantiate a clause based on input text (defaults to `sample.txt`), and then invoke the clause using an
@@ -142,4 +144,8 @@ Example:
 ```
 
 Note that in the response data from the template has been combined with data from the request.
+
+## Other Execution Platforms
+
+Template may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](cicero-tutorial-nodejs), you can find information on how a template can be executed in: a standalone Node.js process, invoked as RESTful services, or called directly from Hyperledger Fabric as Node.js chaincode.
 

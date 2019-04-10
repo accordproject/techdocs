@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Industry-Led Specification and Open Source Code for Smart Legal Contracts",
     "docs": {
+      "accordproject-ergo": {
+        "title": "Introduction to Ergo"
+      },
       "accordproject-installation": {
         "title": "Installation"
       },
@@ -29,8 +32,29 @@
       "accordproject": {
         "title": "Getting Started with Accord Project"
       },
+      "advanced-hyperledger": {
+        "title": "Deploying on HyplerLedger Fabric"
+      },
+      "advanced-nodejs": {
+        "title": "Working with Node.js"
+      },
       "api": {
         "title": "API Home"
+      },
+      "basic-create": {
+        "title": "Creating a New Template"
+      },
+      "basic-library": {
+        "title": "The Template Library"
+      },
+      "basic-logic": {
+        "title": "A Look at Ergo"
+      },
+      "basic-templates": {
+        "title": "A look inside a Template"
+      },
+      "basic-use": {
+        "title": "Using an existing Template"
       },
       "cicero-api": {
         "title": "JavaScript API"
@@ -41,26 +65,11 @@
       "cicero-tests": {
         "title": "Cicero Tests"
       },
-      "cicero-tutorial-1": {
-        "title": "Using an existing Template"
-      },
-      "cicero-tutorial-2": {
-        "title": "Creating a New Template"
-      },
-      "cicero-usage": {
-        "title": "Usage"
-      },
       "ergo-api": {
         "title": "JavaScript API"
       },
       "ergo-cli": {
         "title": "Ergo CLI"
-      },
-      "ergo-intro-examples": {
-        "title": "Ergo Examples"
-      },
-      "ergo-lang": {
-        "title": "Language Guide"
       },
       "ergo-reference": {
         "title": "Language Reference"
@@ -69,13 +78,37 @@
         "title": "Compiler Specification"
       },
       "ergo-stdlib": {
-        "title": "Ergo Libraries"
+        "title": "Standard Libraries"
       },
       "ergo-tutorial": {
         "title": "Ergo: A Tutorial"
       },
-      "ergo": {
-        "title": "Introduction to Ergo"
+      "example-eatapple": {
+        "title": "A Healthy Clause"
+      },
+      "logic-advanced-expr": {
+        "title": "Advanced Expressions"
+      },
+      "logic-complex-type": {
+        "title": "Complex Values & Types"
+      },
+      "logic-decl": {
+        "title": "Declarations"
+      },
+      "logic-ergo": {
+        "title": "Overview"
+      },
+      "logic-module": {
+        "title": "Modularity"
+      },
+      "logic-simple-expr.md": {
+        "title": "Simple Expressions"
+      },
+      "logic-simple-type": {
+        "title": "Introducing Types"
+      },
+      "logic-stmt": {
+        "title": "Statements"
       },
       "model-repository": {
         "title": "Model Repository"
@@ -481,10 +514,11 @@
     },
     "categories": {
       "Introduction": "Introduction",
-      "Tutorials": "Tutorials",
-      "Cicero Reference": "Cicero Reference",
-      "Ergo Reference": "Ergo Reference",
+      "Basic Tutorials": "Basic Tutorials",
+      "Advanced Tutorials": "Advanced Tutorials",
+      "Ergo Language Guide": "Ergo Language Guide",
       "Template Specification": "Template Specification",
+      "Reference Manual": "Reference Manual",
       "Accord Project": "Accord Project",
       "Cicero": "Cicero",
       "Ergo": "Ergo",

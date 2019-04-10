@@ -1,36 +1,11 @@
 ---
-id: ergo-intro-examples
-title: Ergo Examples
+id: example-eatapple
+title: A Healthy Clause
 ---
-
-## Hello World
-
-Each Ergo files is a module. A module is identified by a namespace, and contains declarations (e.g., constants, functions, contracts). Here is the “Hello World!” contract in Ergo:
-
-```ergo
-namespace org.accordproject.helloworld
-
-contract HelloWorld over TemplateModel {
-  // Simple Clause
-  clause greet(request : Request) : Response {
-    return Response{ output: "Hello " ++ contract.name ++ " " ++ request.input }
-  }
-}
-```
-
-This declares that this module belongs to the `org.accordproject.helloworld` namespace and contains a single `HelloWorld` contract declaration with one `greet` clause.
-
-It also declares that the contract `HelloWorld` is parameterized over a given `TemplateModel`.
-
-The `TemplateModel` as well as the `Request` and `Response` are types which are specified using [Composer Concerto modeling language](https://github.com/hyperledger/composer-concerto).
-
-The `greet` clause takes a `Request` as input and returns a `Response`.
-
-The code for the `greet` clause returns a new `Response` with a property `output` which is a string containing the property `name` of from the contract (`contract`) and the property `input` from the request (`request`). `++` stands for string concatenation in Ergo.
 
 ## Eat Apples!
 
-A more complete example is the healthy eating clause inspired by a not so serious [terms of services contract](https://www.grahamcluley.com/page-46-apples-new-ios-agreement-funny-fake-makes-serious-point/).
+The healthy eating clause is inspired by the not so serious [terms of services contract](https://www.grahamcluley.com/page-46-apples-new-ios-agreement-funny-fake-makes-serious-point/).
 
 For this example, let us look first at the template for that legal clause written in natural language:
 

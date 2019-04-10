@@ -1,9 +1,7 @@
 ---
-id: ergo
+id: accordproject-ergo
 title: Introduction to Ergo
 ---
-
-**_Note: This version of the documentation is based on Ergo 0.6.2_**
 
 Ergo is a domain-specific language (DSL) that captures the execution logic of *legal* contracts. 
 
