@@ -182,7 +182,7 @@ const Model = props => (
     {[
       {
         content: 'The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://github.com/hyperledger/composer-concerto">Composer Concerto Modeling Language</a>.',
-        image: imgUrl('model-vscode.png'),
+        image: imgUrl('model-uml.png'),
         imageAlign: 'right',
         title: 'Model',
       },

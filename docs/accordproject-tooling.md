@@ -14,13 +14,9 @@ Install the plugin from the [Visual Studio marketplace](https://marketplace.visu
 
 ![VSCode plugin](/img/ergo-vscode.png)
 
-The [Quickstart tutorial](cicero-tutorial.md) shows you how to use this tool.
+## Syntax highlighting
 
-## Language Modes
-
-Languages modes for Ergo can be found for a few popular editors.
-
-> Those are not maintained as actively as the rest of the Accord Project. If you know emacs lisp or are a VIM user and would like to contribute, please contact us on the Accord Project Slack or directly through GitHub!
+Languages modes in a couple of other editors offer syntax highlighting for Ergo.
 
 ### Emacs
 
@@ -29,6 +25,8 @@ A simple Emacs mode for Ergo can be found in the [ergo-mode](https://github.com/
 ### VIM
 
 A simple VIM mode for Ergo can be found in the [ergo.vim](https://github.com/accordproject/ergo/tree/master/ergo.vim) directory in the Ergo source code on GitHub.
+
+> Those are not maintained as actively as the rest of the Accord Project. If you know emacs lisp or are a VIM user and would like to contribute, please contact us on the Accord Project Slack or directly through GitHub!
 
 ## Template Studio
 

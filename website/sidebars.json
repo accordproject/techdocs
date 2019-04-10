@@ -1,7 +1,7 @@
 {
     "docs": {
-        "Introduction": ["accordproject", "accordproject-installation", "accordproject-ergo", "accordproject-tooling", "accordproject-models", "accordproject-templates"],
-        "Basic Tutorials": ["basic-use", "basic-templates", "basic-logic", "basic-create"],
+        "Introduction": ["accordproject", "accordproject-installation", "accordproject-tooling", "accordproject-models", "accordproject-templates"],
+        "Basic Tutorials": ["basic-use", "basic-templates", "basic-create"],
         "Advanced Tutorials": ["advanced-nodejs", "advanced-hyperledger", "advanced-ergo"],
         "Ergo Language Guide": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"],
         "Template Specification": ["spec-overview", "spec-concepts", "spec-example", "spec-template", "spec-instance", "spec-execution", "spec-packaging"],

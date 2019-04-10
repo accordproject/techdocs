@@ -85,7 +85,7 @@ const siteConfig = {
     ' Accord Project, LLC.',
 
   highlight: {
-    theme: 'hybrid',
+    theme: 'ir-black',
     hljs: function(hljs) {
       hljs.registerLanguage('ergo', function(hljs) {
         var ERGO_KEYWORDS = {

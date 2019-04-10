@@ -47,9 +47,6 @@
       "basic-library": {
         "title": "The Template Library"
       },
-      "basic-logic": {
-        "title": "A Look at Ergo"
-      },
       "basic-templates": {
         "title": "A look inside a Template"
       },
@@ -101,7 +98,7 @@
       "logic-module": {
         "title": "Modularity"
       },
-      "logic-simple-expr.md": {
+      "logic-simple-expr": {
         "title": "Simple Expressions"
       },
       "logic-simple-type": {
