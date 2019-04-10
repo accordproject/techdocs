@@ -25,13 +25,31 @@ When combined these three elements allow templates to be edited, analyzed, queri
 
 ## Technology
 
-The Accord Project provides a complete solution for smart legal contract development. The main project for the Accord Project technology is called [Cicero](https://github.com/accordproject/cicero). Cicero implements a format for legal contract and clause templates based on the [Accord Project Template Specification](accordproject-specification).
+The Accord Project provides a complete solution for smart legal contract development. The main project for the Accord Project technology is called [Cicero](https://github.com/accordproject/cicero).
+
+### Cicero
+
+Cicero implements a format for legal contract and clause templates based on the [Accord Project Template Specification](accordproject-specification).
 
 ![Template Grammar](/docs/assets/grammar.png)
 
 Cicero relies on two other projects:
 - [Concerto](https://github.com/hyperledger/composer-concerto): a lightweight, reusable data modeling language (maintained by the Hyperledger forum)
 - [Ergo](https://github.com/accordproject/ergo): a domain specific language to express the executable logic of legal templates
+
+### Concerto
+
+![Concerto Model](/img/model-vscode.png)
+
+### Ergo
+
+Ergo is a domain-specific language (DSL) that captures the execution logic of *legal* contracts. 
+
+![Ergo Logic](/img/ergo-vscode.png)
+
+A DSL is a computer language that's targeted to a particular kind of problem, rather than a general-purpose language that's aimed at any kind of software problem. For example, HTML is a DSL targeted at developing web pages. Similarly, Ergo is a DSL that captures the execution logic of legal contracts.
+
+It is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent Ergo code. For that reason, Ergo is intended to be accessible to Lawyers who create the corresponding prose for computable legal contracts. As a programming language, the Ergo syntax also respects programming conventions.
 
 ## Ecosystem
 
@@ -43,11 +61,11 @@ Beyond those core projects, Accord Project is building a rich ecosystem which in
 as well as tools to help author new legal templates:
 
 - [Template Studio](https://studio.accordproject.org/): a Web-based editor for Accord Project templates
-- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/) editor
+- [VSCode Plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/)
 
 ## Open Source Community
 
-Accord Project technology is being developed as open source. All the software packages are being actively maintained on [GitHub](https://github.com/accordproject) and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
+The Accord Project technology is being developed as open source. All the software packages are being actively maintained on [GitHub](https://github.com/accordproject) and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
 
 Join the Accord Project Technology Working Group <a href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack channel</a> to get involved!
 

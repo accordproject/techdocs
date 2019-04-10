@@ -1,6 +1,6 @@
 ---
 id: basic-use
-title: Using an existing Template
+title: How to use a Template
 ---
 
 The simplest way to work with an Accord Project template is through the Cicero command line interface (CLI). In this tutorial, we explain how to download an existing Accord Project template, create an instance of that template and how to execute the contract logic.
@@ -15,7 +15,7 @@ In order to access the Cicero command line interface (CLI), first install the `@
 
 ## Download a Template
 
-You can download a single clause or contract template from the [Accord Project Template Library](https://templates.accordproject.org) as a zip file. Once downloaded unzip the archive so you can inspect the contents.
+You can download a single clause or contract template from the [Accord Project Template Library](https://templates.accordproject.org) as an archive (`.cta`) file.
 
 > Note that the version of `cicero-cli` needs to match the Cicero version that is required by a template.
 > * You can check the version of your CLI with `cicero --version`. 
@@ -147,5 +147,5 @@ Note that in the response data from the template has been combined with data fro
 
 ## Other Execution Platforms
 
-Template may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](cicero-tutorial-nodejs), you can find information on how a template can be executed in: a standalone Node.js process, invoked as RESTful services, or called directly from Hyperledger Fabric as Node.js chaincode.
+Templates may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](cicero-tutorial-nodejs), you can find information on how to execute a template in a standalone Node.js process, invoked as RESTful services, or deployed as chaincode in Hyperledger Fabric.
 
