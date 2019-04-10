@@ -5,8 +5,8 @@ title: Template Structure
 
 An Accord Project template is composed of three elements: 
 
-- Template Grammar, the natural language text for the template 
-- Template Model, the data model that backs the template 
+- Natural Language, the grammar for the legal text of the template
+- Model, the data model that backs the template 
 - Logic, the executable business logic for the template
 
 ![Cicero Template](assets/template.png)
