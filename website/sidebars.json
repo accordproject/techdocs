@@ -1,7 +1,8 @@
 {
   "docs": {
       "Introduction": ["accordproject", "accordproject-installation", "accordproject-tooling", "accordproject-models", "accordproject-templates"],
-      "Cicero Reference": ["cicero", "cicero-tutorial",  "cicero-usage", "cicero-cli", "cicero-api"],
+      "Tutorials": ["cicero-tutorial-1", "cicero-tutorial-2"], 
+      "Cicero Reference": ["cicero-usage", "cicero-cli", "cicero-api"],
       "Ergo Reference": ["ergo", "ergo-intro-examples", "ergo-tutorial", "ergo-lang", "ergo-reference", "ergo-stdlib", "ergo-spec-overview", "ergo-cli", "ergo-api"],
       "Template Specification": ["spec-overview", "spec-concepts", "spec-example", "spec-template", "spec-instance", "spec-execution", "spec-packaging"]
   }

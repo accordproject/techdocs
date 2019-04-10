@@ -7,7 +7,7 @@ title: Usage
 
 To create a Template instance in memory call the `fromDirectory`, `fromArchive` or `fromUrl` methods:
 
-```
+```js
     const template = await Template.fromDirectory('./test/data/latedeliveryandpenalty');
 ```
 
@@ -20,7 +20,7 @@ Once a Template has been loaded, you can create a Clause based on the Template. 
 the Clause using source DSL text (by calling `parse`), or you can set an instance of the template model 
 as JSON data (by calling `setData`):
 
-```
+```js
     // load the DSL text for the template
     const testLatePenaltyInput = fs.readFileSync(path.resolve(__dirname, 'data/', 'sample.txt'), 'utf8');
 
@@ -33,7 +33,7 @@ as JSON data (by calling `setData`):
 
 OR - create a contract and set the data from a JSON object.
 
-```
+```js
     const clause = new Clause(template);
     clause.setData( {$class: 'org.acme.MyTemplateModel', 'foo': 42 } );
 ```
@@ -42,7 +42,7 @@ OR - create a contract and set the data from a JSON object.
 
 The easiest way to create a new template is to use the template generator::
 
-```
+```bash
         yo cicero-template
 ```
 
@@ -52,7 +52,7 @@ The template generator will create a basic template with the required files and 
 
 Layout:
 
-```
+```text
 package.json
     Metadata for the template (name, version, description etc)
 
@@ -118,7 +118,7 @@ Please refer to the the [CLI documentation](cicero-cli#cicero-execute) for the `
 To execute a Clause you create an instance of the ``Engine`` and then call ``execute`` on it, passing in the
 clause and the transaction::
 
-```
+```js
     const request = {
         '$class': 'org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest',
         'forceMajeure': false,

@@ -41,14 +41,14 @@
       "cicero-tests": {
         "title": "Cicero Tests"
       },
-      "cicero-tutorial": {
-        "title": "Quick Start Tutorial"
+      "cicero-tutorial-1": {
+        "title": "Using an existing Template"
+      },
+      "cicero-tutorial-2": {
+        "title": "Creating a New Template"
       },
       "cicero-usage": {
         "title": "Usage"
-      },
-      "cicero": {
-        "title": "Introduction to Cicero"
       },
       "ergo-api": {
         "title": "JavaScript API"
@@ -481,6 +481,7 @@
     },
     "categories": {
       "Introduction": "Introduction",
+      "Tutorials": "Tutorials",
       "Cicero Reference": "Cicero Reference",
       "Ergo Reference": "Ergo Reference",
       "Template Specification": "Template Specification",
