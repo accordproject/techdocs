@@ -82,10 +82,10 @@ class HomeSplash extends React.Component {
           </h2>
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('accordproject.html', this.props.language)}>Documentation</Button>
-            <Button href="#try">Try It Out</Button>
-            <Button href="https://github.com/accordproject">Code</Button>
-            <Button href="https://accord-project.slack.com/messages/C7U521CTG">Slack</Button>
+            <Button href={docUrl('accordproject.html', this.props.language)}>Getting Started</Button>
+            <Button href="#try">Try Online</Button>
+            <Button href="https://github.com/accordproject">GitHub</Button>
+            <Button href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -106,11 +106,11 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: `Create templates for executable natural-language legal contracts and clauses using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
+        content: `Create templates for executable natural-language legal contracts using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
         title: `[Cicero](${siteConfig.baseUrl}docs/cicero.html)`,
       },
       {
-        content: `Write executable business logic for legal contracts and clauses using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
+        content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
         title: `[Ergo](${siteConfig.baseUrl}docs/ergo.html)`,
       },
       {
@@ -178,7 +178,7 @@ const Grammar = props => (
 );
 
 const Model = props => (
-  <Block background="dark">
+  <Block background="light">
     {[
       {
         content: 'The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://github.com/hyperledger/composer-concerto">Composer Concerto Modeling Language</a>.',

@@ -92,7 +92,7 @@ else
   return VolumeDiscountResponse{ discountRate: contract.thirdRate }
 ```
 
-Conditional expressions can also be used in [variable declarations](ergo-variable-declarations.md).
+Conditional expressions can also be used as expressions, e.g., inside a constant declaration:
 
 ```ergo
 define constant price = 42;

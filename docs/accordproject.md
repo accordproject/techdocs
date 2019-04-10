@@ -1,15 +1,36 @@
 ---
 id: accordproject
-title: Overview
+title: Getting Started with Accord Project
 ---
 
-The Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. 
+## What is Accord Project?
 
-The Accord Project provides an open, industry-driven, specification and implementation for smart legal contracts that includes the leading law firms and blockchain technology organizations in the world. The Project has created the following Open Source software packages:
+Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. 
+
+The Accord Project provides an open, industry-driven, specification and implementation for _smart legal contracts_ that includes the leading law firms and blockchain technology organizations in the world.
+
+For more information about the Accord Project as a whole (how to join, upcoming meetings, latest news, open source process, etc) please visit the main [Accord Project Web Site](https:www.accordproject.org).
+
+## Try Accord Project Online
+
+The simplest way to get an introduction to the Accord Project technology is through the online [Template Studio](https://studio.accordproject.org) editor (you can open template studio from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right menu).
+
+To get you started, the following video provides a tour of Template Studio and explains most of the key concepts behind the Accord Project technology.
+
+<iframe src="https://player.vimeo.com/video/328933628" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+## Technology
+
+The Accord Project provides a complete solution for smart legal contract development. All of the Accord Project technology is being developed and maintained as open source:
 - [Cicero](cicero.md): reusable executable templates for legal contracts and clauses
-- [Ergo](ergo.md): a domain specific language to express the executable logic of legal templates
-- [Model Repository](model-repository.md) : a repository of open source data models for use in Cicero templates and with Ergo logic
-- [Template Library](template-library.md) : a library of open source Cicero templates
-- [Template Studio](template-studio.md) : a Web-based editor for legal templates
+- [Ergo](ergo.md): domain specific language to express the executable logic of legal templates
+- [Model Repository](accordproject-models.md) : a repository of open source data models for use in Cicero templates and with Ergo logic
+- [Template Library](accordproject-templates.md) : a library of open source Cicero templates
+- [Template Studio](accordproject-studio.md) : a Web-based editor for legal templates
 
-All these software packages are under active development and we encourage companies and individuals to contribute requirements, documentation, issues and code. Join the Accord Project Technology Working Group Slack channel to get involved!
+All these software packages are under active development and we encourage companies and individuals to contribute requirements, documentation, issues and code. Join the Accord Project Technology Working Group <a href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack channel</a> to get involved!
+
+## Local Installation
+
+If you want to experience the full power of Accord Project, you should install the Cicero command-line tools on your own machine.
+

@@ -5,14 +5,29 @@
     "previous": "Previous",
     "tagline": "Industry-Led Specification and Open Source Code for Smart Legal Contracts",
     "docs": {
-      "accordproject-gettingstarted": {
-        "title": "Getting Started"
+      "accordproject-installation": {
+        "title": "Installation"
+      },
+      "accordproject-models": {
+        "title": "Standard Models"
+      },
+      "accordproject-resources": {
+        "title": "accordproject-resources"
       },
       "accordproject-specification": {
         "title": "Template Specification"
       },
+      "accordproject-studio": {
+        "title": "Template Studio"
+      },
+      "accordproject-templates": {
+        "title": "Open Source Templates"
+      },
+      "accordproject-tooling": {
+        "title": "Developers Tools"
+      },
       "accordproject": {
-        "title": "Overview"
+        "title": "Getting Started with Accord Project"
       },
       "api": {
         "title": "API Home"
@@ -22,6 +37,9 @@
       },
       "cicero-cli": {
         "title": "Cicero CLI"
+      },
+      "cicero-tests": {
+        "title": "Cicero Tests"
       },
       "cicero-tutorial": {
         "title": "Quick Start Tutorial"
@@ -62,382 +80,410 @@
       "model-repository": {
         "title": "Model Repository"
       },
+      "spec-concepts": {
+        "title": "Concepts and High-level Architecture"
+      },
+      "spec-example": {
+        "title": "Example: Late Delivery Clause"
+      },
+      "spec-execution": {
+        "title": "Contract Execution"
+      },
+      "spec-instance": {
+        "title": "Template Instantiation"
+      },
+      "spec-overview": {
+        "title": "Overview"
+      },
+      "spec-packaging": {
+        "title": "Packaging"
+      },
+      "spec-resources": {
+        "title": "Resources"
+      },
+      "spec-template": {
+        "title": "Template Structure"
+      },
       "template-library": {
         "title": "Template Library"
       },
       "template-studio": {
         "title": "Template Studio"
       },
-      "version-0.10.0-accordproject-specification": {
+      "version-0.10.0/version-0.10.0-accordproject-specification": {
         "title": "Template Specification"
       },
-      "version-0.10.0-accordproject": {
+      "version-0.10.0/version-0.10.0-accordproject": {
         "title": "Overview"
       },
-      "version-0.10.0-cicero-cli": {
+      "version-0.10.0/version-0.10.0-cicero-cli": {
         "title": "Cicero CLI"
       },
-      "version-0.10.0-cicero-usage": {
+      "version-0.10.0/version-0.10.0-cicero-usage": {
         "title": "Usage"
       },
-      "version-0.10.0-ergo-cli": {
+      "version-0.10.0/version-0.10.0-ergo-cli": {
         "title": "Ergo CLI"
       },
-      "version-0.10.0-ergo-intro-examples": {
+      "version-0.10.0/version-0.10.0-ergo-intro-examples": {
         "title": "Ergo Examples"
       },
-      "version-0.10.0-ergo-lang": {
+      "version-0.10.0/version-0.10.0-ergo-lang": {
         "title": "Language Guide"
       },
-      "version-0.10.0-ergo-reference": {
+      "version-0.10.0/version-0.10.0-ergo-reference": {
         "title": "Language Reference"
       },
-      "version-0.10.0-ergo-stdlib": {
+      "version-0.10.0/version-0.10.0-ergo-stdlib": {
         "title": "Ergo Libraries"
       },
-      "version-0.10.0-ergo": {
+      "version-0.10.0/version-0.10.0-ergo": {
         "title": "Introduction to Ergo"
       },
-      "version-0.10.0-template-studio": {
+      "version-0.10.0/version-0.10.0-template-studio": {
         "title": "Template Studio"
       },
-      "version-0.10.1.1-ergo-stdlib": {
+      "version-0.10.1.1/version-0.10.1.1-ergo-stdlib": {
         "title": "Ergo Libraries"
       },
-      "version-0.10.1-accordproject-gettingstarted": {
+      "version-0.10.1/version-0.10.1-accordproject-gettingstarted": {
         "title": "Getting Started"
       },
-      "version-0.10.1-accordproject-specification": {
+      "version-0.10.1/version-0.10.1-accordproject-specification": {
         "title": "Template Specification"
       },
-      "version-0.10.1-ergo-intro-examples": {
+      "version-0.10.1/version-0.10.1-ergo-intro-examples": {
         "title": "Ergo Examples"
       },
-      "version-0.10.1-ergo-lang": {
+      "version-0.10.1/version-0.10.1-ergo-lang": {
         "title": "Language Guide"
       },
-      "version-0.2.39-accordproject": {
+      "version-0.2.39/version-0.2.39-accordproject": {
         "title": "Accord Project"
       },
-      "version-0.2.39-api": {
+      "version-0.2.39/version-0.2.39-api": {
         "title": "This is API Documentation"
       },
-      "version-0.2.39-cicero-cli": {
+      "version-0.2.39/version-0.2.39-cicero-cli": {
         "title": "CLI Documentation"
       },
-      "version-0.2.39-cicero-concepts": {
+      "version-0.2.39/version-0.2.39-cicero-concepts": {
         "title": "Cicero Concepts"
       },
-      "version-0.2.39-cicero-installation": {
+      "version-0.2.39/version-0.2.39-cicero-installation": {
         "title": "Cicero Installation"
       },
-      "version-0.2.39-cicero-tasks": {
+      "version-0.2.39/version-0.2.39-cicero-tasks": {
         "title": "Cicero Tasks"
       },
-      "version-0.2.39-cicero-tutorial_001": {
+      "version-0.2.39/version-0.2.39-cicero-tutorial_001": {
         "title": "Cicero Quick Start Tutorial"
       },
-      "version-0.2.39-cicero": {
+      "version-0.2.39/version-0.2.39-cicero": {
         "title": "Introduction to Cicero"
       },
-      "version-0.2.39-ergo-conditional-expressions": {
+      "version-0.2.39/version-0.2.39-ergo-conditional-expressions": {
         "title": "Ergo Conditional Expressions"
       },
-      "version-0.2.39-ergo-installation": {
+      "version-0.2.39/version-0.2.39-ergo-installation": {
         "title": "Ergo Installation"
       },
-      "version-0.2.39-ergo-language": {
+      "version-0.2.39/version-0.2.39-ergo-language": {
         "title": "Ergo Language"
       },
-      "version-0.2.39-ergo-match-expressions": {
+      "version-0.2.39/version-0.2.39-ergo-match-expressions": {
         "title": "Ergo Match Expressions"
       },
-      "version-0.2.39-ergo": {
+      "version-0.2.39/version-0.2.39-ergo": {
         "title": "Introduction to Ergo"
       },
-      "version-0.2.39-doc4": {
+      "version-0.2.39/version-0.2.39-doc4": {
         "title": "Other Document"
       },
-      "version-0.2.39-doc5": {
+      "version-0.2.39/version-0.2.39-doc5": {
         "title": "Fifth Document"
       },
-      "version-0.3.11-ergo-api": {
+      "version-0.3.11/version-0.3.11-ergo-api": {
         "title": "Ergo API Documentation"
       },
-      "version-0.3.11-doc5": {
+      "version-0.3.11/version-0.3.11-doc5": {
         "title": "Fifth Document"
       },
-      "version-0.3.12.1-accordproject": {
+      "version-0.3.12.1/version-0.3.12.1-accordproject": {
         "title": "Accord Project"
       },
-      "version-0.3.12.1-cicero": {
+      "version-0.3.12.1/version-0.3.12.1-cicero": {
         "title": "Introduction to Cicero"
       },
-      "version-0.3.12.1-verbatim": {
+      "version-0.3.12.1/version-0.3.12.1-verbatim": {
         "title": "Introduction to Verbatim"
       },
-      "version-0.3.17-accordproject": {
+      "version-0.3.17/version-0.3.17-accordproject": {
         "title": "Accord Project"
       },
-      "version-0.3.17-cicero-api": {
+      "version-0.3.17/version-0.3.17-cicero-api": {
         "title": "Cicero API Documentation"
       },
-      "version-0.3.17-ergo-api": {
+      "version-0.3.17/version-0.3.17-ergo-api": {
         "title": "Ergo API Documentation"
       },
-      "version-0.3.17-model-repository": {
+      "version-0.3.17/version-0.3.17-model-repository": {
         "title": "Model Repository"
       },
-      "version-0.3.9-api": {
+      "version-0.3.9/version-0.3.9-api": {
         "title": "API Home"
       },
-      "version-0.3.9-cicero-api": {
+      "version-0.3.9/version-0.3.9-cicero-api": {
         "title": "Cicero API Documentation"
       },
-      "version-0.3.9-ergo-api": {
+      "version-0.3.9/version-0.3.9-ergo-api": {
         "title": "Ergo API Documentation"
       },
-      "version-0.4.4.1-cicero-cli": {
+      "version-0.4.4.1/version-0.4.4.1-cicero-cli": {
         "title": "CLI Documentation"
       },
-      "version-0.4.4.1-cicero-concepts": {
+      "version-0.4.4.1/version-0.4.4.1-cicero-concepts": {
         "title": "Cicero Concepts"
       },
-      "version-0.4.4.1-cicero-tasks": {
+      "version-0.4.4.1/version-0.4.4.1-cicero-tasks": {
         "title": "Cicero Tasks"
       },
-      "version-0.4.4.1-cicero-tutorial_001": {
+      "version-0.4.4.1/version-0.4.4.1-cicero-tutorial_001": {
         "title": "Cicero Quick Start Tutorial"
       },
-      "version-0.4.4-accordproject": {
+      "version-0.4.4/version-0.4.4-accordproject": {
         "title": "Accord Project"
       },
-      "version-0.4.4-cicero-api": {
+      "version-0.4.4/version-0.4.4-cicero-api": {
         "title": "Cicero API Documentation"
       },
-      "version-0.4.4-cicero-cli": {
+      "version-0.4.4/version-0.4.4-cicero-cli": {
         "title": "CLI Documentation"
       },
-      "version-0.4.4-cicero-concepts": {
+      "version-0.4.4/version-0.4.4-cicero-concepts": {
         "title": "Cicero Concepts"
       },
-      "version-0.4.4-cicero-tasks": {
+      "version-0.4.4/version-0.4.4-cicero-tasks": {
         "title": "Cicero Tasks"
       },
-      "version-0.4.4-cicero-tutorial_001": {
+      "version-0.4.4/version-0.4.4-cicero-tutorial_001": {
         "title": "Cicero Quick Start Tutorial"
       },
-      "version-0.4.4-ergo-api": {
+      "version-0.4.4/version-0.4.4-ergo-api": {
         "title": "Ergo API Documentation"
       },
-      "version-0.4.4-template-library": {
+      "version-0.4.4/version-0.4.4-template-library": {
         "title": "Template Library"
       },
-      "version-0.4.5.1-ergo-intro-overview": {
+      "version-0.4.5.1/version-0.4.5.1-ergo-intro-overview": {
         "title": "Introduction to Ergo"
       },
-      "version-0.4.5.2-accordproject": {
+      "version-0.4.5.2/version-0.4.5.2-accordproject": {
         "title": "Overview"
       },
-      "version-0.4.5.2-api": {
+      "version-0.4.5.2/version-0.4.5.2-api": {
         "title": "API Home"
       },
-      "version-0.4.5.2-cicero-cli": {
+      "version-0.4.5.2/version-0.4.5.2-cicero-cli": {
         "title": "Cicero CLI"
       },
-      "version-0.4.5.2-cicero-concepts": {
+      "version-0.4.5.2/version-0.4.5.2-cicero-concepts": {
         "title": "Cicero Concepts"
       },
-      "version-0.4.5.2-cicero-tasks": {
+      "version-0.4.5.2/version-0.4.5.2-cicero-tasks": {
         "title": "Usage"
       },
-      "version-0.4.5.2-cicero": {
+      "version-0.4.5.2/version-0.4.5.2-cicero": {
         "title": "Introduction to Cicero"
       },
-      "version-0.4.5.2-model-repository": {
+      "version-0.4.5.2/version-0.4.5.2-model-repository": {
         "title": "Model Repository"
       },
-      "version-0.4.5.2-template-library": {
+      "version-0.4.5.2/version-0.4.5.2-template-library": {
         "title": "Template Library"
       },
-      "version-0.4.5-accordproject-tools": {
+      "version-0.4.5/version-0.4.5-accordproject-tools": {
         "title": "Installation"
       },
-      "version-0.4.5-cicero-api": {
+      "version-0.4.5/version-0.4.5-cicero-api": {
         "title": "JavaScript API"
       },
-      "version-0.4.5-cicero-tasks": {
+      "version-0.4.5/version-0.4.5-cicero-tasks": {
         "title": "Usage"
       },
-      "version-0.4.5-ergo-api": {
+      "version-0.4.5/version-0.4.5-ergo-api": {
         "title": "JavaScript API"
       },
-      "version-0.4.5-ergo-cli": {
+      "version-0.4.5/version-0.4.5-ergo-cli": {
         "title": "Ergo CLI"
       },
-      "version-0.4.5-ergo-comp-architecture": {
+      "version-0.4.5/version-0.4.5-ergo-comp-architecture": {
         "title": "Compiler Architecture"
       },
-      "version-0.4.5-ergo-intro-examples": {
+      "version-0.4.5/version-0.4.5-ergo-intro-examples": {
         "title": "Ergo Example"
       },
-      "version-0.4.5-ergo-intro-overview": {
+      "version-0.4.5/version-0.4.5-ergo-intro-overview": {
         "title": "Introduction to Ergo"
       },
-      "version-0.4.5-ergo-lang": {
+      "version-0.4.5/version-0.4.5-ergo-lang": {
         "title": "Quick Reference"
       },
-      "version-0.4.5-ergo-ref-conditional-expressions": {
+      "version-0.4.5/version-0.4.5-ergo-ref-conditional-expressions": {
         "title": "- Condition Expressions"
       },
-      "version-0.4.5-ergo-ref-lexical": {
+      "version-0.4.5/version-0.4.5-ergo-ref-lexical": {
         "title": "- Lexical Conventions"
       },
-      "version-0.4.5-ergo-ref-match-expressions": {
+      "version-0.4.5/version-0.4.5-ergo-ref-match-expressions": {
         "title": "- Match Expressions"
       },
-      "version-0.4.5-ergo-spec-overview": {
+      "version-0.4.5/version-0.4.5-ergo-spec-overview": {
         "title": "Formal Specification"
       },
-      "version-0.5.0.1-accordproject": {
+      "version-0.5.0.1/version-0.5.0.1-accordproject": {
         "title": "Overview"
       },
-      "version-0.5.0.1-cicero-tutorial_001": {
+      "version-0.5.0.1/version-0.5.0.1-cicero-tutorial_001": {
         "title": "Quick Start Tutorial"
       },
-      "version-0.5.0-cicero-specification": {
+      "version-0.5.0/version-0.5.0-cicero-specification": {
         "title": "Template Specification"
       },
-      "version-0.5.0-cicero": {
+      "version-0.5.0/version-0.5.0-cicero": {
         "title": "Introduction to Cicero"
       },
-      "version-0.5.0-ergo-api": {
+      "version-0.5.0/version-0.5.0-ergo-api": {
         "title": "JavaScript API"
       },
-      "version-0.5.0-ergo-intro-examples": {
+      "version-0.5.0/version-0.5.0-ergo-intro-examples": {
         "title": "Ergo Example"
       },
-      "version-0.5.0-ergo-lang": {
+      "version-0.5.0/version-0.5.0-ergo-lang": {
         "title": "Quick Reference"
       },
-      "version-0.5.0-ergo-ref-conditional-expressions": {
+      "version-0.5.0/version-0.5.0-ergo-ref-conditional-expressions": {
         "title": "- Condition Expressions"
       },
-      "version-0.5.0-ergo-ref-lexical": {
+      "version-0.5.0/version-0.5.0-ergo-ref-lexical": {
         "title": "- Lexical Conventions"
       },
-      "version-0.5.0-ergo": {
+      "version-0.5.0/version-0.5.0-ergo": {
         "title": "Introduction to Ergo"
       },
-      "version-0.6.0-cicero-concepts": {
+      "version-0.6.0/version-0.6.0-cicero-concepts": {
         "title": "Cicero Concepts"
       },
-      "version-0.6.0-cicero-specification": {
+      "version-0.6.0/version-0.6.0-cicero-specification": {
         "title": "Template Specification"
       },
-      "version-0.6.0-ergo-intro-examples": {
+      "version-0.6.0/version-0.6.0-ergo-intro-examples": {
         "title": "Ergo Example"
       },
-      "version-0.6.0-ergo-lang": {
+      "version-0.6.0/version-0.6.0-ergo-lang": {
         "title": "Quick Reference"
       },
-      "version-0.6.0-ergo-ref-conditional-expressions": {
+      "version-0.6.0/version-0.6.0-ergo-ref-conditional-expressions": {
         "title": "- Condition Expressions"
       },
-      "version-0.6.0-ergo-ref-lexical": {
+      "version-0.6.0/version-0.6.0-ergo-ref-lexical": {
         "title": "- Lexical Conventions"
       },
-      "version-0.6.0-ergo-ref-match-expressions": {
+      "version-0.6.0/version-0.6.0-ergo-ref-match-expressions": {
         "title": "- Match Expressions"
       },
-      "version-0.8.0.1-cicero-concepts": {
+      "version-0.8.0.1/version-0.8.0.1-cicero-concepts": {
         "title": "Cicero Concepts"
       },
-      "version-0.8.0.1-ergo-lang": {
+      "version-0.8.0.1/version-0.8.0.1-ergo-lang": {
         "title": "Language Guide"
       },
-      "version-0.8.0.1-ergo-stdlib": {
+      "version-0.8.0.1/version-0.8.0.1-ergo-stdlib": {
         "title": "Standard Library"
       },
-      "version-0.8.0.2-accordproject-tools": {
+      "version-0.8.0.2/version-0.8.0.2-accordproject-tools": {
         "title": "Installation"
       },
-      "version-0.8.0.2-cicero": {
+      "version-0.8.0.2/version-0.8.0.2-cicero": {
         "title": "Introduction to Cicero"
       },
-      "version-0.8.0-accordproject-specification": {
+      "version-0.8.0/version-0.8.0-accordproject-specification": {
         "title": "Template Specification"
       },
-      "version-0.8.0-accordproject-tools": {
+      "version-0.8.0/version-0.8.0-accordproject-tools": {
         "title": "Installation"
       },
-      "version-0.8.0-accordproject": {
+      "version-0.8.0/version-0.8.0-accordproject": {
         "title": "Overview"
       },
-      "version-0.8.0-cicero-concepts": {
+      "version-0.8.0/version-0.8.0-cicero-concepts": {
         "title": "Cicero Concepts"
       },
-      "version-0.8.0-cicero-tutorial_001": {
+      "version-0.8.0/version-0.8.0-cicero-tutorial_001": {
         "title": "Quick Start Tutorial"
       },
-      "version-0.8.0-ergo-cli": {
+      "version-0.8.0/version-0.8.0-ergo-cli": {
         "title": "Ergo CLI"
       },
-      "version-0.8.0-ergo-lang": {
+      "version-0.8.0/version-0.8.0-ergo-lang": {
         "title": "Language Guide"
       },
-      "version-0.8.0-ergo-reference": {
+      "version-0.8.0/version-0.8.0-ergo-reference": {
         "title": "Language Reference"
       },
-      "version-0.8.0-ergo-spec-overview": {
+      "version-0.8.0/version-0.8.0-ergo-spec-overview": {
         "title": "Compiler Specification"
       },
-      "version-0.8.0-ergo-stdlib": {
+      "version-0.8.0/version-0.8.0-ergo-stdlib": {
         "title": "Standard Library"
       },
-      "version-0.8.0-ergo": {
+      "version-0.8.0/version-0.8.0-ergo": {
         "title": "Introduction to Ergo"
       },
-      "version-0.9.9-accordproject-gettingstarted": {
+      "version-0.9.9/version-0.9.9-accordproject-gettingstarted": {
         "title": "Getting Started"
       },
-      "version-0.9.9-accordproject-specification": {
+      "version-0.9.9/version-0.9.9-accordproject-specification": {
         "title": "Template Specification"
       },
-      "version-0.9.9-accordproject": {
+      "version-0.9.9/version-0.9.9-accordproject": {
         "title": "Overview"
       },
-      "version-0.9.9-cicero-api": {
+      "version-0.9.9/version-0.9.9-cicero-api": {
         "title": "JavaScript API"
       },
-      "version-0.9.9-cicero-cli": {
+      "version-0.9.9/version-0.9.9-cicero-cli": {
         "title": "Cicero CLI"
       },
-      "version-0.9.9-cicero-tasks": {
+      "version-0.9.9/version-0.9.9-cicero-tasks": {
         "title": "Usage"
       },
-      "version-0.9.9-cicero-tutorial": {
+      "version-0.9.9/version-0.9.9-cicero-tutorial": {
         "title": "Quick Start Tutorial"
       },
-      "version-0.9.9-ergo-api": {
+      "version-0.9.9/version-0.9.9-ergo-api": {
         "title": "JavaScript API"
       },
-      "version-0.9.9-ergo-stdlib": {
+      "version-0.9.9/version-0.9.9-ergo-stdlib": {
         "title": "Standard Library"
       },
-      "version-0.9.9-ergo": {
+      "version-0.9.9/version-0.9.9-ergo": {
         "title": "Introduction to Ergo"
       },
-      "version-0.9.9-template-studio": {
+      "version-0.9.9/version-0.9.9-template-studio": {
         "title": "Introduction to Template Studio"
       }
     },
     "links": {
-      "Docs": "Docs",
-      "Try": "Try",
+      "Documentation": "Documentation",
+      "Try Online!": "Try Online!",
       "GitHub": "GitHub"
     },
     "categories": {
+      "Introduction": "Introduction",
+      "Cicero Reference": "Cicero Reference",
+      "Ergo Reference": "Ergo Reference",
+      "Template Specification": "Template Specification",
       "Accord Project": "Accord Project",
       "Cicero": "Cicero",
       "Ergo": "Ergo",

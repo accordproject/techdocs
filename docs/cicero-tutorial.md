@@ -11,7 +11,7 @@ In order to access the Cicero command line interface (CLI), install the `@accord
 
 `npm i -g @accordproject/cicero-cli`
 
-> If you're new to `npm` the [installation instructions](accordproject-tools.md) have some more detailed guidance.  
+> If you're new to `npm` the [installation instructions](accordproject-gettingstarted) have some more detailed guidance.
 
 ### Download the Template
 

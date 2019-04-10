@@ -2,8 +2,8 @@ npm install -g jsdoc-to-markdown
 
 ## Build the Cicero API
 git clone https://github.com/accordproject/cicero.git
-jsdoc2md --files ./cicero/packages/cicero-core/index.js ./cicero/packages/cicero-core/src/*.js > ./docs/cicero-api.md
-jsdoc2md --template ./scripts/cicero-api.hbs --files ./cicero/packages/cicero-core/index.js ./cicero/packages/cicero-core/src/*.js > ./docs/cicero-api.md
+jsdoc2md --files ./cicero/packages/cicero-engine/index.js ./cicero/packages/cicero-engine/lib/*.js ./cicero/packages/cicero-core/index.js ./cicero/packages/cicero-core/src/*.js > ./docs/cicero-api.md
+jsdoc2md --template ./scripts/cicero-api.hbs --files ./cicero/packages/cicero-engine/index.js ./cicero/packages/cicero-engine/lib/*.js ./cicero/packages/cicero-core/index.js ./cicero/packages/cicero-core/src/*.js > ./docs/cicero-api.md
 rm -rf cicero
 
 ## Build the Ergo API

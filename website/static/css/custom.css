@@ -14,3 +14,14 @@
 
 @media only screen and (min-width: 1500px) {
 }
+.navigationSlider .slidingNav ul a[href*="github"] {
+  font-size: 0;
+}
+
+.navigationSlider .slidingNav ul a[href*="github"]::before {
+  content : "";
+  width : 32px;
+  height : 32px;
+  background: url("/img/github-brands.svg");
+}
+

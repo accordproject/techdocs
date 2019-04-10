@@ -3,6 +3,86 @@ id: cicero-api
 title: JavaScript API
 ---
 
+## Modules
+
+<dl>
+<dt><a href="#module_cicero-engine">cicero-engine</a></dt>
+<dd><p>Clause Engine</p>
+</dd>
+<dt><a href="#module_cicero-core">cicero-core</a></dt>
+<dd><p>Cicero Core - defines the core data types for Cicero.</p>
+</dd>
+</dl>
+
+<a name="module_cicero-engine"></a>
+
+## cicero-engine
+Clause Engine
+
+
+* [cicero-engine](#module_cicero-engine)
+    * [.Engine](#module_cicero-engine.Engine)
+        * [new Engine()](#new_module_cicero-engine.Engine_new)
+        * [.execute(clause, request, state, currentTime)](#module_cicero-engine.Engine+execute) ⇒ <code>Promise</code>
+        * [.init(clause, currentTime)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
+        * [.getErgoEngine()](#module_cicero-engine.Engine+getErgoEngine) ⇒ <code>ErgoEngine</code>
+
+<a name="module_cicero-engine.Engine"></a>
+
+### cicero-engine.Engine
+<p>
+Engine class. Stateless execution of clauses against a request object, returning a response to the caller.
+</p>
+
+**Kind**: static class of [<code>cicero-engine</code>](#module_cicero-engine)  
+**Access**: public  
+
+* [.Engine](#module_cicero-engine.Engine)
+    * [new Engine()](#new_module_cicero-engine.Engine_new)
+    * [.execute(clause, request, state, currentTime)](#module_cicero-engine.Engine+execute) ⇒ <code>Promise</code>
+    * [.init(clause, currentTime)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
+    * [.getErgoEngine()](#module_cicero-engine.Engine+getErgoEngine) ⇒ <code>ErgoEngine</code>
+
+<a name="new_module_cicero-engine.Engine_new"></a>
+
+#### new Engine()
+Create the Engine.
+
+<a name="module_cicero-engine.Engine+execute"></a>
+
+#### engine.execute(clause, request, state, currentTime) ⇒ <code>Promise</code>
+Execute a clause, passing in the request object
+
+**Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
+**Returns**: <code>Promise</code> - a promise that resolves to a result for the clause  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| clause | <code>Clause</code> | the clause to execute |
+| request | <code>object</code> | the request, a JS object that can be deserialized using the Composer serializer. |
+| state | <code>object</code> | the contract state, a JS object that can be deserialized using the Composer serializer. |
+| currentTime | <code>string</code> | the definition of 'now' |
+
+<a name="module_cicero-engine.Engine+init"></a>
+
+#### engine.init(clause, currentTime) ⇒ <code>Promise</code>
+Initialize a clause
+
+**Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
+**Returns**: <code>Promise</code> - a promise that resolves to a result for the clause initialization  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| clause | <code>Clause</code> | the clause to execute |
+| currentTime | <code>string</code> | the definition of 'now' |
+
+<a name="module_cicero-engine.Engine+getErgoEngine"></a>
+
+#### engine.getErgoEngine() ⇒ <code>ErgoEngine</code>
+Provides access to the Ergo engine.
+
+**Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
+**Returns**: <code>ErgoEngine</code> - the underlying Ergo Engine  
 <a name="module_cicero-core"></a>
 
 ## cicero-core
@@ -10,58 +90,59 @@ Cicero Core - defines the core data types for Cicero.
 
 
 * [cicero-core](#module_cicero-core)
-    * *[.CiceroModelManager](#module_cicero-core.CiceroModelManager)*
-        * *[.getModels()](#module_cicero-core.CiceroModelManager+getModels) ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>*
     * [.Clause](#module_cicero-core.Clause)
     * [.Contract](#module_cicero-core.Contract)
-    * [.FunctionDeclaration](#module_cicero-core.FunctionDeclaration)
-        * [new FunctionDeclaration(modelManager, language, name, visibility, returnType, throws, parameterNames, parameterTypes, decorators, functionText)](#new_module_cicero-core.FunctionDeclaration_new)
-        * [.getFunctionText()](#module_cicero-core.FunctionDeclaration+getFunctionText) ⇒ <code>string</code>
-        * [.getThrows()](#module_cicero-core.FunctionDeclaration+getThrows) ⇒ <code>string</code>
-        * [.getLanguage()](#module_cicero-core.FunctionDeclaration+getLanguage) ⇒ <code>string</code>
-        * [.getDecorators()](#module_cicero-core.FunctionDeclaration+getDecorators) ⇒ <code>Array.&lt;string&gt;</code>
-        * [.getVisibility()](#module_cicero-core.FunctionDeclaration+getVisibility) ⇒ <code>string</code>
-        * [.getReturnType()](#module_cicero-core.FunctionDeclaration+getReturnType) ⇒ <code>string</code>
-        * [.getName()](#module_cicero-core.FunctionDeclaration+getName) ⇒ <code>string</code>
-        * [.getTransactionDeclarationName()](#module_cicero-core.FunctionDeclaration+getTransactionDeclarationName) ⇒ <code>string</code>
-        * [.getParameterNames()](#module_cicero-core.FunctionDeclaration+getParameterNames) ⇒ <code>Array.&lt;string&gt;</code>
-        * [.getParameterTypes()](#module_cicero-core.FunctionDeclaration+getParameterTypes) ⇒ <code>Array.&lt;string&gt;</code>
+    * [.DateTimeFormatParser](#module_cicero-core.DateTimeFormatParser)
+        * [.parseDateTimeFormatField(field)](#module_cicero-core.DateTimeFormatParser.parseDateTimeFormatField) ⇒ <code>string</code>
+        * [.buildDateTimeFormatRule(formatString)](#module_cicero-core.DateTimeFormatParser.buildDateTimeFormatRule) ⇒ <code>Object</code>
     * [.Metadata](#module_cicero-core.Metadata)
         * [new Metadata(packageJson, readme, samples, request)](#new_module_cicero-core.Metadata_new)
         * [.getTemplateType()](#module_cicero-core.Metadata+getTemplateType) ⇒ <code>number</code>
-        * [.getLanguage()](#module_cicero-core.Metadata+getLanguage) ⇒ <code>number</code>
-        * [.getTargetVersion()](#module_cicero-core.Metadata+getTargetVersion) ⇒ <code>string</code>
-        * [.satisfiesTargetVersion()](#module_cicero-core.Metadata+satisfiesTargetVersion) ⇒ <code>string</code>
+        * [.getRuntime()](#module_cicero-core.Metadata+getRuntime) ⇒ <code>string</code>
+        * [.getErgoVersion()](#module_cicero-core.Metadata+getErgoVersion) ⇒ <code>string</code>
+        * [.getCiceroVersion()](#module_cicero-core.Metadata+getCiceroVersion) ⇒ <code>string</code>
+        * [.satisfiesCiceroVersion(version)](#module_cicero-core.Metadata+satisfiesCiceroVersion) ⇒ <code>string</code>
         * [.getSamples()](#module_cicero-core.Metadata+getSamples) ⇒ <code>object</code>
         * [.getRequest()](#module_cicero-core.Metadata+getRequest) ⇒ <code>object</code>
         * [.getSample(locale)](#module_cicero-core.Metadata+getSample) ⇒ <code>string</code>
         * [.getREADME()](#module_cicero-core.Metadata+getREADME) ⇒ <code>String</code>
         * [.getPackageJson()](#module_cicero-core.Metadata+getPackageJson) ⇒ <code>object</code>
         * [.getName()](#module_cicero-core.Metadata+getName) ⇒ <code>string</code>
+        * [.getKeywords()](#module_cicero-core.Metadata+getKeywords) ⇒ <code>Array</code>
         * [.getDescription()](#module_cicero-core.Metadata+getDescription) ⇒ <code>string</code>
         * [.getVersion()](#module_cicero-core.Metadata+getVersion) ⇒ <code>string</code>
         * [.getIdentifier()](#module_cicero-core.Metadata+getIdentifier) ⇒ <code>string</code>
-        * [.createTargetMetadata(language)](#module_cicero-core.Metadata+createTargetMetadata) ⇒ <code>object</code>
+        * [.createTargetMetadata(runtimeName)](#module_cicero-core.Metadata+createTargetMetadata) ⇒ <code>object</code>
+    * [.ParserManager](#module_cicero-core.ParserManager)
+        * [new ParserManager(template)](#new_module_cicero-core.ParserManager_new)
+        * _instance_
+            * [.getParser()](#module_cicero-core.ParserManager+getParser) ⇒ <code>object</code>
+            * [.getTemplateAst()](#module_cicero-core.ParserManager+getTemplateAst) ⇒ <code>object</code>
+            * [.setGrammar(grammar)](#module_cicero-core.ParserManager+setGrammar)
+            * [.buildGrammar(templatizedGrammar)](#module_cicero-core.ParserManager+buildGrammar)
+            * [.buildGrammarRules(ast, templateModel, prefix, parts)](#module_cicero-core.ParserManager+buildGrammarRules)
+            * [.handleBinding(templateModel, parts, inputRule, element)](#module_cicero-core.ParserManager+handleBinding)
+            * [.cleanChunk(input)](#module_cicero-core.ParserManager+cleanChunk) ⇒ <code>string</code>
+            * [.findFirstBinding(propertyName, elements)](#module_cicero-core.ParserManager+findFirstBinding) ⇒ <code>int</code>
+            * [.getGrammar()](#module_cicero-core.ParserManager+getGrammar) ⇒ <code>String</code>
+            * [.getTemplatizedGrammar()](#module_cicero-core.ParserManager+getTemplatizedGrammar) ⇒ <code>String</code>
+        * _static_
+            * [.getProperty(templateModel, propertyName)](#module_cicero-core.ParserManager.getProperty) ⇒ <code>\*</code>
+            * [.compileGrammar(sourceCode)](#module_cicero-core.ParserManager.compileGrammar) ⇒ <code>object</code>
     * *[.Template](#module_cicero-core.Template)*
         * *[new Template(packageJson, readme, samples, request)](#new_module_cicero-core.Template_new)*
         * _instance_
+            * *[.validate()](#module_cicero-core.Template+validate)*
             * *[.getTemplateModel()](#module_cicero-core.Template+getTemplateModel) ⇒ <code>ClassDeclaration</code>*
             * *[.getIdentifier()](#module_cicero-core.Template+getIdentifier) ⇒ <code>String</code>*
             * *[.getMetadata()](#module_cicero-core.Template+getMetadata) ⇒ <code>Metadata</code>*
-            * *[.getParser()](#module_cicero-core.Template+getParser) ⇒ <code>object</code>*
-            * *[.getTemplateAst()](#module_cicero-core.Template+getTemplateAst) ⇒ <code>object</code>*
-            * *[.setGrammar(grammar)](#module_cicero-core.Template+setGrammar)*
-            * *[.buildGrammar(templatizedGrammar)](#module_cicero-core.Template+buildGrammar)*
-            * *[.buildGrammarRules(ast, templateModel, prefix, parts)](#module_cicero-core.Template+buildGrammarRules)*
-            * *[.cleanChunk(input)](#module_cicero-core.Template+cleanChunk) ⇒ <code>string</code>*
-            * *[.findFirstBinding(propertyName, elements)](#module_cicero-core.Template+findFirstBinding) ⇒ <code>int</code>*
-            * *[.getGrammar()](#module_cicero-core.Template+getGrammar) ⇒ <code>String</code>*
-            * *[.getTemplatizedGrammar()](#module_cicero-core.Template+getTemplatizedGrammar) ⇒ <code>String</code>*
             * *[.getName()](#module_cicero-core.Template+getName) ⇒ <code>String</code>*
             * *[.getVersion()](#module_cicero-core.Template+getVersion) ⇒ <code>String</code>*
             * *[.getDescription()](#module_cicero-core.Template+getDescription) ⇒ <code>String</code>*
             * *[.getHash()](#module_cicero-core.Template+getHash) ⇒ <code>string</code>*
-            * *[.toArchive([language], [options])](#module_cicero-core.Template+toArchive) ⇒ <code>Buffer</code>*
+            * *[.toArchive([language], [options])](#module_cicero-core.Template+toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
+            * *[.getParserManager()](#module_cicero-core.Template+getParserManager) ⇒ <code>ParserManager</code>*
+            * *[.getTemplateLogic()](#module_cicero-core.Template+getTemplateLogic) ⇒ <code>TemplateLogic</code>*
             * *[.getIntrospector()](#module_cicero-core.Template+getIntrospector) ⇒ <code>Introspector</code>*
             * *[.getFactory()](#module_cicero-core.Template+getFactory) ⇒ <code>Factory</code>*
             * *[.getSerializer()](#module_cicero-core.Template+getSerializer) ⇒ <code>Serializer</code>*
@@ -69,37 +150,38 @@ Cicero Core - defines the core data types for Cicero.
             * *[.getResponseTypes()](#module_cicero-core.Template+getResponseTypes) ⇒ <code>Array</code>*
             * *[.getEmitTypes()](#module_cicero-core.Template+getEmitTypes) ⇒ <code>Array</code>*
             * *[.getStateTypes()](#module_cicero-core.Template+getStateTypes) ⇒ <code>Array</code>*
+            * *[.hasLogic()](#module_cicero-core.Template+hasLogic) ⇒ <code>boolean</code>*
         * _static_
-            * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
-            * *[.compileGrammar(sourceCode)](#module_cicero-core.Template.compileGrammar) ⇒ <code>object</code>*
-            * *[.fromArchive(Buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise</code>*
+            * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise.&lt;Template&gt;</code>*
+            * *[.fromArchive(buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise.&lt;Template&gt;</code>*
             * *[.fromUrl(url, options)](#module_cicero-core.Template.fromUrl) ⇒ <code>Promise</code>*
-            * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise</code>*
+            * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
     * *[.TemplateInstance](#module_cicero-core.TemplateInstance)*
         * *[new TemplateInstance(template)](#new_module_cicero-core.TemplateInstance_new)*
-        * *[.setData(data)](#module_cicero-core.TemplateInstance+setData)*
-        * *[.getData()](#module_cicero-core.TemplateInstance+getData) ⇒ <code>object</code>*
-        * *[.getDataAsComposerObject()](#module_cicero-core.TemplateInstance+getDataAsComposerObject) ⇒ <code>object</code>*
-        * *[.parse(text)](#module_cicero-core.TemplateInstance+parse)*
-        * *[.generateText()](#module_cicero-core.TemplateInstance+generateText) ⇒ <code>string</code>*
-        * *[.getIdentifier()](#module_cicero-core.TemplateInstance+getIdentifier) ⇒ <code>String</code>*
-        * *[.getTemplate()](#module_cicero-core.TemplateInstance+getTemplate) ⇒ <code>Template</code>*
-        * *[.toJSON()](#module_cicero-core.TemplateInstance+toJSON) ⇒ <code>object</code>*
+        * _instance_
+            * *[.setData(data)](#module_cicero-core.TemplateInstance+setData)*
+            * *[.getData()](#module_cicero-core.TemplateInstance+getData) ⇒ <code>object</code>*
+            * *[.getDataAsComposerObject()](#module_cicero-core.TemplateInstance+getDataAsComposerObject) ⇒ <code>object</code>*
+            * *[.parse(text, currentTime)](#module_cicero-core.TemplateInstance+parse)*
+            * *[.generateText()](#module_cicero-core.TemplateInstance+generateText) ⇒ <code>string</code>*
+            * *[.getIdentifier()](#module_cicero-core.TemplateInstance+getIdentifier) ⇒ <code>String</code>*
+            * *[.getTemplate()](#module_cicero-core.TemplateInstance+getTemplate) ⇒ <code>Template</code>*
+            * *[.getTemplateLogic()](#module_cicero-core.TemplateInstance+getTemplateLogic) ⇒ <code>TemplateLogic</code>*
+            * *[.toJSON()](#module_cicero-core.TemplateInstance+toJSON) ⇒ <code>object</code>*
+        * _static_
+            * *[.pad(n, width, z)](#module_cicero-core.TemplateInstance.pad) ⇒ <code>string</code>*
+            * *[.convertDateTimes(obj, utcOffset)](#module_cicero-core.TemplateInstance.convertDateTimes) ⇒ <code>\*</code>*
+    * *[.TemplateLoader](#module_cicero-core.TemplateLoader)*
+        * *[.loadZipFileContents(zip, path, json, required)](#module_cicero-core.TemplateLoader.loadZipFileContents) ⇒ <code>Promise.&lt;string&gt;</code>*
+        * *[.loadZipFilesContents(zip, regex)](#module_cicero-core.TemplateLoader.loadZipFilesContents) ⇒ <code>Promise.&lt;Array.&lt;object&gt;&gt;</code>*
+        * *[.loadFileContents(path, fileName, json, required)](#module_cicero-core.TemplateLoader.loadFileContents) ⇒ <code>Promise.&lt;string&gt;</code>*
+        * *[.loadFilesContents(path, regex)](#module_cicero-core.TemplateLoader.loadFilesContents) ⇒ <code>Promise.&lt;Array.&lt;object&gt;&gt;</code>*
+        * *[.fromArchive(Template, buffer)](#module_cicero-core.TemplateLoader.fromArchive) ⇒ <code>Promise.&lt;Template&gt;</code>*
+        * *[.fromUrl(Template, url, options)](#module_cicero-core.TemplateLoader.fromUrl) ⇒ <code>Promise</code>*
+        * *[.fromDirectory(Template, path, [options])](#module_cicero-core.TemplateLoader.fromDirectory) ⇒ <code>Promise.&lt;Template&gt;</code>*
+    * [.TemplateSaver](#module_cicero-core.TemplateSaver)
+        * [.toArchive(template, [language], [options])](#module_cicero-core.TemplateSaver.toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>
 
-<a name="module_cicero-core.CiceroModelManager"></a>
-
-### *cicero-core.CiceroModelManager*
-Cicero Model Manager. Bootstraps the ModelManager with system files.
-
-**Kind**: static abstract class of [<code>cicero-core</code>](#module_cicero-core)  
-**Access**: public  
-<a name="module_cicero-core.CiceroModelManager+getModels"></a>
-
-#### *ciceroModelManager.getModels() ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>*
-Gets all the CTO models
-
-**Kind**: instance method of [<code>CiceroModelManager</code>](#module_cicero-core.CiceroModelManager)  
-**Returns**: <code>Array.&lt;{name:string, content:string}&gt;</code> - the name and content of each CTO file  
 <a name="module_cicero-core.Clause"></a>
 
 ### cicero-core.Clause
@@ -120,122 +202,44 @@ calling the parse method and passing in natural language text that conforms to t
 
 **Kind**: static class of [<code>cicero-core</code>](#module_cicero-core)  
 **Access**: public  
-<a name="module_cicero-core.FunctionDeclaration"></a>
+<a name="module_cicero-core.DateTimeFormatParser"></a>
 
-### cicero-core.FunctionDeclaration
-FunctionDeclaration defines a function that has been defined
-in a model file. If the name of the function starts with 'on'
-then the name of the function denotes the name of a transaction
-declaration that the function processes.
+### cicero-core.DateTimeFormatParser
+Parses a date/time format string
 
 **Kind**: static class of [<code>cicero-core</code>](#module_cicero-core)  
+**Access**: public  
 
-* [.FunctionDeclaration](#module_cicero-core.FunctionDeclaration)
-    * [new FunctionDeclaration(modelManager, language, name, visibility, returnType, throws, parameterNames, parameterTypes, decorators, functionText)](#new_module_cicero-core.FunctionDeclaration_new)
-    * [.getFunctionText()](#module_cicero-core.FunctionDeclaration+getFunctionText) ⇒ <code>string</code>
-    * [.getThrows()](#module_cicero-core.FunctionDeclaration+getThrows) ⇒ <code>string</code>
-    * [.getLanguage()](#module_cicero-core.FunctionDeclaration+getLanguage) ⇒ <code>string</code>
-    * [.getDecorators()](#module_cicero-core.FunctionDeclaration+getDecorators) ⇒ <code>Array.&lt;string&gt;</code>
-    * [.getVisibility()](#module_cicero-core.FunctionDeclaration+getVisibility) ⇒ <code>string</code>
-    * [.getReturnType()](#module_cicero-core.FunctionDeclaration+getReturnType) ⇒ <code>string</code>
-    * [.getName()](#module_cicero-core.FunctionDeclaration+getName) ⇒ <code>string</code>
-    * [.getTransactionDeclarationName()](#module_cicero-core.FunctionDeclaration+getTransactionDeclarationName) ⇒ <code>string</code>
-    * [.getParameterNames()](#module_cicero-core.FunctionDeclaration+getParameterNames) ⇒ <code>Array.&lt;string&gt;</code>
-    * [.getParameterTypes()](#module_cicero-core.FunctionDeclaration+getParameterTypes) ⇒ <code>Array.&lt;string&gt;</code>
+* [.DateTimeFormatParser](#module_cicero-core.DateTimeFormatParser)
+    * [.parseDateTimeFormatField(field)](#module_cicero-core.DateTimeFormatParser.parseDateTimeFormatField) ⇒ <code>string</code>
+    * [.buildDateTimeFormatRule(formatString)](#module_cicero-core.DateTimeFormatParser.buildDateTimeFormatRule) ⇒ <code>Object</code>
 
-<a name="new_module_cicero-core.FunctionDeclaration_new"></a>
+<a name="module_cicero-core.DateTimeFormatParser.parseDateTimeFormatField"></a>
 
-#### new FunctionDeclaration(modelManager, language, name, visibility, returnType, throws, parameterNames, parameterTypes, decorators, functionText)
-Create a FunctionDeclaration
+#### DateTimeFormatParser.parseDateTimeFormatField(field) ⇒ <code>string</code>
+Given a format field (like HH or D) this method returns
+a logical name for the field. Note the logical names
+have been picked to align with the moment constructor that takes an object.
 
+**Kind**: static method of [<code>DateTimeFormatParser</code>](#module_cicero-core.DateTimeFormatParser)  
+**Returns**: <code>string</code> - the field designator  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| modelManager | <code>ModelManager</code> | the ModelManager used to validate this function |
-| language | <code>string</code> | the language that the function is written in. E.g. JS. |
-| name | <code>string</code> | the name of the function |
-| visibility | <code>string</code> | the visibility of the function |
-| returnType | <code>string</code> | the return type of the function |
-| throws | <code>string</code> | the type that is thrown by the function |
-| parameterNames | <code>Array.&lt;string&gt;</code> | the names of parameters of the function |
-| parameterTypes | <code>Array.&lt;string&gt;</code> | the type names of parameters of the function |
-| decorators | <code>Array.&lt;string&gt;</code> | the function decorators |
-| functionText | <code>string</code> | the function as text |
+| field | <code>string</code> | the input format field |
 
-<a name="module_cicero-core.FunctionDeclaration+getFunctionText"></a>
+<a name="module_cicero-core.DateTimeFormatParser.buildDateTimeFormatRule"></a>
 
-#### functionDeclaration.getFunctionText() ⇒ <code>string</code>
-Returns the text of this function.
+#### DateTimeFormatParser.buildDateTimeFormatRule(formatString) ⇒ <code>Object</code>
+Converts a format string to a Nearley action
 
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>string</code> - the text that defines the function  
-<a name="module_cicero-core.FunctionDeclaration+getThrows"></a>
+**Kind**: static method of [<code>DateTimeFormatParser</code>](#module_cicero-core.DateTimeFormatParser)  
+**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
 
-#### functionDeclaration.getThrows() ⇒ <code>string</code>
-Returns the type thrown by this function
+| Param | Type | Description |
+| --- | --- | --- |
+| formatString | <code>string</code> | the input format string |
 
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>string</code> - the type thrown by the function  
-<a name="module_cicero-core.FunctionDeclaration+getLanguage"></a>
-
-#### functionDeclaration.getLanguage() ⇒ <code>string</code>
-Returns the programming language that the function is written in
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>string</code> - the language of the function  
-<a name="module_cicero-core.FunctionDeclaration+getDecorators"></a>
-
-#### functionDeclaration.getDecorators() ⇒ <code>Array.&lt;string&gt;</code>
-Returns the decorators that the function was tagged with
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>Array.&lt;string&gt;</code> - the @ prefixed decorators for the function  
-<a name="module_cicero-core.FunctionDeclaration+getVisibility"></a>
-
-#### functionDeclaration.getVisibility() ⇒ <code>string</code>
-Returns the visibility of this function
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>string</code> - the visibility of the function (+ is public),
-(- is private)  
-<a name="module_cicero-core.FunctionDeclaration+getReturnType"></a>
-
-#### functionDeclaration.getReturnType() ⇒ <code>string</code>
-Returns the return type for this function
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>string</code> - the return type for the function  
-<a name="module_cicero-core.FunctionDeclaration+getName"></a>
-
-#### functionDeclaration.getName() ⇒ <code>string</code>
-Returns the name of the function
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>string</code> - the name of the function.  
-<a name="module_cicero-core.FunctionDeclaration+getTransactionDeclarationName"></a>
-
-#### functionDeclaration.getTransactionDeclarationName() ⇒ <code>string</code>
-Returns the short name of the transaction declaration
-that is being processed. This is calculated by removing
-the 'on' prefix from the function name.
-If the function name does not start with 'on' then null
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>string</code> - the name of the transaction declaration.  
-<a name="module_cicero-core.FunctionDeclaration+getParameterNames"></a>
-
-#### functionDeclaration.getParameterNames() ⇒ <code>Array.&lt;string&gt;</code>
-Returns the names of the parameters processed by the function.
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>Array.&lt;string&gt;</code> - the names of the parameters.  
-<a name="module_cicero-core.FunctionDeclaration+getParameterTypes"></a>
-
-#### functionDeclaration.getParameterTypes() ⇒ <code>Array.&lt;string&gt;</code>
-Returns the types of the parameters processed by the function.
-
-**Kind**: instance method of [<code>FunctionDeclaration</code>](#module_cicero-core.FunctionDeclaration)  
-**Returns**: <code>Array.&lt;string&gt;</code> - the types of the parameters.  
 <a name="module_cicero-core.Metadata"></a>
 
 ### cicero-core.Metadata
@@ -247,19 +251,21 @@ Defines the metadata for a Template, including the name, version, README markdow
 * [.Metadata](#module_cicero-core.Metadata)
     * [new Metadata(packageJson, readme, samples, request)](#new_module_cicero-core.Metadata_new)
     * [.getTemplateType()](#module_cicero-core.Metadata+getTemplateType) ⇒ <code>number</code>
-    * [.getLanguage()](#module_cicero-core.Metadata+getLanguage) ⇒ <code>number</code>
-    * [.getTargetVersion()](#module_cicero-core.Metadata+getTargetVersion) ⇒ <code>string</code>
-    * [.satisfiesTargetVersion()](#module_cicero-core.Metadata+satisfiesTargetVersion) ⇒ <code>string</code>
+    * [.getRuntime()](#module_cicero-core.Metadata+getRuntime) ⇒ <code>string</code>
+    * [.getErgoVersion()](#module_cicero-core.Metadata+getErgoVersion) ⇒ <code>string</code>
+    * [.getCiceroVersion()](#module_cicero-core.Metadata+getCiceroVersion) ⇒ <code>string</code>
+    * [.satisfiesCiceroVersion(version)](#module_cicero-core.Metadata+satisfiesCiceroVersion) ⇒ <code>string</code>
     * [.getSamples()](#module_cicero-core.Metadata+getSamples) ⇒ <code>object</code>
     * [.getRequest()](#module_cicero-core.Metadata+getRequest) ⇒ <code>object</code>
     * [.getSample(locale)](#module_cicero-core.Metadata+getSample) ⇒ <code>string</code>
     * [.getREADME()](#module_cicero-core.Metadata+getREADME) ⇒ <code>String</code>
     * [.getPackageJson()](#module_cicero-core.Metadata+getPackageJson) ⇒ <code>object</code>
     * [.getName()](#module_cicero-core.Metadata+getName) ⇒ <code>string</code>
+    * [.getKeywords()](#module_cicero-core.Metadata+getKeywords) ⇒ <code>Array</code>
     * [.getDescription()](#module_cicero-core.Metadata+getDescription) ⇒ <code>string</code>
     * [.getVersion()](#module_cicero-core.Metadata+getVersion) ⇒ <code>string</code>
     * [.getIdentifier()](#module_cicero-core.Metadata+getIdentifier) ⇒ <code>string</code>
-    * [.createTargetMetadata(language)](#module_cicero-core.Metadata+createTargetMetadata) ⇒ <code>object</code>
+    * [.createTargetMetadata(runtimeName)](#module_cicero-core.Metadata+createTargetMetadata) ⇒ <code>object</code>
 
 <a name="new_module_cicero-core.Metadata_new"></a>
 
@@ -285,29 +291,43 @@ Returns either a 0 (for a contract template), or 1 (for a clause template)
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
 **Returns**: <code>number</code> - the template type  
-<a name="module_cicero-core.Metadata+getLanguage"></a>
+<a name="module_cicero-core.Metadata+getRuntime"></a>
 
-#### metadata.getLanguage() ⇒ <code>number</code>
-Returns either a 0 (for an ergo template), or 1 (for a javascript template)
+#### metadata.getRuntime() ⇒ <code>string</code>
+Returns the name of the runtime target for this template, or null if this template
+has not been compiled for a specific runtime.
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
-**Returns**: <code>number</code> - the template language  
-<a name="module_cicero-core.Metadata+getTargetVersion"></a>
+**Returns**: <code>string</code> - the name of the runtime  
+<a name="module_cicero-core.Metadata+getErgoVersion"></a>
 
-#### metadata.getTargetVersion() ⇒ <code>string</code>
-Returns the target semantic version for this template.
-i.e. which version of cicero was this template built for?
+#### metadata.getErgoVersion() ⇒ <code>string</code>
+Returns the Ergo version that the Ergo code in this template is compatible with. This
+is null for templates that do not contain source Ergo code.
+
+**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
+**Returns**: <code>string</code> - the version of Ergo  
+<a name="module_cicero-core.Metadata+getCiceroVersion"></a>
+
+#### metadata.getCiceroVersion() ⇒ <code>string</code>
+Returns the version of Cicero that this template is compatible with.
+i.e. which version of the runtime was this template built for?
 The version string conforms to the semver definition
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
 **Returns**: <code>string</code> - the semantic version  
-<a name="module_cicero-core.Metadata+satisfiesTargetVersion"></a>
+<a name="module_cicero-core.Metadata+satisfiesCiceroVersion"></a>
 
-#### metadata.satisfiesTargetVersion() ⇒ <code>string</code>
+#### metadata.satisfiesCiceroVersion(version) ⇒ <code>string</code>
 Only returns true if the current cicero version satisfies the target version of this template
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
 **Returns**: <code>string</code> - the semantic version  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| version | <code>string</code> | the cicero version to check against |
+
 <a name="module_cicero-core.Metadata+getSamples"></a>
 
 #### metadata.getSamples() ⇒ <code>object</code>
@@ -331,9 +351,9 @@ If no locale is specified returns the default sample if it has been specified.
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
 **Returns**: <code>string</code> - the sample file for the template in the given locale or null  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| locale | <code>string</code> | the IETF language code for the language |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| locale | <code>string</code> | <code>null</code> | the IETF language code for the language. |
 
 <a name="module_cicero-core.Metadata+getREADME"></a>
 
@@ -356,6 +376,13 @@ Returns the name for this template.
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
 **Returns**: <code>string</code> - the name of the template  
+<a name="module_cicero-core.Metadata+getKeywords"></a>
+
+#### metadata.getKeywords() ⇒ <code>Array</code>
+Returns the name for this template.
+
+**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
+**Returns**: <code>Array</code> - the name of the template  
 <a name="module_cicero-core.Metadata+getDescription"></a>
 
 #### metadata.getDescription() ⇒ <code>string</code>
@@ -379,21 +406,186 @@ Returns the identifier for this template, formed from name@version.
 **Returns**: <code>string</code> - the identifier of the template  
 <a name="module_cicero-core.Metadata+createTargetMetadata"></a>
 
-#### metadata.createTargetMetadata(language) ⇒ <code>object</code>
-Return new Metadata for a target language
+#### metadata.createTargetMetadata(runtimeName) ⇒ <code>object</code>
+Return new Metadata for a target runtime
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
 **Returns**: <code>object</code> - the new Metadata  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| language | <code>string</code> | the target language |
+| runtimeName | <code>string</code> | the target runtime name |
+
+<a name="module_cicero-core.ParserManager"></a>
+
+### cicero-core.ParserManager
+Generates and manages a Nearley parser for a template.
+
+**Kind**: static class of [<code>cicero-core</code>](#module_cicero-core)  
+**Access**: public  
+
+* [.ParserManager](#module_cicero-core.ParserManager)
+    * [new ParserManager(template)](#new_module_cicero-core.ParserManager_new)
+    * _instance_
+        * [.getParser()](#module_cicero-core.ParserManager+getParser) ⇒ <code>object</code>
+        * [.getTemplateAst()](#module_cicero-core.ParserManager+getTemplateAst) ⇒ <code>object</code>
+        * [.setGrammar(grammar)](#module_cicero-core.ParserManager+setGrammar)
+        * [.buildGrammar(templatizedGrammar)](#module_cicero-core.ParserManager+buildGrammar)
+        * [.buildGrammarRules(ast, templateModel, prefix, parts)](#module_cicero-core.ParserManager+buildGrammarRules)
+        * [.handleBinding(templateModel, parts, inputRule, element)](#module_cicero-core.ParserManager+handleBinding)
+        * [.cleanChunk(input)](#module_cicero-core.ParserManager+cleanChunk) ⇒ <code>string</code>
+        * [.findFirstBinding(propertyName, elements)](#module_cicero-core.ParserManager+findFirstBinding) ⇒ <code>int</code>
+        * [.getGrammar()](#module_cicero-core.ParserManager+getGrammar) ⇒ <code>String</code>
+        * [.getTemplatizedGrammar()](#module_cicero-core.ParserManager+getTemplatizedGrammar) ⇒ <code>String</code>
+    * _static_
+        * [.getProperty(templateModel, propertyName)](#module_cicero-core.ParserManager.getProperty) ⇒ <code>\*</code>
+        * [.compileGrammar(sourceCode)](#module_cicero-core.ParserManager.compileGrammar) ⇒ <code>object</code>
+
+<a name="new_module_cicero-core.ParserManager_new"></a>
+
+#### new ParserManager(template)
+Create the ParserManager.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| template | <code>object</code> | the template instance |
+
+<a name="module_cicero-core.ParserManager+getParser"></a>
+
+#### parserManager.getParser() ⇒ <code>object</code>
+Gets a parser object for this template
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>object</code> - the parser for this template  
+<a name="module_cicero-core.ParserManager+getTemplateAst"></a>
+
+#### parserManager.getTemplateAst() ⇒ <code>object</code>
+Gets the AST for the template
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>object</code> - the AST for the template  
+<a name="module_cicero-core.ParserManager+setGrammar"></a>
+
+#### parserManager.setGrammar(grammar)
+Set the grammar for the template
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| grammar | <code>String</code> | the grammar for the template |
+
+<a name="module_cicero-core.ParserManager+buildGrammar"></a>
+
+#### parserManager.buildGrammar(templatizedGrammar)
+Build a grammar from a template
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| templatizedGrammar | <code>String</code> | the annotated template |
+
+<a name="module_cicero-core.ParserManager+buildGrammarRules"></a>
+
+#### parserManager.buildGrammarRules(ast, templateModel, prefix, parts)
+Build grammar rules from a template
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST from which to build the grammar |
+| templateModel | <code>ClassDeclaration</code> | the type of the parent class for this AST |
+| prefix | <code>String</code> | A unique prefix for the grammar rules |
+| parts | <code>Object</code> | Result object to acculumate rules and required sub-grammars |
+
+<a name="module_cicero-core.ParserManager+handleBinding"></a>
+
+#### parserManager.handleBinding(templateModel, parts, inputRule, element)
+Utility method to generate a grammar rule for a variable binding
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| templateModel | <code>ClassDeclaration</code> | the current template model |
+| parts | <code>\*</code> | the parts, where the rule will be added |
+| inputRule | <code>\*</code> | the rule we are processing in the AST |
+| element | <code>\*</code> | the current element in the AST |
+
+<a name="module_cicero-core.ParserManager+cleanChunk"></a>
+
+#### parserManager.cleanChunk(input) ⇒ <code>string</code>
+Cleans a chunk of text to make it safe to include
+as a grammar rule. We need to remove linefeeds and
+escape any '"' characters.
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>string</code> - cleaned text  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| input | <code>string</code> | the input text from the template |
+
+<a name="module_cicero-core.ParserManager+findFirstBinding"></a>
+
+#### parserManager.findFirstBinding(propertyName, elements) ⇒ <code>int</code>
+Finds the first binding for the given property
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>int</code> - the index of the element or -1  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| propertyName | <code>string</code> | the name of the property |
+| elements | <code>Array.&lt;object&gt;</code> | the result of parsing the template_txt. |
+
+<a name="module_cicero-core.ParserManager+getGrammar"></a>
+
+#### parserManager.getGrammar() ⇒ <code>String</code>
+Get the (compiled) grammar for the template
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>String</code> - - the grammar for the template  
+<a name="module_cicero-core.ParserManager+getTemplatizedGrammar"></a>
+
+#### parserManager.getTemplatizedGrammar() ⇒ <code>String</code>
+Returns the templatized grammar
+
+**Kind**: instance method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>String</code> - the contents of the templatized grammar  
+<a name="module_cicero-core.ParserManager.getProperty"></a>
+
+#### ParserManager.getProperty(templateModel, propertyName) ⇒ <code>\*</code>
+Throws an error if a template variable doesn't exist on the model.
+
+**Kind**: static method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>\*</code> - the property  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| templateModel | <code>\*</code> | the model for the template |
+| propertyName | <code>String</code> | the name of the property |
+
+<a name="module_cicero-core.ParserManager.compileGrammar"></a>
+
+#### ParserManager.compileGrammar(sourceCode) ⇒ <code>object</code>
+Compiles a Nearley grammar to its AST
+
+**Kind**: static method of [<code>ParserManager</code>](#module_cicero-core.ParserManager)  
+**Returns**: <code>object</code> - the AST for the grammar  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| sourceCode | <code>string</code> | the source text for the grammar |
 
 <a name="module_cicero-core.Template"></a>
 
 ### *cicero-core.Template*
 A template for a legal clause or contract. A Template has a template model, request/response transaction types,
-a template grammar (natural language for the template) as well as the business logic to execute the
+a template grammar (natural language for the template) as well as Ergo code for the business logic of the
 template.
 
 **Kind**: static abstract class of [<code>cicero-core</code>](#module_cicero-core)  
@@ -402,23 +594,17 @@ template.
 * *[.Template](#module_cicero-core.Template)*
     * *[new Template(packageJson, readme, samples, request)](#new_module_cicero-core.Template_new)*
     * _instance_
+        * *[.validate()](#module_cicero-core.Template+validate)*
         * *[.getTemplateModel()](#module_cicero-core.Template+getTemplateModel) ⇒ <code>ClassDeclaration</code>*
         * *[.getIdentifier()](#module_cicero-core.Template+getIdentifier) ⇒ <code>String</code>*
         * *[.getMetadata()](#module_cicero-core.Template+getMetadata) ⇒ <code>Metadata</code>*
-        * *[.getParser()](#module_cicero-core.Template+getParser) ⇒ <code>object</code>*
-        * *[.getTemplateAst()](#module_cicero-core.Template+getTemplateAst) ⇒ <code>object</code>*
-        * *[.setGrammar(grammar)](#module_cicero-core.Template+setGrammar)*
-        * *[.buildGrammar(templatizedGrammar)](#module_cicero-core.Template+buildGrammar)*
-        * *[.buildGrammarRules(ast, templateModel, prefix, parts)](#module_cicero-core.Template+buildGrammarRules)*
-        * *[.cleanChunk(input)](#module_cicero-core.Template+cleanChunk) ⇒ <code>string</code>*
-        * *[.findFirstBinding(propertyName, elements)](#module_cicero-core.Template+findFirstBinding) ⇒ <code>int</code>*
-        * *[.getGrammar()](#module_cicero-core.Template+getGrammar) ⇒ <code>String</code>*
-        * *[.getTemplatizedGrammar()](#module_cicero-core.Template+getTemplatizedGrammar) ⇒ <code>String</code>*
         * *[.getName()](#module_cicero-core.Template+getName) ⇒ <code>String</code>*
         * *[.getVersion()](#module_cicero-core.Template+getVersion) ⇒ <code>String</code>*
         * *[.getDescription()](#module_cicero-core.Template+getDescription) ⇒ <code>String</code>*
         * *[.getHash()](#module_cicero-core.Template+getHash) ⇒ <code>string</code>*
-        * *[.toArchive([language], [options])](#module_cicero-core.Template+toArchive) ⇒ <code>Buffer</code>*
+        * *[.toArchive([language], [options])](#module_cicero-core.Template+toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
+        * *[.getParserManager()](#module_cicero-core.Template+getParserManager) ⇒ <code>ParserManager</code>*
+        * *[.getTemplateLogic()](#module_cicero-core.Template+getTemplateLogic) ⇒ <code>TemplateLogic</code>*
         * *[.getIntrospector()](#module_cicero-core.Template+getIntrospector) ⇒ <code>Introspector</code>*
         * *[.getFactory()](#module_cicero-core.Template+getFactory) ⇒ <code>Factory</code>*
         * *[.getSerializer()](#module_cicero-core.Template+getSerializer) ⇒ <code>Serializer</code>*
@@ -426,19 +612,19 @@ template.
         * *[.getResponseTypes()](#module_cicero-core.Template+getResponseTypes) ⇒ <code>Array</code>*
         * *[.getEmitTypes()](#module_cicero-core.Template+getEmitTypes) ⇒ <code>Array</code>*
         * *[.getStateTypes()](#module_cicero-core.Template+getStateTypes) ⇒ <code>Array</code>*
+        * *[.hasLogic()](#module_cicero-core.Template+hasLogic) ⇒ <code>boolean</code>*
     * _static_
-        * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
-        * *[.compileGrammar(sourceCode)](#module_cicero-core.Template.compileGrammar) ⇒ <code>object</code>*
-        * *[.fromArchive(Buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise</code>*
+        * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise.&lt;Template&gt;</code>*
+        * *[.fromArchive(buffer)](#module_cicero-core.Template.fromArchive) ⇒ <code>Promise.&lt;Template&gt;</code>*
         * *[.fromUrl(url, options)](#module_cicero-core.Template.fromUrl) ⇒ <code>Promise</code>*
-        * *[.fromDirectory(path, [options])](#module_cicero-core.Template.fromDirectory) ⇒ <code>Promise</code>*
+        * *[.instanceOf(classDeclaration, fqt)](#module_cicero-core.Template.instanceOf) ⇒ <code>boolean</code>*
 
 <a name="new_module_cicero-core.Template_new"></a>
 
 #### *new Template(packageJson, readme, samples, request)*
 Create the Template.
 Note: Only to be called by framework code. Applications should
-retrieve instances from [Template.fromArchive](Template.fromArchive).
+retrieve instances from [Template.fromArchive](Template.fromArchive) or [Template.fromDirectory](Template.fromDirectory).
 
 
 | Param | Type | Description |
@@ -448,6 +634,13 @@ retrieve instances from [Template.fromArchive](Template.fromArchive).
 | samples | <code>object</code> | the sample text for the template in different locales |
 | request | <code>object</code> | the JS object for the sample request |
 
+<a name="module_cicero-core.Template+validate"></a>
+
+#### *template.validate()*
+Verifies that the template is well formed.
+Throws an exception with the details of any validation errors.
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 <a name="module_cicero-core.Template+getTemplateModel"></a>
 
 #### *template.getTemplateModel() ⇒ <code>ClassDeclaration</code>*
@@ -473,97 +666,6 @@ Returns the metadata for this template
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>Metadata</code> - the metadata for this template  
-<a name="module_cicero-core.Template+getParser"></a>
-
-#### *template.getParser() ⇒ <code>object</code>*
-Gets a parser object for this template
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>object</code> - the parser for this template  
-<a name="module_cicero-core.Template+getTemplateAst"></a>
-
-#### *template.getTemplateAst() ⇒ <code>object</code>*
-Gets the AST for the template
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>object</code> - the AST for the template  
-<a name="module_cicero-core.Template+setGrammar"></a>
-
-#### *template.setGrammar(grammar)*
-Set the grammar for the template
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| grammar | <code>String</code> | the grammar for the template |
-
-<a name="module_cicero-core.Template+buildGrammar"></a>
-
-#### *template.buildGrammar(templatizedGrammar)*
-Build a grammar from a template
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| templatizedGrammar | <code>String</code> | the annotated template |
-
-<a name="module_cicero-core.Template+buildGrammarRules"></a>
-
-#### *template.buildGrammarRules(ast, templateModel, prefix, parts)*
-Build grammar rules from a template
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| ast | <code>object</code> | the AST from which to build the grammar |
-| templateModel | <code>ClassDeclaration</code> | the type of the parent class for this AST |
-| prefix | <code>String</code> | A unique prefix for the grammar rules |
-| parts | <code>Object</code> | Result object to acculumate rules |
-
-<a name="module_cicero-core.Template+cleanChunk"></a>
-
-#### *template.cleanChunk(input) ⇒ <code>string</code>*
-Cleans a chunk of text to make it safe to include
-as a grammar rule. We need to remove linefeeds and
-escape any '"' characters.
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>string</code> - cleaned text  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| input | <code>string</code> | the input text from the template |
-
-<a name="module_cicero-core.Template+findFirstBinding"></a>
-
-#### *template.findFirstBinding(propertyName, elements) ⇒ <code>int</code>*
-Finds the first binding for the given property
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>int</code> - the index of the element or -1  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| propertyName | <code>string</code> | the name of the property |
-| elements | <code>Array.&lt;object&gt;</code> | the result of parsing the template_txt. |
-
-<a name="module_cicero-core.Template+getGrammar"></a>
-
-#### *template.getGrammar() ⇒ <code>String</code>*
-Get the (compiled) grammar for the template
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>String</code> - - the grammar for the template  
-<a name="module_cicero-core.Template+getTemplatizedGrammar"></a>
-
-#### *template.getTemplatizedGrammar() ⇒ <code>String</code>*
-Returns the templatized grammar
-
-**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>String</code> - the contents of the templatized grammar  
 <a name="module_cicero-core.Template+getName"></a>
 
 #### *template.getName() ⇒ <code>String</code>*
@@ -589,47 +691,67 @@ Returns the description for this template
 <a name="module_cicero-core.Template+getHash"></a>
 
 #### *template.getHash() ⇒ <code>string</code>*
-Gets a content based SHA-256 hash for this template
+Gets a content based SHA-256 hash for this template. Hash
+is based on the metadata for the template plus the contents of
+all the models and all the script files.
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>string</code> - the SHA-256 hash in hex format  
 <a name="module_cicero-core.Template+toArchive"></a>
 
-#### *template.toArchive([language], [options]) ⇒ <code>Buffer</code>*
-Store a Template as an archive.
+#### *template.toArchive([language], [options]) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
+Persists this template to a Cicero Template Archive (cta) file.
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Buffer</code> - buffer  - the zlib buffer  
+**Returns**: <code>Promise.&lt;Buffer&gt;</code> - the zlib buffer  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [language] | <code>string</code> | target language for the archive (should be either 'ergo' or 'javascript') |
+| [language] | <code>string</code> | target language for the archive (should be 'ergo') |
 | [options] | <code>Object</code> | JSZip options |
 
+<a name="module_cicero-core.Template+getParserManager"></a>
+
+#### *template.getParserManager() ⇒ <code>ParserManager</code>*
+Provides access to the parser manager for this template.
+The parser manager can convert template data to and from
+natural language text.
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>ParserManager</code> - the ParserManager for this template  
+<a name="module_cicero-core.Template+getTemplateLogic"></a>
+
+#### *template.getTemplateLogic() ⇒ <code>TemplateLogic</code>*
+Provides access to the template logic for this template.
+The template logic encapsulate the code necessary to
+execute the clause or contract.
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>TemplateLogic</code> - the TemplateLogic for this template  
 <a name="module_cicero-core.Template+getIntrospector"></a>
 
 #### *template.getIntrospector() ⇒ <code>Introspector</code>*
-Provides access to the Introspector for this business network. The Introspector
-is used to reflect on the types defined within this business network.
+Provides access to the Introspector for this template. The Introspector
+is used to reflect on the types defined within this template.
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Introspector</code> - the Introspector for this business network  
+**Returns**: <code>Introspector</code> - the Introspector for this template  
 <a name="module_cicero-core.Template+getFactory"></a>
 
 #### *template.getFactory() ⇒ <code>Factory</code>*
-Provides access to the Factory for this business network. The Factory
-is used to create the types defined in this business network.
+Provides access to the Factory for this template. The Factory
+is used to create the types defined in this template.
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Factory</code> - the Factory for this business network  
+**Returns**: <code>Factory</code> - the Factory for this template  
 <a name="module_cicero-core.Template+getSerializer"></a>
 
 #### *template.getSerializer() ⇒ <code>Serializer</code>*
-Provides access to the Serializer for this business network. The Serializer
-is used to serialize instances of the types defined within this business network.
+Provides access to the Serializer for this template. The Serializer
+is used to serialize instances of the types defined within this template.
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Serializer</code> - the Serializer for this business network  
+**Returns**: <code>Serializer</code> - the Serializer for this template  
 <a name="module_cicero-core.Template+getRequestTypes"></a>
 
 #### *template.getRequestTypes() ⇒ <code>Array</code>*
@@ -658,6 +780,53 @@ Provides a list of the state types that are expected by this Template. Types use
 
 **Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>Array</code> - a list of the state types  
+<a name="module_cicero-core.Template+hasLogic"></a>
+
+#### *template.hasLogic() ⇒ <code>boolean</code>*
+Returns true if the template has logic, i.e. has more than one script file.
+
+**Kind**: instance method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>boolean</code> - true if the template has logic  
+<a name="module_cicero-core.Template.fromDirectory"></a>
+
+#### *Template.fromDirectory(path, [options]) ⇒ <code>Promise.&lt;Template&gt;</code>*
+Builds a Template from the contents of a directory.
+The directory must include a package.json in the root (used to specify
+the name, version and description of the template).
+
+**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>Promise.&lt;Template&gt;</code> - a Promise to the instantiated template  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>String</code> | to a local directory |
+| [options] | <code>Object</code> | an optional set of options to configure the instance. |
+
+<a name="module_cicero-core.Template.fromArchive"></a>
+
+#### *Template.fromArchive(buffer) ⇒ <code>Promise.&lt;Template&gt;</code>*
+Create a template from an archive.
+
+**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>Promise.&lt;Template&gt;</code> - a Promise to the template  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| buffer | <code>Buffer</code> | the buffer to a Cicero Template Archive (cta) file |
+
+<a name="module_cicero-core.Template.fromUrl"></a>
+
+#### *Template.fromUrl(url, options) ⇒ <code>Promise</code>*
+Create a template from an URL.
+
+**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
+**Returns**: <code>Promise</code> - a Promise to the template  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| url | <code>String</code> |  | the URL to a Cicero Template Archive (cta) file |
+| options | <code>object</code> | <code></code> | additional options |
+
 <a name="module_cicero-core.Template.instanceOf"></a>
 
 #### *Template.instanceOf(classDeclaration, fqt) ⇒ <code>boolean</code>*
@@ -667,92 +836,12 @@ type name.
 **Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
 **Returns**: <code>boolean</code> - True if classDeclaration an instance of the specified fully
 qualified type name, false otherwise.  
+**Internal**:   
 
 | Param | Type | Description |
 | --- | --- | --- |
 | classDeclaration | <code>ClassDeclaration</code> | The class to test |
 | fqt | <code>String</code> | The fully qualified type name. |
-
-<a name="module_cicero-core.Template.compileGrammar"></a>
-
-#### *Template.compileGrammar(sourceCode) ⇒ <code>object</code>*
-Compiles a Nearley grammar to its AST
-
-**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>object</code> - the AST for the grammar  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| sourceCode | <code>string</code> | the source text for the grammar |
-
-<a name="module_cicero-core.Template.fromArchive"></a>
-
-#### *Template.fromArchive(Buffer) ⇒ <code>Promise</code>*
-Create a template from an archive.
-
-**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Promise</code> - a Promise to the instantiated business network  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| Buffer | <code>Buffer</code> | the Buffer to a zip or cta archive |
-
-<a name="module_cicero-core.Template.fromUrl"></a>
-
-#### *Template.fromUrl(url, options) ⇒ <code>Promise</code>*
-Create a template from an URL.
-
-**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Promise</code> - a Promise to the instantiated business network  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| url | <code>String</code> | the URL to a zip or cta archive |
-| options | <code>object</code> | additional options |
-
-<a name="module_cicero-core.Template.fromDirectory"></a>
-
-#### *Template.fromDirectory(path, [options]) ⇒ <code>Promise</code>*
-Builds a Template from the contents of a directory.
-The directory must include a package.json in the root (used to specify
-the name, version and description of the business network). This method
-is designed to work with business networks that refer to external models
-using npm dependencies as well as business networks that statically
-package their model files.
-<p>
-If package.json contains a dependencies property then this method will search for
-model (CTO) files under the node_modules directory for each dependency that
-passes the options.dependencyGlob pattern.
-</p>
-<p>
-If the network depends on an npm module its dependencies (transitive closure)
-will also be scanned for model (CTO) files.
-</p>
-<p>
-The directory may optionally contain a README.md file which is accessible from the
-BusinessNetworkMetadata.getREADME method.
-</p>
-<p>
-In addition all model files will be added that are not under node_modules
-and that pass the options.modelFileGlob pattern. By default you should put
-model files under a directory called 'models'.
-</p>
-<p>
-All script (js) files will be added that are not under node_modules and
-that pass the options.scriptGlob pattern. By default you should put Javascript
-files under the 'lib' directory.
-</p>
-
-**Kind**: static method of [<code>Template</code>](#module_cicero-core.Template)  
-**Returns**: <code>Promise</code> - a Promise to the instantiated business network  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| path | <code>String</code> | to a local directory |
-| [options] | <code>Object</code> | an optional set of options to configure the instance. |
-| [options.dependencyGlob] | <code>Object</code> | specify the glob pattern used to match the npm dependencies to process. Defaults to ** |
-| [options.modelFileGlob] | <code>boolean</code> | specify the glob pattern used to match the model files to include. Defaults to **\/models/**\/*.cto |
-| [options.scriptGlob] | <code>boolean</code> | specify the glob pattern used to match the script files to include. Defaults to **\/lib/**\/*.+(js|ergo) |
 
 <a name="module_cicero-core.TemplateInstance"></a>
 
@@ -768,14 +857,19 @@ calling the parse method and passing in natural language text that conforms to t
 
 * *[.TemplateInstance](#module_cicero-core.TemplateInstance)*
     * *[new TemplateInstance(template)](#new_module_cicero-core.TemplateInstance_new)*
-    * *[.setData(data)](#module_cicero-core.TemplateInstance+setData)*
-    * *[.getData()](#module_cicero-core.TemplateInstance+getData) ⇒ <code>object</code>*
-    * *[.getDataAsComposerObject()](#module_cicero-core.TemplateInstance+getDataAsComposerObject) ⇒ <code>object</code>*
-    * *[.parse(text)](#module_cicero-core.TemplateInstance+parse)*
-    * *[.generateText()](#module_cicero-core.TemplateInstance+generateText) ⇒ <code>string</code>*
-    * *[.getIdentifier()](#module_cicero-core.TemplateInstance+getIdentifier) ⇒ <code>String</code>*
-    * *[.getTemplate()](#module_cicero-core.TemplateInstance+getTemplate) ⇒ <code>Template</code>*
-    * *[.toJSON()](#module_cicero-core.TemplateInstance+toJSON) ⇒ <code>object</code>*
+    * _instance_
+        * *[.setData(data)](#module_cicero-core.TemplateInstance+setData)*
+        * *[.getData()](#module_cicero-core.TemplateInstance+getData) ⇒ <code>object</code>*
+        * *[.getDataAsComposerObject()](#module_cicero-core.TemplateInstance+getDataAsComposerObject) ⇒ <code>object</code>*
+        * *[.parse(text, currentTime)](#module_cicero-core.TemplateInstance+parse)*
+        * *[.generateText()](#module_cicero-core.TemplateInstance+generateText) ⇒ <code>string</code>*
+        * *[.getIdentifier()](#module_cicero-core.TemplateInstance+getIdentifier) ⇒ <code>String</code>*
+        * *[.getTemplate()](#module_cicero-core.TemplateInstance+getTemplate) ⇒ <code>Template</code>*
+        * *[.getTemplateLogic()](#module_cicero-core.TemplateInstance+getTemplateLogic) ⇒ <code>TemplateLogic</code>*
+        * *[.toJSON()](#module_cicero-core.TemplateInstance+toJSON) ⇒ <code>object</code>*
+    * _static_
+        * *[.pad(n, width, z)](#module_cicero-core.TemplateInstance.pad) ⇒ <code>string</code>*
+        * *[.convertDateTimes(obj, utcOffset)](#module_cicero-core.TemplateInstance.convertDateTimes) ⇒ <code>\*</code>*
 
 <a name="new_module_cicero-core.TemplateInstance_new"></a>
 
@@ -816,7 +910,7 @@ plain JS object suitable for serialization call toJSON() and retrieve the `data`
 **Returns**: <code>object</code> - - the data for the clause, or null if it has not been set  
 <a name="module_cicero-core.TemplateInstance+parse"></a>
 
-#### *templateInstance.parse(text)*
+#### *templateInstance.parse(text, currentTime)*
 Set the data for the clause by parsing natural language text.
 
 **Kind**: instance method of [<code>TemplateInstance</code>](#module_cicero-core.TemplateInstance)  
@@ -824,6 +918,7 @@ Set the data for the clause by parsing natural language text.
 | Param | Type | Description |
 | --- | --- | --- |
 | text | <code>string</code> | the data for the clause |
+| currentTime | <code>string</code> | the definition of 'now' (optional) |
 
 <a name="module_cicero-core.TemplateInstance+generateText"></a>
 
@@ -849,6 +944,13 @@ Returns the template for this clause
 
 **Kind**: instance method of [<code>TemplateInstance</code>](#module_cicero-core.TemplateInstance)  
 **Returns**: <code>Template</code> - the template for this clause  
+<a name="module_cicero-core.TemplateInstance+getTemplateLogic"></a>
+
+#### *templateInstance.getTemplateLogic() ⇒ <code>TemplateLogic</code>*
+Returns the template logic for this clause
+
+**Kind**: instance method of [<code>TemplateInstance</code>](#module_cicero-core.TemplateInstance)  
+**Returns**: <code>TemplateLogic</code> - the template for this clause  
 <a name="module_cicero-core.TemplateInstance+toJSON"></a>
 
 #### *templateInstance.toJSON() ⇒ <code>object</code>*
@@ -856,3 +958,175 @@ Returns a JSON representation of the clause
 
 **Kind**: instance method of [<code>TemplateInstance</code>](#module_cicero-core.TemplateInstance)  
 **Returns**: <code>object</code> - the JS object for serialization  
+<a name="module_cicero-core.TemplateInstance.pad"></a>
+
+#### *TemplateInstance.pad(n, width, z) ⇒ <code>string</code>*
+Left pads a number
+
+**Kind**: static method of [<code>TemplateInstance</code>](#module_cicero-core.TemplateInstance)  
+**Returns**: <code>string</code> - the left padded string  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| n | <code>\*</code> |  | the number |
+| width | <code>\*</code> |  | the number of chars to pad to |
+| z | <code>string</code> | <code>&quot;0&quot;</code> | the pad character |
+
+<a name="module_cicero-core.TemplateInstance.convertDateTimes"></a>
+
+#### *TemplateInstance.convertDateTimes(obj, utcOffset) ⇒ <code>\*</code>*
+Recursive function that converts all instances of ParsedDateTime
+to a Moment.
+
+**Kind**: static method of [<code>TemplateInstance</code>](#module_cicero-core.TemplateInstance)  
+**Returns**: <code>\*</code> - the converted object  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>\*</code> | the input object |
+| utcOffset | <code>number</code> | the default utcOffset |
+
+<a name="module_cicero-core.TemplateLoader"></a>
+
+### *cicero-core.TemplateLoader*
+A utility class to create templates from data sources.
+
+**Kind**: static abstract class of [<code>cicero-core</code>](#module_cicero-core)  
+**Interal**:   
+
+* *[.TemplateLoader](#module_cicero-core.TemplateLoader)*
+    * *[.loadZipFileContents(zip, path, json, required)](#module_cicero-core.TemplateLoader.loadZipFileContents) ⇒ <code>Promise.&lt;string&gt;</code>*
+    * *[.loadZipFilesContents(zip, regex)](#module_cicero-core.TemplateLoader.loadZipFilesContents) ⇒ <code>Promise.&lt;Array.&lt;object&gt;&gt;</code>*
+    * *[.loadFileContents(path, fileName, json, required)](#module_cicero-core.TemplateLoader.loadFileContents) ⇒ <code>Promise.&lt;string&gt;</code>*
+    * *[.loadFilesContents(path, regex)](#module_cicero-core.TemplateLoader.loadFilesContents) ⇒ <code>Promise.&lt;Array.&lt;object&gt;&gt;</code>*
+    * *[.fromArchive(Template, buffer)](#module_cicero-core.TemplateLoader.fromArchive) ⇒ <code>Promise.&lt;Template&gt;</code>*
+    * *[.fromUrl(Template, url, options)](#module_cicero-core.TemplateLoader.fromUrl) ⇒ <code>Promise</code>*
+    * *[.fromDirectory(Template, path, [options])](#module_cicero-core.TemplateLoader.fromDirectory) ⇒ <code>Promise.&lt;Template&gt;</code>*
+
+<a name="module_cicero-core.TemplateLoader.loadZipFileContents"></a>
+
+#### *TemplateLoader.loadZipFileContents(zip, path, json, required) ⇒ <code>Promise.&lt;string&gt;</code>*
+Loads a required file from the zip, displaying an error if missing
+
+**Kind**: static method of [<code>TemplateLoader</code>](#module_cicero-core.TemplateLoader)  
+**Returns**: <code>Promise.&lt;string&gt;</code> - a promise to the contents of the zip file or null if it does not exist and
+required is false  
+**Internal**:   
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| zip | <code>\*</code> |  | the JSZip instance |
+| path | <code>string</code> |  | the file path within the zip |
+| json | <code>boolean</code> | <code>false</code> | if true the file is converted to a JS Object using JSON.parse |
+| required | <code>boolean</code> | <code>false</code> | whether the file is required |
+
+<a name="module_cicero-core.TemplateLoader.loadZipFilesContents"></a>
+
+#### *TemplateLoader.loadZipFilesContents(zip, regex) ⇒ <code>Promise.&lt;Array.&lt;object&gt;&gt;</code>*
+Loads the contents of all files in the zip that match a regex
+
+**Kind**: static method of [<code>TemplateLoader</code>](#module_cicero-core.TemplateLoader)  
+**Returns**: <code>Promise.&lt;Array.&lt;object&gt;&gt;</code> - a promise to an array of objects with the name and contents of the zip files  
+**Internal**:   
+
+| Param | Type | Description |
+| --- | --- | --- |
+| zip | <code>\*</code> | the JSZip instance |
+| regex | <code>RegExp</code> | the regex to use to match files |
+
+<a name="module_cicero-core.TemplateLoader.loadFileContents"></a>
+
+#### *TemplateLoader.loadFileContents(path, fileName, json, required) ⇒ <code>Promise.&lt;string&gt;</code>*
+Loads a required file from a directory, displaying an error if missing
+
+**Kind**: static method of [<code>TemplateLoader</code>](#module_cicero-core.TemplateLoader)  
+**Returns**: <code>Promise.&lt;string&gt;</code> - a promise to the contents of the file or null if it does not exist and
+required is false  
+**Internal**:   
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| path | <code>\*</code> |  | the root path |
+| fileName | <code>string</code> |  | the relative file name |
+| json | <code>boolean</code> | <code>false</code> | if true the file is converted to a JS Object using JSON.parse |
+| required | <code>boolean</code> | <code>false</code> | whether the file is required |
+
+<a name="module_cicero-core.TemplateLoader.loadFilesContents"></a>
+
+#### *TemplateLoader.loadFilesContents(path, regex) ⇒ <code>Promise.&lt;Array.&lt;object&gt;&gt;</code>*
+Loads the contents of all files under a path that match a regex
+Note that any directories called node_modules are ignored.
+
+**Kind**: static method of [<code>TemplateLoader</code>](#module_cicero-core.TemplateLoader)  
+**Returns**: <code>Promise.&lt;Array.&lt;object&gt;&gt;</code> - a promise to an array of objects with the name and contents of the files  
+**Internal**:   
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>\*</code> | the file path |
+| regex | <code>RegExp</code> | the regex to match files |
+
+<a name="module_cicero-core.TemplateLoader.fromArchive"></a>
+
+#### *TemplateLoader.fromArchive(Template, buffer) ⇒ <code>Promise.&lt;Template&gt;</code>*
+Create a template from an archive.
+
+**Kind**: static method of [<code>TemplateLoader</code>](#module_cicero-core.TemplateLoader)  
+**Returns**: <code>Promise.&lt;Template&gt;</code> - a Promise to the template  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Template | <code>\*</code> | the type to construct |
+| buffer | <code>Buffer</code> | the buffer to a Cicero Template Archive (cta) file |
+
+<a name="module_cicero-core.TemplateLoader.fromUrl"></a>
+
+#### *TemplateLoader.fromUrl(Template, url, options) ⇒ <code>Promise</code>*
+Create a template from an URL.
+
+**Kind**: static method of [<code>TemplateLoader</code>](#module_cicero-core.TemplateLoader)  
+**Returns**: <code>Promise</code> - a Promise to the template  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Template | <code>\*</code> | the type to construct |
+| url | <code>String</code> | the URL to a Cicero Template Archive (cta) file |
+| options | <code>object</code> | additional options |
+
+<a name="module_cicero-core.TemplateLoader.fromDirectory"></a>
+
+#### *TemplateLoader.fromDirectory(Template, path, [options]) ⇒ <code>Promise.&lt;Template&gt;</code>*
+Builds a Template from the contents of a directory.
+The directory must include a package.json in the root (used to specify
+the name, version and description of the template).
+
+**Kind**: static method of [<code>TemplateLoader</code>](#module_cicero-core.TemplateLoader)  
+**Returns**: <code>Promise.&lt;Template&gt;</code> - a Promise to the instantiated template  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| Template | <code>\*</code> | the type to construct |
+| path | <code>String</code> | to a local directory |
+| [options] | <code>Object</code> | an optional set of options to configure the instance. |
+
+<a name="module_cicero-core.TemplateSaver"></a>
+
+### cicero-core.TemplateSaver
+A utility to persist templates to data sources.
+
+**Kind**: static class of [<code>cicero-core</code>](#module_cicero-core)  
+**Internal**:   
+<a name="module_cicero-core.TemplateSaver.toArchive"></a>
+
+#### TemplateSaver.toArchive(template, [language], [options]) ⇒ <code>Promise.&lt;Buffer&gt;</code>
+Persists this template to a Cicero Template Archive (cta) file.
+
+**Kind**: static method of [<code>TemplateSaver</code>](#module_cicero-core.TemplateSaver)  
+**Returns**: <code>Promise.&lt;Buffer&gt;</code> - the zlib buffer  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| template | <code>Template</code> | the template to persist |
+| [language] | <code>string</code> | target language for the archive (should be 'ergo') |
+| [options] | <code>Object</code> | JSZip options |
+
