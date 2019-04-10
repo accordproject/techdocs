@@ -9,11 +9,31 @@ title: JavaScript API
 <dt><a href="#Commands">Commands</a></dt>
 <dd><p>Utility class that implements the commands exposed by the Ergo CLI.</p>
 </dd>
-<dt><a href="#Ergo">Ergo</a></dt>
-<dd><p>Utility class that implements the internals for Ergo.</p>
+</dl>
+
+## Functions
+
+<dl>
+<dt><a href="#getJson">getJson(input)</a> ⇒ <code>object</code></dt>
+<dd><p>Load a file or JSON string</p>
 </dd>
-<dt><a href="#ErgoEngine">ErgoEngine</a></dt>
-<dd><p>Utility class that implements the internals for Ergo.</p>
+<dt><a href="#setCurrentTime">setCurrentTime(currentTime)</a> ⇒ <code>object</code></dt>
+<dd><p>Ensures there is a proper current time</p>
+</dd>
+<dt><a href="#init">init(engine, templateLogic, contractJson, currentTime)</a> ⇒ <code>object</code></dt>
+<dd><p>Invoke Ergo contract initialization</p>
+</dd>
+<dt><a href="#execute">execute(engine, templateLogic, contractJson, stateJson, currentTime, requestJson)</a> ⇒ <code>object</code></dt>
+<dd><p>Execute the Ergo contract with a request</p>
+</dd>
+<dt><a href="#resolveRootDir">resolveRootDir(parameters)</a> ⇒ <code>string</code></dt>
+<dd><p>Resolve the root directory</p>
+</dd>
+<dt><a href="#compareComponent">compareComponent(expected, actual)</a></dt>
+<dd><p>Compare actual and expected result components</p>
+</dd>
+<dt><a href="#compareSuccess">compareSuccess(expected, actual)</a></dt>
+<dd><p>Compare actual result and expected result</p>
 </dd>
 </dl>
 
@@ -25,14 +45,16 @@ Utility class that implements the commands exposed by the Ergo CLI.
 **Kind**: global class  
 
 * [Commands](#Commands)
-    * [.execute(ergoPaths, ctoPaths, contractPath, requestsPath, statePath, contractName)](#Commands.execute) ⇒ <code>object</code>
+    * [.execute(ergoPaths, ctoPaths, contractName, contractInput, stateInput, currentTime, requestsInput)](#Commands.execute) ⇒ <code>object</code>
+    * [.invoke(ergoPaths, ctoPaths, contractName, clauseName, contractInput, stateInput, currentTime, paramsInput)](#Commands.invoke) ⇒ <code>object</code>
+    * [.init(ergoPaths, ctoPaths, contractName, contractInput, currentTime, paramsInput)](#Commands.init) ⇒ <code>object</code>
     * [.parseCTOtoFileSync(ctoPath)](#Commands.parseCTOtoFileSync) ⇒ <code>string</code>
     * [.parseCTOtoFile(ctoPath)](#Commands.parseCTOtoFile) ⇒ <code>string</code>
 
 <a name="Commands.execute"></a>
 
-### Commands.execute(ergoPaths, ctoPaths, contractPath, requestsPath, statePath, contractName) ⇒ <code>object</code>
-Execute Ergo contract
+### Commands.execute(ergoPaths, ctoPaths, contractName, contractInput, stateInput, currentTime, requestsInput) ⇒ <code>object</code>
+Execute an Ergo contract with a request
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
 **Returns**: <code>object</code> - Promise to the result of execution  
@@ -41,10 +63,47 @@ Execute Ergo contract
 | --- | --- | --- |
 | ergoPaths | <code>Array.&lt;string&gt;</code> | paths to the Ergo modules |
 | ctoPaths | <code>Array.&lt;string&gt;</code> | paths to CTO models |
-| contractPath | <code>string</code> | path to the contract data in JSON |
-| requestsPath | <code>Array.&lt;string&gt;</code> | path to the request transaction in JSON |
-| statePath | <code>string</code> | path to the state in JSON |
-| contractName | <code>string</code> | of the contract to execute |
+| contractName | <code>string</code> | of the contract |
+| contractInput | <code>string</code> | the contract data |
+| stateInput | <code>string</code> | the contract state |
+| currentTime | <code>string</code> | the definition of 'now' |
+| requestsInput | <code>Array.&lt;string&gt;</code> | the requests |
+
+<a name="Commands.invoke"></a>
+
+### Commands.invoke(ergoPaths, ctoPaths, contractName, clauseName, contractInput, stateInput, currentTime, paramsInput) ⇒ <code>object</code>
+Invoke an Ergo contract's clause
+
+**Kind**: static method of [<code>Commands</code>](#Commands)  
+**Returns**: <code>object</code> - Promise to the result of invocation  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ergoPaths | <code>Array.&lt;string&gt;</code> | paths to the Ergo modules |
+| ctoPaths | <code>Array.&lt;string&gt;</code> | paths to CTO models |
+| contractName | <code>string</code> | the contract |
+| clauseName | <code>string</code> | the name of the clause to invoke |
+| contractInput | <code>string</code> | the contract data |
+| stateInput | <code>string</code> | the contract state |
+| currentTime | <code>string</code> | the definition of 'now' |
+| paramsInput | <code>object</code> | the parameters for the clause |
+
+<a name="Commands.init"></a>
+
+### Commands.init(ergoPaths, ctoPaths, contractName, contractInput, currentTime, paramsInput) ⇒ <code>object</code>
+Invoke init for an Ergo contract
+
+**Kind**: static method of [<code>Commands</code>](#Commands)  
+**Returns**: <code>object</code> - Promise to the result of execution  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ergoPaths | <code>Array.&lt;string&gt;</code> | paths to the Ergo modules |
+| ctoPaths | <code>Array.&lt;string&gt;</code> | paths to CTO models |
+| contractName | <code>string</code> | the contract name |
+| contractInput | <code>string</code> | the contract data |
+| currentTime | <code>string</code> | the definition of 'now' |
+| paramsInput | <code>object</code> | the parameters for the clause |
 
 <a name="Commands.parseCTOtoFileSync"></a>
 
@@ -70,190 +129,95 @@ Parse CTO to JSON File
 | --- | --- | --- |
 | ctoPath | <code>string</code> | path to CTO model file |
 
-<a name="Ergo"></a>
+<a name="getJson"></a>
 
-## Ergo
-Utility class that implements the internals for Ergo.
+## getJson(input) ⇒ <code>object</code>
+Load a file or JSON string
 
-**Kind**: global class  
-
-* [Ergo](#Ergo)
-    * [.parseCTOtoJSON(ctoContent)](#Ergo.parseCTOtoJSON) ⇒ <code>object</code>
-    * [.contractCallName(contractName)](#Ergo.contractCallName) ⇒ <code>string</code>
-    * [.contractCallNamePromise(contractName)](#Ergo.contractCallNamePromise) ⇒ <code>string</code>
-    * [.compileToJavaScript(ergoSources, ctoSources, target, link)](#Ergo.compileToJavaScript) ⇒ <code>string</code>
-    * [.compile(ergoSources, ctoSources, target, link)](#Ergo.compile) ⇒ <code>object</code>
-    * [.ergoErrorToString(error)](#Ergo.ergoErrorToString) ⇒ <code>string</code>
-    * [.ergoVerboseErrorToString(error)](#Ergo.ergoVerboseErrorToString) ⇒ <code>string</code>
-
-<a name="Ergo.parseCTOtoJSON"></a>
-
-### Ergo.parseCTOtoJSON(ctoContent) ⇒ <code>object</code>
-Parse CTO to JSON
-
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>object</code> - The parsed CTO model syntax tree in JSON  
+**Kind**: global function  
+**Returns**: <code>object</code> - JSON object  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ctoContent | <code>string</code> | for CTO model |
+| input | <code>object</code> | either a file name or a json string |
 
-<a name="Ergo.contractCallName"></a>
+<a name="setCurrentTime"></a>
 
-### Ergo.contractCallName(contractName) ⇒ <code>string</code>
-Contract call name
+## setCurrentTime(currentTime) ⇒ <code>object</code>
+Ensures there is a proper current time
 
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>string</code> - name of the JavaScript class  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| contractName | <code>string</code> | name of the contract |
-
-<a name="Ergo.contractCallNamePromise"></a>
-
-### Ergo.contractCallNamePromise(contractName) ⇒ <code>string</code>
-Contract call name promise
-
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>string</code> - a promise to the name of the compiled JavaScript class  
+**Kind**: global function  
+**Returns**: <code>object</code> - if valid, the moment object for the current time  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| contractName | <code>string</code> | name of the contract |
+| currentTime | <code>string</code> | the definition of 'now' |
 
-<a name="Ergo.compileToJavaScript"></a>
+<a name="init"></a>
 
-### Ergo.compileToJavaScript(ergoSources, ctoSources, target, link) ⇒ <code>string</code>
-Compile Ergo to JavaScript
+## init(engine, templateLogic, contractJson, currentTime) ⇒ <code>object</code>
+Invoke Ergo contract initialization
 
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>string</code> - The compiled JavaScript code  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| ergoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | Ergo modules |
-| ctoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | CTO models |
-| target | <code>string</code> | language (es5|es6|cicero|java) |
-| link | <code>boolean</code> | whether to link the javascript runtime |
-
-<a name="Ergo.compile"></a>
-
-### Ergo.compile(ergoSources, ctoSources, target, link) ⇒ <code>object</code>
-Compile Ergo
-
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>object</code> - Promise to the compiled JavaScript code  
+**Kind**: global function  
+**Returns**: <code>object</code> - Promise to the initial state of the contract  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ergoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | Ergo modules |
-| ctoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | CTO models |
-| target | <code>string</code> | language (es5|es6|cicero|java) |
-| link | <code>boolean</code> | whether to link the javascript runtime |
+| engine | <code>object</code> | the execution engine |
+| templateLogic | <code>object</code> | the Template Logic |
+| contractJson | <code>object</code> | contract data in JSON |
+| currentTime | <code>string</code> | the definition of 'now' |
 
-<a name="Ergo.ergoErrorToString"></a>
+<a name="execute"></a>
 
-### Ergo.ergoErrorToString(error) ⇒ <code>string</code>
-Error message
+## execute(engine, templateLogic, contractJson, stateJson, currentTime, requestJson) ⇒ <code>object</code>
+Execute the Ergo contract with a request
 
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>string</code> - error message  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| error | <code>object</code> | object returned by Ergo compiler |
-
-<a name="Ergo.ergoVerboseErrorToString"></a>
-
-### Ergo.ergoVerboseErrorToString(error) ⇒ <code>string</code>
-Error message (verbose)
-
-**Kind**: static method of [<code>Ergo</code>](#Ergo)  
-**Returns**: <code>string</code> - verbose error message  
+**Kind**: global function  
+**Returns**: <code>object</code> - Promise to the response  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| error | <code>object</code> | object returned by Ergo compiler |
+| engine | <code>object</code> | the execution engine |
+| templateLogic | <code>object</code> | the Template Logic |
+| contractJson | <code>object</code> | contract data in JSON |
+| stateJson | <code>object</code> | state data in JSON |
+| currentTime | <code>string</code> | the definition of 'now' |
+| requestJson | <code>object</code> | state data in JSON |
 
-<a name="ErgoEngine"></a>
+<a name="resolveRootDir"></a>
 
-## ErgoEngine
-Utility class that implements the internals for Ergo.
+## resolveRootDir(parameters) ⇒ <code>string</code>
+Resolve the root directory
 
-**Kind**: global class  
-
-* [ErgoEngine](#ErgoEngine)
-    * [.executeErgoCode(ergoCode, codeKind, contractJson, requestJson, stateJson, contractName)](#ErgoEngine.executeErgoCode) ⇒ <code>object</code>
-    * [.initErgoCode(ergoCode, codeKind, contractJson, requestJson, contractName)](#ErgoEngine.initErgoCode) ⇒ <code>object</code>
-    * [.execute(ergoSources, ctoSources, codeKind, contractJson, requestJson, stateJson, contractName)](#ErgoEngine.execute) ⇒ <code>object</code>
-    * [.init(ergoSources, ctoSources, codeKind, contractJson, requestJson, contractName)](#ErgoEngine.init) ⇒ <code>object</code>
-
-<a name="ErgoEngine.executeErgoCode"></a>
-
-### ErgoEngine.executeErgoCode(ergoCode, codeKind, contractJson, requestJson, stateJson, contractName) ⇒ <code>object</code>
-Execute Ergo code compiled to ES6
-
-**Kind**: static method of [<code>ErgoEngine</code>](#ErgoEngine)  
-**Returns**: <code>object</code> - Promise to the result of execution  
+**Kind**: global function  
+**Returns**: <code>string</code> - root directory used to resolve file names  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ergoCode | <code>string</code> | JavaScript code for ergo logic |
-| codeKind | <code>string</code> | either 'es6' or 'es5' |
-| contractJson | <code>object</code> | the contract data in JSON |
-| requestJson | <code>object</code> | the request transaction in JSON |
-| stateJson | <code>object</code> | the state in JSON |
-| contractName | <code>string</code> | of the contract to execute |
+| parameters | <code>string</code> | Cucumber's World parameters |
 
-<a name="ErgoEngine.initErgoCode"></a>
+<a name="compareComponent"></a>
 
-### ErgoEngine.initErgoCode(ergoCode, codeKind, contractJson, requestJson, contractName) ⇒ <code>object</code>
-Initialize state
+## compareComponent(expected, actual)
+Compare actual and expected result components
 
-**Kind**: static method of [<code>ErgoEngine</code>](#ErgoEngine)  
-**Returns**: <code>object</code> - Promise to the result of initialization  
+**Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ergoCode | <code>string</code> | JavaScript code for ergo logic |
-| codeKind | <code>string</code> | either 'es6' or 'es5' |
-| contractJson | <code>object</code> | the contract data in JSON |
-| requestJson | <code>object</code> | the request transaction in JSON |
-| contractName | <code>string</code> | of the contract to initialize |
+| expected | <code>string</code> | the expected component as specified in the test workload |
+| actual | <code>string</code> | the actual component as returned by the engine |
 
-<a name="ErgoEngine.execute"></a>
+<a name="compareSuccess"></a>
 
-### ErgoEngine.execute(ergoSources, ctoSources, codeKind, contractJson, requestJson, stateJson, contractName) ⇒ <code>object</code>
-Execute Ergo (JavaScript)
+## compareSuccess(expected, actual)
+Compare actual result and expected result
 
-**Kind**: static method of [<code>ErgoEngine</code>](#ErgoEngine)  
-**Returns**: <code>object</code> - Promise to the result of execution  
+**Kind**: global function  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ergoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | Ergo modules |
-| ctoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | CTO models |
-| codeKind | <code>string</code> | either 'es6' or 'es5' |
-| contractJson | <code>object</code> | the contract data in JSON |
-| requestJson | <code>object</code> | the request transaction in JSON |
-| stateJson | <code>object</code> | the state in JSON |
-| contractName | <code>string</code> | of the contract to execute |
-
-<a name="ErgoEngine.init"></a>
-
-### ErgoEngine.init(ergoSources, ctoSources, codeKind, contractJson, requestJson, contractName) ⇒ <code>object</code>
-Initialize Ergo contract state (JavaScript)
-
-**Kind**: static method of [<code>ErgoEngine</code>](#ErgoEngine)  
-**Returns**: <code>object</code> - Promise to the result of execution  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| ergoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | Ergo modules |
-| ctoSources | <code>Array.&lt;{name:string, content:string}&gt;</code> | CTO models |
-| codeKind | <code>string</code> | either 'es6' or 'es5' |
-| contractJson | <code>object</code> | the contract data in JSON |
-| requestJson | <code>object</code> | the request transaction in JSON |
-| contractName | <code>string</code> | of the contract to execute |
+| expected | <code>string</code> | the expected successful result as specified in the test workload |
+| actual | <code>string</code> | the successful result as returned by the engine |
 

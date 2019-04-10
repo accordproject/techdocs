@@ -46,8 +46,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'accordproject', label: 'Docs'},
-    { href: "https://studio.accordproject.org", label: "Try"},
+    {doc: 'accordproject', label: 'Documentation'},
+    { href: "https://studio.accordproject.org", label: "Try Online!"},
     { href: "https://github.com/accordproject", label: "GitHub" },
     { search: true },
   ],
@@ -62,8 +62,8 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: '#008B8B',
-    secondaryColor: '#008B8B',
+    primaryColor: '#0d7e84',
+    secondaryColor: '#085256',
   },
 
   /* custom fonts for website */
@@ -85,7 +85,7 @@ const siteConfig = {
     ' Accord Project, LLC.',
 
   highlight: {
-    theme: 'atom-one-light',
+    theme: 'obsidian',
     hljs: function(hljs) {
       hljs.registerLanguage('ergo', function(hljs) {
         var ERGO_KEYWORDS = {
@@ -175,6 +175,9 @@ const siteConfig = {
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
+
+  // Collapsible categories in the side navigation.
+  docsSideNavCollapsible: true,
 
   /* Open Graph and Twitter card images */
   ogImage: 'img/docusaurus.png',
