@@ -20,13 +20,13 @@ The Open Source [Cicero project](https://github.com/accordproject/cicero) define
 ![Template Grammar](/docs/assets/grammar.png)
 
 All of the Accord Project technology is being developed and maintained as open source:
-- [Cicero](cicero.md): reusable executable templates for legal contracts and clauses
-- [Ergo](ergo.md): domain specific language to express the executable logic of legal templates
-- [Template Studio](accordproject-studio.md) : a Web-based editor for legal templates
+- [Cicero](https://github.com/accordproject/cicero): reusable executable templates for legal contracts and clauses
+- [Ergo](https://github.com/accordproject/ergo): domain specific language to express the executable logic of legal templates
+- [Template Studio](https://studio.accordproject.org/) : a Web-based editor for legal templates
 
 In addition, 
-- [Model Repository](accordproject-models.md) : a repository of open source data models for use in Cicero templates and with Ergo logic
-- [Template Library](accordproject-templates.md) : a library of open source Cicero templates
+- [Model Repository](https://models.accordproject.org/) : a repository of open source data models for use in Cicero templates and with Ergo logic
+- [Template Library](https://templates.accordproject.org/) : a library of open source Cicero templates
 
 All these software packages are under active development and we encourage companies and individuals to contribute requirements, documentation, issues and code. Join the Accord Project Technology Working Group <a href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack channel</a> to get involved!
 

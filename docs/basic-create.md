@@ -1,5 +1,5 @@
 ---
-id: cicero-tutorial-2
+id: basic-create
 title: Creating a New Template
 ---
 
