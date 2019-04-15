@@ -25,3 +25,13 @@
   background: url("/img/github-brands.svg");
 }
 
+footer .copyright {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}
+footer .notlegal {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
+}

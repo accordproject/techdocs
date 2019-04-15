@@ -52,7 +52,7 @@ Once a template has been created (Steps 1 to 4), it can be used to _instantiate_
 
 ![Execution Context](assets/execution_context.png)
 
-[Cicero](cicero.md), which implements the Accord Project specification, includes a Node.js VM based execution engine for contracts created from Accord Project templates. The engine routes incoming requests to template functions, performs data validation, executes the functions within a sandboxed environment, and then validates the response. It can also update the contract state and emit events and/or contract obligations back to the caller.
+[Cicero](cicero), which implements the Accord Project specification, includes a Node.js VM based execution engine for contracts created from Accord Project templates. The engine routes incoming requests to template functions, performs data validation, executes the functions within a sandboxed environment, and then validates the response. It can also update the contract state and emit events and/or contract obligations back to the caller.
 
 ## Late Delivery and Penalty
 
@@ -189,9 +189,9 @@ Note that any types within the model may have an associated template grammar fil
 The last part of the puzzle for the template is to capture the logic of the template in a form that a computer can execute. No, computers cannot (yet) execute the natural language text, with all its interesting legal ambiguities!
 Accord Project is extensible and supports pluggable mechanisms to capture the template logic. The accord-engine package acts as a shim, bootstrapping a kernel for a given template logic language.
 
-Accord Project ships with the ability to execute template logic expressed using the [Ergo domain specific language](ergo.md).
+Accord Project ships with the ability to execute template logic expressed using the [Ergo domain specific language](ergo-lang).
 
-The example below illustrates the [Ergo](ergo.md) logic for the late delivery and penalty clause.
+The example below illustrates the [Ergo](ergo-lang) logic for the late delivery and penalty clause.
 
 ```
 contract LateDeliveryAndPenalty over LateDeliveryAndPenaltyContract {

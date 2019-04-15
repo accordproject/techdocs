@@ -189,9 +189,9 @@ Note that any types within the model may have an associated template grammar fil
 The last part of the puzzle for the template is to capture the logic of the template in a form that a computer can execute. No, computers cannot (yet) execute the natural language text, with all its interesting legal ambiguities!
 Accord Project is extensible and supports pluggable mechanisms to capture the template logic. The accord-engine package acts as a shim, bootstrapping a kernel for a given template logic language.
 
-Accord Project ships with the ability to execute template logic expressed using the [Ergo domain specific language](ergo.md).
+Accord Project ships with the ability to execute template logic expressed using the [Ergo domain specific language](ergo-lang.md).
 
-The example below illustrates the [Ergo](ergo.md) logic for the late delivery and penalty clause.
+The example below illustrates the [Ergo](ergo-lang.md) logic for the late delivery and penalty clause.
 
 ```
 contract LateDeliveryAndPenalty over LateDeliveryAndPenaltyContract {

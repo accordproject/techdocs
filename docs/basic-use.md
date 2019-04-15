@@ -1,6 +1,6 @@
 ---
 id: basic-use
-title: How to use a Template
+title: How to Use a Template
 ---
 
 The simplest way to work with an Accord Project template is through the Cicero command line interface (CLI). In this tutorial, we explain how to download an existing Accord Project template, create an instance of that template and how to execute the contract logic.
@@ -17,123 +17,125 @@ In order to access the Cicero command line interface (CLI), first install the `@
 
 You can download a single clause or contract template from the [Accord Project Template Library](https://templates.accordproject.org) as an archive (`.cta`) file.
 
+If you click on the Template Library link, you should see a Web Page which looks as follows:
+
+![Basic-Use-1](/docs/assets/basic/use1.png)
+
+Scrolling down that page, you can see the index for the open-source templates along with their version, and whether they are a Clause or Contract template.
+
+Click on the link to the `helloworld` template. You should be taken to a page which looks as follows:
+
+![Basic-Use-2](/docs/assets/basic/use2.png)
+
+Then click on the `Download Archive` button under the description for the template (highlighted in the red box in the figure). This should download the latest template archive for the `helloworld` template.
+
+Cicero archives are files with a `.cta` extension, which includes all the different components for the template (the natural language, model and logic).
+
 > Note that the version of `cicero-cli` needs to match the Cicero version that is required by a template.
 > * You can check the version of your CLI with `cicero --version`. 
 > * You can choose a different version of a template with the *Versions* dropdown in the [Accord Project Template Library](https://templates.accordproject.org).
 > * Otherwise, install a specific version of the cli, for example for v0.8, use `npm i -g @accordproject/cicero-cli@0.8`.  
 
-If you have `git` installed you can `git clone` the template library to download all the templates, or you can use the "Download" button inside GitHub:
+## Parse a Valid Clause Text
 
-```bash
-git clone https://github.com/accordproject/cicero-template-library
-```
-    
-## Parsing a Contract Text
-
-Using your terminal `cd` into the directory that contains the template you would like to test. In the example below we use the `helloworld` template.
-
-Use the `cicero parse` command to load a template from a directory on disk and then use
-it to parse input text, echoing the result of parsing. By default the file `sample.txt` is parsed.
-If the input text is valid the parsing result will be a JSON serialized instance of the Template Model:
-
-For the template in `grammar/template.tem`:
-
-```md
-Name of the person to greet: [{name}]. Thank you!
-```
-
-and the sample clause in `sample.txt`:
+Using your terminal `cd` into the directory that contains the template archive you just downloaded, then create a sample clause text `sample.txt` which contains the following text:
 
 ```text
-Name of the person to greet: "Dan". Thank you!
+Name of the person to greet: "Fred Blogs".
+Thank you!
 ```
 
-parsing using the command line:
+The  use the `cicero parse` command in your terminal to load the template and parse your sample clause text. This should be echoing the result of parsing back to your terminal.
 
 ```bash
-cd cicero-template-library/src/helloworld
-cicero parse
+cicero parse --template helloworld@0.10.1.cta --sample sample.txt 
 ```
 
-should print this output:
+> Notes:
+> * make sure that the version number in that command matches the one for the archive you have downloaded.
+> * `cicero parse` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
+
+This should print this output:
 
 ```json
 {
   "$class": "org.accordproject.helloworld.HelloWorldClause",
-  "clauseId": "234aedae-bc28-4894-b85a-d370793fee48",
+  "clauseId": "aa3b9db9-f25f-41f4-88a4-64baba728bfe",
   "name": "Fred Blogs"
 }
 ```
 
-> Note that `cicero parse` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
+## Parse a Non-Valid Clause Text
 
-Or, attempting to parse invalid data will result in line and column information for the syntax
-error.
+If you attempt to parse invalid data, this same command should return with line and column information for the syntax error.
 
-Edit `sample.txt` to add text that is not in the grammar file (template.tem) for the template:
+Edit your `sample.txt` file to add text that is not consistent with the template:
 
-Modified text:
 ```text
-FUBAR Name of the person to greet: "Dan". Thank you!
+FUBAR Name of the person to greet: "Fred Blogs".
+Thank you!
 ```
 
-Rerun `cicero parse`. The output should now be:
-
+Rerun `cicero parse --template helloworld@0.10.1.cta --sample sample.txt`. The output should now be:
 
 ```text
-23:08:46 - error: invalid syntax at line 1 col 1:
+18:15:22 - error: invalid syntax at line 1 col 1:
 
   FUBAR Name of the person to greet: "Fred Blogs".
   ^
 Unexpected "F"
 ```
 
-## Executing the Clause
+## Execute the Clause
 
-Use the `cicero execute` command to load a template from a directory on disk,
-instantiate a clause based on input text (defaults to `sample.txt`), and then invoke the clause using an
-incoming JSON payload (defaults to `request.json`).
+Use the `cicero execute` command to parse a clause text based (your `sample.txt`) *and* execute the clause logic using an incoming request in JSON format. To do so you need to create two additional files.
 
-request.json::
+First, create a `state.json` file which contains:
 
 ```json
 {
-    "$class": "org.accordproject.helloworld.MyRequest",
-    "input": "Accord Project"
+    "$class": "org.accordproject.cicero.contract.AccordContractState",
+    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
 }
 ```
 
-Commands:
+This is the initial state for your contract.
+
+Then, create a `request.json` file which contains:
+
+```json
+{
+  "$class": "org.accordproject.helloworld.MyRequest",
+  "input": "Accord Project"
+}
+```
+
+This is the request which you will send to trigger the execution of your contract.
+
+Then use the `cicero execute` command in your terminal to load the template, parse your sample clause text *and* execute the request. This should be echoing the result of execution back to your terminal.
 
 ```bash
-cd cicero-template-library/src/helloworld
-cicero execute
+cicero execute --template helloworld@0.10.1.cta --sample sample.txt --state state.json --request request.json
 ```
 
 > Note that `cicero execute` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
 
-The results of execution (a JSON serialized object) are displayed. They include:
-
-* Details of the clause executed (name, version, SHA256 hash of clause data)
-* The incoming request object
-* The output response object
-* Output state
-* Emitted events
-
-Example:
+This should print this output:
 
 ```json
 {
-  "clause": "helloworld@0.6.0-20ede4c859c12480fd47781d6fafbfac9879b9f9b650f7d24bf2d385d167753e",
+  "clause": "helloworld@0.10.1-d4aab9b009796f56c45872149c1f97a164856b13056f3d503c76d5e519d9f097",
   "request": {
     "$class": "org.accordproject.helloworld.MyRequest",
-    "input": "Accord Project"
+    "input": "Accord Project",
+    "transactionId": "952515b8-eb87-43d7-a582-4afb30eafc6b",
+    "timestamp": "2019-04-15T22:44:14.747Z"
   },
   "response": {
     "$class": "org.accordproject.helloworld.MyResponse",
     "output": "Hello Fred Blogs Accord Project",
-    "transactionId": "1e1eb427-fb7a-4a94-901b-590d140ed909",
-    "timestamp": "2018-09-12T03:10:05.660Z"
+    "transactionId": "b9c1b74b-db46-4213-a4d0-fbc43f9c753b",
+    "timestamp": "2019-04-15T22:44:14.759Z"
   },
   "state": {
     "$class": "org.accordproject.cicero.contract.AccordContractState",
@@ -143,9 +145,23 @@ Example:
 }
 ```
 
-Note that in the response data from the template has been combined with data from the request.
+The results of execution displayed back on your terminal is in JSON format, including the following information:
 
-## Other Execution Platforms
+* Details of the `clause` executed (name, version, SHA256 hash of clause data)
+* The incoming `request` object (the same request from your `request.json` file)
+* The output `response` object
+* The output `state` (unchanged in this example)
+* An array of `emit`ted events (empty in this example)
+
+## Try Other Examples
+
+That's it! You have successfully parsed and executed your first Accord Project Clause using the `helloworld` template.
+
+Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the `latedeliveryandpenalty` clause is in the red box in the following image:
+
+![Basic-Use-3](/docs/assets/basic/use3.png)
+
+## To Execute on Different Platforms
 
 Templates may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](cicero-tutorial-nodejs), you can find information on how to execute a template in a standalone Node.js process, invoked as RESTful services, or deployed as chaincode in Hyperledger Fabric.
 
