@@ -3,7 +3,7 @@ id: accordproject-installation
 title: Installation
 ---
 
-To start working on your own Accord Project templates, you should install the Cicero command-line tools. This will let you author, parse, and execute your templates.
+To start working on your own Accord Project templates, you should install the Cicero command-line tools. This will let you author, parse, and execute Accord Project templates.
 
 ## Prerequisites
 
@@ -13,9 +13,7 @@ Before you can install Cicero, you must first obtain and configure the following
   development web server, run tests, and generate distributable files. Depending on your system,
   you can install Node either from source or as a pre-packaged bundle.
 
-  We recommend using [nvm](https://github.com/creationix/nvm) (or
-  [nvm-windows](https://github.com/coreybutler/nvm-windows))
-  to manage and install Node.js, which makes it easy to change the version of Node.js per project.
+>  We recommend using [nvm](https://github.com/creationix/nvm) (or [nvm-windows](https://github.com/coreybutler/nvm-windows)) to manage and install Node.js, which makes it easy to change the version of Node.js per project.
 
 ## Installing Cicero
 

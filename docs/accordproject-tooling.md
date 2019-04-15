@@ -8,15 +8,15 @@ Several tools are available in order to help you develop your own smart legal te
 ## Visual Studio Code Extension
 
 An extension is available for the popular open-source code editor [Visual Studio Code](https://code.visualstudio.com/). 
-This highlights syntax and parsing errors for Ergo and Template Grammar Files. Syntax highlighting for Composer Concerto models is available in a [separate plugin](https://marketplace.visualstudio.com/items?itemName=HyperledgerComposer.composer-support-client).
+This provides syntax highlighting, and error reporting when working on source Ergo logic and on Cicero templates. Syntax highlighting for Composer Concerto models is available in a [separate plugin](https://marketplace.visualstudio.com/items?itemName=HyperledgerComposer.composer-support-client).
 
-Install the plugin from the [Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
+Install the Accord Project extension by visiting the [Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
 
 ![VSCode plugin](/img/ergo-vscode.png)
 
 ## Syntax highlighting
 
-Languages modes in a couple of other editors offer syntax highlighting for Ergo.
+Languages modes, which provide syntax highlighting for Ergo, also exist for a couple of other editors.
 
 ### Emacs
 

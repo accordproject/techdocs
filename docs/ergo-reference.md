@@ -104,7 +104,7 @@ The value of message after running this code will be `"Low Price"`.
 
 ### Related
 
--   [Match expression](ergo-ref-match-expressions.md) - where many
+-   [Match expression](ergo-reference.md#match-expression) - where many
     alternative conditions check the same variable
 
 ## Match Expressions
