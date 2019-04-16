@@ -1,6 +1,7 @@
 ---
-id: basic-templates
+id: version-0.12.0-basic-templates
 title: Take a Look Inside
+original_id: basic-templates
 ---
 
 Now that you have executed an existing template in archive form, let us look inside that archive to understand the structure of that template.

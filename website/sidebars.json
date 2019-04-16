@@ -9,7 +9,7 @@
             {
                 "type": "subcategory",
                 "label": "Cicero Reference",
-                "ids": ["cicero-cli", "cicero-api", "cicero-tests"]
+                "ids": ["cicero-markup", "cicero-cli", "cicero-api", "cicero-tests"]
             },
             {
                 "type": "subcategory",
