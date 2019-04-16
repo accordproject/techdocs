@@ -12,7 +12,7 @@
         "title": "Standard Models"
       },
       "accordproject-resources": {
-        "title": "Resources"
+        "title": "Learning Resources"
       },
       "accordproject-studio": {
         "title": "Template Studio"
@@ -32,9 +32,6 @@
       "advanced-nodejs": {
         "title": "Working with Node.js"
       },
-      "api": {
-        "title": "API Home"
-      },
       "basic-create": {
         "title": "Creating a New Template"
       },
@@ -52,6 +49,9 @@
       },
       "cicero-cli": {
         "title": "Cicero CLI"
+      },
+      "cicero-markup": {
+        "title": "Markup Reference"
       },
       "cicero-tests": {
         "title": "Cicero Tests"
@@ -181,6 +181,117 @@
       },
       "version-0.10.1/version-0.10.1-ergo-lang": {
         "title": "Language Guide"
+      },
+      "version-0.12.0/version-0.12.0-accordproject-installation": {
+        "title": "Installation"
+      },
+      "version-0.12.0/version-0.12.0-accordproject-models": {
+        "title": "Standard Models"
+      },
+      "version-0.12.0/version-0.12.0-accordproject-resources": {
+        "title": "Learning Resources"
+      },
+      "version-0.12.0/version-0.12.0-accordproject-studio": {
+        "title": "Template Studio"
+      },
+      "version-0.12.0/version-0.12.0-accordproject-templates": {
+        "title": "Open Source Templates"
+      },
+      "version-0.12.0/version-0.12.0-accordproject-tooling": {
+        "title": "Developers Tools"
+      },
+      "version-0.12.0/version-0.12.0-accordproject": {
+        "title": "Getting Started with Accord Project"
+      },
+      "version-0.12.0/version-0.12.0-advanced-hyperledger": {
+        "title": "Deploying on HyplerLedger Fabric"
+      },
+      "version-0.12.0/version-0.12.0-advanced-nodejs": {
+        "title": "Working with Node.js"
+      },
+      "version-0.12.0/version-0.12.0-basic-create": {
+        "title": "Creating a New Template"
+      },
+      "version-0.12.0/version-0.12.0-basic-library": {
+        "title": "Publishing a Template"
+      },
+      "version-0.12.0/version-0.12.0-basic-templates": {
+        "title": "Take a Look Inside"
+      },
+      "version-0.12.0/version-0.12.0-basic-use": {
+        "title": "How to Use a Template"
+      },
+      "version-0.12.0/version-0.12.0-cicero-api": {
+        "title": "JavaScript API"
+      },
+      "version-0.12.0/version-0.12.0-cicero-markup": {
+        "title": "Markup Reference"
+      },
+      "version-0.12.0/version-0.12.0-cicero-tests": {
+        "title": "Cicero Tests"
+      },
+      "version-0.12.0/version-0.12.0-ergo-api": {
+        "title": "JavaScript API"
+      },
+      "version-0.12.0/version-0.12.0-ergo-reference": {
+        "title": "Language Reference"
+      },
+      "version-0.12.0/version-0.12.0-ergo-stdlib": {
+        "title": "Standard Libraries"
+      },
+      "version-0.12.0/version-0.12.0-ergo-tutorial": {
+        "title": "Ergo: A Tutorial"
+      },
+      "version-0.12.0/version-0.12.0-example-eatapple": {
+        "title": "A Healthy Clause"
+      },
+      "version-0.12.0/version-0.12.0-logic-advanced-expr": {
+        "title": "Advanced Expressions"
+      },
+      "version-0.12.0/version-0.12.0-logic-complex-type": {
+        "title": "Complex Values & Types"
+      },
+      "version-0.12.0/version-0.12.0-logic-decl": {
+        "title": "Declarations"
+      },
+      "version-0.12.0/version-0.12.0-logic-ergo": {
+        "title": "Overview"
+      },
+      "version-0.12.0/version-0.12.0-logic-module": {
+        "title": "Modularity"
+      },
+      "version-0.12.0/version-0.12.0-logic-simple-expr": {
+        "title": "Simple Expressions"
+      },
+      "version-0.12.0/version-0.12.0-logic-simple-type": {
+        "title": "Introducing Types"
+      },
+      "version-0.12.0/version-0.12.0-logic-stmt": {
+        "title": "Statements"
+      },
+      "version-0.12.0/version-0.12.0-spec-concepts": {
+        "title": "Concepts and High-level Architecture"
+      },
+      "version-0.12.0/version-0.12.0-spec-example": {
+        "title": "Example: Late Delivery Clause"
+      },
+      "version-0.12.0/version-0.12.0-spec-execution": {
+        "title": "Contract Execution"
+      },
+      "version-0.12.0/version-0.12.0-spec-instance": {
+        "title": "Template Instantiation"
+      },
+      "version-0.12.0/version-0.12.0-spec-overview": {
+        "title": "Overview"
+      },
+      "version-0.12.0/version-0.12.0-spec-packaging": {
+        "title": "Packaging"
+      },
+      "version-0.12.0/version-0.12.0-spec-resources": {
+        "title": "Resources"
+      },
+      "version-0.12.0/version-0.12.0-spec-template": {
+        "title": "Template Structure"
       },
       "version-0.2.39/version-0.2.39-accordproject": {
         "title": "Accord Project"

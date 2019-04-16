@@ -1,6 +1,7 @@
 ---
-id: spec-template
+id: version-0.12.0-spec-template
 title: Template Structure
+original_id: spec-template
 ---
 
 An Accord Project template is composed of three elements: 
