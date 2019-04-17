@@ -12,7 +12,9 @@ We start with a very simple _Late Penalty and Delivery_ Clause and gradually mak
 
 ### Load the Template
 
-To get started, download the following template archive [minilatedeliveryandpenalty@0.1.1.cta](assets/advanced/minilatedeliveryandpenalty@0.1.1.cta).
+To get started, download the `minilatedeliveryandpenalty` template archive from https://templates.accordproject.org/minilatedeliveryandpenalty@0.2.1.html
+
+> If you are using a version of template studio running Cicero 0.10, you can download a compatible archive here: [minilatedeliveryandpenalty@0.1.1.cta](assets/advanced/minilatedeliveryandpenalty@0.1.1.cta)
 
 Head to [Template Studio](https://studio.accordproject.org/) to inspect and edit this initial clause template. In the navigation bar, click `New Template` and select `...from disk` to find the file and upload it.
 
@@ -73,7 +75,7 @@ Note that the clause will return an error if it is called for a timely delivery.
 
 ## Add a Penalty Cap
 
-We can now start building a more advanced clause. Heading back to [Template Studio](https://studio.accordproject.org/), let us take a moment to notice that there is no limitation to the penalty resulting from a late delivery. Under `Test Execution` in `Logic`, send this request:
+We can now start building a more advanced clause. Let us first take a moment to notice that there is no limitation to the penalty resulting from a late delivery. Under `Test Execution` in `Logic`, send this request:
 ```json
 {
   "$class": "org.accordproject.minilatedeliveryandpenalty.LateRequest",
@@ -134,10 +136,10 @@ This result in a new error, this time on the test contract:
 
 ![Advanced-Late-11](assets/advanced/late11.png)
 
-To fix it, we simply need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 10% of the total value of the delayed goods.`
+To fix it, we simply need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
 
 For convenience, you can copy-paste the new test contract from here:
-```
+```md
 Late Delivery and Penalty.
 
 In case of delayed delivery of Goods, "Betty Buyer" shall pay to
@@ -182,7 +184,7 @@ The logic should now look as follows:
 
 ### Execute the new Logic
 
-As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result into a much smaller penalty, which is capped to 55% of the total value of the goods, or 104 USD.
+As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result into a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
 
 ![Advanced-Late-14](assets/advanced/late14.png)
 
@@ -215,13 +217,13 @@ The next error is in the logic, since it still uses the old `MiniLateDeliveryCla
 ### Update the Logic
 
 The `Logic` error that occurs here is:
-```
+```ergo
 Compilation error (at file lib/logic.ergo line 19 col 31). Cannot find type with name 'MiniLateDeliveryClause'
 contract MiniLateDelivery over MiniLateDeliveryClause {
                                ^^^^^^^^^^^^^^^^^^^^^^ 
 ```
 Update the logic to use the the new `MiniLateDeliveryContract` type instead, as follows:
-```
+```ergo
 contract MiniLateDelivery over MiniLateDeliveryContract {
 ```
 
