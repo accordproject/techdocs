@@ -29,6 +29,9 @@
       "advanced-hyperledger": {
         "title": "Deploying on HyplerLedger Fabric"
       },
+      "advanced-latedelivery": {
+        "title": "Late Delivery and Penalty"
+      },
       "advanced-nodejs": {
         "title": "Working with Node.js"
       },
@@ -205,6 +208,9 @@
       },
       "version-0.12.0/version-0.12.0-advanced-hyperledger": {
         "title": "Deploying on HyplerLedger Fabric"
+      },
+      "version-0.12.0/version-0.12.0-advanced-latedelivery": {
+        "title": "Late Delivery and Penalty"
       },
       "version-0.12.0/version-0.12.0-advanced-nodejs": {
         "title": "Working with Node.js"

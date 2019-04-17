@@ -14,6 +14,7 @@
       "version-0.12.0-basic-create"
     ],
     "Advanced Tutorials": [
+      "version-0.12.0-advanced-latedelivery",
       "version-0.12.0-advanced-nodejs",
       "version-0.12.0-advanced-hyperledger",
       "version-0.12.0-advanced-ergo"
