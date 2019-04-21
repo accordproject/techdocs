@@ -176,7 +176,12 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     '/js/code-block-buttons.js',
   ],
-  stylesheets: ['/css/code-block-buttons.css'],
+  stylesheets: ['/css/code-block-buttons.css','/css/docusaurus-admonitions.css'],
+
+  markdownPlugins: [
+    // Highlight admonitions.
+    require('remarkable-admonitions')({ icon: 'svg-inline' })
+  ],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',

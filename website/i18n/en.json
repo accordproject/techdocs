@@ -27,7 +27,7 @@
         "title": "Getting Started with Accord Project"
       },
       "advanced-hyperledger": {
-        "title": "Deploying on HyplerLedger Fabric"
+        "title": "Deploying on Hyperledger Fabric"
       },
       "advanced-latedelivery": {
         "title": "Authoring in Template Studio"
@@ -198,7 +198,7 @@
         "title": "Deploying on HyplerLedger Fabric"
       },
       "version-0.12.0/version-0.12.0-advanced-latedelivery": {
-        "title": "How to Grow a Template"
+        "title": "Authoring in Template Studio"
       },
       "version-0.12.0/version-0.12.0-advanced-nodejs": {
         "title": "Working with Node.js"
