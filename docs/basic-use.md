@@ -163,5 +163,5 @@ Feel free to try the same commands to parse and execute other templates from the
 
 ## To Execute on Different Platforms
 
-Templates may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](cicero-tutorial-nodejs), you can find information on how to execute a template in a standalone Node.js process, invoked as RESTful services, or deployed as chaincode in Hyperledger Fabric.
+Templates may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](advanced-nodejs), you can find information on how to execute a template in a standalone Node.js process, invoked as RESTful services, or deployed as chaincode in Hyperledger Fabric.
 

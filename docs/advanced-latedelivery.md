@@ -1,6 +1,6 @@
 ---
 id: advanced-latedelivery
-title: How to Grow a Template
+title: Authoring in Template Studio
 ---
 
 This tutorial will walk you through the steps of authoring a clause template in [Template Studio](https://studio.accordproject.org/).
