@@ -1,6 +1,6 @@
 ---
 id: version-0.12.0-advanced-latedelivery
-title: How to Grow a Template
+title: Authoring in Template Studio
 original_id: advanced-latedelivery
 ---
 

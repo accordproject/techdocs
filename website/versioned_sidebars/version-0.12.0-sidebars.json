@@ -15,9 +15,14 @@
     ],
     "Advanced Tutorials": [
       "version-0.12.0-advanced-latedelivery",
-      "version-0.12.0-advanced-nodejs",
-      "version-0.12.0-advanced-hyperledger",
-      "version-0.12.0-advanced-ergo"
+      {
+        "type": "subcategory",
+        "label": "Template Execution",
+        "ids": [
+          "version-0.12.0-advanced-nodejs",
+          "version-0.12.0-advanced-hyperledger"
+        ]
+      }
     ],
     "Ergo Language Guide": [
       "version-0.12.0-logic-ergo",
