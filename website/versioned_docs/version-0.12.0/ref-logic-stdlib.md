@@ -1,6 +1,7 @@
 ---
-id: ergo-stdlib
-title: Standard Libraries
+id: version-0.12.0-ref-logic-stdlib
+title: Ergo Libraries
+original_id: ref-logic-stdlib
 ---
 
 The following libraries are provided with the Ergo compiler.

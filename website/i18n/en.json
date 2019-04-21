@@ -30,7 +30,7 @@
         "title": "Deploying on HyplerLedger Fabric"
       },
       "advanced-latedelivery": {
-        "title": "Late Delivery and Penalty"
+        "title": "How to Grow a Template"
       },
       "advanced-nodejs": {
         "title": "Working with Node.js"
@@ -48,31 +48,16 @@
         "title": "How to Use a Template"
       },
       "cicero-api": {
-        "title": "JavaScript API"
+        "title": "Cicero API"
       },
       "cicero-cli": {
         "title": "Cicero CLI"
       },
-      "cicero-markup": {
-        "title": "Markup Reference"
-      },
-      "cicero-tests": {
-        "title": "Cicero Tests"
-      },
       "ergo-api": {
-        "title": "JavaScript API"
+        "title": "Ergo API"
       },
       "ergo-cli": {
         "title": "Ergo CLI"
-      },
-      "ergo-reference": {
-        "title": "Language Reference"
-      },
-      "ergo-spec-overview": {
-        "title": "Compiler Specification"
-      },
-      "ergo-stdlib": {
-        "title": "Standard Libraries"
       },
       "ergo-tutorial": {
         "title": "Ergo: A Tutorial"
@@ -104,8 +89,20 @@
       "logic-stmt": {
         "title": "Statements"
       },
-      "model-repository": {
-        "title": "Model Repository"
+      "ref-logic-specification": {
+        "title": "Ergo Compiler"
+      },
+      "ref-logic-stdlib": {
+        "title": "Ergo Libraries"
+      },
+      "ref-logic": {
+        "title": "Ergo Language Reference"
+      },
+      "ref-markup": {
+        "title": "Markup Reference"
+      },
+      "ref-testing": {
+        "title": "Testing Reference"
       },
       "spec-concepts": {
         "title": "Concepts and High-level Architecture"
@@ -125,17 +122,8 @@
       "spec-packaging": {
         "title": "Packaging"
       },
-      "spec-resources": {
-        "title": "Resources"
-      },
       "spec-template": {
         "title": "Template Structure"
-      },
-      "template-library": {
-        "title": "Template Library"
-      },
-      "template-studio": {
-        "title": "Template Studio"
       },
       "version-0.10.0/version-0.10.0-accordproject-specification": {
         "title": "Template Specification"
@@ -210,7 +198,7 @@
         "title": "Deploying on HyplerLedger Fabric"
       },
       "version-0.12.0/version-0.12.0-advanced-latedelivery": {
-        "title": "Late Delivery and Penalty"
+        "title": "How to Grow a Template"
       },
       "version-0.12.0/version-0.12.0-advanced-nodejs": {
         "title": "Working with Node.js"
@@ -228,22 +216,10 @@
         "title": "How to Use a Template"
       },
       "version-0.12.0/version-0.12.0-cicero-api": {
-        "title": "JavaScript API"
-      },
-      "version-0.12.0/version-0.12.0-cicero-markup": {
-        "title": "Markup Reference"
-      },
-      "version-0.12.0/version-0.12.0-cicero-tests": {
-        "title": "Cicero Tests"
+        "title": "Cicero API"
       },
       "version-0.12.0/version-0.12.0-ergo-api": {
-        "title": "JavaScript API"
-      },
-      "version-0.12.0/version-0.12.0-ergo-reference": {
-        "title": "Language Reference"
-      },
-      "version-0.12.0/version-0.12.0-ergo-stdlib": {
-        "title": "Standard Libraries"
+        "title": "Ergo API"
       },
       "version-0.12.0/version-0.12.0-ergo-tutorial": {
         "title": "Ergo: A Tutorial"
@@ -275,6 +251,21 @@
       "version-0.12.0/version-0.12.0-logic-stmt": {
         "title": "Statements"
       },
+      "version-0.12.0/version-0.12.0-ref-logic-specification": {
+        "title": "Ergo Compiler"
+      },
+      "version-0.12.0/version-0.12.0-ref-logic-stdlib": {
+        "title": "Ergo Libraries"
+      },
+      "version-0.12.0/version-0.12.0-ref-logic": {
+        "title": "Ergo Language Reference"
+      },
+      "version-0.12.0/version-0.12.0-ref-markup": {
+        "title": "Markup Reference"
+      },
+      "version-0.12.0/version-0.12.0-ref-testing": {
+        "title": "Testing Reference"
+      },
       "version-0.12.0/version-0.12.0-spec-concepts": {
         "title": "Concepts and High-level Architecture"
       },
@@ -292,9 +283,6 @@
       },
       "version-0.12.0/version-0.12.0-spec-packaging": {
         "title": "Packaging"
-      },
-      "version-0.12.0/version-0.12.0-spec-resources": {
-        "title": "Resources"
       },
       "version-0.12.0/version-0.12.0-spec-template": {
         "title": "Template Structure"

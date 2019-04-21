@@ -1,6 +1,6 @@
 ---
 id: version-0.12.0-ergo-api
-title: JavaScript API
+title: Ergo API
 original_id: ergo-api
 ---
 

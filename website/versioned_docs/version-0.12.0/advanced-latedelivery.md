@@ -1,6 +1,6 @@
 ---
 id: version-0.12.0-advanced-latedelivery
-title: Late Delivery and Penalty
+title: How to Grow a Template
 original_id: advanced-latedelivery
 ---
 

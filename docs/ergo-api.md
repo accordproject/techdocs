@@ -1,6 +1,6 @@
 ---
 id: ergo-api
-title: JavaScript API
+title: Ergo API
 ---
 
 ## Classes
