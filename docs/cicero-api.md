@@ -1,6 +1,6 @@
 ---
 id: cicero-api
-title: JavaScript API
+title: Cicero API
 ---
 
 ## Modules

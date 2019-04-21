@@ -1,6 +1,6 @@
 ---
-id: ergo-spec-overview
-title: Compiler Specification
+id: ref-logic-specification
+title: Ergo Compiler
 ---
 
 A large part of the Ergo compiler is written as a Coq specification

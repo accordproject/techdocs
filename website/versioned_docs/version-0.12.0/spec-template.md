@@ -77,6 +77,7 @@ The template model for the clause captures unambiguously the data types defined 
 > Terminology: a Template has a Template Model
 
 ## Grammar
+
 The next step in making the clause executable is to relate the template model to the natural language text that describes the legally enforceable clause. This is accomplished by taking the natural language for the clause and inserting bindings to the template model, using the Accord Project markup language. We call this the _grammar_ for the template (or template grammar) as it determines what a syntactically valid clause can look like.
 
 Here is the marked-up template:
@@ -93,7 +94,7 @@ Here is the marked-up template:
    terminate this Contract.
 ```
 
-The marked-up template is UTF-8 text with markup to introduce named variables Each variable starts with `[{` and ends with `}]`. Let’s take a look at each variable in turn.
+The marked-up template is UTF-8 text with markup to introduce named variables. Each variable starts with `[{` and ends with `}]`. Let’s take a look at each variable in turn.
 
 - `[{"except for Force Majeure cases,":? forceMajeure}]` : this variable definition is called a Boolean Assignment. It states that if the optional text “except for Force Majeure cases,” is present in the clause, then the Boolean forceMajeure property on the template model should be set to true. Otherwise the property should be set to false.
 - `[{penaltyDuration}]` : this variable definition is a binding. It states that the variable is bound to the  penaltyDuration property in the template model. Implicitly it also states that the variable is of type Duration because that is the type of penaltyDuration in the model.
@@ -113,7 +114,7 @@ Note that any types within the model may have an associated template grammar fil
 
 > Terminology: a Template Grammar is a marked-up template that declares variables. Variables are bound to the Template Model. The Template Grammar and the Template Model are used to generate a parser for the template, allowing syntactically valid instances (clauses) to be created.
 
-Reference information for the markup that is supported can be found in [Markup Reference](cicero-markup).
+Reference information for the markup that is supported in Cicero can be found in [Markup Reference](cicero-markup).
 
 ## Logic
 The last part of the puzzle for the template is to capture the logic of the template in a form that a computer can execute. No, computers cannot (yet) execute the natural language text, with all its interesting legal ambiguities!

@@ -1,7 +1,6 @@
 ---
-id: version-0.12.0-cicero-tests
-title: Cicero Tests
-original_id: cicero-tests
+id: ref-testing
+title: Testing Reference
 ---
 
 Cicero uses Cucumber for writing template tests, which provides a human readable syntax.

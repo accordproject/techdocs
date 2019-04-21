@@ -6,15 +6,20 @@
         "Ergo Language Guide": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"],
         "Template Specification": ["spec-overview", "spec-concepts", "spec-example", "spec-template", "spec-instance", "spec-execution", "spec-packaging"],
         "Reference Manual": [
+            "ref-markup",
+            "ref-testing",
+            "ref-logic",
+            "ref-logic-stdlib",
+            "ref-logic-specification",
             {
                 "type": "subcategory",
-                "label": "Cicero Reference",
-                "ids": ["cicero-markup", "cicero-cli", "cicero-api", "cicero-tests"]
+                "label": "Command Line Interface",
+                "ids": ["cicero-cli", "ergo-cli"]
             },
             {
                 "type": "subcategory",
-                "label": "Ergo Reference",
-                "ids": ["ergo-reference", "ergo-stdlib", "ergo-cli", "ergo-api", "ergo-spec-overview"]
+                "label": "JavaScript API",
+                "ids": ["cicero-api", "ergo-api"]
             }
         ]
     }

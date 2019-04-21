@@ -1,6 +1,7 @@
 ---
-id: ergo-reference
-title: Language Reference
+id: version-0.12.0-ref-logic
+title: Ergo Language Reference
+original_id: ref-logic
 ---
 
 ## Lexical conventions

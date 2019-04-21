@@ -1,6 +1,6 @@
 ---
 id: version-0.12.0-cicero-api
-title: JavaScript API
+title: Cicero API
 original_id: cicero-api
 ---
 

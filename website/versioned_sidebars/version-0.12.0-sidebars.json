@@ -39,25 +39,25 @@
       "version-0.12.0-spec-packaging"
     ],
     "Reference Manual": [
+      "version-0.12.0-ref-markup",
+      "version-0.12.0-ref-testing",
+      "version-0.12.0-ref-logic",
+      "version-0.12.0-ref-logic-stdlib",
+      "version-0.12.0-ref-logic-specification",
       {
         "type": "subcategory",
-        "label": "Cicero Reference",
+        "label": "Command Line Interface",
         "ids": [
-          "version-0.12.0-cicero-markup",
           "version-0.12.0-cicero-cli",
-          "version-0.12.0-cicero-api",
-          "version-0.12.0-cicero-tests"
+          "version-0.12.0-ergo-cli"
         ]
       },
       {
         "type": "subcategory",
-        "label": "Ergo Reference",
+        "label": "JavaScript API",
         "ids": [
-          "version-0.12.0-ergo-reference",
-          "version-0.12.0-ergo-stdlib",
-          "version-0.12.0-ergo-cli",
-          "version-0.12.0-ergo-api",
-          "version-0.12.0-ergo-spec-overview"
+          "version-0.12.0-cicero-api",
+          "version-0.12.0-ergo-api"
         ]
       }
     ]
