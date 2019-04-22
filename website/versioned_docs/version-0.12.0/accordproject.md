@@ -8,10 +8,6 @@ original_id: accordproject
 
 Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. 
 
-The Accord Project provides an open, industry-driven, specification and implementation for _smart legal contracts_. Participants include some of the leading law firms and blockchain technology organizations in the world.
-
-For more information about the Accord Project as a whole (how to join, upcoming meetings, latest news, open source process, etc) please visit the main [Accord Project Web Site](https:www.accordproject.org).
-
 ## What is an Accord Project Template?
 
 An Accord Project template is composed of three elements: 

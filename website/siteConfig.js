@@ -30,7 +30,7 @@ const users = [
 
 const siteConfig = {
   title: 'Accord Project' /* title for your website */,
-  tagline: 'Industry-Led Specification and Open Source Code for Smart Legal Contracts',
+  tagline: 'Open Source Code for Smart Legal Contracts',
   url: 'https://docs.accordproject.org' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
