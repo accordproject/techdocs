@@ -7,7 +7,7 @@ original_id: spec-concepts
 ![Overview](assets/cicero-spec-overview.png)
 
 ## Step 1: Creation of Smart Clause Template
-A legal professional analyzes a contract to determine the frequently used/standard clauses that are present. Clauses that are amenable to automation are extracted into a smart clause template. The template (more details follow) is comprised of the annotated legal text and an accompanying template data model that defines the assets, participants, concepts and events that are relevant to the clause. The business logic for the smart clause is coded by a developer (with review and in collaboration with the legal professional, or the suitably trained legal professional can code the logic themselves using a legal contract DSL).
+A legal professional analyzes a contract to determine the frequently used/standard clauses that are present. Clauses that are amenable to automation are extracted into a smart clause template. The template (more details follow) is comprised of the annotated legal text and an accompanying template data model that defines the assets, participants, concepts and events that are relevant to the clause. The business logic for the smart clause is coded by a developer (with review and in collaboration with the legal professional, or the suitably trained legal professional can code the contract logic themselves using the [Ergo](logic-ergo) DSL).
 
 ## Step 2: Data Modeling
 
