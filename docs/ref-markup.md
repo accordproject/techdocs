@@ -238,6 +238,46 @@ or
 If the delay is more than "two weeks", the Buyer is entitled to terminate this Contract.
 ```
 
+## Enumerated Variables
+
+### Decription
+
+If the variable `variableName` has an enumerated type:
+```ergo
+o EnumType variableName
+```
+
+The corresponding instance should contain a corresponding enumerated value without quotes.
+
+### Examples
+
+For example, consider the following model:
+```
+import org.accordproject.money.CurrencyCode from https://models.accordproject.org/money.cto
+asset Template extends AccordClause {
+  o CurrencyCode currency
+}
+
+```
+the following instance text:
+```md
+Monetary amounts in this contract are denominated in USD.
+```
+
+matches the template:
+```md
+Monetary amounts in this contract are denominated in [{currency}].
+```
+
+while the following instance texts do not match:
+```md
+Monetary amounts in this contract are denominated in "USD".
+```
+or
+```md
+Monetary amounts in this contract are denominated in $.
+```
+
 ## Complex Variables
 
 ### Description
@@ -267,5 +307,23 @@ Address of the supplier: "555 main street" "10290" "" "NY" "New York" "10001".
 matches the template:
 ```md
 Address of the supplier: [{address}].
+```
+
+Consider the following model:
+```md
+import org.accordproject.money.MonetaryAmount from https://models.accordproject.org/money.cto
+asset Template extends AccordClause {
+  o MonetaryAmount amount
+}
+```
+
+the following instance text:
+```md
+Total value of the goods: 50 USD.
+```
+
+matches the template:
+```md
+Total value of the goods: [{amount}].
 ```
 
