@@ -1,0 +1,55 @@
+/* ==========================================================================
+   Section > Digitize Legal Contracts
+   ========================================================================== */
+
+#digitize-legal-contracts {
+	position: relative;
+}
+
+#digitize-legal-contracts::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	height: 2530px;
+	width: 100%;
+	background: linear-gradient(135deg, #f9f9f9, #f9f9f9 40%, #0000 0, #0000);
+}
+
+#digitize-legal-contracts.container {
+	padding: 125px 0px 0px;
+}
+
+@media (min-width: 360px) and (max-width: 736px) {
+  #digitize-legal-contracts.container {
+    padding: 40px 0px 0px;
+  }
+}
+
+#digitize-legal-contracts h2 {
+	font-weight: 300;
+	color: #050c4080;
+	font-size: 50px;
+	letter-spacing: -2px;
+	line-height: 55px;
+}
+
+#digitize-legal-contracts h2 .strong {
+	font-weight: 400;
+	color: #050c40;
+}
+
+#digitize-legal-contracts .typeset {
+	color: #050c4080;
+	max-width: 580px;
+	margin: 20px auto 0px;
+}
+
+@media (min-width: 360px) and (max-width: 736px) {
+  #digitize-legal-contracts .typeset {
+    max-width: 325px;
+    
+  }
+}
+

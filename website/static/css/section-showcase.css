@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Section > Showcase
+   ========================================================================== */
+
+#showcase {
+  position: relative;
+  padding-top: 0px;
+  padding-bottom: 80px;
+}
+
+#showcase::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	bottom: -100px;
+	left: 0;
+	height: 2600px;
+	width: 100%;
+	background: linear-gradient(-45deg, #f9f9f9, #f9f9f9 55%, #0000 0, #0000);
+}
+
+#showcase h2 {
+	font-weight: 300;
+	color: #050c4080;
+	font-size: 50px;
+	letter-spacing: -2px;
+	line-height: 55px;
+}
+
+#showcase h2 .strong {
+	font-weight: 400;
+	color: #050c40;
+}
+
+#showcase .typeset {
+	color: #050c4080;
+}
+
+#showcase .line {
+  margin-right: auto;
+  margin-bottom: 55px;
+  margin-left: auto;
+}
+
+#showcase .line--vertical {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 120px;
+  background: linear-gradient(180deg,#050c4000 0,#050c40 200%);
+}
+
+#showcase .line--vertical:after {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  height: 7px;
+  width: 7px;
+  margin-left: -4px;
+  content: "";
+  display: block;
+  border: 1px solid #050c40b3;
+  border-radius: 50%;
+}
+
+

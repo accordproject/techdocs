@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.button {
+  height: 45px;
+  width: auto;
+  padding: 13px 30px 15px;
+  font-weight: 500;
+  font-style: normal;
+  display: inline-block;
+  border-radius: 23px;
+  color: #050c40;
+  background-color: transparent;
+  font-size: 15px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  text-transform: none;
+  border: 2px solid $secondaryColor;
+}
+
+.button:hover {
+  color: #050c40;
+  background-color: $secondaryColor;
+}
+
+.button.button-filled {
+  color: #050c40;
+  background-color: $secondaryColor;
+}
+
+.button.button-filled:hover {
+  color: #050c40;
+  background-color: #fff;
+}
