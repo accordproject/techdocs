@@ -1,0 +1,121 @@
+/* Start of Container */
+.container .gridBlock .blockContent p {
+  padding: 0;
+}
+
+.container .wrapper .alignCenter h2 {
+  text-align: center;
+}
+
+.container .wrapper .imageAlignSide h2 {
+  text-align: left;
+}
+
+.container .wrapper .imageAlignSide p {
+  margin: 0;
+  max-width: 560px;
+}
+
+.highlightBackground {
+  background: rgba(153, 66, 79, 0.7);
+  color: #fff;
+}
+
+.highlightBackground a {
+  border-color: white;
+  color: #fff;
+  font-weight: 800;
+}
+
+.container.highlightBackground .wrapper h1,
+.container.highlightBackground .wrapper h2,
+.container.highlightBackground .wrapper h3,
+.container.highlightBackground .wrapper h4,
+.container.highlightBackground .wrapper h5 {
+  border-color: white;
+  color: white;
+}
+
+.lightBackground {
+  background: #f7f7f7;
+}
+
+.darkBackground {
+  background:$primaryColor url(../img/background.jpg);
+  color: #fff;
+  max-width: 1160px;
+	margin: 0 auto;
+	padding: 75px 30px 65px;
+  border-radius: 10px;
+  background-position: center;
+}
+
+@media (min-width: 360px) and (max-width: 736px) {
+  .darkBackground {
+    border-radius: 0px;
+    padding: 75px 0px 65px;
+  }
+}
+
+.darkBackground a {
+  color: #fff;
+}
+
+.darkBackground code {
+  color: #fff;
+}
+
+.container.darkBackground .wrapper h1,
+.container.darkBackground .wrapper h2,
+.container.darkBackground .wrapper h3,
+.container.darkBackground .wrapper h4,
+.container.darkBackground .wrapper h5 {
+  border-color: #fff;
+  color: #fff;
+}
+
+.container.paddingAll {
+  padding: 40px;
+}
+
+.container.paddingBottom {
+  padding-bottom: 80px;
+}
+
+.container.paddingLeft {
+  padding-left: 40px;
+}
+
+.container.paddingRight {
+  padding-right: 40px;
+}
+
+.container.paddingTop {
+  padding-top: 80px;
+}
+
+@media (min-width: 360px) and (max-width: 736px) {
+  .container.paddingBottom {
+    padding-bottom: 40px;
+  }
+
+  .container.paddingTop {
+    padding-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .responsiveList .blockContent {
+    position: relative;
+  }
+
+  .responsiveList .blockContent > div {
+    padding-left: 20px;
+  }
+
+  .responsiveList .blockContent:before {
+    content: '\2022';
+    position: absolute;
+  }
+}
+/* End of Container */

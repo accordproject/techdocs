@@ -57,9 +57,9 @@ const Logo = props => (
 );
 
 const ProjectTitle = props => (
-  <h2 className="projectTitle">
-    <small>{siteConfig.tagline}</small>
-  </h2>
+  <h1 className="projectTitle">
+    <span className="lead">{siteConfig.taglineLead} </span>{siteConfig.tagline}
+  </h1>
 );
 
 const PromoSection = props => (
@@ -77,9 +77,9 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         
         <div className="inner">
-          <h2 className="projectTitle">
-                <img style={{height: '100px'}} src={imgUrl('accord_logo.png')} />
-          </h2>
+          <figure className="projectTitle">
+                <img style={{height: '80px'}} src={imgUrl('accord_logo_white.png')} />
+          </figure>
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('accordproject.html', this.props.language)}>Getting Started</Button>
@@ -103,7 +103,7 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <Block layout="fourColumn" id="features">
     {[
       {
         content: `Create templates for executable natural-language legal contracts using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
@@ -125,36 +125,22 @@ const Features = props => (
   </Block>
 );
 
-const TryOut = props => (
-  <Block background="light" id="try">
-    {[
-      {
-        content: 'You can try Accord Project templates in the <a href="https://studio.accordproject.org">template studio</a>. Search for existing templates, edit the contract text and execute the logic! <br/><br/>Experiment with changes to the natural language or logic and see how it affects the contract\'s behavior.',
-        image: imgUrl('studio.png'),
-        imageAlign: 'right',
-        title: 'Try Online',
-      },
-    ]}
-  </Block>
-);
-
-
 const FeatureCallout = props => (
-  <Block background="light">
+  <Block id="digitize-legal-contracts">
     {[
       {
-        content: "Use Open Source tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.",
-        title: 'Digitize Legal Contracts',
+        content: "<div class='typeset'>Use Open Source tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.</div>",
+        title: 'Digitize <span class="strong">Legal Contracts</span>',
       }
     ]}
   </Block>
 );
 
 const Templates = props => (
-  <Block>
+  <Block id="templates">
     {[
       {
-        content: "Cicero templates are composed of three elements: the Template Grammar (the natural language text for the template), the Template Model (the data model that backs the template), the Logic (the executable business logic for the template). When combined these three elements allow templates to be edited, analyzed, queried and executed.",
+        content: "<div class='typeset'>Cicero templates are composed of three elements: the Template Grammar (the natural language text for the template), the Template Model (the data model that backs the template), the Logic (the executable business logic for the template). When combined these three elements allow templates to be edited, analyzed, queried and executed.</div>",
         image: imgUrl('../docs/assets/template.png'),
         imageAlign: 'right',
         title: 'Templates',
@@ -168,20 +154,20 @@ const Grammar = props => (
   <Block background="dark" id="accord">
     {[
       {
-        content: 'Bind natural language clauses and contracts to their data and logic through a template grammar.',
+        content: '<div class="typeset">Bind natural language clauses and contracts to their data and logic through a template grammar.</div>',
         image: imgUrl('grammar.png'),
         imageAlign: 'left',
-        title: 'Natural Language',
+        title: 'Natural <span class="strong">Language</span>',
       },
     ]}
   </Block>
 );
 
 const Model = props => (
-  <Block background="light">
+  <Block id="model">
     {[
       {
-        content: 'The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://github.com/hyperledger/composer-concerto">Composer Concerto Modeling Language</a>.',
+        content: '<div class="typeset">The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://github.com/hyperledger/composer-concerto">Composer Concerto Modeling Language</a>.</div>',
         image: imgUrl('model-uml.png'),
         imageAlign: 'right',
         title: 'Model',
@@ -191,13 +177,26 @@ const Model = props => (
 );
 
 const Logic = props => (
-  <Block background="dark">
+  <Block background="dark" id="logic">
     {[
       {
-        content: 'Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.',
+        content: '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.</div>',
         image: imgUrl('ergo-vscode.png'),
         imageAlign: 'left',
         title: 'Logic',
+      },
+    ]}
+  </Block>
+);
+
+const TryOut = props => (
+  <Block id="try">
+    {[
+      {
+        content: '<div class="typeset">You can try Accord Project templates in the <a href="https://studio.accordproject.org">template studio</a>. Search for existing templates, edit the contract text and execute the logic! <br/><br/>Experiment with changes to the natural language or logic and see how it affects the contract\'s behavior.</div>',
+        image: imgUrl('studio.png'),
+        imageAlign: 'right',
+        title: 'Try <span class="strong">Online</span>',
       },
     ]}
   </Block>
@@ -220,12 +219,13 @@ const Showcase = props => {
     });
 
   return (
-    <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by the following companies</p>
+    <div className="productShowcaseSection paddingBottom" id="showcase">
+      <span class="line line--vertical"></span>
+      <h2>{"Who's"} <span className="strong">{"Using This?"}</span></h2>
+      <div className="typeset"><p>This project is used by the following companies</p></div>
       <div className="logos">{showcase}</div>
       <div className="more-users">
-        <a className="button" href={pageUrl('users.html', props.language)}>
+        <a className="button button-filled" href={pageUrl('users.html', props.language)}>
           More {siteConfig.title} Users
         </a>
       </div>
@@ -239,10 +239,12 @@ class Index extends React.Component {
 
     return (
       <div>
+        <div className="heroCover">
         <HomeSplash language={language} />
+        <Features />
+        </div>
         <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
+        <FeatureCallout />
           <Templates />
           <Grammar />
           <Model />

@@ -30,7 +30,8 @@ const users = [
 
 const siteConfig = {
   title: 'Accord Project' /* title for your website */,
-  tagline: 'Open Source Code for Smart Legal Contracts',
+  taglineLead: 'Open Source',
+  tagline:'Documentation',
   url: 'https://docs.accordproject.org' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -62,8 +63,8 @@ const siteConfig = {
 
   /* colors for website */
   colors: {
-    primaryColor: '#0d7e84',
-    secondaryColor: '#085256',
+    primaryColor: '#1b2540',
+    secondaryColor: '#19C6C6',
   },
 
   /* custom fonts for website */
@@ -176,7 +177,7 @@ const siteConfig = {
     'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
     '/js/code-block-buttons.js',
   ],
-  stylesheets: ['/css/code-block-buttons.css','/css/docusaurus-admonitions.css'],
+  //stylesheets: ['/css/code-block-buttons.css','/css/docusaurus-admonitions.css'],
 
   markdownPlugins: [
     // Highlight admonitions.
