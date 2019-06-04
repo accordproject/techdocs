@@ -1,6 +1,7 @@
 ---
-id: basic-use
+id: version-0.12.3-basic-use
 title: How to Use a Template
+original_id: basic-use
 ---
 
 The simplest way to work with an Accord Project template is through the Cicero command line interface (CLI). In this tutorial, we explain how to download an existing Accord Project template, create an instance of that template and how to execute the contract logic.
