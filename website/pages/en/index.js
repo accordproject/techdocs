@@ -115,7 +115,7 @@ const Features = props => (
         title: `[Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html)`,
       },
       {
-        content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html) to ensure interoperability.`,
+        content: `Use models from the [Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html) to ensure interoperability between templates.`,
         title: `[Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html)`,
       },
   ]}
@@ -151,7 +151,7 @@ const Grammar = props => (
   <Block background="dark" id="accord">
     {[
       {
-        content: '<div class="typeset">Bind natural language clauses and contracts to their data and logic through a template grammar.</div>',
+        content: '<div class="typeset">Create structured clauses and contracts by binding variables in natural language to a data model. Optionally, clauses can be made executable by adding contract logic to the data model.</div>',
         image: imgUrl('grammar.png'),
         imageAlign: 'left',
         title: 'Natural <span class="strong">Language</span>',
@@ -247,7 +247,6 @@ class Index extends React.Component {
           <Model />
           <Logic />
           <TryOut />
-          <Showcase language={language} />
         </div>
       </div>
     );
