@@ -290,6 +290,9 @@
       "version-0.12.3/version-0.12.3-basic-use": {
         "title": "How to Use a Template"
       },
+      "version-0.12.3/version-0.12.3-spec-packaging": {
+        "title": "Packaging"
+      },
       "version-0.2.39/version-0.2.39-accordproject": {
         "title": "Accord Project"
       },
