@@ -77,9 +77,6 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         
         <div className="inner">
-          <figure className="projectTitle">
-                <img style={{height: '80px'}} src={imgUrl('accord_logo_white.png')} />
-          </figure>
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('accordproject.html', this.props.language)}>Getting Started</Button>
@@ -110,8 +107,8 @@ const Features = props => (
         title: `[Cicero](${siteConfig.baseUrl}docs/cicero.html)`,
       },
       {
-        content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
-        title: `[Ergo](${siteConfig.baseUrl}docs/ergo.html)`,
+        content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/logic-ergo.html) domain-specific language.`,
+        title: `[Ergo](${siteConfig.baseUrl}docs/logic-ergo.html)`,
       },
       {
         content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/template-library.html).`,
@@ -129,7 +126,7 @@ const FeatureCallout = props => (
   <Block id="digitize-legal-contracts">
     {[
       {
-        content: "<div class='typeset'>Use Open Source tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.</div>",
+        content: "<div class='typeset'>Use open source tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform. The projects comprise all of the software necessary to author, edit and execute smart legal contracts in a standardized fashion.</div>",
         title: 'Digitize <span class="strong">Legal Contracts</span>',
       }
     ]}
@@ -180,7 +177,7 @@ const Logic = props => (
   <Block background="dark" id="logic">
     {[
       {
-        content: '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.</div>',
+        content: '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* smart legal contract logic.</div>',
         image: imgUrl('ergo-vscode.png'),
         imageAlign: 'left',
         title: 'Logic',
@@ -193,10 +190,10 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: '<div class="typeset">You can try Accord Project templates in the <a href="https://studio.accordproject.org">template studio</a>. Search for existing templates, edit the contract text and execute the logic! <br/><br/>Experiment with changes to the natural language or logic and see how it affects the contract\'s behavior.</div>',
+        content: '<div class="typeset">You can author and test templates online in the Accord Project <a href="https://studio.accordproject.org">Template Studio</a>. Search for existing templates, edit the contract text and execute the logic.</div>',
         image: imgUrl('studio.png'),
         imageAlign: 'right',
-        title: 'Try <span class="strong">Online</span>',
+        title: 'Author <span class="strong">and Edit</span>',
       },
     ]}
   </Block>
