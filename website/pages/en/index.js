@@ -103,20 +103,20 @@ const Features = props => (
   <Block layout="fourColumn" id="features">
     {[
       {
-        content: `Create templates for executable natural-language legal contracts using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
-        title: `[Cicero](${siteConfig.baseUrl}docs/cicero.html)`,
+        content: `Create templates for executable natural-language legal contracts using Open Source Cicero [Template Technology](${siteConfig.baseUrl}docs/basic-use.html).`,
+        title: `[Cicero](${siteConfig.baseUrl}docs/basic-use.html)`,
       },
       {
         content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/logic-ergo.html) domain-specific language.`,
         title: `[Ergo](${siteConfig.baseUrl}docs/logic-ergo.html)`,
       },
       {
-        content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/template-library.html).`,
-        title: `[Template Library](${siteConfig.baseUrl}docs/template-library.html)`,
+        content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html).`,
+        title: `[Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html)`,
       },
       {
-        content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,
-        title: `[Model Repository](${siteConfig.baseUrl}docs/model-repository.html)`,
+        content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html) to ensure interoperability.`,
+        title: `[Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html)`,
       },
   ]}
   </Block>
