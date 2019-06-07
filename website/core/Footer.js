@@ -73,6 +73,11 @@ class Footer extends React.Component {
               <li>
                 <a href="https://accord-project.slack.com/messages/C7U521CTG">Slack</a>
               </li>
+              <li>
+                <a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">
+                Twitter
+                </a>
+              </li>
             </ul>
           </div>
           <div>
@@ -83,6 +88,9 @@ class Footer extends React.Component {
               </li>
               <li>
                 <a href="https://github.com/accordproject">GitHub</a>
+              </li>
+              <li>
+              <a className="github-button" href={this.props.config.repoUrl} data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count={true} data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a>
               </li>
             </ul>
           </div>
