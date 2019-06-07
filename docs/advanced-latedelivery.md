@@ -11,11 +11,7 @@ We start with a very simple _Late Penalty and Delivery_ Clause and gradually mak
 
 ### Load the Template
 
-To get started, download the `minilatedeliveryandpenalty` template archive from https://templates.accordproject.org/minilatedeliveryandpenalty@0.2.1.html
-
-> If you are using a version of template studio running Cicero 0.10, you can download a compatible archive here: [minilatedeliveryandpenalty@0.1.1.cta](assets/advanced/minilatedeliveryandpenalty@0.1.1.cta)
-
-Head to [Template Studio](https://studio.accordproject.org/) to inspect and edit this initial clause template. In the navigation bar, click `New Template` and select `...from disk` to find the file and upload it.
+To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at https://templates.accordproject.org/minilatedeliveryandpenalty@0.2.1.html and click the "Open In Template Studio" button.
 
 ![Advanced-Late-1](assets/advanced/late1.png)
 
@@ -38,6 +34,8 @@ If you edit part of the text which is not a variable in the template, this resul
 ![Advanced-Late-4](assets/advanced/late4.png)
 
 This is because the `Test Contract` relies on the `Template` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can however edit the `Template` itself in order to change the legal text, thereby creating a new template.
+
+Revert your changes, changing the word `timely` back to the original word `delayed` and the parsing error will disappear.
 
 ### The Model
 
@@ -110,7 +108,7 @@ total value of the delayed goods. If the delay is more than
 [{maximumDelay}], the Buyer is entitled to terminate this Contract.
 
 ```
-This should result in an error when parsing the contract text:
+This should immediately result in an error when parsing the contract text:
 
 ![Advanced-Late-10](assets/advanced/late10.png)
 
@@ -119,6 +117,8 @@ As explained in the error message, this is because the new template text uses a 
 ### Update the Model
 
 To define this new variable, go to the `Model` tab, and change the `MiniLateDeliveryClause` type to include `o Double capPercentage`. 
+
+![Advanced-Late-11](assets/advanced/late10b.png)
 
 For convenience, you can copy-paste the new `MiniLateDeliveryClause` type from here:
 ```ergo
@@ -131,6 +131,7 @@ asset MiniLateDeliveryClause extends AccordClause {
   o Duration maximumDelay     // Maximum delay before termination
 }
 ```
+
 This result in a new error, this time on the test contract:
 
 ![Advanced-Late-11](assets/advanced/late11.png)
