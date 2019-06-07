@@ -23,7 +23,7 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
+          <a href="https://www.accordproject.org/" className="nav-home">
             {this.props.config.footerIcon && (
               <figure className="site-footer-logo">
                 <svg viewBox="0 0 220 35">

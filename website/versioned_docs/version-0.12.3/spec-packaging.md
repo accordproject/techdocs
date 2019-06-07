@@ -1,6 +1,7 @@
 ---
-id: spec-packaging
+id: version-0.12.3-spec-packaging
 title: Packaging
+original_id: spec-packaging
 ---
 
 The artefacts that define a template are:

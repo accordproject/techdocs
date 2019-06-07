@@ -77,9 +77,6 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         
         <div className="inner">
-          <figure className="projectTitle">
-                <img style={{height: '80px'}} src={imgUrl('accord_logo_white.png')} />
-          </figure>
           <ProjectTitle />
           <PromoSection>
             <Button href={docUrl('accordproject.html', this.props.language)}>Getting Started</Button>
@@ -106,20 +103,20 @@ const Features = props => (
   <Block layout="fourColumn" id="features">
     {[
       {
-        content: `Create templates for executable natural-language legal contracts using Open Source [Cicero template](${siteConfig.baseUrl}docs/cicero.html) technology.`,
-        title: `[Cicero](${siteConfig.baseUrl}docs/cicero.html)`,
+        content: `Create templates for executable natural-language legal contracts using Open Source Cicero [Template Technology](${siteConfig.baseUrl}docs/basic-use.html).`,
+        title: `[Cicero](${siteConfig.baseUrl}docs/basic-use.html)`,
       },
       {
-        content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/ergo.html) domain-specific language.`,
-        title: `[Ergo](${siteConfig.baseUrl}docs/ergo.html)`,
+        content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/logic-ergo.html) domain-specific language.`,
+        title: `[Ergo](${siteConfig.baseUrl}docs/logic-ergo.html)`,
       },
       {
-        content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/template-library.html).`,
-        title: `[Template Library](${siteConfig.baseUrl}docs/template-library.html)`,
+        content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html).`,
+        title: `[Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html)`,
       },
       {
-        content: `Use Open Source data models from the [Model Repository](${siteConfig.baseUrl}docs/model-repository.html) to ensure interoperability.`,
-        title: `[Model Repository](${siteConfig.baseUrl}docs/model-repository.html)`,
+        content: `Use models from the [Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html) to ensure interoperability between templates.`,
+        title: `[Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html)`,
       },
   ]}
   </Block>
@@ -129,7 +126,7 @@ const FeatureCallout = props => (
   <Block id="digitize-legal-contracts">
     {[
       {
-        content: "<div class='typeset'>Use Open Source tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform.</div>",
+        content: "<div class='typeset'>Use open source tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform. The projects comprise all of the software necessary to author, edit and execute smart legal contracts in a standardized fashion.</div>",
         title: 'Digitize <span class="strong">Legal Contracts</span>',
       }
     ]}
@@ -154,7 +151,7 @@ const Grammar = props => (
   <Block background="dark" id="accord">
     {[
       {
-        content: '<div class="typeset">Bind natural language clauses and contracts to their data and logic through a template grammar.</div>',
+        content: '<div class="typeset">Create structured clauses and contracts by binding variables in natural language to a data model. Optionally, clauses can be made executable by adding contract logic to the data model.</div>',
         image: imgUrl('grammar.png'),
         imageAlign: 'left',
         title: 'Natural <span class="strong">Language</span>',
@@ -180,7 +177,7 @@ const Logic = props => (
   <Block background="dark" id="logic">
     {[
       {
-        content: '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* Smart Legal Contract logic.</div>',
+        content: '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* smart legal contract logic.</div>',
         image: imgUrl('ergo-vscode.png'),
         imageAlign: 'left',
         title: 'Logic',
@@ -193,10 +190,10 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: '<div class="typeset">You can try Accord Project templates in the <a href="https://studio.accordproject.org">template studio</a>. Search for existing templates, edit the contract text and execute the logic! <br/><br/>Experiment with changes to the natural language or logic and see how it affects the contract\'s behavior.</div>',
+        content: '<div class="typeset">You can author and test templates online in the Accord Project <a href="https://studio.accordproject.org">Template Studio</a>. Search for existing templates, edit the contract text and execute the logic.</div>',
         image: imgUrl('studio.png'),
         imageAlign: 'right',
-        title: 'Try <span class="strong">Online</span>',
+        title: 'Author <span class="strong">and Edit</span>',
       },
     ]}
   </Block>
@@ -250,7 +247,6 @@ class Index extends React.Component {
           <Model />
           <Logic />
           <TryOut />
-          <Showcase language={language} />
         </div>
       </div>
     );
