@@ -2567,7 +2567,24 @@ pre .btnIcon:hover {
 	padding: 75px 30px 65px;
   border-radius: 10px;
   background-position: center;
+  position: relative;
 }
+
+
+.darkBackground::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: url(../img/noise.png);
+  background-size: 276px 276px;
+  pointer-events: none;
+  }
+
+
+
 
 @media (min-width: 360px) and (max-width: 736px) {
   .darkBackground {
@@ -3211,9 +3228,22 @@ color: #fff;
 .heroCover {
 background:#1b2540 url(../img/background.jpg);
 background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+background-position: 50% 0;
+background-size: 2205px 2000px;
+position: relative;
 }
+
+.heroCover::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: url(../img/noise.png);
+  background-size: 276px 276px;
+  pointer-events: none;
+  }
 
 
 @media (min-width: 360px) and (max-width: 736px) {
@@ -3477,7 +3507,21 @@ background-size: cover;
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 }
+
+
+.nav-footer::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-image: url(../img/noise.png);
+  background-size: 276px 276px;
+  pointer-events: none;
+  }
 
 @media only screen and (min-width: 1024px) {
 	.nav-footer {
