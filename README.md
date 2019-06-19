@@ -68,7 +68,7 @@ Accord Project documentation files are made available under the [Creative Common
 [apworkgroup]: https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MjZvYzIzZHVrYnI1aDVzbjZnMHJqYmtwaGlfMjAxNzExMTVUMjEwMDAwWiBkYW5AY2xhdXNlLmlv&tmsrc=dan%40clause.io
 
 [contribute]: https://github.com/accordproject/techdocs/blob/master/CONTRIBUTING.md
-[apblog]: (https://medium.com/@accordhq)
+[apblog]: https://medium.com/@accordhq
 
 [welcome]: https://docs.accordproject.org/docs/accordproject.html#what-is-accord-project
 [highlevel]: https://docs.accordproject.org/docs/spec-concepts.html
