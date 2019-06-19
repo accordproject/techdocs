@@ -1,5 +1,5 @@
 <a href="https://docs.accordproject.org/">
-	<img src="assets/APLogo.png" alt="Accord Project Logo" />
+	<img src="assets/APLogo.png" alt="Accord Project Logo" width="880" />
 </a>
 
 Technical Documentation for all Accord Project code. This site uses Docusaurus to generate static HTML.
