@@ -80,6 +80,7 @@ The following functions are in the `ord.accordproject.ergo.stdlib` namespace and
 | Name | Signature | Description |
 |------|-----------|-------------|
 | `toString` | `(x:Any) : String` | Prints any value to a string |
+| `length` | `(x:String) : Integer` | Prints length integer from a string |
 | `failure` | `(x:String) : ErgoErrorResponse` | Ergo error from a string |
 
 ## Time

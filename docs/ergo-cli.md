@@ -25,6 +25,7 @@ Compile an Ergo contract to a target platform
       --target <lang> Target language (default: es6) (available: es5,es6,cicero,java)
       --link          Adds the Ergo runtime to the target code (for es5,es6 and cicero only)
       --monitor       Produce compilation time information
+      --warnings      Provides helpful warnings
       --help          Show help and exit
 ```
 
@@ -68,6 +69,7 @@ Invoke an ergo contract
       --contract      path to the contract data                           [required]
       --request       path to the request data                    [array] [required]
       --state         path to the state data                [string] [default: null]
+      --warnings      Provides helpful warnings                            [boolean]
       --contractname                                                      [required]
       --verbose, -v                                                 [default: false]
 ```
