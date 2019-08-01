@@ -108,7 +108,6 @@ Cicero Core - defines the core data types for Cicero.
         * [.getREADME()](#module_cicero-core.Metadata+getREADME) ⇒ <code>String</code>
         * [.getPackageJson()](#module_cicero-core.Metadata+getPackageJson) ⇒ <code>object</code>
         * [.getName()](#module_cicero-core.Metadata+getName) ⇒ <code>string</code>
-        * [.getDisplayName()](#module_cicero-core.Metadata+getDisplayName) ⇒ <code>string</code>
         * [.getKeywords()](#module_cicero-core.Metadata+getKeywords) ⇒ <code>Array</code>
         * [.getDescription()](#module_cicero-core.Metadata+getDescription) ⇒ <code>string</code>
         * [.getVersion()](#module_cicero-core.Metadata+getVersion) ⇒ <code>string</code>
@@ -262,7 +261,6 @@ Defines the metadata for a Template, including the name, version, README markdow
     * [.getREADME()](#module_cicero-core.Metadata+getREADME) ⇒ <code>String</code>
     * [.getPackageJson()](#module_cicero-core.Metadata+getPackageJson) ⇒ <code>object</code>
     * [.getName()](#module_cicero-core.Metadata+getName) ⇒ <code>string</code>
-    * [.getDisplayName()](#module_cicero-core.Metadata+getDisplayName) ⇒ <code>string</code>
     * [.getKeywords()](#module_cicero-core.Metadata+getKeywords) ⇒ <code>Array</code>
     * [.getDescription()](#module_cicero-core.Metadata+getDescription) ⇒ <code>string</code>
     * [.getVersion()](#module_cicero-core.Metadata+getVersion) ⇒ <code>string</code>
@@ -378,20 +376,13 @@ Returns the name for this template.
 
 **Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)
 **Returns**: <code>string</code> - the name of the template
-<a name="module_cicero-core.Metadata+getDisplayName"></a>
-
-#### metadata.getDisplayName() ⇒ <code>string</code>
-Returns the display name for this template.
-
-**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)
-**Returns**: <code>string</code> - the display name of the template
 <a name="module_cicero-core.Metadata+getKeywords"></a>
 
 #### metadata.getKeywords() ⇒ <code>Array</code>
-Returns the keywords for this template.
+Returns the name for this template.
 
-**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
-**Returns**: <code>Array</code> - the keywords of the template
+**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)
+**Returns**: <code>Array</code> - the name of the template
 <a name="module_cicero-core.Metadata+getDescription"></a>
 
 #### metadata.getDescription() ⇒ <code>string</code>
