@@ -374,15 +374,15 @@ Returns the package.json for this template.
 #### metadata.getName() ⇒ <code>string</code>
 Returns the name for this template.
 
-**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)
-**Returns**: <code>string</code> - the name of the template
+**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
+**Returns**: <code>string</code> - the name of the template  
 <a name="module_cicero-core.Metadata+getKeywords"></a>
 
 #### metadata.getKeywords() ⇒ <code>Array</code>
 Returns the name for this template.
 
-**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)
-**Returns**: <code>Array</code> - the name of the template
+**Kind**: instance method of [<code>Metadata</code>](#module_cicero-core.Metadata)  
+**Returns**: <code>Array</code> - the name of the template  
 <a name="module_cicero-core.Metadata+getDescription"></a>
 
 #### metadata.getDescription() ⇒ <code>string</code>
