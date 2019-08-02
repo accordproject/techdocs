@@ -89,6 +89,9 @@
       "logic-stmt": {
         "title": "Statements"
       },
+      "ref-errors": {
+        "title": "Errors Reference"
+      },
       "ref-logic-specification": {
         "title": "Ergo Compiler"
       },
@@ -286,6 +289,12 @@
       },
       "version-0.12.0/version-0.12.0-spec-template": {
         "title": "Template Structure"
+      },
+      "version-0.12.3/version-0.12.3-accordproject-templates": {
+        "title": "Open Source Templates"
+      },
+      "version-0.12.3/version-0.12.3-advanced-latedelivery": {
+        "title": "Authoring in Template Studio"
       },
       "version-0.12.3/version-0.12.3-basic-use": {
         "title": "How to Use a Template"

@@ -39,6 +39,18 @@ Ergo also provides functions to manipulate arrays as parts of its [standard libr
     sum(prettynumbers)
 ```
 
+You can access the element at a given position inside the array using an index:
+```ergo
+    let fruits = ["pear","apple","strawberries"];
+    fruits[0]          // Returns: some("pear")
+     let fruits = ["pear","apple","strawberries"];
+    fruits[2]          // Returns: some("strawberries")
+     let fruits = ["pear","apple","strawberries"];
+    fruits[4]          // Returns: none
+```
+
+ Note that the index starts at `0` for the first element and that indexed-based access returns an optional value, since Ergo compiler cannot statically determine whether there will be an element at the corresponding index.
+
 ## Classes
 
 You can declare classes in the Composer Modeling Language (concepts, transactions, events, participants or assets) by importing them from a CTO file or directly within your Ergo program:

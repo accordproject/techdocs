@@ -131,3 +131,18 @@ When inside a clause or contract, you can change the contract state as follows:
 
 Note that `set state` is always terminated by a `;` followed by another statement.
 
+## Printing intermediate results
+
+ For debugging purposes a special `info` statement can be used in your contract logic. For instance, the following indicates that you would like the Ergo execution engine to print out the result of expression `state.status` on the standard output.
+
+ ```ergo
+    set state InstallmentSaleState{
+      stateId: "#1",
+      status: "WaitingForFirstDayOfNextMonth",
+      balance_remaining: contract.INITIAL_DUE,
+      total_paid: 0.0,
+      next_payment_month: contract.FIRST_MONTH
+    };
+    info(state.status);     // Directive to print to standard output
+    return
+```

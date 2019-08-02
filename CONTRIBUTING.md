@@ -9,6 +9,7 @@ We'd love for you to contribute to our source code and to make Accord Project do
 * [Issues and Bugs][contribute.issue]
 * [Feature Requests][contribute.feature]
 * [Improving Documentation][contribute.docs]
+* [Updating Documentation][contribute.updating]
 * [Issue Submission Guidelines][contribute.submit]
 * [Pull Request Submission Guidelines][contribute.submitpr]
 
@@ -60,6 +61,20 @@ and scope, so you only have to add the description.
 For large fixes, please build and test the documentation before submitting the PR to be sure you
 haven't accidentally introduced any layout or formatting issues. You should also make sure that your
 commit message follows the **[Commit Message Guidelines][developers.commits]**.
+
+### <a name="updating"></a> Updating Documentation through Docusaurus
+
+Docusaurus is used for maintaining our documentation. The process for this involves generation of
+markdown files concerning the API, as well as incrementing the docs version.
+
+<GENERATION OF `cicero-api.md` and `ergo-api.md`>
+Converts JSDoc to Markdown
+
+<PR APPROVAL VERRSION INCREMENT>
+
+  ```text
+    npm run version X.X.X
+  ```
 
 ## <a name="submit"></a> Issue Submission Guidelines
 Before you submit your issue search the archive, maybe your question was already answered.
@@ -188,6 +203,7 @@ Accord Project documentation files are made available under the [Creative Common
 [contribute.issue]: CONTRIBUTING.md#issue
 [contribute.feature]: CONTRIBUTING.md#feature
 [contribute.docs]: CONTRIBUTING.md#docs
+[contribute.updating]: CONTRIBUTING.md#updating
 [contribute.submit]: CONTRIBUTING.md#submit
 [contribute.submitpr]: CONTRIBUTING.md#submit-pr
 

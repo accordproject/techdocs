@@ -23,18 +23,19 @@ The metadata for a Template is stored in the  /package.json text file in JSON fo
 ```
 {
     "name": "latedeliveryandpenalty",
+    "displayName": "Late Delivery and Penalty",
     "version": "0.11.1",
     "description": "A sample Late Delivery And Penalty clause.",
     "accordproject": {
         "template": "clause",
-        "ergo": "0.8.0",
-        "cicero": "^0.12.0"
+        "ergo": "0.9.0",
+        "cicero": "^0.13.0"
     },
     "keywords": ["clause", "delivery", "acceptance", "obligation"]
 }
 ```
 
-The name property must consist of [a-z][A-Z][.]. It is strongly recommended that the name be prefixed with the domain name of the author of the smart clause, to minimise naming collisions. The version property must be a semantic version of the form major.minor.micro [0-9].[0-9].[0.9]. Note that this data format ensures that a Template can be published to the npm package manager for either global or private (enterprise-wide) distribution.
+The name property must consist of `[a-z][A-Z][.]`. It is strongly recommended that the name be prefixed with the domain name of the author of the smart clause, to minimise naming collisions. The version property must be a semantic version of the form `major.minor.micro [0-9].[0-9].[0.9]`. Note that this data format ensures that a Template can be published to the npm package manager for either global or private (enterprise-wide) distribution.
 
 The `accordproject` property of a template specifies the following metadata:
 - `template`: must either be `clause` for a clause template or `contract` for a contract templates
