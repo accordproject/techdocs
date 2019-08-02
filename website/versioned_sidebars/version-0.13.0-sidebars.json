@@ -1,0 +1,71 @@
+{
+  "version-0.13.0-docs": {
+    "Introduction": [
+      "version-0.13.0-accordproject",
+      "version-0.13.0-accordproject-installation",
+      "version-0.13.0-accordproject-tooling",
+      "version-0.13.0-accordproject-models",
+      "version-0.13.0-accordproject-templates",
+      "version-0.13.0-accordproject-resources"
+    ],
+    "Basic Tutorials": [
+      "version-0.13.0-basic-use",
+      "version-0.13.0-basic-templates",
+      "version-0.13.0-basic-create"
+    ],
+    "Advanced Tutorials": [
+      "version-0.13.0-advanced-latedelivery",
+      {
+        "type": "subcategory",
+        "label": "Template Execution",
+        "ids": [
+          "version-0.13.0-advanced-nodejs",
+          "version-0.13.0-advanced-hyperledger"
+        ]
+      }
+    ],
+    "Ergo Language Guide": [
+      "version-0.13.0-logic-ergo",
+      "version-0.13.0-logic-simple-expr",
+      "version-0.13.0-logic-simple-type",
+      "version-0.13.0-logic-complex-type",
+      "version-0.13.0-logic-advanced-expr",
+      "version-0.13.0-logic-stmt",
+      "version-0.13.0-logic-decl",
+      "version-0.13.0-logic-module"
+    ],
+    "Template Specification": [
+      "version-0.13.0-spec-overview",
+      "version-0.13.0-spec-concepts",
+      "version-0.13.0-spec-example",
+      "version-0.13.0-spec-template",
+      "version-0.13.0-spec-instance",
+      "version-0.13.0-spec-execution",
+      "version-0.13.0-spec-packaging"
+    ],
+    "Reference Manual": [
+      "version-0.13.0-ref-markup",
+      "version-0.13.0-ref-testing",
+      "version-0.13.0-ref-errors",
+      "version-0.13.0-ref-logic",
+      "version-0.13.0-ref-logic-stdlib",
+      "version-0.13.0-ref-logic-specification",
+      {
+        "type": "subcategory",
+        "label": "Command Line Interface",
+        "ids": [
+          "version-0.13.0-cicero-cli",
+          "version-0.13.0-ergo-cli"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "JavaScript API",
+        "ids": [
+          "version-0.13.0-cicero-api",
+          "version-0.13.0-ergo-api"
+        ]
+      }
+    ]
+  }
+}
