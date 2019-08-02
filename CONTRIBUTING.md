@@ -64,17 +64,26 @@ commit message follows the **[Commit Message Guidelines][developers.commits]**.
 
 ### <a name="updating"></a> Updating Documentation through Docusaurus
 
-Docusaurus is used for maintaining our documentation. The process for this involves generation of
-markdown files concerning the API, as well as incrementing the docs version.
+[Docusaurus][docusaurus] is used for maintaining our documentation. The process for this involves generation of
+markdown files concerning the API, as well as incrementing the docs version. These two steps are 
+done individually. Updates to the documentation are merged into master, which will generate the new
+markdown files. Once this is complete, a new pull request should be submitted with the version incremented.
 
-<GENERATION OF `cicero-api.md` and `ergo-api.md`>
-Converts JSDoc to Markdown
+#### Step 1 - Generating Markdown
 
-<PR APPROVAL VERRSION INCREMENT>
+Make updates to the source code to improve documentation. Merging this into master will automatically
+generate Markdown from JSDocs, most notably being the `cicero-api.md` and `ergo-api.md` files.
+
+#### Step 2 - Incrementing Version
+
+Increment the version with the [Docusaurus][versioning] script command through `npm`.
 
   ```text
     npm run version X.X.X
   ```
+
+Once this merges into master, the new version number will be recognized and trigger the update and refresh
+of the [Accord Project documentation][apdoc].
 
 ## <a name="submit"></a> Issue Submission Guidelines
 Before you submit your issue search the archive, maybe your question was already answered.
@@ -206,6 +215,10 @@ Accord Project documentation files are made available under the [Creative Common
 [contribute.updating]: CONTRIBUTING.md#updating
 [contribute.submit]: CONTRIBUTING.md#submit
 [contribute.submitpr]: CONTRIBUTING.md#submit-pr
+
+[docusaurus]: https://docusaurus.io/en/
+[versioning]: https://docusaurus.io/docs/en/versioning
+[apdoc]: https://docs.accordproject.org/
 
 [github-issues]: https://github.com/accordproject/techdocs/issues
 [github-new-issue]: https://github.com/accordproject/techdocs/issues/new
