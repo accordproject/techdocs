@@ -23,7 +23,7 @@ Help us keep the Accord Project open and inclusive. Please read and follow our [
 
 Do not open issues for general support questions as we want to keep GitHub issues for bug reports
 and feature requests. You've got much better chances of getting your question answered on dedicated
-support platforms, the best being the [Accord Project Slack Channel][slack]
+support platforms, the best being the [Accord Project Slack Channel][apslack]
 
 ### <a name="issue"></a> Found an Issue or Bug?
 
@@ -215,6 +215,14 @@ Accord Project documentation files are made available under the [Creative Common
 [contribute.updating]: CONTRIBUTING.md#updating
 [contribute.submit]: CONTRIBUTING.md#submit
 [contribute.submitpr]: CONTRIBUTING.md#submit-pr
+
+
+[developers]: DEVELOPERS.md
+[developers.setup]: DEVELOPERS.md#-development-setup
+[developers.commits]: DEVELOPERS.md#commits
+[developers.rules]: DEVELOPERS.md#rules
+[developers.documentation]: DEVELOPERS.md#documentation
+[developers.unit-tests]: DEVELOPERS.md#-running-the-unit-test-suite
 
 [docusaurus]: https://docusaurus.io/en/
 [versioning]: https://docusaurus.io/docs/en/versioning
