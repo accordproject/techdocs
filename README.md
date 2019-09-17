@@ -2,9 +2,11 @@
   <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
 </a>
 
-<a href="https://accord-project-slack-signup.herokuapp.com/">
-  <img src="https://img.shields.io/badge/Slack-Join%20Slack-blue" alt="Join the Accord Project Slack" />
-</a>
+<p align="center">
+  <a href="https://accord-project-slack-signup.herokuapp.com/">
+    <img src="https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue" alt="Join the Accord Project Slack" />
+  </a>
+</p>
 
 Technical Documentation for all Accord Project code. This site uses Docusaurus to generate static HTML.
 
