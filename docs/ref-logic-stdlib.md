@@ -7,7 +7,7 @@ The following libraries are provided with the Ergo compiler.
 
 ## Stdlib
 
-The following functions are in the `ord.accordproject.ergo.stdlib` namespace and available by default.
+The following functions are in the `org.accordproject.ergo.stdlib` namespace and available by default.
 
 ### Functions on Integer
 
@@ -85,7 +85,7 @@ The following functions are in the `ord.accordproject.ergo.stdlib` namespace and
 
 ## Time
 
-The following functions are in the `ord.accordproject.time` namespace and are available by importing that namespace.
+The following functions are in the `org.accordproject.time` namespace and are available by importing that namespace.
 They rely on the [time.cto](https://models.accordproject.org/v2.0/time.html) types from the Accord Project models.
 
 ### Functions on DateTime
