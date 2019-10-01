@@ -42,6 +42,8 @@ Join the Accord Project Technology Working Group [Slack channel][apslack] to get
 
 For code contributions, read our [CONTRIBUTING guide][contributing] and information for [DEVELOPERS][developers].
 
+<img src="./assets/contributors.png" alt="Profile pictures of Accord Project Contributors">
+
 ## License <a name="license"></a>
 
 Accord Project source code files are made available under the [Apache License, Version 2.0][apache].
