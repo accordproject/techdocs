@@ -4,7 +4,7 @@ title: Standard Library
 original_id: ergo-stdlib
 ---
 
-The following functions are in the `ord.accordproject.ergo.stdlib` namespace and available by default.
+The following functions are in the `org.accordproject.ergo.stdlib` namespace and available by default.
 
 ## Functions on Integer
 
