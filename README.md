@@ -8,7 +8,7 @@
   </a>
 </p>
 
-Technical Documentation for all Accord Project code. This site uses Docusaurus to generate static HTML.
+Technical Documentation for all Accord Project code. This site uses [Docusaurus](https://docusaurus.io/) generate static HTML.
 
 The site is hosted at: https://docs.accordproject.org
 
