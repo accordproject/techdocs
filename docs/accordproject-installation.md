@@ -7,7 +7,7 @@ To start working on your own Accord Project templates, you should install the Ci
 
 ## Prerequisites
 
-Before you can install Cicero, you must first obtain and configure the following dependency:
+Before you install Cicero, you must first obtain and configure the following dependency:
 
 * [Node.js v8.x (LTS)](http://nodejs.org): We use Node to generate the documentation, run a
   development web server, run tests, and generate distributable files. Depending on your system,
@@ -67,7 +67,7 @@ ergorun --help
 
 That's it!
 
-## What next?
+## What's next?
 
 The following pages provide links to developers tools and resources. You can also browse using the navigation bar to the left to find additional information: tutorials, API reference, the Ergo language guide, etc.
 
