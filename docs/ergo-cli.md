@@ -85,7 +85,7 @@ For instance, to send one request to the `volumediscount` contract:
     02:33:50 - info: {"response":{"discountRate":2.8,"$class":"org.accordproject.volumediscount.VolumeDiscountResponse"},"state":{"$class":"org.accordproject.cicero.contract.AccordContractState","stateId":"1"},"emit":[]}
 ```
 
-If contract invokation is successful, `ergorun` will print out the response, the new contract state and any emitted events.
+If contract invocation is successful, `ergorun` will print out the response, the new contract state and any emitted events.
 
 ## ergotop (REPL)
 
