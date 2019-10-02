@@ -499,7 +499,7 @@ Build grammar rules from a template
 | ast | <code>object</code> | the AST from which to build the grammar |
 | templateModel | <code>ClassDeclaration</code> | the type of the parent class for this AST |
 | prefix | <code>String</code> | A unique prefix for the grammar rules |
-| parts | <code>Object</code> | Result object to acculumate rules and required sub-grammars |
+| parts | <code>Object</code> | Result object to accumulate rules and required sub-grammars |
 
 <a name="module_cicero-core.ParserManager+handleBinding"></a>
 

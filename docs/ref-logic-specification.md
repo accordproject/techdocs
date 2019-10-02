@@ -26,7 +26,7 @@ The Coq source serves a dual purpose: as Ergo's formal semantics and as part of 
 
 A browsable version of the Coq code (generated using
 [coq2html](https://github.com/xavierleroy/coq2html)) is
-available. Below are some of the main intermediate represntations and
+available. Below are some of the main intermediate representations and
 compilation phases.
 
 ### Intermediate representations

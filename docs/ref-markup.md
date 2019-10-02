@@ -234,7 +234,7 @@ If the delay is more than "two weeks", the Buyer is entitled to terminate this C
 
 ## Enumerated Variables
 
-### Decription
+### Description
 
 If the variable `variableName` has an enumerated type:
 ```ergo

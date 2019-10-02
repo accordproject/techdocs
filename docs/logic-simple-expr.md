@@ -80,5 +80,5 @@ Let bindings give a name to some intermediate result and allows you to reuse the
    else x                  // else return x
 ```
 
-> **TechNote:** let bindings in Ergo are immutable, in a way similar to other functional languages. A nice explaination can be found e.g., in the documentation for let bindings in [ReasonML](https://reasonml.github.io/docs/en/let-binding).
+> **TechNote:** let bindings in Ergo are immutable, in a way similar to other functional languages. A nice explanation can be found e.g., in the documentation for let bindings in [ReasonML](https://reasonml.github.io/docs/en/let-binding).
 
