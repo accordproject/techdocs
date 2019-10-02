@@ -89,6 +89,21 @@
       "logic-stmt": {
         "title": "Statements"
       },
+      "markup-cicero": {
+        "title": "Overview"
+      },
+      "markup-commonmark": {
+        "title": "Rich Text Markup"
+      },
+      "markup-expr": {
+        "title": "Expressions"
+      },
+      "markup-variables-blocks": {
+        "title": "Variables and Blocks"
+      },
+      "model-concerto": {
+        "title": "Overview"
+      },
       "ref-errors": {
         "title": "Errors Reference"
       },
@@ -300,6 +315,24 @@
         "title": "How to Use a Template"
       },
       "version-0.12.3/version-0.12.3-spec-packaging": {
+        "title": "Packaging"
+      },
+      "version-0.13.0/version-0.13.0-ergo-cli": {
+        "title": "Ergo CLI"
+      },
+      "version-0.13.0/version-0.13.0-logic-complex-type": {
+        "title": "Complex Values & Types"
+      },
+      "version-0.13.0/version-0.13.0-logic-stmt": {
+        "title": "Statements"
+      },
+      "version-0.13.0/version-0.13.0-ref-errors": {
+        "title": "Errors Reference"
+      },
+      "version-0.13.0/version-0.13.0-ref-logic-stdlib": {
+        "title": "Ergo Libraries"
+      },
+      "version-0.13.0/version-0.13.0-spec-packaging": {
         "title": "Packaging"
       },
       "version-0.2.39/version-0.2.39-accordproject": {
@@ -627,6 +660,8 @@
       "Introduction": "Introduction",
       "Basic Tutorials": "Basic Tutorials",
       "Advanced Tutorials": "Advanced Tutorials",
+      "Cicero Markup Guide": "Cicero Markup Guide",
+      "Concerto Model Guide": "Concerto Model Guide",
       "Ergo Language Guide": "Ergo Language Guide",
       "Template Specification": "Template Specification",
       "Reference Manual": "Reference Manual",
