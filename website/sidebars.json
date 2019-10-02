@@ -14,9 +14,8 @@
         "Concerto Model Guide": ["model-concerto"],
         "Ergo Language Guide": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"],
         "Template Specification": ["spec-overview", "spec-concepts", "spec-example", "spec-template", "spec-instance", "spec-execution", "spec-packaging"],
-        "Releases": [
-            "release-0.13",
-            "release-0.20"
+        "Upgrading Guide": [
+            "0.13to0.20"
         ],
         "Reference Manual": [
             "ref-markup",

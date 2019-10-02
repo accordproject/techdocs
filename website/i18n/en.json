@@ -5,6 +5,9 @@
     "previous": "Previous",
     "tagline": "Documentation",
     "docs": {
+      "0.13to0.20": {
+        "title": "From 0.13.* to 0.20.*"
+      },
       "accordproject-installation": {
         "title": "Installation"
       },
@@ -121,12 +124,6 @@
       },
       "ref-testing": {
         "title": "Testing Reference"
-      },
-      "release-0.13": {
-        "title": "Release 0.13.*"
-      },
-      "release-0.20": {
-        "title": "Release 0.20.*"
       },
       "spec-concepts": {
         "title": "Concepts and High-level Architecture"
@@ -670,7 +667,7 @@
       "Concerto Model Guide": "Concerto Model Guide",
       "Ergo Language Guide": "Ergo Language Guide",
       "Template Specification": "Template Specification",
-      "Releases": "Releases",
+      "Upgrading Guide": "Upgrading Guide",
       "Reference Manual": "Reference Manual",
       "Accord Project": "Accord Project",
       "Cicero": "Cicero",
