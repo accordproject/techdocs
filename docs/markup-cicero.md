@@ -41,7 +41,7 @@ A sample text can either be parsed to generate the deal data in JSON format, or 
 The sample text must correspond to the grammar for parsing to succeed.
 
 Consider the following sample text:
-```
+```md
 ## Fixed rate loan
 
 This is a _fixed interest_ loan to the amount of 100000
@@ -52,7 +52,7 @@ and monthly payments of {{I'm not sure which amount right now}}
 
 You can use the Cicero command-line to parse that text and extract the variables for the template:
 ```js
-bash-3.2$ cicero parse --out data.json 
+$ cicero parse --out data.json 
 09:09:15 - info: Using current directory as template folder
 09:09:15 - info: Loading a default sample.md file.
 09:09:18 - info: Creating file: data.json
