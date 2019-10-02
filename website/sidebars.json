@@ -10,8 +10,13 @@
                 "ids": ["advanced-nodejs", "advanced-hyperledger"]
             }
         ],
+        "Cicero Markup Guide": ["markup-cicero", "markup-commonmark", "markup-variables-blocks", "markup-expr"],
+        "Concerto Model Guide": ["model-concerto"],
         "Ergo Language Guide": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"],
         "Template Specification": ["spec-overview", "spec-concepts", "spec-example", "spec-template", "spec-instance", "spec-execution", "spec-packaging"],
+        "Upgrading Guide": [
+            "0.13to0.20"
+        ],
         "Reference Manual": [
             "ref-markup",
             "ref-testing",
