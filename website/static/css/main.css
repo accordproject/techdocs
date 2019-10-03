@@ -3355,6 +3355,9 @@ position: relative;
 	margin: 0px 5px;
 }
 
+#features .blockElement img {
+  height: 30px;
+}
 
 @media (min-width: 360px) and (max-width: 736px) {
 	#features .blockElement {
