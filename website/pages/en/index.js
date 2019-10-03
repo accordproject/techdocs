@@ -104,11 +104,11 @@ const Features = props => (
     {[
       {
         content: `Create templates for executable natural-language legal contracts using Open Source Cicero [Template Technology](${siteConfig.baseUrl}docs/basic-use.html).`,
-        title: `[Cicero](${siteConfig.baseUrl}docs/basic-use.html)`,
+        title: `[![Cicero](${imgUrl('cicero-logo.svg')})](${siteConfig.baseUrl}docs/basic-use.html)`,
       },
       {
         content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/logic-ergo.html) domain-specific language.`,
-        title: `[Ergo](${siteConfig.baseUrl}docs/logic-ergo.html)`,
+        title: `[![Ergo](${imgUrl('ergo-logo.svg')})](${siteConfig.baseUrl}docs/logic-ergo.html)`,
       },
       {
         content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html).`,
