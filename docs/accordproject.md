@@ -5,7 +5,7 @@ title: Getting Started with Accord Project
 
 ## What is Accord Project?
 
-Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. 
+Accord Project is an open-source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. 
 
 ## What is an Accord Project Template?
 
@@ -33,7 +33,7 @@ The following screenshot shows a Cicero template for an acceptance of delivery c
 
 Cicero relies on two other projects:
 - [Concerto](https://github.com/hyperledger/composer-concerto): a lightweight, versatile data modeling language (maintained by the Hyperledger forum)
-- [Ergo](https://github.com/accordproject/ergo): a domain specific language to express the executable logic of legal templates
+- [Ergo](https://github.com/accordproject/ergo): a domain-specific language to express the executable logic of legal templates
 
 ### Concerto
 
@@ -61,17 +61,17 @@ It is important that a developer and a lawyer can together agree that clauses in
 
 Beyond a core technology for executable legal templates, Accord Project is building a rich ecosystem which includes community-contributed content based on that technology:
 
-- [Model Repository](https://models.accordproject.org/) : a repository of open source Concerto data models for use in templates
-- [Template Library](https://templates.accordproject.org/) : a library of open source Clause and Contract templates for various legal domains (supply-chain, loans, intellectual property, etc.)
+- [Model Repository](https://models.accordproject.org/) : a repository of open-source Concerto data models for use in templates
+- [Template Library](https://templates.accordproject.org/) : a library of open-source Clause and Contract templates for various legal domains (supply-chain, loans, intellectual property, etc.)
 
 Several tools are also available to facilitate authoring of Accord Project templates:
 
 - [Template Studio](https://studio.accordproject.org/): a Web-based editor for Accord Project templates
 - [VSCode Plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/)
 
-## Open Source Community
+## Open-Source Community
 
-The Accord Project technology is being developed as open source. All the software packages are being actively maintained on [GitHub](https://github.com/accordproject) and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
+The Accord Project technology is being developed as open-source. All the software packages are being actively maintained on [GitHub](https://github.com/accordproject) and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
 
 Join the Accord Project Technology Working Group <a href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack channel</a> to get involved!
 
