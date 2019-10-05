@@ -4,7 +4,7 @@ title: Packaging
 original_id: spec-packaging
 ---
 
-The artefacts that define a template are:
+The artifacts that define a template are:
 - Metadata, such as name and version
 - CML models, which define the template model, request, response and any required types
 - Template grammar for each supported locale
@@ -15,7 +15,7 @@ Templates are typically packaged and distributed as Cicero Template Archive (`.c
 
 - Directory: useful during testing, allows changes to the template to be quickly tested with no need to re-package
 - URL: allows templates to be published to a stable web address
-- Accord Projecte template library maintains a curated set of Open Source templates
+- Accord Project template library maintains a curated set of Open Source templates
 - npm: allows dependencies on templates to be easily declared for Node.js and browser based applications. Integrates with CI/CD tools.
 
 ## Metadata
@@ -39,7 +39,7 @@ The name property must consist of [a-z][A-Z][.]. It is strongly recommended that
 The `cicero` property of a template specifies the following metadata:
 - template: must either be `clause` for a clause template or `contract` for a contract templates
 - language: the implementation language for the logic of the language. Current supported values are `ergo` or `javascript`
-- version: the compatability statement with a Cicero engine version. This is an npm [semver](https://semver.npmjs.com) specification.
+- version: the compatibility statement with a Cicero engine version. This is an npm [semver](https://semver.npmjs.com) specification.
 
 Note that additional properties such as locales and jurisdictions may be added as future needs arise.
 

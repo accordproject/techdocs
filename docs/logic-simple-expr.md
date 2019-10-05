@@ -24,7 +24,7 @@ Every Ergo expression can be _evaluated_, which means it should compute some val
 
 ## Operators
 
-You can apply operators to values. Those can be used for arithmetics, to compare two values, to concatenate two string values, etc.
+You can apply operators to values. Those can be used for arithmetic operations, to compare two values, to concatenate two string values, etc.
 
 ```ergo
     1.0 + 2.0 * 3.0      // arithmetic operators on Double

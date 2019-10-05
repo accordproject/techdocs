@@ -97,7 +97,7 @@ follows:
     return x+1.0                       // Statement if condition is true
 ```
 
-The else part of the statement can be ommitted in which case Ergo
+The else part of the statement can be omitted in which case Ergo
 returns an error by default.
 
 ```ergo
