@@ -76,5 +76,3 @@ Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respec
 
 [apache]: https://github.com/accordproject/template-studio-v2/blob/master/LICENSE
 [creativecommons]: http://creativecommons.org/licenses/by/4.0/
-
-Signed-off-by: DEBSUBHRO <debsubhro.roy10@yahoo.com>
