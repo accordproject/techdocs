@@ -25,7 +25,7 @@ Every Ergo expression can be _evaluated_, which means it should compute some val
 
 ## Operators
 
-You can apply operators to values. Those can be used for arithmetics, to compare two values, to concatenate two string values, etc.
+You can apply operators to values. Those can be used for arithmetic operations, to compare two values, to concatenate two string values, etc.
 
 ```ergo
     1.0 + 2.0 * 3.0      // arithmetic operators on Double
@@ -81,5 +81,5 @@ Let bindings give a name to some intermediate result and allows you to reuse the
    else x                  // else return x
 ```
 
-> **TechNote:** let bindings in Ergo are immutable, in a way similar to other functional languages. A nice explaination can be found e.g., in the documentation for let bindings in [ReasonML](https://reasonml.github.io/docs/en/let-binding).
+> **TechNote:** let bindings in Ergo are immutable, in a way similar to other functional languages. A nice explanation can be found e.g., in the documentation for let bindings in [ReasonML](https://reasonml.github.io/docs/en/let-binding).
 

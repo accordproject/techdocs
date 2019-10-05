@@ -3,7 +3,7 @@ id: spec-packaging
 title: Packaging
 ---
 
-The artefacts that define a template are:
+The artifacts that define a template are:
 - Metadata, such as name and version
 - CML models, which define the template model, request, response and any required types
 - Template grammar for each supported locale
@@ -14,7 +14,7 @@ Templates are typically packaged and distributed as Cicero Template Archive (`.c
 
 - Directory: useful during testing, allows changes to the template to be quickly tested with no need to re-package
 - URL: allows templates to be published to a stable web address
-- Accord Projecte template library maintains a curated set of Open Source templates
+- Accord Project template library maintains a curated set of Open Source templates
 - npm: allows dependencies on templates to be easily declared for Node.js and browser based applications. Integrates with CI/CD tools.
 
 ## Metadata
