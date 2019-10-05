@@ -1798,7 +1798,7 @@ fill: #19C6C6;
   margin-right: 3px;
   border-radius: 5px;
   background-color: #050c400d;
-  padding: 15px 8px;
+  padding: 15px 4px 15px 15px;
 }
 
 .toc .toggleNav .navGroup .navGroupSubcategoryTitle {
