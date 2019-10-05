@@ -82,7 +82,7 @@ class HomeSplash extends React.Component {
             <Button href={docUrl('accordproject.html', this.props.language)}>Getting Started</Button>
             <Button href="#try">Try Online</Button>
             <Button href="https://github.com/accordproject">GitHub</Button>
-            <Button href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack</Button>
+            <Button href="https://accord-project-slack-signup.herokuapp.com/">Slack</Button>
           </PromoSection>
         </div>
       </SplashContainer>
