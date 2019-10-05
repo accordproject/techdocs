@@ -6,6 +6,9 @@
   <a href="https://accord-project-slack-signup.herokuapp.com/">
     <img src="https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue" alt="Join the Accord Project Slack" />
   </a>
+  <a href="https://github.com/accordproject/techdocs/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="Contributing guide" />
+  </a>
 </p>
 
 Technical Documentation for all Accord Project code. This site uses Docusaurus to generate static HTML.
