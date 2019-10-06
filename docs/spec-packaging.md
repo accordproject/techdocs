@@ -56,7 +56,7 @@ The grammar files for the template are stored in the  /grammar/ folder.
 
 ## Data Model
 
-The data model for a smart clause is stored in a set of files under the `/model` folder. The data model files must be in the format defined using the Composer Concerto modeling language. All data models for the template are in-scope and types from all namespaces may be imported.
+The data model for a smart clause is stored in a set of files under the `/model` folder. The data model files must be in the format defined using the Concerto modeling language. All data models for the template are in-scope and types from all namespaces may be imported.
 
 Using the ability to convert CML models to UML we can even visualise all the required types (model, request, response) we have modelled graphically:
 
