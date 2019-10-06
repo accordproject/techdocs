@@ -1,6 +1,8 @@
-<a href="https://www.accordproject.org/">
-  <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
-</a>
+﻿<h1 align="center">
+  <a href="https://www.accordproject.org/">
+    <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
+  </a>
+</h1>
 
 <p align="center">
   <a href="https://accord-project-slack-signup.herokuapp.com/">
