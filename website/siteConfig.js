@@ -57,7 +57,7 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/accord_icon_white.png',
+  headerIcon: 'img/A-MARK-ACCORDPROJECT-ONELINE-white.svg',
   footerIcon: 'img/accord_icon_white.png',
   favicon: 'img/favicon.png',
 
