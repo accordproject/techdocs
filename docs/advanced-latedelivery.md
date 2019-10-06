@@ -44,7 +44,7 @@ Moving along to the `Model` section, you will find the data model for the templa
 ![Advanced-Late-5](assets/advanced/late5.png)
 
 Note that a `namespace` is declared at the beginning of the file for the model, and that several existing models are being imported (using e.g., `import org.accordproject.cicero.contract.*`). Those imports are needed to access the definition for several types used in the model:
-- `AccordClause` which is a generic type for all Accord Project clause templates, and is defined in the `org.accordproject.contract` namesapce;
+- `AccordClause` which is a generic type for all Accord Project clause templates, and is defined in the `org.accordproject.contract` namespace;
 - `Request` and `Response` which are generic types for responses and requests, and are defined in the `org.accordproject.runtime` namespace;
 - `Duration` which is defined in the `org.accordproject.time` namespace.
 
@@ -184,7 +184,7 @@ The logic should now look as follows:
 
 ### Execute the new Logic
 
-As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result into a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
+As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result in a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
 
 ![Advanced-Late-14](assets/advanced/late14.png)
 
@@ -222,7 +222,7 @@ Compilation error (at file lib/logic.ergo line 19 col 31). Cannot find type with
 contract MiniLateDelivery over MiniLateDeliveryClause {
                                ^^^^^^^^^^^^^^^^^^^^^^ 
 ```
-Update the logic to use the the new `MiniLateDeliveryContract` type instead, as follows:
+Update the logic to use the new `MiniLateDeliveryContract` type instead, as follows:
 ```ergo
 contract MiniLateDelivery over MiniLateDeliveryContract {
 ```
