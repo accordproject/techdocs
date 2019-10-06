@@ -21,9 +21,8 @@ The text specifies the terms for the legal clause and includes a few
 variables such as `employee`, `company` and `tax`.
 
 The second component of a smart legal template is the model, which is
-expressed using the [Composer Concerto modeling
-language](https://github.com/hyperledger/composer-concerto). The model
-describes the variables of the contract, as well as additional
+expressed using the [Concerto modeling language](https://github.com/accordproject/concerto).
+The model describes the variables of the contract, as well as additional
 information required to execute the contract logic. In our example,
 this includes the input request for the clause (`Food`), the response
 to that request (`Outcome`) and possible events emitted during the
