@@ -12,7 +12,7 @@
 
 Technical Documentation for all Accord Project code. This site uses Docusaurus to generate static HTML.
 
-The site is hosted at: https://docs.accordproject.org
+The site is hosted at: [docs.accordproject.org](https://docs.accordproject.org)
 
 Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. Accord Project operates under the umbrella of the [Linux Foundation][linuxfound]. The technical charter for the Accord Project can be found [here][charter].
 
@@ -49,7 +49,8 @@ For code contributions, read our [CONTRIBUTING guide][contributing] and informat
 Accord Project source code files are made available under the [Apache License, Version 2.0][apache].
 Accord Project documentation files are made available under the [Creative Commons Attribution 4.0 International License][creativecommons] (CC-BY-4.0).
 
-Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respective owners. See [LF Projects Trademark Policy](https://lfprojects.org/policies/trademark-policy/).
+Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respective owners. 
+See [LF Projects Trademark Policy](https://lfprojects.org/policies/trademark-policy/).
 
 [linuxfound]: https://www.linuxfoundation.org
 [charter]: https://github.com/accordproject/techdocs/blob/master/CHARTER.md
