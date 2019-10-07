@@ -137,11 +137,14 @@ const Templates = props => (
   <Block id="templates">
     {[
       {
-        content: "<div class='typeset'>Cicero templates are composed of three elements: the Template Grammar (the natural language text for the template), the Template Model (the data model that backs the template), the Logic (the executable business logic for the template). When combined these three elements allow templates to be edited, analyzed, queried and executed.</div>",
-        image: imgUrl('../docs/assets/template.png'),
-        imageAlign: 'right',
-        title: 'Templates',
-      },
+        content:
+          "<div class='typeset'>Cicero templates are composed of three elements: the Template Grammar (the natural language text for the template), the Template Model (the data model that backs the template), the Logic (the executable business logic for the template). When combined these three elements allow templates to be edited, analyzed, queried and executed.</div>",
+        image: imgUrl("../docs/assets/template.png"),
+        imageAlt:
+          "The three elements of Cicero templates: Model, Natural Language, Logic.These elements all form a triangle.  ",
+        imageAlign: "right",
+        title: "Templates"
+      }
     ]}
   </Block>
 );
@@ -151,11 +154,14 @@ const Grammar = props => (
   <Block background="dark" id="accord">
     {[
       {
-        content: '<div class="typeset">Create structured clauses and contracts by binding variables in natural language to a data model. Optionally, clauses can be made executable by adding contract logic to the data model.</div>',
-        image: imgUrl('grammar.png'),
-        imageAlign: 'left',
-        title: 'Natural <span class="strong">Language</span>',
-      },
+        content:
+          '<div class="typeset">Create structured clauses and contracts by binding variables in natural language to a data model. Optionally, clauses can be made executable by adding contract logic to the data model.</div>',
+        image: imgUrl("grammar.png"),
+        imageAlt:
+          "An example of a .tem file. There are 3 paragraphs of a contract with binding variables incorporated in each paragraph",
+        imageAlign: "left",
+        title: 'Natural <span class="strong">Language</span>'
+      }
     ]}
   </Block>
 );
@@ -164,11 +170,13 @@ const Model = props => (
   <Block id="model">
     {[
       {
-        content: '<div class="typeset">The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://github.com/hyperledger/composer-concerto">Composer Concerto Modeling Language</a>.</div>',
-        image: imgUrl('model-uml.png'),
-        imageAlign: 'right',
-        title: 'Model',
-      },
+        content:
+          '<div class="typeset">The template model defines the structure of data that are used in the natural language and logic. Accord Project templates use the <a href="https://github.com/hyperledger/composer-concerto">Composer Concerto Modeling Language</a>.</div>',
+        image: imgUrl("model-uml.png"),
+        imageAlt: "A diagram depicting the Concerto modeling language ",
+        imageAlign: "right",
+        title: "Model"
+      }
     ]}
   </Block>
 );
@@ -177,11 +185,13 @@ const Logic = props => (
   <Block background="dark" id="logic">
     {[
       {
-        content: '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* smart legal contract logic.</div>',
-        image: imgUrl('ergo-vscode.png'),
-        imageAlign: 'left',
-        title: 'Logic',
-      },
+        content:
+          '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* smart legal contract logic.</div>',
+        image: imgUrl("ergo-vscode.png"),
+        imageAlt: "Example of an Ergo file",
+        imageAlign: "left",
+        title: "Logic"
+      }
     ]}
   </Block>
 );
@@ -190,11 +200,14 @@ const TryOut = props => (
   <Block id="try">
     {[
       {
-        content: '<div class="typeset">You can author and test templates online in the Accord Project <a href="https://studio.accordproject.org">Template Studio</a>. Search for existing templates, edit the contract text and execute the logic.</div>',
-        image: imgUrl('studio.png'),
-        imageAlign: 'right',
-        title: 'Author <span class="strong">and Edit</span>',
-      },
+        content:
+          '<div class="typeset">You can author and test templates online in the Accord Project <a href="https://studio.accordproject.org">Template Studio</a>. Search for existing templates, edit the contract text and execute the logic.</div>',
+        image: imgUrl("studio.png"),
+        imageAlt:
+          "An example a template being edited. There is an option to edit the full contract or a single clause. There is also a search bar at the top center for users to search for specific templates.",
+        imageAlign: "right",
+        title: 'Author <span class="strong">and Edit</span>'
+      }
     ]}
   </Block>
 );
