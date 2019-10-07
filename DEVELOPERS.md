@@ -19,7 +19,7 @@ machine:
 
 * [Node.js v10.16.0 'Dubnium' (LTS)][node]: We use Node to generate the documentation, run a
   development web server, run tests, and generate distributable files. Depending on your system,
-  you can install Node either from source or as a pre-packaged bundle.
+  you can install Node either from the source or as a pre-packaged bundle.
 
   We recommend using [nvm][nvm] (or [nvm-windows][nvm-windows])
   to manage and install Node.js, which makes it easy to change the version of Node.js per project.
@@ -100,7 +100,7 @@ We have very precise rules over how our git commit messages can be formatted.  T
 readable messages** that are easy to follow when looking through the **project history** and **git logs**.  
 But also, we use the git commit messages to **generate the Cicero-UI change log**.
 
-The commit message formatting can be added using a version of typical git workflow.
+The commit message formatting can be added using a version of the typical git workflow.
 
 ### Commit Message Format
 Each commit message consists of a mandatory **type**, **scope**, **subject**, and **footer**. This is a specific format:
@@ -137,10 +137,10 @@ description for where changes can be found.
 You can use `*` when the change affects more than a single scope.
 
 ### Subject
-The subject contains succinct description of the change:
+The subject contains a succinct description of the change:
 
 * use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize first letter
+* don't capitalize the first letter
 * kept under 50 characters
 * no dot (.) at the end
 
