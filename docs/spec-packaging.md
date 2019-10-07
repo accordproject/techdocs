@@ -14,7 +14,7 @@ Templates are typically packaged and distributed as Cicero Template Archive (`.c
 
 - Directory: useful during testing, allows changes to the template to be quickly tested with no need to re-package
 - URL: allows templates to be published to a stable web address
-- Accord Projecte template library maintains a curated set of Open Source templates
+- Accord Project template library maintains a curated set of Open Source templates
 - npm: allows dependencies on templates to be easily declared for Node.js and browser based applications. Integrates with CI/CD tools.
 
 ## Metadata
@@ -39,7 +39,7 @@ The name property must consist of `[a-z][A-Z][.]`. It is strongly recommended th
 
 The `accordproject` property of a template specifies the following metadata:
 - `template`: must either be `clause` for a clause template or `contract` for a contract templates
-- `ergo`: the Ergo version used to to draft the template. This is an npm [semver](https://semver.npmjs.com) specification.
+- `ergo`: the Ergo version used to draft the template. This is an npm [semver](https://semver.npmjs.com) specification.
 - `cicero`: the Cicero version with which the template is compatible. This is an npm [semver](https://semver.npmjs.com) specification.
 
 The `keywords` property should list words relevant to the template, and can be useful for search and classification.
