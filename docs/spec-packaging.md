@@ -3,7 +3,7 @@ id: spec-packaging
 title: Packaging
 ---
 
-The artefacts that define a template are:
+The artifacts that define a template are:
 - Metadata, such as name and version
 - CML models, which define the template model, request, response and any required types
 - Template grammar for each supported locale

@@ -45,7 +45,7 @@ Moving along to the `Model` section, you will find the data model for the templa
 ![Advanced-Late-5](assets/advanced/late5.png)
 
 Note that a `namespace` is declared at the beginning of the file for the model, and that several existing models are being imported (using e.g., `import org.accordproject.cicero.contract.*`). Those imports are needed to access the definition for several types used in the model:
-- `AccordClause` which is a generic type for all Accord Project clause templates, and is defined in the `org.accordproject.contract` namesapce;
+- `AccordClause` which is a generic type for all Accord Project clause templates, and is defined in the `org.accordproject.contract` namespace;
 - `Request` and `Response` which are generic types for responses and requests, and are defined in the `org.accordproject.runtime` namespace;
 - `Duration` which is defined in the `org.accordproject.time` namespace.
 

@@ -162,7 +162,7 @@ Before you submit your pull request consider the following guidelines:
     git push origin name-issue-tracker-short-description -f
     ```
 
-    This is generally easier to follow, but seperate commits are useful if the Pull Request contains iterations that might be interesting to see side-by-side.
+    This is generally easier to follow, but separate commits are useful if the Pull Request contains iterations that might be interesting to see side-by-side.
 
 That's it! Thank you for your contribution!
 
