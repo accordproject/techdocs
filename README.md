@@ -17,7 +17,10 @@ Technical Documentation for all Accord Project code. This site uses Docusaurus t
 
 The site is hosted at: https://docs.accordproject.org
 
-Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. Accord Project operates under the umbrella of the [Linux Foundation][linuxfound]. The technical charter for the Accord Project can be found [here][charter].
+The Accord Project is an open ecosystem enabling anyone to build smart agreements
+and documents on a technology neutral platform
+
+Accord Project operates under the umbrella of the [Linux Foundation][linuxfound]. The technical charter for the Accord Project can be found [here][charter].
 
 ## Learn More About Accord Project
 
