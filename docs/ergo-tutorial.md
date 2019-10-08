@@ -18,7 +18,7 @@ DAYS and MESSAGE are variables
  
 You can browse the library of Open Source Cicero contract and clause templates at: https://templates.accordproject.org.
 
-So how goes the contract get executed? That is where Ergo comes in Ergo is a strongly-typed functional programming language designed to capture the legal intent of legal contracts and clauses. We will use Ergo to create the contract logic consisting of a contract class with executable embedded clauses. Note: prior to the emergence of Ergo, the Cicero JavaScript component was primary to the execution of code.
+So how goes the contract logic run? That is where Ergo comes. Ergo is a strongly-typed functional programming language designed to capture the legal intent of legal contracts and clauses. We will use Ergo to create the contract logic consisting of a contract class with embedded clauses. Note: prior to the emergence of Ergo, the Cicero JavaScript component was primary to the execution of code.
 
 Ergo obviates the Cicero JavaScript component for the  execution phase with a new more comprehensive language which we explore in this tutorial.
    
