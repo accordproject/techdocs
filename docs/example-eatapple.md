@@ -84,7 +84,7 @@ indicating termination of employment.
 If the condition is true, the contract proceeds by emitting a bill for
 the purchase of the apple. The employee to be billed is obtained from
 the contract (`contract.employee`). The total amount is calculated by
-adding the tax, which is obtained from the contract (`contract.tax`)
+adding the tax, which is obtained from the contract (`contract.tax`),
 to the purchase price, which is obtained from the request
 (`request.price`). The calculation is done using a simple arithmetic
 expression (`request.price * (1.0 + contract.tax / 100.0)`).
