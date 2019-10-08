@@ -52,7 +52,7 @@ const SplashContainer = props => (
 
 const Logo = props => (
   <div className="projectLogo">
-    <img src={props.img_src} />
+    <img src={props.img_src} alt="project logo image"/>
   </div>
 );
 
@@ -95,7 +95,7 @@ const Block = props => (
     padding={['bottom', 'top']}
     id={props.id}
     background={props.background}>
-    <GridBlock align="center" contents={props.children} layout={props.layout} />
+    <GridBlock align="center" contents={props.children} layout={props.layout} /lt="background image">
   </Container>
 );
 
@@ -267,3 +267,4 @@ class Index extends React.Component {
 }
 
 module.exports = Index;
+
