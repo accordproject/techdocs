@@ -10,13 +10,13 @@ A legal professional analyzes a contract to determine the frequently used/standa
 
 ## Step 2: Data Modeling
 
-Concept Template Data Model. The variables and expressions in a template are expressed in terms of a typed data model, that captures all the concepts of relevance to the clause. The data model technology allows importing concepts from namespaces, allowing concepts to be shared across templates.
+Concept Template Data Model. The variables and expressions in a template are expressed in terms of a typed data model that captures all the concepts of relevance to the clause. The data model technology allows importing concepts from namespaces, allowing concepts to be shared across templates.
 
 ## Step 3: Generation of the Template Parser
 The [Cicero Open Source project](https://github.com/accordproject/cicero) contains code that can automatically generate a parser from the annotated template text (template grammar) and the associated template data model. The parser generation is completely automatic and supports customization of types and nested grammars.
 
 ## Step 4: Create a Smart Clause
-The generated template parser can now be used to dynamically edit and validate source smart clause text (potentially using code completion, error reporting etc). The editor technology can be embedded on a webpage, or executed as a SaaS service, or run within an IDE.
+The generated template parser can now be used to dynamically edit and validate source smart clause text (potentially using code completion, error reporting etc.). The editor technology can be embedded on a webpage, or executed as a SaaS service, or run within an IDE.
 
 ## Concept 5: Smart Clause (instance of a Template) 
 The output of the Template Parser is an instance of the Template Model (a JSON abstract syntax tree that can be deployed to the engine). It captures a machine readable (and hashable) representation of all the executable data extracted from the smart clause text.
