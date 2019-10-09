@@ -1,6 +1,6 @@
 # Contributing to Accord Project Documentation
 
-> Thanks to the angularJS team for the bulk of this text!
+> Thanks to the AngularJS team for the bulk of this text!
 
 We'd love for you to contribute to our source code and to make Accord Project documentation even better than it is today! Here are the guidelines we'd like you to follow:
 
@@ -38,7 +38,7 @@ You can request a new feature by submitting an issue to our [GitHub Repository][
 
 If you would like to implement a new feature then consider what kind of change it is:
 
-* **Major Changes** that you wish to contribute to the project should be discussed first in an
+* **Major Changes** that you wish to contribute to the project should be discussed first in a
   [GitHub issue][github-issues] that clearly outlines the changes and benefits of the feature.
 * **Small Changes** can directly be crafted and submitted to the [GitHub Repository][github]
   as a Pull Request. See the section about [Pull Request Submission Guidelines][contribute.submitpr], and
