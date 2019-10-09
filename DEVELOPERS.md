@@ -44,7 +44,7 @@ git clone https://github.com/<github username>/<repository>.git
 cd <repository>
 
 # Add the main repository as an upstream remote to your repository:
-git remote add upstream "https://github.com/acccordproject/<repository>.git"
+git remote add upstream "https://github.com/accordproject/<repository>.git"
 
 # Install node.js dependencies:
 npm install
