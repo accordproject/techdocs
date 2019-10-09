@@ -23,17 +23,17 @@ Then head to the `Template` tab in the `Contract Text` section which shows the n
 
 ![Advanced-Late-2](assets/advanced/late2.png)
 
-When the text in the `Template` tab is in sync with the text in the `Test Contract` tab, this results in a valid contract instance in the `Contract Data` tab. The contract data is represented using the JSON format, and contains the value of the variables declared in the contract template. For instance, the value for the `buyer` variable is `Betty Buyer`, highlighted in red:
+When the text in the `Template` tab is in sync with the text in the `Test Contract` tab, this results in a valid contract instance in the `Contract Data` tab. The contract data is represented using the JSON format and contains the value of the variables declared in the contract template. For instance, the value for the `buyer` variable is `Betty Buyer`, highlighted in red:
 
 ![Advanced-Late-3](assets/advanced/late3.png)
 
-Changes to the variables in the `Test Contract` are reflected in the Contract Data in real time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
+Changes to the variables in the `Test Contract` are reflected in the Contract Data in real-time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
 
-If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Contract Text`. The error will be shown in red in the status bar at the bottom of the page. For instance the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.
+If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Contract Text`. The error will be shown in red in the status bar at the bottom of the page. For instance, the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.
 
 ![Advanced-Late-4](assets/advanced/late4.png)
 
-This is because the `Test Contract` relies on the `Template` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can however edit the `Template` itself in order to change the legal text, thereby creating a new template.
+This is because the `Test Contract` relies on the `Template` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can, however, edit the `Template` itself to change the legal text, thereby creating a new template.
 
 Revert your changes, changing the word `timely` back to the original word `delayed` and the parsing error will disappear.
 
@@ -132,7 +132,7 @@ asset MiniLateDeliveryClause extends AccordClause {
 }
 ```
 
-This result in a new error, this time on the test contract:
+This results in a new error, this time on the test contract:
 
 ![Advanced-Late-11](assets/advanced/late11.png)
 
@@ -184,7 +184,7 @@ The logic should now look as follows:
 
 ### Execute the new Logic
 
-As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result into a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
+As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result in a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
 
 ![Advanced-Late-14](assets/advanced/late14.png)
 
@@ -212,7 +212,7 @@ asset MiniLateDeliveryContract extends AccordContract {
 }
 ```
 
-The next error is in the logic, since it still uses the old `MiniLateDeliveryClause` type which does not exist anymore.
+The next error is in the logic since it still uses the old `MiniLateDeliveryClause` type which does not exist anymore.
 
 ### Update the Logic
 
