@@ -27,7 +27,7 @@ When the text in the `Template` tab is in sync with the text in the `Test Contra
 
 ![Advanced-Late-3](assets/advanced/late3.png)
 
-Changes to the variables in the `Test Contract` are reflected in the Contract Data in realtime, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
+Changes to the variables in the `Test Contract` are reflected in the Contract Data in real time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
 
 If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Contract Text`. The error will be shown in red in the status bar at the bottom of the page. For instance, the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.
 
