@@ -132,7 +132,7 @@ asset MiniLateDeliveryClause extends AccordClause {
 }
 ```
 
-This result in a new error, this time on the test contract:
+This results in a new error, this time on the test contract:
 
 ![Advanced-Late-11](assets/advanced/late11.png)
 
