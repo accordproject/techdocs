@@ -23,6 +23,6 @@ for i in "${!CONTRIBUTORS[@]}"; do
     if [ $(($i % 20)) -eq 0 ]; then
         echo ""
     fi
-    echo "<img src=\"https://avatars3.githubusercontent.com/u/${CONTRIBUTORS[$i]}?s=30&v=4\" height="30"/> "; 
+    echo "<img src=\"https://avatars3.githubusercontent.com/u/${CONTRIBUTORS[$i]}?s=30&v=4\" alt="contributor avatar" height="30"/> "; 
 
 done > CONTRIBUTORS.md
