@@ -46,6 +46,9 @@ cd <repository>
 # Add the main repository as an upstream remote to your repository:
 git remote add upstream "https://github.com/accordproject/<repository>.git"
 
+# Go to website directory
+cd website
+
 # Install node.js dependencies:
 npm install
 ```
