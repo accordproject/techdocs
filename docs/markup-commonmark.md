@@ -12,19 +12,23 @@ The following guide is not normative; the official specification can be found on
 
 ### Italic
 To italicize text, simply add one asterisk `*` or underscore `_` both before and after the relevant text.
+
 For example, `_Donoghue v Stevenson_ is a landmark tort law case.` will be shown as:
 
 _Donoghue v Stevenson_ is a landmark tort law case.
 
 ### Bold
 To bold text, simply add two asterisks `**` or two underscores `__` both before and after the relevant text.
+
 For example, `**Price** is defined in the Appendix.` will be shown as:
 
 **Price** is defined in the Appendix.
 
 
 ### Bold and Italic
-To bold _and_ italicize text, add `***` both before and after the relevant text. For example, `*** WARNING***: This product contains chemicals that may cause cancer.` will be shown as:
+To bold _and_ italicize text, add `***` both before and after the relevant text.
+
+For example, `*** WARNING***: This product contains chemicals that may cause cancer.` will be shown as:
 
 ***WARNING***: This product contains chemicals that may cause cancer.
 
@@ -34,22 +38,22 @@ To avoid creating bold or italic when using `*` or `_` in a sentence, place a ba
 
 <!--Paragraphs-->
 ## Paragraphs
-To start a new paragraph, insert one or more blank lines. (In other words, all paragraphs in markdown need to have one or more blank lines between them.) For a **line break**, add either a backslash `\` or two blank spaces at the end of the line. For example:   
+To start a new paragraph, insert one or more blank lines. (In other words, all paragraphs in markdown need to have one or more blank lines between them.)
+
+For example:
 
 ```md
 This is the first paragraph.
 
 This is the second paragraph.
-
-This is a\ line\ break.
+This is not a second paragraph.
 ```
 will be shown as:
 
 This is the first paragraph.
 
 This is the second paragraph.
-
-This is a\ line\ break.
+This is not a second paragraph.
 
 
 <!--Heading and Titles-->
