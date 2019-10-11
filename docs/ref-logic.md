@@ -167,7 +167,7 @@ match maybe_response
         // Do something else when there is no response
 ```
 
-Often a match expression is a more consise way to represent a
+Often a match expression is a more concise way to represent a
 conditional expression with a repeating, regular condition. For example:
 
 ```ergo

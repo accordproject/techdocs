@@ -91,7 +91,7 @@ transaction MyResponse extends Response {
 }
 ```
 
-The `TemplateModel` as well as the `Request` and `Response` are types which are specified using the [Composer Concerto modeling language](https://github.com/hyperledger/composer-concerto).
+The `TemplateModel` as well as the `Request` and `Response` are types which are specified using the [Concerto modeling language](https://github.com/accordproject/concerto).
 
 The `TemplateModel` indicate that the template is for a Clause, and should have a variable `name` of type `String` (i.e., text).
 

@@ -75,7 +75,7 @@ class Footer extends React.Component {
               </li>
               <li>
                 <a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">
-                Twitter
+                  Twitter
                 </a>
               </li>
             </ul>
@@ -90,17 +90,24 @@ class Footer extends React.Component {
                 <a href="https://github.com/accordproject">GitHub</a>
               </li>
               <li>
-              <a className="github-button" href={this.props.config.repoUrl} data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count={true} data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a>
+                <a className="github-button" href={this.props.config.repoUrl} data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count={true} data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a>
               </li>
             </ul>
           </div>
         </section>
-        
+
 
         <div className="col-container align-end">
           <div className="col col-twothird">
+
+            <div className="linux-foundation-logo">
+              <a href="https://www.linuxfoundation.org/projects/">
+                <img src="img/LF-logo.png" />
+              </a>
+            </div>
+
             <p className="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p>
-            
+
             <p className="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p>
           </div>
           <div className="col">

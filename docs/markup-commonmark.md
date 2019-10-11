@@ -11,6 +11,7 @@ The following guide is not normative; the official specification can be found on
 ## Fonts
 
 ### Italic
+
 To italicize text, simply add one asterisk `*` or underscore `_` both before and after the relevant text.
 
 For example, `_Donoghue v Stevenson_ is a landmark tort law case.` will be shown as:
@@ -55,7 +56,6 @@ This is the first paragraph.
 This is the second paragraph.
 This is not a second paragraph.
 
-
 <!--Heading and Titles-->
 ## Headings
 
@@ -79,10 +79,10 @@ Renders to:
 ##### h5 Laws enacted by state legislature
 ###### h6 Local laws and ordinances
 
-
 ### Using underlines
 Alternatively, headings 1 and 2 can be represented by using `=` and `-`:
 ```
+
 Linux Foundation
 ================
 
@@ -154,7 +154,6 @@ will be rendered to:
 2. Matters related to the assets
     - sell or otherwise dispose...
     - mortage, ...
-
 
 <!--Horizontal Rule-->
 ## Horizontal Rule

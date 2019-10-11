@@ -32,7 +32,7 @@ The following screenshot shows a Cicero template for an acceptance of delivery c
 ![Template Grammar](/docs/assets/grammar.png)
 
 Cicero relies on two other projects:
-- [Concerto](https://github.com/hyperledger/composer-concerto): a lightweight, versatile data modeling language (maintained by the Hyperledger forum)
+- [Concerto](https://github.com/accordproject/concerto): a lightweight, versatile data modeling language (maintained by the Hyperledger forum)
 - [Ergo](https://github.com/accordproject/ergo): a domain specific language to express the executable logic of legal templates
 
 ### Concerto
@@ -55,7 +55,7 @@ The following screenshot shows the Ergo logic for the acceptance of delivery cla
 
 ![Ergo Logic](/img/ergo-vscode.png)
 
-It is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent computer code. For that reason, Ergo is intended to be accessible to Lawyers who create the corresponding prose for those computable legal contracts. As a programming language, the Ergo syntax also adheres to programming conventions.
+It is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent computer code. For that reason, Ergo is intended to be accessible to lawyers who create the corresponding prose for those computable legal contracts. As a programming language, the Ergo syntax also adheres to programming conventions.
 
 ## Ecosystem
 
