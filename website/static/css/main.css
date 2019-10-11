@@ -782,12 +782,6 @@ blockquote {
     display: none !important;
   }
 }
-@media (max-width: 500px) {
-  img.logo {
-    content:url("../img/Accord-Project-logo-small.svg");
-  }
-}
-
 /* End of Navbar */
 
 /* Promo section */
