@@ -99,6 +99,8 @@ class Footer extends React.Component {
 
         <div className="col-container align-end">
           <div className="col col-twothird">
+          <a className="image-footer" href="https://www.linuxfoundation.org/projects/" target="_blank"><img src="/img/linux-foundation.png" alt="Linux Foundation"/></a>
+
             <p className="copyright disclaimer">The Accord Project is not a standards setting body or organization. Documentation should be interpreted accordingly.</p>
             
             <p className="copyright disclaimer">The materials on this site are for informational purposes only and do not constitute legal advice. The Accord Project is not a law firm or a substitute for an attorney or law firm. The Accord Project cannot provide any kind of advice, explanation, opinion, or recommendation about possible legal rights, remedies, defenses, options, selection of forms, or strategies. The information provided is not intended to create, and receipt or use of it does not constitute, a lawyer-client relationship. Users should not act upon this information without seeking professional counsel.</p>

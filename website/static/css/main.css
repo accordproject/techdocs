@@ -2387,6 +2387,12 @@ fill: #19C6C6;
 .nav-footer .social {
   padding: 5px 0;
 }
+
+
+.nav-footer .image-footer img{
+  max-width: 300px;
+  margin: 50px 0;
+}
 /* End of Footer */
 
 .tabs {
