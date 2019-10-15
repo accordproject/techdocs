@@ -20,7 +20,7 @@ CONTRIBUTORS=($( echo "${CONTRIBUTORS[@]}" | tr ' ' '\n' | sort -u | tr '\n' ' '
 
 for i in "${!CONTRIBUTORS[@]}"; do 
     echo "${CONTRIBUTORS[$i]}"
-    node  "./node_modules/all-contributors-cli/dist/cli.js"  add ${CONTRIBUTORS[$i]} code
+    node  "./node_modules/all-contributors-cli/dist/cli.js"  add ${CONTRIBUTORS[$i]} doc
 done
 
 node  "./node_modules/all-contributors-cli/dist/cli.js" generate
