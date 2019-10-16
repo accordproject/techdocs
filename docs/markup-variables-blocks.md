@@ -63,8 +63,46 @@ This code is rendered as markdown from a JSON object created through [Concerto](
 
 ```json
 {
-    "$class": "org.accordproject.volumediscountlist.VolumeDiscountRequest",
-    "netAnnualChargeVolume": 10.4
+  "$class": "org.accordproject.volumediscountlist.VolumeDiscountContract",
+  "contractId": "19243313-adc2-4ff1-aa41-993816ed2cdc",
+  "rates": [
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1,
+      "volumeAbove": 0,
+      "rate": 3.1
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 10,
+      "volumeAbove": 1,
+      "rate": 3.1
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 50,
+      "volumeAbove": 10,
+      "rate": 2.9
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 500,
+      "volumeAbove": 50,
+      "rate": 2.5
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1000,
+      "volumeAbove": 500,
+      "rate": 1.2
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1000000,
+      "volumeAbove": 1000,
+      "rate": 0.1
+    }
+  ]
 }
 ```
 
@@ -91,8 +129,46 @@ This code is rendered as markdown from a JSON object created through [Concerto](
 
 ```json
 {
-    "$class": "org.accordproject.volumediscountlist.VolumeDiscountRequest",
-    "netAnnualChargeVolume": 10.4
+  "$class": "org.accordproject.volumediscountlist.VolumeDiscountContract",
+  "contractId": "19243313-adc2-4ff1-aa41-993816ed2cdc",
+  "rates": [
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1,
+      "volumeAbove": 0,
+      "rate": 3.1
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 10,
+      "volumeAbove": 1,
+      "rate": 3.1
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 50,
+      "volumeAbove": 10,
+      "rate": 2.9
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 500,
+      "volumeAbove": 50,
+      "rate": 2.5
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1000,
+      "volumeAbove": 500,
+      "rate": 1.2
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1000000,
+      "volumeAbove": 1000,
+      "rate": 0.1
+    }
+  ]
 }
 ```
 
@@ -120,8 +196,46 @@ This code is rendered as markdown from a JSON object created through [Concerto](
 
 ```json
 {
-    "$class": "org.accordproject.volumediscountlist.VolumeDiscountRequest",
-    "netAnnualChargeVolume": 10.4
+  "$class": "org.accordproject.volumediscountlist.VolumeDiscountContract",
+  "contractId": "19243313-adc2-4ff1-aa41-993816ed2cdc",
+  "rates": [
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1,
+      "volumeAbove": 0,
+      "rate": 3.1
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 10,
+      "volumeAbove": 1,
+      "rate": 3.1
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 50,
+      "volumeAbove": 10,
+      "rate": 2.9
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 500,
+      "volumeAbove": 50,
+      "rate": 2.5
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1000,
+      "volumeAbove": 500,
+      "rate": 1.2
+    },
+    {
+      "$class": "org.accordproject.volumediscountlist.RateRange",
+      "volumeUpTo": 1000000,
+      "volumeAbove": 1000,
+      "rate": 0.1
+    }
+  ]
 }
 ```
 
