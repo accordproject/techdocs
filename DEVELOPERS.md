@@ -187,7 +187,7 @@ This means that all the docs are stored inline in the source code and so are kep
 changes.
 
 This means that since we generate the documentation from the source code, we can easily provide
-version-specific documentation by simply checking out a version of Cicero-UI and running the build.
+version-specific documentation by checking out a version of Cicero-UI and running the build.
 
 ## License <a name="license"></a>
 

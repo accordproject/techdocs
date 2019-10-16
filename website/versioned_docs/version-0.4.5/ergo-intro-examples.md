@@ -32,7 +32,7 @@ which can be specified using the Hyperledger CTO format.
 
 The clause takes a `Request` as input and returns a `Response`.
 
-The code for the clause just constructs a new `Response` with a
+The code for the clause constructs a new `Response` with a
 property `output` which is a string containing the property `name` of
 from the contract (`contract`) and the property `input` from the
 request (`request`).
