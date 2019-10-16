@@ -53,76 +53,82 @@ Block Formulas of kind `kind` with scope `scope` and parameters `params` are quo
 
 ### Unordered Lists
 
-
-
 ```handlebars
-{{#ulist products}}
-Product {[name}} with code {[id}}
+{{#ulist rates}}
+{{volumeAbove}}$ million <= Volume < {{volumeUpTo}}$ million : {{rate}}%
 {{/ulist}}
 ```
 
 This code is rendered as markdown from a JSON object created through [Concerto](https://docs.accordproject.org/docs/model-concerto.html):
 
-```js
-{ products: [
-    { name: "Sponge", id: 1312 },
-    { name: "Bleach", id: 341 }
-  ] }
+```json
+{
+    "$class": "org.accordproject.volumediscountlist.VolumeDiscountRequest",
+    "netAnnualChargeVolume": 10.4
+}
 ```
 
 Which results in the following markdown text:
 
 ```md
-- Product "Sponge" with code 1312
-- Product "Bleach" with code 341
+- 0.0$ million <= Volume < 1.0$ million : 3.1%
+- 1.0$ million <= Volume < 10.0$ million : 3.1%
+- 10.0$ million <= Volume < 50.0$ million : 2.9%
+- 50.0$ million <= Volume < 500.0$ million : 2.5%
+- 500.0$ million <= Volume < 1000.0$ million : 1.2%
+- 1000.0$ million <= Volume < 1000000.0$ million : 0.1%
 ```
 
 ### Ordered Lists
 
 ```handlebars
-{{#olist products}}
-Product {{name}} with code {{id}}
+{{#olist rates}}
+{{volumeAbove}}$ million <= Volume < {{volumeUpTo}}$ million : {{rate}}%
 {{/olist}}
 ```
 
 This code is rendered as markdown from a JSON object created through [Concerto](https://docs.accordproject.org/docs/model-concerto.html):
 
-```js
-{ products: [
-    { name: "Sponge", id: 1312 },
-    { name: "Bleach", id: 341 }
-  ] }
+```json
+{
+    "$class": "org.accordproject.volumediscountlist.VolumeDiscountRequest",
+    "netAnnualChargeVolume": 10.4
+}
 ```
 
 Which results in the following markdown text:
 
 ```md
-1. Product "Sponge" with code 1312
-1. Product "Bleach" with code 341
+1. 0.0$ million <= Volume < 1.0$ million : 3.1%
+1. 1.0$ million <= Volume < 10.0$ million : 3.1%
+1. 10.0$ million <= Volume < 50.0$ million : 2.9%
+1. 50.0$ million <= Volume < 500.0$ million : 2.5%
+1. 500.0$ million <= Volume < 1000.0$ million : 1.2%
+1. 1000.0$ million <= Volume < 1000000.0$ million : 0.1%
 ```
 
 ### Joined Lists
 
 You create a list with a delimiter
 ```handlebars
-{{#join products ","}}
-{{name}}
+{{#join rates ","}}
+{{rate}}
 {{/join}}
 ```
 
 This code is rendered as markdown from a JSON object created through [Concerto](https://docs.accordproject.org/docs/model-concerto.html):
 
-```js
-{ products: [
-    { name: "Sponge", id: 1312 },
-    { name: "Bleach", id: 341 }
-  ] }
+```json
+{
+    "$class": "org.accordproject.volumediscountlist.VolumeDiscountRequest",
+    "netAnnualChargeVolume": 10.4
+}
 ```
 
 Which results in the following markdown text:
 
 ```md
-"Sponge","Bleach"
+3.1, 3.1, 2.9, 2.5, 1.2, 0.1
 ```
 
 ### Clauses
