@@ -137,7 +137,7 @@ This result in a new error, this time on the test contract:
 
 ![Advanced-Late-11](assets/advanced/late11.png)
 
-To fix it, we need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
+To fix it, we simply need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
 
 For convenience, you can copy-paste the new test contract from here:
 ```md
