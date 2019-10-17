@@ -15,7 +15,7 @@ Each Ergo file starts with a namespace declaration which provides a way to ident
 
 ## Libraries
 
-A library is simply an Ergo file in a namespace which defines useful constants or functions. For instance:
+A library is an Ergo file in a namespace which defines useful constants or functions. For instance:
 
 ```ergo
     namespace org.accordproject.ergo.money
