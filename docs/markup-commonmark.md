@@ -8,7 +8,7 @@ The following guide is not normative; the official specification can be found on
 # Formatting
 ## Fonts
 ### Italic
-To italicize text, add one asterisk `*` or underscore `_` both before and after the relevant text.
+To italicize text, simply add one asterisk `*` or underscore `_` both before and after the relevant text.
 
 For example,
 ```md
@@ -20,7 +20,7 @@ will be shown as:
 >_Donoghue v Stevenson_ is a landmark tort law case.
 
 ### Bold
-To bold text, add two asterisks `**` or two underscores `__` both before and after the relevant text.
+To bold text, simply add two asterisks `**` or two underscores `__` both before and after the relevant text.
 
 For example,
 ```md
@@ -111,7 +111,7 @@ Renders to:
 >* Ergo
 >* Concerto
 
-*Tip*: To use these characters without creating a list, include a backslash `\` in the beginning, like `\*`, `\+`, or `\-`.
+*Tip*: To use these characters without creating a list, simply include a backslash `\` in the beginning, like `\*`, `\+`, or `\-`.
 
 ### Ordered Lists
 To create an ordered list, use numbers followed by period `.`.
@@ -128,7 +128,7 @@ will be shown as:
 >2. Two
 >3. Three
 
-<!-- Sometimes lists change, and when they do it's a pain to re-order all of the numbers. Markdown solves this problem by allowing you to use 1. before each item in the list. Like this...-->
+<!-- Sometimes lists change, and when they do it's a pain to re-order all of the numbers. Markdown solves this problem by allowing you to simply use 1. before each item in the list. Like this...-->
 
 ### Nested Lists
 

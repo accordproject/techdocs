@@ -40,7 +40,7 @@ Cicero archives are files with a `.cta` extension, which includes all the differ
 
 ## Parse a Valid Clause Text
 
-Using your terminal `cd` into the directory that contains the template archive you downloaded, then create a sample clause text `sample.txt` which contains the following text:
+Using your terminal `cd` into the directory that contains the template archive you just downloaded, then create a sample clause text `sample.txt` which contains the following text:
 
 ```text
 Name of the person to greet: "Fred Blogs".

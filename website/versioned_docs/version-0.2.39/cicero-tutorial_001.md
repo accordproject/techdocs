@@ -11,7 +11,7 @@ original_id: cicero-tutorial_001
 ### Download the Template
 
 You can either [download the latest release archive](https://github.com/accordproject/cicero-template-library/releases) or if you have `git`
-installed `git clone` the repository::
+installed simply `git clone` the repository::
 
     git clone https://github.com/accordproject/cicero-template-library
 
