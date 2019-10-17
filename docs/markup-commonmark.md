@@ -3,205 +3,182 @@ id: markup-commonmark
 title: Rich Text Markup
 ---
 
-## Formatting
+The following guide is not normative; the official specification can be found on the official [CommonMark page](https://commonmark.org/).
 
-<!--Fonts-->
+# Formatting
 ## Fonts
-
 ### Italic
-To italicize text, simply add one asterisk `*` or underscore `_` both before and after the relevant text. For example, `_Donoghue v Stevenson_ is a landmark tort law case.` will be shown as:
+To italicize text, add one asterisk `*` or underscore `_` both before and after the relevant text.
+
+For example,
 ```md
 _Donoghue v Stevenson_ is a landmark tort law case.
 ```
 
+will be shown as:
+
+>_Donoghue v Stevenson_ is a landmark tort law case.
+
 ### Bold
-To bold text, simply add two asterisks `**` or two underscores `__` both before and after the relevant text. For example, `**Price** is defined in the Appendix.` will be shown as:
+To bold text, add two asterisks `**` or two underscores `__` both before and after the relevant text.
+
+For example,
 ```md
 **Price** is defined in the Appendix.
 ```
 
+will be shown as:
+
+> **Price** is defined in the Appendix.
+
+
 ### Bold and Italic
-To bold _and_ italicize text, add `***` both before and after the relevant text. For example, `*** WARNING***: This product contains chemicals that may cause cancer.` will be shown as:
+To bold _and_ italicize text, add `***` both before and after the relevant text.
+
+For example,
 ```md
 ***WARNING***: This product contains chemicals that may cause cancer.
 ```
+will be shown as:
+
+> ***WARNING***: This product contains chemicals that may cause cancer.
+
 
 ### Using \* or \_ in text
-To avoid creating bold or italic when using `*` or `_`, place a backslash `\` in the front, like: `\*` or `\_`. In fact, any punctuation character that is used for a special purpose may be 'escaped' by placing a backslash in front of it.  
+To avoid creating bold or italic when using `*` or `_` in a sentence, place a backslash `\` in the front, like: `\*` or `\_`. In fact, any punctuation character that is used for a special purpose may be 'escaped' by placing a backslash in front of it.
 
-<!--Paragraphs-->
 ## Paragraphs
-To start a new paragraph, insert one or more blank lines. (In other words, all paragraphs in markdown need to have one or more blank lines between them.) For a **line break**, add either a backslash `\` or two blank spaces at the end of the line. For example:   
-`This is the first paragraph.
+To start a new paragraph, insert one or more blank lines. (In other words, all paragraphs in markdown need to have one or more blank lines between them.)
 
-This is the second paragraph.
-
-This is a\ line\ break.` will be shown as:
+For example:
 
 ```md
 This is the first paragraph.
 
 This is the second paragraph.
-
-This is a\ line\ break.
+This is not a second paragraph.
 ```
+will be shown as:
 
-<!--Heading and Titles-->
+>This is the first paragraph.
+>
+>This is the second paragraph.
+>This is not a second paragraph.
+
+
 ## Headings
 
 ### Using hash `#`
 Headings from `h1` through `h6` are constructed with a `#` for each level:
-```
-# h1 Heading
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
-```
 
-Renders to:
-
-# h1 Heading
-## h2 Heading
-### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
+```md
+# h1 US Constitution
+## h2 Statutes enacted by Congress
+### h3 Rules promulgated by federal agencies
+#### h4 State constitution
+##### h5 Laws enacted by state legislature
+###### h6 Local laws and ordinances
+```
 
 ### Using underlines
 Alternatively, headings 1 and 2 can be represented by using `=` and `-`:
+
+```md
+Linux Foundation
+================
+
+Accord Project
+--------------
 ```
-Heading 1
-=========
-
-Heading 2
----------
-```
-
-Renders to:
-Heading 1
-=========
-
-Heading 2
----------
 
 
-<!--Perhaps less useful for generating contracts-->
-## Additional Features
+# Additional Features
 
-<!--Lists-->
 ## Lists
 
 ### Unordered Lists
-To create an unordered list, use asterisks `*`, plus `+`, or hyphens `-` in the beginning as list markers. For example:
-```
-* Carrots
-* Broccoli
-* Potatoes
+To create an unordered list, use asterisks `*`, plus `+`, or hyphens `-` in the beginning as list markers.
+
+For example:
+```md
+* Cicero
+* Ergo
+* Concerto
 ```
 
 Renders to:
-* Carrots
-* Broccoli
-* Potatoes
+>* Cicero
+>* Ergo
+>* Concerto
 
-*Tip*: To use these characters without creating a list, simply include a backslash `\` in the beginning, like `\*`, `\+`, or `\-`.
+*Tip*: To use these characters without creating a list, include a backslash `\` in the beginning, like `\*`, `\+`, or `\-`.
 
 ### Ordered Lists
-To create an ordered list, use numbers followed by period `.`. For example:
-```
+To create an ordered list, use numbers followed by period `.`.
+
+For example:
+```md
 1. One
 2. Two
 3. Three
 ```
 
 will be shown as:
-1. One
-2. Two
-3. Three
+>1. One
+>2. Two
+>3. Three
 
-> Sometimes lists change, and when they do it's a pain to re-order all of the numbers. Markdown solves this problem by allowing you to simply use 1. before each item in the list. Like this...
+<!-- Sometimes lists change, and when they do it's a pain to re-order all of the numbers. Markdown solves this problem by allowing you to use 1. before each item in the list. Like this...-->
 
 ### Nested Lists
 
-**TBD**
+To create a list within another, indent each item in the sublist by four spaces.
 
-<!--Blockquotes-->
-## Blockquote
-To create a blockquote (used for defining a section of quoting text from another source within the document), start a line with greater than `>` before the text. For example:
-```
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
-```
-
-Renders to:
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
-
-
-<!--Inserting Links-->
-## Inserting Links
-**TBD**
-
-### Autolinks
-
-### In-Line links
-
-[Link](http://a.com)
-
-### Link Titles
-
-[Link][1]
-⋮
-[1]: http://b.org
-
-### Cross-referencing
-
-<!--Inserting images-->
-## Inserting Images
-**TBD**  
-
-![Image](http://url/a.png)
-
-![Image][1]
-⋮
-[1]: http://url/b.jpg
-
-<!--Code-->
-## Code
-
-### In-line Code
-`Inline code` with backticks
-
-### Code Block
-```
-# code block
-print '3 backticks or'
-print 'indent 4 spaces'
+For example:
+```md
+1. Matters related to the business
+    - enter into an agreement...
+    - enter into any abnormal contracts...
+2. Matters related to the assets
+    - sell or otherwise dispose...
+    - mortage, ...
 ```
 
-····# code block
-····print '3 backticks or'
-····print 'indent 4 spaces'
+will be rendered to:
+>1. Matters related to the business
+>    - enter into an agreement...
+>    - enter into any abnormal contracts...
+>2. Matters related to the assets
+>    - sell or otherwise dispose...
+>    - mortgage, ...
 
 
-<!--Horizontal Rule-->
 ## Horizontal Rule
+
 A horizontal rule may be used to create a "thematic break" between paragraph-level elements. In markdown, you can use of the following for this purpose:
 
 * `___`: three consecutive underscores
 * `---`: three consecutive dashes
 * `***`: three consecutive asterisks
 
+For example,
+```md
+___
+---
+***
+```
+
 This renders to:
 
-___
-
----
-
-***
+>___
+>
+>---
+>
+>***
 
 <!--References:
 Commonmark official page and tutorial: https://commonmark.org/help/
 OpenLaw Beginner's Guide: https://docs.openlaw.io/beginners-guide/
 Markdown cheatsheet: https://gist.github.com/jonschlinkert/5854601
+Headings example: http://www.nyc.gov/html/conflicts/downloads/pdf2/municipal_ethics_laws_ny_state/introduction_to_american_law.pdf
 -->

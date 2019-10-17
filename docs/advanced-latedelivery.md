@@ -100,8 +100,8 @@ For convenience, you can copy-paste the new template text from here:
 ```md
 Late Delivery and Penalty.
 
-In case of delayed delivery of Goods, [{buyer}] shall pay to
-[{seller}] a penalty amounting to [{penaltyPercentage}]% of the total
+In case of delayed delivery of Goods, [{seller}] shall pay to
+[{buyer}] a penalty amounting to [{penaltyPercentage}]% of the total
 value of the Goods for every [{penaltyDuration}] of delay. The total
 amount of penalty shall not, however, exceed [{capPercentage}]% of the
 total value of the delayed goods. If the delay is more than
@@ -136,14 +136,14 @@ This results in a new error, this time on the test contract:
 
 ![Advanced-Late-11](assets/advanced/late11.png)
 
-To fix it, we simply need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
+To fix it, we need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
 
 For convenience, you can copy-paste the new test contract from here:
 ```md
 Late Delivery and Penalty.
 
-In case of delayed delivery of Goods, "Betty Buyer" shall pay to
-"Steve Seller" a penalty amounting to 10.5% of the total
+In case of delayed delivery of Goods, "Steve Seller" shall pay to
+"Betty Buyer" a penalty amounting to 10.5% of the total
 value of the Goods for every 2 days of delay. The total
 amount of penalty shall not, however, exceed 52% of the
 total value of the delayed goods. If the delay is more than
@@ -231,7 +231,7 @@ The template should now be without errors.
 
 ### Add a Payment Obligation
 
-Our final task is to emit a `PaymentObligation` to indicate that the seller should pay the buyer in the amount of the calculated penalty.
+Our final task is to emit a `PaymentObligation` to indicate that the buyer should pay the seller in the amount of the calculated penalty.
 
 To do so, first import a couple of standard models: for the Cicero's [runtime model](https://models.accordproject.org/cicero/runtime.html) (which contains the definition of a `PaymentObligation`), and for the Accord Project's [money model](https://models.accordproject.org/money.html) (which contains the definition of a `MonetaryAmount). The `import` statements at the top of your logic should look as follows:
 ```ergo
