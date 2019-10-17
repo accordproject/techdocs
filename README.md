@@ -189,11 +189,11 @@ Accord Project is an open source, non-profit, initiative working to transform co
      <tr>
      <td headers="co1 c1">Concerto UI</td>
       <td headers="co2 c1"><a href=" https://github.com/accordproject/concerto-ui">concerto-ui</a></td>
-      <td headers="co3 c1"> <a href="https://badge.fury.io/js/%40accordproject%2Fconcerto-ui"><img src="https://badge.fury.io/js/%40accordproject%2Fconcerto-ui.svg" alt="npm version"></a></td>
+      <td headers="co3 c1"> <a href="https://badge.fury.io/js/%40accordproject%2Fconcerto-ui-react"><img src="https://badge.fury.io/js/%40accordproject%2Fconcerto-ui-react.svg" alt="npm version"></a></td>
        <td headers="co4 c1">Concerto-ui React component</td>
      </tr>
 </table>
- 
+  
 
 #### Template Editors:
 
