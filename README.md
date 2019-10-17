@@ -178,7 +178,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
       <td headers>Markdown Editor</td>
       <td headers><a href="https://github.com/accordproject/markdown-editor">markdown-editor</a></td>
       <td headers><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-editor.svg" alt="npm version"></a></td>
-      <td headers>WYSIWYG rich text web editor that persists text as markdown. Basdd on Slate.js</td>
+      <td headers>WYSIWYG rich text web editor that persists text as markdown. Based on Slate.js</td>
     </tr>
      <tr>
      <td headers="co1 c1">Cicero UI</td>
