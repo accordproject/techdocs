@@ -154,7 +154,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
       <th id="blank"></th>
       <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-cicero">markdown-cicero</a></td>
       <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero.svg" alt="npm version"></a></td>
-      <td headers>A framework for transforming markdown</td>
+      <td headers>CiceroDOM: Markdown extensions for contracts, clauses, variables etc.</td>
       </tr>
        <tr>
       <th id="blank"></th>
