@@ -3,11 +3,6 @@ id: markup-variables-blocks
 title: Variables and Blocks
 ---
 
-Grammar
----
-
-In order to make a clause executable, there needs to be a link to relate the template model to the natural language text that describes the legally enforceable clause. By inserting bindings to the template model into the natural language for the clause via the Accord Project markup language, we create what we call the template grammar. This determines what a syntactically valid clause may look like.
-
 Variables
 ---
 

@@ -1,19 +1,9 @@
 ---
-id: basic-use
-title: How to Use a Template
+id: accordproject-use
+title: Use a Template
 ---
 
-The simplest way to work with an Accord Project template is through the Cicero command line interface (CLI). In this tutorial, we explain how to download an existing Accord Project template, create an instance of that template and how to execute the contract logic.
-
-## Install Cicero CLI
-
-In order to access the Cicero command line interface (CLI), first install the `@accordproject/cicero-cli` npm package:
-
-```bash
-npm i -g @accordproject/cicero-cli
-```
-
-> If you're new to `npm` the [installation instructions](accordproject-installation) have some more detailed guidance.
+Once you have installed Cicero, you can try it by downloading an existing Accord Project template. We will explain here how create an instance of that template and how to run the contract logic.
 
 ## Download a Template
 

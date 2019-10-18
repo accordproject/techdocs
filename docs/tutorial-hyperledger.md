@@ -1,5 +1,5 @@
 ---
-id: advanced-hyperledger
+id: tutorial-hyperledger
 title: Deploying on Hyperledger Fabric
 ---
 

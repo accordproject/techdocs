@@ -1,5 +1,5 @@
 ---
-id: basic-create
+id: tutorial-create
 title: Creating a New Template
 ---
 

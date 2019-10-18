@@ -1,24 +1,44 @@
 {
     "docs": {
-        "Introduction": ["accordproject", "accordproject-installation", "accordproject-tooling", "accordproject-models", "accordproject-templates", "accordproject-resources"],
-        "Basic Tutorials": ["basic-use", "basic-templates", "basic-create"],
-        "Advanced Tutorials": [
-            "advanced-latedelivery",
+        "Getting Started": ["accordproject", "accordproject-studio", "accordproject-installation", "accordproject-use", "accordproject-resources"],
+        "Tutorials": [
+            {
+                "type": "subcategory",
+                "label": "Authoring in Template Studio",
+                "ids": ["tutorial-latedelivery"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Authoring with Cicero",
+                "ids": ["tutorial-templates", "tutorial-create", "tutorial-publish"]
+            },
             {
                 "type": "subcategory",
                 "label": "Template Execution",
-                "ids": ["advanced-nodejs", "advanced-hyperledger"]
+                "ids": ["tutorial-nodejs", "tutorial-hyperledger"]
             }
         ],
-        "Cicero Markup Guide": ["markup-cicero", "markup-commonmark", "markup-variables-blocks", "markup-expr"],
-        "Concerto Model Guide": ["model-concerto"],
-        "Ergo Language Guide": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"],
-        "Template Specification": ["spec-overview", "spec-concepts", "spec-example", "spec-template", "spec-instance", "spec-execution", "spec-packaging"],
-        "Upgrading Guide": [
+        "Technology Guides": [
+            {
+                "type": "subcategory",
+                "label": "CiceroMark",
+                "ids": ["markup-cicero", "markup-commonmark", "markup-variables-blocks", "markup-expr"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Concerto Data Modeling",
+                "ids": ["model-concerto"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Ergo Contract Logic",
+                "ids": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"]
+            }
+        ],
+        "About Version 0.20": [
             "0.13to0.20"
         ],
         "Reference Manual": [
-            "ref-markup",
             "ref-testing",
             "ref-errors",
             "ref-logic",
