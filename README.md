@@ -1,10 +1,10 @@
-﻿<h1 align="center">
+<h1 align="center">
   <a href="https://www.accordproject.org/">
     <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
   </a>
 </h1>
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors) [![Join the Accord Project Slack](https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue)](https://accord-project-slack-signup.herokuapp.com) [![GitHub license](https://img.shields.io/github/license/accordproject/techdocs)](https://github.com/accordproject/techdocs/blob/master/LICENSE)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors) [![Join the Accord Project Slack](https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue)](https://accord-project-slack-signup.herokuapp.com) [![GitHub license](https://img.shields.io/github/license/accordproject/techdocs)](https://github.com/accordproject/techdocs/blob/master/LICENSE) [![Accord Project Versions](https://img.shields.io/badge/Accord%20Project-v0.13.0-1abcbc)](https://docs.accordproject.org/versions/)
 
 Technical Documentation for all Accord Project code. This site uses Docusaurus to generate static HTML.
 
