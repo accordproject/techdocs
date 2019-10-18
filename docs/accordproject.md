@@ -1,89 +1,113 @@
 ---
 id: accordproject
-title: Getting Started with Accord Project
+title: Overview
 ---
 
 ## What is Accord Project?
 
-Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. 
+Accord Project is an open source, non-profit, initiative aimed at transforming contract management and contract automation by digitizing contracts.
+
+Accord Project defines a notion of legal template with associated computing logic which is expressive, open-source, and portable. 
+
+Accord project templates are similar to a clause or contract template in any document format, but they can be read, interpreted, and run by a computer.
 
 ## What is an Accord Project Template?
 
-An Accord Project template is composed of three elements: 
+An Accord Project template ties legal text (for a clause or contract) to computer code. It is composed of three elements: 
 
-- Natural Language, the grammar for the legal text of the template
-- Model, the data model that backs the template 
-- Logic, the executable business logic for the template
+- **The Template Text**: the natural language of the template
+- **The Template Model**: the data model that backs the template 
+- **The Template Logic**: the executable business logic for the template
 
-![Cicero Template](assets/template.png)
+![Accord Project Template](assets/020/template.png)
 
-When combined these three elements allow templates to be edited, analyzed, queried and executed.
+When combined these three elements allow templates to be edited, validated, verified, and then executed on any computer platform (on your own machine, on a Cloud platform, on Blockchain, etc).
 
-## Technology
-
-The Accord Project provides a complete solution for smart legal contract development. The main project for the Accord Project technology is called [Cicero](https://github.com/accordproject/cicero).
+> Note that we use the computing term 'execution' here, which means run by a computer. This is distinct from the legal term 'execution' which usually refers to the process of signing an agreement.
 
 ### Cicero
 
-Cicero implements a format for legal contract and clause templates based on the [Accord Project Template Specification](accordproject-specification).
+The main software implementation for the Accord Project is called [Cicero](https://github.com/accordproject/cicero). It allows users of the accord project to create and manipulate software templates which tie together all three components in the triangle above (i.e., the text, model and logic).
 
-The following screenshot shows a Cicero template for an acceptance of delivery clause.
+_More information about how to install Cicero and get started with Accord project templates can be found in the [Installation](accordproject-installation) Section of this documentation._
 
-![Template Grammar](/docs/assets/grammar.png)
+## Template Text
 
-Cicero relies on two other projects:
-- [Concerto](https://github.com/accordproject/concerto): Accord Project's lightweight data modeling and schema language
-- [Ergo](https://github.com/accordproject/ergo): a domain specific language to express the executable logic of legal templates
+![Template Text](assets/020/template_text.png)
+
+The template text is the natural language of the clause or contract. It can include markup to indicate variables (or parameters) for that template.
+
+The following screenshot shows the text of an acceptance of delivery clause.
+
+![Example Text](/docs/assets/grammar.png)
+
+The text is written in plain English with variables between `{{` and `}}` and highlighted in blue. Using variables is useful so the same template can be used in different agreements by simply replacing them by different values.
+
+For instance, the following show the same acceptance of delivery clause where the `shipper` is `"Party A"`, the `receiver` is `"Party B"`, the `deliverable` is `"Widgets"`, etc.
+
+```md
+Acceptance of Delivery. "Party A" will be deemed to have completed its
+delivery obligations if in "Party B"'s opinion, the "Widgets"
+satisfies the Acceptance Criteria, and "Party B" notifies "Party A" in
+writing that it is accepting the "Widgets".
+
+
+Inspection and Notice. "Party B" will have 10 Business Days' to
+inspect and evaluate the "Widgets" on the delivery date before
+notifying "Party A" that it is either accepting or rejecting the
+"Widgets".
+
+Acceptance Criteria. The "Acceptance Criteria" are the specifications
+the "Widgets" must meet for the "Party A" to comply with its
+requirements and obligations under this agreement, detailed in
+"Attachment X", attached to this agreement.
+```
+
+### CiceroMark
+
+CiceroMark is the markup format in which the text for Accord Project templates is written. It defines notations (such as the `{{` and `}}` notation for variables that we saw in the acceptance of delivery clause above) which allows a computer to make sense of your templates.
+
+It also provides the ability to specify the document structure (e.g., headings, lists), to highlight certain terms (e.g., in bold or italics), to indicate text which is optional in the agreement, and more.
+
+_More information about CiceroMark can be found in the [Markup Guide](markup-cicero) Section of this documentation._
+
+## Template Model
+
+![Template Model](assets/020/template_model.png)
+
+Compared to a standard document template (e.g., in Word or pdf), Accord Project templates associate a _model_ to the natural language text. The model lets you categorize variables (is it a number, a monetary amount, a date, a reference to a business or organization, etc.). This model is crucial in that it allows the computer to make sense of the information contained in your template.
+
+The following screenshot shows the model for the acceptance of delivery clause above.
+
+![Example Model](/img/model-vscode.png)
+
+Thanks to that model, the computer now knows that the `shipper` variable (`"Party A"` in the example above) contains a reference to an `Organization`, that variable `receiver` (`"Party B"` in the example above) also contains a reference to an Organization, that variable `deliverable` (`"Widgets"` in the example above) can contain any text description, etc.
 
 ### Concerto
 
-Concerto is a lightweight modeling language which is used to describe the information used in Accord Project templates.
+Concerto is the modeling language which is used to describe the information used in Accord Project templates. Concerto offers modern modeling capabilities including support: for nested or optional data structures, enumerations, relationships, object-oriented style inheritance, and more.
 
-The following screenshot shows the model for the acceptance of delivery clause.
+_More information about Concerto can be found in the [Data Modeling](model-concerto) Section of this documentation._
 
-![Concerto Model](/img/model-vscode.png)
+## Template Logic
 
-The Concerto Modeling Language (CML) provides object-oriented style modeling and includes support for inheritance, for describing relationships, nested or optional data structures, enumerations and more.
+![Template Logic](assets/020/template_logic.png)
+
+While the combination of text and model already sets Accord Project template apart from a more traditional document format, the logic is what allows templates to really _come alive_. The logic allows a developer to associate _behavior_ to the template (specify what happens when a delivery is received late, check conditions for payment, automate interest rate calculations, determine if there has been a breach of contract, etc).
+
+The following screenshot shows the logic for the acceptance of delivery clause above.
+
+![Example Logic](/img/ergo-vscode.png)
+
+That logic specify what conditions should be met for a delivery to be accepted (checking whether the delivery is timely or not, has a mandatory inspection for that delivery occurred or not, etc).
 
 ### Ergo
 
-Ergo is a domain-specific language (DSL) developed by the Accord Project for capturing legal contract logic. 
+Ergo is the programming language which is used to capture the contractual logic in Accord Project templates. Since it is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent computer code, Ergo is intended to be accessible to lawyers who create the corresponding prose for those computable legal contracts.
 
-A DSL is a computer language that is targeted to a particular kind of problem, rather than a general-purpose language that is aimed at any kind of software problem. For example, HTML is a DSL targeted at developing web pages. Similarly, Ergo is a DSL meant to capture the execution logic of legal contracts.
+_More information about Ergo can be found in the [Ergo Logic](logic-ergo) Section of this documentation._
 
-The following screenshot shows the Ergo logic for the acceptance of delivery clause.
+## What's next?
 
-![Ergo Logic](/img/ergo-vscode.png)
-
-It is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent computer code. For that reason, Ergo is intended to be accessible to lawyers who create the corresponding prose for those computable legal contracts. As a programming language, the Ergo syntax also adheres to programming conventions.
-
-## Ecosystem
-
-Beyond a core technology for executable legal templates, Accord Project is building a rich ecosystem which includes community-contributed content based on that technology:
-
-- [Model Repository](https://models.accordproject.org/) : a repository of open source Concerto data models for use in templates
-- [Template Library](https://templates.accordproject.org/) : a library of open source Clause and Contract templates for various legal domains (supply-chain, loans, intellectual property, etc.)
-
-Several tools are also available to facilitate authoring of Accord Project templates:
-
-- [Template Studio](https://studio.accordproject.org/): a Web-based editor for Accord Project templates
-- [VSCode Plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/)
-
-## Open Source Community
-
-The Accord Project technology is being developed as open source. All the software packages are being actively maintained on [GitHub](https://github.com/accordproject) and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
-
-Join the Accord Project Technology Working Group <a href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack channel</a> to get involved!
-
-## Try Accord Project Online
-
-The simplest way to get an introduction to the Accord Project technology is through the online [Template Studio](https://studio.accordproject.org) editor (you can open template studio from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right of the page).
-
-The following video offers a tour of Template Studio and an introduction to the key concepts behind the Accord Project technology.
-
-<iframe src="https://player.vimeo.com/video/328933628" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-## Local Installation
-
-If you want to experience the full power of Accord Project, you should install the Cicero command-line tools on your own machine.
+Try Accord Project for yourself, either online or by installing Cicero. Find links to sample templates and other resources in the rest of this documentation.
 

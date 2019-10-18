@@ -1,6 +1,6 @@
 ---
-id: advanced-latedelivery
-title: Authoring in Template Studio
+id: tutorial-latedelivery
+title: Editing a Late Delivery Clause
 ---
 
 This tutorial will walk you through the steps of authoring a clause template in [Template Studio](https://studio.accordproject.org/).

@@ -1,5 +1,5 @@
 ---
-id: basic-templates
+id: tutorial-templates
 title: Take a Look Inside
 ---
 

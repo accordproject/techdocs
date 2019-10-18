@@ -1,5 +1,5 @@
 ---
-id: basic-library
+id: tutorial-library
 title: Publishing a Template
 ---
 
