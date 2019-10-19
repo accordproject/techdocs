@@ -1,4 +1,4 @@
-﻿<h1 align="center">
+<h1 align="center">
   <a href="https://www.accordproject.org/">
     <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
   </a>
@@ -284,7 +284,7 @@ Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respec
 [contributing]: https://github.com/accordproject/techdocs/blob/master/CONTRIBUTING.md
 [developers]: https://github.com/accordproject/techdocs/blob/master/DEVELOPERS.md
 
-[apache]: https://github.com/accordproject/template-studio-v2/blob/master/LICENSE
+[apache]: https://github.com/accordproject/techdocs/blob/master/LICENSE
 [creativecommons]: http://creativecommons.org/licenses/by/4.0/
 
 ## Contributors ✨
