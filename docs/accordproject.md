@@ -107,7 +107,7 @@ Ergo is the programming language which is used to capture the contractual logic 
 
 _More information about Ergo can be found in the [Ergo Logic](logic-ergo) Section of this documentation._
 
-## What's next?
+## What next?
 
 Try Accord Project for yourself, either online or by installing Cicero. Find links to sample templates and other resources in the rest of this documentation.
 
