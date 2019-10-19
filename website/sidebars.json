@@ -27,7 +27,7 @@
             {
                 "type": "subcategory",
                 "label": "Concerto Data Modeling",
-                "ids": ["model-concerto"]
+                "ids": ["model-concerto", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators"]
             },
             {
                 "type": "subcategory",

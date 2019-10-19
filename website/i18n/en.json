@@ -86,8 +86,26 @@
       "markup-variables-blocks": {
         "title": "Variables and Blocks"
       },
+      "model-classes": {
+        "title": "Classes"
+      },
       "model-concerto": {
         "title": "Overview"
+      },
+      "model-decorators": {
+        "title": "Decorators"
+      },
+      "model-enums": {
+        "title": "Enumerations"
+      },
+      "model-namespaces": {
+        "title": "Namespaces"
+      },
+      "model-properties": {
+        "title": "Properties"
+      },
+      "model-relationships": {
+        "title": "Relationships"
       },
       "ref-errors": {
         "title": "Errors Reference"
