@@ -26,12 +26,12 @@
             },
             {
                 "type": "subcategory",
-                "label": "Concerto Data Modeling",
+                "label": "Concerto Modeling",
                 "ids": ["model-concerto", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators"]
             },
             {
                 "type": "subcategory",
-                "label": "Ergo Contract Logic",
+                "label": "Ergo Logic",
                 "ids": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"]
             }
         ],
