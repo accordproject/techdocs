@@ -69,7 +69,7 @@ CiceroMark is the markup format in which the text for Accord Project templates i
 
 It also provides the ability to specify the document structure (e.g., headings, lists), to highlight certain terms (e.g., in bold or italics), to indicate text which is optional in the agreement, and more.
 
-_More information about CiceroMark can be found in the [Markup Guide](markup-cicero) Section of this documentation._
+_More information about the Accord Project markup can be found in the [CiceroMark](markup-cicero) Section of this documentation._
 
 ## Template Model
 
@@ -87,7 +87,7 @@ Thanks to that model, the computer now knows that the `shipper` variable (`"Part
 
 Concerto is the modeling language which is used to describe the information used in Accord Project templates. Concerto offers modern modeling capabilities including support: for nested or optional data structures, enumerations, relationships, object-oriented style inheritance, and more.
 
-_More information about Concerto can be found in the [Data Modeling](model-concerto) Section of this documentation._
+_More information about Concerto can be found in the [Concerto Modeling](model-concerto) Section of this documentation._
 
 ## Template Logic
 
