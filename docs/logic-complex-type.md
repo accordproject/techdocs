@@ -53,7 +53,7 @@ You can access the element at a given position inside the array using an index:
 
 ## Classes
 
-You can declare classes in the Composer Modeling Language (concepts, transactions, events, participants or assets) by importing them from a CTO file or directly within your Ergo program:
+You can declare classes in the Concerto Modeling Language (concepts, transactions, events, participants or assets) by importing them from a CTO file or directly within your Ergo program:
 
 ```ergo
    define concept Seminar {
