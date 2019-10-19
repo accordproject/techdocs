@@ -213,5 +213,5 @@ Accord Project documentation files are made available under the [Creative Common
 [jsdoc]: http://usejsdoc.org/
 [docusaurus]: https://docusaurus.io
 
-[apache]: https://github.com/accordproject/cicero-ui/blob/master/LICENSE
+[apache]: https://github.com/accordproject/techdocs/blob/master/LICENSE
 [creativecommons]: http://creativecommons.org/licenses/by/4.0/
