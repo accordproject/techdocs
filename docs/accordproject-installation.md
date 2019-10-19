@@ -3,7 +3,7 @@ id: accordproject-installation
 title: Install Cicero
 ---
 
-To experience the full power of Accord Project, you should install the Cicero command-line tools on your own machine. This will let you author, validate, and run Accord Project templates.
+To experience the full power of Accord Project, you should install the Cicero command-line tools. This will let you author, validate, and run Accord Project templates on your own machine.
 
 ## Prerequisites
 
@@ -65,7 +65,7 @@ ergo compile --help
 ergo execute --help
 ```
 
-## What's next?
+## What next?
 
-That's it! Go to the next page to see how to use your new installation of Cicero with a real Accord Project template.
+That's it! Go to the next page to see how to use your new installation of Cicero on a real Accord Project template.
 

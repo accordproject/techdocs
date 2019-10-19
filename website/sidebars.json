@@ -1,6 +1,6 @@
 {
     "docs": {
-        "Getting Started": ["accordproject", "accordproject-studio", "accordproject-installation", "accordproject-use", "accordproject-resources"],
+        "Getting Started": ["accordproject", "accordproject-studio", "accordproject-installation", "accordproject-helloworld", "accordproject-resources"],
         "Tutorials": [
             {
                 "type": "subcategory",

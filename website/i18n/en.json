@@ -8,26 +8,17 @@
       "0.13to0.20": {
         "title": "Migrating from 0.13.*"
       },
+      "accordproject-helloworld": {
+        "title": "Hello World Template"
+      },
       "accordproject-installation": {
         "title": "Install Cicero"
-      },
-      "accordproject-models": {
-        "title": "Standard Models"
       },
       "accordproject-resources": {
         "title": "Resources"
       },
       "accordproject-studio": {
         "title": "Try Online"
-      },
-      "accordproject-templates": {
-        "title": "Open Source Templates"
-      },
-      "accordproject-tooling": {
-        "title": "Developers Tools"
-      },
-      "accordproject-use": {
-        "title": "Use a Template"
       },
       "accordproject": {
         "title": "Overview"
