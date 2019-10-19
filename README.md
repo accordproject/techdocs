@@ -6,7 +6,7 @@
 
 [![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors) [![Join the Accord Project Slack](https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue)](https://accord-project-slack-signup.herokuapp.com) [![GitHub license](https://img.shields.io/github/license/accordproject/techdocs)](https://github.com/accordproject/techdocs/blob/master/LICENSE)
 
-Technical Documentation for all Accord Project code. This site uses Docusaurus to generate static HTML.
+Technical Documentation for all Accord Project code. This site uses [Docusaurus](https://docusaurus.io) to generate static HTML.
 
 The site is hosted at: https://docs.accordproject.org
 
