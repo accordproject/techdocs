@@ -32,7 +32,7 @@ The following screenshot shows a Cicero template for an acceptance of delivery c
 ![Template Grammar](/docs/assets/grammar.png)
 
 Cicero relies on two other projects:
-- [Concerto](https://github.com/accordproject/concerto): a lightweight, versatile data modeling language (maintained by the Hyperledger forum)
+- [Concerto](https://github.com/accordproject/concerto): a lightweight, versatile data modeling language used to define the domain model for a business network definition
 - [Ergo](https://github.com/accordproject/ergo): a domain specific language to express the executable logic of legal templates
 
 ### Concerto
