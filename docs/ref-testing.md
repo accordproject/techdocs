@@ -253,7 +253,7 @@ Monthly payments, which shall start on month 3, include both principal and inter
 
 ### Current Time
 
-The logic for some clause or contract template are time-dependent. It can be useful to specify multiple scenarios for the behavior under different date and time assumptions. This can be described with an additional **When** step to set the current time to a specific value.
+The logic for some clause or contract templates is time-dependent. It can be useful to specify multiple scenarios for the behavior under different date and time assumptions. This can be described with an additional **When** step to set the current time to a specific value.
 
 For instance, the following shows two scenarios for the [IP Payment](https://templates.accordproject.org/ip-payment@0.10.1.html) template, which describe its expected behavior for two distinct current times:
 
