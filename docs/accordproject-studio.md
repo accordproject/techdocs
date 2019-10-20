@@ -1,6 +1,6 @@
 ---
 id: accordproject-studio
-title: Try Online
+title: Online Tour
 ---
 
 The simplest way to get an introduction to the Accord Project technology is through the online [Template Studio](https://studio.accordproject.org) editor (you can open template studio from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right of the page).

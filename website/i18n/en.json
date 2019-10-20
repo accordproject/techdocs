@@ -14,11 +14,14 @@
       "accordproject-installation": {
         "title": "Install Cicero"
       },
+      "accordproject-models": {
+        "title": "Standard Models"
+      },
       "accordproject-resources": {
         "title": "Resources"
       },
       "accordproject-studio": {
-        "title": "Try Online"
+        "title": "Online Tour"
       },
       "accordproject": {
         "title": "Overview"
@@ -671,7 +674,7 @@
     "categories": {
       "Getting Started": "Getting Started",
       "Tutorials": "Tutorials",
-      "Technology Guides": "Technology Guides",
+      "Guides": "Guides",
       "About Version 0.20": "About Version 0.20",
       "Reference Manual": "Reference Manual",
       "Introduction": "Introduction",
