@@ -88,7 +88,8 @@ const siteConfig = {
   highlight: {
     theme: 'ir-black',
     hljs: function(hljs) {
-      hljs.registerLanguage('ergo', function(hljs) {
+        // highlighting for Ergo logic
+        hljs.registerLanguage('ergo', function(hljs) {
         var ERGO_KEYWORDS = {
             keyword: 'namespace import define function transaction concept event asset ' +
                 'participant enum extends contract over clause throws emits state call ' +
@@ -122,6 +123,11 @@ const siteConfig = {
             begin: '\\b([\\d_]+(\\.[\\deE_]+)?|0x[a-fA-F0-9_]+(\\.[a-fA-F0-9p_]+)?|0b[01_]+|0o[0-7_]+)\\b',
             relevance: 0
         };
+        var TAGS = {
+            className: 'template-variable',
+            begin: '\{\{\%|\%\}\}',
+            relevance: 0
+        };
         var QUOTE_STRING_MODE = hljs.inherit(hljs.QUOTE_STRING_MODE, {
           contains: [SUBST, hljs.BACKSLASH_ESCAPE]
         });
@@ -135,33 +141,41 @@ const siteConfig = {
             BLOCK_COMMENT,
             TYPE,
             NUMBERS,
-            // {
-            //   className: 'function',
-            //   beginKeywords: 'function clause', end: '{', excludeEnd: true,
-            //   contains: [
-            //     hljs.inherit(hljs.TITLE_MODE, {
-            //       begin: /[A-Za-z$_][0-9A-Za-z$_]*/,
-            //       illegal: /\(/
-            //     }),
-            //     {
-            //       className: 'params',
-            //       begin: /\s/, end: /\=\>/, endsParent: true, excludeEnd: true,
-            //       keywords: ERGO_KEYWORDS,
-            //       contains: [
-            //         'self',
-            //         NUMBERS,
-            //         QUOTE_STRING_MODE,
-            //         hljs.C_BLOCK_COMMENT_MODE,
-            //         {begin: ':'} // relevance booster
-            //       ],
-            //       illegal: /["]/
-            //     }
-            //   ],
-            //  illegal: /\[|%/
-            //}
+            TAGS
           ]
         };
-      });
+        });
+        // highlighting for template grammar
+        hljs.registerLanguage('tem', function(hljs) {
+            var BUILT_INS = {'keyword': 'foreach with if else ulist olist kind as clause'};
+            var QUOTE_STRING_MODE = hljs.inherit(hljs.QUOTE_STRING_MODE, {
+                contains: [hljs.BACKSLASH_ESCAPE]
+            });
+            var IDENT = {
+                className: 'template-tag',
+                begin: '[a-zA-Z\.-]+',
+                keywords: BUILT_INS
+            };
+            return {
+                aliases: ['tem.md'],
+                case_insensitive: true,
+                subLanguage: 'markdown',
+                contains: [
+                    hljs.COMMENT('{{!(--)?', '(--)?}}'),
+                    QUOTE_STRING_MODE,
+                    {
+                        begin: /\{\{\%/, end: /\%\}\}/,
+                        subLanguage: 'ergo',
+                        relevance: 0
+                    },
+                    {
+                        className: 'template-variable',
+                        begin: /\{\{[#\/]?/, end: /\}\}/,
+                        contains: [IDENT,QUOTE_STRING_MODE]
+                    }
+                ]
+            };
+        });
     }
   },
 

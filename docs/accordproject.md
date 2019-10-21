@@ -37,30 +37,56 @@ _More information about how to install Cicero and get started with Accord projec
 
 The template text is the natural language of the clause or contract. It can include markup to indicate variables (or parameters) for that template.
 
-The following screenshot shows the text of an acceptance of delivery clause.
+he following shows the text of an acceptance of delivery clause.
 
-![Example Text](/docs/assets/grammar.png)
+```tem
+## Acceptance of Delivery.
+
+{{shipper}} will be deemed to have completed its delivery obligations
+if in {{receiver}}'s opinion, the {{deliverable}} satisfies the
+Acceptance Criteria, and {{receiver}} notifies {{shipper}} in writing
+that it is accepting the {{deliverable}}.
+
+## Inspection and Notice.
+
+{{receiver}} will have {{businessDays}} Business Days to inspect and
+evaluate the {{deliverable}} on the delivery date before notifying
+{{shipper}} that it is either accepting or rejecting the
+{{deliverable}}.
+
+## Acceptance Criteria.
+
+The "Acceptance Criteria" are the specifications the {{deliverable}}
+must meet for the {{shipper}} to comply with its requirements and
+obligations under this agreement, detailed in {{attachment}}, attached
+to this agreement.
+```
 
 The text is written in plain English with variables between `{{` and `}}` and highlighted in blue. Using variables is useful so the same template can be used in different agreements by simply replacing them by different values.
 
 For instance, the following show the same acceptance of delivery clause where the `shipper` is `"Party A"`, the `receiver` is `"Party B"`, the `deliverable` is `"Widgets"`, etc.
 
 ```md
-Acceptance of Delivery. "Party A" will be deemed to have completed its
-delivery obligations if in "Party B"'s opinion, the "Widgets"
-satisfies the Acceptance Criteria, and "Party B" notifies "Party A" in
-writing that it is accepting the "Widgets".
+## Acceptance of Delivery.
 
+"Party A" will be deemed to have completed its delivery obligations
+if in "Party B"'s opinion, the "Widgets" satisfies the
+Acceptance Criteria, and "Party B" notifies "Party A" in writing
+that it is accepting the "Widgets".
 
-Inspection and Notice. "Party B" will have 10 Business Days' to
-inspect and evaluate the "Widgets" on the delivery date before
-notifying "Party A" that it is either accepting or rejecting the
+## Inspection and Notice.
+
+"Party B" will have 10 Business Days to inspect and
+evaluate the "Widgets" on the delivery date before notifying
+"Party A" that it is either accepting or rejecting the
 "Widgets".
 
-Acceptance Criteria. The "Acceptance Criteria" are the specifications
-the "Widgets" must meet for the "Party A" to comply with its
-requirements and obligations under this agreement, detailed in
-"Attachment X", attached to this agreement.
+## Acceptance Criteria.
+
+The "Acceptance Criteria" are the specifications the "Widgets"
+must meet for the "Party A" to comply with its requirements and
+obligations under this agreement, detailed in "Attachment X", attached
+to this agreement.
 ```
 
 ### CiceroMark

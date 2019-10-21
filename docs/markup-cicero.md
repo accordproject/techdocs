@@ -20,7 +20,7 @@ In a nutshell, CiceroMark is similar to Handlebars with two key differences:
 
 Here is an example using a simple fixed-rate interest clause.
 
-```md
+```tem
 ## Fixed rate loan
 
 This is a *fixed interest* loan to the amount of {{loanAmount}}
