@@ -6,49 +6,51 @@ title: Variables and Blocks
 Variables
 ---
 
-The marked-up template is `UTF-8` text with markup to introduce named variables. Variables create (structured) text and support the parsing and generation of the document text, and do not require Ergo knowledge.
+The template grammar is `UTF-8` text containing markup to introduce named variables. Variables create (structured) text and support the parsing and generation of the document text, and do not require Ergo knowledge.
 
-Parsing text translates it into [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON), which then can be used to check the validity in relation to the model. Generating text takes the JSON and translates it back into natural language text.
+Parsing text translates it into [JSON](http://json.org), which then can be used to check the validity in relation to the model. Generating text takes the JSON and translates it back into natural language text.
 
 Each variable starts with `{{` and ends with `}}`:
 
-```handlebars
+```tem
 {{firstName}}                       // Source variable (used for parsing and rendering)
 {{deliveryDate as "MMMM, DD YYYY"}} // Source variable with date formatting
 ```
 
 To see this in more context, we will look at the Late Delivery and Penalty template (found at the [Cicero Template Library](https://templates.accordproject.org/)):
 
-```handlebars
-Late Delivery and Penalty. In case of delayed delivery {{" except for Force Majeure cases,"
-:? forceMajeure}} the Seller shall pay to the Buyer for every {{penaltyDuration}} of delay 
-penalty amounting to {{penaltyPercentage}}% of the total value of the Equipment whose 
-delivery has been delayed. Any fractional part of a {{fractionalPart}} is to be considered 
-a full {{fractionalPart}}. The total amount of penalty shall not however, exceed 
-{{capPercentage}}% of the total value of the Equipment involved in late delivery. If the 
-delay is more than {{termination}}, the Buyer is entitled to terminate this Contract.
+```tem
+## Late Delivery and Penalty.
+
+In case of delayed delivery{{#if forceMajeure}} except for Force Majeure cases,{{/if}}
+{{seller}} (the Seller) shall pay to {{buyer}} (the Buyer) for every {{penaltyDuration}}
+of delay penalty amounting to {{penaltyPercentage}}% of the total value of the Equipment
+whose delivery has been delayed. Any fractional part of a {{fractionalPart}} is to be
+considered a full {{fractionalPart}}. The total amount of penalty shall not however,
+exceed {{capPercentage}}% of the total value of the Equipment involved in late delivery.
+If the delay is more than {{termination}}, the Buyer is entitled to terminate this Contract.
 ```
 
 Note that within these variables, we are using camel case named variables. These will be defined in the [Concerto Model](https://docs.accordproject.org/docs/model-concerto.html). This is described a bit more in depth in the [Template Structure](https://docs.accordproject.org/docs/spec-template.html) section of the [Template Specification](https://docs.accordproject.org/docs/spec-overview.html) docs.
 
-This functionality provides us with the ability to bind variables into the natural language, and this concept of a variable extends further than a single value. We can insert a block of variables or even complex [Ergo logic expressions](https://docs.accordproject.org/docs/markup-expr.html),
+This functionality provides us with the ability to bind variables into the natural language, and this concept of a variable extends further than a single value. We can insert a block of variables or even [Ergo expressions](https://docs.accordproject.org/docs/markup-expr.html),
 
-Block Formulas
+Blocks
 ---
 
-Variables can be expanded into blocks and conditionals, such as ordered lists or `if...else` formulas. The functionality is extended from basic variables, so these block variables also create (structured) text and support the parsing and generation of the document text, and do not require Ergo knowledge.
+As in [Handlebars](https://handlebarsjs.com), CiceroMark uses blocks to handle optional or repeated text (e.g., lists), or to indicate which template variables are in scope for a given section of the text. Blocks always have the following syntactic structure: 
 
-Block Formulas of kind `kind` with scope `scope` and parameters `params` are quoted with the following syntax: 
-
-```handlebars
-{{#kind scope params}}
+```tem
+{{#kind scope parameters}}
 ...
 {{/kind}}
 ```
 
+where `kind` indicates which kind of block it is (e.g., conditional block or list block), `scope` indicates the template variables which is in scope within the block. For certain blocks, additional `parameters` can be passed to control the behavior of that block (e.g., the `join` block creates text from a list with an optional separator).
+
 ### Unordered Lists
 
-```handlebars
+```tem
 {{#ulist rates}}
 {{volumeAbove}}$ million <= Volume < {{volumeUpTo}}$ million : {{rate}}%
 {{/ulist}}
@@ -114,7 +116,7 @@ Which results in the following markdown text:
 
 ### Ordered Lists
 
-```handlebars
+```tem
 {{#olist rates}}
 {{volumeAbove}}$ million <= Volume < {{volumeUpTo}}$ million : {{rate}}%
 {{/olist}}
@@ -181,9 +183,9 @@ Which results in the following markdown text:
 ### Joined Lists
 
 You create a list with a delimiter
-```handlebars
+```tem
 {{#join rates ","}}
-{{rate}}
+{{volumeUpTo}}
 {{/join}}
 ```
 
@@ -196,7 +198,7 @@ This code is rendered as markdown from a JSON object created through [Concerto](
   "rates": [
     {
       "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1,
+      "volumeUpTo": 1.5,
       "volumeAbove": 0,
       "rate": 3.1
     },
@@ -226,7 +228,7 @@ This code is rendered as markdown from a JSON object created through [Concerto](
     },
     {
       "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1000000,
+      "volumeUpTo": 5000,
       "volumeAbove": 1000,
       "rate": 0.1
     }
@@ -237,14 +239,14 @@ This code is rendered as markdown from a JSON object created through [Concerto](
 Which results in the following markdown text:
 
 ```md
-3.1, 3.1, 2.9, 2.5, 1.2, 0.1
+1.5, 10.0, 50.0, 500.0, 1000.0, 5000.0
 ```
 
 ### Clauses
 
-Block variable formulas support clauses to be defined inline within the markdown:
+Blocks can be used to inline a clause's text within a contract template:
 
-```handlebars
+```tem
 Payment
 -------
 {{#clause payment}}
@@ -253,14 +255,12 @@ fee in the amount of {{amountText}} ({{amount}}) upon execution of this Agreemen
 follows: {{paymentProcedure}}.
 {{/clause}}
 ```
-_Note_: There is no current support for clauses to be be imported.
-
 
 ### With
 
 A `with` block can be utilized to set a context for the variable:
 
-```handlebars
+```tem
 {{#with author}}
 {{firstName}} {{lastName}}
 {{/with}}
@@ -268,7 +268,7 @@ A `with` block can be utilized to set a context for the variable:
 
 This enables a simpler approach to defining different values from the same object. Otherwise, we made need to use a [nested path computed expression](https://docs.accordproject.org/docs/markup-expr.html#nested-paths) for a slightly more verbose approach:
 
-```handlebars
+```tem
 {{% author.firstName %}} {{% author.lastName %}}
 ```
 
@@ -276,7 +276,7 @@ This enables a simpler approach to defining different values from the same objec
 
 On the cusp of Block Variables without venturing into Ergo Expressions, we have support for defining a block with built in conditional logic:
 
-```handlebars
+```tem
 {{#if forceMajeure}}
 This is a force majeure
 {{/if}}
@@ -291,11 +291,11 @@ This is a force majeure
 Currently Unsupported
 ---
 
-Common variables which are at the moment unsupported include the following:
+Handlebars offers some additional functionality which is not currently supported in CiceroMark, such as:
 
-- Tables
-- Iterators Blocks
-- Comments
-- Whitespace control
+- Iterators Blocks `{{#each}...{{/each}}`
+- Comments `{{!-- ... --}}`
+- Whitespace control `{{~price~}`
 
-Please visit our [Ergo](https://github.com/accordproject/ergo) and [Cicero](https://github.com/accordproject/cicero) repositories to contribute to supporting these in the future.
+We welcome user feedback on whether those (or others) would be useful to support in the feature. Please visit the [Cicero](https://github.com/accordproject/cicero) repository to contribute.
+
