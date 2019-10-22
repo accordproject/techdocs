@@ -1,5 +1,5 @@
 ---
-id: accordproject-studio
+id: started-studio
 title: Online Tour
 ---
 

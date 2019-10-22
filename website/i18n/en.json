@@ -8,20 +8,17 @@
       "0.13to0.20": {
         "title": "Migrating from 0.13.*"
       },
-      "accordproject-helloworld": {
-        "title": "Hello World Template"
+      "accordproject-concepts": {
+        "title": "Key Concepts"
       },
-      "accordproject-installation": {
-        "title": "Install Cicero"
+      "accordproject-developers": {
+        "title": "For Developers"
       },
-      "accordproject-resources": {
-        "title": "Resources"
-      },
-      "accordproject-studio": {
-        "title": "Online Tour"
+      "accordproject-lawyers": {
+        "title": "For Lawyers"
       },
       "accordproject": {
-        "title": "Overview"
+        "title": "For Business"
       },
       "cicero-api": {
         "title": "Cicero API"
@@ -76,6 +73,9 @@
       },
       "markup-variables-blocks": {
         "title": "Variables and Blocks"
+      },
+      "model-api": {
+        "title": "Using the API"
       },
       "model-classes": {
         "title": "Classes"
@@ -139,6 +139,18 @@
       },
       "spec-template": {
         "title": "Template Structure"
+      },
+      "started-helloworld": {
+        "title": "Hello World Template"
+      },
+      "started-installation": {
+        "title": "Install Cicero"
+      },
+      "started-resources": {
+        "title": "Resources"
+      },
+      "started-studio": {
+        "title": "Online Tour"
       },
       "tutorial-create": {
         "title": "Creating a New Template"
@@ -672,12 +684,13 @@
       "GitHub": "GitHub"
     },
     "categories": {
+      "Introduction": "Introduction",
       "Getting Started": "Getting Started",
-      "Tutorials": "Tutorials",
-      "Guides": "Guides",
+      "Legal-Tech Tutorials": "Legal-Tech Tutorials",
+      "Developers Tutorials": "Developers Tutorials",
+      "Template Guides": "Template Guides",
       "About Version 0.20": "About Version 0.20",
       "Reference Manual": "Reference Manual",
-      "Introduction": "Introduction",
       "Basic Tutorials": "Basic Tutorials",
       "Advanced Tutorials": "Advanced Tutorials",
       "Ergo Language Guide": "Ergo Language Guide",

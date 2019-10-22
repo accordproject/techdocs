@@ -1,5 +1,5 @@
 ---
-id: accordproject-installation
+id: started-installation
 title: Install Cicero
 ---
 
