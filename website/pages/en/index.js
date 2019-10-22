@@ -111,12 +111,12 @@ const Features = props => (
         title: `[![Ergo](${imgUrl('ergo-logo.svg')})](${siteConfig.baseUrl}docs/logic-ergo.html)`,
       },
       {
-        content: `Use Open Source contract templates from the [Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html).`,
-        title: `[Template Library](${siteConfig.baseUrl}docs/accordproject-templates.html)`,
+        content: `Use Open Source contract templates from the [Template Library](https://templates.accordproject.org/).`,
+        title: `[Template Library](https://templates.accordproject.org/)`,
       },
       {
-        content: `Use models from the [Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html) to ensure interoperability between templates.`,
-        title: `[Model Repository](${siteConfig.baseUrl}docs/accordproject-models.html)`,
+        content: `Use models from the [Model Repository](https://models.accordproject.org/) to ensure interoperability between templates.`,
+        title: `[Model Repository](https://models.accordproject.org/)`,
       },
   ]}
   </Block>

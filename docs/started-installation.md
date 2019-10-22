@@ -1,9 +1,9 @@
 ---
-id: accordproject-installation
-title: Installation
+id: started-installation
+title: Install Cicero
 ---
 
-To start working on your own Accord Project templates, you should install the Cicero command-line tools. This will let you author, parse, and execute Accord Project templates.
+To experience the full power of Accord Project, you should install the Cicero command-line tools. This will let you author, validate, and run Accord Project templates on your own machine.
 
 ## Prerequisites
 
@@ -56,18 +56,16 @@ npm install @accordproject/ergo-cli -g
 
 To check that the Ergo compiler has been installed, display the version number:
 ```bash
-ergoc --version
+ergo --version
 ```
 
 To get command line help:
 ```bash
-ergoc --help
-ergorun --help
+ergo compile --help
+ergo execute --help
 ```
 
-That's it!
+## What next?
 
-## What's next?
-
-The following pages provide links to developers tools and resources. You can also browse using the navigation bar to the left to find additional information: tutorials, API reference, the Ergo language guide, etc.
+That's it! Go to the next page to see how to use your new installation of Cicero on a real Accord Project template.
 

@@ -1,19 +1,9 @@
 ---
-id: basic-use
-title: How to Use a Template
+id: started-helloworld
+title: Hello World Template
 ---
 
-The simplest way to work with an Accord Project template is through the Cicero command line interface (CLI). In this tutorial, we explain how to download an existing Accord Project template, create an instance of that template and how to execute the contract logic.
-
-## Install Cicero CLI
-
-In order to access the Cicero command line interface (CLI), first install the `@accordproject/cicero-cli` npm package:
-
-```bash
-npm i -g @accordproject/cicero-cli
-```
-
-> If you're new to `npm` the [installation instructions](accordproject-installation) have some more detailed guidance.
+Once you have installed Cicero, you can try it by downloading an existing Accord Project template. We will explain here how create an instance of that template and how to run the contract logic.
 
 ## Download a Template
 
@@ -155,15 +145,21 @@ The results of execution displayed back on your terminal is in JSON format, incl
 * The output `state` (unchanged in this example)
 * An array of `emit`ted events (empty in this example)
 
-## Try Other Examples
-
 That's it! You have successfully parsed and executed your first Accord Project Clause using the `helloworld` template.
+
+## What Next?
+
+### Try Other Templates
 
 Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the `latedeliveryandpenalty` clause is in the red box in the following image:
 
 ![Basic-Use-3](/docs/assets/basic/use3.png)
 
-## To Execute on Different Platforms
+### More About Cicero
 
-Templates may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](advanced-nodejs), you can find information on how to execute a template in a standalone Node.js process, invoked as RESTful services, or deployed as chaincode in Hyperledger Fabric.
+You can find more information on how to create or publish Accord Project templates in the [Authoring with Cicero](tutorial-templates) tutorials.
+
+### Run on Different Platforms
+
+Templates may be executed on different platforms, not just from the command line. You can find more information on how to execute Accord Project templates on different platforms (Node.js, Hyperledger Fabric, etc.) in the [Template Execution](tutorial-nodejs) tutorials.
 

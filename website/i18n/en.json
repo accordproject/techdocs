@@ -6,49 +6,19 @@
     "tagline": "Documentation",
     "docs": {
       "0.13to0.20": {
-        "title": "From 0.13.* to 0.20.*"
+        "title": "Migrating from 0.13.*"
       },
-      "accordproject-installation": {
-        "title": "Installation"
+      "accordproject-concepts": {
+        "title": "Key Concepts"
       },
-      "accordproject-models": {
-        "title": "Standard Models"
+      "accordproject-developers": {
+        "title": "For Developers"
       },
-      "accordproject-resources": {
-        "title": "Learning Resources"
-      },
-      "accordproject-studio": {
-        "title": "Template Studio"
-      },
-      "accordproject-templates": {
-        "title": "Open Source Templates"
-      },
-      "accordproject-tooling": {
-        "title": "Developers Tools"
+      "accordproject-lawyers": {
+        "title": "For Lawyers"
       },
       "accordproject": {
-        "title": "Getting Started with Accord Project"
-      },
-      "advanced-hyperledger": {
-        "title": "Deploying on Hyperledger Fabric"
-      },
-      "advanced-latedelivery": {
-        "title": "Authoring in Template Studio"
-      },
-      "advanced-nodejs": {
-        "title": "Working with Node.js"
-      },
-      "basic-create": {
-        "title": "Creating a New Template"
-      },
-      "basic-library": {
-        "title": "Publishing a Template"
-      },
-      "basic-templates": {
-        "title": "Take a Look Inside"
-      },
-      "basic-use": {
-        "title": "How to Use a Template"
+        "title": "For Business"
       },
       "cicero-api": {
         "title": "Cicero API"
@@ -104,11 +74,35 @@
       "markup-variables-blocks": {
         "title": "Variables and Blocks"
       },
+      "model-api": {
+        "title": "Using the API"
+      },
+      "model-classes": {
+        "title": "Classes"
+      },
       "model-concerto": {
         "title": "Overview"
       },
+      "model-decorators": {
+        "title": "Decorators"
+      },
+      "model-enums": {
+        "title": "Enumerations"
+      },
+      "model-namespaces": {
+        "title": "Namespaces"
+      },
+      "model-properties": {
+        "title": "Properties"
+      },
+      "model-relationships": {
+        "title": "Relationships"
+      },
       "ref-errors": {
         "title": "Errors Reference"
+      },
+      "ref-glossary": {
+        "title": "Glossary"
       },
       "ref-logic-specification": {
         "title": "Ergo Compiler"
@@ -145,6 +139,36 @@
       },
       "spec-template": {
         "title": "Template Structure"
+      },
+      "started-helloworld": {
+        "title": "Hello World Template"
+      },
+      "started-installation": {
+        "title": "Install Cicero"
+      },
+      "started-resources": {
+        "title": "Resources"
+      },
+      "started-studio": {
+        "title": "Online Tour"
+      },
+      "tutorial-create": {
+        "title": "Creating a New Template"
+      },
+      "tutorial-hyperledger": {
+        "title": "Deploying on Hyperledger Fabric"
+      },
+      "tutorial-latedelivery": {
+        "title": "Editing a Late Delivery Clause"
+      },
+      "tutorial-library": {
+        "title": "Publishing a Template"
+      },
+      "tutorial-nodejs": {
+        "title": "Working with Node.js"
+      },
+      "tutorial-templates": {
+        "title": "Take a Look Inside"
       },
       "version-0.10.0/version-0.10.0-accordproject-specification": {
         "title": "Template Specification"
@@ -661,14 +685,16 @@
     },
     "categories": {
       "Introduction": "Introduction",
+      "Getting Started": "Getting Started",
+      "Legal-Tech Tutorials": "Legal-Tech Tutorials",
+      "Developers Tutorials": "Developers Tutorials",
+      "Template Guides": "Template Guides",
+      "About Version 0.20": "About Version 0.20",
+      "Reference Manual": "Reference Manual",
       "Basic Tutorials": "Basic Tutorials",
       "Advanced Tutorials": "Advanced Tutorials",
-      "Cicero Markup Guide": "Cicero Markup Guide",
-      "Concerto Model Guide": "Concerto Model Guide",
       "Ergo Language Guide": "Ergo Language Guide",
       "Template Specification": "Template Specification",
-      "Upgrading Guide": "Upgrading Guide",
-      "Reference Manual": "Reference Manual",
       "Accord Project": "Accord Project",
       "Cicero": "Cicero",
       "Ergo": "Ergo",

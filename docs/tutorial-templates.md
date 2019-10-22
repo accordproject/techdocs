@@ -1,5 +1,5 @@
 ---
-id: basic-templates
+id: tutorial-templates
 title: Take a Look Inside
 ---
 
@@ -120,7 +120,7 @@ contract HelloWorld over TemplateModel {
 
 This declares a single `HelloWorld` contract in the `org.accordproject.helloworld` namespace, with one `greet`.
 
-The `greet` clause takes a takes a request of type `MyRequest` as input and returns a response of type `MyResponse`.
+The `greet` clause takes a request of type `MyRequest` as input and returns a response of type `MyResponse`.
 
 It also declares that this contract `HelloWorld` is parameterized over the given `TemplateModel` found in the `models/model.cto` file.
 

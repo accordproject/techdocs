@@ -5,20 +5,22 @@ title: Overview
 
 ## Principles
 
-The Cicero Markup language (CiceroMark) supports:
-- Rich text annotations based on [CommonMark](https://commonmark.org)
-- Variables and blocks for structured content in the style of [Handlebars](https://handlebarsjs.com)
-- Expressions in [Ergo](https://docs.accordproject.org/docs/logic-ergo.html)
+In order to make a clause executable, there needs to be a link to relate the template model to the natural language text that describes the legally enforceable clause. By inserting bindings to the template model into the natural language for the clause via the Accord Project markup language, we create what we call the template grammar. This determines what a syntactically valid clause may look like.
 
-In a nutshell, CiceroMark templates are similar to Handlebars with two key differences:
-- Instead of being a template language for HTML, it is a template language for CommonMark
-- Instead of using JavaScript for computation, it uses the Ergo DSL
+The Accord Project markup language is called CiceroMark. It supports:
+1. Rich text annotations based on [CommonMark](https://commonmark.org)
+2. Template variables and blocks for structured content _in the style of_ [Handlebars](https://handlebarsjs.com)
+3. Formulas written as embedded [Ergo](https://docs.accordproject.org/docs/logic-ergo.html) expressions
+
+In a nutshell, CiceroMark is similar to Handlebars with two key differences:
+- it is a template language for CommonMark rather than HTML
+- it uses Ergo as an expression language rather than JavaScript
 
 ## Example
 
-Here is an example using a fixed-rate interest loan.
+Here is an example using a simple fixed-rate interest clause.
 
-```md
+```tem
 ## Fixed rate loan
 
 This is a *fixed interest* loan to the amount of {{loanAmount}}
@@ -27,12 +29,12 @@ with a loan term of {{loanDuration}},
 and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}
 ```
 
-In this example
-- `# Fixed rate loan` is a level 2 heading, and `*fixed interest*` indicates italics.
-- `{{loanAmount}}` is a template variable.
-- `{{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}` is an ergo expression calculating the monthly payment based on the `loanAmount`, `rate`, and `loanDuration` variables.
+This example illustrates:
+1. Rich text annotations: e.g., `## Fixed rate loan` for level 2 heading, and `*fixed interest*` for italics.
+2. Template variables: e.g., `{{loanAmount}}` is the amount for the loan.
+3. Formulas written in Ergo: e.g., `{{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}` which calculates the monthly payment based on the `loanAmount`, `rate`, and `loanDuration` variables.
 
-## Parsing and generating text
+## Parsing contract text to generate data
 
 A sample text can either be parsed to generate the deal data in JSON format, or generated from the deal data in JSON.
 
@@ -72,11 +74,5 @@ Note also that the sample uses `{{ ... }}` to indicate the part of the text corr
 
 **TBD**
 
-### Generating Text
-
-**TBD**
-
-### Roundtrip
-
-**TBD**
+## Drafting contract text from data
 

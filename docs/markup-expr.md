@@ -21,7 +21,7 @@ Many special purpose things in handlebars can be written as Ergo expressions:
 
 Computing the paths to values within an object:
 
-```handlebars
+```tem
 {{% author.name %}}
 ```
 
@@ -29,7 +29,7 @@ Computing the paths to values within an object:
 
 Function calls as helpers:
 
-```handlebars
+```tem
 {{% roundn(rate,precision) %}}
 ```
 
@@ -37,7 +37,7 @@ Function calls as helpers:
 
 Function calls as literals:
 
-```handlebars
+```tem
 {{% roundn(rate,2) %}}
 ```
 
@@ -45,7 +45,7 @@ Function calls as literals:
 
 Loop through items in the model inline the document:
 
-```handlebars
+```tem
 {{% foreach p in products
     return `Product: {{ p.name }}` %}}
 ```
@@ -54,7 +54,7 @@ Loop through items in the model inline the document:
 
 Evaluation of an `if...else` statement inline:
 
-```handlebars
+```tem
 {{% if state = "US"
     then address.state
     else address.country %}}
@@ -64,7 +64,7 @@ Evaluation of an `if...else` statement inline:
 
 Computing the value of string concatenation inline:
 
-```handlebars
+```tem
 {{% firstName ++ lastName %}}
 ```
 
@@ -74,13 +74,13 @@ Currently Unsupported
 Some computed expressions which are at the moment unsupported include the following:
 
 - Some specific conditionals:
-```handlebars
+```tem
 {{% if forceMajeure
     then `This is a force majeure` %}}
 ```
 
 - Enforce conditionals:
-```handlebars
+```tem
 {{% enforce rate > 0.0 %}}
 ```
 
