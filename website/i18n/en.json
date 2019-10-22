@@ -14,9 +14,6 @@
       "accordproject-installation": {
         "title": "Install Cicero"
       },
-      "accordproject-models": {
-        "title": "Standard Models"
-      },
       "accordproject-resources": {
         "title": "Resources"
       },
@@ -106,7 +103,7 @@
       },
       "ref-glossary": {
         "title": "Glossary"
-      }, 
+      },
       "ref-logic-specification": {
         "title": "Ergo Compiler"
       },
