@@ -56,7 +56,7 @@
             {
                 "type": "subcategory",
                 "label": "JavaScript API",
-                "ids": ["cicero-api", "ergo-api"]
+                "ids": ["cicero-api", "ergo-api", "concerto-api"]
             }
         ]
     }

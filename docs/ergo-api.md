@@ -17,13 +17,25 @@ title: Ergo API
 <dt><a href="#getJson">getJson(input)</a> ⇒ <code>object</code></dt>
 <dd><p>Load a file or JSON string</p>
 </dd>
+<dt><a href="#loadTemplate">loadTemplate(template, files)</a> ⇒ <code>Promise.&lt;LogicManager&gt;</code></dt>
+<dd><p>Load a template from directory or files</p>
+</dd>
+<dt><a href="#fromDirectory">fromDirectory(path, [options])</a> ⇒ <code>Promise.&lt;LogicManager&gt;</code></dt>
+<dd><p>Builds a LogicManager from a directory.</p>
+</dd>
+<dt><a href="#fromZip">fromZip(buffer, [options])</a> ⇒ <code>Promise.&lt;LogicManager&gt;</code></dt>
+<dd><p>Builds a LogicManager from a Zip.</p>
+</dd>
+<dt><a href="#fromFiles">fromFiles(files, [options])</a> ⇒ <code>Promise.&lt;LogicManager&gt;</code></dt>
+<dd><p>Builds a LogicManager from files.</p>
+</dd>
 <dt><a href="#setCurrentTime">setCurrentTime(currentTime)</a> ⇒ <code>object</code></dt>
 <dd><p>Ensures there is a proper current time</p>
 </dd>
-<dt><a href="#init">init(engine, templateLogic, contractJson, currentTime)</a> ⇒ <code>object</code></dt>
+<dt><a href="#init">init(engine, logicManager, contractJson, currentTime)</a> ⇒ <code>object</code></dt>
 <dd><p>Invoke Ergo contract initialization</p>
 </dd>
-<dt><a href="#execute">execute(engine, templateLogic, contractJson, stateJson, currentTime, requestJson)</a> ⇒ <code>object</code></dt>
+<dt><a href="#execute">execute(engine, logicManager, contractJson, stateJson, currentTime, requestJson)</a> ⇒ <code>object</code></dt>
 <dd><p>Execute the Ergo contract with a request</p>
 </dd>
 <dt><a href="#resolveRootDir">resolveRootDir(parameters)</a> ⇒ <code>string</code></dt>
@@ -45,33 +57,50 @@ Utility class that implements the commands exposed by the Ergo CLI.
 **Kind**: global class  
 
 * [Commands](#Commands)
-    * [.execute(ergoPaths, ctoPaths, contractName, contractInput, stateInput, currentTime, requestsInput)](#Commands.execute) ⇒ <code>object</code>
-    * [.invoke(ergoPaths, ctoPaths, contractName, clauseName, contractInput, stateInput, currentTime, paramsInput)](#Commands.invoke) ⇒ <code>object</code>
-    * [.init(ergoPaths, ctoPaths, contractName, contractInput, currentTime, paramsInput)](#Commands.init) ⇒ <code>object</code>
+    * [.draft(template, files, contractInput, currentTime, options)](#Commands.draft) ⇒ <code>object</code>
+    * [.execute(template, files, contractInput, stateInput, currentTime, requestsInput, warnings)](#Commands.execute) ⇒ <code>object</code>
+    * [.invoke(template, files, clauseName, contractInput, stateInput, currentTime, paramsInput, warnings)](#Commands.invoke) ⇒ <code>object</code>
+    * [.initialize(template, files, contractInput, currentTime, paramsInput, warnings)](#Commands.initialize) ⇒ <code>object</code>
     * [.parseCTOtoFileSync(ctoPath)](#Commands.parseCTOtoFileSync) ⇒ <code>string</code>
     * [.parseCTOtoFile(ctoPath)](#Commands.parseCTOtoFile) ⇒ <code>string</code>
 
-<a name="Commands.execute"></a>
+<a name="Commands.draft"></a>
 
-### Commands.execute(ergoPaths, ctoPaths, contractName, contractInput, stateInput, currentTime, requestsInput) ⇒ <code>object</code>
-Execute an Ergo contract with a request
+### Commands.draft(template, files, contractInput, currentTime, options) ⇒ <code>object</code>
+Invoke generateText for an Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
 **Returns**: <code>object</code> - Promise to the result of execution  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ergoPaths | <code>Array.&lt;string&gt;</code> | paths to the Ergo modules |
-| ctoPaths | <code>Array.&lt;string&gt;</code> | paths to CTO models |
-| contractName | <code>string</code> | of the contract |
+| template | <code>string</code> | template directory |
+| files | <code>Array.&lt;string&gt;</code> | input files |
+| contractInput | <code>string</code> | the contract data |
+| currentTime | <code>string</code> | the definition of 'now' |
+| options | <code>object</code> | to the text generation |
+
+<a name="Commands.execute"></a>
+
+### Commands.execute(template, files, contractInput, stateInput, currentTime, requestsInput, warnings) ⇒ <code>object</code>
+Send a request an Ergo contract
+
+**Kind**: static method of [<code>Commands</code>](#Commands)  
+**Returns**: <code>object</code> - Promise to the result of execution  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| template | <code>string</code> | template directory |
+| files | <code>Array.&lt;string&gt;</code> | input files |
 | contractInput | <code>string</code> | the contract data |
 | stateInput | <code>string</code> | the contract state |
 | currentTime | <code>string</code> | the definition of 'now' |
 | requestsInput | <code>Array.&lt;string&gt;</code> | the requests |
+| warnings | <code>boolean</code> | whether to print warnings |
 
 <a name="Commands.invoke"></a>
 
-### Commands.invoke(ergoPaths, ctoPaths, contractName, clauseName, contractInput, stateInput, currentTime, paramsInput) ⇒ <code>object</code>
+### Commands.invoke(template, files, clauseName, contractInput, stateInput, currentTime, paramsInput, warnings) ⇒ <code>object</code>
 Invoke an Ergo contract's clause
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
@@ -79,18 +108,18 @@ Invoke an Ergo contract's clause
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ergoPaths | <code>Array.&lt;string&gt;</code> | paths to the Ergo modules |
-| ctoPaths | <code>Array.&lt;string&gt;</code> | paths to CTO models |
-| contractName | <code>string</code> | the contract |
+| template | <code>string</code> | template directory |
+| files | <code>Array.&lt;string&gt;</code> | input files |
 | clauseName | <code>string</code> | the name of the clause to invoke |
 | contractInput | <code>string</code> | the contract data |
 | stateInput | <code>string</code> | the contract state |
 | currentTime | <code>string</code> | the definition of 'now' |
 | paramsInput | <code>object</code> | the parameters for the clause |
+| warnings | <code>boolean</code> | whether to print warnings |
 
-<a name="Commands.init"></a>
+<a name="Commands.initialize"></a>
 
-### Commands.init(ergoPaths, ctoPaths, contractName, contractInput, currentTime, paramsInput) ⇒ <code>object</code>
+### Commands.initialize(template, files, contractInput, currentTime, paramsInput, warnings) ⇒ <code>object</code>
 Invoke init for an Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
@@ -98,12 +127,12 @@ Invoke init for an Ergo contract
 
 | Param | Type | Description |
 | --- | --- | --- |
-| ergoPaths | <code>Array.&lt;string&gt;</code> | paths to the Ergo modules |
-| ctoPaths | <code>Array.&lt;string&gt;</code> | paths to CTO models |
-| contractName | <code>string</code> | the contract name |
+| template | <code>string</code> | template directory |
+| files | <code>Array.&lt;string&gt;</code> | input files |
 | contractInput | <code>string</code> | the contract data |
 | currentTime | <code>string</code> | the definition of 'now' |
 | paramsInput | <code>object</code> | the parameters for the clause |
+| warnings | <code>boolean</code> | whether to print warnings |
 
 <a name="Commands.parseCTOtoFileSync"></a>
 
@@ -141,6 +170,58 @@ Load a file or JSON string
 | --- | --- | --- |
 | input | <code>object</code> | either a file name or a json string |
 
+<a name="loadTemplate"></a>
+
+## loadTemplate(template, files) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
+Load a template from directory or files
+
+**Kind**: global function  
+**Returns**: <code>Promise.&lt;LogicManager&gt;</code> - a Promise to the instantiated logicmanager  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| template | <code>string</code> | template directory |
+| files | <code>Array.&lt;string&gt;</code> | input files |
+
+<a name="fromDirectory"></a>
+
+## fromDirectory(path, [options]) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
+Builds a LogicManager from a directory.
+
+**Kind**: global function  
+**Returns**: <code>Promise.&lt;LogicManager&gt;</code> - a Promise to the instantiated logicmanager  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>String</code> | to a local directory |
+| [options] | <code>Object</code> | an optional set of options to configure the instance. |
+
+<a name="fromZip"></a>
+
+## fromZip(buffer, [options]) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
+Builds a LogicManager from a Zip.
+
+**Kind**: global function  
+**Returns**: <code>Promise.&lt;LogicManager&gt;</code> - a Promise to the instantiated logicmanager  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| buffer | <code>Buffer</code> | the buffer to a Zip (zip) file |
+| [options] | <code>Object</code> | an optional set of options to configure the instance. |
+
+<a name="fromFiles"></a>
+
+## fromFiles(files, [options]) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
+Builds a LogicManager from files.
+
+**Kind**: global function  
+**Returns**: <code>Promise.&lt;LogicManager&gt;</code> - a Promise to the instantiated logicmanager  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| files | <code>Array.&lt;String&gt;</code> | file names |
+| [options] | <code>Object</code> | an optional set of options to configure the instance. |
+
 <a name="setCurrentTime"></a>
 
 ## setCurrentTime(currentTime) ⇒ <code>object</code>
@@ -155,7 +236,7 @@ Ensures there is a proper current time
 
 <a name="init"></a>
 
-## init(engine, templateLogic, contractJson, currentTime) ⇒ <code>object</code>
+## init(engine, logicManager, contractJson, currentTime) ⇒ <code>object</code>
 Invoke Ergo contract initialization
 
 **Kind**: global function  
@@ -164,13 +245,13 @@ Invoke Ergo contract initialization
 | Param | Type | Description |
 | --- | --- | --- |
 | engine | <code>object</code> | the execution engine |
-| templateLogic | <code>object</code> | the Template Logic |
+| logicManager | <code>object</code> | the Template Logic |
 | contractJson | <code>object</code> | contract data in JSON |
 | currentTime | <code>string</code> | the definition of 'now' |
 
 <a name="execute"></a>
 
-## execute(engine, templateLogic, contractJson, stateJson, currentTime, requestJson) ⇒ <code>object</code>
+## execute(engine, logicManager, contractJson, stateJson, currentTime, requestJson) ⇒ <code>object</code>
 Execute the Ergo contract with a request
 
 **Kind**: global function  
@@ -179,7 +260,7 @@ Execute the Ergo contract with a request
 | Param | Type | Description |
 | --- | --- | --- |
 | engine | <code>object</code> | the execution engine |
-| templateLogic | <code>object</code> | the Template Logic |
+| logicManager | <code>object</code> | the Template Logic |
 | contractJson | <code>object</code> | contract data in JSON |
 | stateJson | <code>object</code> | state data in JSON |
 | currentTime | <code>string</code> | the definition of 'now' |
