@@ -26,6 +26,9 @@
       "cicero-cli": {
         "title": "Cicero CLI"
       },
+      "concerto-api": {
+        "title": "Concerto API"
+      },
       "ergo-api": {
         "title": "Ergo API"
       },
