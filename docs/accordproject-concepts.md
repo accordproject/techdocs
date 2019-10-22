@@ -13,7 +13,7 @@ An Accord Project template ties legal text (for a clause or contract) to compute
 
 ![Accord Project Template](assets/020/template.png)
 
-The three components (Text - Model - Logic) can also be intuitively understood as a **linear progression**, from _human-readable_ legal text to _machine-readable_ code. When combined these three elements allow templates to be edited, validated, verified, and then executed on any computer platform (on your own machine, on a Cloud platform, on Blockchain, etc).
+The three components (Text - Model - Logic) can also be intuitively understood as a **progression**, from _human-readable_ legal text to _machine-readable_ code. When combined these three elements allow templates to be edited, validated, verified, and then executed on any computer platform (on your own machine, on a Cloud platform, on Blockchain, etc).
 
 > Note that we use the computing term 'execution' here, which means run by a computer. This is distinct from the legal term 'execution', which usually refers to the process of signing an agreement.
 
@@ -159,7 +159,7 @@ contract AcceptanceOfDelivery over AcceptanceOfDeliveryClause {
 }
 ```
 
-The above logic specify what conditions should be met for a delivery to be accepted. The code above checks whether delivery has already been made; whether the acceptance is timely, within the specified inspection date; and whether the inspection has passed or not.
+The above logic specifies what conditions should be met for a delivery to be accepted. The code above checks whether delivery has already been made; whether the acceptance is timely, within the specified inspection date; and whether the inspection has passed or not.
 
 ### Ergo
 
