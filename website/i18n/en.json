@@ -104,6 +104,9 @@
       "ref-errors": {
         "title": "Errors Reference"
       },
+      "ref-glossary": {
+        "title": "Glossary"
+      }, 
       "ref-logic-specification": {
         "title": "Ergo Compiler"
       },

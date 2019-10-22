@@ -39,6 +39,7 @@
             "0.13to0.20"
         ],
         "Reference Manual": [
+	    "ref-glossary",
             "ref-testing",
             "ref-errors",
             "ref-logic",
