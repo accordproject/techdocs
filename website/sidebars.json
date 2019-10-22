@@ -1,7 +1,8 @@
 {
     "docs": {
-        "Getting Started": ["accordproject", "accordproject-studio", "accordproject-installation", "accordproject-helloworld", "accordproject-resources"],
-        "Tutorials": [
+        "Introduction": ["accordproject", "accordproject-lawyers", "accordproject-developers", "accordproject-concepts"],
+        "Getting Started": ["started-studio", "started-installation", "started-helloworld", "started-resources"],
+        "Legal-Tech Tutorials": [
             {
                 "type": "subcategory",
                 "label": "Authoring in Template Studio",
@@ -11,23 +12,25 @@
                 "type": "subcategory",
                 "label": "Authoring with Cicero",
                 "ids": ["tutorial-templates", "tutorial-create", "tutorial-publish"]
-            },
+            }
+        ],
+        "Developers Tutorials": [
             {
                 "type": "subcategory",
                 "label": "Template Execution",
                 "ids": ["tutorial-nodejs", "tutorial-hyperledger"]
             }
         ],
-        "Guides": [
+        "Template Guides": [
             {
                 "type": "subcategory",
-                "label": "CiceroMark",
+                "label": "Cicero Markup",
                 "ids": ["markup-cicero", "markup-commonmark", "markup-variables-blocks", "markup-expr"]
             },
             {
                 "type": "subcategory",
                 "label": "Concerto Modeling",
-                "ids": ["model-concerto", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators"]
+                "ids": ["model-concerto", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators", "model-api"]
             },
             {
                 "type": "subcategory",
