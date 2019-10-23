@@ -25,7 +25,7 @@ The simplest kind of expressions in Ergo are literal values.
 
 Each line here is a separate expression. At the end of the line, the notation `// write something here` is a _comment_, which means it is a part of your Ergo program which is ignored by the Ergo compiler. It can be useful to document your code.
 
-Every Ergo expression can be _evaluated_, which means it should compute some value. In the case of a literal value, the result of evaluation is simply itself (e.g., the expression `1` evaluates to the integer `1`).
+Every Ergo expression can be _evaluated_, which means it should compute some value. In the case of a literal value, the result of evaluation is  itself (e.g., the expression `1` evaluates to the integer `1`).
 
 > You can actually see the result of evaluating expressions by trying them out in the [Ergo REPL](https://ergorepl.netlify.com). You would have to prefix them with `return`: for instance, to evaluate the String literal `"John Smith"` type: `return "John Smith"` (followed by clicking the button 'Evaluate') in the REPL. This should answer: `Response. "John Smith" : String`.
 
@@ -461,7 +461,7 @@ Each Ergo file starts with a namespace declaration which provides a way to ident
 
 ### Libraries
 
-A library is simply an Ergo file in a namespace which defines useful constants or functions. For instance:
+A library is  an Ergo file in a namespace which defines useful constants or functions. For instance:
 
 ```ergo
     namespace org.accordproject.ergo.money

@@ -185,7 +185,7 @@ ergo$ call volumediscount(VolumeDiscountRequest{ netAnnualChargeVolume : 10.5 })
 Response. VolumeDiscountResponse{discountRate: 2.8} : VolumeDiscountResponse
 ```
 
-You can also invoke the contract without explicitely naming the clause by simply sending a request. The Ergo engine dispatches that request to the first clause which can handle it:
+You can also invoke the contract without explicitely naming the clause by  sending a request. The Ergo engine dispatches that request to the first clause which can handle it:
 ```ergo
 ergo$ send VolumeDiscountRequest{ netAnnualChargeVolume : 0.1 }
 Response. VolumeDiscountResponse{discountRate: 3.0} : VolumeDiscountResponse
