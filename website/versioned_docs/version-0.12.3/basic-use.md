@@ -41,7 +41,7 @@ Cicero archives are files with a `.cta` extension, which includes all the differ
 
 ## Parse a Valid Clause Text
 
-Using your terminal `cd` into the directory that contains the template archive you just downloaded, then create a sample clause text `sample.txt` which contains the following text:
+Using your terminal `cd` into the directory that contains the template archive you downloaded, then create a sample clause text `sample.txt` which contains the following text:
 
 ```text
 Name of the person to greet: "Fred Blogs".
@@ -166,5 +166,5 @@ Feel free to try the same commands to parse and execute other templates from the
 
 ## To Execute on Different Platforms
 
-Templates may be executed on different platforms, not just from the command line. In the [Advanced Tutorials](advanced-nodejs), you can find information on how to execute a template in a standalone Node.js process, invoked as RESTful services, or deployed as chaincode in Hyperledger Fabric.
+Templates may be executed on different platforms, not only from the command line. In the [Advanced Tutorials](advanced-nodejs), you can find information on how to execute a template in a standalone Node.js process, invoked as RESTful services, or deployed as chaincode in Hyperledger Fabric.
 

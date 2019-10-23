@@ -21,7 +21,7 @@ Each line here is a separate expression. At the end of the line, the notation `/
 
 Every Ergo expression can be _evaluated_, which means it should compute some value. In the case of a literal value, the result of evaluation is simply itself (e.g., the expression `1` evaluates to the integer `1`).
 
-> You can actually see the result of evaluating expressions by trying them out in the [Ergo REPL](https://ergorepl.netlify.com). You just have to prefix them with `return`: for instance, to evaluate the String literal `"John Smith"` type: `return "John Smith"` (followed by clicking the button 'Evaluate') in the REPL. This should answer: `Response. "John Smith" : String`.
+> You can actually see the result of evaluating expressions by trying them out in the [Ergo REPL](https://ergorepl.netlify.com). You have to prefix them with `return`: for instance, to evaluate the String literal `"John Smith"` type: `return "John Smith"` (followed by clicking the button 'Evaluate') in the REPL. This should answer: `Response. "John Smith" : String`.
 
 ## Operators
 
