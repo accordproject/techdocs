@@ -41,7 +41,7 @@ The following screenshot shows the text of an acceptance of delivery clause.
 
 ![Example Text](/docs/assets/grammar.png)
 
-The text is written in plain English with variables between `{{` and `}}` and highlighted in blue. Using variables is useful so the same template can be used in different agreements by  replacing them by different values.
+The text is written in plain English with variables between `{{` and `}}` and highlighted in blue. Using variables is useful so the same template can be used in different agreements by replacing them by different values.
 
 For instance, the following show the same acceptance of delivery clause where the `shipper` is `"Party A"`, the `receiver` is `"Party B"`, the `deliverable` is `"Widgets"`, etc.
 
