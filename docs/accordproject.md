@@ -10,3 +10,4 @@ Accord Project is an open source, non-profit, initiative aimed at transforming c
 Accord Project defines a notion of legal template with associated computing logic which is expressive, open-source, and portable. 
 
 Accord project templates are similar to a clause or contract template in any document format, but they can be read, interpreted, and run by a computer.
+
