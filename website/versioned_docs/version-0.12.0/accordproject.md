@@ -42,7 +42,7 @@ Concerto is a lightweight modeling language which is used to describe the inform
 
 The following screenshot shows the model for the acceptance of delivery clause.
 
-![An example of a concerto file. This file contains two blocks of code, the clause Response and the template model.](/img/model-vscode.png)
+![An example of a concerto file. This file contains two blocks of code, the clause response and the template model.](/img/model-vscode.png)
 
 The Concerto Modeling Language (CML) provides object-oriented style modeling and includes support for inheritance, for describing relationships, nested or optional data structures, enumerations and more.
 
