@@ -249,7 +249,7 @@ The logic for a Clause is implemented as a function, each of which takes a reque
 
 Given the template grammar and the template model above we can now edit (parameterise) the template to create a clause (an instance of the template).
 
-Next we need to ground the template to events that are happening in the real-world: packages are getting shipped, delivered, signed-for etc. We want those transactions to be routed to the template, so that it is aware of them and can take appropriate action. In this case the action is simply to calculate the penalty amount and signal whether the buyer may terminate the contract.
+Next we need to ground the template to events that are happening in the real-world: packages are getting shipped, delivered, signed-for etc. We want those transactions to be routed to the template, so that it is aware of them and can take appropriate action. In this case the action is just to calculate the penalty amount and signal whether the buyer may terminate the contract.
 
 ### Transactions
 
@@ -326,7 +326,7 @@ transaction LateDeliveryAndPenaltyResponse {
 }
 ```
 
-Here we are simply stating that execution this template will produce an instance of LateDeliveryAndPenaltyResponse.
+Here we are stating that execution this template will produce an instance of LateDeliveryAndPenaltyResponse.
 
 #### Event
 
