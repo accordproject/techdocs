@@ -161,5 +161,5 @@ You can find more information on how to create or publish Accord Project templat
 
 ### Run on Different Platforms
 
-Templates may be executed on different platforms, not just from the command line. You can find more information on how to execute Accord Project templates on different platforms (Node.js, Hyperledger Fabric, etc.) in the [Template Execution](tutorial-nodejs) tutorials.
+Templates may be executed on different platforms, not only from the command line. You can find more information on how to execute Accord Project templates on different platforms (Node.js, Hyperledger Fabric, etc.) in the [Template Execution](tutorial-nodejs) tutorials.
 
