@@ -16,7 +16,7 @@ An Accord Project template is composed of three elements:
 - Model, the data model that backs the template 
 - Logic, the executable business logic for the template
 
-![Cicero Template](assets/template.png)
+![The three elements of Cicero templates: Model, Natural Language, Logic.These elements all form a triangle.](assets/template.png)
 
 When combined these three elements allow templates to be edited, analyzed, queried and executed.
 
@@ -30,7 +30,7 @@ Cicero implements a format for legal contract and clause templates based on the 
 
 The following screenshot shows a Cicero template for an acceptance of delivery clause.
 
-![Template Grammar](/docs/assets/grammar.png)
+![An example of a .tem file. There are 3 paragraphs of a contract with binding variables incorporated in each paragraph](/docs/assets/grammar.png)
 
 Cicero relies on two other projects:
 - [Concerto](https://github.com/hyperledger/composer-concerto): a lightweight, versatile data modeling language (maintained by the Hyperledger forum)
@@ -42,7 +42,7 @@ Concerto is a lightweight modeling language which is used to describe the inform
 
 The following screenshot shows the model for the acceptance of delivery clause.
 
-![Concerto Model](/img/model-vscode.png)
+![An example of a concerto file. This file contains two blocks of code, the clause Response and the template model.](/img/model-vscode.png)
 
 The Concerto Modeling Language (CML) provides object-oriented style modeling and includes support for inheritance, for describing relationships, nested or optional data structures, enumerations and more.
 
@@ -54,7 +54,7 @@ A DSL is a computer language that is targeted to a particular kind of problem, r
 
 The following screenshot shows the Ergo logic for the acceptance of delivery clause.
 
-![Ergo Logic](/img/ergo-vscode.png)
+![A block of code that is a “contract”. Within the contract there is another block of code that is a “clause”. The clause contains a variable called status and returns a new instance of the InspectionResponse object.](/img/ergo-vscode.png)
 
 It is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent computer code. For that reason, Ergo is intended to be accessible to Lawyers who create the corresponding prose for those computable legal contracts. As a programming language, the Ergo syntax also adheres to programming conventions.
 
