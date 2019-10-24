@@ -53,6 +53,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
 * [Getting Started with Accord Project][docwelcome]
 * [Concepts and High-level Architecture][dochighlevel]
 * [How to use the Cicero Templating System][doccicero]
+* [How to use Concerto a 100% JavaScript schema language and runtime][doccicero]
 * [How to Author Accord Project Templates][docstudio]
 * [Ergo Language Guide][docergo]
 
