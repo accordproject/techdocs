@@ -1,5 +1,5 @@
 ---
-id: accordproject-helloworld
+id: started-helloworld
 title: Hello World Template
 ---
 

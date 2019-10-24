@@ -1,5 +1,5 @@
 ---
-id: accordproject-resources
+id: started-resources
 title: Resources
 ---
 

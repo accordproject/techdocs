@@ -1,14 +1,40 @@
-<h1 align="center">
+<p align="center">
   <a href="https://www.accordproject.org/">
-    <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
+    <img src="assets/APLogo.png" alt="Accord Project Logo">
   </a>
-</h1>
+</p>
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors) [![Join the Accord Project Slack](https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue)](https://accord-project-slack-signup.herokuapp.com) [![GitHub license](https://img.shields.io/github/license/accordproject/techdocs)](https://github.com/accordproject/techdocs/blob/master/LICENSE)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors)
+[![Join the Accord Project Slack](https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue)](https://accord-project-slack-signup.herokuapp.com)
+[![GitHub license](https://img.shields.io/github/license/accordproject/techdocs)](https://github.com/accordproject/techdocs/blob/master/LICENSE)
+
+## Introduction
 
 Technical Documentation for all Accord Project code. This site uses [Docusaurus](https://docusaurus.io) to generate static HTML.
 
 The site is hosted at: https://docs.accordproject.org
+
+Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. Accord Project operates under the umbrella of the [Linux Foundation][linuxfound]. The technical charter for the Accord Project can be found [here][charter].
+
+## Installation
+
+To build the documentation locally:
+```
+cd ./website
+npm run start
+```
+If you want to re-generate the JSDoc API:
+```
+npm run build:api
+```
+
+---
+
+<p align="center">
+  <a href="https://www.accordproject.org/">
+    <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
+  </a>
+</p>
 
 Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. Accord Project operates under the umbrella of the [Linux Foundation][linuxfound]. The technical charter for the Accord Project can be found [here][charter].
 
@@ -31,7 +57,6 @@ Accord Project is an open source, non-profit, initiative working to transform co
 * [Ergo Language Guide][docergo]
 
 ### Ecosystem
-
 
 #### Core libraries:
 <table>
@@ -147,7 +172,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
       <th id="blank"></th>
       <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-cicero">markdown-cicero</a></td>
       <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero.svg" alt="npm version"></a></td>
-      <td headers>CiceroDOM: Markdown extensions for contracts, clauses, variables etc.</td>
+      <td headers>Markdown extensions for contracts, clauses, variables etc.</td>
       </tr>
        <tr>
       <th id="blank"></th>
@@ -170,14 +195,14 @@ Accord Project is an open source, non-profit, initiative working to transform co
     <tr>
       <td headers>Markdown Editor</td>
       <td headers><a href="https://github.com/accordproject/markdown-editor">markdown-editor</a></td>
-      <td headers><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-editor.svg" alt="npm version"></a></td>
-      <td headers>WYSIWYG rich text web editor that persists text as markdown. Based on Slate.js</td>
+      <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-editor"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-editor.svg" alt="npm version"></a></td>
+      <td headers>WYSIWYG rich text web editor for markdown based on Slate.js</td>
     </tr>
      <tr>
      <td headers="co1 c1">Cicero UI</td>
       <td headers="co2 c1"><a href="https://github.com/accordproject/cicero-ui">cicero-ui</a></td>
       <td headers="co3 c1"> <a href="https://badge.fury.io/js/%40accordproject%2Fcicero-ui"><img src="https://badge.fury.io/js/%40accordproject%2Fcicero-ui.svg" alt="npm version"></a></td>
-       <td headers="co4 c1">WYSIWYG contract editor, template libary browser, error panel component</td>
+       <td headers="co4 c1">React UI components for Cicero</td>
      </tr>
      <tr>
      <td headers="co1 c1">Concerto UI</td>
@@ -186,7 +211,6 @@ Accord Project is an open source, non-profit, initiative working to transform co
        <td headers="co4 c1">Dynamic web forms generated from Concerto models</td>
      </tr>
 </table>
-  
 
 #### Template Editors:
 
