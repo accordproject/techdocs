@@ -9,9 +9,7 @@ To experience the full power of Accord Project, you should install the Cicero co
 
 Before you install Cicero, you must first obtain and configure the following dependency:
 
-* [Node.js v8.x (LTS)](http://nodejs.org): We use Node to generate the documentation, run a
-  development web server, run tests, and generate distributable files. Depending on your system,
-  you can install Node either from source or as a pre-packaged bundle.
+* [Node.js v10.x (LTS)](http://nodejs.org): We use Node to generate the documentation, run a development web server, run tests, and generate distributable files. Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
 >  We recommend using [nvm](https://github.com/creationix/nvm) (or [nvm-windows](https://github.com/coreybutler/nvm-windows)) to manage and install Node.js, which makes it easy to change the version of Node.js per project.
 
@@ -22,6 +20,13 @@ To install the latest version:
 ```bash
 npm install -g @accordproject/cicero-cli
 ```
+
+:::note
+You can install a specific version by appending `@version` at the end of the `npm install` command. For instance to install `0.20.0-beta.2`:
+```
+npm install -g @accordproject/cicero-cli@0.20.0-beta.2
+```
+:::
 
 To check that Cicero has been properly installed, and display the version number:
 ```bash

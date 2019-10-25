@@ -23,14 +23,9 @@ Then click on the `Download Archive` button under the description for the templa
 
 Cicero archives are files with a `.cta` extension, which includes all the different components for the template (the natural language, model and logic).
 
-> Note that the version of `cicero-cli` needs to match the Cicero version that is required by a template.
-> * You can check the version of your CLI with `cicero --version`. 
-> * You can choose a different version of a template with the *Versions* dropdown in the [Accord Project Template Library](https://templates.accordproject.org).
-> * Otherwise, install a specific version of the cli, for example for v0.8, use `npm i -g @accordproject/cicero-cli@0.8`.  
-
 ## Parse a Valid Clause Text
 
-Using your terminal `cd` into the directory that contains the template archive you just downloaded, then create a sample clause text `sample.txt` which contains the following text:
+Using your terminal `cd` into the directory that contains the template archive you just downloaded, then create a sample clause text `sample.md` which contains the following text:
 
 ```text
 Name of the person to greet: "Fred Blogs".
@@ -40,7 +35,7 @@ Thank you!
 The  use the `cicero parse` command in your terminal to load the template and parse your sample clause text. This should be echoing the result of parsing back to your terminal.
 
 ```bash
-cicero parse --template helloworld@0.10.1.cta --sample sample.txt 
+cicero parse --template helloworld@0.12.0.cta --sample sample.md
 ```
 
 > Notes:
@@ -61,14 +56,14 @@ This should print this output:
 
 If you attempt to parse invalid data, this same command should return with line and column information for the syntax error.
 
-Edit your `sample.txt` file to add text that is not consistent with the template:
+Edit your `sample.md` file to add text that is not consistent with the template:
 
 ```text
 FUBAR Name of the person to greet: "Fred Blogs".
 Thank you!
 ```
 
-Rerun `cicero parse --template helloworld@0.10.1.cta --sample sample.txt`. The output should now be:
+Rerun `cicero parse --template helloworld@0.12.0.cta --sample sample.md`. The output should now be:
 
 ```text
 18:15:22 - error: invalid syntax at line 1 col 1:
@@ -107,7 +102,7 @@ This is the request which you will send to trigger the execution of your contrac
 Then use the `cicero execute` command in your terminal to load the template, parse your sample clause text *and* execute the request. This should be echoing the result of execution back to your terminal.
 
 ```bash
-cicero execute --template helloworld@0.10.1.cta --sample sample.txt --state state.json --request request.json
+cicero execute --template helloworld@0.12.0.cta --sample sample.md --state state.json --request request.json
 ```
 
 > Note that `cicero execute` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
