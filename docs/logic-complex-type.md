@@ -140,12 +140,10 @@ define enum ProductType {
 }
 ```
 
-> **TechNote:** Enumerated types are handled as `String` at the moment.
-
 To create an instance of that enum:
 ```ergo
-"DAIRY"
-"BEEF"
+DAIRY
+BEEF
 ```
 
 ## Optional types

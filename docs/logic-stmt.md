@@ -117,7 +117,7 @@ Note that `emit` is always terminated by a `;` followed by another statement.
 
 ## Setting the contract state
 
-When inside a clause or contract, you can change the contract state as follows:
+When inside a clause or contract, you can create a contract state as follows:
 ```ergo
     set state InstallmentSaleState{
       stateId: "#1",
@@ -130,6 +130,12 @@ When inside a clause or contract, you can change the contract state as follows:
 ```
 
 Note that `set state` is always terminated by a `;` followed by another statement.
+
+Once the state is set, you can change its properties individually with the shorter:
+```ergo
+set state.total_paid = 100.0;
+return
+```
 
 ## Printing intermediate results
 
@@ -146,3 +152,4 @@ Note that `set state` is always terminated by a `;` followed by another statemen
     info(state.status);     // Directive to print to standard output
     return
 ```
+
