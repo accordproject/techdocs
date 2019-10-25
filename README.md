@@ -38,12 +38,6 @@ npm run build:api
 
 ---
 
-<p align="center">
-  <a href="https://www.accordproject.org/">
-    <img src="assets/APLogo.png" alt="Accord Project Logo" width="400" />
-  </a>
-</p>
-
 Accord Project is an open source, non-profit, initiative working to transform contract management and contract automation by digitizing contracts. Accord Project operates under the umbrella of the [Linux Foundation][linuxfound]. The technical charter for the Accord Project can be found [here][charter].
 
 ## Learn More About Accord Project
