@@ -1,12 +1,20 @@
 <p align="center">
   <a href="https://www.accordproject.org/">
-    <img src="assets/APLogo.png" alt="Accord Project Logo">
+    <img src="assets/APLogo.png" alt="Accord Project Logo" width="400">
   </a>
 </p>
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors)
-[![Join the Accord Project Slack](https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue)](https://accord-project-slack-signup.herokuapp.com)
-[![GitHub license](https://img.shields.io/github/license/accordproject/techdocs)](https://github.com/accordproject/techdocs/blob/master/LICENSE)
+<p align="center">
+  <a href="#contributors">
+    <img src="https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square" alt="Contributors">
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/github/license/accordproject/cicero?color=bright-green" alt="GitHub license">
+  </a>
+  <a href="https://accord-project-slack-signup.herokuapp.com/">
+    <img src="https://img.shields.io/badge/Accord%20Project-Join%20Slack-blue" alt="Join the Accord Project Slack"/>
+  </a>
+</p>
 
 ## Introduction
 
