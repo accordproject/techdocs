@@ -1486,7 +1486,7 @@ input::placeholder {
     line-height: 1.2em;
     margin: 0;
     padding: 0;
-    padding: 6px 10px;
+    padding: 6px 20px;
   }
 
   .navigationSlider .slidingNav ul li a:hover,
