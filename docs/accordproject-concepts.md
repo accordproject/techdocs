@@ -3,15 +3,15 @@ id: accordproject-concepts
 title: Key Concepts
 ---
 
-## What is an Accord Project Template?
+## What is a Template?
 
-An Accord Project template ties legal text to computer code. It is composed of three elements:
+A template ties legal text to computer code. It is composed of three elements:
 
 - **Template Text**: the natural language of the template
 - **Template Model**: the data model that backs the template
 - **Template Logic**: the executable business logic for the template
 
-![Accord Project Template](assets/020/template.png)
+![Template](assets/020/template.png)
 
 The three components (Text - Model - Logic) can also be intuitively understood as a **progression**, from _human-readable_ legal text to _machine-readable_ code. When combined these three elements allow templates to be edited, validated, verified, and then executed on any computer platform (on your own machine, on a Cloud platform, on Blockchain, etc).
 
@@ -83,7 +83,7 @@ to this agreement.
 
 ### CiceroMark
 
-CiceroMark is the markup format in which the text for Accord Project templates is written. It defines notations (such as the `{{` and `}}` notation for variables used in the **Acceptance of Delivery** clause) which allows a computer to make sense of your templates.
+CiceroMark is the markup format in which the text for Accord Project compliant templates is written. It defines notations (such as the `{{` and `}}` notation for variables used in the **Acceptance of Delivery** clause) which allows a computer to make sense of your templates.
 
 It also provides the ability to specify the document structure (e.g., headings, lists), to highlight certain terms (e.g., in bold or italics), to indicate text which is optional in the agreement, and more.
 
@@ -165,12 +165,12 @@ The logic specifies what conditions should be met for a delivery to be accepted.
 
 ### Ergo
 
-Ergo is the programming language which is used to capture the contractual logic in Accord Project templates. Ergo is specifically designed for legal agreements. Since it is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent computer code, Ergo is intended to be accessible to lawyers who create the corresponding prose for those computable legal contracts.
+Ergo is the programming language which is used to capture the contractual logic in templates. Ergo is specifically designed for legal agreements, and is intended to be accessible for those creating the corresponding prose for those computable legal contracts. Ergo expressions can be embedded in the marked-up text for a template. 
 
 _More information about Ergo can be found in the [Ergo Logic](logic-ergo) Section of this documentation._
 
 ## What next?
 
-Try Accord Project for yourself, either [online](tutorial-latedelivery), using template studio, or by [installing Cicero](started-installation).
+Try building smart legal contract templates for yourself, either [online](tutorial-latedelivery), using Template Studio, or by [installing Cicero](started-installation).
 
 Find links to [sample templates](started-resources) and other resources in the rest of this documentation.
