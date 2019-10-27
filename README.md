@@ -90,7 +90,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
     <td headers></td>
     <td headers> <a href="https://github.com/accordproject/cicero/tree/master/packages/cicero-server">cicero-server</a></td>
     <td headers> <a href="https://badge.fury.io/js/%40accordproject%2Fcicero-server"><img src="https://badge.fury.io/js/%40accordproject%2Fcicero-server.svg" alt="npm version"></a></td>
-    <td headers>Wraps the Cicero Engine and exposes it as a RESTful service<td>
+    <td headers>Wraps the Cicero Engine and exposes it as a RESTful service</td>
     </tr>
     <tr>
     <td headers></td>
