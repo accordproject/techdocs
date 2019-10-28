@@ -8,7 +8,7 @@ title: Key Concepts
 A template ties legal text to computer code. It is composed of three elements:
 
 - **Template Text**: the natural language of the template
-- **Template Model**: the data model that backs the template
+- **Template Model**: the data model that backs the template, acting as a bridge between the text and the logic
 - **Template Logic**: the executable business logic for the template
 
 ![Template](assets/020/template.png)
@@ -27,7 +27,7 @@ _More information about how to install Cicero and get started with Accord Projec
 
 ![Template Text](assets/020/template_text.png)
 
-The template text is the natural language of the clause or contract. It can include markup to indicate variables (or parameters) for that template. Both the model, which reflects the data referred to in the text, and the logic, which reflects the business logic in the text, will be explained in future sections.
+The template text is the natural language of the clause or contract. It can include markup to indicate [variables](ref-glossary#variable) for that template. Both the model, which reflects the data referred to in the text, and the logic, which reflects the business logic in the text, will be explained in future sections.
 
 The following shows the text of an **Acceptance of Delivery** clause.
 
@@ -48,7 +48,7 @@ evaluate the {{deliverable}} on the delivery date before notifying
 
 ## Acceptance Criteria.
 
-The "Acceptance Criteria" are the specifications the {{deliverable}}
+The 'Acceptance Criteria' are the specifications the {{deliverable}}
 must meet for the {{shipper}} to comply with its requirements and
 obligations under this agreement, detailed in {{attachment}}, attached
 to this agreement.
@@ -103,24 +103,26 @@ The following shows the model for the **Acceptance of Delivery** clause.
 /* The template model */
 asset AcceptanceOfDeliveryClause extends AccordClause {
 
-  /** the shipper of the goods*/
+  /* the shipper of the goods*/
   --> Organization shipper
 
-  /** the receiver of the goods */
+  /* the receiver of the goods */
   --> Organization receiver
 
-  /** what are we delivering? */
+  /* what we are delivering */
   o String deliverable
 
-  /* how long does the receiver have to inspect the goods? */
+  /* how long does the receiver have to inspect the goods */
   o Integer businessDays
 
-  /** additional information */
+  /* additional information */
   o String attachment
 }
 ```
 
-Thanks to the model, the computer now knows that the `shipper` variable (`"Party A"` in the example) and the `receiver` variable (`"Party B"` in the example) are both `Organization` types; that variable `businessDays` (`10` in the example) is an `Integer` type; and that variable `deliverable` (`"Widgets"` in the example) is a `String` type, and can contain any text description.
+Thanks to the model, the computer now knows that the `shipper` variable (`"Party A"` in the example) and the `receiver` variable (`"Party B"` in the example) are both `Organization` types. The computer also knows that variable `businessDays` (`10` in the example) is an `Integer` type; and that the variable `deliverable` (`"Widgets"` in the example) is a `String` type, and can contain any text description.
+
+> If you are unfamiliar with the different types of variables, or want a more thorough explanation of what variables are, please refer to our [Glossary](ref-glossary#data-models) for a more detailed explanation.
 
 ### Concerto
 
@@ -146,15 +148,15 @@ contract AcceptanceOfDelivery over AcceptanceOfDeliveryClause {
     ;
 
     let status =
-      if isAfter(now(), addDuration(received, Duration{ amount: contract.businessDays, unit: "days"}))
-      then "OUTSIDE_INSPECTION_PERIOD"
+      if isAfter(now(), addDuration(received, Duration{ amount: contract.businessDays, unit: ~org.accordproject.time.TemporalUnit.days}))
+      then OUTSIDE_INSPECTION_PERIOD
       else if request.inspectionPassed
-      then "PASSED_TESTING"
-      else "FAILED_TESTING"
+      then PASSED_TESTING
+      else FAILED_TESTING
     ;
     return InspectionResponse{
       status : status,
-      shipper : contract.shipper,
+      shipper : contract.shipper,  
       receiver : contract.receiver
     }
   }
@@ -165,7 +167,7 @@ The logic specifies what conditions should be met for a delivery to be accepted.
 
 ### Ergo
 
-Ergo is the programming language which is used to capture the contractual logic in templates. Ergo is specifically designed for legal agreements, and is intended to be accessible for those creating the corresponding prose for those computable legal contracts. Ergo expressions can be embedded in the marked-up text for a template. 
+Ergo is the programming language which is used to capture the contractual logic in templates. Ergo is specifically designed for legal agreements, and is intended to be accessible for those creating the corresponding prose for those computable legal contracts. Ergo expressions can be embedded in the marked-up text for a template.
 
 _More information about Ergo can be found in the [Ergo Logic](logic-ergo) Section of this documentation._
 
@@ -174,3 +176,5 @@ _More information about Ergo can be found in the [Ergo Logic](logic-ergo) Sectio
 Try building smart legal contract templates for yourself, either [online](tutorial-latedelivery), using Template Studio, or by [installing Cicero](started-installation).
 
 Find links to [sample templates](started-resources) and other resources in the rest of this documentation.
+
+If there were technical words that you were not familiar with, please refer to our [Glossary](ref-glossary) for a more detailed explanation.

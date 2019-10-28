@@ -13,7 +13,7 @@ If this interests you, please visit our [Technology Working Group](https://www.a
 
 ## How to navigate this documentation?
 
-If you want to author, validate, and run Accord Project templates _locally_, please visit our [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) page for instructions.
+If you want to author, validate, and run Accord Project templates locally, please visit our [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) page for instructions.
 
 If you are new to the Accord Project, please read the [Key Concepts](accordproject-concepts) page. This will allow you to understand the three components of a template (text, model, and logic) and how they work together. If you want some guidance on creating your first template, please see [Authoring in Template Studio](tutorial-latedelivery) for a step-by-step guide on how to create your first template.
 

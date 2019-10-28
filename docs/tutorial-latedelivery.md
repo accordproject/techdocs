@@ -90,22 +90,22 @@ The penalty should be rather low. Now send this other request:
   "goodsValue": 200
 }
 ```
-Notice that the penalty is now quite a large value. It is not unusual to cap a penalty to a maximum amount. Let us now look at how to change the template to add such a cap based on a percentage of the total value of the delivered goods. 
+Notice that the penalty is now quite a large value. It is not unusual to cap a penalty to a maximum amount. Let us now look at how to change the template to add such a cap based on a percentage of the total value of the delivered goods.
 
 ### Update the Legal Text
 
-To implement this, we first go to the `Template` tab and add a sentence indicating: `The total amount of penalty shall not, however, exceed [{capPercentage}]% of the total value of the delayed goods.`
+To implement this, we first go to the `Template` tab and add a sentence indicating: `The total amount of penalty shall not, however, exceed {{capPercentage}}% of the total value of the delayed goods.`
 
 For convenience, you can copy-paste the new template text from here:
 ```md
 Late Delivery and Penalty.
 
-In case of delayed delivery of Goods, [{seller}] shall pay to
-[{buyer}] a penalty amounting to [{penaltyPercentage}]% of the total
-value of the Goods for every [{penaltyDuration}] of delay. The total
-amount of penalty shall not, however, exceed [{capPercentage}]% of the
+In case of delayed delivery of Goods, {{seller}} shall pay to
+{{buyer}} a penalty amounting to {{penaltyPercentage}}% of the total
+value of the Goods for every {{penaltyDuration}} of delay. The total
+amount of penalty shall not, however, exceed {{capPercentage}}% of the
 total value of the delayed goods. If the delay is more than
-[{maximumDelay}], the Buyer is entitled to terminate this Contract.
+{{maximumDelay}}, the Buyer is entitled to terminate this Contract.
 
 ```
 This should immediately result in an error when parsing the contract text:
@@ -116,7 +116,7 @@ As explained in the error message, this is because the new template text uses a 
 
 ### Update the Model
 
-To define this new variable, go to the `Model` tab, and change the `MiniLateDeliveryClause` type to include `o Double capPercentage`. 
+To define this new variable, go to the `Model` tab, and change the `MiniLateDeliveryClause` type to include `o Double capPercentage`.
 
 ![Advanced-Late-11](assets/advanced/late10b.png)
 
@@ -168,7 +168,7 @@ At this point, executing the logic will still result in large penalties. This is
       if penalty > cap
       then cap
       else penalty;
-    
+
 ```
 Do not forget to also change the value of the penalty in the returned `LateResponse` to use the new variable `cappedPenalty`:
 ```
@@ -220,7 +220,7 @@ The `Logic` error that occurs here is:
 ```ergo
 Compilation error (at file lib/logic.ergo line 19 col 31). Cannot find type with name 'MiniLateDeliveryClause'
 contract MiniLateDelivery over MiniLateDeliveryClause {
-                               ^^^^^^^^^^^^^^^^^^^^^^ 
+                               ^^^^^^^^^^^^^^^^^^^^^^
 ```
 Update the logic to use the the new `MiniLateDeliveryContract` type instead, as follows:
 ```ergo
@@ -256,4 +256,3 @@ Lastly, add a new step between steps `// 4.` and `// 5.` in the logic to emit a 
 That's it! You can observe in the `Test Execution` that an `Obligation` is now being emitted. Try out adjusting values and continuing to send requests and getting responses and obligations.
 
 ![Advanced-Late-16](assets/advanced/late16.png)
-

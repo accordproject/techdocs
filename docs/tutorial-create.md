@@ -37,7 +37,7 @@ Check that when you run `cicero parse` that the `sample.txt` is now invalid with
 
 Now update the grammar. Start by replacing the existing grammar, making it identical to the contents of your updated `sample.txt`.
 
-Now introduce variables into your template grammar as required. The variables are marked-up using `[{` and `}]`
+Now introduce variables into your template grammar as required. The variables are marked-up using `{{` and `}}`
 with what is between the braces being the name of your variable.
 
 ## Edit the Template Model
@@ -73,4 +73,3 @@ Now edit the business logic of the template itself. This is expressed in the Erg
 and edit the `helloworld` clause to perform the calculations your logic requires.
 
 Looking at the Ergo logic for other example templates will help you understand the syntax and capabilities of Ergo.
-
