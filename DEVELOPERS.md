@@ -18,7 +18,7 @@ machine:
 * [Git][git]: The [Github Guide to Installing Git][git-setup] is a good source of information.
 
 * [Node.js v10.16.0 'Dubnium' (LTS)][node]: We use Node to generate the documentation, run a
-  development web server, run tests, and generate distributable files. Depending on your system,
+  development of web server, run tests and generate distributable files. Depending on your system,
   you can install Node either from source or as a pre-packaged bundle.
 
   We recommend using [nvm][nvm] (or [nvm-windows][nvm-windows])
@@ -30,7 +30,7 @@ To contribute code to Accord Project, you must have a GitHub account so you can 
 fork of an Accord Project repository and open Pull Requests in the repository.
 
 To create a Github account, follow the instructions [here][github-signup].
-Afterwards, go ahead and [fork][github-forking] the specific Accord Project repository.
+Afterward, go ahead and [fork][github-forking] the specific Accord Project repository.
 
 ### Building a Project
 
@@ -46,7 +46,7 @@ cd <repository>
 # Add the main repository as an upstream remote to your repository:
 git remote add upstream "https://github.com/accordproject/<repository>.git"
 
-# Go to website directory
+# Go to the website directory
 cd website
 
 # Install node.js dependencies:
@@ -69,7 +69,7 @@ Changes that you make to markdown files in the `/docs` folder will automatically
 
 ### Keeping In Sync
 
-It is good practice to always keep your `origin/master` in sync with `upstream/master`. You don’t have to, but it makes your life easier. Do your work in branches of your fork, and periodically sync up your `master` with the `master` of `upstream` as follows. You should definitely do this before creating a pull request.
+It is good practice to always keep your `origin/master` in sync with `upstream/master`. You don’t have to, but it makes your life easier. Do your work in branches of your fork, and periodically sync up your `master` with the `master` of `upstream` as follows. You should do this before creating a pull request.
 
 ```shell
     git fetch --all --prune
@@ -103,7 +103,7 @@ We have very precise rules over how our git commit messages can be formatted.  T
 readable messages** that are easy to follow when looking through the **project history** and **git logs**.  
 But also, we use the git commit messages to **generate the Cicero-UI change log**.
 
-The commit message formatting can be added using a version of typical git workflow.
+The commit message formatting can be added using a version of the typical git workflow.
 
 ### Commit Message Format
 Each commit message consists of a mandatory **type**, **scope**, **subject**, and **footer**. This is a specific format:
@@ -135,7 +135,7 @@ Must be one of the following:
 
 ### Scope
 The scope will be specifying the place of the commit change; the focal point of new code or best 
-description for where changes can be found.
+description of where changes can be found.
 
 You can use `*` when the change affects more than a single scope.
 
@@ -163,10 +163,10 @@ Formatting for the body is displayed in this example:
 
 ### Changes
 - Change one
-  - Subchange one
-  - Subchange two
+  - Sub change one
+  - Sub change two
 - Change two
-- Theoretically this should be listing all the commit messages included in this PR
+- Theoretically, this should be listing all the commit messages included in this PR
 
 ### Flags
 - Possible issues or holds for reviewers to note
