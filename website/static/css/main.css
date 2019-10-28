@@ -2674,7 +2674,7 @@ body {
 a {
   font-weight: 500;
   font-style: normal;
-  color: #1b2540;
+  color: #19c6c6;
   text-decoration: none;
   transition: color 0.15s ease-in;
 }
@@ -2683,7 +2683,7 @@ a:hover {
   font-weight: 500;
   font-style: normal;
   color: #19c6c6;
-  text-decoration: none;
+  text-decoration: underline !important;
 }
 
 .container.paddingTop {
