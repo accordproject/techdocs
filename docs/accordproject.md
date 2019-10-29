@@ -94,9 +94,9 @@ The Accord Project comprises a series of projects
 * [Concerto] - Modelling Language 
 * [CiceroMark] - Markup Language 
 
-![Cicero](https://github.com/accordproject/cicero)
-![Ergo](https://github.com/accordproject/ergo)
-![Concerto](https://github.com/accordproject/concerto)
-![CiceroMark](https://github.com/accordproject/markdown-transformation)
-![Model Repository](https://models.accordproject.org/)
+[Cicero]: https://github.com/accordproject/cicero
+[Ergo]: https://github.com/accordproject/ergo
+[Concerto]: https://github.com/accordproject/concerto
+[CiceroMark]: https://github.com/accordproject/markdown-transformation
+[Model Repository]: https://models.accordproject.org/
 
