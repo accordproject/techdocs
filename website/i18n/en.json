@@ -29,6 +29,9 @@
       "concerto-api": {
         "title": "Concerto API"
       },
+      "concerto-cli": {
+        "title": "Concerto CLI"
+      },
       "ergo-api": {
         "title": "Ergo API"
       },
