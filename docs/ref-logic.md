@@ -198,3 +198,33 @@ This is equivalent to the match expression:
       else
         ...
 ```
+
+## Operator Precedence
+
+Precedence determines the order of operations in expressions with operators of different priority. In the case of the same precedence, it is based on the associativity of operators.
+
+### Example
+
+`a = b * c ^ d + e` is the same as `(a = (b * (c ^ d)) + e)`
+
+`a = b * c * d / e` is the same as `(a = (((b * c) * d) / e)`
+
+`a.b.c.d.e ^ f` is the same as `(((((a.b).c).d).e) ^ f)`
+
+### Table of precedence
+
+Table of operators in Ergo with their associativity and precedence from highest to lowest:
+
+**Order** | **Operator(s)** | **Description** | **Associativity**
+--- | --- | --- | ---
+1 | . <br> ?. | field access <br> field access of optional type | left to right
+2 | [] | array index access | right to left
+3 | ! | logical not | right to left
+4 | \- | arithmetic negation | right to left
+5 | ++ | string concatenation | left to right
+6 | ^ | floating point number power | left to right
+7 | \* <br> / <br> % | multiplication <br> division <br> remainder | left to right
+8 | \+ <br> - | addition <br> subtraction | left to right
+9 | ?? | default value of optional type | left to right
+10 | < <br> > <br> <= <br> >= | less than <br> greater than <br> less or equal <br> greater or equal | left to right
+11 | = <br> != | equal <br> not equal | left to right
