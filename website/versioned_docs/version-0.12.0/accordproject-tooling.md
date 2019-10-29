@@ -13,7 +13,7 @@ This provides syntax highlighting, and error reporting when working on source Er
 
 Install the Accord Project extension by visiting the [Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
 
-![A block of code that is a “contract”. Within the contract there is another block of code that is a “clause”. The clause contains a variable called status and returns a new instance of the InspectionResponse object.](/img/ergo-vscode.png)
+![Visual Studio Code running the Accord Project plugin](/img/ergo-vscode.png)
 
 ## Syntax highlighting
 
@@ -33,4 +33,4 @@ A simple VIM mode for Ergo can be found in the [ergo.vim](https://github.com/acc
 
 Finally, [Template Studio](https://studio.accordproject.org) lets you create, edit and test legal clause or contract templates built with the Accord Project directly from your browser, without having to install anything.
 
-![An example of a .tem file. There are 3 paragraphs of a contract with binding variables incorporated in each paragraph](/img/studio.png)
+![A template file being created in Template Studio](/img/studio.png)
