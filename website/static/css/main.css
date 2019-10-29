@@ -295,7 +295,7 @@ blockquote > :last-child {
 code {
   background-color: rgba(27, 31, 35, 0.05);
   border-radius: 3px;
-  color: inherit;
+  color: #15203C;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   font-size: 85%;
