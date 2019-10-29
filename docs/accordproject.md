@@ -17,16 +17,57 @@ A Smart Legal Contract is a human-readable and machine-readable agreement that i
 
 The human-readable nature of the document ensures that signatories, lawyers, contracting parties and others are able to understand the contract as well as enabling that contracts are able to consist of a hybrid of both ‘smart’ and ‘non-smart’ components. For example, a smart legal contract may consist of a smart payment clause with all of the other provisions of the contract (Definitions, Jurisdiction clause, Force Majeure clause, ...) being documented solely in regular natural language text.
 
-A Smart Legal Contract is a general term to refer to two discrete, and compatible, architectural forms of contract:   
+A Smart Legal Contract is a general term to refer to two compatible, architectural forms of contract:   
 
 ### Machine-Readable Contracts (Text + Model)
 
-By combining Text and a Data Model together, a contract becomes machine-readable. 
+By combining Text and a Data Model together, a contract becomes machine-readable. The clause below includes natural language text coupled with variables. Together, these variables form a Data Model for the clause comprised of the 'deal points':
+
+```
+## Fixed rate loan // See https://github.com/accordproject/cicero-template-library/tree/js-release-0.20/src/fixed-interests
+
+This is a *fixed interest* loan to the amount of {{loanAmount}} 
+at a yearly interest rate of {{rate}}% with a loan term of {{loanDuration}}, 
+and monthly payments of {{monthlyPayment}}.
+``` 
+
+The Data Model, expressed in the [Concerto] schema language, defines the variables for the template and the associated data types: 
+
+```
+  o Double loanAmount // loanAmount is a Double
+  o Double rate // rate is a Double 
+  o Integer loanDuration // loanDuration is an Integer
+```
+
+The defined types provide a validation function for values inserted into the ```{{variable}}``` placeholders and understand the structure of the contract, e.g. 'what type of data is the ```{{rate}}``` variable? For more information on data types see **[WIP]**. 
+
+The Template is then capable of being rendered as a machine-readable representation:
+
+```
+{
+  "$class": "org.accordproject.interests.TemplateModel",
+  "clauseId": "cec0a194-cd45-42f7-ab3e-7a673978602a",
+  "loanAmount": 100000,
+  "rate": 2.5,
+  "loanDuration": 15
+}
+```
+
+The values entered into the template text are associated with the name of the variable e.g. ```{{rate}} = 2.5%```. This provides the structure for understanding the contract and its contents. 
 
 ### Machine-Executable Contracts (Text + Model + Logic)
 
-By additing Logic to a machine-readable contract in the form of expressions - much like spreadsheets - the contract is able to execute operations based upon data sent to the contract as well as triggering operations on external systems. 
+By additing Logic to a machine-readable contract in the form of expressions - much like spreadsheets - the contract is able to execute operations based upon data sent to the contract as well as triggering operations on external systems:
 
+```
+## Fixed rate loan
+
+This is a *fixed interest* loan to the amount of {{loanAmount}} 
+at a yearly interest rate of {{rate}}% with a loan term of {{loanDuration}}, 
+and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}.
+``` 
+
+This version is consistent with that above. The difference being that the ```{{monthlyPayment}}``` variable is replaced with an expression (written in [Ergo]) that calculates the monthly interest rate based upon the values of the other variables (i.e. ```{{loanAmount}}, {{rate}}, and {{loanDuration}}```). This expression is a simple example of adding logic to a clause. More complex examples are avilable in the [Model Repository]. 
 
 ### What are the Benefits?
 
@@ -46,9 +87,16 @@ If this interests you, please visit our [Lifecycle and Industry Working Groups](
 
 ## What are the Accord Projects?
 
-* Cicero - Templating Engine
-* Ergo - Expression Language
-* Concerto - Modelling Language 
-* CiceroMark - Markup Language 
+The Accord Project comprises a series of projects
 
+* [Cicero] - Templating Engine
+* [Ergo] - Expression Language
+* [Concerto] - Modelling Language 
+* [CiceroMark] - Markup Language 
+
+![Cicero](https://github.com/accordproject/cicero)
+![Ergo](https://github.com/accordproject/ergo)
+![Concerto](https://github.com/accordproject/concerto)
+![CiceroMark](https://github.com/accordproject/markdown-transformation)
+![Model Repository](https://models.accordproject.org/)
 
