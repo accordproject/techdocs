@@ -80,6 +80,9 @@
       "markup-variables-blocks": {
         "title": "Variables and Blocks"
       },
+      "markus-cli": {
+        "title": "Markdown Transform CLI"
+      },
       "model-api": {
         "title": "Using the API"
       },
