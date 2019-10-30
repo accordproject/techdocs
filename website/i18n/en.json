@@ -8,17 +8,17 @@
       "0.13to0.20": {
         "title": "Migrating from 0.13.*"
       },
+      "accordproject-business": {
+        "title": "For Business"
+      },
       "accordproject-concepts": {
         "title": "Key Concepts"
       },
       "accordproject-developers": {
         "title": "For Developers"
       },
-      "accordproject-lawyers": {
-        "title": "For Lawyers"
-      },
       "accordproject": {
-        "title": "For Business"
+        "title": "Overview"
       },
       "cicero-api": {
         "title": "Cicero API"

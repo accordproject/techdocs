@@ -61,10 +61,10 @@ Let us look at each of those components.
 The file in `grammar/template.tem` contains the grammar for the template. It is natural language, with markup to indicate the variable(s) in your Clause or Contract.
 
 ```md
-Name of the person to greet: [{name}]. Thank you!
+Name of the person to greet: {{name}]. Thank you!
 ```
 
-In the `helloworld` template there is only one variable `name` which is indicated between `[{` and `}]`.
+In the `helloworld` template there is only one variable `name` which is indicated between `{{` and `}]`.
 
 ### Model
 
@@ -135,4 +135,3 @@ Even after you have unzipped the template archive, you can still parse and execu
 Templates should have unit tests that cover every line of code of their business logic. You may use any of the
 popular unit testing frameworks to implement the tests (mocha, chai, sinon etc). Please refer to the
 ``acceptance-of-delivery`` template for an example template with unit tests.
-

@@ -15,7 +15,7 @@ Before you install Cicero, you must first obtain and configure the following dep
 
 ## Installing Cicero
 
-To install the latest version:
+To install the latest version of the Cicero command-line tools:
 
 ```bash
 npm install -g @accordproject/cicero-cli
@@ -47,7 +47,7 @@ cicero execute --help
 You may also want to install the template generator tool, which you can use to create an empty template:
 
 ```bash
-npm install -g yo 
+npm install -g yo
 npm install -g @accordproject/generator-cicero-template
 ```
 
@@ -73,4 +73,3 @@ ergo execute --help
 ## What next?
 
 That's it! Go to the next page to see how to use your new installation of Cicero on a real Accord Project template.
-

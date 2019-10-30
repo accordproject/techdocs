@@ -1,6 +1,6 @@
 {
     "docs": {
-        "Introduction": ["accordproject", "accordproject-lawyers", "accordproject-developers", "accordproject-concepts"],
+        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business", "accordproject-developers"],
         "Getting Started": ["started-studio", "started-installation", "started-helloworld", "started-resources"],
         "Legal-Tech Tutorials": [
             {

@@ -25,7 +25,7 @@ Cicero archives are files with a `.cta` extension, which includes all the differ
 
 ## Parse a Valid Clause Text
 
-Using your terminal `cd` into the directory that contains the template archive you just downloaded, then create a sample clause text `sample.md` which contains the following text:
+Using your terminal, change into the directory (or `cd` into the directory) that contains the template archive you just downloaded, then create a sample clause text `sample.md` which contains the following text:
 
 ```text
 Name of the person to greet: "Fred Blogs".
@@ -157,4 +157,3 @@ You can find more information on how to create or publish Accord Project templat
 ### Run on Different Platforms
 
 Templates may be executed on different platforms, not only from the command line. You can find more information on how to execute Accord Project templates on different platforms (Node.js, Hyperledger Fabric, etc.) in the [Template Execution](tutorial-nodejs) tutorials.
-

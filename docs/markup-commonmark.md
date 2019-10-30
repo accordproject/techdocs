@@ -56,14 +56,14 @@ For example:
 This is the first paragraph.
 
 This is the second paragraph.
-This is not a second paragraph.
+This is not a third paragraph.
 ```
 will be shown as:
 
 >This is the first paragraph.
 >
 >This is the second paragraph.
->This is not a second paragraph.
+>This is not a third paragraph.
 
 
 ## Headings

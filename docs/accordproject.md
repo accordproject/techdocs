@@ -1,6 +1,6 @@
 ---
 id: accordproject
-title: For Business
+title: Overview
 ---
 
 ## What is the Accord Project?
@@ -68,35 +68,10 @@ and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) 
 ``` 
 
 This version is consistent with that above. The difference being that the ```{{monthlyPayment}}``` variable is replaced with an expression (written in [Ergo]) that calculates the monthly interest rate based upon the values of the other variables (i.e. ```{{loanAmount}}, {{rate}}, and {{loanDuration}}```). This expression is a simple example of adding logic to a clause. More complex examples are avilable in the [Model Repository]. 
-
-### What are the Benefits?
-
-It enables a contract to be easily searched, analyzed, queried, and understood. Using a modeled version of a contract, it is possible to extract a host of valuable data about a contract or series of contracts from certain data points (e.g. variables and their values).
+### What are the Benefits of Smart Legal Contracts?
+Smart legal contracts can be easily searched, analyzed, queried, and understood. Using a modeled version of a contract, it is possible to extract a host of valuable data about a contract or series of contracts from certain data points (e.g. variables and their values).
 
 In addition, it provides the necessary structure to enable contracts to be “smart” by adding executable logic. Without a structured data model it is difficult to ensure all of the necessary data is present in the contract, the data is valid, and that the logic and the text reflect one another.
 
 For more information about smart legal contracts, and how they are different from "smart contracts", please visit the [Accord Project FAQ Page](https://www.accordproject.org/frequently-asked-questions).
-
-## Why is the Accord Project relevant for Businesses?
-
-Contracting is undergoing a digital transformation driven by a need to deliver customer-centric legal and business solutions faster, and at lower cost. This imperative is fueling the adoption of a broad range of new technologies to improve the efficiency of drafting, managing, and executing legal contracting operations; the Accord Project is proud to be part of that movement.
-
-In addition, contributions from businesses are crucial for the development of the Accord Project. The expertise of stakeholders, such as business professionals and attorneys, is invaluable in improving the functionality and content of the Accord Project's codebase and specifications, to ensure that the templates meet real-world business requirements.
-
-If this interests you, please visit our [Lifecycle and Industry Working Groups](https://www.accordproject.org/liwg) page for more information.
-
-## What are the Accord Projects?
-
-The Accord Project comprises a series of projects
-
-* [Cicero] - Templating Engine
-* [Ergo] - Expression Language
-* [Concerto] - Modelling Language 
-* [CiceroMark] - Markup Language 
-
-[Cicero]: https://github.com/accordproject/cicero
-[Ergo]: https://github.com/accordproject/ergo
-[Concerto]: https://github.com/accordproject/concerto
-[CiceroMark]: https://github.com/accordproject/markdown-transformation
-[Model Repository]: https://models.accordproject.org/
 
