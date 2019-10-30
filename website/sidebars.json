@@ -38,16 +38,18 @@
                 "ids": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"]
             }
         ],
-        "About Version 0.20": [
-            "0.13to0.20"
-        ],
         "Reference Manual": [
-	    "ref-glossary",
+	        "ref-glossary",
             "ref-testing",
             "ref-errors",
             "ref-logic",
             "ref-logic-stdlib",
             "ref-logic-specification",
+            {
+                "type": "subcategory",
+                "label": "Template Migration",
+                "ids": ["migrate-0.13-0.20"]
+            },
             {
                 "type": "subcategory",
                 "label": "Command Line Interface",

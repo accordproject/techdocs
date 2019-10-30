@@ -5,9 +5,6 @@
     "previous": "Previous",
     "tagline": "Documentation",
     "docs": {
-      "0.13to0.20": {
-        "title": "Migrating from 0.13.*"
-      },
       "accordproject-business": {
         "title": "For Business"
       },
@@ -124,6 +121,9 @@
       },
       "ref-markup": {
         "title": "Markup Reference"
+      },
+      "migrate-0.13-0.20": {
+        "title": "0.13 to 0.20"
       },
       "ref-testing": {
         "title": "Testing Reference"
@@ -698,7 +698,6 @@
       "Legal-Tech Tutorials": "Legal-Tech Tutorials",
       "Developers Tutorials": "Developers Tutorials",
       "Template Guides": "Template Guides",
-      "About Version 0.20": "About Version 0.20",
       "Reference Manual": "Reference Manual",
       "Basic Tutorials": "Basic Tutorials",
       "Advanced Tutorials": "Advanced Tutorials",
