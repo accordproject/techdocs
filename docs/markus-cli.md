@@ -3,7 +3,7 @@ id: markus-cli
 title: Markdown Transform CLI
 ---
 
-Install the `@accordproject/markdown-cli` npm package to access the Markdown Transform command line interface (CLI). After installation you can use the markus command and its sub-commands as described below.
+Install the `@accordproject/markdown-cli` npm package to access the Markdown Transform command line interface (CLI). After installation you can use the `markus` command and its sub-commands as described below.
 
 To install the Markdown CLI:
 ```
