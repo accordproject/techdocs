@@ -12,7 +12,7 @@ npm install -g @accordproject/concerto-cli
 
 ## Usage
 
-```
+```md
 concerto <cmd> [args]
 
 Commands:
@@ -26,7 +26,7 @@ Options:
   --help         Show help                                             [boolean]
 ```
 
-### concerto validate
+## concerto validate
 `concerto validate` lets you check whether a JSON sample is a valid instance of the given model.
 
 ```md
@@ -43,7 +43,7 @@ Options:
   --ctoFiles     array of CTO files                       [array] [default: "."]
 ```
 
-#### Example
+### Example
 For example, using the `validate` command to check the sample `request.json` file from a [Late Delivery and Penalty](https://github.com/accordproject/cicero-template-library/tree/master/src/latedeliveryandpenalty) clause:
 
 ```
@@ -65,7 +65,7 @@ info:
 ```
 
 
-### concerto compile
+## concerto compile
 `Concerto compile` takes an array of local CTO files, downloads any external dependencies (imports) and then converts all the model to the target format.
 
 ```md
@@ -91,7 +91,7 @@ At the moment, the available target formats are as follows:
 - JSONSchema: `concerto compile --ctoFiles modelfile.cto --format JSONSchema`
 - XMLSchema: `concerto compile --ctoFiles modelfile.cto --format XMLSchema`
 
-#### Example
+### Example
 For example, using the `compile` command to export the `clause.cto` file from a [Late Delivery and Penalty](https://github.com/accordproject/cicero-template-library/tree/master/src/latedeliveryandpenalty) clause into `Go Lang` format:
 
 ```md
@@ -104,7 +104,7 @@ returns:
 info: Compiled to Go in './output/'.
 ```
 
-### concerto get
+## concerto get
 `Concerto get` allows you to resolve and download external models from a set of local CTO files.
 
 ```md
@@ -122,7 +122,7 @@ Options:
 
 ```
 
-#### Example
+### Example
 For example, using the `get` command to get the external models in the `clause.cto` file from a [Late Delivery and Penalty](https://github.com/accordproject/cicero-template-library/tree/master/src/latedeliveryandpenalty) clause:
 
 ```md
