@@ -295,7 +295,7 @@ Handlebars offers some additional functionality which is not currently supported
 
 - Iterators Blocks `{{#each}...{{/each}}`
 - Comments `{{!-- ... --}}`
-- Whitespace control `{{~price~}`
+- Whitespace control `{{~price~}}`
 
 We welcome user feedback on whether those (or others) would be useful to support in the feature. Please visit the [Cicero](https://github.com/accordproject/cicero) repository to contribute.
 
