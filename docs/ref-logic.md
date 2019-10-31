@@ -226,5 +226,6 @@ Table of operators in Ergo with their associativity and precedence from highest 
 7 | \* <br> / <br> % | multiplication <br> division <br> remainder | left to right
 8 | \+ <br> - | addition <br> subtraction | left to right
 9 | ?? | default value of optional type | left to right
-10 | < <br> > <br> <= <br> >= | less than <br> greater than <br> less or equal <br> greater or equal | left to right
-11 | = <br> != | equal <br> not equal | left to right
+10 | and | logical conjunction | left to right
+11 | or | logical disjunction | left to right
+12 | < <br> > <br> <= <br> >= <br> = <br> != | less than <br> greater than <br> less or equal <br> greater or equal <br> equal <br> not equal | left to right
