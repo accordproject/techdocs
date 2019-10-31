@@ -3,7 +3,7 @@ id: concerto-cli
 title: Concerto CLI
 ---
 
-Install the `@accordproject/concerto-cli` npm package to access the Concerto command line interface (CLI). After installation you can use the concerto command and its sub-commands as described below.
+Install the `@accordproject/concerto-cli` npm package to access the Concerto command line interface (CLI). After installation you can use the `concerto` command and its sub-commands as described below.
 
 To install the Concerto CLI:
 ```
