@@ -7,7 +7,7 @@ Install the `@accordproject/cicero-cli` npm package to access the Cicero command
 
 To install the Cicero CLI:
 ```
-npm install -g @accordproject/cicero-cli@0.20.0
+npm install -g @accordproject/cicero-cli
 ```
 
 ## Usage

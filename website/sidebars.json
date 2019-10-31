@@ -2,7 +2,7 @@
     "docs": {
         "Introduction": ["accordproject", "accordproject-lawyers", "accordproject-developers", "accordproject-concepts"],
         "Getting Started": ["started-studio", "started-installation", "started-helloworld", "started-resources"],
-        "Beginners Tutorials": [
+        "User Tutorials": [
             {
                 "type": "subcategory",
                 "label": "Authoring in Template Studio",
