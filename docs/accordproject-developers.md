@@ -4,12 +4,12 @@ title: For Developers
 ---
 
 ## Why is the Accord Project relevant for developers?
+
 The Accord Project provides a universal format for smart legal contracts, and this format is embodied in a variety of open source projects that comprise the Accord Project technology stack. Input from developers are crucial for the Accord Project.
 
-Developers can contribute by converting legal text into corresponding computer code, creating Accord Project templates to be used by lawyers and businesses. In addition, developers can provide input on the development of the technology stack components: language, models, templating, and other tools.
+Developers can contribute by converting legal text into corresponding computer code, creating Accord Project templates to be used by lawyers and businesses. In addition, developers can provide input on the development of its technology stack: language, models, templating, and other tools.
 
 If this interests you, please visit our [Technology Working Group](https://www.accordproject.org/working-groups/technology) page, and join our [slack channel](https://accord-project-slack-signup.herokuapp.com/)!
-
 
 ## How to navigate this documentation?
 
@@ -19,6 +19,6 @@ If you are new to the Accord Project, please read the [Key Concepts](accordproje
 
 If you want to dive into our technology stack, you can find more information about:
 - Software implementation: [Cicero](https://github.com/accordproject/cicero)
-- Template text: [Cicero Markup](markup-cicero)
+- Template text: [CiceroMark](markup-cicero)
 - Template model: [Concerto Modeling](model-concerto)
 - Template logic: [Ergo Logic](logic-ergo)

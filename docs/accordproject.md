@@ -9,69 +9,87 @@ Accord Project is an open source, non-profit initiative aimed at transforming co
 
 The Accord Project defines a notion of a legal template with associated computing logic which is expressive, open-source, and portable. Accord Project templates are similar to a clause or contract template in any document format, but they can be read, interpreted, and run by a computer.
 
-The goal of the Accord Project is to provide a common, standardized format for smart legal contracts.
+The goal of the Accord Project is to provide an open, standardized format for Smart Legal Contracts.
 
 ## What is a Smart Legal Contract?
 
-A Smart Legal Contract is a human-readable and machine-readable agreement that is digital, consisting of natural language and computable components. The machine-readable nature of the document enables it to be interpreted and executed by computers. It is this attribute that makes the document “smart”.
+A Smart Legal Contract is a human-readable _and_ machine-readable agreement that is digital, consisting of natural language and computable components.
 
-The human-readable nature of the document ensures that signatories, lawyers, contracting parties and others are able to understand the contract as well as enabling that contracts are able to consist of a hybrid of both ‘smart’ and ‘non-smart’ components. For example, a smart legal contract may consist of a smart payment clause with all of the other provisions of the contract (Definitions, Jurisdiction clause, Force Majeure clause, ...) being documented solely in regular natural language text.
+The human-readable nature of the document ensures that signatories, lawyers, contracting parties and others are able to understand the contract.
 
-A Smart Legal Contract is a general term to refer to two compatible, architectural forms of contract:   
+The machine-readable nature of the document enables it to be interpreted and executed by computers, making the document "smart".
 
-### Machine-Readable Contracts (Text + Model)
+Contracts drafted with Accord Project can contain both ‘smart’ and ‘non-smart’ clauses. For example, a Smart Legal Contract may include a smart payment clause while all of the other provisions of the contract (Definitions, Jurisdiction clause, Force Majeure clause, ...) are being documented solely in regular natural language text.
+ 
+A Smart Legal Contract is a general term to refer to two compatible, architectural forms of contract:
+- Machine-Readable Contracts, which tie legal text to data
+- Machine-Executable Contracts, which tie legal text to data and executable code
 
-By combining Text and a Data Model together, a contract becomes machine-readable. The clause below includes natural language text coupled with variables. Together, these variables form a Data Model for the clause comprised of the 'deal points':
+### Machine-Readable Contracts
 
-```
-## Fixed rate loan // See https://github.com/accordproject/cicero-template-library/tree/js-release-0.20/src/fixed-interests
+By combining Text and a data, a clause or contract becomes machine-readable.
 
-This is a *fixed interest* loan to the amount of {{loanAmount}} 
-at a yearly interest rate of {{rate}}% with a loan term of {{loanDuration}}, 
-and monthly payments of {{monthlyPayment}}.
+For instance, the clause below for a [fixed rate loan](https://templates.accordproject.org/fixed-interests-static@0.2.0.html) includes natural language text coupled with variables. Together, these variables refer to some data for the clause and correspond to the 'deal points':
+
+```tem
+## Fixed rate loan
+
+This is a *fixed interest* loan to the amount of {{loanAmount}}
+at the yearly interest rate of {{rate}}%
+with a loan term of {{loanDuration}},
+and monthly payments of {{monthlyPayment}}
 ``` 
 
-The Data Model, expressed in the [Concerto] schema language, defines the variables for the template and the associated data types: 
+To make sense of the data, a _Data Model_, expressed in the Concerto schema language, defines the variables for the template and their associated Data Types: 
 
+```ergo
+  o Double loanAmount     // loanAmount is a floating-point number
+  o Double rate           // rate is a floating-point number
+  o Integer loanDuration  // loanDuration is an integer
+  o Double monthlyPayment // monthlyPayment is a floating-point number
 ```
-  o Double loanAmount // loanAmount is a Double
-  o Double rate // rate is a Double 
-  o Integer loanDuration // loanDuration is an Integer
-```
 
-The defined types provide a validation function for values inserted into the ```{{variable}}``` placeholders and understand the structure of the contract, e.g. 'what type of data is the ```{{rate}}``` variable? For more information on data types see **[WIP]**. 
+The Data Types allow a computer to validate values inserted into each of the `{{variable}}` placeholders (e.g., `2.5` is a valid `{{rate}}` but `January` isn't). In other words, the Data Model lets a computer make sense of the structure of (and data in) the clause. To learn more about Data Types see [Concerto Modeling](model-concerto).
 
-The Template is then capable of being rendered as a machine-readable representation:
+The clause data (the 'deal points') can then be capture as a machine-readable representation:
 
-```
+```js
 {
   "$class": "org.accordproject.interests.TemplateModel",
   "clauseId": "cec0a194-cd45-42f7-ab3e-7a673978602a",
-  "loanAmount": 100000,
+  "loanAmount": 100000.0,
   "rate": 2.5,
   "loanDuration": 15
+  "monthlyPayment": 667.0
 }
 ```
 
-The values entered into the template text are associated with the name of the variable e.g. ```{{rate}} = 2.5%```. This provides the structure for understanding the contract and its contents. 
+The values entered into the template text are associated with the name of the variable e.g. `{{rate}} = 2.5%`. This provides the structure for understanding the clause and its contents. 
 
-### Machine-Executable Contracts (Text + Model + Logic)
+### Machine-Executable Contracts
 
-By additing Logic to a machine-readable contract in the form of expressions - much like spreadsheets - the contract is able to execute operations based upon data sent to the contract as well as triggering operations on external systems:
+By adding Logic to a machine-readable clause or contract in the form of expressions - much like in a spreadsheet - the contract is able to execute operations based upon data included in the contract.
 
-```
+For instance, the clause below is a variant of the earlier [fixed rate loan](https://templates.accordproject.org/fixed-interests@0.2.0.html). While it is consistent with the previous one, the `{{monthlyPayment}}` variable is replaced with an [Ergo](logic-ergo) expression `monthlyPaymentFormula(loanAmount,rate,loanDuration)` which calculates the monthly interest rate based upon the values of the other variables: `{{loanAmount}}`, `{{rate}}`, and `{{loanDuration}}`.  To learn more about contract Logic see [Ergo](logic-ergo).
+
+```tem
 ## Fixed rate loan
 
 This is a *fixed interest* loan to the amount of {{loanAmount}} 
-at a yearly interest rate of {{rate}}% with a loan term of {{loanDuration}}, 
+at a yearly interest rate of {{rate}}%
+with a loan term of {{loanDuration}}, 
 and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}.
 ``` 
 
-This version is consistent with that above. The difference being that the ```{{monthlyPayment}}``` variable is replaced with an expression (written in [Ergo]) that calculates the monthly interest rate based upon the values of the other variables (i.e. ```{{loanAmount}}, {{rate}}, and {{loanDuration}}```). This expression is a simple example of adding logic to a clause. More complex examples are avilable in the [Model Repository]. 
-### What are the Benefits of Smart Legal Contracts?
-Smart legal contracts can be easily searched, analyzed, queried, and understood. Using a modeled version of a contract, it is possible to extract a host of valuable data about a contract or series of contracts from certain data points (e.g. variables and their values).
+This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause.
 
-In addition, it provides the necessary structure to enable contracts to be “smart” by adding executable logic. Without a structured data model it is difficult to ensure all of the necessary data is present in the contract, the data is valid, and that the logic and the text reflect one another.
+More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
 
-For more information about smart legal contracts, and how they are different from "smart contracts", please visit the [Accord Project FAQ Page](https://www.accordproject.org/frequently-asked-questions).
+## What are the Benefits of Smart Legal Contracts?
+
+Smart Legal Contracts can be easily searched, analyzed, queried, and understood. By associating a data model to a contract, it is possible to extract a host of valuable data about a contract or draft a series of contracts from existing data points (i.e., variables and their values).
+
+The data model is used to ensure that all of the necessary data is present in the contract, and that this data is valid. In addition, it provides the necessary structure to enable contracts to "come alive" by adding executable logic.
+
+For more information about Smart Legal Contracts, and how they are different from other kinds of "smart contracts", please visit the [Accord Project FAQ](https://www.accordproject.org/frequently-asked-questions).
 

@@ -1,6 +1,6 @@
 ---
 id: logic-ergo
-title: Overview
+title: Ergo Overview
 ---
 
 ## Language Goals
