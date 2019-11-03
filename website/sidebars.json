@@ -1,7 +1,7 @@
 {
     "docs": {
         "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business", "accordproject-developers"],
-        "Getting Started": ["started-studio", "started-installation", "started-helloworld", "started-resources"],
+        "Getting Started": ["started-installation", "started-helloworld", "started-studio", "started-resources"],
         "User Tutorials": [
             {
                 "type": "subcategory",
@@ -24,7 +24,7 @@
         "Template Guides": [
             {
                 "type": "subcategory",
-                "label": "Cicero Markup",
+                "label": "CiceroMark",
                 "ids": ["markup-cicero", "markup-commonmark", "markup-variables-blocks", "markup-expr"]
             },
             {
@@ -48,7 +48,7 @@
             {
                 "type": "subcategory",
                 "label": "Template Migration",
-                "ids": ["migrate-0.13-0.20"]
+                "ids": ["ref-migrate-0.13-0.20"]
             },
             {
                 "type": "subcategory",
