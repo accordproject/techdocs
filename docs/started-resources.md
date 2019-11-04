@@ -24,7 +24,9 @@ Accord Project is also developing tools to help with authoring, testing and runn
 ### Editors
 
 - [Template Studio](https://studio.accordproject.org/): a Web-based editor for Accord Project templates
-- [VSCode Plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/)
+- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/) Editor
+- [Emacs Mode](https://github.com/accordproject/ergo/tree/master/ergo.emacs): Emacs Major mode for Ergo (alpha)
+- [VIM Plugin](https://github.com/accordproject/ergo/tree/master/ergo.vim): VIM plugin for Ergo (alpha)
 
 ### User Interface Components
 
