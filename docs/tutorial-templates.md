@@ -1,26 +1,38 @@
 ---
 id: tutorial-templates
-title: Take a Look Inside
+title: Templates Deep Dive
 ---
 
-Now that you have executed an existing template in archive form, let us look inside that archive to understand the structure of that template.
+In the [Getting Started](started-hello) section, we learned how to use the existing [helloworld@0.12.0.cta](https://templates.accordproject.org/archives/helloworld@0.12.0.cta) template archive. Here we take a let a look inside that archive to understand the structure of Accord Project templates.
 
 ## Unpack a Template Archive
 
-Previously, we downloaded and executed an archive (`helloworld@0.10.1.cta`). A `.cta` archive is nothing more than a zip file containing the components of a template. Let's unzip that archive to see what is inside.
-
-First create a directory in the place where you have downloaded that archive, then use the unzip command in your terminal:
+A `.cta` archive is nothing more than a zip file containing the components of a template. Let's unzip that archive to see what is inside. First create a directory in the place where you have downloaded that archive, then run the unzip command in a terminal:
 
 ```bash
-mkdir helloworld
-mv helloworld@0.10.1.cta helloworld
-cd helloworld
-unzip helloworld@0.10.1.cta
+$ mkdir helloworld
+$ mv helloworld@0.12.0.cta helloworld
+$ cd helloworld
+$ unzip helloworld@0.12.0.cta
+Archive:  helloworld@0.12.0.cta
+ extracting: package.json            
+   creating: text/
+ extracting: text/grammar.tem.md     
+ extracting: README.md               
+ extracting: text/sample.md          
+ extracting: request.json            
+   creating: model/
+ extracting: model/@models.accordproject.org.cicero.contract.cto  
+ extracting: model/@models.accordproject.org.cicero.runtime.cto  
+ extracting: model/@models.accordproject.org.money.cto  
+ extracting: model/model.cto         
+   creating: logic/
+ extracting: logic/logic.ergo        
 ```
 
 ## Template Components
 
-The layout of a template is always as follows:
+Once you have unziped the archive, the directory should contain the following files and sub-directories:
 
 ```text
 package.json
@@ -29,46 +41,58 @@ package.json
 README.md
     A markdown file that describes the purpose and correct usage for the template
 
-sample.txt (optional)
+text/grammar.tem.md
+    The default grammar for the template
+
+text/sample.md
     A sample clause or contract text that is valid for the template
+
+model/
+    A collection of Concerto model files for the template. They define the Template Model
+    and models for the State, Request, Response, and Obligations used during execution.
+
+logic/
+    A collection of Ergo files that implement the business logic for the template
+
+test/
+    A collection of unit tests for the template
 
 state.json (optional)
     A sample valid state for the clause or contract
 
 request.json (optional)
-    A sample valid request transaction for the template
-
-grammar/template.tem
-    The default grammar for the template
-
-models/
-    A collection of Concerto model files for the template. They define the Template Model
-    and models for the State, Request, Response, and Obligations used during execution.
-
-lib/
-    A collection of Ergo files that implement the business logic for the template
-
-test/
-    A collection of unit tests for the template
+    A sample valid request to trigger execution for the template
 ```
 
-In a nutshell, the template archive contains the three main components of a template (the natural language text of your Clause or Contract, the data model for the template, and the executable logic), along with additional metadata and samples which can be used to illustrate or test the template.
+In a nutshell, the template archive contains the three main components of the [Template Triangle](accordproject-concepts#what-is-a-template) in the corresponding directories (the natural language text of your clause or contract in the `text` directory, the data model in the `model` directory, and the contract logic in the `logic` directory). Additional files include metadata and samples which can be used to illustrate or test the template.
 
 Let us look at each of those components.
 
-### Grammar
+### Template Text
 
-The file in `grammar/template.tem` contains the grammar for the template. It is natural language, with markup to indicate the variable(s) in your Clause or Contract.
+#### Grammar
 
-```md
-Name of the person to greet: {{name}]. Thank you!
+The file in `text/grammar.tem.md` contains the grammar for the template. It is natural language, with markup to indicate the variable(s) in your Clause or Contract.
+
+```tem
+Name of the person to greet: {{name}}.
+Thank you!
 ```
 
-In the `helloworld` template there is only one variable `name` which is indicated between `{{` and `}]`.
+In the `helloworld` template there is only one variable `name` which is indicated between `{{` and `}}`.
 
-### Model
+#### Sample Text
 
-The file in `models/model.cto` contains the data model for the template. This includes a description for each of the template variables, including what kind of variable it is (also called their type).
+The file in `text/sample.md` contains a sample valid for that grammar.
+
+```md
+Name of the person to greet: "Fred Blogs".
+Thank you!
+```
+
+### Template Model
+
+The file in `model/model.cto` contains the data model for the template. This includes a description for each of the template variables, including what kind of variable it is (also called their type).
 
 Here is the model for the `helloworld` template:
 
@@ -103,7 +127,7 @@ asset TemplateModel extends AccordClause {
 
 Types are always declared within a namespace (here `org.accordproject.helloworld`), which provides a mechanism to disambiguate those types amongst multiple model files.
 
-### Logic
+### Template Logic
 
 The file in `logic/logic.ergo` contains the executable logic. Each Ergo file is identified by a namespace, and contains declarations (e.g., constants, functions, contracts). Here is the Ergo logic for the `helloworld` template:
 
@@ -118,20 +142,57 @@ contract HelloWorld over TemplateModel {
 }
 ```
 
-This declares a single `HelloWorld` contract in the `org.accordproject.helloworld` namespace, with one `greet`.
-
-The `greet` clause takes a request of type `MyRequest` as input and returns a response of type `MyResponse`.
+This declares a single `HelloWorld` contract in the `org.accordproject.helloworld` namespace, with one `greet` clause.
 
 It also declares that this contract `HelloWorld` is parameterized over the given `TemplateModel` found in the `models/model.cto` file.
 
-The code for the `greet` clause returns a new `MyResponse` with a property `output` which is a string containing the `name` of from the contract (`contract`) and the `input` from the request (`request`). In Ergo, `++` stands for string concatenation.
+The `greet` clause takes a request of type `MyRequest` as input and returns a response of type `MyResponse`.
 
-## Execute the Template
+The code for the `greet` clause returns a new `MyResponse` response with a single property `output` which is a string. That string is constructed using the string concatenation operator (`++`) in Ergo from the `name` in the contract (`contract.name`) and the input from the request (`request.input`).
 
-Even after you have unzipped the template archive, you can still parse and execute that template.
+## Use the Template
 
-## Run Unit Tests
+Even after you have unzipped the template archive, you can use that template from the directory directly, in the same way we did from the `.cta` archive in the  [Getting Started](started-hello) section.
 
-Templates should have unit tests that cover every line of code of their business logic. You may use any of the
-popular unit testing frameworks to implement the tests (mocha, chai, sinon etc). Please refer to the
-``acceptance-of-delivery`` template for an example template with unit tests.
+For instance you can use `cicero parse` or `cicero trigger` as follows:
+```bash
+$ cd helloworld
+$ cicero parse
+15:35:12 - info: Using current directory as template folder
+15:35:12 - info: Loading a default text/sample.md file.
+15:35:14 - info:
+{
+  "$class": "org.accordproject.helloworld.HelloWorldClause",
+  "clauseId": "7258ecf6-cf64-4f9b-807d-c4a3ae6b83ed",
+  "name": "Fred Blogs"
+}
+$ cicero trigger
+15:35:17 - info: Using current directory as template folder
+15:35:17 - info: Loading a default text/sample.md file.
+15:35:17 - info: Loading a default request.json file.
+15:35:19 - warn: A state file was not provided, initializing state. Try the --state flag or create a state.json in the root folder of your template.
+15:35:19 - info:
+{
+  "clause": "helloworld@0.12.0-13f7230894084cc568853771a6b5c928a1a3b71699512f763f8734fcca38dc5c",
+  "request": {
+    "$class": "org.accordproject.helloworld.MyRequest",
+    "input": "Accord Project"
+  },
+  "response": {
+    "$class": "org.accordproject.helloworld.MyResponse",
+    "output": "Hello Fred Blogs Accord Project",
+    "transactionId": "c65d3161-eb77-4d52-8abb-6953a664d190",
+    "timestamp": "2019-11-03T20:35:19.526Z"
+  },
+  "state": {
+    "$class": "org.accordproject.cicero.contract.AccordContractState",
+    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+  },
+  "emit": []
+}
+```
+
+:::note
+Remark that if your template directory contains a valid `sample.md` or valid `request.json`, Cicero will automatically detect those so you do not need to pass them using the `--sample` or `--request` options.
+:::
+

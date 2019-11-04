@@ -1,5 +1,5 @@
 ---
-id: started-helloworld
+id: started-hello
 title: Hello World Template
 ---
 
@@ -213,7 +213,7 @@ Feel free to try the same commands to parse and execute other templates from the
 
 ### More About Cicero
 
-You can find more information on how to create or publish Accord Project templates in the [Authoring with Cicero](tutorial-templates) tutorials.
+You can find more information on how to create or publish Accord Project templates in the [Work with Cicero](tutorial-templates) tutorials.
 
 ### Run on Different Platforms
 

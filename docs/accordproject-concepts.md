@@ -138,7 +138,7 @@ _More information about Concerto can be found in the [Concerto Modeling](model-c
 
 The combination of text and model already makes templates _machine-readable_, while the logic makes it _machine-executable_.
 
-### Draft-Time Logic
+### During Drafting
 
 In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan]():
 
@@ -151,7 +151,7 @@ with a loan term of {{loanDuration}},
 and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}.
 ``` 
 
-This uses a `monthlyPayment` formula which calculates the monthly payment based on the other data points in the text:
+This uses a `monthlyPaymentFormula` function which calculates the monthly payment based on the other data points in the text:
 ```
 // Formula taken from 
 define function monthlyPaymentFormula(loanAmount: Double, rate: Double, loanDuration: Integer) : Double {
@@ -167,9 +167,9 @@ define function monthlyPaymentFormula(loanAmount: Double, rate: Double, loanDura
 ```
 Each logic function has a _name_ (e.g., `monthlyPayment`), a _signature_ indicating the parameters with their types (e.g., `loanAmount:Double`), and a _body_ which performs the appropriate computation based on the parameters. The main payment calculation is here based on the [standardized calculation used in the United States](https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula) with `*` standing for multiplication, `/` for division, and `^` for exponentiation.
 
-### Post-Signature Logic
+### After Signature
 
-The logic can also be used to associate _behavior_ to the template after the contract has been signed. This can be used for instance to specify what happens when a delivery is received late, to check conditions for payment, determine if there has been a breach of contract, etc.
+The logic can also be used to associate behavior to the template _after_ the contract has been signed. This can be used for instance to specify what happens when a delivery is received late, to check conditions for payment, determine if there has been a breach of contract, etc.
 
 The following shows post-signature logic for the **Acceptance of Delivery** clause.
 
@@ -177,7 +177,7 @@ The following shows post-signature logic for the **Acceptance of Delivery** clau
 contract AcceptanceOfDelivery over AcceptanceOfDeliveryClause {
   clause acceptanceofdelivery(request : InspectDeliverable) : InspectionResponse {
 
-		let received = request.deliverableReceivedAt;
+    let received = request.deliverableReceivedAt;
     enforce isBefore(received,now()) else
       throw ErgoErrorResponse{ message : "Transaction time is before the deliverable date." }
     ;
