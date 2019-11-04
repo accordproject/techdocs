@@ -9,20 +9,12 @@ In order to make a contract or clause executable, there needs to be a link to re
 
 The Accord Project markup language is called CiceroMark. It supports:
 1. Rich text annotations based on [CommonMark](https://commonmark.org) - a standard specification for Markdown
-2. Template variables and blocks for structured content _in the style of_ [Handlebars](https://handlebarsjs.com), including [Concerto](https://www.accordproject.org/projects/concerto/) models
+2. Template variables and blocks for structured content _in the style of_ [Handlebars](https://handlebarsjs.com)
 3. Formulas written as embedded [Ergo](https://docs.accordproject.org/docs/logic-ergo.html) expressions
 
-CiceroMark is similar to Handlebars with two key differences:
-- it is a template language for CommonMark rather than HTML
-- it uses Ergo as an expression language rather than JavaScript
-
-
-### Features
-
-- Extensibility: New industry models and [statements](https://docs.accordproject.org/docs/logic-module.html) can be easily defined to extend the functionality of the markup language for new domains, contract types, industry standards etc.
-- Compatibility: Works with industry standard schemas and domain models
-- Understandability: Extends existing, established, templating approaches (e.g. Handlebars)
-- Modularity: **WIP**
+For people familiar with [Handlebars](https://handlebarsjs.com) or other popular Web templating systems, CiceroMark is similar but with two key differences:
+- it is specifically designed as templating language for CommonMark
+- it uses Ergo as an expression language (e.g., rather than JavaScript)
 
 ## Example
 
