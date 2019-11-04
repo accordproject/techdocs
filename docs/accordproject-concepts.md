@@ -177,7 +177,7 @@ The following shows post-signature logic for the **Acceptance of Delivery** clau
 contract AcceptanceOfDelivery over AcceptanceOfDeliveryClause {
   clause acceptanceofdelivery(request : InspectDeliverable) : InspectionResponse {
 
-		let received = request.deliverableReceivedAt;
+    let received = request.deliverableReceivedAt;
     enforce isBefore(received,now()) else
       throw ErgoErrorResponse{ message : "Transaction time is before the deliverable date." }
     ;
