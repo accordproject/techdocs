@@ -1,17 +1,17 @@
 {
     "docs": {
         "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business", "accordproject-developers"],
-        "Getting Started": ["started-installation", "started-helloworld", "started-studio", "started-resources"],
+        "Getting Started": ["started-installation", "started-hello", "started-studio", "started-resources"],
         "User Tutorials": [
             {
                 "type": "subcategory",
-                "label": "Authoring in Template Studio",
-                "ids": ["tutorial-latedelivery"]
+                "label": "Work with Cicero",
+                "ids": ["tutorial-templates", "tutorial-library", "tutorial-create"]
             },
             {
                 "type": "subcategory",
-                "label": "Authoring with Cicero",
-                "ids": ["tutorial-templates", "tutorial-create", "tutorial-publish"]
+                "label": "Authoring with Template Studio",
+                "ids": ["tutorial-latedelivery"]
             }
         ],
         "Developers Tutorials": [

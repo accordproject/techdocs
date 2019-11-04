@@ -51,7 +51,7 @@
         "title": "Declarations"
       },
       "logic-ergo": {
-        "title": "Overview"
+        "title": "Ergo Overview"
       },
       "logic-module": {
         "title": "Modularity"
@@ -66,7 +66,7 @@
         "title": "Statements"
       },
       "markup-cicero": {
-        "title": "Overview"
+        "title": "CiceroMark Overview"
       },
       "markup-commonmark": {
         "title": "Rich Text Markup"
@@ -87,7 +87,7 @@
         "title": "Classes"
       },
       "model-concerto": {
-        "title": "Overview"
+        "title": "Concerto Overview"
       },
       "model-decorators": {
         "title": "Decorators"
@@ -146,7 +146,7 @@
       "spec-template": {
         "title": "Template Structure"
       },
-      "started-helloworld": {
+      "started-hello": {
         "title": "Hello World Template"
       },
       "started-installation": {
@@ -159,7 +159,7 @@
         "title": "Online Tour"
       },
       "tutorial-create": {
-        "title": "Creating a New Template"
+        "title": "Template Generator"
       },
       "tutorial-hyperledger": {
         "title": "Deploying on Hyperledger Fabric"
@@ -168,13 +168,13 @@
         "title": "Editing a Late Delivery Clause"
       },
       "tutorial-library": {
-        "title": "Publishing a Template"
+        "title": "Template Library"
       },
       "tutorial-nodejs": {
         "title": "Working with Node.js"
       },
       "tutorial-templates": {
-        "title": "Take a Look Inside"
+        "title": "Templates Deep Dive"
       },
       "version-0.10.0/version-0.10.0-accordproject-specification": {
         "title": "Template Specification"

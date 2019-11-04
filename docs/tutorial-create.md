@@ -1,63 +1,93 @@
 ---
 id: tutorial-create
-title: Creating a New Template
+title: Template Generator
 ---
 
-Now that you have executed an existing template, let's create a new template.
+Now that you have executed an existing template, let's create a new template from scratch. To facilitate the creation of new templates, Cicero comes with a template generator.
 
-> If you would like to contribute your template back into the `cicero-template-library` please start by [forking](https://help.github.com/articles/fork-a-repo/) the `cicero-template-library` project on GitHub. This will make it easy for you to submit a pull request to get your new template added to the library.
+## The template generator
 
-Install the template generator::
+### Install the generator
 
-```
-    npm install -g yo
-    npm install -g yo @accordproject/generator-cicero-template
-```
+If you haven't already done so, first install the template generator::
 
-Run the template generator:
-
-```
-    yo @accordproject/cicero-template
+```bash
+npm install -g yo
+npm install -g yo @accordproject/generator-cicero-template
 ```
 
-> If you have forked the `cicero-template-library` `cd` into that directory first.
+### Run the generator:
 
-Give your generator a name (no spaces) and then supply a namespace for your template model (again,
-no spaces). The generator will then create the files and directories required for a basic template
-(based on the helloworld template).
+You can now try the template generator by running the following command in a terminal window:
+```bash
+yo @accordproject/cicero-template
+```
+This will ask you a series of questions. Give your generator a name (no spaces) and then supply a namespace for your template model (again,no spaces). The generator will then create the files and directories required for a basic template (similar to the helloworld template).
 
-> You may find it easier to edit the grammar, model and logic for your template in VS Code, installing the Accord Project and Hyperledger Composer extensions. The extensions give you syntax highlighting and parser errors within VS Code.
+Here is an example of how it should look like in your terminal window:
+```
+bash-3.2$ yo @accordproject/cicero-template 
 
-## Update Sample.txt
+     _-----_     ╭──────────────────────────╮
+    |       |    │      Welcome to the      │
+    |--(o)--|    │ generator-cicero-templat │
+   `---------´   │       e generator!       │
+    ( _´U`_ )    ╰──────────────────────────╯
+    /___A___\   /
+     |  ~  |     
+   __'.___.'__   
+ ´   `  |° ´ Y ` 
 
-First, replace the contents of `sample.txt` with the legal text for the contract or clause that you would like to digitize.
-Check that when you run `cicero parse` that the `sample.txt` is now invalid with respect to the grammar.
+? What is the name of your template? mylease
+? What is the namespace for your model? org.acme.lease
+   create mylease/README.md
+   create mylease/package.json
+   create mylease/request.json
+   create mylease/logic/logic.ergo
+   create mylease/model/model.cto
+   create mylease/test/logic_default.feature
+   create mylease/text/grammar.tem.md
+   create mylease/text/sample.md
+   create mylease/.cucumber.js
+   create mylease/.npmignore
+```
 
-## Edit the Template Grammar
+:::tip
+You may find it easier to edit the grammar, model and logic for your template in [VSCode](https://code.visualstudio.com/), installing the Accord Project and Hyperledger Composer extensions. The extensions give you syntax highlighting and parser errors within VS Code.
+:::
 
-Now update the grammar. Start by replacing the existing grammar, making it identical to the contents of your updated `sample.txt`.
+## Edit your template
 
-Now introduce variables into your template grammar as required. The variables are marked-up using `{{` and `}}`
-with what is between the braces being the name of your variable.
+### Update Sample.txt
 
-## Edit the Template Model
+First, replace the contents of `./text/sample.md` with the legal text for the contract or clause that you would like to digitize.
+
+Check that when you run `cicero parse` that the new `./text/sample.md` is now _invalid_ with respect to the grammar.
+
+### Edit the Template Grammar
+
+Now update the grammar in `./text/grammar.tem.md`. Start by replacing the existing grammar, making it identical to the contents of your updated `./text/sample.md`.
+
+Now introduce variables into your template grammar as required. The variables are marked-up using `{{` and `}}` with what is between the braces being the name of your variable.
+
+### Edit the Template Model
 
 All of the variables referenced in your template grammar must exist in your template model. Edit
-the file `models/model.cto` to include all your variables, making sure the name of the model property matches the name
-of the variable in the `template.tem` file.
+the file `model/model.cto` to include all your variables, making sure the name of the model property matches the name of the variable in the `./text/grammar.tem.md` file.
 
-Note that the Hyperledger Composer Modeling Language primitive data types are:
+Note that the Concerto Modeling Language primitive data types are:
 
-- String
-- Long
-- Integer
-- DateTime
-- Double
-- Boolean
+- `String`: for character strings
+- `Long` or `Integer`: for integer values
+- `DateTime`: for dates and times
+- `Double`: for floating points numbers
+- `Boolean`: for values that are either true or false
 
-> Note that you can import common types (address, monetary amount, country code, etc.) from the Accord Project Model Repository: https://models.accordproject.org.
+:::tip
+Note that you can import common types (address, monetary amount, country code, etc.) from the Accord Project Model Repository: https://models.accordproject.org.
+:::
 
-## Edit the Transaction Types
+### Edit the Transaction Types
 
 Your template expects to receive data as input and will produce data as output. The structure of
 this request/response data is captured in the `MyRequest` and `MyResponse` transaction types in your model
@@ -67,9 +97,14 @@ business logic of your template. Similarly edit the definition of the `MyRespons
 all the data that the business logic for your template will compute and would like to return to the
 caller.
 
-## Edit the Template Logic
+### Edit the Template Logic
 
-Now edit the business logic of the template itself. This is expressed in the Ergo language, which is a strongly-typed function domain specific language for contract logic. Open the file `lib/logic.ergo`
+Now edit the business logic of the template itself. This is expressed in the Ergo language, which is a strongly-typed function domain specific language for contract logic. Open the file `logic/logic.ergo`
 and edit the `helloworld` clause to perform the calculations your logic requires.
 
 Looking at the Ergo logic for other example templates will help you understand the syntax and capabilities of Ergo.
+
+## Publishing your template
+
+If you would like to publish your new template in the Accord Project Template Library, please consult the [Template Library](tutorial-library) Section of this documentation.
+
