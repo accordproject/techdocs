@@ -186,7 +186,7 @@ const Logic = props => (
     {[
       {
         content:
-          '<div class="typeset">Ergo is a _strongly-typed_ domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create *safe* smart legal contract logic.</div>',
+          '<div class="typeset">Ergo is a <em>strongly-typed</em> domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create <strong>safe</strong> smart legal contract logic.</div>',
         image: imgUrl("ergo-vscode.png"),
         imageAlt: "Example of an Ergo file",
         imageAlign: "left",
