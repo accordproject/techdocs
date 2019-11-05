@@ -117,13 +117,10 @@
         "title": "Ergo Compiler"
       },
       "ref-logic-stdlib": {
-        "title": "Ergo Libraries"
+        "title": "Ergo Standard Library"
       },
       "ref-logic": {
         "title": "Ergo Language Reference"
-      },
-      "ref-markup": {
-        "title": "Markup Reference"
       },
       "ref-migrate-0.13-0.20": {
         "title": "0.13 to 0.20"
