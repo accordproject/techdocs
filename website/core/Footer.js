@@ -51,13 +51,13 @@ class Footer extends React.Component {
             <h5>Docs</h5>
             <ul>
               <li>
-                <a href={this.docUrl('accordproject.html')}>Getting Started</a>
+                <a href={this.docUrl('accordproject.html')}>Overview</a>
               </li>
               <li>
-                <a href={this.docUrl('accordproject-installation.html')}>Installation</a>
+                <a href={this.docUrl('started-installation.html')}>Getting Started</a>
               </li>
               <li>
-                <a href={this.docUrl('spec-overview.html')}>Template Specification</a>
+                <a href={this.docUrl('markup-cicero.html')}>Template Guides</a>
               </li>
             </ul>
           </div>

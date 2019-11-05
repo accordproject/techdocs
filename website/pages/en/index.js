@@ -79,10 +79,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('accordproject.html', this.props.language)}>Getting Started</Button>
+            <Button href={docUrl('accordproject.html', this.props.language)}>Overview</Button>
+            <Button href={docUrl('started-installation.html', this.props.language)}>Getting Started</Button>
             <Button href="#try">Try Online</Button>
-            <Button href="https://github.com/accordproject">GitHub</Button>
-            <Button href="https://accord-project-slack-signup.herokuapp.com/">Slack</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -103,7 +102,7 @@ const Features = props => (
   <Block layout="fourColumn" id="features">
     {[
       {
-        content: `Create templates for executable natural-language legal contracts using Open Source Cicero [Template Technology](${siteConfig.baseUrl}docs/basic-use.html).`,
+        content: `Create templates for human-readable and machine-executable contracts using Open Source [Cicero](${siteConfig.baseUrl}docs/started-installation.html).`,
         title: `[![Cicero](${imgUrl('cicero-logo.svg')})](${siteConfig.baseUrl}docs/basic-use.html)`,
       },
       {
@@ -111,11 +110,11 @@ const Features = props => (
         title: `[![Ergo](${imgUrl('ergo-logo.svg')})](${siteConfig.baseUrl}docs/logic-ergo.html)`,
       },
       {
-        content: `Use Open Source contract templates from the [Template Library](https://templates.accordproject.org/).`,
+        content: `Find user-contributed open source templates in the [Template Library](https://templates.accordproject.org/).`,
         title: `[Template Library](https://templates.accordproject.org/)`,
       },
       {
-        content: `Use models from the [Model Repository](https://models.accordproject.org/) to ensure interoperability between templates.`,
+        content: `Use models from the [Model Repository](https://models.accordproject.org/) to ensure interoperability between your templates.`,
         title: `[Model Repository](https://models.accordproject.org/)`,
       },
   ]}
@@ -126,7 +125,7 @@ const FeatureCallout = props => (
   <Block id="digitize-legal-contracts">
     {[
       {
-        content: "<div class='typeset'>Use open source tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform. The projects comprise all of the software necessary to author, edit and execute smart legal contracts in a standardized fashion.</div>",
+        content: "<div class='typeset'>Use <b><em>open source</em></b> tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform. The projects comprise all of the software necessary to author, edit and execute smart legal contracts in a standardized fashion.</div>",
         title: 'Digitize <span class="strong">Legal Contracts</span>',
       }
     ]}
@@ -138,10 +137,10 @@ const Templates = props => (
     {[
       {
         content:
-          "<div class='typeset'>Cicero templates are composed of three elements: the Template Grammar (the natural language text for the template), the Template Model (the data model that backs the template), the Logic (the executable business logic for the template). When combined these three elements allow templates to be edited, analyzed, queried and executed.</div>",
-        image: imgUrl("../docs/assets/template.png"),
+          "<div class='typeset'>Accord Project Templates are composed of three elements: the Text (the natural language), the Model (the data model), and the Logic (the executable business logic). When combined these three elements allow Accord Project templates to be both <b><em>human-readable</em></b> and <b><em>machine-executable</em></b>.</div>",
+        image: imgUrl("../docs/assets/020/template.png"),
         imageAlt:
-          "The three elements of Cicero templates: Model, Natural Language, Logic.These elements all form a triangle.  ",
+          "The three elements of Accord Project templates: Text, Model, Logic. These elements form a triangle.",
         imageAlign: "right",
         title: "Templates"
       }
@@ -155,12 +154,12 @@ const Grammar = props => (
     {[
       {
         content:
-          '<div class="typeset">Create structured clauses and contracts by binding variables in natural language to a data model. Optionally, clauses can be made executable by adding contract logic to the data model.</div>',
-        image: imgUrl("grammar.png"),
+          '<div class="typeset">CiceroMark lets you capture the data in a natural language clause or contract text through <b><em>template variables</em></b>. And it supports rich text <b><em>markdown</em></b> to ensure that your contracts look professional.</div>',
+        image: imgUrl("../docs/assets/020/grammar.png"),
         imageAlt:
-          "An example of a .tem file. There are 3 paragraphs of a contract with binding variables incorporated in each paragraph",
+          "An example of an Accord Project template text. There are 3 paragraphs of a contract with variables in each paragraphs and markdown annotations for formatting",
         imageAlign: "left",
-        title: 'Natural <span class="strong">Language</span>'
+        title: 'Text'
       }
     ]}
   </Block>
@@ -171,9 +170,9 @@ const Model = props => (
     {[
       {
         content:
-          '<div class="typeset">The template model defines the structure of data that are used in the natural language and logic.</div>',
+          '<div class="typeset">Concerto lets you model the data used in your templates in a flexible and expressive way. Models can be written in a modular and portable way so they can be reused in a variety of contracts.</div>',
         image: imgUrl("model-uml.png"),
-        imageAlt: "A diagram depicting the Concerto modeling language ",
+        imageAlt: "A diagram with an example of a Concerto model",
         imageAlign: "right",
         title: "Model"
       }
@@ -187,7 +186,7 @@ const Logic = props => (
       {
         content:
           '<div class="typeset">Ergo is a <em>strongly-typed</em> domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create <strong>safe</strong> smart legal contract logic.</div>',
-        image: imgUrl("ergo-vscode.png"),
+        image: imgUrl("../docs/assets/020/ergo.png"),
         imageAlt: "Example of an Ergo file",
         imageAlign: "left",
         title: "Logic"
@@ -202,7 +201,7 @@ const TryOut = props => (
       {
         content:
           '<div class="typeset">You can author and test templates online in the Accord Project <a href="https://studio.accordproject.org">Template Studio</a>. Search for existing templates, edit the contract text and execute the logic.</div>',
-        image: imgUrl("studio.png"),
+        image: imgUrl("../docs/assets/020/studio.png"),
         imageAlt:
           "An example a template being edited. There is an option to edit the full contract or a single clause. There is also a search bar at the top center for users to search for specific templates.",
         imageAlign: "right",
