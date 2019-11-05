@@ -5,7 +5,7 @@ title: CiceroMark Overview
 
 ## Preliminaries
 
-The Cicero markup language (or CiceroMark) is used to express the natural language text for legal clauses or contracts. As other markup languages, it can express document structure (e.g., headings, paragraphs, lists) as well as formatting useful for readability (e.g., italics, bold, quotations). In addition, it can also include variables for the template, and calculation based on the values of those variables.
+The Cicero markup language (or CiceroMark) is used to express the natural language text for legal clauses or contracts. As with other markup languages, CiceroMark can express document structure (e.g., headings, paragraphs, lists) as well as formatting useful for readability (e.g., italics, bold, quotations). In addition, CiceroMark can also include variables for the template and calculations based on the values of those variables.
 
 CiceroMark looks like regular [Markdown](https://en.wikipedia.org/wiki/Markdown), with embedded CiceroMark expressions. Let us look again at the [fixed rate loan](https://templates.accordproject.org/fixed-interests-static@0.2.0.html) clause that was used in the [Overview](accordproject) Section of this documentation.
 
@@ -19,11 +19,11 @@ and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) 
 ```
 
 This example illustrates all the key features of CiceroMark:
-1. Markdown: e.g., `## Fixed rate loan` for level 2 heading, and `*fixed interest*` for italics.
-2. Variable expressions: e.g., `{{loanAmount}}` which is the amount for the loan.
-3. Ergo expressions: e.g., `{{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}` which calculates the monthly payment based on the `loanAmount`, `rate`, and `loanDuration` variables.
+1. _Markdown_: e.g., `## Fixed rate loan` for level 2 heading, and `*fixed interest*` for italics.
+2. _Variable expressions_: e.g., `{{loanAmount}}` which is the amount for the loan.
+3. _Ergo expressions_: e.g., `{{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}` which calculates the monthly payment based on the `loanAmount`, `rate`, and `loanDuration` variables.
 
-### Lexical conventions
+### Lexical Conventions
 
 CiceroMark is a string of `UTF-8` characters.
 
@@ -44,7 +44,7 @@ An introduction to CommonMark can be found in the [Rich Text Markdown](markup-co
 ### CiceroMark Expressions
 
 There are three kinds of CiceroMark expressions, which are similar to expressions found in other templating systems such as [Handlebars](https://handlebarsjs.com):
-- variable expressions (written `{{variableName}}`) which make include an optional formatting (written `{{variableName as "FORMAT"}}`.
+- variable expressions (written `{{variableName}}`) which may include an optional formatting (written `{{variableName as "FORMAT"}}`).
 - block expressions which may contain additional text or markup (written `{{#blockName variableName}} ... text and markup ... {{/blockName}}`).
 - Ergo expressions (written `{{% ergoExpression %}}`).
 
@@ -52,9 +52,9 @@ Details and examples of CiceroMark expressions can be found in the [Variable Exp
 
 ## Processing CiceroMark
 
-There are two main operations on CiceroMark: parsing and drafting.
+There are two main operations on CiceroMark: **drafting** and **parsing**.
 
-Parsing extract data in the [JSON](http://json.org) format from text. Drafting creates text from data in the JSON format.
+Drafting creates text from data in the [JSON](http://json.org) format. Parsing extracts data in the JSON format from text.
 
 We have already illustrated those operations in the [Hello World Template](started-hello) tutorial, but we review them again here with a focus on how they behave with respect to CiceroMark.
 
@@ -83,7 +83,7 @@ and monthly payments of {{667}}
 ```
 
 :::tip
-Going from data to text can be done using the `cicero draft` command.
+Going from data to text can be done using the [`cicero draft`](cicero-cli.html#cicero-draft) command.
 :::
 
 The variables are replaced by their values in the text, and the Ergo expression which calculates the monthly payment is evaluated (yielding `667` in this example). In most of this guide, we use text generation to illustrate CiceroMark. However we can also use the template to go from text to data.
@@ -113,7 +113,7 @@ parsing will extract the following deal data in JSON format:
 ```
 
 :::tip
-Going from text to data can be done using the `cicero parse` command.
+Going from text to data can be done using the [`cicero parse`](cicero-cli.html#cicero-parse) command.
 :::
 
 Several important remarks are important about parsing.
@@ -143,7 +143,7 @@ and monthly payments of {{anything else here}}
 ```
 
 :::tip
-For convenience, the command `cicero normalize` can be used to parse, then re-draft a CiceroMark document, allowing a user to both normalize the markdown and to recalculate the Ergo expressions. For instance, `cicero normalize` applied to the following document:
+For convenience, the command [`cicero normalize`](cicero-cli.html#cicero-normalize) can be used to parse, then re-draft a CiceroMark document, allowing a user to both normalize the markdown and to recalculate the Ergo expressions. For instance, [`cicero normalize`](cicero-cli.html#cicero-normalize) applied to the following document:
 ```md
 ## Fixed rate loan
 
