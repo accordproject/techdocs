@@ -65,17 +65,20 @@
       "logic-stmt": {
         "title": "Statements"
       },
+      "markup-blocks": {
+        "title": "Block Expressions"
+      },
       "markup-cicero": {
         "title": "CiceroMark Overview"
       },
       "markup-commonmark": {
-        "title": "Rich Text Markup"
+        "title": "Rich Text Markdown"
       },
-      "markup-expr": {
-        "title": "Expressions"
+      "markup-ergo": {
+        "title": "Ergo Expressions"
       },
-      "markup-variables-blocks": {
-        "title": "Variables and Blocks"
+      "markup-variables": {
+        "title": "Variable Expressions"
       },
       "markus-cli": {
         "title": "Markdown Transform CLI"

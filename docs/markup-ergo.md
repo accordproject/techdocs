@@ -1,6 +1,6 @@
 ---
-id: markup-expr
-title: Expressions
+id: markup-ergo
+title: Ergo Expressions
 ---
 
 Ergo Logic

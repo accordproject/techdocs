@@ -25,7 +25,7 @@
             {
                 "type": "subcategory",
                 "label": "CiceroMark",
-                "ids": ["markup-cicero", "markup-commonmark", "markup-variables-blocks", "markup-expr"]
+                "ids": ["markup-cicero", "markup-commonmark", "markup-variables", "markup-blocks", "markup-ergo"]
             },
             {
                 "type": "subcategory",

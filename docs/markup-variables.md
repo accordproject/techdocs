@@ -1,23 +1,19 @@
 ---
-id: markup-variables-blocks
-title: Variables and Blocks
+id: markup-variables
+title: Variable Expressions
 ---
 
 Variables
 ---
 
-The template grammar is `UTF-8` text containing markup to introduce named variables. Variables create (structured) text and support the parsing and generation of the document text, and do not require Ergo knowledge.
-
-Parsing text translates it into [JSON](http://json.org), which then can be used to check the validity in relation to the model. Generating text takes the JSON and translates it back into natural language text.
-
-Each variable starts with `{{` and ends with `}}`:
+Each variable starts with `{{` and ends with `}}` and may include an optional formatting using the keyword `as`:
 
 ```tem
 {{firstName}}                       // Source variable (used for parsing and rendering)
 {{deliveryDate as "MMMM, DD YYYY"}} // Source variable with date formatting
 ```
 
-To see this in more context, we will look at the Late Delivery and Penalty template (found at the [Cicero Template Library](https://templates.accordproject.org/)):
+To see this context, we look at the Late Delivery and Penalty template (found at the [Cicero Template Library](https://templates.accordproject.org/)):
 
 ```tem
 ## Late Delivery and Penalty.
