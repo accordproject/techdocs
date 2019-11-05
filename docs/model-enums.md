@@ -6,11 +6,11 @@ title: Enumerations
 Enumerations are used to capture lists of domain values.
 
 ```js
-enum Gender {
-  o MALE
-  o FEMALE
-  o OTHER
-  o UNKNOWN
+enum Cardsuit {
+  o CLUBS
+  o DIAMONDS
+  o HEARTS
+  o SPADES
 }
 ```
 
