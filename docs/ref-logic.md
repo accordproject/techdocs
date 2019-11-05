@@ -3,7 +3,7 @@ id: ref-logic
 title: Ergo Language Reference
 ---
 
-## Lexical conventions
+## Lexical Conventions
 
 ### File Extension
 
@@ -30,7 +30,7 @@ Here are examples of comments:
        and it can also be /* nested */ */
 ```
 
-### Reserved words
+### Reserved Words
 
 The following are reserved as keywords in Ergo. They cannot be used as identifiers.
 
@@ -43,14 +43,16 @@ constant, match, set, emit, with, or, and, true, false, unit, none
 
 ## Condition Expressions
 
-Conditional statements, conditional expressions and conditional constructs are features of a programming language which perform different computations or actions depending on whether a programmer-specified boolean condition evaluates to true or false.  Conditional expressions (also known as `if` statements) allow us to conditionally execute Ergo code depending on the value of a test condition. If the test condition evaluates to `true` then the code on the `then` branch is evaluated. Otherwise, when the test condition evaluates to `false` then the `else` branch is evaluated.
+Conditional statements, conditional expressions and conditional constructs are features of a programming language which perform different computations or actions depending on whether a programmer-specified boolean condition evaluates to true or false.  
+
+Conditional expressions (also known as `if` statements) allow us to conditionally execute Ergo code depending on the value of a test condition. If the test condition evaluates to `true` then the code on the `then` branch is evaluated. Otherwise, when the test condition evaluates to `false` then the `else` branch is evaluated.
 
 ### Example
 
 ```ergo
 if delayInDays > 15.0 then
   BuyerMayTerminateResponse{};
-else 
+else
   BuyerMayNotTerminateResponse{}
 ```
 
@@ -86,9 +88,9 @@ If statements can be chained , i.e., `if ... then .... else if ... then ... else
 ```ergo
 if request.netAnnualChargeVolume < contract.firstVolume then
   return VolumeDiscountResponse{ discountRate: contract.firstRate }
-else if request.netAnnualChargeVolume < contract.secondVolume then 
+else if request.netAnnualChargeVolume < contract.secondVolume then
   return VolumeDiscountResponse{ discountRate: contract.secondRate }
-else 
+else
   return VolumeDiscountResponse{ discountRate: contract.thirdRate }
 ```
 
@@ -104,7 +106,7 @@ The value of message after running this code will be `"Low Price"`.
 
 ### Related
 
--   [Match expression](ergo-reference#match-expressions) - where many
+-   [Match expression](ref-logic#match-expressions) - where many
     alternative conditions check the same variable
 
 ## Match Expressions

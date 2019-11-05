@@ -9,13 +9,13 @@ Much has changed in the new `0.20` release. This guide provides step-by-step ins
 Before following those migration instructions, make sure to first install version `0.20` of Cicero, as described in the [Installation](started-installation) Section of this documentation.
 :::
 
-## Update the package.json
+## Update the `package.json`
 
 You will first need to update the `package.json` in your template. Remove the Ergo version which is now unnecessary, and change the Cicero version to `^0.20.0`.
 
 #### Example
 
-After those changes, the `accordproject` field in your `package.json` should look as follow (with the `template` field being either `clause` or `contract` depending on the template):
+After those changes, the `accordproject` field in your `package.json` should look as follows (with the `template` field being either `clause` or `contract` depending on the template):
 ```js
 ...
     "accordproject": {
@@ -25,7 +25,7 @@ After those changes, the `accordproject` field in your `package.json` should loo
 ...
 ```
 
-## Templates directory changes
+## Template Directory Changes
 
 The layout of templates has changed to reflect the conceptual notion of Accord Project templates (as a triangle composed of text, model and logic). To migrate a template directory from version `0.13` or earlier to the new `0.20` layout:
 1. Rename your `lib` directory to `logic`
@@ -61,11 +61,11 @@ Consider the [late delivery and penalty](https://templates.accordproject.org/lat
 ./text/sample.md
 ```
 
-## Text changes
+## Text Changes
 
 Both grammar and sample text for the templates has changed to support rich text annotations through CommonMark and a new syntax for variables. You can find complete information about the new syntax in the [CiceroMark](markup-cicero) Section of this documentation. For an existing template, you should apply the following changes.
 
-### Text grammar changes
+### Text Grammar Changes
 
 1. Variables should be changed from `[{variableName}]` to `{{variableName}}`
 2. Formatted variables should be changed to from `[{variableName as "FORMAT"}]` to `{{variableName as "FORMAT"}}`
@@ -73,11 +73,11 @@ Both grammar and sample text for the templates has changed to support rich text 
 4. Nested clauses should be changed to use the new block syntax, from `[{#payment}]As consideration in full for the rights granted herein...[{/payment}]` to `{{#clause payment}}As consideration in full for the rights granted herein...{{/clause}}`
 
 :::note
-1. Template text is now interpreted as CommonMark which may lead to unexpected results if your text includes characters or structure that  (e.g., `#` or `##` now become headings; or `1.` or `-` now become lists). You should review both the grammar and samples so they follow the proper [CommonMark](https://commonmark.org) rules.
+1. Template text is now interpreted as CommonMark which may lead to unexpected results if your text includes CommonMark characters or structure (e.g., `#` or `##` now become headings; `1.` or `-` now become lists). You should review both the grammar and samples so they follow the proper [CommonMark](https://commonmark.org) rules.
 2. The new lexer reserves `{{` instead of reserving `[{` which means you should avoid using `{{` in your text unless for Accord Project variables.
 :::
 
-### Text samples changes
+### Text Samples Changes
 
 You should ensure that any changes to the grammar text is reflected in the samples. Any change in the grammar text outside of variables should be applied to the corresponding `sample.md` files as well.
 
@@ -127,7 +127,7 @@ exceed 55% of the total value of the Equipment involved in late delivery.
 If the delay is more than 15 days, the Buyer is entitled to terminate this Contract.
 ```
 
-## Model changes
+## Model Changes
 
 There is no model changes required for this version.
 
@@ -160,7 +160,7 @@ If you try to compile Ergo logic written for version `0.13` or earlier that feat
 3. If enum values are passed as parameters in clauses or functions, you should change the type annotation for that parameter from `String` to the correct enum type.
 4. In a few cases the same enumerated value may be used in different enum types (e.g., `days` and `weeks` are used in both `TemporalUnit` and `PeriodUnit`). Those two values will now have different types. If you need to distinguish, you can use the fully qualified name for the enum value (e.g., `~org.accordproject.time.TemporalUnit.days` or `~org.accordproject.time.PeriodUnit.days`).
 
-### Other changes
+### Other Changes
 
 1. `now` used to return the current time but is treated in `0.20` like any other variables. If your logic used the variable `now` without declaring it, this will raise a `Variable now not found` error. You should change your logic to use the `now()` function instead.
 
@@ -176,13 +176,13 @@ Consider the Ergo logic for the [acceptance of delivery](https://templates.accor
       throw ErgoErrorResponse{ message : "Transaction time is before the deliverable date." }
     ;
 
-    let dur = 
+    let dur =
       Duration{
         amount: contract.businessDays,
         unit: "days"
       };
     let status =
-      if isAfter(now(), addDuration(received, dur))
+      if isAfter(now, addDuration(received, dur))
       then "OUTSIDE_INSPECTION_PERIOD"
       else if request.inspectionPassed
       then "PASSED_TESTING"
@@ -206,7 +206,7 @@ results in the following new logic for the `0.20` version:
       throw ErgoErrorResponse{ message : "Transaction time is before the deliverable date." }
     ;
 
-    let dur = 
+    let dur =
       Duration{
         amount: contract.businessDays,
         unit: ~org.accordproject.time.TemporalUnit.days  // enum value with fully qualified name
@@ -228,9 +228,9 @@ results in the following new logic for the `0.20` version:
 
 ## Command Line Changes
 
-The Command Line interface for Cicero and Ergo has been completely overhauled for consistency. Release `0.20` also features new command lines for Concerto and for the new `markdown-transform` project.
+The Command Line interface for Cicero and Ergo has been completely overhauled for consistency. Release `0.20` also features new command line commands for Concerto and for the new `markdown-transform` project.
 
-If you are familiar with the previous Accord Project command line (or if you have scripts relying on the previous version of the command line), here is a list of changes:
+If you are familiar with the previous Accord Project command line commands (or if you have scripts relying on the previous version of the command line), here is a list of changes:
 
 1. Ergo: A single new `ergo` command replaces both `ergoc` and `ergorun`
    - `ergoc` has been replaced by `ergo compile`
@@ -248,7 +248,7 @@ Note that several options have been renamed for consistency as well. Some of the
 2. `--format` has been replaced by `--target` in the new `cicero compile` command
 3. `--contract` has been replaced by `--data` in all `ergo` commands
 
-For more details on the new command line interface, please consult the corresponding [Cicero CLI](cicero-cli), [Concerto CLI](concerto-cli), [Ergo CLI](ergo-cli), and [Markus CLI](markus-cli) Sections in the reference manual.
+For more details on the new command line interface, please consult the corresponding [Cicero CLI](cicero-cli), [Concerto CLI](concerto-cli), [Ergo CLI](ergo-cli), and [Markdown Transform CLI](markus-cli) Sections in the reference manual.
 
 ## API Changes
 
@@ -263,4 +263,3 @@ A number of API changes may affect Node.js applications using Cicero or Ergo pac
    2. `cicero-engine` package
       - the `Engine.execute()` call has been renamed `Engine.trigger()`
       - the `Engine.generateText()` call has been renamed `Engine.draft()`
-
