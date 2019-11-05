@@ -35,14 +35,8 @@ Data models consist of two core components:
 
 The **value** is the actual data that is input into the ‘placeholder’. The value is displayed instead of the name of the variable in the Text. For example:
 
-```ergo
-Upon the signing of this Agreement, {{Steve}} shall pay {{100}} to {{Dan}}.
-```
-
-is displayed as:
-
-```
-Upon the signing of this Agreement, Steve shall pay 100 to Dan.
+```md
+Upon the signing of this Agreement, "Steve" shall pay 100.0 USD to "Dan".
 ```
 
 In the model, this is represented as:
@@ -50,7 +44,7 @@ In the model, this is represented as:
   | Variable Name | Data type | Value |
   |---------------|-----------|-------|
   | buyer  | `String` | Steve |
-  | amount | `Double` | 100 |
+  | amount | `MonetaryAmount` | 100.0 USD |
   | seller | `String` | Dan |
 
- Here, `amount` should be a decimalized value (a double) as opposed to an alphanumeric value, and `buyer` and `seller` should be a combination of alphanumeric characters. This ensures that invalid data cannot be added into the contract, much like letters cannot be added into a credit card section of a web form.
+ Here, `amount` should be a combination of a decimalized value (a double) and a currency code, as opposed to an alphanumeric value, and `buyer` and `seller` should be a combination of alphanumeric characters. This ensures that invalid data cannot be added into the contract, much like letters cannot be added into a credit card section of a web form.

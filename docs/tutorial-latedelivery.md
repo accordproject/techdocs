@@ -33,7 +33,7 @@ If you edit part of the text which is not a variable in the template, this resul
 
 ![Advanced-Late-4](assets/advanced/late4.png)
 
-This is because the `Test Sample` relies on the `Grammar` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can, however, edit the `Grammar` itself to change the legal text, thereby creating a new template.
+This is because the `Test Sample` relies on the `Grammar` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can, however, edit the `Grammar` itself to change the legal text.
 
 Revert your changes, changing the word `timely` back to the original word `delayed` and the parsing error will disappear.
 
@@ -97,7 +97,7 @@ Notice that the penalty is now quite a large value. It is not unusual to cap a p
 To implement this, we first go to the `Template` tab and add a sentence indicating: `The total amount of penalty shall not, however, exceed {{capPercentage}}% of the total value of the delayed goods.`
 
 For convenience, you can copy-paste the new template text from here:
-```md
+```tem
 Late Delivery and Penalty.
 
 In case of delayed delivery of Goods, {{seller}} shall pay to
@@ -160,7 +160,7 @@ Note that the `Current Template` Tab indicates that the template has been change
 ### Update the Logic
 
 At this point, executing the logic will still result in large penalties. This is because the logic does not take advantage of the new `capPercentage` variable. Edit the `logic.ergo` code to do so. After step `// 2. Penalty formula` in the logic, apply the penalty cap by adding some logic as follows:
-```
+```ergo
     // 3. Capped Penalty
     let cap = contract.capPercentage / 100.0 * request.goodsValue;
 
@@ -171,7 +171,7 @@ At this point, executing the logic will still result in large penalties. This is
 
 ```
 Do not forget to also change the value of the penalty in the returned `LateResponse` to use the new variable `cappedPenalty`:
-```
+```ergo
     // 5. Return the response
     return LateResponse{
       penalty: cappedPenalty,
@@ -182,9 +182,9 @@ The logic should now look as follows:
 
 ![Advanced-Late-13](assets/advanced/late13.png)
 
-### Execute the new Logic
+### Run the new Logic
 
-As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result in a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
+As a final test of the new template, you should try again to run the contract with a long delay in delivery. This should now result in a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
 
 ![Advanced-Late-14](assets/advanced/late14.png)
 
@@ -221,7 +221,7 @@ The next error is in the logic, since it still uses the old `MiniLateDeliveryCla
 ### Update the Logic
 
 The `Logic` error that occurs here is:
-```ergo
+```bash
 Compilation error (at file lib/logic.ergo line 19 col 31). Cannot find type with name 'MiniLateDeliveryClause'
 contract MiniLateDelivery over MiniLateDeliveryClause {
                                ^^^^^^^^^^^^^^^^^^^^^^

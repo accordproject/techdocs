@@ -31,15 +31,13 @@ By combining Text and a data, a clause or contract becomes machine-readable.
 
 For instance, the clause below for a [fixed rate loan](https://templates.accordproject.org/fixed-interests-static@0.2.0.html) includes natural language text coupled with variables. Together, these variables refer to some data for the clause and correspond to the 'deal points':
 
-```tem
-## Fixed rate loan
-
-This is a *fixed interest* loan to the amount of {{loanAmount}}
-at the yearly interest rate of {{rate}}%
-with a loan term of {{loanDuration}},
-and monthly payments of {{monthlyPayment}}
-``` 
-
+> ## Fixed rate loan
+>
+> This is a *fixed interest* loan to the amount of **{{loanAmount}}**
+> at the yearly interest rate of **{{rate}}**%
+> with a loan term of **{{loanDuration}}**,
+> and monthly payments of **{{monthlyPayment}}**
+ 
 To make sense of the data, a _Data Model_, expressed in the Concerto schema language, defines the variables for the template and their associated Data Types: 
 
 ```ergo
@@ -81,7 +79,7 @@ with a loan term of {{loanDuration}},
 and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}.
 ``` 
 
-This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause.
+This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause. In this example, we display the contract text using the underlying [CiceroMark](markup-cicero) format, instead of the rich-text output that would be found in [editor tools](started-resources#ecosystem-tools) and PDF outputs.
 
 More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
 

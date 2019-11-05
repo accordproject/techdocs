@@ -41,7 +41,7 @@ cicero parse --template helloworld@0.12.0.cta --sample sample.md
 ```
 
 :::note
-* make sure that the version number in that command matches the one for the archive you have downloaded.
+* Templates are tied to a specific version of the cicero tool. Make sure that the version number output from `cicero --version` is compatible with the template. Look for `^0.20.0` or similar at the top of the template web page.
 * `cicero parse` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
 :::
 
@@ -179,7 +179,7 @@ This should print this output:
 
 The results of execution displayed back on your terminal is in JSON format. It includes the following information:
 
-* Details of the `clause` being triggered (name, version, SHA256 hash of clause data)
+* Details of the `clause` being triggered (name, version, SHA256 hash of the template)
 * The incoming `request` object (the same request from your `request.json` file)
 * The output `response` object
 * The output `state` (unchanged in this example)

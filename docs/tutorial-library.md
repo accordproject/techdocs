@@ -19,9 +19,6 @@ Accord Project uses [GitHub](https://github.com/) to maintain its open source te
 npm install -g lerna@^3.15.0
 ```
 
-You will also need a [GitHub](https://github.com/) account. If this is your first time working with GitHub, you can find a number of guides online, including [here](https://guides.github.com).
-
-
 ### Clone the template library
 
 Once you have `git` installed on your machine, you can run `git clone` to create a version of all the templates:
@@ -46,7 +43,7 @@ lerna bootstrap
 
 To check that the installation was successful, you can run all the tests for all the Accord Project templates by running:
 
-```
+```bash
 lerna run test
 ```
 
