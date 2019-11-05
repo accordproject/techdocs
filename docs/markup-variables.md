@@ -146,7 +146,9 @@ Tokens are case-sensitive.
 | `SSS`        | `002`              | 3 digit milliseconds |
 | `Z`          | `+01:00`           | UTC offset |
 
-> Note that if `Z` is specified, it must occur as the last token in the format string.
+:::note
+If `Z` is specified, it must occur as the last token in the format string.
+:::
 
 #### Examples
 
