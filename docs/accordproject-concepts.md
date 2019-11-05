@@ -152,8 +152,7 @@ and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) 
 ``` 
 
 This uses a `monthlyPaymentFormula` function which calculates the monthly payment based on the other data points in the text:
-```
-// Formula taken from 
+```ergo
 define function monthlyPaymentFormula(loanAmount: Double, rate: Double, loanDuration: Integer) : Double {
   let term = longToDouble(loanDuration * 12);       // Term in months
   if (rate = 0.0) then return (loanAmount / term)   // If the rate is 0
@@ -174,7 +173,7 @@ The logic can also be used to associate behavior to the template _after_ the con
 The following shows post-signature logic for the **Acceptance of Delivery** clause.
 
 ```ergo
-contract AcceptanceOfDelivery over AcceptanceOfDeliveryClause {
+contract SupplyAgreement over SupplyAgreementModel {
   clause acceptanceofdelivery(request : InspectDeliverable) : InspectionResponse {
 
     let received = request.deliverableReceivedAt;

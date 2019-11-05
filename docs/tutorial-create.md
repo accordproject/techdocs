@@ -25,7 +25,7 @@ yo @accordproject/cicero-template
 This will ask you a series of questions. Give your generator a name (no spaces) and then supply a namespace for your template model (again,no spaces). The generator will then create the files and directories required for a basic template (similar to the helloworld template).
 
 Here is an example of how it should look like in your terminal window:
-```
+```bash
 bash-3.2$ yo @accordproject/cicero-template 
 
      _-----_     ╭──────────────────────────╮
@@ -53,7 +53,7 @@ bash-3.2$ yo @accordproject/cicero-template
 ```
 
 :::tip
-You may find it easier to edit the grammar, model and logic for your template in [VSCode](https://code.visualstudio.com/), installing the Accord Project and Hyperledger Composer extensions. The extensions give you syntax highlighting and parser errors within VS Code.
+You may find it easier to edit the grammar, model and logic for your template in [VSCode](https://code.visualstudio.com/), installing the [Accord Project extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension). The extension gives you syntax highlighting and parser errors within VS Code.
 :::
 
 ## Edit your template
