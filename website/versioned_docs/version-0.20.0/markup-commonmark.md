@@ -1,6 +1,7 @@
 ---
-id: markup-commonmark
+id: version-0.20.0-markup-commonmark
 title: Rich Text Markdown
+original_id: markup-commonmark
 ---
 
 The following CommonMark guide is non normative, but included for convenience. For a more detailed introduction and the official reference, we refer the reader the [CommonMark page](https://commonmark.org/).

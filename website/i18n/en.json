@@ -65,17 +65,20 @@
       "logic-stmt": {
         "title": "Statements"
       },
+      "markup-blocks": {
+        "title": "Block Expressions"
+      },
       "markup-cicero": {
         "title": "CiceroMark Overview"
       },
       "markup-commonmark": {
-        "title": "Rich Text Markup"
+        "title": "Rich Text Markdown"
       },
-      "markup-expr": {
-        "title": "Expressions"
+      "markup-ergo": {
+        "title": "Ergo Expressions"
       },
-      "markup-variables-blocks": {
-        "title": "Variables and Blocks"
+      "markup-variables": {
+        "title": "Variable Expressions"
       },
       "markus-cli": {
         "title": "Markdown Transform CLI"
@@ -114,13 +117,10 @@
         "title": "Ergo Compiler"
       },
       "ref-logic-stdlib": {
-        "title": "Ergo Libraries"
+        "title": "Ergo Standard Library"
       },
       "ref-logic": {
         "title": "Ergo Language Reference"
-      },
-      "ref-markup": {
-        "title": "Markup Reference"
       },
       "ref-migrate-0.13-0.20": {
         "title": "0.13 to 0.20"
@@ -415,6 +415,153 @@
       },
       "version-0.2.39/version-0.2.39-doc5": {
         "title": "Fifth Document"
+      },
+      "version-0.20.0/version-0.20.0-accordproject-business": {
+        "title": "For Business"
+      },
+      "version-0.20.0/version-0.20.0-accordproject-concepts": {
+        "title": "Key Concepts"
+      },
+      "version-0.20.0/version-0.20.0-accordproject-developers": {
+        "title": "For Developers"
+      },
+      "version-0.20.0/version-0.20.0-accordproject": {
+        "title": "Overview"
+      },
+      "version-0.20.0/version-0.20.0-cicero-api": {
+        "title": "Cicero API"
+      },
+      "version-0.20.0/version-0.20.0-cicero-cli": {
+        "title": "Cicero CLI"
+      },
+      "version-0.20.0/version-0.20.0-concerto-api": {
+        "title": "Concerto API"
+      },
+      "version-0.20.0/version-0.20.0-concerto-cli": {
+        "title": "Concerto CLI"
+      },
+      "version-0.20.0/version-0.20.0-ergo-api": {
+        "title": "Ergo API"
+      },
+      "version-0.20.0/version-0.20.0-ergo-cli": {
+        "title": "Ergo CLI"
+      },
+      "version-0.20.0/version-0.20.0-ergo-tutorial": {
+        "title": "Ergo: A Tutorial"
+      },
+      "version-0.20.0/version-0.20.0-example-eatapple": {
+        "title": "A Healthy Clause"
+      },
+      "version-0.20.0/version-0.20.0-logic-complex-type": {
+        "title": "Complex Values & Types"
+      },
+      "version-0.20.0/version-0.20.0-logic-ergo": {
+        "title": "Ergo Overview"
+      },
+      "version-0.20.0/version-0.20.0-logic-module": {
+        "title": "Modularity"
+      },
+      "version-0.20.0/version-0.20.0-logic-simple-expr": {
+        "title": "Simple Expressions"
+      },
+      "version-0.20.0/version-0.20.0-logic-stmt": {
+        "title": "Statements"
+      },
+      "version-0.20.0/version-0.20.0-markup-blocks": {
+        "title": "Block Expressions"
+      },
+      "version-0.20.0/version-0.20.0-markup-cicero": {
+        "title": "CiceroMark Overview"
+      },
+      "version-0.20.0/version-0.20.0-markup-commonmark": {
+        "title": "Rich Text Markdown"
+      },
+      "version-0.20.0/version-0.20.0-markup-ergo": {
+        "title": "Ergo Expressions"
+      },
+      "version-0.20.0/version-0.20.0-markup-variables": {
+        "title": "Variable Expressions"
+      },
+      "version-0.20.0/version-0.20.0-markus-cli": {
+        "title": "Markdown Transform CLI"
+      },
+      "version-0.20.0/version-0.20.0-model-api": {
+        "title": "Using the API"
+      },
+      "version-0.20.0/version-0.20.0-model-classes": {
+        "title": "Classes"
+      },
+      "version-0.20.0/version-0.20.0-model-concerto": {
+        "title": "Concerto Overview"
+      },
+      "version-0.20.0/version-0.20.0-model-decorators": {
+        "title": "Decorators"
+      },
+      "version-0.20.0/version-0.20.0-model-enums": {
+        "title": "Enumerations"
+      },
+      "version-0.20.0/version-0.20.0-model-namespaces": {
+        "title": "Namespaces"
+      },
+      "version-0.20.0/version-0.20.0-model-properties": {
+        "title": "Properties"
+      },
+      "version-0.20.0/version-0.20.0-model-relationships": {
+        "title": "Relationships"
+      },
+      "version-0.20.0/version-0.20.0-ref-glossary": {
+        "title": "Glossary"
+      },
+      "version-0.20.0/version-0.20.0-ref-logic-specification": {
+        "title": "Ergo Compiler"
+      },
+      "version-0.20.0/version-0.20.0-ref-logic": {
+        "title": "Ergo Language Reference"
+      },
+      "version-0.20.0/version-0.20.0-ref-migrate-0.13-0.20": {
+        "title": "0.13 to 0.20"
+      },
+      "version-0.20.0/version-0.20.0-ref-testing": {
+        "title": "Testing Reference"
+      },
+      "version-0.20.0/version-0.20.0-spec-execution": {
+        "title": "Contract Execution"
+      },
+      "version-0.20.0/version-0.20.0-spec-packaging": {
+        "title": "Packaging"
+      },
+      "version-0.20.0/version-0.20.0-spec-template": {
+        "title": "Template Structure"
+      },
+      "version-0.20.0/version-0.20.0-started-hello": {
+        "title": "Hello World Template"
+      },
+      "version-0.20.0/version-0.20.0-started-installation": {
+        "title": "Install Cicero"
+      },
+      "version-0.20.0/version-0.20.0-started-resources": {
+        "title": "Resources"
+      },
+      "version-0.20.0/version-0.20.0-started-studio": {
+        "title": "Online Tour"
+      },
+      "version-0.20.0/version-0.20.0-tutorial-create": {
+        "title": "Template Generator"
+      },
+      "version-0.20.0/version-0.20.0-tutorial-hyperledger": {
+        "title": "Deploying on Hyperledger Fabric"
+      },
+      "version-0.20.0/version-0.20.0-tutorial-latedelivery": {
+        "title": "Editing a Late Delivery Clause"
+      },
+      "version-0.20.0/version-0.20.0-tutorial-library": {
+        "title": "Template Library"
+      },
+      "version-0.20.0/version-0.20.0-tutorial-nodejs": {
+        "title": "Working with Node.js"
+      },
+      "version-0.20.0/version-0.20.0-tutorial-templates": {
+        "title": "Templates Deep Dive"
       },
       "version-0.3.11/version-0.3.11-ergo-api": {
         "title": "Ergo API Documentation"

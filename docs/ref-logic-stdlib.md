@@ -1,6 +1,6 @@
 ---
 id: ref-logic-stdlib
-title: Ergo Libraries
+title: Ergo Standard Library
 ---
 
 The following libraries are provided with the Ergo compiler.
