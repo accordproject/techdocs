@@ -3,9 +3,6 @@ id: markup-variables
 title: Variable Expressions
 ---
 
-Variables
----
-
 Each variable starts with `{{` and ends with `}}` and may include an optional formatting using the keyword `as`:
 
 ```tem
@@ -13,285 +10,312 @@ Each variable starts with `{{` and ends with `}}` and may include an optional fo
 {{deliveryDate as "MMMM, DD YYYY"}} // Source variable with date formatting
 ```
 
-To see this context, we look at the Late Delivery and Penalty template (found at the [Cicero Template Library](https://templates.accordproject.org/)):
+The way variables are handled (both during parsing and drafting) is based on their type.
+
+## Primitive Types
+
+Standard variables are written `{{variableName}}` where `variableName` is a variable declared in the model.
+
+The following example shows a template text with three variables (`buyer`, `amount`, and `seller`):
 
 ```tem
-## Late Delivery and Penalty.
+Upon the signing of this Agreement, {{buyer}} shall pay {{amount}} to {{seller}}.
+```
 
-In case of delayed delivery{{#if forceMajeure}} except for Force Majeure cases,{{/if}}
-{{seller}} (the Seller) shall pay to {{buyer}} (the Buyer) for every {{penaltyDuration}}
-of delay penalty amounting to {{penaltyPercentage}}% of the total value of the Equipment
-whose delivery has been delayed. Any fractional part of a {{fractionalPart}} is to be
-considered a full {{fractionalPart}}. The total amount of penalty shall not however,
-exceed {{capPercentage}}% of the total value of the Equipment involved in late delivery.
+### String Variable
+
+#### Description
+
+If the variable `variableName` has type `String` in the model:
+```ergo
+o String variableName
+```
+The corresponding instance should contain text between quotes (`"`).
+
+#### Examples
+
+For example, consider the following model:
+
+```ergo
+asset Template extends AccordClause {
+  o String buyer
+  o String supplier
+}
+```
+
+the following instance text:
+```md
+This Supply Sales Agreement is made between "Steve Supplier" and "Betty Byer".
+```
+
+matches the template:
+```tem
+This Supply Sales Agreement is made between {{supplier}} and {{buyer}}.
+```
+
+while the following instance texts do not match:
+```md
+This Supply Sales Agreement is made between 2019 and 2020.
+```
+or
+```md
+This Supply Sales Agreement is made between Steve Supplier and Betty Byer.
+```
+
+### Numeric Variable
+
+#### Description
+
+If the variable `variableName` has type `Double`, `Integer` or `Long` in the model:
+```ergo
+o Double variableName
+o Integer variableName2
+o Long variableName3
+```
+The corresponding instance should contain the corresponding number.
+
+#### Examples
+
+For example, consider the following model:
+
+```ergo
+asset Template extends AccordClause {
+  o Double penaltyPercentage
+}
+```
+
+the following instance text:
+```md
+The penalty amount is 10.5% of the total value of the Equipment whose delivery has been delayed.
+```
+
+matches the template:
+```tem
+The penalty amount is {{penaltyPercentage}}% of the total value of the Equipment whose delivery has been delayed.
+```
+
+while the following instance texts do not match:
+```md
+The penalty amount is ten% of the total value of the Equipment whose delivery has been delayed.
+```
+or
+```md
+The penalty amount is "10.5"% of the total value of the Equipment whose delivery has been delayed.
+```
+
+## Primitive Types with a Format
+
+Formatted variables are written `{{variableName as "FORMAT"}}` where `variableName` is a variable declared in the model and the `FORMAT` is a type-dependent description for the syntax of the variables in the contract.
+
+The following example shows a template text with one variable with a format `DD/MM/YYYY`.
+
+```tem
+The contract was signed on {{contractDate as "DD/MM/YYYY"}}.
+```
+
+### DateTime Variables
+
+#### Description
+
+If the variable `variableName` has type `DateTime`:
+```ergo
+o DateTime variableName
+```
+The corresponding instance should contain the corresponding date using the format `MM/DD/YYYY`, commonly used in the US.
+
+#### DateTime Formats
+
+DateTime format can be customized inline in a template grammar by including an optional format string using the `as` keyword. The following formatting tokens are supported:
+
+Tokens are case-sensitive.
+
+| Input        | Example  .         | Description |
+|--------------|--------------------|-------------|
+| `YYYY`       | `2014`             | 4 or 2 digit year |
+| `YY`         | `14`               | 2 digit year |
+| `M`          | `12`               | 1 or 2 digit month number |
+| `MM`         | `04`               | 2 digit month number |
+| `MMM`        | `Feb.`             | Short month name |
+| `MMMM`       | `December`         | Long month name |
+| `D`          | `3`                | 1 or 2 digit day of month |
+| `DD`         | `04`               | 2 digit day of month |
+| `H`          | `3`                | 1 or 2 digit hours |
+| `HH`         | `04`               | 2 digit hours |
+| `mm`         | `59`               | 2 digit minutes |
+| `ss`         | `34`               | 2 digit seconds |
+| `SSS`        | `002`              | 3 digit milliseconds |
+| `Z`          | `+01:00`           | UTC offset |
+
+> Note that if `Z` is specified, it must occur as the last token in the format string.
+
+#### Examples
+
+The format of the `contractDate` variable of type `DateTime` can be specified with the `DD/MM/YYYY` format, as is commonly used in Europe.
+
+```tem
+The contract was signed on {{contractDate as "DD/MM/YYYY"}}.
+The contract was signed on 26/04/2019.
+```
+
+Other examples:
+
+```tem
+dateTimeProperty: {{dateTimeProperty as "D MMM YYYY HH:mm:ss.SSSZ"}}
+dateTimeProperty: 1 Jan 2018 05:15:20.123+01:02
+```
+
+```tem
+dateTimeProperty: {{dateTimeProperty as "D MMMM YYYY HH:mm:ss.SSSZ"}}
+dateTimeProperty: 1 January 2018 05:15:20.123+01:02
+```
+
+```tem
+dateTimeProperty: {{dateTimeProperty as "D-M-YYYY H mm:ss.SSSZ"}}
+dateTimeProperty: 31-12-2019 2 59:01.001+01:01
+```
+
+```tem
+dateTimeProperty: {{dateTimeProperty as "DD/MM/YYYY"}}
+dateTimeProperty: 01/12/2018
+```
+
+```tem
+dateTimeProperty: {{dateTimeProperty as "DD-MMM-YYYY H mm:ss.SSSZ"}}
+dateTimeProperty: 04-Jan-2019 2 59:01.001+01:01
+```
+
+## Complex Types
+
+### Enum Types
+
+#### Description
+
+If the variable `variableName` has an enumerated type:
+```ergo
+o EnumType variableName
+```
+
+The corresponding instance should contain a corresponding enumerated value without quotes.
+
+#### Examples
+
+For example, consider the following model:
+```ergo
+import org.accordproject.money.CurrencyCode from https://models.accordproject.org/money.cto
+asset Template extends AccordClause {
+  o CurrencyCode currency
+}
+
+```
+the following instance text:
+```md
+Monetary amounts in this contract are denominated in USD.
+```
+
+matches the template:
+```tem
+Monetary amounts in this contract are denominated in {{currency}}.
+```
+
+while the following instance texts do not match:
+```md
+Monetary amounts in this contract are denominated in "USD".
+```
+or
+```md
+Monetary amounts in this contract are denominated in $.
+```
+
+### Duration Types
+
+#### Description
+
+If the variable `variableName` has type `Duration`:
+```ergo
+import org.accordproject.time.Duration
+o Duration variableName
+```
+
+The corresponding instance should contain the corresponding duration written with the amount as a number and the duration unit as literal text.
+
+#### Examples
+
+For example, consider the following model:
+```ergo
+asset Template extends AccordClause {
+  o Duration termination
+}
+```
+
+the following instance texts:
+```md
+If the delay is more than 15 days, the Buyer is entitled to terminate this Contract.
+```
+and
+```md
+If the delay is more than 1 week, the Buyer is entitled to terminate this Contract.
+```
+
+both match the template:
+```tem
 If the delay is more than {{termination}}, the Buyer is entitled to terminate this Contract.
 ```
 
-Note that within these variables, we are using camel case named variables. These will be defined in the [Concerto Model](https://docs.accordproject.org/docs/model-concerto.html). This is described a bit more in depth in the [Template Structure](https://docs.accordproject.org/docs/spec-template.html) section of the [Template Specification](https://docs.accordproject.org/docs/spec-overview.html) docs.
-
-This functionality provides us with the ability to bind variables into the natural language, and this concept of a variable extends further than a single value. We can insert a block of variables or even [Ergo expressions](https://docs.accordproject.org/docs/markup-expr.html),
-
-Blocks
----
-
-As in [Handlebars](https://handlebarsjs.com), CiceroMark uses blocks to handle optional or repeated text (e.g., lists), or to indicate which template variables are in scope for a given section of the text. Blocks always have the following syntactic structure: 
-
-```tem
-{{#kind scope parameters}}
-...
-{{/kind}}
+while the following instance texts do not match:
+```md
+If the delay is more than a month, the Buyer is entitled to terminate this Contract.
+```
+or
+```md
+If the delay is more than "two weeks", the Buyer is entitled to terminate this Contract.
 ```
 
-where `kind` indicates which kind of block it is (e.g., conditional block or list block), `scope` indicates the template variables which is in scope within the block. For certain blocks, additional `parameters` can be passed to control the behavior of that block (e.g., the `join` block creates text from a list with an optional separator).
+### Other Complex Types
 
-### Unordered Lists
+#### Description
 
-```tem
-{{#ulist rates}}
-{{volumeAbove}}$ million <= Volume < {{volumeUpTo}}$ million : {{rate}}%
-{{/ulist}}
+If the variable `variableName` has a complex type `ComplexType` (such as an `asset`, a `concept`, etc.)
+```ergo
+o ComplextType variableName
 ```
 
-This code is rendered as markdown from a JSON object created through [Concerto](https://docs.accordproject.org/docs/model-concerto.html):
+The corresponding instance should contain all fields in the corresponding complex type in the order they occur in the model, separated by a single white space character.
 
-```json
-{
-  "$class": "org.accordproject.volumediscountlist.VolumeDiscountContract",
-  "contractId": "19243313-adc2-4ff1-aa41-993816ed2cdc",
-  "rates": [
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1,
-      "volumeAbove": 0,
-      "rate": 3.1
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 10,
-      "volumeAbove": 1,
-      "rate": 3.1
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 50,
-      "volumeAbove": 10,
-      "rate": 2.9
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 500,
-      "volumeAbove": 50,
-      "rate": 2.5
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1000,
-      "volumeAbove": 500,
-      "rate": 1.2
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1000000,
-      "volumeAbove": 1000,
-      "rate": 0.1
-    }
-  ]
+#### Examples
+
+For example, consider the following model:
+```ergo
+import org.accordproject.address.PostalAddress from https://models.accordproject.org/address.cto
+asset Template extends AccordClause {
+  o PostalAddress address
 }
 ```
 
-Which results in the following markdown text:
-
+the following instance text:
 ```md
-- 0.0$ million <= Volume < 1.0$ million : 3.1%
-- 1.0$ million <= Volume < 10.0$ million : 3.1%
-- 10.0$ million <= Volume < 50.0$ million : 2.9%
-- 50.0$ million <= Volume < 500.0$ million : 2.5%
-- 500.0$ million <= Volume < 1000.0$ million : 1.2%
-- 1000.0$ million <= Volume < 1000000.0$ million : 0.1%
+Address of the supplier: "555 main street" "10290" "" "NY" "New York" "10001".
 ```
 
-### Ordered Lists
-
+matches the template:
 ```tem
-{{#olist rates}}
-{{volumeAbove}}$ million <= Volume < {{volumeUpTo}}$ million : {{rate}}%
-{{/olist}}
+Address of the supplier: {{address}}.
 ```
 
-This code is rendered as markdown from a JSON object created through [Concerto](https://docs.accordproject.org/docs/model-concerto.html):
-
-```json
-{
-  "$class": "org.accordproject.volumediscountlist.VolumeDiscountContract",
-  "contractId": "19243313-adc2-4ff1-aa41-993816ed2cdc",
-  "rates": [
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1,
-      "volumeAbove": 0,
-      "rate": 3.1
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 10,
-      "volumeAbove": 1,
-      "rate": 3.1
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 50,
-      "volumeAbove": 10,
-      "rate": 2.9
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 500,
-      "volumeAbove": 50,
-      "rate": 2.5
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1000,
-      "volumeAbove": 500,
-      "rate": 1.2
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1000000,
-      "volumeAbove": 1000,
-      "rate": 0.1
-    }
-  ]
+Consider the following model:
+```md
+import org.accordproject.money.MonetaryAmount from https://models.accordproject.org/money.cto
+asset Template extends AccordClause {
+  o MonetaryAmount amount
 }
 ```
 
-Which results in the following markdown text:
-
+the following instance text:
 ```md
-1. 0.0$ million <= Volume < 1.0$ million : 3.1%
-1. 1.0$ million <= Volume < 10.0$ million : 3.1%
-1. 10.0$ million <= Volume < 50.0$ million : 2.9%
-1. 50.0$ million <= Volume < 500.0$ million : 2.5%
-1. 500.0$ million <= Volume < 1000.0$ million : 1.2%
-1. 1000.0$ million <= Volume < 1000000.0$ million : 0.1%
+Total value of the goods: 50.0 USD.
 ```
 
-### Joined Lists
-
-You create a list with a delimiter
+matches the template:
 ```tem
-{{#join rates ","}}
-{{volumeUpTo}}
-{{/join}}
+Total value of the goods: {{amount}}.
 ```
-
-This code is rendered as markdown from a JSON object created through [Concerto](https://docs.accordproject.org/docs/model-concerto.html):
-
-```json
-{
-  "$class": "org.accordproject.volumediscountlist.VolumeDiscountContract",
-  "contractId": "19243313-adc2-4ff1-aa41-993816ed2cdc",
-  "rates": [
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1.5,
-      "volumeAbove": 0,
-      "rate": 3.1
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 10,
-      "volumeAbove": 1,
-      "rate": 3.1
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 50,
-      "volumeAbove": 10,
-      "rate": 2.9
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 500,
-      "volumeAbove": 50,
-      "rate": 2.5
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 1000,
-      "volumeAbove": 500,
-      "rate": 1.2
-    },
-    {
-      "$class": "org.accordproject.volumediscountlist.RateRange",
-      "volumeUpTo": 5000,
-      "volumeAbove": 1000,
-      "rate": 0.1
-    }
-  ]
-}
-```
-
-Which results in the following markdown text:
-
-```md
-1.5, 10.0, 50.0, 500.0, 1000.0, 5000.0
-```
-
-### Clauses
-
-Blocks can be used to inline a clause's text within a contract template:
-
-```tem
-Payment
--------
-{{#clause payment}}
-As consideration in full for the rights granted herein, Licensee shall pay Licensor a one-time
-fee in the amount of {{amountText}} ({{amount}}) upon execution of this Agreement, payable as
-follows: {{paymentProcedure}}.
-{{/clause}}
-```
-
-### With
-
-A `with` block can be utilized to set a context for the variable:
-
-```tem
-{{#with author}}
-{{firstName}} {{lastName}}
-{{/with}}
-```
-
-This enables a simpler approach to defining different values from the same object. Otherwise, we made need to use a [nested path computed expression](https://docs.accordproject.org/docs/markup-expr.html#nested-paths) for a slightly more verbose approach:
-
-```tem
-{{% author.firstName %}} {{% author.lastName %}}
-```
-
-### Conditionals
-
-On the cusp of Block Variables without venturing into Ergo Expressions, we have support for defining a block with built in conditional logic:
-
-```tem
-{{#if forceMajeure}}
-This is a force majeure
-{{/if}}
-
-{{#if isActive}}
-  I'm active
-{{else}}
-  I'm not active
-{{/if}}
-```
-
-Currently Unsupported
----
-
-Handlebars offers some additional functionality which is not currently supported in CiceroMark, such as:
-
-- Iterators Blocks `{{#each}...{{/each}}`
-- Comments `{{!-- ... --}}`
-- Whitespace control `{{~price~}}`
-
-We welcome user feedback on whether those (or others) would be useful to support in the feature. Please visit the [Cicero](https://github.com/accordproject/cicero) repository to contribute.
 
