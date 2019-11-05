@@ -140,23 +140,23 @@ Version `0.20` of Ergo has a few new features that are non backward compatible w
 Enumerated values are now proper values with a proper enum type, and not based on the type `String` anymore.
 
 For instance, consider the enum declaration:
-```
-enum Gender {
-  o MALE
-  o FEMALE
-  o OTHER
-  o UNKNOWN
+```js
+enum Cardsuit {
+  o CLUBS
+  o DIAMONDS
+  o HEARTS
+  o SPADES
 }
 ```
 
-In version `0.13` or earlier the Ergo code would write `"MALE"` for an enum value and treat the type `Gender` as if it was the type `String`.
+In version `0.13` or earlier the Ergo code would write `"CLUBS"` for an enum value and treat the type `Cardsuit` as if it was the type `String`.
 
-As of version `0.20` Ergo writes `MALE` for that same enum value and the type `Gender` is now distinct from the type `String`.
+As of version `0.20` Ergo writes `CLUBS` for that same enum value and the type `Cardsuit` is now distinct from the type `String`.
 
 If you try to compile Ergo logic written for version `0.13` or earlier that features enumerated values, the compiler will likely throw type errors. You should apply the following changes:
 
 1. Remove the quotes (`"`) around any enum values in your logic. E.g., `"USD"` should now be replaced by `USD` for monetary amounts;
-3. If enum values are bound to variables with a type annotation, you should change the type annotation from `String` to the correct enum type. E.g., `let x : String = "FEMALE"; ...` should become `let x : Gender = FEMALE; ...`;
+3. If enum values are bound to variables with a type annotation, you should change the type annotation from `String` to the correct enum type. E.g., `let x : String = "DIAMONDS"; ...` should become `let x : Cardsuit = DIAMONDS; ...`;
 3. If enum values are passed as parameters in clauses or functions, you should change the type annotation for that parameter from `String` to the correct enum type.
 4. In a few cases the same enumerated value may be used in different enum types (e.g., `days` and `weeks` are used in both `TemporalUnit` and `PeriodUnit`). Those two values will now have different types. If you need to distinguish, you can use the fully qualified name for the enum value (e.g., `~org.accordproject.time.TemporalUnit.days` or `~org.accordproject.time.PeriodUnit.days`).
 
