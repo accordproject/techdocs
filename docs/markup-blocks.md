@@ -104,55 +104,12 @@ results in the following markdown text:
 3. 10.0$ M <= Volume < 50.0$ M : 2.9%
 ```
 
-### Lists of Terms
-
-You create a list of terms separated with a delimiter using the `join` block.
-```tem
-{{#join children ","}}{{givenName}}{{/join}}
-```
-
-#### Example
-
-Drafting text with this block using the following JSON data:
-```json
-{
-  "$class": "org.accordproject.person.Person",
-  "identifier": "John Doe",
-  "givenName": "Dad",
-  "children": [
-    {
-      "$class": "org.accordproject.person.Person",
-      "identifier": "Jane Doe",
-      "givenName": "Jane"
-    },
-    {
-      "$class": "org.accordproject.person.Person",
-      "identifier": "John Doe",
-      "givenName": "Jr."
-    },
-    {
-      "$class": "org.accordproject.person.Person",
-      "identifier": "Joan Doe",
-      "givenName": "JD"
-    }
-  ]
-}
-```
-
-results in the following markdown text:
-
-```md
-"Jane", "Jr.", "JD"
-```
-
 ## Conditional Blocks
 
 Conditional blocks enables text which depends on a value of a `Boolean` variable in your model:
 
 ```tem
-{{#if forceMajeure}}This is a force majeure,
-{{#if isSafe}}But I am safe{{else}}And I require assistance{{/if}}
-{{/if}}
+{{#if forceMajeure}}This is a force majeure{{/if}}
 ```
 
 :::note
@@ -165,25 +122,21 @@ Drafting text with this block using the following JSON data:
 ```json
 {
   "$class": "org.accordproject.foo.Status",
-  "forceMajeure": true,
-  "isSafe": false
+  "forceMajeure": true
 }
 ```
 
 results in the following markdown text:
 
 ```md
-This is a force majeure,
-And I require assistance
-
+This is a force majeure
 ```
 
 Drafting text with this block using the following JSON data:
 ```json
 {
   "$class": "org.accordproject.foo.Status",
-  "forceMajeure": false,
-  "isSafe": true
+  "forceMajeure": false
 }
 ```
 
