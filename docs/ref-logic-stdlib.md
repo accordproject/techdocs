@@ -37,6 +37,14 @@ The following functions are in the `org.accordproject.ergo.stdlib` namespace and
 | `minPair`  | `(x:Double, y:Double) : Double` | Smallest of `x` and `y`  |
 | `maxPair`  | `(x:Double, y:Double) : Double` | Largest of `x` and `y`  |
 
+### Functions on String
+
+| Name | Signature | Description |
+|------|-----------|-------------|
+| `length` | `(x:String) : Integer` | Prints length of a string |
+| `encode` | `(x:String) : String` | Encode as URI component |
+| `decode` | `(x:String) : String` | Decode as URI component |
+
 ### Functions on Arrays
 
 | Name | Signature | Description |
@@ -79,9 +87,9 @@ The following functions are in the `org.accordproject.ergo.stdlib` namespace and
 
 | Name | Signature | Description |
 |------|-----------|-------------|
-| `toString` | `(x:Any) : String` | Prints any value to a string |
-| `length` | `(x:String) : Integer` | Prints length of a string |
 | `failure` | `(x:String) : ErgoErrorResponse` | Ergo error from a string |
+| `toString` | `(x:Any) : String` | Prints any value to a string |
+| `toText` | `(x:Any) : String` | Template variant of `toString` (internal) |
 
 ## Time
 
@@ -106,6 +114,7 @@ They rely on the [time.cto](https://models.accordproject.org/v2.0/time.html) typ
 | `isSame` | `(x:DateTime, y:DateTime) : Boolean` | Whether `x` is the same DateTime as `y` |
 | `dateTimeMin` | `(x:DateTime[]) : DateTime` | The earliest in an array of DateTime |
 | `dateTimeMax` | `(x:DateTime[]) : DateTime` | The latest in an array of DateTime |
+| `format` | `(x:DateTime,f:String) : String` | Prints date `x` according to [format](markup-variables#datetime-formats) `f` |
 
 ### Functions on Duration
 
