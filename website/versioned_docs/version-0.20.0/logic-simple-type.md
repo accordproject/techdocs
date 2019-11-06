@@ -1,6 +1,7 @@
 ---
-id: logic-simple-type
+id: version-0.20.0-logic-simple-type
 title: Introducing Types
+original_id: logic-simple-type
 ---
 
 We have so far talked about types only informally. When we wrote earlier:

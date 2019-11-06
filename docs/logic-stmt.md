@@ -14,7 +14,7 @@ When inside a statement, data about the contract -- either the contract paramete
     state      // The contract state
 ```
 
-For instance, if your contract template parameters and state information:
+For instance, if your contract template parameters and state information have the following types:
 ```ergo
     // Template parameters
     asset InstallmentSaleContract extends AccordContract {
@@ -67,7 +67,7 @@ Returning a failure from a clause can be done by using a `throw` statement:
     throw MyOwnError{ message: "This is wrong and costs a fee", fee: 29.99 }
 ```
 
-For convenience, Ergo provides a `failure` function which takes a string as part of its [standard library](ergo-stdlib.html#other-functions), so you can also write:
+For convenience, Ergo provides a `failure` function which takes a string as part of its [standard library](ref-logic-stdlib#other-functions), so you can also write:
 ```ergo
     throw failure("This is wrong")
 ```
@@ -91,9 +91,9 @@ One can check preconditions in a clause using enforce statements, as
 follows:
 
 ```ergo
-    enforce x >= 0.0                   // Condition
-    else throw "Something went wrong"; // Statement if condition is false
-    return x+1.0                       // Statement if condition is true
+    enforce x >= 0.0                    // Condition
+    else throw failure("not positive"); // Statement if condition is false
+    return x+1.0                        // Statement if condition is true
 ```
 
 The else part of the statement can be omitted in which case Ergo

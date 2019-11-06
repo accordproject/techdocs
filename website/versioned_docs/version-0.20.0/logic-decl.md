@@ -1,6 +1,7 @@
 ---
-id: logic-decl
+id: version-0.20.0-logic-decl
 title: Declarations
+original_id: logic-decl
 ---
 
 Now that we have values, types, expressions and statements available, we can start writing more complex Ergo logic using by declaring functions, clauses and contracts.

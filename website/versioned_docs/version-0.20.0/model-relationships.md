@@ -4,7 +4,7 @@ title: Relationships
 original_id: model-relationships
 ---
 
-A relationship in CML is a tuple composed of:
+A relationship in Concerto Modeling Language (CML) is a tuple composed of:
 
 1. The namespace of the type being referenced
 2. The type name of the type being referenced
