@@ -9,7 +9,7 @@ Much has changed in the new `0.20` release. This guide provides step-by-step ins
 Before following those migration instructions, make sure to first install version `0.20` of Cicero, as described in the [Installation](started-installation) Section of this documentation.
 :::
 
-## Update the `package.json`
+## Metadata Changes
 
 You will first need to update the `package.json` in your template. Remove the Ergo version which is now unnecessary, and change the Cicero version to `^0.20.0`.
 
@@ -182,7 +182,7 @@ Consider the Ergo logic for the [acceptance of delivery](https://templates.accor
         unit: "days"
       };
     let status =
-      if isAfter(now, addDuration(received, dur))
+      if isAfter(now(), addDuration(received, dur))
       then "OUTSIDE_INSPECTION_PERIOD"
       else if request.inspectionPassed
       then "PASSED_TESTING"
@@ -228,9 +228,9 @@ results in the following new logic for the `0.20` version:
 
 ## Command Line Changes
 
-The Command Line interface for Cicero and Ergo has been completely overhauled for consistency. Release `0.20` also features new command line commands for Concerto and for the new `markdown-transform` project.
+The Command Line interface for Cicero and Ergo has been completely overhauled for consistency. Release `0.20` also features new command line interfaces for Concerto and for the new `markdown-transform` project.
 
-If you are familiar with the previous Accord Project command line commands (or if you have scripts relying on the previous version of the command line), here is a list of changes:
+If you are familiar with the previous Accord Project command line interfaces (or if you have scripts relying on the previous version of the command line), here is a list of changes:
 
 1. Ergo: A single new `ergo` command replaces both `ergoc` and `ergorun`
    - `ergoc` has been replaced by `ergo compile`
@@ -248,7 +248,7 @@ Note that several options have been renamed for consistency as well. Some of the
 2. `--format` has been replaced by `--target` in the new `cicero compile` command
 3. `--contract` has been replaced by `--data` in all `ergo` commands
 
-For more details on the new command line interface, please consult the corresponding [Cicero CLI](cicero-cli), [Concerto CLI](concerto-cli), [Ergo CLI](ergo-cli), and [Markdown Transform CLI](markus-cli) Sections in the reference manual.
+For more details on the new command line interface, please consult the corresponding [Cicero CLI](cicero-cli), [Concerto CLI](concerto-cli), [Ergo CLI](ergo-cli), and [Markus CLI](markus-cli) Sections in the reference manual.
 
 ## API Changes
 

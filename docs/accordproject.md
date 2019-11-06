@@ -49,7 +49,7 @@ To make sense of the data, a _Data Model_, expressed in the Concerto schema lang
   o Double monthlyPayment // monthlyPayment is a floating-point number
 ```
 
-The Data Types allow a computer to validate values inserted into each of the `{{variable}}` placeholders (e.g., `2.5` is a valid `{{rate}}` but `January` isn't). In other words, the Data Model lets a computer make sense of the structure of (and data in) the clause. To learn more about Data Types see [Concerto Overview](model-concerto).
+The Data Types allow a computer to validate values inserted into each of the `{{variable}}` placeholders (e.g., `2.5` is a valid `{{rate}}` but `January` isn't). In other words, the Data Model lets a computer make sense of the structure of (and data in) the clause. To learn more about Data Types see [Concerto Modeling](model-concerto).
 
 The clause data (the 'deal points') can then be capture as a machine-readable representation:
 
@@ -70,7 +70,7 @@ The values entered into the template text are associated with the name of the va
 
 By adding Logic to a machine-readable clause or contract in the form of expressions - much like in a spreadsheet - the contract is able to execute operations based upon data included in the contract.
 
-For instance, the clause below is a variant of the earlier [fixed rate loan](https://templates.accordproject.org/fixed-interests@0.2.0.html). While it is consistent with the previous one, the `{{monthlyPayment}}` variable is replaced with an [Ergo](logic-ergo) expression `monthlyPaymentFormula(loanAmount,rate,loanDuration)` which calculates the monthly interest rate based upon the values of the other variables: `{{loanAmount}}`, `{{rate}}`, and `{{loanDuration}}`.  To learn more about contract Logic see [Ergo Overview](logic-ergo).
+For instance, the clause below is a variant of the earlier [fixed rate loan](https://templates.accordproject.org/fixed-interests@0.2.0.html). While it is consistent with the previous one, the `{{monthlyPayment}}` variable is replaced with an [Ergo](logic-ergo) expression `monthlyPaymentFormula(loanAmount,rate,loanDuration)` which calculates the monthly interest rate based upon the values of the other variables: `{{loanAmount}}`, `{{rate}}`, and `{{loanDuration}}`.  To learn more about contract Logic see [Ergo Logic](logic-ergo).
 
 ```tem
 ## Fixed rate loan
