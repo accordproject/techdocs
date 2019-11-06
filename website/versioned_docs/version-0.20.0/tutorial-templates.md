@@ -4,11 +4,11 @@ title: Templates Deep Dive
 original_id: tutorial-templates
 ---
 
-In the [Getting Started](started-hello) section, we learned how to use the existing [helloworld@0.12.0.cta](https://templates.accordproject.org/archives/helloworld@0.12.0.cta) template archive. Here we take a let a look inside that archive to understand the structure of Accord Project templates.
+In the [Getting Started](started-hello) section, we learned how to use the existing [helloworld@0.12.0.cta](https://templates.accordproject.org/archives/helloworld@0.12.0.cta) template archive. Here we take a look inside that archive to understand the structure of Accord Project templates.
 
 ## Unpack a Template Archive
 
-A `.cta` archive is nothing more than a zip file containing the components of a template. Let's unzip that archive to see what is inside. First create a directory in the place where you have downloaded that archive, then run the unzip command in a terminal:
+A `.cta` archive is nothing more than a zip file containing the components of a template. Let's unzip that archive to see what is inside. First, create a directory in the place where you have downloaded that archive, then run the unzip command in a terminal:
 
 ```bash
 $ mkdir helloworld
@@ -93,7 +93,7 @@ Thank you!
 
 ### Template Model
 
-The file in `model/model.cto` contains the data model for the template. This includes a description for each of the template variables, including what kind of variable it is (also called their type).
+The file in `model/model.cto` contains the data model for the template. This includes a description for each of the template variables, including what kind of variable it is (also called their [type](ref-glossary.html#components-of-data-models)).
 
 Here is the model for the `helloworld` template:
 
@@ -196,4 +196,3 @@ $ cicero trigger
 :::note
 Remark that if your template directory contains a valid `sample.md` or valid `request.json`, Cicero will automatically detect those so you do not need to pass them using the `--sample` or `--request` options.
 :::
-
