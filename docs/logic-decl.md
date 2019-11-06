@@ -10,25 +10,26 @@ Now that we have values, types, expressions and statements available, we can sta
 It is possible to declare global constants and functions in Ergo:
 
 ```ergo
-    define constant pi = 3.1416
-    define function area(radius : Double) : Double {
-      pi * r * r
-    }
-    area(1.5)
+define constant pi = 3.1416
+define function area(radius : Double) : Double {
+   return pi * radius * radius
+}
+area(1.5)
 ```
 
-Global variables can also be declared with a type, and the return type of functions can be omitted:
+Global variables can also be declared with a type:
 
 ```ergo
-    define constant pi : Double = 3.1416
+define constant pi : Double = 3.1416
 ```
 
 The return type of functions can be omitted:
 
 ```ergo
-    define function area(radius : Double) {
-      pi * r * r
-    }
+define function area(radius : Double) {
+   return pi * radius * radius
+}
+area(1.5)
 ```
 
 ## Clauses

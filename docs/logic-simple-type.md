@@ -11,30 +11,37 @@ We have so far talked about types only informally. When we wrote earlier:
 ```
 the comments mention that `"John Smith"` is of type `String`, and that `1` is of type `Integer`.
 
-In reality, the Ergo compiler understands which types your expressions have and can detect whether those expressions apply to the right kinds of values or not.
+In reality, the Ergo compiler understands which types your expressions have and can detect whether those expressions apply to the right type(s) or not.
 
-## Atomic types
+Ergo types are based on the [Concerto Modeling](model-concerto) Language.
 
-The simplest of types are atomic types which describe the various kinds of atomic values allowed in Ergo. Those atomic types are:
+## Primitive types
+
+The simplest of types are primitive types which describe the various kinds of literal values we saw in the previous section. Those primitive types are:
 
 ```ergo
     Boolean
     String
     Double
     Integer
+    Long
     DateTime
 ```
 
+:::note
+The two primitive types `Integer` and `Long` are currently treated as the same type by the Ergo compiler.
+:::
+
 ## Type errors
 
-The Ergo compiler understand types and can detect type errors when you write expressions. For instance, if you write: `1.0 + 2.0 * 3.0`, the Ergo compiler checks that the parameters for the operators `+` and `*` are indeed of type `Double`.
+The Ergo compiler understand types and can detect type errors when you write expressions. For instance, if you write: `1.0 + 2.0 * 3.0`, the Ergo compiler knows that the expression is correct since all parameters for the operators `+` and `*` are of type `Double`, and it knows the result of that expression will be a `Double` as well.
 
-If you write `1.0 + 2.0 * "some text"` the Ergo compiler will detect that `"some text"` is of type `String`, which is not of the right type for the operator `*` and return an error.
+If you write `1.0 + 2.0 * "some text"` the Ergo compiler will detect that `"some text"` is of type `String`, which is not of the right type for the operator `*` and return a type error.
 
 > Typing `return 1.0 + 2.0 * "some text"` in the [Ergo REPL](https://ergorepl.netlify.com), should answer a type error:
 > ```text
-> Type error (at line 1 col 13). Operator * expected operands of
-> type Double and Double but received operands of type Double and String.
+> Type error (at line 1 col 13). This operator received
+> unexpected arguments of type Double  and String.
 > return 1.0 + 2.0 * "some text"
 >              ^^^^^^^^^^^^^^^^^
 > ```
@@ -55,7 +62,7 @@ or
 
 This can be useful to document your code, or to remember what type you expect from an expression.
 
-Again, the Ergo compiler will return a type error if the annotation is not consistent with the expression that computes the value for that let binding. For instance, the following will return a type error since `"pi!"` is not of type `Double`.
+The Ergo compiler will return a type error if the annotation is not consistent with the expression that computes the value for that let binding. For instance, the following will return a type error since `"pi!"` is not of type `Double`.
 
 ```ergo
     let x : Double = "pi!"; // TYPE ERROR: "pi!" is not a Double
@@ -81,5 +88,5 @@ This becomes particularly useful as your code becomes more complex. For instance
     name ++ " Smith"
 ```
 
-Since not all the cases of the `if ... then ... else ...` expressions return a value of type `String` which is the type annotation for `name`.
+Since not all the cases of the `if ... then ... else ...` expressions return a value of type `String` which is the type annotation for the `name` variable.
 

@@ -3,9 +3,9 @@ id: logic-complex-type
 title: Complex Values & Types
 ---
 
-So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Concerto Modeling Language](https://github.com/accordproject/concerto) (often referred to as CTO files). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.
+So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Concerto Modeling](model-concerto) (often referred to as CTO models after the `.cto` file extension). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.
 
-In Ergo, you can either import an existing CTO file or declare types directly within your code. Let us look at the different kinds of types you can define and how to create values with those types.
+In Ergo, you can either import an existing CTO model or declare types directly within your code. Let us look at the different kinds of types you can define and how to create values with those types.
 
 ## Arrays
 
@@ -30,7 +30,7 @@ You can construct arrays using other expressions:
     [pi,e,golden]
 ```
 
-Ergo also provides functions to manipulate arrays as parts of its [standard library](ergo-stdlib.html#functions-on-arrays):
+Ergo also provides functions to manipulate arrays as parts of its [standard library](ref-logic-stdlib.html#functions-on-arrays). The following example uses the `sum` function to calculate the sum of all the elements in the `prettynumbers` array.
 ```ergo
     let pi = 3.14;
     let e = 2.72;
@@ -49,7 +49,7 @@ You can access the element at a given position inside the array using an index:
     fruits[4]          // Returns: none
 ```
 
- Note that the index starts at `0` for the first element and that indexed-based access returns an optional value, since Ergo compiler cannot statically determine whether there will be an element at the corresponding index.
+ Note that the index starts at `0` for the first element and that indexed-based access returns an optional value, since Ergo compiler cannot statically determine whether there will be an element at the corresponding index. You can learn more about how to handle optional values and types in the [Optionals](logic-complex-type#optionals) Section below.
 
 ## Classes
 
@@ -85,13 +85,13 @@ Once a class type has been defined, you can create an instance of that type usin
     }
     Car{
       id: "Batmobile4156",
-      range: "Unknown"
+      range: "Infinite"
     }
 ```
 
 > **TechNote:** When extending an existing class (e.g., `Car extends Product`), the sub-class includes the fields from the super-class. So `Car` includes the field `range` which is locally declared and the field `id` which is declared in `Product`.
 
-You can access the field of a class using the `.` operator:
+You can access fields for values of a class type by using the `.` operator:
 ```ergo
     Seminar{
       name: "Law for developers",
@@ -101,7 +101,7 @@ You can access the field of a class using the `.` operator:
 
 ## Records
 
-Sometimes it is convenient to declare a structure without having to declare it first. You can do that using a record, which is similar to a class but without its name:
+Sometimes it is convenient to declare a structure without having to declare it first. You can do that using a record, which is similar to a class but without a name attached to it:
 
 ```ergo
    {
@@ -146,14 +146,14 @@ DAIRY
 BEEF
 ```
 
-## Optional types
+## Optionals
 
 An optional type can contain a value or not and is indicated with a `?`.
 
 ```ergo
-Integer?          // An optional integer
-PaymentObligation // An optional payment obligation
-Double[]?         // An optional array of doubles
+Integer?           // An optional integer
+PaymentObligation? // An optional payment obligation
+Double[]?          // An optional array of doubles
 ```
 
 A an optional value can be either present, written `some(v)`, or absent, written `none`.
@@ -163,23 +163,25 @@ let i1 : Integer? = some(1); i1
 let i2 : Integer? = none; i2
 ```
 
-To operate on an optional type, you need to say what to do when the value is present and what to do when the value is not present. You can do that with a match statement:
+To operate on an optional type, you need to say what to do when the value is present and what to do when the value is not present. The most general way to do that is with a match expression:
 
-This example:
+This example matches a value which is present:
 ```ergo
 match some(1)
-with let? x then "I found 1 :-)"
+with let? x then "I found " ++ toString(x) ++ " :-)"
 else "I found nothing :-("
 ```
-should return `"I found 1 :-)"`.
+and should return `"I found 1 :-)"`.
 
-This example:
+While this example matches against a value which is absent:
 ```
 match none
-with let? x then "I found 1 :-)"
+with let? x then "I found " ++ toString(x) ++ " :-)"
 else "I found nothing :-("
 ```
-should return `"I found nothing :-("`.
+and should return `"I found nothing :-("`.
+
+More details on match expressions can be found in [Advanced Expressions](logic-advanced-expr#match).
 
 For conciseness, a few operators are also available on optional values. One can give a default value when the optional is `none` using the operator `??`. For instance:
 
