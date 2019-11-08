@@ -35,6 +35,9 @@
       "ergo-cli": {
         "title": "Ergo CLI"
       },
+      "ergo-repl": {
+        "title": "Ergo REPL"
+      },
       "ergo-tutorial": {
         "title": "Ergo: A Tutorial"
       },
@@ -452,17 +455,26 @@
       "version-0.20.0/version-0.20.0-example-eatapple": {
         "title": "A Healthy Clause"
       },
+      "version-0.20.0/version-0.20.0-logic-advanced-expr": {
+        "title": "Advanced Expressions"
+      },
       "version-0.20.0/version-0.20.0-logic-complex-type": {
         "title": "Complex Values & Types"
+      },
+      "version-0.20.0/version-0.20.0-logic-decl": {
+        "title": "Declarations"
       },
       "version-0.20.0/version-0.20.0-logic-ergo": {
         "title": "Ergo Overview"
       },
       "version-0.20.0/version-0.20.0-logic-module": {
-        "title": "Modularity"
+        "title": "Modules"
       },
       "version-0.20.0/version-0.20.0-logic-simple-expr": {
         "title": "Simple Expressions"
+      },
+      "version-0.20.0/version-0.20.0-logic-simple-type": {
+        "title": "Introducing Types"
       },
       "version-0.20.0/version-0.20.0-logic-stmt": {
         "title": "Statements"
@@ -514,6 +526,9 @@
       },
       "version-0.20.0/version-0.20.0-ref-logic-specification": {
         "title": "Ergo Compiler"
+      },
+      "version-0.20.0/version-0.20.0-ref-logic-stdlib": {
+        "title": "Ergo Standard Library"
       },
       "version-0.20.0/version-0.20.0-ref-logic": {
         "title": "Ergo Language Reference"

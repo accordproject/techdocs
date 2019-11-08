@@ -53,7 +53,7 @@
             {
                 "type": "subcategory",
                 "label": "Command Line Interface",
-                "ids": ["cicero-cli", "concerto-cli", "ergo-cli", "markus-cli"]
+                "ids": ["cicero-cli", "concerto-cli", "ergo-cli", "ergo-repl", "markus-cli"]
             },
             {
                 "type": "subcategory",
