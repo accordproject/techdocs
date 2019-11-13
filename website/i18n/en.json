@@ -578,6 +578,12 @@
       "version-0.20.0/version-0.20.0-tutorial-templates": {
         "title": "Templates Deep Dive"
       },
+      "version-0.20.1/version-0.20.1-ergo-cli": {
+        "title": "Ergo CLI"
+      },
+      "version-0.20.1/version-0.20.1-ergo-repl": {
+        "title": "Ergo REPL"
+      },
       "version-0.3.11/version-0.3.11-ergo-api": {
         "title": "Ergo API Documentation"
       },

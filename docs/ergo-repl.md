@@ -5,7 +5,7 @@ title: Ergo REPL
 
 `ergotop` is a convenient tool to try-out Ergo contracts in an interactive way. You can write commands, or expressions and see the result. It is often called the Ergo REPL, for _read-eval-print-loop_, since it literally: reads your input Ergo from the command-line, evaluates it, prints the result and loops back to read your next input.
 
-### Starting the REPL
+## Starting the REPL
 
 To start the REPL:
 
@@ -56,7 +56,7 @@ If what you are trying to write is too long to fit on one line, you can use `\` 
     Response. [5.76, 20.25, 44.89] : Double[]
 ```
 
-### Loading files
+## Loading files
 
 You can load CTO and Ergo files to use in your REPL session. Once the REPL is launched you will have to import the corresponding namespace. For instance, if you want to use the `compoundInterestMultiple` function defined in the `./examples/promissory-note/money.ergo` file, you can do it as follows:
 
@@ -69,14 +69,13 @@ ergo$ return compoundInterestMultiple(0.035, 100)
 Response. 1.00946960405 : Double
 ```
 
-### Calling contracts
+## Calling contracts
 
 To call a contract, you first needs to _instantiate_ it, which means setting its parameters and initializing its state. You can do this by using the `set contract` and `call init` commands respectively. Here is an example using the `volumediscount` template:
 
 ```ergo
 $ ergotop ./examples/volumediscount/model/model.cto ./examples/volumediscount/logic/logic.ergo
 ergo$ import org.accordproject.cicero.contract.*
-ergo$ import org.accordproject.cicero.runtime.*
 ergo$ import org.accordproject.volumediscount.*
 ergo$ set contract VolumeDiscount over VolumeDiscountContract {firstVolume: 1.0, secondVolume: 10.0, firstRate: 3.0, secondRate: 2.9, thirdRate: 2.8, contractId: "0", parties: none }
 ergo$ call init()
