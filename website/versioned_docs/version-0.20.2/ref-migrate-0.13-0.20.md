@@ -1,6 +1,7 @@
 ---
-id: ref-migrate-0.13-0.20
+id: version-0.20.2-ref-migrate-0.13-0.20
 title: 0.13 to 0.20
+original_id: ref-migrate-0.13-0.20
 ---
 
 Much has changed in the new `0.20` release. This guide provides step-by-step instructions to port your Accord Project templates from version `0.13` or earlier to version `0.20`.
