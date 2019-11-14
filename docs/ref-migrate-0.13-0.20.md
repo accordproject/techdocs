@@ -264,7 +264,7 @@ A number of API changes may affect Node.js applications using Cicero or Ergo pac
       - the `Engine.execute()` call has been renamed `Engine.trigger()`
       - the `Engine.generateText()` call has been renamed `Engine.draft()`
 
-## Cicero Server
+## Cicero Server Changes
 
 Cicero server API has been changed to reflect the new underlying Cicero engine. Specifically:
 1. The `execute` endpoint has been renamed `trigger`
