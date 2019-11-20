@@ -17,7 +17,6 @@ const siteConfig = require(CWD + '/siteConfig.js');
 const versions = require(CWD + '/versions.json');
 const ciceroGitHub = 'https://github.com/accordproject/cicero/releases';
 
-
 const toGitHubRelease = (version) => {
   const minorMatch = version.match(/^\d+\.\d+/);
   const patchMatch = version.match(/^\d+\.\d+\.\d+/);
@@ -63,7 +62,7 @@ class Versions extends React.Component {
             <table className="versions">
               <tbody>
                 <tr>
-                  <th>master</th>
+                  <th>unstable</th>
                   <td>
                     <a href={'/docs/next/accordproject.html'}>Documentation</a>
                   </td>
