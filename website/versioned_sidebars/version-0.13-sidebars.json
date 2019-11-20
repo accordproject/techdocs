@@ -1,0 +1,71 @@
+{
+  "version-0.13-docs": {
+    "Introduction": [
+      "version-0.13-accordproject",
+      "version-0.13-accordproject-installation",
+      "version-0.13-accordproject-tooling",
+      "version-0.13-accordproject-models",
+      "version-0.13-accordproject-templates",
+      "version-0.13-accordproject-resources"
+    ],
+    "Basic Tutorials": [
+      "version-0.13-basic-use",
+      "version-0.13-basic-templates",
+      "version-0.13-basic-create"
+    ],
+    "Advanced Tutorials": [
+      "version-0.13-advanced-latedelivery",
+      {
+        "type": "subcategory",
+        "label": "Template Execution",
+        "ids": [
+          "version-0.13-advanced-nodejs",
+          "version-0.13-advanced-hyperledger"
+        ]
+      }
+    ],
+    "Ergo Language Guide": [
+      "version-0.13-logic-ergo",
+      "version-0.13-logic-simple-expr",
+      "version-0.13-logic-simple-type",
+      "version-0.13-logic-complex-type",
+      "version-0.13-logic-advanced-expr",
+      "version-0.13-logic-stmt",
+      "version-0.13-logic-decl",
+      "version-0.13-logic-module"
+    ],
+    "Template Specification": [
+      "version-0.13-spec-overview",
+      "version-0.13-spec-concepts",
+      "version-0.13-spec-example",
+      "version-0.13-spec-template",
+      "version-0.13-spec-instance",
+      "version-0.13-spec-execution",
+      "version-0.13-spec-packaging"
+    ],
+    "Reference Manual": [
+      "version-0.13-ref-markup",
+      "version-0.13-ref-testing",
+      "version-0.13-ref-errors",
+      "version-0.13-ref-logic",
+      "version-0.13-ref-logic-stdlib",
+      "version-0.13-ref-logic-specification",
+      {
+        "type": "subcategory",
+        "label": "Command Line Interface",
+        "ids": [
+          "version-0.13-cicero-cli",
+          "version-0.13-ergo-cli"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "JavaScript API",
+        "ids": [
+          "version-0.13-cicero-api",
+          "version-0.13-ergo-api"
+        ]
+      }
+    ]
+  }
+}

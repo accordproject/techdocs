@@ -1,0 +1,70 @@
+{
+  "version-0.12-docs": {
+    "Introduction": [
+      "version-0.12-accordproject",
+      "version-0.12-accordproject-installation",
+      "version-0.12-accordproject-tooling",
+      "version-0.12-accordproject-models",
+      "version-0.12-accordproject-templates",
+      "version-0.12-accordproject-resources"
+    ],
+    "Basic Tutorials": [
+      "version-0.12-basic-use",
+      "version-0.12-basic-templates",
+      "version-0.12-basic-create"
+    ],
+    "Advanced Tutorials": [
+      "version-0.12-advanced-latedelivery",
+      {
+        "type": "subcategory",
+        "label": "Template Execution",
+        "ids": [
+          "version-0.12-advanced-nodejs",
+          "version-0.12-advanced-hyperledger"
+        ]
+      }
+    ],
+    "Ergo Language Guide": [
+      "version-0.12-logic-ergo",
+      "version-0.12-logic-simple-expr",
+      "version-0.12-logic-simple-type",
+      "version-0.12-logic-complex-type",
+      "version-0.12-logic-advanced-expr",
+      "version-0.12-logic-stmt",
+      "version-0.12-logic-decl",
+      "version-0.12-logic-module"
+    ],
+    "Template Specification": [
+      "version-0.12-spec-overview",
+      "version-0.12-spec-concepts",
+      "version-0.12-spec-example",
+      "version-0.12-spec-template",
+      "version-0.12-spec-instance",
+      "version-0.12-spec-execution",
+      "version-0.12-spec-packaging"
+    ],
+    "Reference Manual": [
+      "version-0.12-ref-markup",
+      "version-0.12-ref-testing",
+      "version-0.12-ref-logic",
+      "version-0.12-ref-logic-stdlib",
+      "version-0.12-ref-logic-specification",
+      {
+        "type": "subcategory",
+        "label": "Command Line Interface",
+        "ids": [
+          "version-0.12-cicero-cli",
+          "version-0.12-ergo-cli"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "JavaScript API",
+        "ids": [
+          "version-0.12-cicero-api",
+          "version-0.12-ergo-api"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "version-0.20-docs": {
+    "Introduction": [
+      "version-0.20-accordproject",
+      "version-0.20-accordproject-concepts",
+      "version-0.20-accordproject-business",
+      "version-0.20-accordproject-developers"
+    ],
+    "Getting Started": [
+      "version-0.20-started-installation",
+      "version-0.20-started-hello",
+      "version-0.20-started-studio",
+      "version-0.20-started-resources"
+    ],
+    "User Tutorials": [
+      {
+        "type": "subcategory",
+        "label": "Authoring with Template Studio",
+        "ids": [
+          "version-0.20-tutorial-latedelivery"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Work with Cicero",
+        "ids": [
+          "version-0.20-tutorial-templates",
+          "version-0.20-tutorial-library",
+          "version-0.20-tutorial-create"
+        ]
+      }
+    ],
+    "Developers Tutorials": [
+      {
+        "type": "subcategory",
+        "label": "Template Execution",
+        "ids": [
+          "version-0.20-tutorial-nodejs",
+          "version-0.20-tutorial-hyperledger"
+        ]
+      }
+    ],
+    "Template Guides": [
+      {
+        "type": "subcategory",
+        "label": "CiceroMark",
+        "ids": [
+          "version-0.20-markup-cicero",
+          "version-0.20-markup-commonmark",
+          "version-0.20-markup-variables",
+          "version-0.20-markup-blocks",
+          "version-0.20-markup-ergo"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Concerto Modeling",
+        "ids": [
+          "version-0.20-model-concerto",
+          "version-0.20-model-namespaces",
+          "version-0.20-model-classes",
+          "version-0.20-model-enums",
+          "version-0.20-model-properties",
+          "version-0.20-model-relationships",
+          "version-0.20-model-decorators",
+          "version-0.20-model-api"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Ergo Logic",
+        "ids": [
+          "version-0.20-logic-ergo",
+          "version-0.20-logic-simple-expr",
+          "version-0.20-logic-simple-type",
+          "version-0.20-logic-complex-type",
+          "version-0.20-logic-advanced-expr",
+          "version-0.20-logic-stmt",
+          "version-0.20-logic-decl",
+          "version-0.20-logic-module"
+        ]
+      }
+    ],
+    "Reference Manual": [
+      "version-0.20-ref-glossary",
+      "version-0.20-ref-testing",
+      "version-0.20-ref-errors",
+      "version-0.20-ref-logic",
+      "version-0.20-ref-logic-stdlib",
+      "version-0.20-ref-logic-specification",
+      {
+        "type": "subcategory",
+        "label": "Template Migration",
+        "ids": [
+          "version-0.20-ref-migrate-0.13-0.20"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Command Line Interface",
+        "ids": [
+          "version-0.20-cicero-cli",
+          "version-0.20-concerto-cli",
+          "version-0.20-ergo-cli",
+          "version-0.20-ergo-repl",
+          "version-0.20-markus-cli"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "JavaScript API",
+        "ids": [
+          "version-0.20-cicero-api",
+          "version-0.20-ergo-api",
+          "version-0.20-concerto-api"
+        ]
+      }
+    ]
+  }
+}
