@@ -93,7 +93,7 @@ class Versions extends React.Component {
               </tbody>
             </table>
             <p>
-              You can find older versions of Accord project project on <a href={ciceroGitHub}>GitHub</a>.
+              You can find older versions of Accord Project on <a href={ciceroGitHub}>GitHub</a>.
             </p>
           </div>
         </Container>
