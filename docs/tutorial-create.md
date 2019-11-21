@@ -13,7 +13,7 @@ If you haven't already done so, first install the template generator::
 
 ```bash
 npm install -g yo
-npm install -g yo @accordproject/generator-cicero-template
+npm install -g yo @accordproject/generator-cicero-template@0.20
 ```
 
 ### Run the generator:

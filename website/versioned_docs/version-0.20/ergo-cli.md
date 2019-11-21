@@ -8,7 +8,7 @@ Install the `@accordproject/ergo-cli` npm package to access the Ergo command lin
 
 To install the Ergo CLI:
 ```
-npm install -g @accordproject/ergo-cli
+npm install -g @accordproject/ergo-cli@0.20
 ```
 
 This will install `ergo`, to compile and run contracts locally on your machine, and `ergotop`, which is a _read-eval-print-loop_ utility to write Ergo interactively.

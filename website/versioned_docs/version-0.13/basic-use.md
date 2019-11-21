@@ -1,5 +1,5 @@
 ---
-id: version-0.12-basic-use
+id: version-0.13-basic-use
 title: How to Use a Template
 original_id: basic-use
 ---
@@ -11,7 +11,7 @@ The simplest way to work with an Accord Project template is through the Cicero c
 In order to access the Cicero command line interface (CLI), first install the `@accordproject/cicero-cli` npm package:
 
 ```bash
-npm install -g @accordproject/cicero-cli@0.12
+npm install -g @accordproject/cicero-cli@0.13
 ```
 
 > If you're new to `npm` the [installation instructions](accordproject-installation) have some more detailed guidance.

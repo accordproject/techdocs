@@ -8,7 +8,7 @@ Install the `@accordproject/markdown-cli` npm package to access the Markdown Tra
 
 To install the Markdown CLI:
 ```
-npm install -g @accordproject/markdown-cli
+npm install -g @accordproject/markdown-cli@0.8
 ```
 
 ## Usage

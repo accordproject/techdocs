@@ -8,7 +8,7 @@ Install the `@accordproject/concerto-cli` npm package to access the Concerto com
 
 To install the Concerto CLI:
 ```
-npm install -g @accordproject/concerto-cli
+npm install -g @accordproject/concerto-cli@0.82
 ```
 
 ## Usage

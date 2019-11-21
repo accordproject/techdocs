@@ -7,7 +7,7 @@ title: Using the API
 
 To install the core model library in your project:
 ```
-npm install @accordproject/concerto-core --save
+npm install @accordproject/concerto-core@0.20 --save
 ```
 
 Below are examples of API use.
