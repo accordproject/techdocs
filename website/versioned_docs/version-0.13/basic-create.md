@@ -1,5 +1,5 @@
 ---
-id: version-0.12-basic-create
+id: version-0.13-basic-create
 title: Creating a New Template
 original_id: basic-create
 ---
@@ -12,7 +12,7 @@ Install the template generator::
 
 ```
     npm install -g yo
-    npm install -g yo @accordproject/generator-cicero-template@0.12
+    npm install -g yo @accordproject/generator-cicero-template@0.13
 ```
 
 Run the template generator:

@@ -70,7 +70,7 @@ Clone https://github.com/accordproject/ergo to your local machine
 Install Ergo
 
 The easiest way to install Ergo is as a Node.js package. Once you have Node.js installed on your machine, you can get the Ergo compiler and command-line using the Node.js package manager by typing the following in a terminal:
-$ npm install -g @accordproject/ergo-cli
+$ npm install -g @accordproject/ergo-cli@0.12
  
 This will install the compiler itself (ergoc) and a command-line tool (ergo) to execute Ergo code. You can check that both have been installed and print the version number by typing the following in a terminal:
 ```sh

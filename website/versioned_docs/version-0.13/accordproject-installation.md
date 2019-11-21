@@ -1,5 +1,5 @@
 ---
-id: version-0.12-accordproject-installation
+id: version-0.13-accordproject-installation
 title: Installation
 original_id: accordproject-installation
 ---
@@ -21,7 +21,7 @@ Before you can install Cicero, you must first obtain and configure the following
 To install the latest version:
 
 ```bash
-npm install -g @accordproject/cicero-cli@0.12
+npm install -g @accordproject/cicero-cli@0.13
 ```
 
 To check that Cicero has been properly installed, and display the version number:
@@ -44,7 +44,7 @@ You may also want to install the template generator tool, which you can use to c
 
 ```bash
 npm install -g yo 
-npm install -g @accordproject/generator-cicero-template@0.12
+npm install -g @accordproject/generator-cicero-template@0.13
 ```
 
 ### Ergo command line
@@ -52,7 +52,7 @@ npm install -g @accordproject/generator-cicero-template@0.12
 If you would like to use the Ergo language on its own (i.e., independently of a Cicero template) you can also install the Ergo command-line tools:
 
 ```bash
-npm install @accordproject/ergo-cli@0.12 -g
+npm install @accordproject/ergo-cli@0.13 -g
 ```
 
 To check that the Ergo compiler has been installed, display the version number:

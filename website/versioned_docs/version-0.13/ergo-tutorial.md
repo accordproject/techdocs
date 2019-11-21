@@ -1,5 +1,5 @@
 ---
-id: version-0.20-ergo-tutorial
+id: version-0.13-ergo-tutorial
 title: Ergo: A Tutorial
 original_id: ergo-tutorial
 ---
@@ -8,7 +8,7 @@ original_id: ergo-tutorial
 
 Cicero is an Open Source implementation of the Accord Project Template Specification. It defines the structure of natural language templates, bound to a data model, that can be executed using Ergo and request/response JSON messages. You can read the latest user documentation here: http://docs.accordproject.org.
 
-In short, with the Accord Project you can take a classic contract, e.g. Word document and use Cicero to define natural language contract and clause templates that can be executed by an event driven computer program (aka Smart contract). For the tutorial, Cicero will be used to define natural language contract and clause templates. These clause templates handle the syllogistic language of contracts.
+In short with the Accord Project you can take a classic contract, e.g. Word document and use Cicero to define natural language contract and clause templates that can be executed by an event driven computer program (aka Smart contract). For the tutorial, Cicero will be used to define natural language contract and clause templates. These clause templates handle the syllogistic language of contracts.
 
 For example,
 ```md
@@ -21,7 +21,7 @@ You can browse the library of Open Source Cicero contract and clause templates a
 
 So how goes the contract get executed? That is where Ergo comes in Ergo is a strongly-typed functional programming language designed to capture the legal intent of legal contracts and clauses. We will use Ergo to create the contract logic consisting of a contract class with executable embedded clauses. Note: prior to the emergence of Ergo, the Cicero JavaScript component was primary to the execution of code.
 
-Ergo obviates the Cicero JavaScript component for the execution phase with a new more comprehensive language which we explore in this tutorial.
+Ergo obviates the Cicero JavaScript component for the  execution phase with a new more comprehensive language which we explore in this tutorial.
    
 ## Cicero
 
@@ -47,7 +47,7 @@ Before you can build Ergo, you must install and configure the following dependen
 * Node.js v8.x (LTS): We use Node to generate the documentation, run a development web server, run tests, and generate distributable files. Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 > Tip: Use nvm (or nvm-windows) to manage and install Node.js, This facilitates a version change of Node.js per project.
 * Lerna: This is a tool which helps when handling multiple npm packages in the Ergo repository. To install:
-npm install -g lerna@^3.15.0
+npm install -g lerna@2.11.0
  
 ### Visual Studio Code
 
@@ -70,7 +70,7 @@ Clone https://github.com/accordproject/ergo to your local machine
 Install Ergo
 
 The easiest way to install Ergo is as a Node.js package. Once you have Node.js installed on your machine, you can get the Ergo compiler and command-line using the Node.js package manager by typing the following in a terminal:
-$ npm install -g @accordproject/ergo-cli@0.20
+$ npm install -g @accordproject/ergo-cli@0.13
  
 This will install the compiler itself (ergoc) and a command-line tool (ergo) to execute Ergo code. You can check that both have been installed and print the version number by typing the following in a terminal:
 ```sh
