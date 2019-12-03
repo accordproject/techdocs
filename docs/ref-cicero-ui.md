@@ -1,0 +1,37 @@
+---
+id: ref-cicero-ui
+title: Cicero UI Reference
+---
+
+Accord Project publishes [React](https://reactjs.org) user interface components for use in web-applications. Please refer to the cicero-ui project [on GitHub](https://github.com/accordproject/cicero-ui) for detailed usage instructions.
+
+You can preview these components in [Template Studio v2](https://accordproject-studio.netlify.com).
+
+![Template-Studio-V2](/docs/assets/reference/tsv2.png)
+
+## Contract Editor
+
+The Contract Editor component provides a rich-text content editor for contract text with embedded clauses.
+
+> Note that the contract editor does not currently support the full expressiveness of Cicero Templates. Please refer to the Limitations section for details.
+
+### Limitations
+
+The contract editor does not support templates which use the following Cicero features:
+
+* dynamic (variable) lists
+* lists containing nested lists
+* conditional sections
+* code blocks (single line code sections are supported)
+
+## Error Logger
+
+The Error Logger component is used to display structured error messages from the Contract Editor.
+
+## Navigation
+
+The Navigation component displays an outline view for a contract, allowing the user to quickly navigate between sections.
+
+## Template Library
+
+The Template Library component displays a vertical list of template metadata, and allows the user to add a clause (instance of a template) to a contract.
