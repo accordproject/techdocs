@@ -110,6 +110,9 @@
       "model-relationships": {
         "title": "Relationships"
       },
+      "ref-cicero-ui": {
+        "title": "Cicero UI Reference"
+      },
       "ref-errors": {
         "title": "Errors Reference"
       },
