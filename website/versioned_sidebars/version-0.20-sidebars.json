@@ -83,6 +83,7 @@
     ],
     "Reference Manual": [
       "version-0.20-ref-glossary",
+      "version-0.20-ref-cicero-ui",
       "version-0.20-ref-testing",
       "version-0.20-ref-errors",
       "version-0.20-ref-logic",
