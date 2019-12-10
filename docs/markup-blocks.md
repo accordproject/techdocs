@@ -116,9 +116,15 @@ Conditional blocks enables text which depends on a value of a `Boolean` variable
 Conditional blocks replace the notion of conditional variables used in Cicero version `0.13` or earlier. If you need to migrate templates created for a previous version of Cicero, please refer to the [0.13 to 0.20 Migration Guide](ref-migrate-0.13-0.20).
 :::
 
+Conditional blocks can also include an `else` branch to indicate that some other text should be use when the value of the variable is `false`:
+
+```tem
+{{#if forceMajeure}}This is a force majeure{{else}}This is *not* a force majeure{{/if}}
+```
+
 #### Examples
 
-Drafting text with this block using the following JSON data:
+Drafting text with the first conditional block above using the following JSON data:
 ```json
 {
   "$class": "org.accordproject.foo.Status",
