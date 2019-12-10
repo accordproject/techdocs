@@ -18,12 +18,15 @@ The Contract Editor component provides a rich-text content editor for contract t
 
 ### Limitations
 
-The contract editor does not support templates which use the following Cicero features:
+The contract editor does not support templates which use the following CiceroMark features:
 
-* dynamic (variable) lists
-* lists containing nested lists
-* conditional sections
-* code blocks (single line code sections are supported)
+* Images
+* Code blocks
+* HTML blocks
+* HTML inlines
+* Lists containing [nested lists](markup-commonmark#nested-lists)
+* Templates [list blocks](markup-blocks#list-blocks)
+* Templates [conditional blocks](markup-blocks#conditional-blocks)
 
 ## Error Logger
 
