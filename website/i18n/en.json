@@ -440,6 +440,9 @@
       "version-0.20/version-0.20-model-relationships": {
         "title": "Relationships"
       },
+      "version-0.20/version-0.20-ref-cicero-ui": {
+        "title": "Cicero UI Reference"
+      },
       "version-0.20/version-0.20-ref-glossary": {
         "title": "Glossary"
       },
