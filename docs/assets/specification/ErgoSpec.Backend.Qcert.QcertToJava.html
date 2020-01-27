@@ -1,0 +1,80 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Qcert.QcertToJava</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Qcert.QcertToJava" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Qcert.QcertToJava</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.DataSystem.html">Qcert.Data.DataSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.JavaSystem.html">Qcert.Java.JavaSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToJava.html">Qcert.Translation.Operators.ForeignToJava</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html">QcertData</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Compiler.Component.UriComponent.html">Qcert.Compiler.Component.UriComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html">LogComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html">MathComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html">DateTimeComponent</a></span>.<br/>
+<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">nstring_scope</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_to_java_data">enhanced_to_java_data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">quotel</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>) (<span class="id">fd</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_data">enhanced_data</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span><br/>
+&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#fd">fd</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeformat">enhanceddateTimeformat</a></span> <span class="id">f</span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_json">mk_java_json</a></span> (^@<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#toString">toString</a></span> <span class="id">_</span> <span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#date_time_format_foreign_data">date_time_format_foreign_data</a></span>.(@<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.ForeignData.html#foreign_data_tostring">foreign_data_tostring</a></span> ) <span class="id">f</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTime">enhanceddateTime</a></span> <span class="id">f</span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_json">mk_java_json</a></span> (^@<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#toString">toString</a></span> <span class="id">_</span> <span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#date_time_foreign_data">date_time_foreign_data</a></span>.(@<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.ForeignData.html#foreign_data_tostring">foreign_data_tostring</a></span> ) <span class="id">f</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeduration">enhanceddateTimeduration</a></span> <span class="id">f</span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_json">mk_java_json</a></span> (^@<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#toString">toString</a></span> <span class="id">_</span> <span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#date_time_duration_foreign_data">date_time_duration_foreign_data</a></span>.(@<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.ForeignData.html#foreign_data_tostring">foreign_data_tostring</a></span> ) <span class="id">f</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeperiod">enhanceddateTimeperiod</a></span> <span class="id">f</span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_json">mk_java_json</a></span> (^@<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#toString">toString</a></span> <span class="id">_</span> <span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#date_time_period_foreign_data">date_time_period_foreign_data</a></span>.(@<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.ForeignData.html#foreign_data_tostring">foreign_data_tostring</a></span> ) <span class="id">f</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_to_java_unary_op">enhanced_to_java_unary_op</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">indent</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat">nat</a></span>) (<span class="id">eol</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">quotel</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>) (<span class="id">fu</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_unary_op">enhanced_unary_op</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">d</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span><br/>
+&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#fu">fu</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_unary_uri_op">enhanced_unary_uri_op</a></span> <span class="id">op</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.Compiler.Component.UriComponent.html#uri_to_java_unary_op">uri_to_java_unary_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#indent">indent</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#eol">eol</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#quotel">quotel</a></span> <span class="id">op</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_unary_log_op">enhanced_unary_log_op</a></span> <span class="id">op</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#log_to_java_unary_op">log_to_java_unary_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#indent">indent</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#eol">eol</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#quotel">quotel</a></span> <span class="id">op</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_unary_math_op">enhanced_unary_math_op</a></span> <span class="id">op</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#math_to_java_unary_op">math_to_java_unary_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#indent">indent</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#eol">eol</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#quotel">quotel</a></span> <span class="id">op</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_unary_date_time_op">enhanced_unary_date_time_op</a></span> <span class="id">op</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#date_time_to_java_unary_op">date_time_to_java_unary_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#indent">indent</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#eol">eol</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#quotel">quotel</a></span> <span class="id">op</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_to_java_binary_op">enhanced_to_java_binary_op</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">indent</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat">nat</a></span>) (<span class="id">eol</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">quotel</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>) (<span class="id">fb</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_binary_op">enhanced_binary_op</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">d1</span> <span class="id">d2</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span><br/>
+&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#fb">fb</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_binary_math_op">enhanced_binary_math_op</a></span> <span class="id">op</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#math_to_java_binary_op">math_to_java_binary_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#indent">indent</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#eol">eol</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#quotel">quotel</a></span> <span class="id">op</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d1">d1</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d2">d2</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_binary_date_time_op">enhanced_binary_date_time_op</a></span> <span class="id">op</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#date_time_to_java_binary_op">date_time_to_java_binary_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#indent">indent</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#eol">eol</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#quotel">quotel</a></span> <span class="id">op</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d1">d1</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#d2">d2</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Instance</span> <span class="id"><a name="enhanced_foreign_to_java">enhanced_foreign_to_java</a></span> :<br/>
+&nbsp;&nbsp;@<span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToJava.html#foreign_to_java">foreign_to_java</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_foreign_runtime">enhanced_foreign_runtime</a></span><br/>
+&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToJava.html#mk_foreign_to_java">mk_foreign_to_java</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_foreign_runtime">enhanced_foreign_runtime</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#enhanced_to_java_data">enhanced_to_java_data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#enhanced_to_java_unary_op">enhanced_to_java_unary_op</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToJava.html#enhanced_to_java_binary_op">enhanced_to_java_binary_op</a></span>.<br/>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

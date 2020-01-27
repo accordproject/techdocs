@@ -1,0 +1,98 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Qcert.QcertDataTyping</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Qcert.QcertDataTyping" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Qcert.QcertDataTyping</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.ZArith.ZArith.html">ZArith</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html">EquivDec</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.RelationClasses.html">RelationClasses</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.Equivalence.html">Equivalence</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.JSONSystem.html">Qcert.JSON.JSONSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.DataSystem.html">Qcert.Data.DataSystem</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Compiler.Component.UriComponent.html">Qcert.Compiler.Component.UriComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html">LogComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html">MathComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html">DateTimeComponent</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html">QcertData</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html">QcertType</a></span>.<br/>
+<br/>
+<span class="kwd">Inductive</span> <span class="id"><a name="enhanced_has_type">enhanced_has_type</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_data">enhanced_data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span> -&gt; <span class="kwd">Prop</span> :=<br/>
+| <span class="id"><a name="enhanced_has_type_top">enhanced_has_type_top</a></span> <span class="id">fd</span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#enhanced_has_type">enhanced_has_type</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#fd">fd</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedTop">enhancedTop</a></span><br/>
+| <span class="id"><a name="enhanced_has_type_dateTimeFormat">enhanced_has_type_dateTimeFormat</a></span> (<span class="id">tp</span>:<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_FORMAT">DATE_TIME_FORMAT</a></span>) : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#enhanced_has_type">enhanced_has_type</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeformat">enhanceddateTimeformat</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#tp">tp</a></span>) <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span><br/>
+| <span class="id"><a name="enhanced_has_type_dateTime">enhanced_has_type_dateTime</a></span> (<span class="id">tp</span>:<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME">DATE_TIME</a></span>) : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#enhanced_has_type">enhanced_has_type</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTime">enhanceddateTime</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#tp">tp</a></span>) <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span><br/>
+| <span class="id"><a name="enhanced_has_type_dateTimeduration">enhanced_has_type_dateTimeduration</a></span> (<span class="id">tp</span>:<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_DURATION">DATE_TIME_DURATION</a></span>) : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#enhanced_has_type">enhanced_has_type</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeduration">enhanceddateTimeduration</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#tp">tp</a></span>) <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span><br/>
+| <span class="id"><a name="enhanced_has_type_dateTimeperiod">enhanced_has_type_dateTimeperiod</a></span> (<span class="id">tp</span>:<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_PERIOD">DATE_TIME_PERIOD</a></span>) : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#enhanced_has_type">enhanced_has_type</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeperiod">enhanceddateTimeperiod</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#tp">tp</a></span>) <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span><br/>
+.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_infer_type">enhanced_infer_type</a></span> (<span class="id">d</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_data">enhanced_data</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#d">d</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeformat">enhanceddateTimeformat</a></span> <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTime">enhanceddateTime</a></span> <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeduration">enhanceddateTimeduration</a></span> <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeperiod">enhanceddateTimeperiod</a></span> <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Program</span> <span class="kwd">Instance</span> <span class="id"><a name="enhanced_foreign_data_typing">enhanced_foreign_data_typing</a></span> :<br/>
+&nbsp;&nbsp;@<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.ModelTyping.ForeignDataTyping.html#foreign_data_typing">foreign_data_typing</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_foreign_data">enhanced_foreign_data</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_foreign_type">enhanced_foreign_type</a></span><br/>
+&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.ModelTyping.ForeignDataTyping.html#mk_foreign_data_typing">mk_foreign_data_typing</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_foreign_data">enhanced_foreign_data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_foreign_type">enhanced_foreign_type</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#enhanced_has_type">enhanced_has_type</a></span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertDataTyping.html#enhanced_infer_type">enhanced_infer_type</a></span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span><br/>
+.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof66')">Next Obligation.</div>
+<div class="proofscript" id="proof66">
+&nbsp;&nbsp;<span class="tactic">inversion</span> <span class="id">H</span>; <span class="tactic">subst</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">simpl</span>; <span class="tactic">trivial</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">destruct</span> <span class="id">d</span>; <span class="tactic">simpl</span>; <span class="id">constructor</span>.<br/>
+&nbsp;&nbsp;- <span class="id">constructor</span>.<br/>
+&nbsp;&nbsp;- <span class="id">constructor</span>.<br/>
+&nbsp;&nbsp;- <span class="id">constructor</span>.<br/>
+Defined.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof67')">Next Obligation.</div>
+<div class="proofscript" id="proof67">
+&nbsp;&nbsp;<span class="tactic">inversion</span> <span class="id">H0</span>; <span class="tactic">subst</span>; <span class="tactic">simpl</span>.<br/>
+&nbsp;&nbsp;- <span class="id">constructor</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">inversion</span> <span class="id">H</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">trivial</span>.<br/>
+Defined.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof68')">Next Obligation.</div>
+<div class="proofscript" id="proof68">
+&nbsp;&nbsp;<span class="tactic">inversion</span> <span class="id">H</span>; <span class="tactic">inversion</span> <span class="id">H0</span>; <span class="tactic">subst</span>; <span class="tactic">simpl</span>; <span class="tactic">try</span> <span class="id">constructor</span>; <span class="tactic">congruence</span>.<br/>
+Defined.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof69')">Next Obligation.</div>
+<div class="proofscript" id="proof69">
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">d</span>; <span class="tactic">simpl</span>; <span class="id">eexists</span>; <span class="tactic">reflexivity</span>.<br/>
+Defined.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof70')">Next Obligation.</div>
+<div class="proofscript" id="proof70">
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">d</span>; <span class="tactic">simpl</span> <span class="kwd">in</span> <span class="id">H</span>; <span class="id">invcs</span> <span class="id">H</span>; <span class="id">constructor</span>.<br/>
+Defined.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof71')">Next Obligation.</div>
+<div class="proofscript" id="proof71">
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">d</span>; <span class="tactic">simpl</span> <span class="kwd">in</span> <span class="id">H</span>, <span class="id">H0</span><br/>
+&nbsp;&nbsp;; <span class="id">invcs</span> <span class="id">H</span>; <span class="id">invcs</span> <span class="id">H0</span>; <span class="id">constructor</span>.<br/>
+Defined.</div>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

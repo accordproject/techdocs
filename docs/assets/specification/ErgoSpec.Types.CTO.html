@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Types.CTO</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Types.CTO" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Types.CTO</h1>
+<div class="coq">
+<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.QLib.html">ErgoSpec.Backend.QLib</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Provenance.html">ErgoSpec.Common.Provenance</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Names.html">ErgoSpec.Common.Names</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Result.html">ErgoSpec.Common.Result</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Ast.html">ErgoSpec.Common.Ast</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="CTO">CTO</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="CTO.Ast">Ast</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">A</span>:<span class="kwd">Set</span>}. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">N</span>:<span class="kwd">Set</span>}. <br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="cto_type">cto_type</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOBoolean">CTOBoolean</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>                   <span class="docright">(* bool atomic type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOString">CTOString</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>                    <span class="docright">(* string atomic type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTODouble">CTODouble</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>                    <span class="docright">(* double atomic type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOLong">CTOLong</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>                      <span class="docright">(* long atomic type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOInteger">CTOInteger</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>                   <span class="docright">(* integer atomic type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTODateTime">CTODateTime</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>                  <span class="docright">(* date and time atomic type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOClassRef">CTOClassRef</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.N">N</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>             <span class="docright">(* relative class reference  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOOption">CTOOption</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>        <span class="docright">(* optional type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOArray">CTOArray</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>         <span class="docright">(* array type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="cto_annot">cto_annot</a></span> (<span class="id">ct</span>:<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>) : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Types.CTO.html#ct">ct</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTOBoolean">CTOBoolean</a></span> <span class="id">a</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTOString">CTOString</a></span> <span class="id">a</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTODouble">CTODouble</a></span> <span class="id">a</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTOLong">CTOLong</a></span> <span class="id">a</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTOInteger">CTOInteger</a></span> <span class="id">a</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTODateTime">CTODateTime</a></span> <span class="id">a</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTOClassRef">CTOClassRef</a></span> <span class="id">a</span> <span class="id">_</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTOOption">CTOOption</a></span> <span class="id">a</span> <span class="id">_</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Types.CTO.html#CTOArray">CTOArray</a></span> <span class="id">a</span> <span class="id">_</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="cto_declaration_desc">cto_declaration_desc</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOEnum">CTOEnum</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOTransaction">CTOTransaction</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#is_abstract">is_abstract</a></span> -&gt; @<span class="id"><a href="ErgoSpec.Common.Ast.html#extends">extends</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.N">N</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>) -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOConcept">CTOConcept</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#is_abstract">is_abstract</a></span> -&gt; @<span class="id"><a href="ErgoSpec.Common.Ast.html#extends">extends</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.N">N</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>) -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOEvent">CTOEvent</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#is_abstract">is_abstract</a></span> -&gt; @<span class="id"><a href="ErgoSpec.Common.Ast.html#extends">extends</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.N">N</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>) -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOAsset">CTOAsset</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#is_abstract">is_abstract</a></span> -&gt; @<span class="id"><a href="ErgoSpec.Common.Ast.html#extends">extends</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.N">N</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>) -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CTOParticipant">CTOParticipant</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#is_abstract">is_abstract</a></span> -&gt; @<span class="id"><a href="ErgoSpec.Common.Ast.html#extends">extends</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.N">N</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span>) -&gt; <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="cto_declaration">cto_declaration</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkCTODeclaration">mkCTODeclaration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="cto_declaration_annot">cto_declaration_annot</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="cto_declaration_name">cto_declaration_name</a></span> : <span class="id"><a href="ErgoSpec.Common.Names.html#local_name">local_name</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="cto_declaration_type">cto_declaration_type</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span>; }.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="cto_package">cto_package</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkCTOPackage">mkCTOPackage</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="cto_package_annot">cto_package_annot</a></span> : <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="cto_package_file">cto_package_file</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="cto_package_prefix">cto_package_prefix</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="cto_package_namespace">cto_package_namespace</a></span> : <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="cto_package_imports">cto_package_imports</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (@<span class="id"><a href="ErgoSpec.Common.Ast.html#import_decl">import_decl</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast.A">A</a></span>);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="cto_package_declarations">cto_package_declarations</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration">cto_declaration</a></span>; }.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO.Ast">Ast</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="rcto_type">rcto_type</a></span> {<span class="id">A</span>:<span class="kwd">Set</span>} : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#A">A</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="rcto_declaration_desc">rcto_declaration_desc</a></span> {<span class="id">A</span>:<span class="kwd">Set</span>} : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#A">A</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="rcto_declaration">rcto_declaration</a></span> {<span class="id">A</span>:<span class="kwd">Set</span>} : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration">cto_declaration</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#A">A</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="rcto_package">rcto_package</a></span> {<span class="id">A</span>:<span class="kwd">Set</span>} : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_package">cto_package</a></span> <span class="id"><a href="ErgoSpec.Types.CTO.html#A">A</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="lrcto_type">lrcto_type</a></span> : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_type">cto_type</a></span> <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="lrcto_declaration_desc">lrcto_declaration_desc</a></span> : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration_desc">cto_declaration_desc</a></span> <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="lrcto_declaration">lrcto_declaration</a></span> : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_declaration">cto_declaration</a></span> <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="lrcto_package">lrcto_package</a></span> : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Types.CTO.html#cto_package">cto_package</a></span> <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Types.CTO.html#CTO">CTO</a></span>.<br/>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Lib.QCodeGen</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Lib.QCodeGen" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Lib.QCodeGen</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.DataSystem.html">Qcert.Data.DataSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.EJson.EJsonRuntime.html">Qcert.EJson.EJsonRuntime</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.JavaScriptAst.JavaScriptAstRuntime.html">Qcert.JavaScriptAst.JavaScriptAstRuntime</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Lang.ImpEJsontoJavaScriptAst.html">Qcert.Translation.Lang.ImpEJsontoJavaScriptAst</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html">Qcert.Driver.CompLang</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompDriver.html">Qcert.Driver.CompDriver</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QBackendModel.html">ErgoSpec.Backend.Lib.QBackendModel</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QBackendRuntime.html">ErgoSpec.Backend.Lib.QBackendRuntime</a></span>.<br/>
+<br/>
+<span class="kwd">Module</span> <span class="id"><a name="QCodeGen">QCodeGen</a></span>(<span class="id">ergomodel</span>:<span class="id"><a href="ErgoSpec.Backend.Lib.QBackendModel.html#QBackendModel">QBackendModel</a></span>).<br/>
+&nbsp;&nbsp;<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">list_scope</span>.<br/>
+<br/>
+<div class="doc">NNRC </div>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="QCodeGen.NNRC">NNRC</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr">nnrc_expr</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRC.Lang.NNRC.html#nnrc">NNRC.nnrc</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_optim">nnrc_optim</a></span> (<span class="id">x</span>:<span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.nnrc_expr">nnrc_expr</a></span>) : <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.nnrc_expr">nnrc_expr</a></span> := <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#x">x</a></span>.<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr_let">nnrc_expr_let</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.cNNRC.Lang.cNNRC.html#NNRCLet">cNNRC.NNRCLet</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.NNRC">NNRC</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="QCodeGen.Emit">Emit</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.eindent">eindent</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.EmitUtil.html#indent">EmitUtil.indent</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.equotel_double">equotel_double</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.EmitUtil.html#nquotel_double">EmitUtil.nquotel_double</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.eeol_newline">eeol_newline</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.EmitUtil.html#neol_newline">EmitUtil.neol_newline</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.javascript_identifier_sanitizer">javascript_identifier_sanitizer</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.EmitUtil.html#jsIdentifierSanitize">EmitUtil.jsIdentifierSanitize</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.Emit">Emit</a></span>.    <br/>
+<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="QCodeGen.JavaScript">JavaScript</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.ejavascript">ejavascript</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#javascript">CompLang.javascript</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr_to_imp_ejson">nnrc_expr_to_imp_ejson</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<span class="id">bm</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.TypeSystem.TBrandModel.html#brand_model">brand_model</a></span>}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">globals</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">f</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#nnrc">nnrc</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#imp_ejson">imp_ejson</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">let</span> (<span class="id">fname</span>,<span class="id">fbody</span>) := <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#f">f</a></span> <span class="kwd">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompDriver.html#imp_data_to_imp_ejson">imp_data_to_imp_ejson</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompDriver.html#nnrs_imp_to_imp_data">nnrs_imp_to_imp_data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#fname">fname</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompDriver.html#nnrs_to_nnrs_imp">nnrs_to_nnrs_imp</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompDriver.html#nnrc_to_nnrs">nnrc_to_nnrs</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#globals">globals</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#fbody">fbody</a></span>)))).<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr_to_javascript_function">nnrc_expr_to_javascript_function</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<span class="id">bm</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.TypeSystem.TBrandModel.html#brand_model">brand_model</a></span>}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">globals</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">f</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#nnrc">nnrc</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#js_ast">js_ast</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Lang.ImpEJsontoJavaScriptAst.html#imp_ejson_to_function">imp_ejson_to_function</a></span> (<span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.nnrc_expr_to_imp_ejson">nnrc_expr_to_imp_ejson</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#globals">globals</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#f">f</a></span>).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr_to_javascript_function_table">nnrc_expr_to_javascript_function_table</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<span class="id">bm</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.TypeSystem.TBrandModel.html#brand_model">brand_model</a></span>}<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">globals</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">cname</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">ftable</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.nnrc_expr">nnrc_expr</a></span>)) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#js_ast">js_ast</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Lang.ImpEJsontoJavaScriptAst.html#imp_ejson_table_to_topdecls">imp_ejson_table_to_topdecls</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#cname">cname</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html#map">List.map</a></span> (<span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.nnrc_expr_to_imp_ejson">nnrc_expr_to_imp_ejson</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#globals">globals</a></span>) <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#ftable">ftable</a></span>).<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.js_ast_to_javascript">js_ast_to_javascript</a></span> (<span class="id">q</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#js_ast">js_ast</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#javascript">javascript</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompDriver.html#js_ast_to_javascript">js_ast_to_javascript</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#q">q</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.javascript_of_inheritance">javascript_of_inheritance</a></span> (<span class="id">h</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>*<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>)) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#js_ast">js_ast</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.JavaScriptAst.Lang.JavaScriptAst.html#constdecl">constdecl</a></span> "<span class="id">inheritance</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Lang.ImpEJsontoJavaScriptAst.html#ejson_to_js_ast">ejson_to_js_ast</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="https://querycert.github.io/html/Qcert.EJson.Model.EJson.html#ejarray">ejarray</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html#map">List.map</a></span> (<span class="kwd">fun</span> <span class="id">x</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.EJson.Model.EJson.html#ejobject">ejobject</a></span> (("<span class="id">sub</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.EJson.Model.EJson.html#ejstring">ejstring</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#fst">fst</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#x">x</a></span>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:: ("<span class="id">sup</span>"%<span class="id">string</span>, (<span class="id"><a href="https://querycert.github.io/html/Qcert.EJson.Model.EJson.html#ejstring">ejstring</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#snd">snd</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#x">x</a></span>))) :: <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>)) <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#h">h</a></span>))) :: <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.JavaScript">JavaScript</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="QCodeGen.Java">Java</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">nstring_scope</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.java">java</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Driver.CompLang.html#java">CompLang.java</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.java_identifier_sanitizer">java_identifier_sanitizer</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.EmitUtil.html#javaIdentifierSanitize">EmitUtil.javaIdentifierSanitize</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr_to_java">nnrc_expr_to_java</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Lang.NNRCtoJava.html#nnrcToJava">NNRCtoJava.nnrcToJava</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr_java_unshadow">nnrc_expr_java_unshadow</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Lang.NNRCtoJava.html#nnrcToJavaunshadow">NNRCtoJava.nnrcToJavaunshadow</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.nnrc_expr_to_java_method">nnrc_expr_to_java_method</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">input_v</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">String.string</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">e</span>:<span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.nnrc_expr">nnrc_expr</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">i</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat">nat</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">eol</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">quotel</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">ivs</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">String.string</a></span> * <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">let</span> <span class="id">e</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.cNNRC.Lang.cNNRCShadow.html#closeFreeVars">cNNRCShadow.closeFreeVars</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"<span class="id">_</span>" <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.java_identifier_sanitizer">java_identifier_sanitizer</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.cNNRC.Lang.cNNRC.html#NNRCVar">cNNRC.NNRCVar</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#input_v">input_v</a></span>) <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#e">e</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html#map">List.map</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#fst">fst</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#ivs">ivs</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Lang.NNRCtoJava.html#nnrcToJavaFun">NNRCtoJava.nnrcToJavaFun</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#i">i</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#input_v">input_v</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#e">e</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#eol">eol</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#quotel">quotel</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#ivs">ivs</a></span>.<br/>
+<br/>
+<div class="doc">java_data -- Internally data is kept as JSON </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.java_data">java_data</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">Java.java_json</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.mk_java_data">mk_java_data</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_json">Java.mk_java_json</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QCodeGen.from_java_data">from_java_data</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.java_data">java_data</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span> := <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#from_java_json">Java.from_java_json</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen.Java">Java</a></span>.<br/>
+<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen">QCodeGen</a></span>.<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

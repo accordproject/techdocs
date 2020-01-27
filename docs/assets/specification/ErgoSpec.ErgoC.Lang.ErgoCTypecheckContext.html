@@ -1,0 +1,68 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.QLib.html">ErgoSpec.Backend.QLib</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Names.html">ErgoSpec.Common.Names</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="ErgoCTypecheckContext">ErgoCTypecheckContext</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">br</span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Brands.BrandRelation.html#brand_relation">brand_relation</a></span>}.<br/>
+&nbsp;&nbsp;<span class="kwd">Import</span> <span class="id">QcertType</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="type_context">type_context</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkEvalContext">mkEvalContext</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="type_context_global_env">type_context_global_env</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="type_context_local_env">type_context_local_env</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>);<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="type_context_update_global_env">type_context_update_global_env</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">ctxt</span> : <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context">type_context</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">name</span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">value</span> : <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) : <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context">type_context</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#mkEvalContext">mkEvalContext</a></span> ((<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#name">name</a></span>, <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#value">value</a></span>)::<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#ctxt">ctxt</a></span>.(<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context_global_env">type_context_global_env</a></span>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#ctxt">ctxt</a></span>.(<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context_local_env">type_context_local_env</a></span>).<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="type_context_update_local_env">type_context_update_local_env</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">ctxt</span> : <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context">type_context</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">name</span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">value</span> : <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) : <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context">type_context</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#mkEvalContext">mkEvalContext</a></span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#ctxt">ctxt</a></span>.(<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context_global_env">type_context_global_env</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;((<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#name">name</a></span>, <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#value">value</a></span>)::<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#ctxt">ctxt</a></span>.(<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context_local_env">type_context_local_env</a></span>)).<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="type_context_set_local_env">type_context_set_local_env</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">ctxt</span> : <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context">type_context</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">new_local_env</span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>)) : <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context">type_context</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#mkEvalContext">mkEvalContext</a></span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#ctxt">ctxt</a></span>.(<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#type_context_global_env">type_context_global_env</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#new_local_env">new_local_env</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="empty_type_context">empty_type_context</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#mkEvalContext">mkEvalContext</a></span>  ((<span class="id"><a href="ErgoSpec.Common.Names.html#options">options</a></span>,<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertType.tbrand">tbrand</a></span> (<span class="id"><a href="ErgoSpec.Common.Names.html#default_options">default_options</a></span>::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::(<span class="id"><a href="ErgoSpec.Common.Names.html#current_time">current_time</a></span>,<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertType.tdateTime">tdateTime</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::(<span class="id"><a href="ErgoSpec.Common.Names.html#this_contract">this_contract</a></span>,<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertType.tunit">tunit</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::(<span class="id"><a href="ErgoSpec.Common.Names.html#this_state">this_state</a></span>,<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertType.tunit">tunit</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::(<span class="id"><a href="ErgoSpec.Common.Names.html#this_emit">this_emit</a></span>,<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertType.tcoll">tcoll</a></span> <span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertType.tbottom">tbottom</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>).<br/>
+&nbsp;&nbsp;<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCTypecheckContext.html#ErgoCTypecheckContext">ErgoCTypecheckContext</a></span>.<br/>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

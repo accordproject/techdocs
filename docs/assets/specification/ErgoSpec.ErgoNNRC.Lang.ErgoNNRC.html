@@ -19,16 +19,17 @@
 <h1> Abstract Syntax </h1>
 <br/>
 <span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
-<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Types.ErgoType.html">ErgoSpec.Common.Types.ErgoType</a></span>.<br/>
-<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.ErgoBackend.html">ErgoSpec.Backend.ErgoBackend</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html">ErgoSpec.Utils.Misc</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Types.ErgoType.html">ErgoSpec.Types.ErgoType</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.QLib.html">ErgoSpec.Backend.QLib</a></span>.<br/>
 <br/>
 <span class="kwd">Section</span> <span class="id"><a name="ErgoNNRC">ErgoNNRC</a></span>.<br/>
 <br/>
 &nbsp;&nbsp;<span class="kwd">Section</span> <span class="kwd">Syntax</span>.<br/>
 <br/>
 <div class="doc">Expression </div>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="nnrc_expr">nnrc_expr</a></span> := <span class="id"><a href="ErgoSpec.Backend.ErgoBackend.html#ErgoCodeGen.nnrc_expr">ErgoCodeGen.nnrc_expr</a></span>.<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="nnrc_type">nnrc_type</a></span> := <span class="id"><a href="ErgoSpec.Common.Types.ErgoType.html#laergo_type">laergo_type</a></span>. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="nnrc_expr">nnrc_expr</a></span> := <span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertCodeGen.nnrc_expr">QcertCodeGen.nnrc_expr</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="nnrc_type">nnrc_type</a></span> := <span class="id"><a href="ErgoSpec.Types.ErgoType.html#laergo_type">laergo_type</a></span>. <br/>
 <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="lambdan">lambdan</a></span> :=<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkLambdaN">mkLambdaN</a></span><br/>
@@ -62,6 +63,14 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="modulen_declarations">modulen_declarations</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_declaration">nnrc_declaration</a></span>; }.<br/>
 <br/>
 &nbsp;&nbsp;<span class="kwd">End</span> <span class="kwd">Syntax</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="result_file">result_file</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkResultFile">mkResultFile</a></span> {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="res_contract_name">res_contract_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="res_file">res_file</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="res_nnrc">res_nnrc</a></span> : <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#nnrc_module">nnrc_module</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="res_content">res_content</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}.<br/>
 <br/>
 &nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="ErgoNNRC.Semantics">Semantics</a></span>.<br/>
 &nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html#ErgoNNRC.Semantics">Semantics</a></span>.<br/>

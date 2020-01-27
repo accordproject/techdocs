@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Qcert.QcertEJsonToJSON</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Qcert.QcertEJsonToJSON" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Qcert.QcertEJsonToJSON</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.ZArith.ZArith.html">ZArith</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html">EquivDec</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.RelationClasses.html">RelationClasses</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.Equivalence.html">Equivalence</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.EJson.EJsonSystem.html">Qcert.EJson.EJsonSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.JSONSystem.html">Qcert.JSON.JSONSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Model.ForeignDataToEJson.html">Qcert.Translation.Model.ForeignDataToEJson</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Model.ForeignEJsonToJSON.html">Qcert.Translation.Model.ForeignEJsonToJSON</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToEJsonRuntime.html">Qcert.Translation.Operators.ForeignToEJsonRuntime</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Compiler.Component.UriComponent.html">Qcert.Compiler.Component.UriComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html">LogComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html">MathComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html">DateTimeComponent</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html">QcertData</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJson.html">QcertEJson</a></span>.<br/>
+<br/>
+<span class="kwd">Import</span> <span class="id">ListNotations</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">list_scope</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_foreign_json_to_ejson">enhanced_foreign_json_to_ejson</a></span> (<span class="id">j</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#json">json</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJson.html#enhanced_ejson">enhanced_ejson</a></span> :=<br/>
+&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJsonToJSON.html#j">j</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">format</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> <span class="id">s</span>)::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeformat">enhanceddateTimeformat</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_FORMAT_from_string">DATE_TIME_FORMAT_from_string</a></span> <span class="id">s</span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">date</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> <span class="id">s</span>)::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTime">enhanceddateTime</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_from_string">DATE_TIME_from_string</a></span> <span class="id">s</span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">duration</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> <span class="id">s</span>)::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeduration">enhanceddateTimeduration</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_DURATION_from_string">DATE_TIME_DURATION_from_string</a></span> <span class="id">s</span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">period</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> <span class="id">s</span>)::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeperiod">enhanceddateTimeperiod</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_PERIOD_from_string">DATE_TIME_PERIOD_from_string</a></span> <span class="id">s</span>))<br/>
+&nbsp;&nbsp;| <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span><br/>
+&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_foreign_ejson_to_json">enhanced_foreign_ejson_to_json</a></span> (<span class="id">ej</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJson.html#enhanced_ejson">enhanced_ejson</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#json">json</a></span> :=<br/>
+&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJsonToJSON.html#ej">ej</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeformat">enhanceddateTimeformat</a></span> <span class="id">f</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">format</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_FORMAT_to_string">DATE_TIME_FORMAT_to_string</a></span> <span class="id">f</span>))::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTime">enhanceddateTime</a></span> <span class="id">f</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">date</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_to_string">DATE_TIME_to_string</a></span> <span class="id">f</span>))::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeduration">enhanceddateTimeduration</a></span> <span class="id">f</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">duration</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_DURATION_to_string">DATE_TIME_DURATION_to_string</a></span> <span class="id">f</span>))::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanceddateTimeperiod">enhanceddateTimeperiod</a></span> <span class="id">f</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">jobject</a></span> (("$<span class="id">period</span>"%<span class="id">string</span>,<span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">jstring</a></span> (<span class="id"><a href="ErgoSpec.Backend.Component.DateTimeComponent.html#DATE_TIME_PERIOD_to_string">DATE_TIME_PERIOD_to_string</a></span> <span class="id">f</span>))::<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>)<br/>
+&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Program</span> <span class="kwd">Instance</span> <span class="id"><a name="enhanced_foreign_to_json">enhanced_foreign_to_json</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Model.ForeignEJsonToJSON.html#foreign_to_json">foreign_to_json</a></span><br/>
+&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Model.ForeignEJsonToJSON.html#mk_foreign_to_json">mk_foreign_to_json</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJson.html#enhanced_foreign_ejson">enhanced_foreign_ejson</a></span> <span class="id">_</span> <span class="id">_</span>.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof50')">Next Obligation.</div>
+<div class="proofscript" id="proof50">
+&nbsp;&nbsp;<span class="tactic">exact</span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJsonToJSON.html#enhanced_foreign_json_to_ejson">enhanced_foreign_json_to_ejson</a></span> <span class="id">fd</span>).<br/>
+Defined.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof51')">Next Obligation.</div>
+<div class="proofscript" id="proof51">
+&nbsp;&nbsp;<span class="tactic">exact</span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertEJsonToJSON.html#enhanced_foreign_ejson_to_json">enhanced_foreign_ejson_to_json</a></span> <span class="id">j</span>).<br/>
+Defined.</div>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Component.MathComponent</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Component.MathComponent" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Component.MathComponent</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.ZArith.ZArith.html">ZArith</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html">EquivDec</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.Equivalence.html">Equivalence</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.ForeignData.html">Qcert.Data.Model.ForeignData</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.ForeignOperators.html">Qcert.Data.Operators.ForeignOperators</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToJava.html">Qcert.Translation.Operators.ForeignToJava</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.JavaSystem.html">Qcert.Java.JavaSystem</a></span>.<br/>
+<br/>
+<span class="kwd">Import</span> <span class="id">ListNotations</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">string_scope</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">nstring_scope</span>.<br/>
+<br/>
+<div class="doc">Math functions (trigonometric, etc) part of the Ergo Standard Library </div>
+<br/>
+<div class="doc">Axioms </div>
+<br/>
+<div class="doc">Constants </div>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_PI">FLOAT_PI</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_E">FLOAT_E</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<br/>
+<div class="doc">Unary operators </div>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_of_string">FLOAT_of_string</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_of_string</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">Util.ergo_float_of_string</span> <span class="id">x</span>)".<br/>
+<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_acos">FLOAT_acos</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_acos</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">acos</span> <span class="id">x</span>)".<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_asin">FLOAT_asin</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_asin</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">asin</span> <span class="id">x</span>)".<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_atan">FLOAT_atan</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_atan</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">atan</span> <span class="id">x</span>)".<br/>
+<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_cos">FLOAT_cos</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_cos</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">cos</span> <span class="id">x</span>)".<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_cosh">FLOAT_cosh</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_cosh</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">cosh</span> <span class="id">x</span>)".<br/>
+<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_sin">FLOAT_sin</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_sin</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">sin</span> <span class="id">x</span>)".<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_sinh">FLOAT_sinh</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_sinh</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">sinh</span> <span class="id">x</span>)".<br/>
+<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_tan">FLOAT_tan</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_tan</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">tan</span> <span class="id">x</span>)".<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_tanh">FLOAT_tanh</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_tanh</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">tanh</span> <span class="id">x</span>)".<br/>
+<br/>
+<div class="doc">Binary operators </div>
+<span class="kwd">Axiom</span> <span class="id"><a name="FLOAT_atan2">FLOAT_atan2</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Float.html#float">float</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">FLOAT_atan2</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> <span class="id">y</span> -&gt; <span class="id">atan2</span> <span class="id">x</span> <span class="id">y</span>)".<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="MathOperators">MathOperators</a></span>.<br/>
+<div class="doc">Ast </div>
+&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="math_unary_op">math_unary_op</a></span> :=<br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_float_of_string">uop_math_float_of_string</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_acos">uop_math_acos</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_asin">uop_math_asin</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_atan">uop_math_atan</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_cos">uop_math_cos</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_cosh">uop_math_cosh</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_sin">uop_math_sin</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_sinh">uop_math_sinh</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_tan">uop_math_tan</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_math_tanh">uop_math_tanh</a></span><br/>
+&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="math_binary_op">math_binary_op</a></span> :=<br/>
+&nbsp;&nbsp;| <span class="id"><a name="bop_math_atan2">bop_math_atan2</a></span><br/>
+&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="MathOperators.toString">toString</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="math_unary_op_tostring">math_unary_op_tostring</a></span> (<span class="id">f</span>:<span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#math_unary_op">math_unary_op</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#f">f</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_float_of_string">uop_math_float_of_string</a></span> =&gt; "<span class="id">floatOfString</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_acos">uop_math_acos</a></span> =&gt; "<span class="id">acos</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_asin">uop_math_asin</a></span> =&gt; "<span class="id">asin</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_atan">uop_math_atan</a></span> =&gt; "<span class="id">atan</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_cos">uop_math_cos</a></span> =&gt; "<span class="id">cos</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_cosh">uop_math_cosh</a></span> =&gt; "<span class="id">cosh</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_sin">uop_math_sin</a></span> =&gt; "<span class="id">sin</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_sinh">uop_math_sinh</a></span> =&gt; "<span class="id">sinh</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_tan">uop_math_tan</a></span> =&gt; "<span class="id">tan</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_tanh">uop_math_tanh</a></span> =&gt; "<span class="id">tanh</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="math_binary_op_tostring">math_binary_op_tostring</a></span> (<span class="id">f</span>:<span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#math_binary_op">math_binary_op</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#f">f</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#bop_math_atan2">bop_math_atan2</a></span> =&gt; "<span class="id">atan2</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#MathOperators.toString">toString</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="MathOperators.toJava">toJava</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="cname">cname</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span> := ^"<span class="id">MathComponent</span>".<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="math_to_java_unary_op">math_to_java_unary_op</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">indent</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat">nat</a></span>) (<span class="id">eol</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">quotel</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>) (<span class="id">fu</span>:<span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#math_unary_op">math_unary_op</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">d</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#fu">fu</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_float_of_string">uop_math_float_of_string</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">floatOfString</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_acos">uop_math_acos</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">acos</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_asin">uop_math_asin</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">asin</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_atan">uop_math_atan</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">atan</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_cos">uop_math_cos</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">cos</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_cosh">uop_math_cosh</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">cosh</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_sin">uop_math_sin</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">sin</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_sinh">uop_math_sinh</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">sinh</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_tan">uop_math_tan</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">tan</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#uop_math_tanh">uop_math_tanh</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">tanh</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="math_to_java_binary_op">math_to_java_binary_op</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">indent</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat">nat</a></span>) (<span class="id">eol</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">quotel</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>) (<span class="id">fb</span>:<span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#math_binary_op">math_binary_op</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">d1</span> <span class="id">d2</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#fb">fb</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#bop_math_atan2">bop_math_atan2</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_binary_op0_foreign">mk_java_binary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#cname">cname</a></span> (^"<span class="id">atan2</span>") <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d1">d1</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#d2">d2</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#MathOperators.toJava">toJava</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="MathOperators.toEJson">toEJson</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="ejson_math_runtime_op">ejson_math_runtime_op</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeFloatOfString">EJsonRuntimeFloatOfString</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeAcos">EJsonRuntimeAcos</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeAsin">EJsonRuntimeAsin</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeAtan">EJsonRuntimeAtan</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeAtan2">EJsonRuntimeAtan2</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeCos">EJsonRuntimeCos</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeCosh">EJsonRuntimeCosh</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeSin">EJsonRuntimeSin</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeSinh">EJsonRuntimeSinh</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeTan">EJsonRuntimeTan</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeTanh">EJsonRuntimeTanh</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="ejson_math_runtime_op_tostring">ejson_math_runtime_op_tostring</a></span> <span class="id">op</span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#op">op</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeFloatOfString">EJsonRuntimeFloatOfString</a></span> =&gt; "<span class="id">floatOfString</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeAcos">EJsonRuntimeAcos</a></span> =&gt; "<span class="id">acos</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeAsin">EJsonRuntimeAsin</a></span> =&gt; "<span class="id">asin</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeAtan">EJsonRuntimeAtan</a></span> =&gt; "<span class="id">atan</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeAtan2">EJsonRuntimeAtan2</a></span> =&gt; "<span class="id">atan2</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeCos">EJsonRuntimeCos</a></span> =&gt; "<span class="id">cos</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeCosh">EJsonRuntimeCosh</a></span> =&gt; "<span class="id">cosh</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeSin">EJsonRuntimeSin</a></span> =&gt; "<span class="id">sin</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeSinh">EJsonRuntimeSinh</a></span> =&gt; "<span class="id">sinh</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeTan">EJsonRuntimeTan</a></span> =&gt; "<span class="id">tan</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#EJsonRuntimeTanh">EJsonRuntimeTanh</a></span> =&gt; "<span class="id">tanh</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#MathOperators.toEJson">toEJson</a></span>.<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.MathComponent.html#MathOperators">MathOperators</a></span>.<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>
