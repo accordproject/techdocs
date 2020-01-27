@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Component.LogComponent</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Component.LogComponent" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Component.LogComponent</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.ZArith.ZArith.html">ZArith</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html">EquivDec</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.Equivalence.html">Equivalence</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.ForeignData.html">Qcert.Data.Model.ForeignData</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.ForeignOperators.html">Qcert.Data.Operators.ForeignOperators</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToJava.html">Qcert.Translation.Operators.ForeignToJava</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.JavaSystem.html">Qcert.Java.JavaSystem</a></span>.<br/>
+<br/>
+<span class="kwd">Import</span> <span class="id">ListNotations</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">string_scope</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">nstring_scope</span>.<br/>
+<br/>
+<div class="doc">Log functions part of the Ergo Standard Library </div>
+<br/>
+<div class="doc">Axioms </div>
+<span class="kwd">Axiom</span> <span class="id"><a name="LOG_string">LOG_string</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#unit">unit</a></span>.<br/>
+<span class="id">Extract</span> <span class="id">Inlined</span> <span class="id">Constant</span> <span class="id">LOG_string</span> =&gt; "(<span class="kwd">fun</span> <span class="id">x</span> -&gt; <span class="id">Logger.log_string</span> <span class="id">x</span>)".<br/>
+<span class="kwd">Axiom</span> <span class="id"><a name="LOG_encode_string">LOG_encode_string</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="LogOperators">LogOperators</a></span>.<br/>
+<div class="doc">Ast </div>
+&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="log_unary_op">log_unary_op</a></span> :=<br/>
+&nbsp;&nbsp;| <span class="id"><a name="uop_log_string">uop_log_string</a></span> : <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#log_unary_op">log_unary_op</a></span><br/>
+&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="LogOperators.toString">toString</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="log_unary_op_tostring">log_unary_op_tostring</a></span> (<span class="id">f</span>:<span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#log_unary_op">log_unary_op</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#f">f</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#uop_log_string">uop_log_string</a></span> =&gt; "<span class="id">logString</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#LogOperators.toString">toString</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="LogOperators.toJava">toJava</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="cname">cname</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span> := ^"<span class="id">LogComponent</span>".<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="log_to_java_unary_op">log_to_java_unary_op</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">indent</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nat">nat</a></span>) (<span class="id">eol</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">quotel</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>) (<span class="id">fu</span>:<span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#log_unary_op">log_unary_op</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id">d</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#java_json">java_json</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#fu">fu</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#uop_log_string">uop_log_string</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Java.Lang.Java.html#mk_java_unary_op0_foreign">mk_java_unary_op0_foreign</a></span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#cname">cname</a></span> (^"<span class="id">logString</span>") <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#d">d</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#LogOperators.toJava">toJava</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="LogOperators.toEJson">toEJson</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="ejson_log_runtime_op">ejson_log_runtime_op</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EJsonRuntimeLogString">EJsonRuntimeLogString</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="ejson_log_runtime_op_tostring">ejson_log_runtime_op_tostring</a></span> <span class="id">op</span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#op">op</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#EJsonRuntimeLogString">EJsonRuntimeLogString</a></span> =&gt; "<span class="id">logString</span>"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#LogOperators.toEJson">toEJson</a></span>.<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#LogOperators">LogOperators</a></span>.<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

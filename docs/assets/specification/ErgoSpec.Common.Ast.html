@@ -1,0 +1,132 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Common.Ast</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Common.Ast" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Common.Ast</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.QLib.html">ErgoSpec.Backend.QLib</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Names.html">ErgoSpec.Common.Names</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Provenance.html">ErgoSpec.Common.Provenance</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="Ast">Ast</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Ast.Imports">Imports</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Ast.Imports.Defn">Defn</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">A</span>:<span class="kwd">Set</span>}. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">N</span>:<span class="kwd">Set</span>}. <br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="import_decl">import_decl</a></span> : <span class="kwd">Set</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="ImportAll">ImportAll</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Imports.Defn.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#import_decl">import_decl</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="ImportSelf">ImportSelf</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Imports.Defn.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#import_decl">import_decl</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="ImportName">ImportName</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Imports.Defn.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#local_name">local_name</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#import_decl">import_decl</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="import_annot">import_annot</a></span> (<span class="id">i</span>:<span class="id"><a href="ErgoSpec.Common.Ast.html#import_decl">import_decl</a></span>) :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#i">i</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#ImportAll">ImportAll</a></span> <span class="id">a</span> <span class="id">_</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#ImportSelf">ImportSelf</a></span> <span class="id">a</span> <span class="id">_</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#ImportName">ImportName</a></span> <span class="id">a</span> <span class="id">_</span> <span class="id">_</span> =&gt; <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="extends">extends</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Imports.Defn.N">N</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Imports.Defn">Defn</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="limport_decl">limport_decl</a></span> : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Common.Ast.html#import_decl">import_decl</a></span> <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="rextends">rextends</a></span> : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Common.Ast.html#extends">extends</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="aextends">aextends</a></span> : <span class="kwd">Set</span> := @<span class="id"><a href="ErgoSpec.Common.Ast.html#extends">extends</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Imports">Imports</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Ast.Abstract">Abstract</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="is_abstract">is_abstract</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#bool">bool</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Abstract">Abstract</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Ast.Patterns">Patterns</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Ast.Patterns.Defn">Defn</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">string</span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">A</span>:<span class="kwd">Set</span>}. <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">N</span>:<span class="kwd">Set</span>}. <br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="type_annotation">type_annotation</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn.N">N</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="ergo_pattern">ergo_pattern</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CaseData">CaseData</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertData.data">QcertData.data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span>                  <span class="docright">(* match against value  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CaseEnum">CaseEnum</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn.N">N</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span>                              <span class="docright">(* match against enum  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CaseWildcard">CaseWildcard</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#type_annotation">type_annotation</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span>            <span class="docright">(* match anything  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CaseLet">CaseLet</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn.A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#type_annotation">type_annotation</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span>       <span class="docright">(* match against type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="CaseLetOption">CaseLetOption</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn.A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#type_annotation">type_annotation</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span> <span class="docright">(* match against type  *)</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns.Defn">Defn</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="rergo_pattern">rergo_pattern</a></span> {<span class="id">A</span>} := @<span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span> <span class="id"><a href="ErgoSpec.Common.Ast.html#A">A</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="aergo_pattern">aergo_pattern</a></span> {<span class="id">A</span>} := @<span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span> <span class="id"><a href="ErgoSpec.Common.Ast.html#A">A</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="lrergo_pattern">lrergo_pattern</a></span> := @<span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span> <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="laergo_pattern">laergo_pattern</a></span> := @<span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span> <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Patterns">Patterns</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Ast.Operators">Operators</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">string</span>.<br/>
+<br/>
+<div class="doc">Unary operators -- Those can be overloaded </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="ergo_unary_operator">ergo_unary_operator</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpUMinus">EOpUMinus</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_unary_operator">ergo_unary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpDot">EOpDot</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_unary_operator">ergo_unary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Global</span> <span class="kwd">Instance</span> <span class="id"><a name="ToString_ergo_unary_operator">ToString_ergo_unary_operator</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#ToString">ToString</a></span> <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_unary_operator">ergo_unary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= {<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#toString">toString</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">fun</span> (<span class="id">op</span>:<span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_unary_operator">ergo_unary_operator</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#op">op</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpUMinus">EOpUMinus</a></span> =&gt; "-"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpDot">EOpDot</a></span> <span class="id">a</span> =&gt; "." ++ <span class="id">a</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}.<br/>
+<br/>
+<div class="doc">Binary operators -- Those can be overloaded </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="ergo_binary_operator">ergo_binary_operator</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpPlus">EOpPlus</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpMinus">EOpMinus</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpMultiply">EOpMultiply</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpDivide">EOpDivide</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpRemainder">EOpRemainder</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpGe">EOpGe</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpGt">EOpGt</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpLe">EOpLe</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="EOpLt">EOpLt</a></span> : <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Global</span> <span class="kwd">Instance</span> <span class="id"><a name="ToString_ergo_binary_operator">ToString_ergo_binary_operator</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#ToString">ToString</a></span> <span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= {<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.CoqLibAdd.html#toString">toString</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">fun</span> (<span class="id">op</span>:<span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_binary_operator">ergo_binary_operator</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#op">op</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpPlus">EOpPlus</a></span> =&gt; "+"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpMinus">EOpMinus</a></span> =&gt; "-"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpMultiply">EOpMultiply</a></span> =&gt; "*"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpDivide">EOpDivide</a></span> =&gt; "/"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpRemainder">EOpRemainder</a></span> =&gt; "%"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpGe">EOpGe</a></span> =&gt; "&gt;="<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpGt">EOpGt</a></span> =&gt; "&gt;"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpLe">EOpLe</a></span> =&gt; "&lt;="<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Common.Ast.html#EOpLt">EOpLt</a></span> =&gt; "&lt;"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast.Operators">Operators</a></span>.<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Ast.html#Ast">Ast</a></span>.<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

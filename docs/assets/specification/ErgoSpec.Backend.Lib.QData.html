@@ -1,0 +1,87 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Lib.QData</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Lib.QData" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Lib.QData</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.DataRuntime.html">Qcert.Data.DataRuntime</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.JSONSystem.html">Qcert.JSON.JSONSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Model.DataToEJson.html">Qcert.Translation.Model.DataToEJson</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Model.EJsonToJSON.html">Qcert.Translation.Model.EJsonToJSON</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QBackendModel.html">ErgoSpec.Backend.Lib.QBackendModel</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QBackendRuntime.html">ErgoSpec.Backend.Lib.QBackendRuntime</a></span>.<br/>
+<br/>
+<span class="kwd">Module</span> <span class="id"><a name="QData">QData</a></span>(<span class="id">ergomodel</span>:<span class="id"><a href="ErgoSpec.Backend.Lib.QBackendModel.html#QBackendModel">QBackendModel</a></span>).<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.json">json</a></span> : <span class="kwd">Set</span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#json">JSON.json</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.data">data</a></span> : <span class="kwd">Set</span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#data">Data.data</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.t">t</a></span> : <span class="kwd">Set</span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span>.<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.jnull">jnull</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.json">json</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jnull">JSON.jnull</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.jnumber">jnumber</a></span> <span class="id">z</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.json">json</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jnumber">JSON.jnumber</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#z">z</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.jbool">jbool</a></span> <span class="id">b</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.json">json</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jbool">JSON.jbool</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#b">b</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.jstring">jstring</a></span> <span class="id">s</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.json">json</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jstring">JSON.jstring</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#s">s</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.jarray">jarray</a></span> <span class="id">jl</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.json">json</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jarray">JSON.jarray</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#jl">jl</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.jobject">jobject</a></span> <span class="id">jl</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.json">json</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.JSON.Model.JSON.html#jobject">JSON.jobject</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#jl">jl</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dunit">dunit</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dunit">Data.dunit</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dnat">dnat</a></span> <span class="id">z</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dnat">Data.dnat</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#z">z</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dfloat">dfloat</a></span> <span class="id">f</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dfloat">Data.dfloat</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#f">f</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dbool">dbool</a></span> <span class="id">b</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dbool">Data.dbool</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#b">b</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dstring">dstring</a></span> <span class="id">s</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dstring">Data.dstring</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#s">s</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dcoll">dcoll</a></span> <span class="id">dl</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dcoll">Data.dcoll</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#dl">dl</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.drec">drec</a></span> <span class="id">dl</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#drec">Data.drec</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#dl">dl</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dleft">dleft</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dleft">Data.dleft</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dright">dright</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dright">Data.dright</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dbrand">dbrand</a></span> <span class="id">b</span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dbrand">Data.dbrand</a></span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#b">b</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dsome">dsome</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dsome">Data.dsome</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dnone">dnone</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dnone">Data.dnone</a></span>.<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.dsuccess">dsuccess</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dleft">Data.dleft</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="QData.derror">derror</a></span> : <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData.data">data</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Model.Data.html#dright">Data.dright</a></span>.<br/>
+&nbsp;&nbsp;<br/>
+<div class="doc">data -&gt; JSON *string* conversion </div>
+<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData">QData</a></span>.<br/>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

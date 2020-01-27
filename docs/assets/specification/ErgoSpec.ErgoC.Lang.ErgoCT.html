@@ -1,0 +1,117 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.ErgoC.Lang.ErgoCT</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.ErgoC.Lang.ErgoCT" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.ErgoC.Lang.ErgoCT</h1>
+<div class="coq">
+<br/>
+<div class="doc">ErgoC is an intermediate language for the Ergo compiler in which:
+<ul>
+<li>
+ Clauses have been resolved to functions
+</li>
+<li>
+ This* expressions have been eliminated
+</li>
+<li>
+ Foreach expressions have only one dimension and no condition
+</li>
+<li>
+ Match expressions have only two branches </li>
+</ul>
+</div>
+<br/>
+<h1> Abstract Syntax </h1>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.QLib.html">ErgoSpec.Backend.QLib</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Provenance.html">ErgoSpec.Common.Provenance</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Result.html">ErgoSpec.Common.Result</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Names.html">ErgoSpec.Common.Names</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Common.Ast.html">ErgoSpec.Common.Ast</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Types.ErgoType.html">ErgoSpec.Types.ErgoType</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html">ErgoSpec.Ergo.Lang.Ergo</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoC.html">ErgoSpec.ErgoC.Lang.ErgoC</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="ErgoCT">ErgoCT</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">m</span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.TypeSystem.TBrandModel.html#brand_model">brand_model</a></span>}.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_pattern">tlaergo_pattern</a></span> := @<span class="id"><a href="ErgoSpec.Common.Ast.html#ergo_pattern">ergo_pattern</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_expr">tlaergo_expr</a></span> := @<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#ergo_expr">ergo_expr</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_stmt">tlaergo_stmt</a></span> := @<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#ergo_stmt">ergo_stmt</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_function">tlaergo_function</a></span> := @<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#ergo_function">ergo_function</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_clause">tlaergo_clause</a></span> := @<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#ergo_clause">ergo_clause</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_contract">tlaergo_contract</a></span> := @<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#ergo_contract">ergo_contract</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_declaration">tlaergo_declaration</a></span> := @<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#ergo_declaration">ergo_declaration</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="tlaergo_module">tlaergo_module</a></span> := @<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#ergo_module">ergo_module</a></span> (<span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span>) <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="kwd">Syntax</span>.<br/>
+<br/>
+<div class="doc">Expression </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="ergoct_expr">ergoct_expr</a></span> := <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#tlaergo_expr">tlaergo_expr</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="exprct_prov_annot">exprct_prov_annot</a></span> (<span class="id">e</span>:<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_expr">ergoct_expr</a></span>) : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#fst">fst</a></span> (<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#expr_annot">expr_annot</a></span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#e">e</a></span>).<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="exprct_type_annot">exprct_type_annot</a></span> (<span class="id">e</span>:<span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_expr">ergoct_expr</a></span>) : <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#snd">snd</a></span> (<span class="id"><a href="ErgoSpec.Ergo.Lang.Ergo.html#expr_annot">expr_annot</a></span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#e">e</a></span>).<br/>
+<br/>
+<div class="doc">Function </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="ergoct_function">ergoct_function</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkFuncCT">mkFuncCT</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="functionct_annot">functionct_annot</a></span> : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="functionct_sig">functionct_sig</a></span> : <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoC.html#sigc">sigc</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="functionct_body">functionct_body</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_expr">ergoct_expr</a></span>; }.<br/>
+<br/>
+<div class="doc">Contract </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="ergoct_contract">ergoct_contract</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkContractCT">mkContractCT</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="contractct_annot">contractct_annot</a></span> : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="contractct_clauses">contractct_clauses</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="ErgoSpec.Common.Names.html#local_name">local_name</a></span> * <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_function">ergoct_function</a></span>); }.<br/>
+<br/>
+<div class="doc">Declaration </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Inductive</span> <span class="id"><a name="ergoct_declaration">ergoct_declaration</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DCTExpr">DCTExpr</a></span> : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_expr">ergoct_expr</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_declaration">ergoct_declaration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DCTConstant">DCTConstant</a></span> : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#ergoc_type">ergoc_type</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Types.ErgoType.html#laergo_type">laergo_type</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_expr">ergoct_expr</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_declaration">ergoct_declaration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DCTFunc">DCTFunc</a></span> : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_function">ergoct_function</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_declaration">ergoct_declaration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a name="DCTContract">DCTContract</a></span> : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span> -&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_contract">ergoct_contract</a></span> -&gt; <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_declaration">ergoct_declaration</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="ergoct_declaration_type">ergoct_declaration_type</a></span> <span class="id">d</span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#d">d</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#DCTExpr">DCTExpr</a></span> (<span class="id">_</span>,<span class="id">t</span>) <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">t</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#DCTConstant">DCTConstant</a></span> (<span class="id">_</span>,<span class="id">t</span>) <span class="id">_</span> <span class="id">_</span> <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">t</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#DCTFunc">DCTFunc</a></span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#DCTContract">DCTContract</a></span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<div class="doc">Module. </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Record</span> <span class="id"><a name="ergoct_module">ergoct_module</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="mkModuleCT">mkModuleCT</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="id"><a name="modulect_annot">modulect_annot</a></span> : <span class="id"><a href="ErgoSpec.Common.Provenance.html#provenance">provenance</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="modulect_namespace">modulect_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a name="modulect_declarations">modulect_declarations</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ergoct_declaration">ergoct_declaration</a></span>; }.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="kwd">Syntax</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="ErgoCT.Semantics">Semantics</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ErgoCT.Semantics">Semantics</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="ErgoCT.Evaluation">Evaluation</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ErgoCT.Evaluation">Evaluation</a></span>.<br/>
+<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.ErgoC.Lang.ErgoCT.html#ErgoCT">ErgoCT</a></span>.<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

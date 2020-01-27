@@ -1,0 +1,106 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Utils.Misc</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Utils.Misc" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Utils.Misc</h1>
+<div class="coq">
+<br/>
+<div class="doc">This file includes a few definitions and theorems used throughout the development </div>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html">Qcert.Utils.NativeString</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="Misc">Misc</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Misc.String">String</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">nstring_scope</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="nstring_multi_append">nstring_multi_append</a></span> {<span class="id">A</span>} <span class="id">separator</span> (<span class="id">f</span>:<span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span> -&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span>) (<span class="id">elems</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring">nstring</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#elems">elems</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span> =&gt; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.NativeString.html#nstring_quote">nstring_quote</a></span> ""<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">e</span> :: <span class="id">elems</span>' =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html#fold_left">fold_left</a></span> (<span class="kwd">fun</span> <span class="id">acc</span> <span class="id">e</span> =&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#acc">acc</a></span> +++ <span class="id"><a href="ErgoSpec.Utils.Misc.html#separator">separator</a></span> +++ (<span class="id"><a href="ErgoSpec.Utils.Misc.html#f">f</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#e">e</a></span>)) <span class="id">elems</span>' (<span class="id"><a href="ErgoSpec.Utils.Misc.html#f">f</a></span> <span class="id">e</span>))%<span class="id">string</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<div class="doc">Turns "foo.bar.baz" into "baz" if there is at least one '.' character </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Parameter</span> <span class="id"><a name="get_local_part">get_local_part</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>.<br/>
+<br/>
+<div class="doc">Finds duplicates in a list of strings </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Parameter</span> <span class="id"><a name="find_duplicate">find_duplicate</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.String">String</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Misc.List">List</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Fixpoint</span> <span class="id"><a name="filter_some">filter_some</a></span> {<span class="id">A</span> <span class="id">B</span>} (<span class="id">f</span>:<span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#B">B</a></span>) (<span class="id">l</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#B">B</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#l">l</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">x</span> :: <span class="id">t</span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#f">f</a></span> <span class="id">x</span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span> =&gt; (<span class="id"><a href="ErgoSpec.Utils.Misc.html#filter_some">filter_some</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#f">f</a></span> <span class="id">t</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">x</span>' =&gt; <span class="id">x</span>' :: (<span class="id"><a href="ErgoSpec.Utils.Misc.html#filter_some">filter_some</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#f">f</a></span> <span class="id">t</span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="postpend">postpend</a></span> {<span class="id">A</span>} (<span class="id">ls</span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) (<span class="id">a</span> : <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Utils.Misc.html#ls">ls</a></span> ++ (<span class="id"><a href="ErgoSpec.Utils.Misc.html#a">a</a></span> :: <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#nil">nil</a></span>).<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Fixpoint</span> <span class="id"><a name="last_some">last_some</a></span> {<span class="id">A</span>} (<span class="id">l</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>)) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">let</span> <span class="id">proc_one</span> (<span class="id">one</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) (<span class="id">acc</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#acc">acc</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">x</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">x</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span> =&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#one">one</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html#fold_right">fold_right</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Utils.Misc.html#proc_one">proc_one</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Utils.Misc.html#l">l</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Fixpoint</span> <span class="id"><a name="last_some_pair">last_some_pair</a></span> {<span class="id">A</span>} {<span class="id">B</span>} (<span class="id">l</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> ((<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) * (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#B">B</a></span>))) : ((<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) * (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#B">B</a></span>)) :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">let</span> <span class="id">proc_one</span> (<span class="id">one</span> : ((<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) * (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#B">B</a></span>))) (<span class="id">acc</span> : ((<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#A">A</a></span>) * (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#B">B</a></span>))) :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#acc">acc</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">x</span>, <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">y</span>) =&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#acc">acc</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">_</span> =&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#one">one</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">in</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html#fold_right">fold_right</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Utils.Misc.html#proc_one">proc_one</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span>, <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span>)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Utils.Misc.html#l">l</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.List">List</a></span>.<br/>
+<br/>
+<div class="doc">Topological sort. </div>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Misc.TopoSort">TopoSort</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">A</span> <span class="id">B</span> <span class="id">C</span>:<span class="kwd">Set</span>}.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Parameter</span> <span class="id"><a name="coq_distinct">coq_distinct</a></span> : (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Parameter</span> <span class="id"><a name="coq_toposort">coq_toposort</a></span> : (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.B">B</a></span>) -&gt; (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> * <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span>) -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Parameter</span> <span class="id"><a name="coq_sort_given_topo_order">coq_sort_given_topo_order</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> -&gt; (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) -&gt; (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.C">C</a></span>-&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) -&gt; (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.C">C</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort.C">C</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TopoSort">TopoSort</a></span>.<br/>
+<br/>
+<div class="doc">Time monitoring </div>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Misc.TimeInstrumentation">TimeInstrumentation</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">A</span> <span class="id">B</span>:<span class="kwd">Set</span>}.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Parameter</span> <span class="id"><a name="coq_time">coq_time</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; (<span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TimeInstrumentation.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TimeInstrumentation.B">B</a></span>) -&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TimeInstrumentation.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TimeInstrumentation.B">B</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.TimeInstrumentation">TimeInstrumentation</a></span>.<br/>
+<br/>
+<div class="doc">Can printout warnings </div>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Misc.Warnings">Warnings</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Context</span> {<span class="id">A</span>:<span class="kwd">Set</span>}.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Parameter</span> <span class="id"><a name="coq_print_warnings">coq_print_warnings</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> -&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.Warnings.A">A</a></span> -&gt; <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.Warnings.A">A</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc.Warnings">Warnings</a></span>.<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Utils.Misc.html#Misc">Misc</a></span>.<br/>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

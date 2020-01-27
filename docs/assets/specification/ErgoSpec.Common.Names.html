@@ -1,0 +1,132 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Common.Names</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Common.Names" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Common.Names</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html">ErgoSpec.Backend.Component.LogComponent</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html">EquivDec</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="Debug">Debug</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="DEBUG_aux">DEBUG_aux</a></span> {<span class="id">A</span>} <span class="id">s</span> (<span class="id">d1</span> <span class="id">d2</span> : <span class="id"><a href="ErgoSpec.Common.Names.html#A">A</a></span>) : <span class="id"><a href="ErgoSpec.Common.Names.html#A">A</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Component.LogComponent.html#LOG_string">LOG_string</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#s">s</a></span> <span class="kwd">with</span>                      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">y</span> =&gt; <span class="kwd">if</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html#unit_eqdec">unit_eqdec</a></span> <span class="id">y</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#tt">tt</a></span> <span class="kwd">then</span> <span class="id"><a href="ErgoSpec.Common.Names.html#d1">d1</a></span> <span class="kwd">else</span> <span class="id"><a href="ErgoSpec.Common.Names.html#d2">d2</a></span>    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="DEBUG">DEBUG</a></span> {<span class="id">A</span>} <span class="id">s</span> (<span class="id">d</span>:<span class="id"><a href="ErgoSpec.Common.Names.html#A">A</a></span>) : <span class="id"><a href="ErgoSpec.Common.Names.html#A">A</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#DEBUG_aux">DEBUG_aux</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#s">s</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#d">d</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#d">d</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Names.html#Debug">Debug</a></span>.<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="Names">Names</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">string</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Names.ScopedNames">ScopedNames</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="local_name">local_name</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="namespace_name">namespace_name</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="enum_name">enum_name</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="namespace_prefix">namespace_prefix</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="relative_name">relative_name</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_prefix">namespace_prefix</a></span> * <span class="id"><a href="ErgoSpec.Common.Names.html#local_name">local_name</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="absolute_name">absolute_name</a></span> : <span class="kwd">Set</span> := <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="absolute_name_of_local_name">absolute_name_of_local_name</a></span> (<span class="id">ns</span>:<span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span>) (<span class="id">ln</span>:<span class="id"><a href="ErgoSpec.Common.Names.html#local_name">local_name</a></span>) : <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#ns">ns</a></span> ++ "." ++ <span class="id"><a href="ErgoSpec.Common.Names.html#ln">ln</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="enum_namespace">enum_namespace</a></span> (<span class="id">ns</span>:<span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span>) (<span class="id">en</span>:<span class="id"><a href="ErgoSpec.Common.Names.html#enum_name">enum_name</a></span>) : <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#ns">ns</a></span> ++ "." ++ <span class="id"><a href="ErgoSpec.Common.Names.html#en">en</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="absolute_name_of_relative_name">absolute_name_of_relative_name</a></span> (<span class="id">local_ns</span>: <span class="id"><a href="ErgoSpec.Common.Names.html#namespace_name">namespace_name</a></span>) (<span class="id">rn</span>: <span class="id"><a href="ErgoSpec.Common.Names.html#relative_name">relative_name</a></span>) : <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name">absolute_name</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Common.Names.html#rn">rn</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span>,<span class="id">ln</span>) =&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#local_ns">local_ns</a></span> <span class="id">ln</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">ns</span>,<span class="id">ln</span>) =&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id">ns</span> <span class="id">ln</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Names.html#Names.ScopedNames">ScopedNames</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Names.ReservedNames">ReservedNames</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="clause_main_name">clause_main_name</a></span> : <span class="id"><a href="ErgoSpec.Common.Names.html#local_name">local_name</a></span> := "<span class="id">main</span>". <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="clause_init_name">clause_init_name</a></span> : <span class="id"><a href="ErgoSpec.Common.Names.html#local_name">local_name</a></span> := "<span class="id">init</span>". <br/>
+<br/>
+<div class="doc">This </div>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="this_this">this_this</a></span> := "<span class="id">__this</span>".           <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="this_contract">this_contract</a></span> := "<span class="id">__contract</span>".   <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="this_state">this_state</a></span> := "<span class="id">__state</span>".         <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="this_emit">this_emit</a></span> := "<span class="id">__emit</span>".           <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="this_request">this_request</a></span> := "<span class="id">__request</span>".     <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="this_response">this_response</a></span> := "<span class="id">__response</span>".   <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="local_state">local_state</a></span> := "<span class="id">__lstate</span>".       <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="local_emit">local_emit</a></span> := "<span class="id">__lemit</span>".         <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="current_time">current_time</a></span> := "<span class="id">__now</span>".         <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="options">options</a></span> := "<span class="id">__options</span>".          <br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Names.html#Names.ReservedNames">ReservedNames</a></span>.<br/>
+&nbsp;&nbsp;<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Names.TypeNames">TypeNames</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_base_namespace">accordproject_base_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.base</span>"%<span class="id">string</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_runtime_namespace">accordproject_runtime_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.cicero.runtime</span>"%<span class="id">string</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_contract_namespace">accordproject_contract_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.cicero.contract</span>"%<span class="id">string</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_stdlib_namespace">accordproject_stdlib_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.ergo.stdlib</span>"%<span class="id">string</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_time_namespace">accordproject_time_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.time</span>"%<span class="id">string</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_top_namespace">accordproject_top_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.ergo.top</span>"%<span class="id">string</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_options_namespace">accordproject_options_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.ergo.options</span>"%<span class="id">string</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="accordproject_template_namespace">accordproject_template_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "<span class="id">org.accordproject.ergo.template</span>"%<span class="id">string</span>.<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_enum_absolute_name">default_enum_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_base_namespace">accordproject_base_namespace</a></span> "<span class="id">Enum</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_event_absolute_name">default_event_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_base_namespace">accordproject_base_namespace</a></span> "<span class="id">Event</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_transaction_absolute_name">default_transaction_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_base_namespace">accordproject_base_namespace</a></span> "<span class="id">Transaction</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_asset_absolute_name">default_asset_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_base_namespace">accordproject_base_namespace</a></span> "<span class="id">Asset</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_participant_absolute_name">default_participant_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_base_namespace">accordproject_base_namespace</a></span> "<span class="id">Participant</span>".<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_request_absolute_name">default_request_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_runtime_namespace">accordproject_runtime_namespace</a></span> "<span class="id">Request</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_response_absolute_name">default_response_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_runtime_namespace">accordproject_runtime_namespace</a></span> "<span class="id">Response</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_state_absolute_name">default_state_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_contract_namespace">accordproject_contract_namespace</a></span> "<span class="id">AccordContractState</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_contract_absolute_name">default_contract_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_contract_namespace">accordproject_contract_namespace</a></span> "<span class="id">AccordContract</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_clause_absolute_name">default_clause_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_contract_namespace">accordproject_contract_namespace</a></span> "<span class="id">AccordClause</span>".<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_error_absolute_name">default_error_absolute_name</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_stdlib_namespace">accordproject_stdlib_namespace</a></span> "<span class="id">ErgoErrorResponse</span>".<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="default_options">default_options</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="ErgoSpec.Common.Names.html#absolute_name_of_local_name">absolute_name_of_local_name</a></span> <span class="id"><a href="ErgoSpec.Common.Names.html#accordproject_options_namespace">accordproject_options_namespace</a></span> "<span class="id">Options</span>".<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Names.html#Names.TypeNames">TypeNames</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Names.Misc">Misc</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="function_name_in_table">function_name_in_table</a></span> (<span class="id">tname</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) (<span class="id">fname</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Common.Names.html#tname">tname</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span> =&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#fname">fname</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id">tname</span> =&gt; <span class="id"><a href="ErgoSpec.Common.Names.html#tname">tname</a></span> ++ "<span class="id">_</span>" ++ <span class="id"><a href="ErgoSpec.Common.Names.html#fname">fname</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+&nbsp;&nbsp;<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Names.html#Names.Misc">Misc</a></span>.<br/>
+<br/>
+&nbsp;&nbsp;<span class="kwd">Section</span> <span class="id"><a name="Names.Namespaces">Namespaces</a></span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="no_namespace">no_namespace</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> := "".<br/>
+&nbsp;&nbsp;<span class="kwd">End</span>  <span class="id"><a href="ErgoSpec.Common.Names.html#Names.Namespaces">Namespaces</a></span>.<br/>
+<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Common.Names.html#Names">Names</a></span>.<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

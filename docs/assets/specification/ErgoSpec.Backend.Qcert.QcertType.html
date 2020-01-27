@@ -1,0 +1,180 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Qcert.QcertType</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Qcert.QcertType" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Qcert.QcertType</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.ZArith.ZArith.html">ZArith</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html">EquivDec</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.RelationClasses.html">RelationClasses</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.Equivalence.html">Equivalence</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.DataSystem.html">Qcert.Data.DataSystem</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html">QcertData</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToSpark.html">QcertToSpark</a></span>.<br/>
+<br/>
+<span class="kwd">Import</span> <span class="id">ListNotations</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">list_scope</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">string_scope</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">nstring_scope</span>.<br/>
+<br/>
+<div class="doc">Foreign typing, used to build the basic_model </div>
+<br/>
+<span class="kwd">Inductive</span> <span class="id"><a name="enhanced_type">enhanced_type</a></span> : <span class="kwd">Set</span> :=<br/>
+&nbsp;&nbsp;| <span class="id"><a name="enhancedTop">enhancedTop</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="enhancedBottom">enhancedBottom</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="enhancedString">enhancedString</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="enhancedDateTimeFormat">enhancedDateTimeFormat</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="enhancedDateTime">enhancedDateTime</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="enhancedDateTimeDuration">enhancedDateTimeDuration</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a name="enhancedDateTimePeriod">enhancedDateTimePeriod</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span><br/>
+.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_type_to_string">enhanced_type_to_string</a></span> (<span class="id">et</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span> :=<br/>
+&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#et">et</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedTop">enhancedTop</a></span> =&gt; "<span class="id">ETop</span>"<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedBottom">enhancedBottom</a></span> =&gt; "<span class="id">EBottom</span>"<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span> =&gt; "<span class="id">EString</span>"<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span> =&gt; "<span class="id">EDateTimeFormat</span>"<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span> =&gt; "<span class="id">EDateTime</span>"<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span> =&gt; "<span class="id">EDateTimeDuration</span>"<br/>
+&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span> =&gt; "<span class="id">EDateTimePeriod</span>"<br/>
+&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="string_to_enhanced_type">string_to_enhanced_type</a></span> (<span class="id">s</span>:<span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html#string">string</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span> :=<br/>
+&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#s">s</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;| "<span class="id">ETop</span>"%<span class="id">string</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedTop">enhancedTop</a></span><br/>
+&nbsp;&nbsp;| "<span class="id">EBottom</span>"%<span class="id">string</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedBottom">enhancedBottom</a></span><br/>
+&nbsp;&nbsp;| "<span class="id">EString</span>"%<span class="id">string</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span><br/>
+&nbsp;&nbsp;| "<span class="id">EDateTimeFormat</span>"%<span class="id">string</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span><br/>
+&nbsp;&nbsp;| "<span class="id">EDateTime</span>"%<span class="id">string</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span><br/>
+&nbsp;&nbsp;| "<span class="id">EDateTimeDuration</span>"%<span class="id">string</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span><br/>
+&nbsp;&nbsp;| "<span class="id">EDateTimePeriod</span>"%<span class="id">string</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span><br/>
+&nbsp;&nbsp;| <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span><br/>
+&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_type_join">enhanced_type_join</a></span> (<span class="id">t1</span> <span class="id">t2</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span>)<br/>
+&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t1">t1</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t2">t2</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedBottom">enhancedBottom</a></span>, <span class="id">_</span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t2">t2</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">_</span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedBottom">enhancedBottom</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t1">t1</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">_</span>, <span class="id">_</span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedTop">enhancedTop</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_type_meet">enhanced_type_meet</a></span> (<span class="id">t1</span> <span class="id">t2</span>:<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span>)<br/>
+&nbsp;&nbsp;:= <span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t1">t1</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t2">t2</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedTop">enhancedTop</a></span>, <span class="id">_</span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t2">t2</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">_</span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedTop">enhancedTop</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t1">t1</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedString">enhancedString</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeFormat">enhancedDateTimeFormat</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTime">enhancedDateTime</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimeDuration">enhancedDateTimeDuration</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span>, <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedDateTimePeriod">enhancedDateTimePeriod</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id">_</span>, <span class="id">_</span> =&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedBottom">enhancedBottom</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Inductive</span> <span class="id"><a name="enhanced_subtype">enhanced_subtype</a></span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span> -&gt; <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span> -&gt; <span class="kwd">Prop</span> :=<br/>
+| <span class="id"><a name="enhanced_subtype_top">enhanced_subtype_top</a></span> <span class="id">t</span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_subtype">enhanced_subtype</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t">t</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedTop">enhancedTop</a></span><br/>
+| <span class="id"><a name="enhanced_subtype_bottom">enhanced_subtype_bottom</a></span> <span class="id">t</span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_subtype">enhanced_subtype</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhancedBottom">enhancedBottom</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t">t</a></span><br/>
+| <span class="id"><a name="enhanced_subtype_refl">enhanced_subtype_refl</a></span> <span class="id">t</span> : <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_subtype">enhanced_subtype</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t">t</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#t">t</a></span>.<br/>
+<br/>
+<span class="kwd">Instance</span> <span class="id"><a name="enhanced_subtype_pre">enhanced_subtype_pre</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.RelationClasses.html#PreOrder">PreOrder</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_subtype">enhanced_subtype</a></span>.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof58')">Proof.</div>
+<div class="proofscript" id="proof58">
+&nbsp;&nbsp;<span class="id">constructor</span>; <span class="tactic">red</span>; <span class="tactic">intros</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">destruct</span> <span class="id">x</span>; <span class="id">constructor</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">inversion</span> <span class="id">H</span>; <span class="tactic">inversion</span> <span class="id">H0</span>; <span class="tactic">subst</span>; <span class="tactic">try</span> <span class="id">constructor</span>; <span class="tactic">congruence</span>.<br/>
+Qed.</div>
+<br/>
+<span class="kwd">Instance</span> <span class="id"><a name="enhanced_subtype_post">enhanced_subtype_post</a></span> : <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.RelationClasses.html#PartialOrder">PartialOrder</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Logic.html#eq">eq</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_subtype">enhanced_subtype</a></span>.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof59')">Proof.</div>
+<div class="proofscript" id="proof59">
+&nbsp;&nbsp;<span class="tactic">intros</span> <span class="id">x</span> <span class="id">y</span>; <span class="tactic">split</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">intros</span>; <span class="tactic">subst</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">repeat</span> <span class="tactic">red</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">split</span>; <span class="id">constructor</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">destruct</span> 1.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">inversion</span> <span class="id">H</span>; <span class="tactic">inversion</span> <span class="id">H0</span>; <span class="tactic">congruence</span>.<br/>
+Qed.</div>
+<br/>
+<span class="kwd">Instance</span> <span class="id"><a name="enhanced_type_lattice">enhanced_type_lattice</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Lattice.html#Lattice">Lattice</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Logic.html#eq">eq</a></span><br/>
+&nbsp;&nbsp;:= {<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Lattice.html#join">join</a></span> := <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type_join">enhanced_type_join</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Lattice.html#meet">meet</a></span> := <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type_meet">enhanced_type_meet</a></span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;}.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof60')">Proof.</div>
+<div class="proofscript" id="proof60">
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span> <span class="id">t2</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">destruct</span> <span class="id">t2</span>; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span> <span class="id">t2</span> <span class="id">t3</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">destruct</span> <span class="id">t2</span>; <span class="tactic">destruct</span> <span class="id">t3</span>; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">simpl</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">simpl</span>; <span class="tactic">try</span> <span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span> <span class="id">t2</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">destruct</span> <span class="id">t2</span>; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span> <span class="id">t2</span> <span class="id">t3</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">destruct</span> <span class="id">t2</span>; <span class="tactic">destruct</span> <span class="id">t3</span>; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span> <span class="id">t2</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">destruct</span> <span class="id">t2</span>; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">red</span>; <span class="tactic">intros</span> <span class="id">t1</span> <span class="id">t2</span>.<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">t1</span>; <span class="tactic">destruct</span> <span class="id">t2</span>; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tactic">reflexivity</span>.<br/>
+Defined.</div>
+<br/>
+<span class="kwd">Instance</span> <span class="id"><a name="enhanced_type_olattice">enhanced_type_olattice</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Lattice.html#OLattice">OLattice</a></span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Logic.html#eq">eq</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_subtype">enhanced_subtype</a></span>.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof61')">Proof.</div>
+<div class="proofscript" id="proof61">
+&nbsp;&nbsp;<span class="id">constructor</span>.<br/>
+&nbsp;&nbsp;<span class="tactic">split</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">destruct</span> <span class="id">a</span>; <span class="tactic">destruct</span> <span class="id">b</span>; <span class="tactic">inversion</span> 1; <span class="tactic">simpl</span>; <span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;- <span class="tactic">destruct</span> <span class="id">a</span>; <span class="tactic">destruct</span> <span class="id">b</span>; <span class="tactic">inversion</span> 1; <span class="tactic">simpl</span>;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id">constructor</span>.<br/>
+Qed.</div>
+<br/>
+<span class="kwd">Program</span> <span class="kwd">Instance</span> <span class="id"><a name="enhanced_foreign_type">enhanced_foreign_type</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.TypeSystem.ForeignType.html#foreign_type">foreign_type</a></span><br/>
+&nbsp;&nbsp;:= <span class="id"><a href="https://querycert.github.io/html/Qcert.TypeSystem.ForeignType.html#mk_foreign_type">mk_foreign_type</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertType.html#enhanced_type">enhanced_type</a></span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span> <span class="id">_</span>.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof62')">Next Obligation.</div>
+<div class="proofscript" id="proof62">
+&nbsp;&nbsp;<span class="tactic">red</span>.<br/>
+&nbsp;&nbsp;<span class="tactic">unfold</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.Equivalence.html#equiv">equiv</a></span>, <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.RelationClasses.html#complement">complement</a></span>.<br/>
+&nbsp;&nbsp;<span class="tactic">intros</span>.<br/>
+&nbsp;&nbsp;<span class="id">change</span> ({<span class="id">x</span> = <span class="id">y</span>} + {<span class="id">x</span> &lt;&gt; <span class="id">y</span>}).<br/>
+&nbsp;&nbsp;<span class="id">decide</span> <span class="id">equality</span>.<br/>
+Defined.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof63')">Next Obligation.</div>
+<div class="proofscript" id="proof63">
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">a</span>; <span class="tactic">destruct</span> <span class="id">b</span>; <span class="tactic">try</span> <span class="id">solve</span> [<span class="id">left</span>; <span class="id">constructor</span> | <span class="id">right</span>; <span class="tactic">inversion</span> 1].<br/>
+Defined.</div>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.Qcert.QcertToReduceOps</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.Qcert.QcertToReduceOps" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.Qcert.QcertToReduceOps</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Lists.List.html">List</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.ZArith.ZArith.html">ZArith</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.EquivDec.html">EquivDec</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.RelationClasses.html">RelationClasses</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Classes.Equivalence.html">Equivalence</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="http://coq.inria.fr/library/Coq.Strings.String.html">String</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.DataSystem.html">Qcert.Data.DataSystem</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.ForeignReduceOps.html">Qcert.NNRCMR.Lang.ForeignReduceOps</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToReduceOps.html">Qcert.Translation.Operators.ForeignToReduceOps</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html">QcertData</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Import</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html">QcertReduceOps</a></span>.<br/>
+<br/>
+<span class="kwd">Import</span> <span class="id">ListNotations</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">list_scope</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">string_scope</span>.<br/>
+<span class="kwd">Local</span> <span class="kwd">Open</span> <span class="kwd">Scope</span> <span class="id">nstring_scope</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_to_reduce_op">enhanced_to_reduce_op</a></span> (<span class="id">uop</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#unary_op">unary_op</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#reduce_op">NNRCMR.reduce_op</a></span> :=<br/>
+&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToReduceOps.html#uop">uop</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpCount">OpCount</a></span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpCount">RedOpCount</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatSum">OpNatSum</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpSum">RedOpSum</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatSum">OpFloatSum</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpSum">RedOpSum</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatMin">OpNatMin</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMin">RedOpMin</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatBagMin">OpFloatBagMin</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMin">RedOpMin</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatMax">OpNatMax</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMax">RedOpMax</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatBagMax">OpFloatBagMax</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMax">RedOpMax</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatMean">OpNatMean</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpArithMean">RedOpArithMean</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatMean">OpFloatMean</a></span> =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpArithMean">RedOpArithMean</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>))<br/>
+&nbsp;&nbsp;| <span class="id">_</span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span><br/>
+&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Definition</span> <span class="id"><a name="enhanced_of_reduce_op">enhanced_of_reduce_op</a></span> (<span class="id">rop</span>:<span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#reduce_op">NNRCMR.reduce_op</a></span>) : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#unary_op">unary_op</a></span> :=<br/>
+&nbsp;&nbsp;<span class="kwd">match</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToReduceOps.html#rop">rop</a></span> <span class="kwd">with</span><br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpCount">RedOpCount</a></span> =&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpCount">OpCount</a></span><br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpSum">RedOpSum</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatSum">OpNatSum</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpSum">RedOpSum</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatSum">OpFloatSum</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMin">RedOpMin</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatMin">OpNatMin</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMin">RedOpMin</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatBagMin">OpFloatBagMin</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMax">RedOpMax</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatMax">OpNatMax</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpMax">RedOpMax</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatBagMax">OpFloatBagMax</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpArithMean">RedOpArithMean</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_int">enhanced_numeric_int</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpNatMean">OpNatMean</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpArithMean">RedOpArithMean</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_numeric_float">enhanced_numeric_float</a></span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#Some">Some</a></span> (<span class="id"><a href="https://querycert.github.io/html/Qcert.Data.Operators.UnaryOperators.html#OpFloatMean">OpFloatMean</a></span>)<br/>
+&nbsp;&nbsp;| <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#RedOpForeign">NNRCMR.RedOpForeign</a></span> (<span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#RedOpStats">RedOpStats</a></span> <span class="id">_</span>) =&gt;<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#None">None</a></span> <br/>
+&nbsp;&nbsp;<span class="kwd">end</span>.<br/>
+<br/>
+<span class="kwd">Program</span> <span class="kwd">Instance</span> <span class="id"><a name="enhanced_foreign_to_reduce_op">enhanced_foreign_to_reduce_op</a></span> : <span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToReduceOps.html#foreign_to_reduce_op">foreign_to_reduce_op</a></span> :=<br/>
+&nbsp;&nbsp;<span class="id"><a href="https://querycert.github.io/html/Qcert.Translation.Operators.ForeignToReduceOps.html#mk_foreign_to_reduce_op">mk_foreign_to_reduce_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertData.html#enhanced_foreign_runtime">enhanced_foreign_runtime</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertReduceOps.html#enhanced_foreign_reduce_op">enhanced_foreign_reduce_op</a></span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToReduceOps.html#enhanced_to_reduce_op">enhanced_to_reduce_op</a></span> <span class="id">_</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertToReduceOps.html#enhanced_of_reduce_op">enhanced_of_reduce_op</a></span> <span class="id">_</span>.<br/>
+<div class="toggleproof" onclick="toggleDisplay('proof56')">Next Obligation.</div>
+<div class="proofscript" id="proof56">
+&nbsp;&nbsp;<span class="tactic">unfold</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#reduce_op_eval">NNRCMR.reduce_op_eval</a></span>.<br/>
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">uop</span>; <span class="tactic">simpl</span> <span class="kwd">in</span> *; <span class="id">invcs</span> <span class="id">H</span>; <span class="tactic">try</span> <span class="tactic">reflexivity</span>.<br/>
+Qed.</div>
+<div class="toggleproof" onclick="toggleDisplay('proof57')">Next Obligation.</div>
+<div class="proofscript" id="proof57">
+&nbsp;&nbsp;<span class="tactic">unfold</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.NNRCMR.Lang.NNRCMR.html#reduce_op_eval">NNRCMR.reduce_op_eval</a></span>.<br/>
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">rop</span>; <span class="tactic">simpl</span> <span class="kwd">in</span> *; <span class="id">invcs</span> <span class="id">H</span>; <span class="tactic">try</span> <span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">f</span>; <span class="id">invcs</span> <span class="id">H1</span>; <span class="tactic">simpl</span>; <span class="tactic">try</span> <span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">typ</span>; <span class="id">invcs</span> <span class="id">H0</span>; <span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">typ</span>; <span class="id">invcs</span> <span class="id">H0</span>; <span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">typ</span>; <span class="id">invcs</span> <span class="id">H0</span>; <span class="tactic">reflexivity</span>.<br/>
+&nbsp;&nbsp;<span class="tactic">destruct</span> <span class="id">typ</span>; <span class="id">invcs</span> <span class="id">H0</span>; <span class="tactic">reflexivity</span>.<br/>
+Qed.</div>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>

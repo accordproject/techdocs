@@ -1,0 +1,43 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module ErgoSpec.Backend.QLib</title>
+<meta name="description" content="Documentation of Coq module ErgoSpec.Backend.QLib" />
+<link href="coq2html.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="coq2html.js"> </script>
+</head>
+
+<body onload="hideAll('proofscript')">
+<h1 class="title">Module ErgoSpec.Backend.QLib</h1>
+<div class="coq">
+<br/>
+<span class="kwd">Require</span> <span class="kwd">Export</span> <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.Utils.html">Qcert.Utils.Utils</a></span>.<br/>
+<span class="kwd">Require</span> <span class="kwd">Export</span> <span class="id"><a href="ErgoSpec.Backend.ForeignModel.html">ForeignModel</a></span>.<br/>
+<br/>
+<span class="kwd">Require</span> <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertModel.html">ErgoSpec.Backend.Qcert.QcertModel</a></span>.<br/>
+<span class="kwd">Require</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QBackendRuntime.html">ErgoSpec.Backend.Lib.QBackendRuntime</a></span>.<br/>
+<span class="kwd">Require</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QType.html">ErgoSpec.Backend.Lib.QType</a></span>.<br/>
+<span class="kwd">Require</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html">ErgoSpec.Backend.Lib.QData</a></span>.<br/>
+<span class="kwd">Require</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QOps.html">ErgoSpec.Backend.Lib.QOps</a></span>.<br/>
+<span class="kwd">Require</span> <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html">ErgoSpec.Backend.Lib.QCodeGen</a></span>.<br/>
+<br/>
+<span class="kwd">Module</span> <span class="id"><a name="QcertBackend">QcertBackend</a></span> := <span class="id"><a href="ErgoSpec.Backend.Lib.QBackendRuntime.html#QBackendRuntime">QBackendRuntime.QBackendRuntime</a></span> &lt;+ <span class="id"><a href="ErgoSpec.Backend.Qcert.QcertModel.html#CompEnhanced">QcertModel.CompEnhanced</a></span>.<br/>
+<span class="kwd">Module</span> <span class="id"><a name="QcertData">QcertData</a></span> := <span class="id"><a href="ErgoSpec.Backend.Lib.QData.html#QData">QData.QData</a></span>(<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertBackend">QcertBackend</a></span>).<br/>
+<span class="kwd">Module</span> <span class="id"><a name="QcertOps">QcertOps</a></span> := <span class="id"><a href="ErgoSpec.Backend.Lib.QOps.html#QOps">QOps.QOps</a></span>(<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertBackend">QcertBackend</a></span>).<br/>
+<span class="kwd">Module</span> <span class="id"><a name="QcertCodeGen">QcertCodeGen</a></span> := <span class="id"><a href="ErgoSpec.Backend.Lib.QCodeGen.html#QCodeGen">QCodeGen.QCodeGen</a></span>(<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertBackend">QcertBackend</a></span>).<br/>
+<span class="kwd">Module</span> <span class="id"><a name="QcertType">QcertType</a></span> := <span class="id"><a href="ErgoSpec.Backend.Lib.QType.html#QType">QType.QType</a></span>(<span class="id"><a href="ErgoSpec.Backend.QLib.html#QcertBackend">QcertBackend</a></span>).<br/>
+<br/>
+<span class="kwd">Section</span> <span class="id"><a name="Defs">Defs</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="zip">zip</a></span> {<span class="id">A</span>} {<span class="id">B</span>} : <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Backend.QLib.html#A">A</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> <span class="id"><a href="ErgoSpec.Backend.QLib.html#B">B</a></span> -&gt; <span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#option">option</a></span> (<span class="id"><a href="http://coq.inria.fr/library/Coq.Init.Datatypes.html#list">list</a></span> (<span class="id"><a href="ErgoSpec.Backend.QLib.html#A">A</a></span> * <span class="id"><a href="ErgoSpec.Backend.QLib.html#B">B</a></span>)) := <span class="id"><a href="https://querycert.github.io/html/Qcert.Utils.ListAdd.html#zip">zip</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="ergo_data">ergo_data</a></span> := <span class="id"><a href="ErgoSpec.Backend.QLib.html#data">QcertData.data</a></span>.<br/>
+&nbsp;&nbsp;<span class="kwd">Definition</span> <span class="id"><a name="ergoc_type">ergoc_type</a></span> {<span class="id">br</span>} := @<span class="id"><a href="ErgoSpec.Backend.QLib.html#ectype">QcertType.ectype</a></span> <span class="id"><a href="ErgoSpec.Backend.QLib.html#br">br</a></span>.<br/>
+<span class="kwd">End</span> <span class="id"><a href="ErgoSpec.Backend.QLib.html#Defs">Defs</a></span>.<br/>
+<br/>
+
+</div>
+<div class="footer"><hr/>Generated by <a href="https://github.com/xavierleroy/coq2html/">coq2html</div>
+</body>
+</html>
