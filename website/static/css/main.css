@@ -3345,7 +3345,7 @@ a:hover {
 }
 
 #features .blockElement {
-  margin: 0px 5px;
+  margin: 5px;
 }
 
 #features .blockElement img {
@@ -3384,7 +3384,7 @@ a:hover {
 
 #features h2 a {
   color: #fff;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 #features a {

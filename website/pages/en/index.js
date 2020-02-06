@@ -99,7 +99,7 @@ const Block = props => (
 );
 
 const Features = props => (
-  <Block layout="fourColumn" id="features">
+  <Block layout="threeColumn" id="features">
     {[
       {
         content: `Create templates for human-readable and machine-executable contracts using Open Source [Cicero](${siteConfig.baseUrl}docs/started-installation.html).`,
@@ -108,6 +108,10 @@ const Features = props => (
       {
         content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/logic-ergo.html) domain-specific language.`,
         title: `[![Ergo](${imgUrl('ergo-logo.svg')})](${siteConfig.baseUrl}docs/logic-ergo.html)`,
+      },
+      {
+        content: `Model the data for your contracts in a platform neutral format with the [Concerto](${siteConfig.baseUrl}docs/model-concerto.html) schema language.`,
+        title: `[Concerto](${siteConfig.baseUrl}docs/model-concerto.html)`,
       },
       {
         content: `Find user-contributed open source templates in the [Template Library](https://templates.accordproject.org/).`,

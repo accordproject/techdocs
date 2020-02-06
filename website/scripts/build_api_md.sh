@@ -27,6 +27,6 @@ rm -rf ergo
 
 ## Build the Concerto API
 git clone https://github.com/accordproject/concerto.git
-./node_modules/.bin/jsdoc2md -c ./scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/index.js ./concerto/packages/concerto-core/lib/**/*.js > ../docs/concerto-api.md
-./node_modules/.bin/jsdoc2md --template ./scripts/concerto-api.hbs -c ./scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/index.js ./concerto/packages/concerto-core/lib/**/*.js > ../docs/concerto-api.md
+./node_modules/.bin/jsdoc2md --files ./concerto/packages/concerto-core/index.js ./concerto/packages/concerto-core/lib/**/*.js > ../docs/concerto-api.md
+./node_modules/.bin/jsdoc2md --template ./scripts/concerto-api.hbs --files ./concerto/packages/concerto-core/index.js ./concerto/packages/concerto-core/lib/**/*.js > ../docs/concerto-api.md
 rm -rf concerto
