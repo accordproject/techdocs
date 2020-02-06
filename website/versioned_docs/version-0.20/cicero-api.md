@@ -1,7 +1,6 @@
 ---
-id: version-0.20-cicero-api
+id: cicero-api
 title: Cicero API
-original_id: cicero-api
 ---
 
 ## Modules
@@ -70,10 +69,10 @@ Clause Engine
 * [cicero-engine](#module_cicero-engine)
     * [~Engine](#module_cicero-engine.Engine)
         * [new Engine()](#new_module_cicero-engine.Engine_new)
-        * [.execute(clause, request, state, currentTime)](#module_cicero-engine.Engine+execute) ⇒ <code>Promise</code>
+        * [.trigger(clause, request, state, currentTime)](#module_cicero-engine.Engine+trigger) ⇒ <code>Promise</code>
         * [.invoke(clause, clauseName, params, state, currentTime)](#module_cicero-engine.Engine+invoke) ⇒ <code>Promise</code>
         * [.init(clause, currentTime)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
-        * [.generateText(clause, [options], currentTime)](#module_cicero-engine.Engine+generateText) ⇒ <code>Promise</code>
+        * [.draft(clause, [options], currentTime)](#module_cicero-engine.Engine+draft) ⇒ <code>Promise</code>
         * [.getErgoEngine()](#module_cicero-engine.Engine+getErgoEngine) ⇒ <code>ErgoEngine</code>
 
 <a name="module_cicero-engine.Engine"></a>
@@ -88,10 +87,10 @@ Engine class. Stateless execution of clauses against a request object, returning
 
 * [~Engine](#module_cicero-engine.Engine)
     * [new Engine()](#new_module_cicero-engine.Engine_new)
-    * [.execute(clause, request, state, currentTime)](#module_cicero-engine.Engine+execute) ⇒ <code>Promise</code>
+    * [.trigger(clause, request, state, currentTime)](#module_cicero-engine.Engine+trigger) ⇒ <code>Promise</code>
     * [.invoke(clause, clauseName, params, state, currentTime)](#module_cicero-engine.Engine+invoke) ⇒ <code>Promise</code>
     * [.init(clause, currentTime)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
-    * [.generateText(clause, [options], currentTime)](#module_cicero-engine.Engine+generateText) ⇒ <code>Promise</code>
+    * [.draft(clause, [options], currentTime)](#module_cicero-engine.Engine+draft) ⇒ <code>Promise</code>
     * [.getErgoEngine()](#module_cicero-engine.Engine+getErgoEngine) ⇒ <code>ErgoEngine</code>
 
 <a name="new_module_cicero-engine.Engine_new"></a>
@@ -99,9 +98,9 @@ Engine class. Stateless execution of clauses against a request object, returning
 #### new Engine()
 Create the Engine.
 
-<a name="module_cicero-engine.Engine+execute"></a>
+<a name="module_cicero-engine.Engine+trigger"></a>
 
-#### engine.execute(clause, request, state, currentTime) ⇒ <code>Promise</code>
+#### engine.trigger(clause, request, state, currentTime) ⇒ <code>Promise</code>
 Send a request to a clause for execution
 
 **Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
@@ -109,7 +108,7 @@ Send a request to a clause for execution
 
 | Param | Type | Description |
 | --- | --- | --- |
-| clause | [<code>Clause</code>](#Clause) | the clause to execute |
+| clause | [<code>Clause</code>](#Clause) | the clause |
 | request | <code>object</code> | the request, a JS object that can be deserialized using the Composer serializer. |
 | state | <code>object</code> | the contract state, a JS object that can be deserialized using the Composer serializer. |
 | currentTime | <code>string</code> | the definition of 'now' |
@@ -124,7 +123,7 @@ Invoke a specific clause for execution
 
 | Param | Type | Description |
 | --- | --- | --- |
-| clause | [<code>Clause</code>](#Clause) | the clause to execute |
+| clause | [<code>Clause</code>](#Clause) | the clause |
 | clauseName | <code>string</code> | the clause name |
 | params | <code>object</code> | the clause parameters, a JS object whose fields that can be deserialized using the Composer serializer. |
 | state | <code>object</code> | the contract state, a JS object that can be deserialized using the Composer serializer. |
@@ -140,12 +139,12 @@ Initialize a clause
 
 | Param | Type | Description |
 | --- | --- | --- |
-| clause | [<code>Clause</code>](#Clause) | the clause to execute |
+| clause | [<code>Clause</code>](#Clause) | the clause |
 | currentTime | <code>string</code> | the definition of 'now' |
 
-<a name="module_cicero-engine.Engine+generateText"></a>
+<a name="module_cicero-engine.Engine+draft"></a>
 
-#### engine.generateText(clause, [options], currentTime) ⇒ <code>Promise</code>
+#### engine.draft(clause, [options], currentTime) ⇒ <code>Promise</code>
 Generate Text for a clause
 
 **Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
@@ -153,7 +152,7 @@ Generate Text for a clause
 
 | Param | Type | Description |
 | --- | --- | --- |
-| clause | [<code>Clause</code>](#Clause) | the clause to execute |
+| clause | [<code>Clause</code>](#Clause) | the clause |
 | [options] | <code>\*</code> | text generation options. options.wrapVariables encloses variables and editable sections in '<variable ...' and '/>' |
 | currentTime | <code>string</code> | the definition of 'now' |
 
@@ -239,7 +238,6 @@ Defines the metadata for a Template, including the name, version, README markdow
     * [new Metadata(packageJson, readme, samples, request)](#new_Metadata_new)
     * [.getTemplateType()](#Metadata+getTemplateType) ⇒ <code>number</code>
     * [.getRuntime()](#Metadata+getRuntime) ⇒ <code>string</code>
-    * [.getErgoVersion()](#Metadata+getErgoVersion) ⇒ <code>string</code>
     * [.getCiceroVersion()](#Metadata+getCiceroVersion) ⇒ <code>string</code>
     * [.satisfiesCiceroVersion(version)](#Metadata+satisfiesCiceroVersion) ⇒ <code>string</code>
     * [.getSamples()](#Metadata+getSamples) ⇒ <code>object</code>
@@ -287,14 +285,6 @@ has not been compiled for a specific runtime.
 
 **Kind**: instance method of [<code>Metadata</code>](#Metadata)  
 **Returns**: <code>string</code> - the name of the runtime  
-<a name="Metadata+getErgoVersion"></a>
-
-### metadata.getErgoVersion() ⇒ <code>string</code>
-Returns the Ergo version that the Ergo code in this template is compatible with. This
-is null for templates that do not contain source Ergo code.
-
-**Kind**: instance method of [<code>Metadata</code>](#Metadata)  
-**Returns**: <code>string</code> - the version of Ergo  
 <a name="Metadata+getCiceroVersion"></a>
 
 ### metadata.getCiceroVersion() ⇒ <code>string</code>
@@ -433,6 +423,7 @@ Generates and manages a Nearley parser for a template.
         * [.getTemplatizedGrammar()](#ParserManager+getTemplatizedGrammar) ⇒ <code>String</code>
         * [.roundtripMarkdown(text)](#ParserManager+roundtripMarkdown) ⇒ <code>string</code>
     * _static_
+        * [.adjustListBlock(x, separator)](#ParserManager.adjustListBlock) ⇒ <code>object</code>
         * [.getProperty(templateModel, element)](#ParserManager.getProperty) ⇒ <code>\*</code>
         * [._throwTemplateExceptionForElement(message, element)](#ParserManager._throwTemplateExceptionForElement)
         * [.compileGrammar(sourceCode)](#ParserManager.compileGrammar) ⇒ <code>object</code>
@@ -564,6 +555,19 @@ Round-trip markdown
 | --- | --- | --- |
 | text | <code>string</code> | the markdown text |
 
+<a name="ParserManager.adjustListBlock"></a>
+
+### ParserManager.adjustListBlock(x, separator) ⇒ <code>object</code>
+Adjust the template for list blocks
+
+**Kind**: static method of [<code>ParserManager</code>](#ParserManager)  
+**Returns**: <code>object</code> - the new template AST node  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| x | <code>object</code> | The current template AST node |
+| separator | <code>String</code> | The list separator |
+
 <a name="ParserManager.getProperty"></a>
 
 ### ParserManager.getProperty(templateModel, element) ⇒ <code>\*</code>
@@ -638,6 +642,7 @@ template.
         * *[.getEmitTypes()](#Template+getEmitTypes) ⇒ <code>Array</code>*
         * *[.getStateTypes()](#Template+getStateTypes) ⇒ <code>Array</code>*
         * *[.hasLogic()](#Template+hasLogic) ⇒ <code>boolean</code>*
+        * *[.grammarHasErgoExpression()](#Template+grammarHasErgoExpression) ⇒ <code>boolean</code>*
     * _static_
         * *[.fromDirectory(path, [options])](#Template.fromDirectory) ⇒ [<code>Promise.&lt;Template&gt;</code>](#Template)*
         * *[.fromArchive(buffer, [options])](#Template.fromArchive) ⇒ [<code>Promise.&lt;Template&gt;</code>](#Template)*
@@ -820,6 +825,13 @@ Returns true if the template has logic, i.e. has more than one script file.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
 **Returns**: <code>boolean</code> - true if the template has logic  
+<a name="Template+grammarHasErgoExpression"></a>
+
+### *template.grammarHasErgoExpression() ⇒ <code>boolean</code>*
+Checks whether the template grammar has computer (Ergo) expressions
+
+**Kind**: instance method of [<code>Template</code>](#Template)  
+**Returns**: <code>boolean</code> - True if the template grammar has Ergo expressions (`{{% ... %}}`)  
 <a name="Template.fromDirectory"></a>
 
 ### *Template.fromDirectory(path, [options]) ⇒ [<code>Promise.&lt;Template&gt;</code>](#Template)*
@@ -897,7 +909,7 @@ calling the parse method and passing in natural language text that conforms to t
         * *[.getEngine()](#TemplateInstance+getEngine) ⇒ <code>object</code>*
         * *[.getDataAsConcertoObject()](#TemplateInstance+getDataAsConcertoObject) ⇒ <code>object</code>*
         * *[.parse(input, [currentTime], [fileName])](#TemplateInstance+parse)*
-        * *[.generateText([options], currentTime)](#TemplateInstance+generateText) ⇒ <code>string</code>*
+        * *[.draft([options], currentTime)](#TemplateInstance+draft) ⇒ <code>string</code>*
         * *[.getIdentifier()](#TemplateInstance+getIdentifier) ⇒ <code>String</code>*
         * *[.getTemplate()](#TemplateInstance+getTemplate) ⇒ [<code>Template</code>](#Template)*
         * *[.getLogicManager()](#TemplateInstance+getLogicManager) ⇒ <code>LogicManager</code>*
@@ -962,9 +974,9 @@ Set the data for the clause by parsing natural language text.
 | [currentTime] | <code>string</code> | the definition of 'now' (optional) |
 | [fileName] | <code>string</code> | the fileName for the text (optional) |
 
-<a name="TemplateInstance+generateText"></a>
+<a name="TemplateInstance+draft"></a>
 
-### *templateInstance.generateText([options], currentTime) ⇒ <code>string</code>*
+### *templateInstance.draft([options], currentTime) ⇒ <code>string</code>*
 Generates the natural language text for a contract or clause clause; combining the text from the template
 and the instance data.
 
@@ -1030,5 +1042,5 @@ Extract the file location from the parse error
 
 | Param | Type | Description |
 | --- | --- | --- |
-| error | <code>object</code> | the parse error |
+| error | <code>object</code> | the error object |
 
