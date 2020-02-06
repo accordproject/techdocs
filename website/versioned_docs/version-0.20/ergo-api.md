@@ -1,6 +1,7 @@
 ---
-id: ergo-api
+id: version-0.20-ergo-api
 title: Ergo API
+original_id: ergo-api
 ---
 
 ## Classes
