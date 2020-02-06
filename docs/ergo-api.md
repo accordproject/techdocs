@@ -35,8 +35,8 @@ title: Ergo API
 <dt><a href="#init">init(engine, logicManager, contractJson, currentTime)</a> ⇒ <code>object</code></dt>
 <dd><p>Invoke Ergo contract initialization</p>
 </dd>
-<dt><a href="#execute">execute(engine, logicManager, contractJson, stateJson, currentTime, requestJson)</a> ⇒ <code>object</code></dt>
-<dd><p>Execute the Ergo contract with a request</p>
+<dt><a href="#trigger">trigger(engine, logicManager, contractJson, stateJson, currentTime, requestJson)</a> ⇒ <code>object</code></dt>
+<dd><p>Trigger the Ergo contract with a request</p>
 </dd>
 <dt><a href="#resolveRootDir">resolveRootDir(parameters)</a> ⇒ <code>string</code></dt>
 <dd><p>Resolve the root directory</p>
@@ -58,7 +58,7 @@ Utility class that implements the commands exposed by the Ergo CLI.
 
 * [Commands](#Commands)
     * [.draft(template, files, contractInput, currentTime, options)](#Commands.draft) ⇒ <code>object</code>
-    * [.execute(template, files, contractInput, stateInput, currentTime, requestsInput, warnings)](#Commands.execute) ⇒ <code>object</code>
+    * [.trigger(template, files, contractInput, stateInput, currentTime, requestsInput, warnings)](#Commands.trigger) ⇒ <code>object</code>
     * [.invoke(template, files, clauseName, contractInput, stateInput, currentTime, paramsInput, warnings)](#Commands.invoke) ⇒ <code>object</code>
     * [.initialize(template, files, contractInput, currentTime, paramsInput, warnings)](#Commands.initialize) ⇒ <code>object</code>
     * [.parseCTOtoFileSync(ctoPath)](#Commands.parseCTOtoFileSync) ⇒ <code>string</code>
@@ -67,7 +67,7 @@ Utility class that implements the commands exposed by the Ergo CLI.
 <a name="Commands.draft"></a>
 
 ### Commands.draft(template, files, contractInput, currentTime, options) ⇒ <code>object</code>
-Invoke generateText for an Ergo contract
+Invoke draft for an Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
 **Returns**: <code>object</code> - Promise to the result of execution  
@@ -80,9 +80,9 @@ Invoke generateText for an Ergo contract
 | currentTime | <code>string</code> | the definition of 'now' |
 | options | <code>object</code> | to the text generation |
 
-<a name="Commands.execute"></a>
+<a name="Commands.trigger"></a>
 
-### Commands.execute(template, files, contractInput, stateInput, currentTime, requestsInput, warnings) ⇒ <code>object</code>
+### Commands.trigger(template, files, contractInput, stateInput, currentTime, requestsInput, warnings) ⇒ <code>object</code>
 Send a request an Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
@@ -249,10 +249,10 @@ Invoke Ergo contract initialization
 | contractJson | <code>object</code> | contract data in JSON |
 | currentTime | <code>string</code> | the definition of 'now' |
 
-<a name="execute"></a>
+<a name="trigger"></a>
 
-## execute(engine, logicManager, contractJson, stateJson, currentTime, requestJson) ⇒ <code>object</code>
-Execute the Ergo contract with a request
+## trigger(engine, logicManager, contractJson, stateJson, currentTime, requestJson) ⇒ <code>object</code>
+Trigger the Ergo contract with a request
 
 **Kind**: global function  
 **Returns**: <code>object</code> - Promise to the response  
