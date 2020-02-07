@@ -51,6 +51,10 @@ A TemplateInstance must be constructed with a template and then prior to executi
 Set the data for the TemplateInstance by either calling the setData method or by
 calling the parse method and passing in natural language text that conforms to the template grammar.</p>
 </dd>
+<dt><a href="#CompositeArchiveLoader">CompositeArchiveLoader</a></dt>
+<dd><p>Manages a set of archive loaders, delegating to the first archive
+loader that accepts a URL.</p>
+</dd>
 </dl>
 
 ## Functions
@@ -1032,6 +1036,68 @@ to a Moment.
 | --- | --- | --- |
 | obj | <code>\*</code> | the input object |
 | utcOffset | <code>number</code> | the default utcOffset |
+
+<a name="CompositeArchiveLoader"></a>
+
+## CompositeArchiveLoader
+Manages a set of archive loaders, delegating to the first archive
+loader that accepts a URL.
+
+**Kind**: global class  
+
+* [CompositeArchiveLoader](#CompositeArchiveLoader)
+    * [new CompositeArchiveLoader()](#new_CompositeArchiveLoader_new)
+    * [.addArchiveLoader(archiveLoader)](#CompositeArchiveLoader+addArchiveLoader)
+    * [.clearArchiveLoaders()](#CompositeArchiveLoader+clearArchiveLoaders)
+    * *[.accepts(url)](#CompositeArchiveLoader+accepts) ⇒ <code>boolean</code>*
+    * [.load(url, options)](#CompositeArchiveLoader+load) ⇒ <code>Promise</code>
+
+<a name="new_CompositeArchiveLoader_new"></a>
+
+### new CompositeArchiveLoader()
+Create the CompositeArchiveLoader. Used to delegate to a set of ArchiveLoaders.
+
+<a name="CompositeArchiveLoader+addArchiveLoader"></a>
+
+### compositeArchiveLoader.addArchiveLoader(archiveLoader)
+Adds a ArchiveLoader implemenetation to the ArchiveLoader
+
+**Kind**: instance method of [<code>CompositeArchiveLoader</code>](#CompositeArchiveLoader)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| archiveLoader | <code>ArchiveLoader</code> | The archive to add to the CompositeArchiveLoader |
+
+<a name="CompositeArchiveLoader+clearArchiveLoaders"></a>
+
+### compositeArchiveLoader.clearArchiveLoaders()
+Remove all registered ArchiveLoaders
+
+**Kind**: instance method of [<code>CompositeArchiveLoader</code>](#CompositeArchiveLoader)  
+<a name="CompositeArchiveLoader+accepts"></a>
+
+### *compositeArchiveLoader.accepts(url) ⇒ <code>boolean</code>*
+Returns true if this ArchiveLoader can process the URL
+
+**Kind**: instance abstract method of [<code>CompositeArchiveLoader</code>](#CompositeArchiveLoader)  
+**Returns**: <code>boolean</code> - true if this ArchiveLoader accepts the URL  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| url | <code>string</code> | the URL |
+
+<a name="CompositeArchiveLoader+load"></a>
+
+### compositeArchiveLoader.load(url, options) ⇒ <code>Promise</code>
+Load a Archive from a URL and return it
+
+**Kind**: instance method of [<code>CompositeArchiveLoader</code>](#CompositeArchiveLoader)  
+**Returns**: <code>Promise</code> - a promise to the Archive  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| url | <code>string</code> | the url to get |
+| options | <code>object</code> | additional options |
 
 <a name="locationOfError"></a>
 
