@@ -3127,7 +3127,6 @@ a:hover {
 .post article ul li {
   font-size: 15px;
   line-height: 28px;
-  color: #050c4099;
   position: relative;
   padding-left: 22px;
   list-style: none;
@@ -3147,7 +3146,6 @@ a:hover {
 .post article p {
   font-size: 15px;
   line-height: 28px;
-  color: #050c4099;
 }
 
 .post article p a {
@@ -3193,7 +3191,6 @@ a:hover {
 
 #digitize-legal-contracts h2 {
   font-weight: 300;
-  color: #050c4080;
   font-size: 50px;
   letter-spacing: -2px;
   line-height: 55px;
@@ -3205,7 +3202,6 @@ a:hover {
 }
 
 #digitize-legal-contracts .typeset {
-  color: #050c4080;
   max-width: 580px;
   margin: 20px auto 0px;
 }
@@ -3443,7 +3439,6 @@ a:hover {
 }
 
 #model .typeset {
-  color: #050c4080;
   max-width: 580px;
   text-align: left;
   max-width: 460px;
@@ -3694,7 +3689,6 @@ a:hover {
 
 #showcase h2 {
   font-weight: 300;
-  color: #050c4080;
   font-size: 50px;
   letter-spacing: -2px;
   line-height: 55px;
@@ -3703,10 +3697,6 @@ a:hover {
 #showcase h2 .strong {
   font-weight: 400;
   color: #050c40;
-}
-
-#showcase .typeset {
-  color: #050c4080;
 }
 
 #showcase .line {
@@ -3759,7 +3749,6 @@ a:hover {
 }
 
 #templates .typeset {
-  color: #050c4080;
   max-width: 580px;
   text-align: left;
   max-width: 460px;
@@ -3788,7 +3777,6 @@ a:hover {
 }
 
 #try .typeset {
-  color: #050c4080;
   max-width: 580px;
   text-align: left;
   max-width: 460px;
