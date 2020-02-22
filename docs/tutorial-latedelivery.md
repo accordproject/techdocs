@@ -237,7 +237,7 @@ The template should now be without errors.
 
 Our final task is to emit a `PaymentObligation` to indicate that the buyer should pay the seller in the amount of the calculated penalty.
 
-To do so, first import a couple of standard models: for the Cicero's [runtime model](https://models.accordproject.org/cicero/runtime.html) (which contains the definition of a `PaymentObligation`), and for the Accord Project's [money model](https://models.accordproject.org/money.html) (which contains the definition of a `MonetaryAmount). The `import` statements at the top of your logic should look as follows:
+To do so, first import a couple of standard models: for the Cicero's [runtime model](https://models.accordproject.org/cicero/runtime.html) (which contains the definition of a `PaymentObligation`), and for the Accord Project's [money model](https://models.accordproject.org/money.html) (which contains the definition of a `MonetaryAmount`). The import statements at the top of your logic should look as follows:
 ```ergo
 import org.accordproject.time.*
 import org.accordproject.cicero.runtime.*
