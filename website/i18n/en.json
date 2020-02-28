@@ -17,6 +17,30 @@
       "accordproject": {
         "title": "Overview"
       },
+      "assets/architecture/node_modules/@types/node/README": {
+        "title": "assets/architecture/node_modules/@types/node/README"
+      },
+      "assets/architecture/node_modules/node/node_modules/node-darwin-x64/CHANGELOG": {
+        "title": "assets/architecture/node_modules/node/node_modules/node-darwin-x64/CHANGELOG"
+      },
+      "assets/architecture/node_modules/node/node_modules/node-darwin-x64/README": {
+        "title": "assets/architecture/node_modules/node/node_modules/node-darwin-x64/README"
+      },
+      "assets/architecture/node_modules/node/README": {
+        "title": "assets/architecture/node_modules/node/README"
+      },
+      "assets/architecture/node_modules/typescript/AUTHORS": {
+        "title": "assets/architecture/node_modules/typescript/AUTHORS"
+      },
+      "assets/architecture/node_modules/typescript/CONTRIBUTING": {
+        "title": "assets/architecture/node_modules/typescript/CONTRIBUTING"
+      },
+      "assets/architecture/node_modules/typescript/lib/README": {
+        "title": "assets/architecture/node_modules/typescript/lib/README"
+      },
+      "assets/architecture/node_modules/typescript/README": {
+        "title": "assets/architecture/node_modules/typescript/README"
+      },
       "cicero-api": {
         "title": "Cicero API"
       },

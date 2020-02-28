@@ -87,6 +87,9 @@ class Footer extends React.Component {
                 <a href="https://medium.com/@accordhq">Blog</a>
               </li>
               <li>
+                <a href="https://vimeo.com/accordproject">Vimeo</a>
+              </li>
+              <li>
                 <a href="https://github.com/accordproject">GitHub</a>
               </li>
               <li>
