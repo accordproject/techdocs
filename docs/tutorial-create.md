@@ -58,7 +58,7 @@ You may find it easier to edit the grammar, model and logic for your template in
 
 ## Edit your template
 
-### Update Sample.txt
+### Update Sample.md
 
 First, replace the contents of `./text/sample.md` with the legal text for the contract or clause that you would like to digitize.
 
