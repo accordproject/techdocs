@@ -37,7 +37,7 @@ as JSON data (by calling `setData`):
 
 ```js
     // load the DSL text for the template
-    const testLatePenaltyInput = fs.readFileSync(path.resolve(__dirname, 'data/', 'sample.txt'), 'utf8');
+    const testLatePenaltyInput = fs.readFileSync(path.resolve(__dirname, 'text/', 'sample.md'), 'utf8');
 
     const clause = new Clause(template);
     clause.parse(testLatePenaltyInput);
