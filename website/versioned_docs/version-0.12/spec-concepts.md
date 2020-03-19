@@ -6,8 +6,8 @@ original_id: spec-concepts
 
 ![Overview](assets/cicero-spec-overview.png)
 
-## Step 1: Creation of Smart Clause Template
-A legal professional analyzes a contract to determine the frequently used/standard clauses that are present. Clauses that are amenable to automation are extracted into a smart clause template. The template (more details follow) is comprised of the annotated legal text and an accompanying template data model that defines the assets, participants, concepts and events that are relevant to the clause. The business logic for the smart clause is coded by a developer (with review and in collaboration with the legal professional, or the suitably trained legal professional can code the contract logic themselves using the [Ergo](logic-ergo) DSL).
+## Step 1: Creation of Clause Template
+A legal professional analyzes a contract to determine the frequently used/standard clauses that are present. Clauses that are amenable to automation are extracted into a clause template. The template (more details follow) is comprised of the annotated legal text and an accompanying template data model that defines the assets, participants, concepts and events that are relevant to the clause. The business logic for the clause is coded by a developer (with review and in collaboration with the legal professional, or the suitably trained legal professional can code the contract logic themselves using the [Ergo](logic-ergo) DSL).
 
 ## Step 2: Data Modeling
 
@@ -16,11 +16,11 @@ Concept Template Data Model. The variables and expressions in a template are exp
 ## Step 3: Generation of the Template Parser
 The [Cicero Open Source project](https://github.com/accordproject/cicero) contains code that can automatically generate a parser from the annotated template text (template grammar) and the associated template data model. The parser generation is completely automatic and supports customization of types and nested grammars.
 
-## Step 4: Create a Smart Clause
-The generated template parser can now be used to dynamically edit and validate source smart clause text (potentially using code completion, error reporting etc). The editor technology can be embedded on a webpage, or executed as a SaaS service, or run within an IDE.
+## Step 4: Create a Clause
+The generated template parser can now be used to dynamically edit and validate source clause text (potentially using code completion, error reporting etc). The editor technology can be embedded on a webpage, or executed as a SaaS service, or run within an IDE.
 
-## Concept 5: Smart Clause (instance of a Template) 
-The output of the Template Parser is an instance of the Template Model (a JSON abstract syntax tree that can be deployed to the engine). It captures a machine readable (and hashable) representation of all the executable data extracted from the smart clause text.
+## Concept 5: Clause (instance of a Template) 
+The output of the Template Parser is an instance of the Template Model (a JSON abstract syntax tree that can be deployed to the engine). It captures a machine readable (and hashable) representation of all the executable data extracted from the clause text.
 
 ## Step 6: Invoke Engine with a Request
 The application feeds JSON documents to the engine that represents the request instances, which themselves have been modelled in the Template Data Model. These requests represent events of significance to the clause from the outside world.

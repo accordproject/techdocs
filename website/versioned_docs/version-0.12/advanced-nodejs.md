@@ -56,7 +56,7 @@ OR - create a contract and set the data from a JSON object.
 
 ## Executing a Template Instance
 
-Once you have instantiated a smart clause of contract instance, you can execute it.
+Once you have instantiated a clause or contract instance, you can execute it.
 
 ### Import the Engine class
 

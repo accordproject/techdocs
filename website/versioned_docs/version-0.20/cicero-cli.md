@@ -173,7 +173,7 @@ Options:
 
 ## cicero compile
 
-`cicero generate` generates code for a target platform. It loads a template from a directory on disk and then attempts to generate versions of the template model in the specified format. The available formats include: `Go`, `PlantUML`, `Typescript`, `Java`, and `JSONSchema`.
+`cicero compile` generates code for a target platform. It loads a template from a directory on disk and then attempts to generate versions of the template model in the specified format. The available formats include: `Go`, `PlantUML`, `Typescript`, `Java`, and `JSONSchema`.
 
 ```md
 cicero compile

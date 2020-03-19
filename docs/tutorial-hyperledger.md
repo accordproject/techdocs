@@ -87,7 +87,7 @@ Note the placeholders in the Template Grammar (found under **Contract Text** -> 
 
 The logic definition in Ergo defines the behaviour of the contract in response to Requests. The logic also reference the same contract variables, through the `contract` keyword.
 
-You can simulate the performance of the contract using the **Text Execution** page (click **Logic** first). Clicking **Send Request** will trigger the smart clause and produce a response that indicates the total price due, along with any penalties. 
+You can simulate the performance of the contract using the **Text Execution** page (click **Logic** first). Clicking **Send Request** will trigger the clause and produce a response that indicates the total price due, along with any penalties. 
 
 > Change some of the values in the Test Contract, for example increase the lower limit for temperature readings from 2°C to 3°C. If you reset the Test Execution and send the same request again you should notice a penalty in the response.
 

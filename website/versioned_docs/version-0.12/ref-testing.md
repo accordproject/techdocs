@@ -33,7 +33,7 @@ Text of the contract instance.
 etc.
 ```
 
-Each scenario can be thought of as a description for the behavior of the Smart Clause or Contract template for the contract given as background.
+Each scenario can be thought of as a description for the behavior of the clause or contract template for the contract given as background.
 
 Each scenario corresponds to one call to the contract. I.e., for a given current time, request and contract state, it says what the expected result of executing the contract should be. This can be either:
 - A response, a new contract state, and a list of emitted obligations

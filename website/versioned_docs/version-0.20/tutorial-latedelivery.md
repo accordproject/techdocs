@@ -57,7 +57,7 @@ The final part of the template is the `Ergo` tab of the `Logic` section, which d
 
 Thanks to the `namespace` at the beginning of this file, the Ergo engine can know the definition for the `MiniLateDeliveryClause`, as well as the `LateRequest`, and `LateResponse` types defined in the `Model` tab.
 
-To test the template execution, go to the `Test Request` tab in the `Logic` section. It should be already populated with a valid `Request`. Press the `Send Request` button to trigger the smart clause.
+To test the template execution, go to the `Test Request` tab in the `Logic` section. It should be already populated with a valid `Request`. Press the `Send Request` button to trigger the clause.
 
 ![Advanced-Late-7](assets/advanced/late7.png)
 

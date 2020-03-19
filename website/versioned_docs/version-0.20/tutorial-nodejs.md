@@ -38,7 +38,7 @@ as JSON data (by calling `setData`):
 
 ```js
     // load the DSL text for the template
-    const testLatePenaltyInput = fs.readFileSync(path.resolve(__dirname, 'data/', 'sample.txt'), 'utf8');
+    const testLatePenaltyInput = fs.readFileSync(path.resolve(__dirname, 'text/', 'sample.md'), 'utf8');
 
     const clause = new Clause(template);
     clause.parse(testLatePenaltyInput);
@@ -56,7 +56,7 @@ OR - create a contract and set the data from a JSON object.
 
 ## Executing a Template Instance
 
-Once you have instantiated a smart clause of contract instance, you can execute it.
+Once you have instantiated a clause or contract instance, you can execute it.
 
 ### Import the Engine class
 

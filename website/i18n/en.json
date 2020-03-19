@@ -158,27 +158,6 @@
       "ref-testing": {
         "title": "Testing Reference"
       },
-      "spec-concepts": {
-        "title": "Concepts and High-level Architecture"
-      },
-      "spec-example": {
-        "title": "Example: Late Delivery Clause"
-      },
-      "spec-execution": {
-        "title": "Contract Execution"
-      },
-      "spec-instance": {
-        "title": "Template Instantiation"
-      },
-      "spec-overview": {
-        "title": "Overview"
-      },
-      "spec-packaging": {
-        "title": "Packaging"
-      },
-      "spec-template": {
-        "title": "Template Structure"
-      },
       "started-hello": {
         "title": "Hello World Template"
       },
@@ -484,15 +463,6 @@
       },
       "version-0.20/version-0.20-ref-testing": {
         "title": "Testing Reference"
-      },
-      "version-0.20/version-0.20-spec-execution": {
-        "title": "Contract Execution"
-      },
-      "version-0.20/version-0.20-spec-packaging": {
-        "title": "Packaging"
-      },
-      "version-0.20/version-0.20-spec-template": {
-        "title": "Template Structure"
       },
       "version-0.20/version-0.20-started-hello": {
         "title": "Hello World Template"
