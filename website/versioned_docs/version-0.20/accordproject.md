@@ -20,7 +20,7 @@ The human-readable nature of the document ensures that signatories, lawyers, con
 
 The machine-readable nature of the document enables it to be interpreted and executed by computers, making the document "smart".
 
-Contracts drafted with Accord Project can contain both ‘smart’ and ‘non-smart’ clauses. For example, a Smart Legal Contract may include a smart payment clause while all of the other provisions of the contract (Definitions, Jurisdiction clause, Force Majeure clause, ...) are being documented solely in regular natural language text.
+Contracts drafted with Accord Project can contain both traditional and machine-readable clauses. For example, a Smart Legal Contract may include a smart payment clause while all of the other provisions of the contract (Definitions, Jurisdiction clause, Force Majeure clause, ...) are being documented solely in regular natural language text.
 
 A Smart Legal Contract is a general term to refer to two compatible, architectural forms of contract:
 - Machine-Readable Contracts, which tie legal text to data

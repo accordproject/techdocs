@@ -33,13 +33,11 @@ Text of the contract instance.
 etc.
 ```
 
-Each scenario can be thought of as a description for the behavior of the Smart Clause or Contract template for the contract given as background.
+Each scenario can be thought of as a description for the behavior of the clause or contract template for the contract given as background.
 
 Each scenario corresponds to one call to the contract. I.e., for a given current time, request and contract state, it says what the expected result of executing the contract should be. This can be either:
 - A response, a new contract state, and a list of emitted obligations
 - An error
-
-If you are not familiar with the execution model for Accord Project contract, we recommend reading through the corresponding part of the [Template Specification](spec-concepts#step-7-execute-and-return-response), including the Section on [Contract Execution](spec-execution).
 
 ## Scenarios
 

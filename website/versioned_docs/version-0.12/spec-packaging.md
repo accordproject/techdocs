@@ -35,7 +35,7 @@ The metadata for a Template is stored in the  /package.json text file in JSON fo
 }
 ```
 
-The name property must consist of [a-z][A-Z][.]. It is strongly recommended that the name be prefixed with the domain name of the author of the smart clause, to minimise naming collisions. The version property must be a semantic version of the form major.minor.micro [0-9].[0-9].[0.9]. Note that this data format ensures that a Template can be published to the npm package manager for either global or private (enterprise-wide) distribution.
+The name property must consist of [a-z][A-Z][.]. It is strongly recommended that the name be prefixed with the domain name of the author of the clause template, to minimise naming collisions. The version property must be a semantic version of the form major.minor.micro [0-9].[0-9].[0.9]. Note that this data format ensures that a Template can be published to the npm package manager for either global or private (enterprise-wide) distribution.
 
 The `accordproject` property of a template specifies the following metadata:
 - `template`: must either be `clause` for a clause template or `contract` for a contract templates
@@ -56,7 +56,7 @@ The grammar files for the template are stored in the  /grammar/ folder.
 
 ## Data Model
 
-The data model for a smart clause is stored in a set of files under the `/model` folder. The data model files must be in the format defined using the Composer Concerto modeling language. All data models for the template are in-scope and types from all namespaces may be imported.
+The data model for a clause template is stored in a set of files under the `/model` folder. The data model files must be in the format defined using the Composer Concerto modeling language. All data models for the template are in-scope and types from all namespaces may be imported.
 
 Using the ability to convert CML models to UML we can even visualise all the required types (model, request, response) we have modelled graphically:
 
@@ -64,5 +64,5 @@ Using the ability to convert CML models to UML we can even visualise all the req
 
 ## Execution Logic
 
-The Ergo execution logic for a smart clause is stored under the /lib folder.
+The Ergo execution logic for a clause template is stored under the /lib folder.
 
