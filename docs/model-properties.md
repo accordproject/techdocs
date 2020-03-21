@@ -24,7 +24,7 @@ Concerto supports the following primitive types:
 |---|---|
 |`[]` | declares that the property is an array|
 |`optional` | declares that the property is not required for the instance to be valid|
-| `default` | declares a default value for the property, if not value is specified|
+| `default` | declares a default value for the property, if no value is specified|
 | `range` | declares a valid range for numeric properties|
 | `regex` | declares a validation regex for string properties|
 
