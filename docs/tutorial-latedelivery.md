@@ -252,7 +252,7 @@ Lastly, add a new step between steps `// 4.` and `// 5.` in the logic to emit a 
       promisor: some(contract.seller),
       promisee: some(contract.buyer),
       deadline: none,
-      amount: MonetaryAmount{ doubleValue: cappedPenalty, currencyCode: "USD" },
+      amount: MonetaryAmount{ doubleValue: cappedPenalty, currencyCode: USD },
       description: contract.seller.partyId ++ " should pay penalty amount to " ++ contract.buyer.partyId
     };
 
