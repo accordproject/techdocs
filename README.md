@@ -282,6 +282,8 @@ Join the Accord Project Technology Working Group [Slack channel][apslack] to get
 
 For code contributions, read our [CONTRIBUTING guide][contributing] and information for [DEVELOPERS][developers].
 
+The Technical Steering Committee (TSC) may be emailed directly at tsc@accordproject.org.
+
 ## License <a name="license"></a>
 
 Accord Project source code files are made available under the [Apache License, Version 2.0][apache].
