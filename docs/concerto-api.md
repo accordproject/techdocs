@@ -682,7 +682,7 @@ Get the AssetDeclarations defined in this model manager
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelManager+getTransactionDeclarations"></a>
 
@@ -694,7 +694,7 @@ Get the TransactionDeclarations defined in this model manager
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelManager+getEventDeclarations"></a>
 
@@ -706,7 +706,7 @@ Get the EventDeclarations defined in this model manager
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelManager+getParticipantDeclarations"></a>
 
@@ -718,7 +718,7 @@ Get the ParticipantDeclarations defined in this model manager
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelManager+getEnumDeclarations"></a>
 
@@ -730,7 +730,7 @@ Get the EnumDeclarations defined in this model manager
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelManager+getConceptDeclarations"></a>
 
@@ -742,7 +742,7 @@ Get the Concepts defined in this model manager
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelManager+getFactory"></a>
 
@@ -1711,7 +1711,7 @@ Get the AssetDeclarations defined in this ModelFile
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelFile+getTransactionDeclarations"></a>
 
@@ -1723,7 +1723,7 @@ Get the TransactionDeclarations defined in this ModelFile
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelFile+getEventDeclarations"></a>
 
@@ -1735,7 +1735,7 @@ Get the EventDeclarations defined in this ModelFile
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelFile+getParticipantDeclarations"></a>
 
@@ -1747,7 +1747,7 @@ Get the ParticipantDeclarations defined in this ModelFile
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelFile+getConceptDeclarations"></a>
 
@@ -1759,7 +1759,7 @@ Get the ConceptDeclarations defined in this ModelFile
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelFile+getEnumDeclarations"></a>
 
@@ -1771,7 +1771,7 @@ Get the EnumDeclarations defined in this ModelFile
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelFile+getDeclarations"></a>
 
@@ -1784,7 +1784,7 @@ Get the instances of a given type in this ModelFile
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | type | <code>function</code> |  | the type of the declaration |
-| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the decalarations of system type in returned data |
+| includeSystemType | <code>Boolean</code> | <code>true</code> | Include the declarations of system type in returned data |
 
 <a name="module_concerto-core.ModelFile+getAllDeclarations"></a>
 
