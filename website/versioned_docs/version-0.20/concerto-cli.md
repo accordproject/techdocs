@@ -48,7 +48,7 @@ Options:
 For example, using the `validate` command to check the sample `request.json` file from a [Late Delivery and Penalty](https://github.com/accordproject/cicero-template-library/tree/master/src/latedeliveryandpenalty) clause:
 
 ```
-concerto validate --sample request.json --ctoFiles models/clause.cto
+concerto validate --sample request.json --ctoFiles model/clause.cto
 ```
 
 returns:
@@ -96,7 +96,7 @@ At the moment, the available target formats are as follows:
 For example, using the `compile` command to export the `clause.cto` file from a [Late Delivery and Penalty](https://github.com/accordproject/cicero-template-library/tree/master/src/latedeliveryandpenalty) clause into `Go Lang` format:
 
 ```md
-cd ./models
+cd ./model
 concerto compile --ctoFiles clause.cto --target Go
 ```
 
