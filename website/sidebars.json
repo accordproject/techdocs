@@ -40,7 +40,7 @@
         ],
         "Reference Manual": [
 	        "ref-glossary",
-            "ref-cicero-ui",
+            "ref-web-components",
             "ref-testing",
             "ref-errors",
             "ref-logic",

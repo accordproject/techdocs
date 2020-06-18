@@ -1,13 +1,11 @@
 ---
-id: ref-cicero-ui
-title: Cicero UI Reference
+id: ref-web-components
+title: Web Components Reference
 ---
 
-Accord Project publishes [React](https://reactjs.org) user interface components for use in web-applications. Please refer to the cicero-ui project [on GitHub](https://github.com/accordproject/cicero-ui) for detailed usage instructions.
+Accord Project publishes [React](https://reactjs.org) user interface components for use in web applications. Please refer to the web-components project [on GitHub](https://github.com/accordproject/web-components) for detailed usage instructions.
 
-You can preview these components in [Template Studio v2](https://accordproject-studio.netlify.com).
-
-![Template-Studio-V2](/docs/assets/reference/tsv2.png)
+You can preview these components in [the project's storybook](https://ap-web-components.netlify.app/).
 
 ## Contract Editor
 
@@ -30,6 +28,6 @@ The Error Logger component is used to display structured error messages from the
 
 The Navigation component displays an outline view for a contract, allowing the user to quickly navigate between sections.
 
-## Template Library
+## Library
 
-The Template Library component displays a vertical list of template metadata, and allows the user to add a clause (instance of a template) to a contract.
+The Library component displays a vertical list of library item metadata, and allows the user to add an instance of a library item to a contract.
