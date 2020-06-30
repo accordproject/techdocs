@@ -12,14 +12,13 @@ npm install @accordproject/concerto-core --save
 
 Below are examples of API use.
 
-## Create a Concerto File
+## Validating JSON data using a Model
 
 ```js
-namespace org.acme.address
-
-/**
- * This is a concept
- */
+const ModelManager = require('@accordproject/concerto-core').ModelManager;
+const Concerto = require('@accordproject/concerto-core').Concerto;
+const modelManager = new ModelManager();
+modelManager.addModelFile( `namespace org.acme.address
 concept PostalAddress {
   o String streetAddress optional
   o String postalCode optional
@@ -27,42 +26,39 @@ concept PostalAddress {
   o String addressRegion optional
   o String addressLocality optional
   o String addressCountry optional
-}
+}`, 'model.cto');
+
+const postalAddress = {
+    $class : 'org.acme.address.PostalAddress',
+    streetAddress : '1 Maine Street'
+};
+const concerto = new Concerto(modelManager);
+concerto.validate(postalAddress);
 ```
 
-## Create a Model Manager
+Now try validating this instance:
 
-```js
-const ModelManager = require('@accordproject/concerto-core').ModelManager;
-
-const modelManager = new ModelManager();
-modelManager.addModelFile( concertoFileText, 'filename.cto');
+```
+const postalAddress = {
+    $class : 'org.acme.address.PostalAddress',
+    missing : '1 Maine Street'
+};
 ```
 
-## Create an Instance
+Validation should fail with the message:
 
-```js
-const Factory = require('@accordproject/concerto-core').Factory;
-
-const factory = new Factory(modelManager);
-const postalAddress = factory.newConcept('org.acme.address', 'PostalAddress');
-postalAddress.streetAddress = '1 Maine Street';
+```
+Instance undefined has a property named missing which is not declared in org.acme.address.PostalAddress
 ```
 
-## Serialize an Instance to JSON
+## Runtime introspection of the model
 
-```js
-const Serializer = require('@accordproject/concerto-core').Serializer;
+You can use the Concerto `introspect` APIs to retrieve model information at runtime:
 
-const serializer = new Serializer(factory, modelManager);
-const plainJsObject = serializer.toJSON(postalAddress); // instance will be validated
-console.log(JSON.stringify(plainJsObject, null, 4);
+```
+const typeDeclaration = concerto.getTypeDeclaration(postalAddress);
+const fqn = typeDeclaration.getFullyQualifiedName();
+console.log(fqn); // should equal 'org.acme.address.PostalAddress'
 ```
 
-## Deserialize an Instance from JSON
-
-```js
-const postalAddress = serializer.fromJSON(plainJsObject); // JSON will be validated
-console.log(postalAddress.streetAddress);
-```
-
+These APIs allow you to examine the declared properties, super types and meta-properies for a modelled type.

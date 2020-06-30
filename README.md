@@ -29,6 +29,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
 To build the documentation locally:
 ```
 cd ./website
+npm install
 npm run start
 ```
 If you want to re-generate the JSDoc API:

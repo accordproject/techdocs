@@ -32,3 +32,11 @@ Concerto supports the following primitive types:
 
 `Double`, `Long` or `Integer` fields may include an optional range expression, which is used to validate the contents of the field.
 
+```
+asset Vehicle {
+  o String model default="F150"
+  o String make default="FORD"
+  o Integer year default=2016 range=[1990,] optional // model year must be 1990 or higher
+  o String V5cID regex=/^[A-z][A-z][0-9]{7}/
+}
+```

@@ -14,6 +14,7 @@ specific models.
     * _static_
         * [.ModelLoader](#module_concerto-core.ModelLoader)
             * [.loadModelManager(ctoSystemFile, ctoFiles)](#module_concerto-core.ModelLoader.loadModelManager) ⇒ <code>object</code>
+            * [.loadModelManagerFromModelFiles(ctoSystemFile, modelFiles, [fileNames])](#module_concerto-core.ModelLoader.loadModelManagerFromModelFiles) ⇒ <code>object</code>
         * [.DecoratorFactory](#module_concerto-core.DecoratorFactory)
             * *[.newDecorator(parent, ast)](#module_concerto-core.DecoratorFactory+newDecorator) ⇒ <code>Decorator</code>*
     * _inner_
@@ -208,6 +209,11 @@ Create a ModelManager from model files, with an optional system model.
 If a ctoFile is not provided, the Accord Project system model is used.
 
 **Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
+
+* [.ModelLoader](#module_concerto-core.ModelLoader)
+    * [.loadModelManager(ctoSystemFile, ctoFiles)](#module_concerto-core.ModelLoader.loadModelManager) ⇒ <code>object</code>
+    * [.loadModelManagerFromModelFiles(ctoSystemFile, modelFiles, [fileNames])](#module_concerto-core.ModelLoader.loadModelManagerFromModelFiles) ⇒ <code>object</code>
+
 <a name="module_concerto-core.ModelLoader.loadModelManager"></a>
 
 #### ModelLoader.loadModelManager(ctoSystemFile, ctoFiles) ⇒ <code>object</code>
@@ -220,6 +226,20 @@ Load system and models in a new model manager
 | --- | --- | --- |
 | ctoSystemFile | <code>string</code> | the system model file |
 | ctoFiles | <code>Array.&lt;string&gt;</code> | the CTO files (can be local file paths or URLs) |
+
+<a name="module_concerto-core.ModelLoader.loadModelManagerFromModelFiles"></a>
+
+#### ModelLoader.loadModelManagerFromModelFiles(ctoSystemFile, modelFiles, [fileNames]) ⇒ <code>object</code>
+Load system and models in a new model manager from model files objects
+
+**Kind**: static method of [<code>ModelLoader</code>](#module_concerto-core.ModelLoader)  
+**Returns**: <code>object</code> - the model manager  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ctoSystemFile | <code>string</code> | the system model file |
+| modelFiles | <code>Array.&lt;object&gt;</code> | An array of Concerto files as strings or ModelFile objects. |
+| [fileNames] | <code>Array.&lt;string&gt;</code> | An optional array of file names to associate with the model files |
 
 <a name="module_concerto-core.DecoratorFactory"></a>
 
@@ -595,7 +615,7 @@ Add a set of Concerto files to the model manager.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| modelFiles | <code>Array.&lt;string&gt;</code> | An array of Concerto files as strings. |
+| modelFiles | <code>Array.&lt;object&gt;</code> | An array of Concerto files as strings or ModelFile objects. |
 | [fileNames] | <code>Array.&lt;string&gt;</code> | An optional array of file names to associate with the model files |
 | [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
 | [systemModelTable] | <code>boolean</code> | A table that maps classes in the new models to system types |

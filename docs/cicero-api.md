@@ -17,6 +17,9 @@ title: Cicero API
 ## Classes
 
 <dl>
+<dt><a href="#AmountFormatParser">AmountFormatParser</a></dt>
+<dd><p>Parses an amount format string</p>
+</dd>
 <dt><a href="#Clause">Clause</a></dt>
 <dd><p>A Clause is executable business logic, linked to a natural language (legally enforceable) template.
 A Clause must be constructed with a template and then prior to execution the data for the clause must be set.
@@ -32,8 +35,14 @@ calling the parse method and passing in natural language text that conforms to t
 <dt><a href="#DateTimeFormatParser">DateTimeFormatParser</a></dt>
 <dd><p>Parses a date/time format string</p>
 </dd>
+<dt><a href="#FormatParser">FormatParser</a></dt>
+<dd><p>Parses a format string</p>
+</dd>
 <dt><a href="#Metadata">Metadata</a></dt>
 <dd><p>Defines the metadata for a Template, including the name, version, README markdown.</p>
+</dd>
+<dt><a href="#MonetaryAmountFormatParser">MonetaryAmountFormatParser</a></dt>
+<dd><p>Parses a monetary/amount format string</p>
 </dd>
 <dt><a href="#ParserManager">ParserManager</a></dt>
 <dd><p>Generates and manages a Nearley parser for a template.</p>
@@ -61,6 +70,12 @@ loader that accepts a URL.</p>
 <dl>
 <dt><a href="#locationOfError">locationOfError(error)</a> ⇒ <code>object</code></dt>
 <dd><p>Extract the file location from the parse error</p>
+</dd>
+<dt><a href="#isPNG">isPNG(buffer)</a> ⇒ <code>Boolean</code></dt>
+<dd><p>Checks whether the file is PNG</p>
+</dd>
+<dt><a href="#getMimeType">getMimeType(buffer)</a> ⇒ <code>Object</code></dt>
+<dd><p>Returns the mime-type of the file</p>
 </dd>
 </dl>
 
@@ -172,6 +187,72 @@ Provides access to the underlying Ergo engine.
 ## cicero-core
 Cicero Core - defines the core data types for Cicero.
 
+<a name="AmountFormatParser"></a>
+
+## AmountFormatParser
+Parses an amount format string
+
+**Kind**: global class  
+**Access**: public  
+
+* [AmountFormatParser](#AmountFormatParser)
+    * _instance_
+        * [.addGrammars(grammars, field)](#AmountFormatParser+addGrammars)
+        * [.buildFormatRules(formatString)](#AmountFormatParser+buildFormatRules) ⇒ <code>Object</code>
+    * _static_
+        * [.parseAmountFormatField(field)](#AmountFormatParser.parseAmountFormatField) ⇒ <code>string</code>
+        * [.amountFormatField(field)](#AmountFormatParser.amountFormatField) ⇒ <code>string</code>
+
+<a name="AmountFormatParser+addGrammars"></a>
+
+### amountFormatParser.addGrammars(grammars, field)
+Given current grammar parts, add necessary grammars parts for the format.
+
+**Kind**: instance method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
+| field | <code>string</code> | grammar field |
+
+<a name="AmountFormatParser+buildFormatRules"></a>
+
+### amountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code>
+Converts a format string to a Nearley action
+
+**Kind**: instance method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
+**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| formatString | <code>string</code> | the input format string |
+
+<a name="AmountFormatParser.parseAmountFormatField"></a>
+
+### AmountFormatParser.parseAmountFormatField(field) ⇒ <code>string</code>
+Given a format field (like 0,0.0) this method returns
+a logical name for the field. Note the logical names
+have been picked to align with the moment constructor that takes an object.
+
+**Kind**: static method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
+**Returns**: <code>string</code> - the field designator  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| field | <code>string</code> | the input format field |
+
+<a name="AmountFormatParser.amountFormatField"></a>
+
+### AmountFormatParser.amountFormatField(field) ⇒ <code>string</code>
+Given a double format field (like 0,0.0) this method returns a new unique field name
+
+**Kind**: static method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
+**Returns**: <code>string</code> - the field designator  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| field | <code>string</code> | the input format field |
+
 <a name="Clause"></a>
 
 ## Clause
@@ -201,8 +282,35 @@ Parses a date/time format string
 **Access**: public  
 
 * [DateTimeFormatParser](#DateTimeFormatParser)
-    * [.parseDateTimeFormatField(field)](#DateTimeFormatParser.parseDateTimeFormatField) ⇒ <code>string</code>
-    * [.buildDateTimeFormatRule(formatString)](#DateTimeFormatParser.buildDateTimeFormatRule) ⇒ <code>Object</code>
+    * _instance_
+        * [.addGrammars(grammars, field)](#DateTimeFormatParser+addGrammars)
+        * [.buildFormatRules(formatString)](#DateTimeFormatParser+buildFormatRules) ⇒ <code>Object</code>
+    * _static_
+        * [.parseDateTimeFormatField(field)](#DateTimeFormatParser.parseDateTimeFormatField) ⇒ <code>string</code>
+
+<a name="DateTimeFormatParser+addGrammars"></a>
+
+### dateTimeFormatParser.addGrammars(grammars, field)
+Given current grammar parts, add necessary grammars parts for the format.
+
+**Kind**: instance method of [<code>DateTimeFormatParser</code>](#DateTimeFormatParser)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
+| field | <code>string</code> | grammar field |
+
+<a name="DateTimeFormatParser+buildFormatRules"></a>
+
+### dateTimeFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code>
+Converts a format string to a Nearley action
+
+**Kind**: instance method of [<code>DateTimeFormatParser</code>](#DateTimeFormatParser)  
+**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| formatString | <code>string</code> | the input format string |
 
 <a name="DateTimeFormatParser.parseDateTimeFormatField"></a>
 
@@ -218,17 +326,43 @@ have been picked to align with the moment constructor that takes an object.
 | --- | --- | --- |
 | field | <code>string</code> | the input format field |
 
-<a name="DateTimeFormatParser.buildDateTimeFormatRule"></a>
+<a name="FormatParser"></a>
 
-### DateTimeFormatParser.buildDateTimeFormatRule(formatString) ⇒ <code>Object</code>
-Converts a format string to a Nearley action
+## FormatParser
+Parses a format string
 
-**Kind**: static method of [<code>DateTimeFormatParser</code>](#DateTimeFormatParser)  
-**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
+**Kind**: global class  
+**Access**: public  
+
+* [FormatParser](#FormatParser)
+    * _instance_
+        * [.addGrammars(grammars, field)](#FormatParser+addGrammars)
+    * _static_
+        * [.buildFormatRules(format)](#FormatParser.buildFormatRules)
+
+<a name="FormatParser+addGrammars"></a>
+
+### formatParser.addGrammars(grammars, field)
+Given current grammar parts, add necessary grammars parts for the format.
+
+**Kind**: instance method of [<code>FormatParser</code>](#FormatParser)  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| formatString | <code>string</code> | the input format string |
+| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
+| field | <code>string</code> | grammar field |
+
+<a name="FormatParser.buildFormatRules"></a>
+
+### FormatParser.buildFormatRules(format)
+Given a format, returns grammar rules to parse that format
+
+**Kind**: static method of [<code>FormatParser</code>](#FormatParser)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| format | <code>string</code> | the format |
+|  | <code>Array.&lt;object&gt;</code> | grammar rules for the format |
 
 <a name="Metadata"></a>
 
@@ -239,27 +373,34 @@ Defines the metadata for a Template, including the name, version, README markdow
 **Access**: public  
 
 * [Metadata](#Metadata)
-    * [new Metadata(packageJson, readme, samples, request)](#new_Metadata_new)
-    * [.getTemplateType()](#Metadata+getTemplateType) ⇒ <code>number</code>
-    * [.getRuntime()](#Metadata+getRuntime) ⇒ <code>string</code>
-    * [.getCiceroVersion()](#Metadata+getCiceroVersion) ⇒ <code>string</code>
-    * [.satisfiesCiceroVersion(version)](#Metadata+satisfiesCiceroVersion) ⇒ <code>string</code>
-    * [.getSamples()](#Metadata+getSamples) ⇒ <code>object</code>
-    * [.getRequest()](#Metadata+getRequest) ⇒ <code>object</code>
-    * [.getSample(locale)](#Metadata+getSample) ⇒ <code>string</code>
-    * [.getREADME()](#Metadata+getREADME) ⇒ <code>String</code>
-    * [.getPackageJson()](#Metadata+getPackageJson) ⇒ <code>object</code>
-    * [.getName()](#Metadata+getName) ⇒ <code>string</code>
-    * [.getDisplayName()](#Metadata+getDisplayName) ⇒ <code>string</code>
-    * [.getKeywords()](#Metadata+getKeywords) ⇒ <code>Array</code>
-    * [.getDescription()](#Metadata+getDescription) ⇒ <code>string</code>
-    * [.getVersion()](#Metadata+getVersion) ⇒ <code>string</code>
-    * [.getIdentifier()](#Metadata+getIdentifier) ⇒ <code>string</code>
-    * [.createTargetMetadata(runtimeName)](#Metadata+createTargetMetadata) ⇒ <code>object</code>
+    * [new Metadata(packageJson, readme, samples, request, logo)](#new_Metadata_new)
+    * _instance_
+        * [.getTemplateType()](#Metadata+getTemplateType) ⇒ <code>number</code>
+        * [.getLogo()](#Metadata+getLogo) ⇒ <code>Buffer</code>
+        * [.getAuthor()](#Metadata+getAuthor) ⇒ <code>\*</code>
+        * [.getRuntime()](#Metadata+getRuntime) ⇒ <code>string</code>
+        * [.getCiceroVersion()](#Metadata+getCiceroVersion) ⇒ <code>string</code>
+        * [.satisfiesCiceroVersion(version)](#Metadata+satisfiesCiceroVersion) ⇒ <code>string</code>
+        * [.getSamples()](#Metadata+getSamples) ⇒ <code>object</code>
+        * [.getRequest()](#Metadata+getRequest) ⇒ <code>object</code>
+        * [.getSample(locale)](#Metadata+getSample) ⇒ <code>string</code>
+        * [.getREADME()](#Metadata+getREADME) ⇒ <code>String</code>
+        * [.getPackageJson()](#Metadata+getPackageJson) ⇒ <code>object</code>
+        * [.getName()](#Metadata+getName) ⇒ <code>string</code>
+        * [.getDisplayName()](#Metadata+getDisplayName) ⇒ <code>string</code>
+        * [.getKeywords()](#Metadata+getKeywords) ⇒ <code>Array</code>
+        * [.getDescription()](#Metadata+getDescription) ⇒ <code>string</code>
+        * [.getVersion()](#Metadata+getVersion) ⇒ <code>string</code>
+        * [.getIdentifier()](#Metadata+getIdentifier) ⇒ <code>string</code>
+        * [.createTargetMetadata(runtimeName)](#Metadata+createTargetMetadata) ⇒ <code>object</code>
+        * [.toJSON()](#Metadata+toJSON) ⇒ <code>object</code>
+    * _static_
+        * [.checkImage(buffer)](#Metadata.checkImage)
+        * [.checkImageDimensions(buffer, mimeType)](#Metadata.checkImageDimensions)
 
 <a name="new_Metadata_new"></a>
 
-### new Metadata(packageJson, readme, samples, request)
+### new Metadata(packageJson, readme, samples, request, logo)
 Create the Metadata.
 <p>
 <strong>Note: Only to be called by framework code. Applications should
@@ -272,7 +413,8 @@ retrieve instances from [Template](#Template)</strong>
 | packageJson | <code>object</code> | the JS object for package.json (required) |
 | readme | <code>String</code> | the README.md for the template (may be null) |
 | samples | <code>object</code> | the sample markdown for the template in different locales, |
-| request | <code>object</code> | the JS object for the sample request represented as an object whose keys are the locales and whose values are the sample markdown. For example:  {      default: 'default sample markdown',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). THe `default` key represents sample template text in a non-specified language, stored in a file called `sample.md`. |
+| request | <code>object</code> | the JS object for the sample request |
+| logo | <code>Buffer</code> | the bytes data for the image represented as an object whose keys are the locales and whose values are the sample markdown. For example:  {      default: 'default sample markdown',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). THe `default` key represents sample template text in a non-specified language, stored in a file called `sample.md`. |
 
 <a name="Metadata+getTemplateType"></a>
 
@@ -281,6 +423,20 @@ Returns either a 0 (for a contract template), or 1 (for a clause template)
 
 **Kind**: instance method of [<code>Metadata</code>](#Metadata)  
 **Returns**: <code>number</code> - the template type  
+<a name="Metadata+getLogo"></a>
+
+### metadata.getLogo() ⇒ <code>Buffer</code>
+Returns the logo at the root of the template
+
+**Kind**: instance method of [<code>Metadata</code>](#Metadata)  
+**Returns**: <code>Buffer</code> - the bytes data of logo  
+<a name="Metadata+getAuthor"></a>
+
+### metadata.getAuthor() ⇒ <code>\*</code>
+Returns the author for this template.
+
+**Kind**: instance method of [<code>Metadata</code>](#Metadata)  
+**Returns**: <code>\*</code> - the author information  
 <a name="Metadata+getRuntime"></a>
 
 ### metadata.getRuntime() ⇒ <code>string</code>
@@ -368,10 +524,10 @@ Returns the display name for this template.
 <a name="Metadata+getKeywords"></a>
 
 ### metadata.getKeywords() ⇒ <code>Array</code>
-Returns the name for this template.
+Returns the keywords for this template.
 
 **Kind**: instance method of [<code>Metadata</code>](#Metadata)  
-**Returns**: <code>Array</code> - the name of the template  
+**Returns**: <code>Array</code> - the keywords of the template  
 <a name="Metadata+getDescription"></a>
 
 ### metadata.getDescription() ⇒ <code>string</code>
@@ -405,6 +561,89 @@ Return new Metadata for a target runtime
 | --- | --- | --- |
 | runtimeName | <code>string</code> | the target runtime name |
 
+<a name="Metadata+toJSON"></a>
+
+### metadata.toJSON() ⇒ <code>object</code>
+Return the whole metadata content, for hashing
+
+**Kind**: instance method of [<code>Metadata</code>](#Metadata)  
+**Returns**: <code>object</code> - the content of the metadata object  
+<a name="Metadata.checkImage"></a>
+
+### Metadata.checkImage(buffer)
+Check the buffer is a png file with the right size
+
+**Kind**: static method of [<code>Metadata</code>](#Metadata)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| buffer | <code>Buffer</code> | the buffer object |
+
+<a name="Metadata.checkImageDimensions"></a>
+
+### Metadata.checkImageDimensions(buffer, mimeType)
+Checks if dimensions for the image are correct.
+
+**Kind**: static method of [<code>Metadata</code>](#Metadata)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| buffer | <code>Buffer</code> | the buffer object |
+| mimeType | <code>string</code> | the mime type of the object |
+
+<a name="MonetaryAmountFormatParser"></a>
+
+## MonetaryAmountFormatParser
+Parses a monetary/amount format string
+
+**Kind**: global class  
+**Access**: public  
+
+* [MonetaryAmountFormatParser](#MonetaryAmountFormatParser)
+    * _instance_
+        * [.addGrammars(grammars, field)](#MonetaryAmountFormatParser+addGrammars)
+        * [.buildFormatRules(formatString)](#MonetaryAmountFormatParser+buildFormatRules) ⇒ <code>Object</code>
+    * _static_
+        * [.parseMonetaryAmountFormatField(field)](#MonetaryAmountFormatParser.parseMonetaryAmountFormatField) ⇒ <code>string</code>
+
+<a name="MonetaryAmountFormatParser+addGrammars"></a>
+
+### monetaryAmountFormatParser.addGrammars(grammars, field)
+Given current grammar parts, add necessary grammars parts for the format.
+
+**Kind**: instance method of [<code>MonetaryAmountFormatParser</code>](#MonetaryAmountFormatParser)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
+| field | <code>string</code> | grammar field |
+
+<a name="MonetaryAmountFormatParser+buildFormatRules"></a>
+
+### monetaryAmountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code>
+Converts a format string to a Nearley action
+
+**Kind**: instance method of [<code>MonetaryAmountFormatParser</code>](#MonetaryAmountFormatParser)  
+**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| formatString | <code>string</code> | the input format string |
+
+<a name="MonetaryAmountFormatParser.parseMonetaryAmountFormatField"></a>
+
+### MonetaryAmountFormatParser.parseMonetaryAmountFormatField(field) ⇒ <code>string</code>
+Given a format field (like CCC or 0,0.0) this method returns
+a logical name for the field. Note the logical names
+have been picked to align with the moment constructor that takes an object.
+
+**Kind**: static method of [<code>MonetaryAmountFormatParser</code>](#MonetaryAmountFormatParser)  
+**Returns**: <code>string</code> - the field designator  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| field | <code>string</code> | the input format field |
+
 <a name="ParserManager"></a>
 
 ## ParserManager
@@ -426,6 +665,7 @@ Generates and manages a Nearley parser for a template.
         * [.getGrammar()](#ParserManager+getGrammar) ⇒ <code>String</code>
         * [.getTemplatizedGrammar()](#ParserManager+getTemplatizedGrammar) ⇒ <code>String</code>
         * [.roundtripMarkdown(text)](#ParserManager+roundtripMarkdown) ⇒ <code>string</code>
+        * [.formatText(text, options, format)](#ParserManager+formatText) ⇒ <code>string</code>
     * _static_
         * [.adjustListBlock(x, separator)](#ParserManager.adjustListBlock) ⇒ <code>object</code>
         * [.getProperty(templateModel, element)](#ParserManager.getProperty) ⇒ <code>\*</code>
@@ -559,6 +799,20 @@ Round-trip markdown
 | --- | --- | --- |
 | text | <code>string</code> | the markdown text |
 
+<a name="ParserManager+formatText"></a>
+
+### parserManager.formatText(text, options, format) ⇒ <code>string</code>
+Format text
+
+**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
+**Returns**: <code>string</code> - the result of parsing and printing back the text  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| text | <code>string</code> | the markdown text |
+| options | <code>object</code> | parameters to the formatting |
+| format | <code>string</code> | to the text generation |
+
 <a name="ParserManager.adjustListBlock"></a>
 
 ### ParserManager.adjustListBlock(x, separator) ⇒ <code>object</code>
@@ -624,7 +878,7 @@ template.
 **Access**: public  
 
 * *[Template](#Template)*
-    * *[new Template(packageJson, readme, samples, request, options)](#new_Template_new)*
+    * *[new Template(packageJson, readme, samples, request, logo, options)](#new_Template_new)*
     * _instance_
         * *[.validate()](#Template+validate)*
         * *[.getTemplateModel()](#Template+getTemplateModel) ⇒ <code>ClassDeclaration</code>*
@@ -635,7 +889,7 @@ template.
         * *[.getVersion()](#Template+getVersion) ⇒ <code>String</code>*
         * *[.getDescription()](#Template+getDescription) ⇒ <code>String</code>*
         * *[.getHash()](#Template+getHash) ⇒ <code>string</code>*
-        * *[.toArchive([language], [options])](#Template+toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
+        * *[.toArchive([language], [options], logo)](#Template+toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
         * *[.getParserManager()](#Template+getParserManager) ⇒ [<code>ParserManager</code>](#ParserManager)*
         * *[.getLogicManager()](#Template+getLogicManager) ⇒ <code>LogicManager</code>*
         * *[.getIntrospector()](#Template+getIntrospector) ⇒ <code>Introspector</code>*
@@ -655,7 +909,7 @@ template.
 
 <a name="new_Template_new"></a>
 
-### *new Template(packageJson, readme, samples, request, options)*
+### *new Template(packageJson, readme, samples, request, logo, options)*
 Create the Template.
 Note: Only to be called by framework code. Applications should
 retrieve instances from [fromArchive](#Template.fromArchive) or [fromDirectory](#Template.fromDirectory).
@@ -667,6 +921,7 @@ retrieve instances from [fromArchive](#Template.fromArchive) or [fromDirectory](
 | readme | <code>String</code> | the readme in markdown for the template (optional) |
 | samples | <code>object</code> | the sample text for the template in different locales |
 | request | <code>object</code> | the JS object for the sample request |
+| logo | <code>Buffer</code> | the bytes data of logo |
 | options | <code>Object</code> | e.g., { warnings: true } |
 
 <a name="Template+validate"></a>
@@ -741,7 +996,7 @@ all the models and all the script files.
 **Returns**: <code>string</code> - the SHA-256 hash in hex format  
 <a name="Template+toArchive"></a>
 
-### *template.toArchive([language], [options]) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
+### *template.toArchive([language], [options], logo) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
 Persists this template to a Cicero Template Archive (cta) file.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
@@ -751,6 +1006,7 @@ Persists this template to a Cicero Template Archive (cta) file.
 | --- | --- | --- |
 | [language] | <code>string</code> | target language for the archive (should be 'ergo') |
 | [options] | <code>Object</code> | JSZip options |
+| logo | <code>Buffer</code> | Bytes data of the PNG file |
 
 <a name="Template+getParserManager"></a>
 
@@ -919,7 +1175,7 @@ calling the parse method and passing in natural language text that conforms to t
         * *[.getLogicManager()](#TemplateInstance+getLogicManager) ⇒ <code>LogicManager</code>*
         * *[.toJSON()](#TemplateInstance+toJSON) ⇒ <code>object</code>*
     * _static_
-        * *[.convertDateTimes(obj, utcOffset)](#TemplateInstance.convertDateTimes) ⇒ <code>\*</code>*
+        * *[.convertFormattedParsed(obj, utcOffset)](#TemplateInstance.convertFormattedParsed) ⇒ <code>\*</code>*
 
 <a name="new_TemplateInstance_new"></a>
 
@@ -1022,10 +1278,10 @@ Returns a JSON representation of the clause
 
 **Kind**: instance method of [<code>TemplateInstance</code>](#TemplateInstance)  
 **Returns**: <code>object</code> - the JS object for serialization  
-<a name="TemplateInstance.convertDateTimes"></a>
+<a name="TemplateInstance.convertFormattedParsed"></a>
 
-### *TemplateInstance.convertDateTimes(obj, utcOffset) ⇒ <code>\*</code>*
-Recursive function that converts all instances of ParsedDateTime
+### *TemplateInstance.convertFormattedParsed(obj, utcOffset) ⇒ <code>\*</code>*
+Recursive function that converts all instances of Formated objects (ParsedDateTime or ParsedMonetaryAmount)
 to a Moment.
 
 **Kind**: static method of [<code>TemplateInstance</code>](#TemplateInstance)  
@@ -1109,4 +1365,28 @@ Extract the file location from the parse error
 | Param | Type | Description |
 | --- | --- | --- |
 | error | <code>object</code> | the error object |
+
+<a name="isPNG"></a>
+
+## isPNG(buffer) ⇒ <code>Boolean</code>
+Checks whether the file is PNG
+
+**Kind**: global function  
+**Returns**: <code>Boolean</code> - whether the file in PNG  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| buffer | <code>Buffer</code> | buffer of the file |
+
+<a name="getMimeType"></a>
+
+## getMimeType(buffer) ⇒ <code>Object</code>
+Returns the mime-type of the file
+
+**Kind**: global function  
+**Returns**: <code>Object</code> - the mime-type of the file  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| buffer | <code>Buffer</code> | buffer of the file |
 
