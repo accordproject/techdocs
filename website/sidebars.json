@@ -1,6 +1,6 @@
 {
     "docs": {
-        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business", "accordproject-developers"],
+        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business", "faq-lawyers","accordproject-developers"],
         "Getting Started": ["started-installation", "started-hello", "started-studio", "started-resources"],
         "User Tutorials": [
             {
@@ -61,6 +61,10 @@
                 "label": "JavaScript API",
                 "ids": ["cicero-api", "ergo-api", "concerto-api"]
             }
+        ],
+        "FAQ": [
+            "for-lawyers",
+            "for-developers"
         ]
     }
 }

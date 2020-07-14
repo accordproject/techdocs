@@ -7,7 +7,7 @@
       "version-0.20-accordproject-developers"
     ],
     "Getting Started": [
-      "version-0.20-started-installation",
+      "version-0.20-faq-installation",
       "version-0.20-started-hello",
       "version-0.20-started-studio",
       "version-0.20-started-resources"
@@ -116,6 +116,10 @@
           "version-0.20-concerto-api"
         ]
       }
+    ],
+    "FAQ": [
+      "version-0.20-faq-lawyers",
+      "version-0.20-faq-developers"
     ]
   }
 }

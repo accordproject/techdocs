@@ -44,6 +44,12 @@
       "example-eatapple": {
         "title": "A Healthy Clause"
       },
+      "faq-developers": {
+        "title": "For Developers"
+      },
+      "faq-lawyers": {
+        "title": "For Lawyers"
+      },
       "logic-advanced-expr": {
         "title": "Advanced Expressions"
       },
@@ -353,6 +359,12 @@
       "version-0.20/version-0.20-example-eatapple": {
         "title": "A Healthy Clause"
       },
+      "version-0.20/version-0.20-faq-developers": {
+        "title": "For Developers"
+      },
+      "version-0.20/version-0.20-faq-lawyers": {
+        "title": "For Lawyers"
+      },
       "version-0.20/version-0.20-logic-advanced-expr": {
         "title": "Advanced Expressions"
       },
@@ -483,6 +495,7 @@
       "Developers Tutorials": "Developers Tutorials",
       "Template Guides": "Template Guides",
       "Reference Manual": "Reference Manual",
+      "FAQ": "FAQ",
       "Basic Tutorials": "Basic Tutorials",
       "Advanced Tutorials": "Advanced Tutorials",
       "Ergo Language Guide": "Ergo Language Guide",
