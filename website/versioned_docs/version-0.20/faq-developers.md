@@ -9,7 +9,7 @@ original_id: faq-developers
 
 The Accord Project has developed a plugin for VS-Code that can be installed through the VS-Code marketplace [Accord Project](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension)
 
-The VSCode extension:
+##### The VSCode extension:
 
 * parses and type-checks '.ergo' files using the Ergo compiler and reports any errors.
 * parses and validates '.cto' files using the Concerto parser and reports any errors.
@@ -17,9 +17,9 @@ The VSCode extension:
 
 You can also use any other text editor but you might not have the features available in VSCode
 
-* ## What can I do from the command line with Accord?
+* ## What can I do from the command line with Accord Project?
 
-The Accord Project tools are written in javascript and can be installed for the command line via Node.
+The Accord Project tools are written in javascript and can be installed for the command line via NPM.
 
 #### The Primary package is the **Cicero** CLI and it can be installed via: 
 
@@ -45,11 +45,9 @@ Commands:
 
   ```npm install -g @accordproject/concerto-cli```
 
-  The repo has some documentation: [Concerto-CLI](https://github.com/accordproject/concerto/tree/master/packages/concerto-cli) 
-
   You can do things like convert Concerto to JSONSchema ```concerto compile --ctoFiles modelfile.cto --target JSONSchema``` and perform other operations on Concerto files.
 
-  Reference materials are at [Concerto CLI REference](https://docs.accordproject.org/docs/cicero-cli.html)
+  Reference materials are at [Concerto CLI Reference](https://docs.accordproject.org/docs/cicero-cli.html)
 
 ####  **Ergo** is handled with the **Ergo** CLI:
 
@@ -68,7 +66,7 @@ Commands:
 
   Reference materials are at [Ergo CLI Documentation](https://docs.accordproject.org/docs/ergo-cli.html).
 
-  A nice thing about Ergo is that there is an included [Repl](https://docs.accordproject.org/docs/ergo-repl.html) which you can start with ```ergotop``. 
+  A nice thing about Ergo is that there is an included [Repl](https://docs.accordproject.org/docs/ergo-repl.html) which you can start with ```ergotop```. 
 
 #### Markdown Transform:
 ```npm install -g @accordproject/markdown-cli```    
@@ -100,3 +98,22 @@ markdown-cli : command line utilities
 markdown-template : converts JSON data and markdown strings to/from TemplateMark
 
 markdown-it-template : plugins to markdown-it for markdown extensions
+
+## How can I integrate Accord Project contracts into my Javascript Projects.
+
+In addition to the command line tools Accord Project provides numerous tools to help integrate *Smart Contracts* into your projects. Most of them are React components and they provide a lot of ready made functionality.
+
+This portion of the project is currently in development but you can check them out at [Web-Components](https://github.com/accordproject/web-components).
+
+- [Markdown Editor](packages/ui-markdown-editor): A WYSIWYG editor based on [Slate](https://www.slatejs.org) for markdown that conforms to the [CommonMark](https://spec.commonmark.org) specification.
+- [Contract Editor](packages/ui-contract-edtior): An editor based on our [Markdown Editor](packages/ui-markdown-editor) for handling smart legal contracts.
+- [Concerto UI](packages/ui-concerto): React components for models written in the [Concerto Modeling Language](https://github.com/accordproject/concerto).
+- [Web Components](packages/ui-components): Tools for implementing React components in your contract editing studio.
+- [Storybook](packages/storybook): A [React Storybook](https://storybook.js.org), and contains all the stories for all the sub-packages.
+
+
+#### Also in addtion to the command line Operations all of the functions are available and documented in the corresponding APIs:
+
+##### [Cicero API](https://docs.accordproject.org/docs/cicero-api.html)
+##### [Concerto API](https://docs.accordproject.org/docs/concerto-api.html)
+##### [Ergo API](https://docs.accordproject.org/docs/ergo-api.html)
