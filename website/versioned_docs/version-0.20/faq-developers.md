@@ -39,6 +39,7 @@ Commands:
   cicero compile     generate code for a target platform
   cicero get         save local copies of external dependencies
   ```
+  
   Reference materials are at [Cicero CLI Documentation](https://docs.accordproject.org/docs/cicero-cli.html)
 
 #### The schema, or models are handled through **Concerto** which can be installed with:
