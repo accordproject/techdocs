@@ -1,15 +1,20 @@
 ---
-id: accordproject-business
-title: For Business
+id: accordproject-lawyers
+title: For Lawyers
 ---
 
-## Why is the Accord Project relevant for business?
+## Why is the Accord Project relevant for lawyers?
 
-Contracting is undergoing a digital transformation driven by a need to deliver customer-centric legal and business solutions faster, and at lower cost. This imperative is fueling the adoption of a broad range of new technologies to improve the efficiency of drafting, managing, and executing legal contracting operations; the Accord Project is proud to be part of that movement.
+The Legal world is changing and Legal Tech is growing into a billion dollar industry. The modern lawyer has to be at home in the digital world. Law Schools now teach courses in coding for lawyers, computational law, blockchain and artificial intelligence in law. Legal Hackers is a world movement uniting lawyers across the world in a shared passion for Law and Tech.
 
-In addition, contributions from businesses are crucial for the development of the Accord Project. The expertise of stakeholders, such as business professionals and attorneys, is invaluable in improving the functionality and content of the Accord Project's codebase and specifications, to ensure that the templates meet real-world business requirements.
+Even the best code would be useless if it does not meet industry needs and requirements, so input from the legal community to steer the direction of smart legal contract technology is crucial. By creating templates for contract clauses or reviewing templates, lawyers can influence the direction of the Accord Project. In addition, feedback using domain-specific expertise can enhance the value and usability of the Accord Project templates to users.
 
 If this interests you, please visit our [Lifecycle and Industry Working Groups](https://www.accordproject.org/liwg) page for more information.
+
+As an individual, contributing to the Accord Project would be a great opportunity to learn about smart legal contracts. Through the Accord Project, you can understand the foundations of open source technologies and learn how to develop smart agreements.
+
+If your organization wants to become a member of the Accord Project, please [join our community](https://www.accordproject.org/membership).
+
 
 ## How to navigate this documentation?
 
