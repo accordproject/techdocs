@@ -1,6 +1,6 @@
 {
     "docs": {
-        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business", "accordproject-developers"],
+        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business","accordproject-lawyers", "accordproject-developers", "accordproject-faq"],
         "Getting Started": ["started-installation", "started-hello", "started-studio", "started-resources"],
         "User Tutorials": [
             {
