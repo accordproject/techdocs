@@ -85,10 +85,21 @@ This is a simple example of the benefits of Machine-Executable contract, here ad
 
 More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
 
-## What are the Benefits of Smart Legal Contracts?
 
-Smart Legal Contracts can be easily searched, analyzed, queried, and understood. By associating a data model to a contract, it is possible to extract a host of valuable data about a contract or draft a series of contracts from existing data points (i.e., variables and their values).
+## Why is the Accord Project relevant?
 
-The data model is used to ensure that all of the necessary data is present in the contract, and that this data is valid. In addition, it provides the necessary structure to enable contracts to "come alive" by adding executable logic.
+The Accord Project provides a universal format for smart legal contracts, and this format is embodied in a variety of open source projects that comprise the Accord Project technology stack. Input from businesses, lawyers and developers is crucial for the Accord Project.
 
-For more information about Smart Legal Contracts, and how they are different from other kinds of "smart contracts", please visit the [Accord Project FAQ](https://www.accordproject.org/frequently-asked-questions).
+If this interests you, please visit our [Technology Working Group](https://www.accordproject.org/working-groups/technology) page, and join our [slack channel](https://accord-project-slack-signup.herokuapp.com/)!
+
+## How to navigate this documentation?
+
+If you want to author, validate, and run Accord Project templates locally, please visit our [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) page for instructions.
+
+If you are new to the Accord Project, please read the [Key Concepts](accordproject-concepts) page. This will allow you to understand the three components of a template (text, model, and logic) and how they work together. If you want some guidance on creating your first template, please see [Authoring in Template Studio](tutorial-latedelivery) for a step-by-step guide on how to create your first template.
+
+If you want to dive into our technology stack, you can find more information about:
+- Software implementation: [Cicero](https://github.com/accordproject/cicero)
+- Template text: [CiceroMark](markup-cicero)
+- Template model: [Concerto Modeling](model-concerto)
+- Template logic: [Ergo Logic](logic-ergo)

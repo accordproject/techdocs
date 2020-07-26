@@ -10,11 +10,3 @@ Contracting is undergoing a digital transformation driven by a need to deliver c
 In addition, contributions from businesses are crucial for the development of the Accord Project. The expertise of stakeholders, such as business professionals and attorneys, is invaluable in improving the functionality and content of the Accord Project's codebase and specifications, to ensure that the templates meet real-world business requirements.
 
 If this interests you, please visit our [Lifecycle and Industry Working Groups](https://www.accordproject.org/liwg) page for more information.
-
-## How to navigate this documentation?
-
-If you are new to the Accord Project, the best place to start is our [Online Tour](started-studio). This video is a great way to see the Accord Project in action! If you want to read more about the key concepts behind the Accord Project technology (or learn more about the template model), please read the [Key Concepts](accordproject-concepts) page. This will allow you to understand the three components of a template (text, model, and logic) and how they work together.
-
-If any of the technical terms are confusing or hard to understand, we have a [Glossary](ref-glossary) page that may help you. If there are any concepts or terms that you want to include in the Glossary, please join our [slack channel](https://accord-project-slack-signup.herokuapp.com/) and make suggestions!
-
-If you want to create a template yourself, please see [Authoring in Template Studio](tutorial-latedelivery) for a step-by-step guide on how to create your first template. The tutorial will provide an accessible starting point for those without significant development experience to begin building smart legal contracts using the Accord Project technology.
