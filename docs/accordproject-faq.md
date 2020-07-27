@@ -6,7 +6,7 @@ title: FAQ
 
 ### What is a "Smart Contract" in the Accord Project?
 
-A “smart” legal contract is a legally binding agreement that is digital and able to connect its terms and the performance of its obligations to external sources of data and software systems. The benefit is to enable a wide variety of efficiencies, automation, and real time visibility for lawyers, businesses, nonprofits, and government. The potential applications of smart legal contracts are limitless. Although the operation of smart legal contracts may be enhanced by using blockchain technology, such as by securely sharing contract data among a business network, smart legal contracts can operate using traditional software systems without blockchain. A central goal of Accord Project technology is to be blockchain agnostic.
+A “smart” legal contract is a legally binding agreement that is digital and able to connect its terms and the performance of its obligations to external sources of data and software systems. The benefit is to enable a wide variety of efficiencies, automation, and real time visibility for lawyers, businesses, nonprofits, and government. The potential applications of smart legal contracts are limitless. Although the operation of smart legal contracts may be enhanced by using blockchain technology, a blockchain is not necessary, smart legal contracts can operate using traditional software systems without blockchain. A central goal of Accord Project technology is to be blockchain agnostic.
 
 A smart legal contract consists of natural language text with certain parts (e.g. clauses, sections) of the agreement constructed as machine executable components. The libraries provided by the Accord Project enable a document to be:
 
