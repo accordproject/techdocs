@@ -85,12 +85,12 @@ Options:
 ```
 
 At the moment, the available target formats are as follows:
-- Go Lang: `concerto compile --ctoFiles modelfile.cto --format Go`
-- Plant UML: `concerto compile --ctoFiles modelfile.cto --format PlantUML`
-- Typescript: `concerto compile --ctoFiles modelfile.cto --format Typescript`
-- Java: `concerto compile --ctoFiles modelfile.cto --format Java`
-- JSONSchema: `concerto compile --ctoFiles modelfile.cto --format JSONSchema`
-- XMLSchema: `concerto compile --ctoFiles modelfile.cto --format XMLSchema`
+- Go Lang: `concerto compile --ctoFiles modelfile.cto --target Go`
+- Plant UML: `concerto compile --ctoFiles modelfile.cto --target PlantUML`
+- Typescript: `concerto compile --ctoFiles modelfile.cto --target Typescript`
+- Java: `concerto compile --ctoFiles modelfile.cto --target Java`
+- JSONSchema: `concerto compile --ctoFiles modelfile.cto --target JSONSchema`
+- XMLSchema: `concerto compile --ctoFiles modelfile.cto --target XMLSchema`
 
 ### Example
 For example, using the `compile` command to export the `clause.cto` file from a [Late Delivery and Penalty](https://github.com/accordproject/cicero-template-library/tree/master/src/latedeliveryandpenalty) clause into `Go Lang` format:
