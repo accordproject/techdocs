@@ -17,11 +17,11 @@ While the Accord Project technology is targeted at the development of smart lega
 
 ### How is an Accord Project "Smart Contract" different from "Smart Contracts" on the blockchain?
 
-Accord Project Smart legal contracts should not be confused with so-called blockchain “smart contracts”, which are scripts that operate within a blockchain system. On the blockchain a smart contract is often written in a specific language like solidity that executes and operates on the blockchain. It lives in a closed world. An Accord Project Smart Contract contains text based template that integrates with a data model and the Ergo language. The three components are integrated into a whole. Using Ergo an Accord Project Smart contract can communicate with other systems, it can send and receive data, it can perform calculations and it can interact with a blockchain.
+Accord Project Smart legal contracts should not be confused with so-called blockchain “smart contracts”, which are scripts that necesarily operate on a blockchain. On the blockchain a smart contract is often written in a specific language like solidity that executes and operates on the blockchain. It lives in a closed world. An Accord Project Smart Contract contains text based template that integrates with a data model and the Ergo language. The three components are integrated into a whole. Using Ergo an Accord Project Smart contract can communicate with other systems, it can send and receive data, it can perform calculations and it can interact with a blockchain.
 
 ### What benefits do Smart Legal Contracts provide?
 
-Contractual agreements sit at the heart of any organization, governing relationships with employees, shareholders, customers, suppliers, financiers, and more. Yet contracts today are not capable of being managed as the valuable assets they are. Currently, a contract exists as a static text documents stored in cloud storage services, dated contract management systems, or even email inboxes. Often these documents are Word files or PDFs that can only be interpreted by humans. A smart legal contract, by contrast, can be interpreted by machines. 
+Contractual agreements sit at the heart of any organization, governing relationships with employees, shareholders, customers, suppliers, financiers, and more. Yet contracts today are not capable of being efficiently managed as the valuable assets they are. Currently contracts exist as static text documents stored in cloud storage services, dated contract management systems, or even email inboxes. Often these documents are Word files or PDFs that can only be interpreted by humans. A smart legal contract, by contrast, can be interpreted by machines. 
 
 Smart Legal Contracts can be easily searched, analyzed, queried, and understood. By associating a data model to a contract, it is possible to extract a host of valuable data about a contract or draft a series of contracts from existing data points (i.e., variables and their values).
 
@@ -41,7 +41,7 @@ Consequently, contracts are transformed from business liabilities in constant ne
 
 The Accord Project is a non-profit, member-driven organization that builds open source code and documentation for smart legal contracts for use by transactional attorneys, business and finance professionals, and other contract users. Open source means that anyone can use and contribute to the code and documentation and use it in their own software applications and systems free of charge.
 
-The purpose of the Accord Project is to establish and maintain a common and consistent legal and technical foundation for smart legal contracts. The Accord Project is organized into working groups focused on transactions: supply chain, financial services, intellectual property, venture and token sales, real estate and construction; and also on dispute resolution. The transactional working groups are assisted by the Technology Working Group, which builds the underlying open source code and specifications to codify the knowledge of the transactional working groups. More details about the internal governance of the Accord Project are available [here](https://github.com/accordproject/governance).
+The purpose of the Accord Project is to establish and maintain a common and consistent legal and technical foundation for smart legal contracts. The Accord Project is organized into working groups focused on various use cases for Smart COntracts. The specific working groups are assisted by the Technology Working Group, which builds the underlying open source code and specifications to codify the knowledge of the transactional working groups. More details about the internal governance of the Accord Project are available [here](https://github.com/accordproject/governance).
 
 
 ### How can I get involved?
@@ -50,7 +50,7 @@ The Accord Project Community is developing several working groups focusing on di
 
 A primary purpose of the working groups is to develop a universally accessible and widely used open source library of modular, smart legal contracts, smart clause templates and models that reflect input from the community. Smart legal contract templates are built according to the Project’s [Cicero Specification](https://github.com/accordproject/cicero).
 
-Members can provide feedback into the templates and models relevant to a particular working group. You can immediately get started contributing smart legal contract templates and models by using the Accord Project’s [Template Studio](https://studio.accordproject.org/).
+Members can provide feedback into the templates and models relevant to a particular working group. You can immediately start contributing smart legal contract templates and models by using the Accord Project’s [Template Studio](https://studio.accordproject.org/).
 
 The Accord Project has developed an easy-to-use programming language for building and executing smart legal contracts called Ergo. The goals of Ergo are to be accessible and usable by non-technical professionals, portable across, and compatible with, a variety of environments such as SaaS platforms and different blockchains, and meeting security, safety, and other requirements. 
 
