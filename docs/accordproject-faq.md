@@ -48,7 +48,7 @@ The purpose of the Accord Project is to establish and maintain a common and cons
 
 The Accord Project Community is developing several working groups focusing on different applications of  smart contracts. The working groups have frequent calls and use the Accord Project’s Slack group chat application (join by clicking [here](https://accord-project-slack-signup.herokuapp.com/)) for discussion. The dates, dial-in instructions, and agendas for the working groups are all listed in the Project’s public calendar and typically also in working group’s respective slack channels.
 
-A primary purpose of the working groups is to develop a universally accessible and widely used open source library of modular, smart legal contracts, smart clause templates and models that reflect input from the community. Smart legal contract templates are built according to the Project’s [Cicero Specification](https://github.com/accordproject/cicero).
+A primary purpose of the working groups is to develop a universally accessible and widely used open source library of modular, smart legal contracts, smart templates and models that reflect input from the community. Smart legal contract templates are built according to the Project’s [Cicero Specification](https://github.com/accordproject/cicero).
 
 Members can provide feedback into the templates and models relevant to a particular working group. You can immediately start contributing smart legal contract templates and models by using the Accord Project’s [Template Studio](https://studio.accordproject.org/).
 
