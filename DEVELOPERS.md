@@ -16,7 +16,7 @@ Before you can build one of our libraries, you must install and configure the fo
 
 * [Git][git]: The [Github Guide to Installing Git][git-setup] is a good source of information.
 
-* [Node.js v10.16.0 'Dubnium' (LTS)][node]: We use Node to generate the documentation, run a development web server, run tests, and generate distributable files. Depending on your system you can install Node either from source or as a pre-packaged bundle.
+* [Node.js (LTS)][node]: We use Node to generate the documentation, run a development web server, run tests, and generate distributable files. Depending on your system you can install Node either from source or as a pre-packaged bundle.
 
   We recommend using [nvm][nvm] (or [nvm-windows][nvm-windows]) to manage and install Node.js, which makes it easy to change the version of Node.js per project.
 

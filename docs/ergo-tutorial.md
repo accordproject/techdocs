@@ -43,7 +43,7 @@ Before you can build Ergo, you must install and configure the following dependen
  
 ### Node.js
 
-* Node.js v8.x (LTS): We use Node to generate the documentation, run a development web server, run tests, and generate distributable files. Depending on your system, you can install Node either from source or as a pre-packaged bundle.
+* Node.js (LTS): We use Node to generate the documentation, run a development web server, run tests, and generate distributable files. Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 > Tip: Use nvm (or nvm-windows) to manage and install Node.js, This facilitates a version change of Node.js per project.
 * Lerna: This is a tool which helps when handling multiple npm packages in the Ergo repository. To install:
 npm install -g lerna@^3.15.0
