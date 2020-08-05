@@ -164,6 +164,9 @@
       "tutorial-templates": {
         "title": "Templates Deep Dive"
       },
+      "tutorial-vscode": {
+        "title": "Using the VS Code extension"
+      },
       "version-0.12/version-0.12-accordproject-installation": {
         "title": "Installation"
       },

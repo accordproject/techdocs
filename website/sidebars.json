@@ -10,6 +10,11 @@
             },
             {
                 "type": "subcategory",
+                "label": "Authoring with VS Code",
+                "ids": ["tutorial-vscode"]
+            },
+            {
+                "type": "subcategory",
                 "label": "Work with Cicero",
                 "ids": ["tutorial-templates", "tutorial-library", "tutorial-create"]
             }

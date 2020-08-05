@@ -115,6 +115,27 @@ When inside a clause or contract, you can emit (one or more) obligations as foll
 
 Note that `emit` is always terminated by a `;` followed by another statement.
 
+To conditionally emit an obligation you must ensure that both the `then` and the `else` branches
+in your Ergo code have a `return` value. For example:
+
+```ergo
+  let response = VehiclePaymentResponse{ message: "A missed payment was declared for " ++ 
+      contract.buyer.partyId ++ ". There have been " ++ toString(newCounter) ++ " missed payments." };
+
+    if state.numMissedPayments > contract.numMissedPayments then
+      emit DisableVehicle {
+        vehicleId : contract.vehicleId,
+        contract: contract,
+        deadline: none,
+        promisor: some(contract.buyer),
+        promisee: some(contract.seller),
+        numMissedPayments : newCounter
+      };
+      return response
+    else  
+      return response
+```
+
 ## Setting the contract state
 
 When inside a clause or contract, you can create a contract state as follows:
