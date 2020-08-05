@@ -18,7 +18,7 @@ Before you install Cicero, you must first obtain and configure the following dep
 To install the latest version of the Cicero command-line tools:
 
 ```bash
-npm install -g @accordproject/cicero-cli@0.20
+npm install -g @accordproject/cicero-cli
 ```
 
 :::note
@@ -50,7 +50,7 @@ You may also want to install the template generator tool, which you can use to c
 
 ```bash
 npm install -g yo
-npm install -g @accordproject/generator-cicero-template@0.20
+npm install -g @accordproject/generator-cicero-template
 ```
 
 ## What next?
