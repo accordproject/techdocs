@@ -81,7 +81,7 @@ with a loan term of {{loanDuration}},
 and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}.
 ```
 
-This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause. In this example, we display the contract text using the underlying [CiceroMark](markup-cicero) format, instead of the rich-text output that would be found in [editor tools](started-resources#ecosystem-tools) and PDF outputs.
+This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause. In this example, we display the contract text using the underlying [Markup](markup-template) format, instead of the rich-text output that would be found in [editor tools](started-resources#ecosystem-tools) and PDF outputs.
 
 More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
 
@@ -100,6 +100,6 @@ If you are new to the Accord Project, please read the [Key Concepts](accordproje
 
 If you want to dive into our technology stack, you can find more information about:
 - Software implementation: [Cicero](https://github.com/accordproject/cicero)
-- Template text: [CiceroMark](markup-cicero)
-- Template model: [Concerto Modeling](model-concerto)
-- Template logic: [Ergo Logic](logic-ergo)
+- Template text: [Markup](markup-commonmark)
+- Template model: [Modeling](model-concerto)
+- Template logic: [Logic](logic-ergo)

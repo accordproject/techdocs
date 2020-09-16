@@ -29,8 +29,8 @@
         "Template Guides": [
             {
                 "type": "subcategory",
-                "label": "CiceroMark",
-                "ids": ["markup-cicero", "markup-commonmark", "markup-variables", "markup-blocks", "markup-ergo"]
+                "label": "Markup",
+                "ids": ["markup-commonmark", "markup-cicero", "markup-template", "markup-variables", "markup-blocks", "markup-ergo"]
             },
             {
                 "type": "subcategory",
