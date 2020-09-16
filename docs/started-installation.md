@@ -3,11 +3,11 @@ id: started-installation
 title: Install Cicero
 ---
 
-To experience the full power of Accord Project, you should install the Cicero command-line tools. This will let you author, validate, and run Accord Project templates on your own machine.
+To experiment with Accord Project, you can install the Cicero command-line. This will let you author, validate, and run Accord Project templates on your own machine.
 
 ## Prerequisites
 
-Before you install Cicero, you must first obtain and configure the following dependency:
+You must first obtain and configure the following dependency:
 
 * [Node.js (LTS)](http://nodejs.org): We use Node.js to run cicero, generate the documentation, run a development web server, testing, and produce distributable files. Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
@@ -22,7 +22,7 @@ npm install -g @accordproject/cicero-cli
 ```
 
 :::note
-You can install a specific version by appending `@version` at the end of the `npm install` command. For instance to install version `0.20.0` or version `0.13.4`:
+You can install a specific version by appending `@version` at the end of the `npm install` command. For instance to install version `0.20.3` or version `0.13.4`:
 ```bash
 npm install -g @accordproject/cicero-cli@0.20.3
 npm install -g @accordproject/cicero-cli@0.13.4

@@ -83,13 +83,13 @@ obligations under this agreement, detailed in "Attachment X", attached
 to this agreement.
 ```
 
-### CiceroMark
+### TemplateMark
 
-CiceroMark is the markup format in which the text for Accord Project templates is written. It defines notations (such as the `{{` and `}}` notation for variables used in the **Acceptance of Delivery** clause) which allows a computer to make sense of your templates.
+TemplateMark is the markup format in which the text for Accord Project templates is written. It defines notations (such as the `{{` and `}}` notation for variables used in the **Acceptance of Delivery** clause) which allows a computer to make sense of your templates.
 
 It also provides the ability to specify the document structure (e.g., headings, lists), to highlight certain terms (e.g., in bold or italics), to indicate text which is optional in the agreement, and more.
 
-_More information about the Accord Project markup can be found in the [CiceroMark](markup-cicero) Section of this documentation._
+_More information about the Accord Project markup can be found in the [TemplateMark](markup-template) Section of this documentation._
 
 ## Template Model
 

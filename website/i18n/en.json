@@ -86,6 +86,9 @@
       "markup-ergo": {
         "title": "Ergo Expressions"
       },
+      "markup-template": {
+        "title": "TemplateMark Overview"
+      },
       "markup-variables": {
         "title": "Variable Expressions"
       },
