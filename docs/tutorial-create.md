@@ -13,7 +13,7 @@ If you haven't already done so, first install the template generator::
 
 ```bash
 npm install -g yo
-npm install -g yo @accordproject/generator-cicero-template@0.20
+npm install -g yo @accordproject/generator-cicero-template
 ```
 
 ### Run the generator:
@@ -39,8 +39,10 @@ bash-3.2$ yo @accordproject/cicero-template
  ´   `  |° ´ Y ` 
 
 ? What is the name of your template? mylease
+? Who is the author? me
 ? What is the namespace for your model? org.acme.lease
    create mylease/README.md
+   create mylease/logo.png
    create mylease/package.json
    create mylease/request.json
    create mylease/logic/logic.ergo
@@ -50,11 +52,72 @@ bash-3.2$ yo @accordproject/cicero-template
    create mylease/text/sample.md
    create mylease/.cucumber.js
    create mylease/.npmignore
+bash-3.2$ 
 ```
 
 :::tip
 You may find it easier to edit the grammar, model and logic for your template in [VSCode](https://code.visualstudio.com/), installing the [Accord Project extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension). The extension gives you syntax highlighting and parser errors within VS Code.
+
+For more information on how to use VS Code with the Accord Project extension, please consult the [Using the VS Code extension](tutorial-vscode) tutorial.
 :::
+
+## Test your template
+
+If you have Cicero installed on your machine, you can go into the newly created `mylease` directory and try it with cicero, to make sure the contract text parses:
+```bash
+bash-3.2$ cicero parse
+11:51:40 AM - info: Using current directory as template folder
+11:51:40 AM - info: Loading a default text/sample.md file.
+11:51:41 AM - info:
+{
+  "$class": "org.acme.lease.MyContract",
+  "name": "Dan",
+  "contractId": "635633f9-e188-4d79-a867-6850d8ad6c66"
+}
+```
+And that you can trigger the contract:
+```bash
+bash-3.2$ cicero trigger 
+11:58:22 AM - info: Using current directory as template folder
+11:58:22 AM - info: Loading a default text/sample.md file.
+11:58:22 AM - info: Loading a default request.json file.
+11:58:23 AM - warn: A state file was not provided, initializing state. Try the --state flag or create a state.json in the root folder of your template.
+11:58:23 AM - info:
+{
+  "clause": "mylease@0.0.0-db65db8a6022ef8dbbc25f2fd9fdc2778596d8ff3473a33c0dab66ae76f1d86e",
+  "request": {
+    "$class": "org.acme.lease.MyRequest",
+    "input": "World"
+  },
+  "response": {
+    "$class": "org.acme.lease.MyResponse",
+    "output": "Hello Dan World",
+    "transactionId": "c5ed5a39-5fd3-4013-b53f-bdd46bd96406",
+    "timestamp": "2020-09-22T15:58:23.798Z"
+  },
+  "state": {
+    "$class": "org.accordproject.cicero.contract.AccordContractState",
+    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+  },
+  "emit": []
+}
+```
+
+The template also comes with a few simple tests which you can run by first doing an `npm install` in the template directory, then by running `npm run test`:
+```bash
+bash-3.2$ npm install 
+bash-3.2$ npm run test 
+
+> mylease@0.0.0 test /Users/jeromesimeon/tmp/mylease
+> cucumber-js test -r .cucumber.js
+
+....
+
+1 scenario (1 passed)
+3 steps (3 passed)
+0m01.257s
+bash-3.2$ 
+```
 
 ## Edit your template
 

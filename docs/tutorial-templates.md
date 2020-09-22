@@ -3,7 +3,7 @@ id: tutorial-templates
 title: Templates Deep Dive
 ---
 
-In the [Getting Started](started-hello) section, we learned how to use the existing [helloworld@0.12.0.cta](https://templates.accordproject.org/archives/helloworld@0.12.0.cta) template archive. Here we take a look inside that archive to understand the structure of Accord Project templates.
+In the [Getting Started](started-hello) section, we learned how to use the existing [helloworld@0.13.0.cta](https://templates.accordproject.org/archives/helloworld@0.13.0.cta) template archive. Here we take a look inside that archive to understand the structure of Accord Project templates.
 
 ## Unpack a Template Archive
 
@@ -11,10 +11,10 @@ A `.cta` archive is nothing more than a zip file containing the components of a 
 
 ```bash
 $ mkdir helloworld
-$ mv helloworld@0.12.0.cta helloworld
+$ mv helloworld@0.13.0.cta helloworld
 $ cd helloworld
-$ unzip helloworld@0.12.0.cta
-Archive:  helloworld@0.12.0.cta
+$ unzip helloworld@0.13.0.cta
+Archive:  helloworld@0.13.0.cta
  extracting: package.json            
    creating: text/
  extracting: text/grammar.tem.md     
@@ -173,7 +173,7 @@ $ cicero trigger
 15:35:19 - warn: A state file was not provided, initializing state. Try the --state flag or create a state.json in the root folder of your template.
 15:35:19 - info:
 {
-  "clause": "helloworld@0.12.0-13f7230894084cc568853771a6b5c928a1a3b71699512f763f8734fcca38dc5c",
+  "clause": "helloworld@0.13.0-ba2600ef11675ad55a036361c1d99e1e9df9a6025c0a35dd5fbe3fc20a0edd07",
   "request": {
     "$class": "org.accordproject.helloworld.MyRequest",
     "input": "Accord Project"
@@ -181,8 +181,8 @@ $ cicero trigger
   "response": {
     "$class": "org.accordproject.helloworld.MyResponse",
     "output": "Hello Fred Blogs Accord Project",
-    "transactionId": "c65d3161-eb77-4d52-8abb-6953a664d190",
-    "timestamp": "2019-11-03T20:35:19.526Z"
+    "transactionId": "2d49bd9e-10b1-4ddd-bca6-79a67fe18c9f",
+    "timestamp": "2020-09-22T15:40:03.175Z"
   },
   "state": {
     "$class": "org.accordproject.cicero.contract.AccordContractState",
