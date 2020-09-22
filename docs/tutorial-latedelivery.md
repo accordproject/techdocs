@@ -11,7 +11,7 @@ We start with a very simple _Late Penalty and Delivery_ Clause and gradually mak
 
 ### Load the Template
 
-To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at [Mini Late Delivery And Penalty](https://templates.accordproject.org/minilatedeliveryandpenalty@0.4.0.html) and click the "Open In Template Studio" button.
+To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at [Mini Late Delivery And Penalty](https://templates.accordproject.org/minilatedeliveryandpenalty@0.5.0.html) and click the "Open In Template Studio" button.
 
 ![Advanced-Late-1](assets/advanced/late1.png)
 
@@ -23,17 +23,17 @@ Then click on the `Text` Section on the left, which should show a `Grammar` tab,
 
 ![Advanced-Late-2](assets/advanced/late2.png)
 
-When the text in the `Grammar` tab is in sync with the text in the `Test Sample` tab, this means the sample is a valid with respect to the grammar, and data is extracted, showing in `Contract Data` tab. The contract data is represented using the JSON format and contains the value of the variables declared in the contract template. For instance, the value for the `buyer` variable is `Betty Buyer`, highlighted in red:
+When the text in the `Grammar` tab is in sync with the text in the `Sample` tab, this means the sample is a valid with respect to the grammar, and data is extracted, showing in `Contract Data` tab. The contract data is represented using the JSON format and contains the value of the variables declared in the contract template. For instance, the value for the `buyer` variable is `Betty Buyer`, highlighted in red:
 
 ![Advanced-Late-3](assets/advanced/late3.png)
 
-Changes to the variables in the `Test Sample` are reflected in the `Contract Data` tab in real time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
+Changes to the variables in the `Sample` are reflected in the `Contract Data` tab in real time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
 
-If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Test Sample`. The error will be shown in red in the status bar at the bottom of the page. For instance, the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.
+If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Sample`. The error will be shown in red in the status bar at the bottom of the page. For instance, the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.
 
 ![Advanced-Late-4](assets/advanced/late4.png)
 
-This is because the `Test Sample` relies on the `Grammar` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can, however, edit the `Grammar` itself to change the legal text.
+This is because the `Sample` relies on the `Grammar` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can, however, edit the `Grammar` itself to change the legal text.
 
 Revert your changes, changing the word `timely` back to the original word `delayed` and the parsing error will disappear.
 
@@ -56,13 +56,13 @@ The final part of the template is the `Ergo` tab of the `Logic` section, which d
 
 Thanks to the `namespace` at the beginning of this file, the Ergo engine can know the definition for the `MiniLateDeliveryClause`, as well as the `LateRequest`, and `LateResponse` types defined in the `Model` tab.
 
-To test the template execution, go to the `Test Request` tab in the `Logic` section. It should be already populated with a valid `Request`. Press the `Send Request` button to trigger the clause.
+To test the template execution, go to the `Request` tab in the `Logic` section. It should be already populated with a valid request. Press the `Trigger` button to trigger the clause.
 
 ![Advanced-Late-7](assets/advanced/late7.png)
 
 Since the value of the `deliveredAt` parameter in the request is after the value of the `agreedDelivery` parameter in the request, this should return a new response which includes the calculated penalty.
 
-Changing the date for the `deliveredAt` parameter in the request will result in a different penalty.
+Changing the date for the `deliveredAt` parameter in the request and triggering the contract again will result in a different penalty.
 
 ![Advanced-Late-8](assets/advanced/late8.png)
 
@@ -72,7 +72,7 @@ Note that the clause will return an error if it is called for a timely delivery.
 
 ## Add a Penalty Cap
 
-We can now start building a more advanced clause. Let us first take a moment to notice that there is no limitation to the penalty resulting from a late delivery. Under `Test Execution` in `Logic`, send this request:
+We can now start building a more advanced clause. Let us first take a moment to notice that there is no limitation to the penalty resulting from a late delivery. Trigger the contract using the following request in the `Request` tab in `Logic`:
 ```json
 {
   "$class": "org.accordproject.minilatedeliveryandpenalty.LateRequest",
@@ -94,7 +94,7 @@ Notice that the penalty is now quite a large value. It is not unusual to cap a p
 
 ### Update the Legal Text
 
-To implement this, we first go to the `Template` tab and add a sentence indicating: `The total amount of penalty shall not, however, exceed {{capPercentage}}% of the total value of the delayed goods.`
+To implement this, we first go to the `Grammar` tab in the `Text` section and add a sentence indicating: `The total amount of penalty shall not, however, exceed {{capPercentage}}% of the total value of the delayed goods.`
 
 For convenience, you can copy-paste the new template text from here:
 ```tem
@@ -118,7 +118,7 @@ As explained in the error message, this is because the new template text uses a 
 
 To define this new variable, go to the `Model` tab, and change the `MiniLateDeliveryClause` type to include `o Double capPercentage`.
 
-![Advanced-Late-11](assets/advanced/late10b.png)
+![Advanced-Late-11](assets/advanced/late11.png)
 
 For convenience, you can copy-paste the new `MiniLateDeliveryClause` type from here:
 ```ergo
@@ -132,9 +132,9 @@ asset MiniLateDeliveryClause extends AccordClause {
 }
 ```
 
-This results in a new error, this time on the test contract:
+This results in a new error, this time on the sample contract:
 
-![Advanced-Late-11](assets/advanced/late11.png)
+![Advanced-Late-12](assets/advanced/late12.png)
 
 To fix it, we need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
 
@@ -153,7 +153,7 @@ total value of the delayed goods. If the delay is more than
 
 Great, now the edited template should have no more errors, and the contract data should now include the value for the new `capPercentage` variable.
 
-![Advanced-Late-12](assets/advanced/late12.png)
+![Advanced-Late-13](assets/advanced/late13.png)
 
 Note that the `Current Template` Tab indicates that the template has been changed.
 
@@ -180,16 +180,16 @@ Do not forget to also change the value of the penalty in the returned `LateRespo
 ```
 The logic should now look as follows:
 
-![Advanced-Late-13](assets/advanced/late13.png)
+![Advanced-Late-14](assets/advanced/late14.png)
 
 ### Run the new Logic
 
 As a final test of the new template, you should try again to run the contract with a long delay in delivery. This should now result in a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
 
-![Advanced-Late-14](assets/advanced/late14.png)
+![Advanced-Late-15](assets/advanced/late15.png)
 
 :::tip
-A full version of the template after those changes have been applied can be found as the [Mini Late Delivery And Penalty Capped](https://templates.accordproject.org/minilatedeliveryandpenalty-capped@0.4.0.html) in the Template Library.
+A full version of the template after those changes have been applied can be found as the [Mini Late Delivery And Penalty Capped](https://templates.accordproject.org/minilatedeliveryandpenalty-capped@0.5.0.html) in the Template Library.
 :::
 
 ## Emit a Payment Obligation.
@@ -200,7 +200,7 @@ As a final extension to this template, we can modify it to emit a Payment Obliga
 
 The first place to change is in the metadata for the template. This can be done easily with the `full contract` button in the `Current Template` tab. This will immediately result in an error indicating that the model does not contain an `AccordContract` type.
 
-![Advanced-Late-15](assets/advanced/late15.png)
+![Advanced-Late-16](assets/advanced/late16.png)
 
 ### Update the Model
 
@@ -257,6 +257,10 @@ Lastly, add a new step between steps `// 4.` and `// 5.` in the logic to emit a 
     };
 
 ```
-That's it! You can observe in the `Test Execution` that an `Obligation` is now being emitted. Try out adjusting values and continuing to send requests and getting responses and obligations.
+That's it! You can observe in the `Request` tab that an `Obligation` is now being emitted. Try out adjusting values and continuing to send requests and getting responses and obligations.
 
-![Advanced-Late-16](assets/advanced/late16.png)
+![Advanced-Late-17](assets/advanced/late17.png)
+
+:::tip
+A full version of the template after those changes have been applied can be found as the [Mini-Late Delivery and Penalty Payment](https://templates.accordproject.org/minilatedeliveryandpenalty-payment@0.5.0.html) in the Template Library.
+:::

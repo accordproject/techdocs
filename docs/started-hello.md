@@ -74,11 +74,10 @@ Thank you!
 Then run `cicero parse --template helloworld@0.13.0.cta --sample sample.md` again. The output should now be:
 
 ```text
-18:15:22 - error: invalid syntax at line 1 col 1:
-
-  FUBAR Name of the person to greet: "Fred Blogs".
-  ^
-Unexpected "F"
+2:13:15 AM - error: Parse error at line 1 column 1
+FUBAR Name of the person to greet: "Fred Blogs".
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Expected: 'Name of the person to greet: '
 ```
 
 ## Draft: Create Text from Deal Data
