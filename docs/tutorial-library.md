@@ -120,7 +120,7 @@ You should see a response as follows:
 
 ```json
 {
-  "clause": "latedeliveryandpenalty@0.15.0-988570f09c5da08526a2c0a3bf9a5b6226c6265c267a60be62fdeaeb44661ee3",
+  "clause": "latedeliveryandpenalty@0.16.0-f4070225d9792aa6494b2ea1f0ffe7a794f8c671977d43fa25c75e83b3eacc3d",
   "request": {
     "$class": "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest",
     "forceMajeure": false,
@@ -132,8 +132,8 @@ You should see a response as follows:
     "$class": "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse",
     "penalty": 110.00000000000001,
     "buyerMayTerminate": true,
-    "transactionId": "1e285c3f-0394-4543-aa67-c324d9ad5b6f",
-    "timestamp": "2019-11-04T00:05:43.923Z"
+    "transactionId": "cca97517-21e8-46b4-8524-e9523d10b6bc",
+    "timestamp": "2020-09-22T15:42:27.464Z"
   },
   "state": {
     "$class": "org.accordproject.cicero.contract.AccordContractState",
@@ -148,11 +148,11 @@ You should see a response as follows:
         "currencyCode": "USD"
       },
       "description": "Dan should pay penalty amount to Steve",
-      "contract": "resource:org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyContract#4be4de30-0aeb-47c6-8791-3a64f4491437",
+      "contract": "resource:org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyContract#199b219e-783f-4451-8992-2e5605310d6d",
       "promisor": "resource:org.accordproject.cicero.contract.AccordParty#Dan",
       "promisee": "resource:org.accordproject.cicero.contract.AccordParty#Steve",
       "eventId": "valid",
-      "timestamp": "2019-11-04T00:05:43.925Z"
+      "timestamp": "2020-09-22T15:42:27.465Z"
     }
   ]
 }

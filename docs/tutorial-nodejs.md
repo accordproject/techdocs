@@ -83,4 +83,3 @@ You can then call ``execute`` on it, passing in the clause or contract instance,
     state.stateId = 'org.accordproject.cicero.contract.AccordContractState#1';
     const result = await engine.execute(clause, request, state);
 ```
-
