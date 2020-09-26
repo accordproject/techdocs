@@ -1,5 +1,5 @@
 ---
-id: started-studio
+id: accordproject-tour
 title: Online Tour
 ---
 
@@ -30,6 +30,3 @@ Here is a timestamp of what is covered in the video:
   - **16:49** : Test Execution - obligations
 - **18:20** : Wrap-up
 
-## What next?
-
-Learn more about authoring Accord Project templates in template studio with the [Editing a Late Delivery Clause](tutorial-latedelivery) tutorial.

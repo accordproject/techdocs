@@ -1,46 +1,39 @@
 {
     "docs": {
-        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-business","accordproject-lawyers", "accordproject-developers", "accordproject-faq"],
-        "Getting Started": ["started-installation", "started-hello", "started-studio", "started-resources"],
-        "User Tutorials": [
-            {
-                "type": "subcategory",
-                "label": "Authoring with Template Studio",
-                "ids": ["tutorial-latedelivery"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Authoring with VS Code",
-                "ids": ["tutorial-vscode"]
-            },
-            {
-                "type": "subcategory",
-                "label": "Work with Cicero",
-                "ids": ["tutorial-templates", "tutorial-library", "tutorial-create"]
-            }
-        ],
-        "Developers Tutorials": [
-            {
-                "type": "subcategory",
-                "label": "Template Execution",
-                "ids": ["tutorial-nodejs", "tutorial-hyperledger"]
-            }
-        ],
+        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-tour", "accordproject-faq"],
+        "Getting Started": ["started-installation", "started-hello", "started-resources"],
         "Template Guides": [
             {
                 "type": "subcategory",
-                "label": "Markup",
-                "ids": ["markup-commonmark", "markup-cicero", "markup-template", "markup-variables", "markup-blocks", "markup-ergo"]
+                "label": "Markdown Text",
+                "ids": ["markup-preliminaries", "markup-commonmark", "markup-ciceromark", "markup-templatemark"]
             },
             {
                 "type": "subcategory",
-                "label": "Concerto Modeling",
+                "label": "Concerto Model",
                 "ids": ["model-concerto", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators", "model-api"]
             },
             {
                 "type": "subcategory",
                 "label": "Ergo Logic",
                 "ids": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"]
+            }
+        ],
+        "Tutorials": [
+            {
+                "type": "subcategory",
+                "label": "Using Cicero",
+                "ids": ["tutorial-templates", "tutorial-library", "tutorial-create"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Template Authoring",
+                "ids": ["tutorial-studio","tutorial-vscode"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Template Execution",
+                "ids": ["tutorial-nodejs", "tutorial-hyperledger"]
             }
         ],
         "Reference Manual": [

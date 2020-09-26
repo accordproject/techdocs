@@ -5,101 +5,54 @@ title: Overview
 
 ## What is the Accord Project?
 
-Accord Project is an open source, non-profit initiative aimed at transforming contract management and contract automation by digitizing contracts.
+Accord Project is an open source, non-profit initiative aimed at transforming contract management and contract automation by digitizing contracts. It provides an open, standardized format for Smart Legal Contracts.
 
 The Accord Project defines a notion of a legal template with associated computing logic which is expressive, open-source, and portable. Accord Project templates are similar to a clause or contract template in any document format, but they can be read, interpreted, and run by a computer.
-
-The goal of the Accord Project is to provide an open, standardized format for Smart Legal Contracts.
-
-## What is a Smart Legal Contract?
-
-A Smart Legal Contract is a human-readable _and_ machine-readable agreement that is digital, consisting of natural language and computable components.
-
-The human-readable nature of the document ensures that signatories, lawyers, contracting parties and others are able to understand the contract.
-
-The machine-readable nature of the document enables it to be interpreted and executed by computers, making the document "smart".
-
-Contracts drafted with Accord Project can contain both traditional and machine-readable clauses. For example, a Smart Legal Contract may include a smart payment clause while all of the other provisions of the contract (Definitions, Jurisdiction clause, Force Majeure clause, ...) are being documented solely in regular natural language text.
-
-A Smart Legal Contract is a general term to refer to two compatible, architectural forms of contract:
-- Machine-Readable Contracts, which tie legal text to data
-- Machine-Executable Contracts, which tie legal text to data and executable code
-
-### Machine-Readable Contracts
-
-By combining Text and a data, a clause or contract becomes machine-readable.
-
-For instance, the clause below for a [fixed rate loan](https://templates.accordproject.org/fixed-interests-static@0.2.0.html) includes natural language text coupled with variables. Together, these variables refer to some data for the clause and correspond to the 'deal points':
-
-```tem
-## Fixed rate loan
-
-This is a *fixed interest* loan to the amount of {{loanAmount}}
-at the yearly interest rate of {{rate}}%
-with a loan term of {{loanDuration}},
-and monthly payments of {{monthlyPayment}}.
-```
-
-To make sense of the data, a _Data Model_, expressed in the Concerto schema language, defines the variables for the template and their associated Data Types:
-
-```ergo
-  o Double loanAmount     // loanAmount is a floating-point number
-  o Double rate           // rate is a floating-point number
-  o Integer loanDuration  // loanDuration is an integer
-  o Double monthlyPayment // monthlyPayment is a floating-point number
-```
-
-The Data Types allow a computer to validate values inserted into each of the `{{variable}}` placeholders (e.g., `2.5` is a valid `{{rate}}` but `January` isn't). In other words, the Data Model lets a computer make sense of the structure of (and data in) the clause. To learn more about Data Types see [Concerto Modeling](model-concerto).
-
-The clause data (the 'deal points') can then be capture as a machine-readable representation:
-
-```js
-{
-  "$class": "org.accordproject.interests.TemplateModel",
-  "clauseId": "cec0a194-cd45-42f7-ab3e-7a673978602a",
-  "loanAmount": 100000.0,
-  "rate": 2.5,
-  "loanDuration": 15
-  "monthlyPayment": 667.0
-}
-```
-
-The values entered into the template text are associated with the name of the variable e.g. `{{rate}} = 2.5%`. This provides the structure for understanding the clause and its contents.
-
-### Machine-Executable Contracts
-
-By adding Logic to a machine-readable clause or contract in the form of expressions - much like in a spreadsheet - the contract is able to execute operations based upon data included in the contract.
-
-For instance, the clause below is a variant of the earlier [fixed rate loan](https://templates.accordproject.org/fixed-interests@0.2.0.html). While it is consistent with the previous one, the `{{monthlyPayment}}` variable is replaced with an [Ergo](logic-ergo) expression `monthlyPaymentFormula(loanAmount,rate,loanDuration)` which calculates the monthly interest rate based upon the values of the other variables: `{{loanAmount}}`, `{{rate}}`, and `{{loanDuration}}`.  To learn more about contract Logic see [Ergo Logic](logic-ergo).
-
-```tem
-## Fixed rate loan
-
-This is a *fixed interest* loan to the amount of {{loanAmount}}
-at a yearly interest rate of {{rate}}%
-with a loan term of {{loanDuration}},
-and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}.
-```
-
-This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause. In this example, we display the contract text using the underlying [Markup](markup-template) format, instead of the rich-text output that would be found in [editor tools](started-resources#ecosystem-tools) and PDF outputs.
-
-More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
-
 
 ## Why is the Accord Project relevant?
 
 The Accord Project provides a universal format for smart legal contracts, and this format is embodied in a variety of open source projects that comprise the Accord Project technology stack. Input from businesses, lawyers and developers is crucial for the Accord Project.
 
-If this interests you, please visit our [Technology Working Group](https://www.accordproject.org/working-groups/technology) page, and join our [slack channel](https://accord-project-slack-signup.herokuapp.com/)!
+### For Businesses
 
-## How to navigate this documentation?
+Contracting is undergoing a digital transformation driven by a need to deliver customer-centric legal and business solutions faster, and at lower cost. This imperative is fueling the adoption of a broad range of new technologies to improve the efficiency of drafting, managing, and executing legal contracting operations; the Accord Project is proud to be part of that movement.
 
-If you want to author, validate, and run Accord Project templates locally, please visit our [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) page for instructions.
+The Accord Project provides a Smart Contract that does not depend on a blockchain, that can integrate text
+and data and that can continue operating over its lifespan. The Accord Project smart contract can integrate with your technology platforms and become part of you digital infrastructure.
 
-If you are new to the Accord Project, please read the [Key Concepts](accordproject-concepts) page. This will allow you to understand the three components of a template (text, model, and logic) and how they work together. If you want some guidance on creating your first template, please see [Authoring in Template Studio](tutorial-latedelivery) for a step-by-step guide on how to create your first template.
+In addition, contributions from businesses are crucial for the development of the Accord Project. The expertise of stakeholders, such as business professionals and attorneys, is invaluable in improving the functionality and content of the Accord Project's codebase and specifications, to ensure that the templates meet real-world business requirements.
 
-If you want to dive into our technology stack, you can find more information about:
-- Software implementation: [Cicero](https://github.com/accordproject/cicero)
-- Template text: [Markup](markup-commonmark)
-- Template model: [Modeling](model-concerto)
-- Template logic: [Logic](logic-ergo)
+If this interests you, please visit our [Lifecycle and Industry Working Groups](https://www.accordproject.org/liwg) page for more information.
+
+### For Laywers
+
+The Legal world is changing and Legal Tech is growing into a billion dollar industry. The modern lawyer has to be at home in the digital world. Law Schools now teach courses in coding for lawyers, computational law, blockchain and artificial intelligence. Legal Hackers is a world wide movement uniting lawyers across the world in a shared passion for law and technology. Lawyers need to move beyond the the written word on paper.
+
+The template in an Accord Project Contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract can easily be transformed into a template by adding data points between curly braces that represent the Concerto model and Ergo logic can be added as an integral part of the contract. The template language is subject to judicial interpretation and the Concerto model and Ergo logic can be interpreted by a computer creating a bridge between the two worlds.
+
+As a lawyer, contributing to the Accord Project would be a great opportunity to learn about smart legal contracts. Through the Accord Project, you can understand the foundations of open source technologies and learn how to develop smart agreements.
+
+If your organization wants to become a member of the Accord Project, please [join our community](https://www.accordproject.org/membership).
+
+### For Developers
+
+The Accord Project provides a universal format for smart legal contracts, and this format is embodied in a variety of open source projects that comprise the Accord Project technology stack. The Accord Project is an open source project and welcomes contributions from anyone.
+
+The Accord Project is developing tools including a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), [React based web components](https://github.com/accordproject/web-components) and a command line interface for working with Accord Project Contracts. You can integrate contracts into existing applications, create new applications or simply assist lawyers with developing applications with the Ergo language. 
+
+There is a welcoming community on Slack that is eager to help. [Join our Community](https://www.accordproject.org/membership/)
+
+
+## About this documentation
+
+If you are new to Accord Project, you may want to first read about smart legal contract [Key Concepts](accordproject-concepts) and about the structure of Accord Project templates (with text, model, and logic). You can also take the [online tour](accordproject-tour).
+
+To start using Accord Project templates, follow the [installing Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instruction in the Getting Started Section of the documentation.
+
+You can find in-depth guides for the different components of a template in the Template Guides part of this documentation:
+- How to write contract or template text: [Markdown Text Guide](markup-preliminaries)
+- How to design your data model: [Concerto Model Guide](model-concerto)
+- How to write smart contract logic: [Ergo Logic Guide](logic-ergo)
+
+Finally, the documentation includes several step by steps [Tutorials](tutorial-templates) and some reference information  (APIs, command-line tools, etc.) in the [Reference Manual](ref-glossary).
+

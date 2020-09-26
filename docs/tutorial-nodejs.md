@@ -1,6 +1,6 @@
 ---
 id: tutorial-nodejs
-title: Working with Node.js
+title: With Node.js
 ---
 
 ## Cicero Node.js API

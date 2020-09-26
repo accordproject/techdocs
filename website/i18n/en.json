@@ -5,20 +5,14 @@
     "previous": "Previous",
     "tagline": "Documentation",
     "docs": {
-      "accordproject-business": {
-        "title": "For Business"
-      },
       "accordproject-concepts": {
         "title": "Key Concepts"
-      },
-      "accordproject-developers": {
-        "title": "For Developers"
       },
       "accordproject-faq": {
         "title": "FAQ"
       },
-      "accordproject-lawyers": {
-        "title": "For Lawyers"
+      "accordproject-tour": {
+        "title": "Online Tour"
       },
       "accordproject": {
         "title": "Overview"
@@ -74,23 +68,17 @@
       "logic-stmt": {
         "title": "Statements"
       },
-      "markup-blocks": {
-        "title": "Block Expressions"
-      },
-      "markup-cicero": {
-        "title": "CiceroMark Overview"
+      "markup-ciceromark": {
+        "title": "CiceroMark"
       },
       "markup-commonmark": {
-        "title": "Rich Text Markdown"
+        "title": "CommonMark"
       },
-      "markup-ergo": {
-        "title": "Ergo Expressions"
+      "markup-preliminaries": {
+        "title": "Preliminaries"
       },
-      "markup-template": {
-        "title": "TemplateMark Overview"
-      },
-      "markup-variables": {
-        "title": "Variable Expressions"
+      "markup-templatemark": {
+        "title": "TemplateMark"
       },
       "markus-cli": {
         "title": "Markdown Transform CLI"
@@ -152,29 +140,26 @@
       "started-resources": {
         "title": "Resources"
       },
-      "started-studio": {
-        "title": "Online Tour"
-      },
       "tutorial-create": {
         "title": "Template Generator"
       },
       "tutorial-hyperledger": {
-        "title": "Deploying on Hyperledger Fabric"
-      },
-      "tutorial-latedelivery": {
-        "title": "Editing a Late Delivery Clause"
+        "title": "With Hyperledger Fabric"
       },
       "tutorial-library": {
         "title": "Template Library"
       },
       "tutorial-nodejs": {
-        "title": "Working with Node.js"
+        "title": "With Node.js"
+      },
+      "tutorial-studio": {
+        "title": "With Template Studio"
       },
       "tutorial-templates": {
         "title": "Templates Deep Dive"
       },
       "tutorial-vscode": {
-        "title": "Using the VS Code extension"
+        "title": "With VS Code"
       },
       "version-0.12/version-0.12-accordproject-installation": {
         "title": "Installation"
@@ -491,10 +476,11 @@
     "categories": {
       "Introduction": "Introduction",
       "Getting Started": "Getting Started",
+      "Template Guides": "Template Guides",
+      "Tutorials": "Tutorials",
+      "Reference Manual": "Reference Manual",
       "User Tutorials": "User Tutorials",
       "Developers Tutorials": "Developers Tutorials",
-      "Template Guides": "Template Guides",
-      "Reference Manual": "Reference Manual",
       "Basic Tutorials": "Basic Tutorials",
       "Advanced Tutorials": "Advanced Tutorials",
       "Ergo Language Guide": "Ergo Language Guide",
