@@ -1,9 +1,9 @@
 ---
 id: markup-commonmark
-title: Rich Text Markdown
+title: CommonMark
 ---
 
-The following CommonMark guide is non normative, but included for convenience. For a more detailed introduction and the official reference, we refer the reader the [CommonMark page](https://commonmark.org/).
+The following CommonMark guide is non normative, but included for convenience. For a more detailed introduction and the official reference, we refer the reader the [commonmark page](https://commonmark.org/).
 
 ## Formatting
 

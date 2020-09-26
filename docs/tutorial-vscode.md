@@ -1,6 +1,6 @@
 ---
 id: tutorial-vscode
-title: Using the VS Code extension
+title: With VS Code
 ---
 
 Cicero comes with a VS Code extension for easier development and testing. It includes support for syntax highlighting, allows you to test your template (contract parsing and logic) and to create template archives directly within VS Code.

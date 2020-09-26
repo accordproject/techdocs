@@ -1,9 +1,9 @@
 ---
 id: tutorial-hyperledger
-title: Deploying on Hyperledger Fabric
+title: With Hyperledger Fabric
 ---
 
-## Hyperledger Fabric 2.0
+## Hyperledger Fabric 2.2
 
 Sample chaincode for Hyperledger Fabric that shows how to execute a Cicero template:
 https://github.com/accordproject/hlf-cicero-contract

@@ -1,0 +1,116 @@
+2:50:41 PM - [32minfo[39m: Loading a default text/sample.md file.
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileBuffer
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: fromDirectory
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: fromDirectory
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFilesContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:41 PM - [34mdebug[39m: loadFileContents
+2:50:45 PM - [34mdebug[39m: fromDirectory
+2:50:45 PM - [34mdebug[39m: loadFileContents
+2:50:45 PM - [34mdebug[39m: fromDirectory
+2:50:45 PM - [34mdebug[39m: fromDirectory
+2:50:45 PM - [34mdebug[39m: loadFilesContents
+2:50:45 PM - [34mdebug[39m: loadFilesContents
+2:50:45 PM - [34mdebug[39m: loadFilesContents
+2:50:45 PM - [34mdebug[39m: loadFilesContents
+2:50:45 PM - [34mdebug[39m: loadFilesContents
+2:50:45 PM - [34mdebug[39m: loadFilesContents
+2:50:45 PM - [34mdebug[39m: loadFileContents
+2:50:46 PM - [34mdebug[39m: Setting clause data: {"$class":"org.accordproject.promissorynote.PromissoryNoteContract","amount":{"$class":"org.accordproject.money.MonetaryAmount","doubleValue":1000,"currencyCode":"USD"},"date":"2018-01-30T00:00:00.000-04:00","maker":"Daniel","interestRate":3.8,"individual":true,"makerAddress":"1 Main Street","lender":"Clause Inc.","legalEntity":"CORP","lenderAddress":"246 5th Ave, 3rd Fl, New York, NY 10001","principal":{"$class":"org.accordproject.money.MonetaryAmount","doubleValue":500,"currencyCode":"USD"},"maturityDate":"2019-01-20T00:00:00.000-04:00","defaultDays":90,"insolvencyDays":90,"jurisdiction":"New York, NY","contractId":"3548d084-bdf7-4619-8e0f-5fb7da4d20f5"}
+2:50:46 PM - [32minfo[39m:
+{
+  "$class": "org.accordproject.promissorynote.PromissoryNoteContract",
+  "amount": {
+    "$class": "org.accordproject.money.MonetaryAmount",
+    "doubleValue": 1000,
+    "currencyCode": "USD"
+  },
+  "date": "2018-01-30T00:00:00.000-04:00",
+  "maker": "Daniel",
+  "interestRate": 3.8,
+  "individual": true,
+  "makerAddress": "1 Main Street",
+  "lender": "Clause Inc.",
+  "legalEntity": "CORP",
+  "lenderAddress": "246 5th Ave, 3rd Fl, New York, NY 10001",
+  "principal": {
+    "$class": "org.accordproject.money.MonetaryAmount",
+    "doubleValue": 500,
+    "currencyCode": "USD"
+  },
+  "maturityDate": "2019-01-20T00:00:00.000-04:00",
+  "defaultDays": 90,
+  "insolvencyDays": 90,
+  "jurisdiction": "New York, NY",
+  "contractId": "3548d084-bdf7-4619-8e0f-5fb7da4d20f5"
+}
+2:51:51 PM - [32minfo[39m: Loading a default text/sample.md file.
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: loadFileBuffer
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: fromDirectory
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: fromDirectory
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFilesContents
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:51 PM - [34mdebug[39m: loadFileContents
+2:51:52 PM - [34mdebug[39m: fromDirectory
+2:51:52 PM - [34mdebug[39m: loadFileContents
+2:51:52 PM - [34mdebug[39m: fromDirectory
+2:51:52 PM - [34mdebug[39m: fromDirectory
+2:51:52 PM - [34mdebug[39m: loadFilesContents
+2:51:52 PM - [34mdebug[39m: loadFilesContents
+2:51:52 PM - [34mdebug[39m: loadFilesContents
+2:51:52 PM - [34mdebug[39m: loadFilesContents
+2:51:52 PM - [34mdebug[39m: loadFilesContents
+2:51:52 PM - [34mdebug[39m: loadFilesContents
+2:51:52 PM - [34mdebug[39m: loadFileContents
+2:51:52 PM - [34mdebug[39m: loadFileContents
+2:51:53 PM - [34mdebug[39m: Setting clause data: {"$class":"org.accordproject.interests.TemplateModel","loanAmount":{"$class":"org.accordproject.money.MonetaryAmount","doubleValue":100000,"currencyCode":"GBP"},"rate":2.5,"loanDuration":15,"clauseId":"4cefd212-86e3-4555-bf8d-bbe315e8ec03"}
+2:51:53 PM - [32minfo[39m:
+{
+  "$class": "org.accordproject.interests.TemplateModel",
+  "loanAmount": {
+    "$class": "org.accordproject.money.MonetaryAmount",
+    "doubleValue": 100000,
+    "currencyCode": "GBP"
+  },
+  "rate": 2.5,
+  "loanDuration": 15,
+  "clauseId": "4cefd212-86e3-4555-bf8d-bbe315e8ec03"
+}
