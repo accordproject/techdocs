@@ -1,6 +1,6 @@
 ---
-id: cicero-api
-title: Cicero API
+id: ref-cicero-api
+title: Node.js API
 ---
 
 ## Modules

@@ -20,27 +20,6 @@
       "accordproject": {
         "title": "Overview"
       },
-      "cicero-api": {
-        "title": "Cicero API"
-      },
-      "cicero-cli": {
-        "title": "Cicero CLI"
-      },
-      "concerto-api": {
-        "title": "Concerto API"
-      },
-      "concerto-cli": {
-        "title": "Concerto CLI"
-      },
-      "ergo-api": {
-        "title": "Ergo API"
-      },
-      "ergo-cli": {
-        "title": "Ergo CLI"
-      },
-      "ergo-repl": {
-        "title": "Ergo REPL"
-      },
       "ergo-tutorial": {
         "title": "Ergo: A Tutorial"
       },
@@ -83,9 +62,6 @@
       "markup-templatemark": {
         "title": "TemplateMark"
       },
-      "markus-cli": {
-        "title": "Markdown Transform CLI"
-      },
       "model-api": {
         "title": "Using the API"
       },
@@ -110,29 +86,53 @@
       "model-relationships": {
         "title": "Relationships"
       },
+      "ref-cicero-api": {
+        "title": "Node.js API"
+      },
+      "ref-cicero-cli": {
+        "title": "Command Line"
+      },
+      "ref-cicero-testing": {
+        "title": "Template Testing"
+      },
+      "ref-concerto-api": {
+        "title": "Node.js API"
+      },
+      "ref-concerto-cli": {
+        "title": "Command Line"
+      },
+      "ref-ergo-api": {
+        "title": "Node.js API"
+      },
+      "ref-ergo-cli": {
+        "title": "Command Line"
+      },
+      "ref-ergo-repl": {
+        "title": "Read-Eval-Print Loop"
+      },
+      "ref-ergo-spec": {
+        "title": "Specification"
+      },
+      "ref-ergo-stdlib": {
+        "title": "Standard Library"
+      },
       "ref-errors": {
-        "title": "Errors Reference"
+        "title": "Errors"
       },
       "ref-glossary": {
         "title": "Glossary"
       },
-      "ref-logic-specification": {
-        "title": "Ergo Compiler"
-      },
-      "ref-logic-stdlib": {
-        "title": "Ergo Standard Library"
-      },
-      "ref-logic": {
-        "title": "Ergo Language Reference"
+      "ref-markus-cli": {
+        "title": "Command Line"
       },
       "ref-migrate-0.13-0.20": {
         "title": "0.13 to 0.20"
       },
-      "ref-testing": {
-        "title": "Testing Reference"
+      "ref-migrate-0.20-0.21": {
+        "title": "0.20 to 0.21"
       },
-      "ref-web-components": {
-        "title": "Web Components Reference"
+      "ref-web-components-overview": {
+        "title": "Overview"
       },
       "started-hello": {
         "title": "Hello World Template"

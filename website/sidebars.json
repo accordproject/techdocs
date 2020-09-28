@@ -37,27 +37,40 @@
             }
         ],
         "Reference Manual": [
-	        "ref-glossary",
-            "ref-web-components",
-            "ref-testing",
-            "ref-errors",
-            "ref-logic",
-            "ref-logic-stdlib",
-            "ref-logic-specification",
             {
+                "type": "subcategory",
+                "label": "General",
+                "ids": ["ref-glossary", "ref-errors"]
+            },
+	          {
                 "type": "subcategory",
                 "label": "Template Migration",
-                "ids": ["ref-migrate-0.13-0.20"]
+                "ids": ["ref-migrate-0.13-0.20","ref-migrate-0.20-0.21"]
             },
             {
                 "type": "subcategory",
-                "label": "Command Line Interface",
-                "ids": ["cicero-cli", "concerto-cli", "ergo-cli", "ergo-repl", "markus-cli"]
+                "label": "Cicero Reference",
+                "ids": ["ref-cicero-cli", "ref-cicero-api", "ref-cicero-testing"]
             },
             {
                 "type": "subcategory",
-                "label": "JavaScript API",
-                "ids": ["cicero-api", "ergo-api", "concerto-api"]
+                "label": "Markdown Transform Reference",
+                "ids": ["ref-markus-cli"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Concerto Reference",
+                "ids": ["ref-concerto-cli", "ref-concerto-api"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Ergo Reference",
+                "ids": ["ref-ergo-stdlib", "ref-ergo-cli", "ref-ergo-repl", "ref-ergo-api", "ref-ergo-spec"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Web Components Reference",
+                "ids": ["ref-web-components-overview"]
             }
         ]
     }

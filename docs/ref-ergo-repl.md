@@ -1,6 +1,6 @@
 ---
-id: ergo-repl
-title: Ergo REPL
+id: ref-ergo-repl
+title: Read-Eval-Print Loop
 ---
 
 `ergotop` is a convenient tool to try-out Ergo contracts in an interactive way. You can write commands, or expressions and see the result. It is often called the Ergo REPL, for _read-eval-print-loop_, since it literally: reads your input Ergo from the command-line, evaluates it, prints the result and loops back to read your next input.

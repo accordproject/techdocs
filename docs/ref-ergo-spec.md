@@ -1,6 +1,6 @@
 ---
-id: ref-logic
-title: Ergo Language Reference
+id: ref-ergo-spec
+title: Specification
 ---
 
 ## Lexical Conventions

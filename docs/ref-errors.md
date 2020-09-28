@@ -1,9 +1,9 @@
 ---
 id: ref-errors
-title: Errors Reference
+title: Errors
 ---
 
- As much as possible, errors returned by Cicero or the Ergo compiler are normalized and categorized in order to facilitate handling of those error by the application code. Those errors are raised in Cicero as JavaScript _exceptions_.
+ As much as possible, errors returned by all projects (notably Cicero and the Ergo compiler) are normalized and categorized in order to facilitate handling of those error by the application code. Those errors are raised as JavaScript _exceptions_.
 
  ## Errors Hierarchy
 
@@ -11,9 +11,9 @@ title: Errors Reference
 
  ![Error Hierarchy](assets/exceptions.png)
 
- ## CTO Model
+ ## Errors Model
 
- For reference, those can also be described using the following CTO model:
+ For reference, those can also be described using the following Concerto model:
 
  ```ergo
 namespace org.accordproject.errors
