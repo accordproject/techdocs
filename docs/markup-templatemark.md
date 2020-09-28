@@ -3,7 +3,11 @@ id: markup-templatemark
 title: TemplateMark
 ---
 
-## Standard Variables
+TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas.
+
+The kind of extension which can be used is based on the _type_ of the variable in the [Concerto Model](model-concerto) for your template. For each type in your model differrent markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.
+
+## Variables
 
 Standard variables are written `{{variableName}}` where `variableName` is a variable declared in the model.
 
@@ -274,7 +278,7 @@ If the delay is more than "two weeks", the Buyer is entitled to terminate this C
 
 If the variable `variableName` has a complex type `ComplexType` (such as an `asset`, a `concept`, etc.)
 ```ergo
-o ComplextType variableName
+o ComplexType variableName
 ```
 
 The corresponding instance should contain all fields in the corresponding complex type in the order they occur in the model, separated by a single white space character.
@@ -317,11 +321,184 @@ matches the template:
 Total value of the goods: {{amount}}.
 ```
 
-## Block Expressions
+## Inline Blocks
+
+CiceroMark uses blocks to enable more advanced scenarios, to handle optional or repeated text (e.g., lists), to change the variables in scope for a given section of the text, etc. Inline blocks correspond to inline elements in the markdown.
+
+Inline blocks always have the following syntactic structure: 
+
+```tem
+{{#blockName variableName parameters}}...{{/blockName}}
+```
+
+where `blockName` indicates which kind of block it is (e.g., conditional block or optional block), `variableName` indicates the template variable which is in scope within the block. For certain blocks, additional `parameters` can be passed to control the behavior of that block (e.g., the `join` block creates text from a list with an optional separator).
+
+### Conditional Blocks
+
+Conditional blocks enables text which depends on a value of a `Boolean` variable in your model:
+
+```tem
+{{#if forceMajeure}}This is a force majeure{{/if}}
+```
+
+Conditional blocks can also include an `else` branch to indicate that some other text should be use when the value of the variable is `false`:
+
+```tem
+{{#if forceMajeure}}This is a force majeure{{else}}This is *not* a force majeure{{/if}}
+```
+
+#### Examples
+
+Drafting text with the first conditional block above using the following JSON data:
+```json
+{
+  "$class": "org.accordproject.foo.Status",
+  "forceMajeure": true
+}
+```
+
+results in the following markdown text:
+
+```md
+This is a force majeure
+```
+
+Drafting text with this block using the following JSON data:
+```json
+{
+  "$class": "org.accordproject.foo.Status",
+  "forceMajeure": false
+}
+```
+
+results in the following markdown text:
+
+```md
+
+```
+
+### Optional Blocks
+
+Optional blocks enables text which depends on the presence of absence of an `optional` variable in your model:
+
+```tem
+{{#optional forceMajeure}}This applies except for Force Majeure cases in a {{miles}} miles radius.{{/optional}}
+```
+
+Optional blocks can also include an `else` branch to indicate that some other text should be use when the value of the variable is absent (`null` in the JSON data):
+
+```tem
+{{#optional forceMajeure}}This applies except for Force Majeure cases in a {{miles}} miles radius.{{else}}This applies even in case a force majeure.{{/optional}}
+```
+
+#### Examples
+
+Drafting text with the second optional block above using the following JSON data:
+```json
+{
+  "$class": "org.accordproject.foo.Status",
+  "forceMajeure": {
+    "$class": "org.accordproject.foo.Distance",
+    "miles": 250
+  }
+}
+```
+
+results in the following markdown text:
+
+```md
+This applies except for Force Majeure cases in a 250 miles radius.
+```
+
+Drafting text with this block using the following JSON data:
+```json
+{
+  "$class": "org.accordproject.foo.Status",
+  "forceMajeure": null
+}
+```
+
+results in the following markdown text:
+
+```md
+This applies even in case a force majeure.
+```
+
+### With Blocks
+
+A `with` block can be used to changes variables that are in scope in a specific part of a template grammar:
+
+```tem
+For the Tenant: {{#with tenant}}{{partyId}}, domiciled at {{address}}{{/with}}
+For the Landlord: {{#with landlord}}{{partyId}}, domiciled at {{address}}{{/with}}
+```
+
+#### Example
+
+Drafting text with this block using the following JSON data:
+```json
+{
+  "$class": "org.accordproject.rentaldeposit.RentalDepositClause",
+  "contractId": "31d817e2-d62a-4b70-b395-acd0d5da09f5",
+  "tenant": {
+    "$class": "org.accordproject.rentaldeposit.RentalParty",
+    "partyId": "Michael",
+    "address": "111, main street"
+  }
+  ...
+}
+```
+
+results in the following markdown text:
+
+```md
+For the Tenant: "Michael", domiciled at "111, main street"
+For the Landlord: "Parsa", domiciled at "222, chestnut road"
+```
+
+### Join Blocks
+
+A `join` block can be used to iterate over a variable containing an array of values, and can use an (optional) separator.
+
+```tem
+Discount applies to the following items: {{#join items separator=", "}}{{name}} ({{id}}){{/join}}.
+```
+
+#### Example
+
+Drafting text with this block using the following JSON data:
+```json
+{
+  "$class": "org.accordproject.sale.Order",
+  "contractId": "31d817e2-d62a-4b70-b395-acd0d5da09f5",
+  "items": [{
+      "$class": "org.accordproject.slate.Item",
+      "id": "111",
+      "name": "Pineapple"
+    },{
+      "$class": "org.accordproject.slate.Item",
+      "id": "222",
+      "name": "Strawberries"
+    },{
+      "$class": "org.accordproject.slate.Item",
+      "id": "333",
+      "name": "Pomegranate"
+    }
+  ]
+}
+```
+
+results in the following markdown text:
+
+```md
+Discount applies to the following items: Pineapple (111), Strawberries (222), Pomegranate (333).
+```
+
+## Container Blocks
 
 CiceroMark uses block expressions to enable more advanced scenarios, to handle optional or repeated text (e.g., lists), to change the variables in scope for a given section of the text, etc.
 
-Block expressions always have the following syntactic structure: 
+Container blocks always have the following syntactic structure: 
 
 ```tem
 {{#blockName variableName parameters}}
@@ -418,57 +595,9 @@ results in the following markdown text:
 3. 10.0$ M <= Volume < 50.0$ M : 2.9%
 ```
 
-### Conditional Blocks
-
-Conditional blocks enables text which depends on a value of a `Boolean` variable in your model:
-
-```tem
-{{#if forceMajeure}}This is a force majeure{{/if}}
-```
-
-:::note
-Conditional blocks replace the notion of conditional variables used in Cicero version `0.13` or earlier. If you need to migrate templates created for a previous version of Cicero, please refer to the [0.13 to 0.20 Migration Guide](ref-migrate-0.13-0.20).
-:::
-
-Conditional blocks can also include an `else` branch to indicate that some other text should be use when the value of the variable is `false`:
-
-```tem
-{{#if forceMajeure}}This is a force majeure{{else}}This is *not* a force majeure{{/if}}
-```
-
-#### Examples
-
-Drafting text with the first conditional block above using the following JSON data:
-```json
-{
-  "$class": "org.accordproject.foo.Status",
-  "forceMajeure": true
-}
-```
-
-results in the following markdown text:
-
-```md
-This is a force majeure
-```
-
-Drafting text with this block using the following JSON data:
-```json
-{
-  "$class": "org.accordproject.foo.Status",
-  "forceMajeure": false
-}
-```
-
-results in the following markdown text:
-
-```md
-
-```
-
 ### Clause Blocks
 
-Blocks can be used to inline a clause's text within a contract template:
+Clause blocks can be used to include a clause template within a contract template:
 
 ```tem
 Payment
@@ -514,40 +643,6 @@ follows: "bank transfer".
 
 ```
 
-### With Blocks
-
-A `with` block can be used to changes variables that are in scope in a specific part of a template grammar:
-
-```tem
-For the Tenant: {{#with tenant}}{{partyId}}, domiciled at {{address}}{{/with}}
-For the Landlord: {{#with landlord}}{{partyId}}, domiciled at {{address}}{{/with}}
-```
-
-#### Example
-
-Drafting text with this block using the following JSON data:
-```json
-{
-  "$class": "org.accordproject.rentaldeposit.RentalDepositClause",
-  "contractId": "31d817e2-d62a-4b70-b395-acd0d5da09f5",
-  "tenant": {
-    "$class": "org.accordproject.rentaldeposit.RentalParty",
-    "partyId": "Michael",
-    "address": "111, main street"
-  }
-  ...
-}
-```
-
-results in the following markdown text:
-
-```md
-For the Tenant: "Michael", domiciled at "111, main street"
-For the Landlord: "Parsa", domiciled at "222, chestnut road"
-```
-
-CiceroMark allows you to embed computation inside the text of your contract or clause, in the form of Ergo expressions.
-
 ## Ergo Formulas
 
 Ergo formulas in template text are essentially similar to Excel formulas, and enable to create legal text dynamically, based on the other variables in your contract. They are written `{{% ergoExpression %}}` where `ergoExpression` is any valid [Ergo Expression](logic-ergo).
@@ -588,15 +683,13 @@ contract Interests over TemplateModel {
 }
 ```
 
-## Other Examples
+### Examples
 
 Ergo provides a wide range of capabilities which you can use to construct the text that should be included in the final clause or contract. Below are a few examples for illustrations, but we encourage you to consult the [Ergo Logic](logic-ergo) guide for a more comprehensive overview of Ergo.
 
-### Path expressions
+#### Path expressions
 
 The contents of complex values can be accessed using the `.` notation.
-
-#### Example
 
 For instance the following template uses the `.` notation to access the first name and last name of the contract author.
 
@@ -604,11 +697,9 @@ For instance the following template uses the `.` notation to access the first na
 This contract was drafted by {{% author.name.firstName %}} {{% author.name.lastName %}}
 ```
 
-### Built-in Functions
+#### Built-in Functions
 
 Ergo offers a number of pre-defined functions for a variety of primitive types. Please consult the [Ergo Standard Library](ref-logic-stdlib) reference for the complete list of built-in functions.
-
-#### Example
 
 For instance the following template uses the `addPeriod` function to automatically include the date at which a lease expires in the text of the contract:
 
@@ -617,11 +708,9 @@ This lease was signed on {{signatureDate}}, and is valid for a {{leaseTerm}} per
 This lease will expire on {{% addPeriod(signatureDate, leaseTerm) %}}`
 ```
 
-### Iterators
+#### Iterators
 
 Ergo's `foreach` expressions lets you iterate over collections of values.
-
-#### Example
 
 For instance the following template uses a `foreach` expression combined with the `avg` built-in function to include the average product price in the text of the contract:
 
@@ -630,11 +719,9 @@ The average price of the products included in this purchase
 order is {{% avg(foreach p in products return p.price) %}}.
 ```
 
-### Conditionals
+#### Conditionals
 
 Conditional expressions lets you include alternative text based on arbitrary conditions.
-
-#### Example
 
 For instance, the following template uses a conditional expression to indicate the governing jurisdiction:
 
