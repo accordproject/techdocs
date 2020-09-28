@@ -3,7 +3,7 @@ id: markup-commonmark
 title: CommonMark
 ---
 
-The following CommonMark guide is non normative, but included for convenience. For a more detailed introduction and the official reference, we refer the reader the [commonmark page](https://commonmark.org/).
+The following CommonMark guide is non normative, but included for convenience. For a more detailed introduction we refer the reader the [CommonMark Webpage](https://commonmark.org/) and [Specification](https://spec.commonmark.org/0.29/).
 
 ## Formatting
 
