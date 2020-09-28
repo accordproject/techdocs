@@ -45,14 +45,14 @@ There is a welcoming community on Slack that is eager to help. [Join our Communi
 
 ## About this documentation
 
-If you are new to Accord Project, you may want to first read about smart legal contract [Key Concepts](accordproject-concepts) and about the structure of Accord Project templates (with text, model, and logic). You can also take the [online tour](accordproject-tour).
+If you are new to Accord Project, you may want to first read about the notion of [Smart Legal Contracts](accordproject-slc) and about [Accord Project Templates](accordproject-template). We also recommend taking the [Online Tour](accordproject-tour).
 
-To start using Accord Project templates, follow the [installing Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instruction in the Getting Started Section of the documentation.
+To start using Accord Project templates, follow the [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instructions in the _Getting Started_ Section of the documentation.
 
-You can find in-depth guides for the different components of a template in the Template Guides part of this documentation:
-- How to write contract or template text: [Markdown Text Guide](markup-preliminaries)
-- How to design your data model: [Concerto Model Guide](model-concerto)
-- How to write smart contract logic: [Ergo Logic Guide](logic-ergo)
+You can find in-depth guides for the different components of a template in the _Template Guides_ part of the documentation:
+- Learn how to write contract or template text in the [Markdown Text](markup-preliminaries) Guide
+- Learn how to design your data model in the [Concerto Model](model-concerto) Guide
+- Learn how to write smart contract logic in the [Ergo Logic](logic-ergo) Guide
 
-Finally, the documentation includes several step by steps [Tutorials](tutorial-templates) and some reference information  (APIs, command-line tools, etc.) in the [Reference Manual](ref-glossary).
+Finally, the documentation includes several step by step [Tutorials](tutorial-templates) and some reference information (for APIs, command-line tools, etc.) can be found in the [Reference Manual](ref-glossary).
 

@@ -5,11 +5,14 @@
     "previous": "Previous",
     "tagline": "Documentation",
     "docs": {
-      "accordproject-concepts": {
-        "title": "Key Concepts"
-      },
       "accordproject-faq": {
         "title": "FAQ"
+      },
+      "accordproject-slc": {
+        "title": "Smart Legal Contracts"
+      },
+      "accordproject-template": {
+        "title": "Accord Project Templates"
       },
       "accordproject-tour": {
         "title": "Online Tour"
