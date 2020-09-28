@@ -1,6 +1,6 @@
 {
     "docs": {
-        "Introduction": ["accordproject", "accordproject-concepts", "accordproject-tour", "accordproject-faq"],
+        "Introduction": ["accordproject", "accordproject-slc", "accordproject-template", "accordproject-tour", "accordproject-faq"],
         "Getting Started": ["started-installation", "started-hello", "started-resources"],
         "Template Guides": [
             {
