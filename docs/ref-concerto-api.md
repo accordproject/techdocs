@@ -1,6 +1,6 @@
 ---
-id: concerto-api
-title: Concerto API
+id: ref-concerto-api
+title: Node.js API
 ---
 
 <a name="module_concerto-core"></a>

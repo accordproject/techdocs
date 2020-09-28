@@ -1,6 +1,6 @@
 ---
-id: ergo-cli
-title: Ergo CLI
+id: ref-ergo-cli
+title: Command Line
 ---
 
 Install the `@accordproject/ergo-cli` npm package to access the Ergo command line interface (CLI). After installation you can use the ergo command and its sub-commands as described below.

@@ -1,6 +1,6 @@
 ---
-id: ref-web-components
-title: Web Components Reference
+id: ref-web-components-overview
+title: Overview
 ---
 
 Accord Project publishes [React](https://reactjs.org) user interface components for use in web applications. Please refer to the web-components project [on GitHub](https://github.com/accordproject/web-components) for detailed usage instructions.

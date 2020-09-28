@@ -1,6 +1,6 @@
 ---
-id: ergo-api
-title: Ergo API
+id: ref-ergo-api
+title: Node.js API
 ---
 
 ## Classes
