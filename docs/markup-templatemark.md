@@ -651,6 +651,10 @@ follows: "bank transfer".
 
 Ergo formulas in template text are essentially similar to Excel formulas, and enable to create legal text dynamically, based on the other variables in your contract. They are written `{{% ergoExpression %}}` where `ergoExpression` is any valid [Ergo Expression](logic-ergo).
 
+::: note
+Formulas allow the template developer to generate arbitrary contract text from other contract and clause variables. They therefore cannot be used to set a template model variable during parsing. In other words formulas are evaluated when drafting a contract but are ignored when parsing the contract text.
+:::
+
 ### Evaluation Context
 
 The context in which expressions within templates text are evaluated includes:
