@@ -81,7 +81,7 @@ Both grammar and sample text for the templates has changed to support rich text 
 
 You should ensure that any changes to the grammar text is reflected in the samples. Any change in the grammar text outside of variables should be applied to the corresponding `sample.md` files as well.
 
-:::note
+:::tip
 You can check that the samples and grammar are in agreement by using the `cicero parse` command.
 :::
 
@@ -254,13 +254,13 @@ For more details on the new command line interface, please consult the correspon
 
 A number of API changes may affect Node.js applications using Cicero or Ergo packages. The main API changes are:
 1. Ergo:
-   1. `ergo-engine` package
+   1. `@accordproject/ergo-engine` package
       - the `Engine.execute()` call has been renamed `Engine.trigger()`
 2. Cicero:
-   1. `cicero-core` package
+   1. `@accordproject/cicero-core` package
       - the `TemplateInstance.generateText()` call has been renamed `TemplateInstance.draft` **and is now an `async` call**
       - the `Metadata.getErgoVersion()` call has been removed
-   2. `cicero-engine` package
+   2. `@accordproject/cicero-engine` package
       - the `Engine.execute()` call has been renamed `Engine.trigger()`
       - the `Engine.generateText()` call has been renamed `Engine.draft()`
 

@@ -42,61 +42,41 @@ Both the markdown for the grammar and sample text have been updated and consolid
    {{/clauseName}}
    ```
    and similarly for ordered and unordeded list blocks (`olist` and `ulist`).
-2. Markdown container blocks are no longer supported inside inline blocks (`if` `join` and `with` blocks)
+2. Markdown container blocks are no longer supported inside inline blocks (`if` `join` and `with` blocks).
 
 :::tip
-We recommend using the new [TemplateMark Dingus]().
+We recommend using the new [TemplateMark Dingus](https://templatemark-dingus.netlify.app) to check that your template variables, blocks and formula are properly identified following the new markdown parsing rules.
 :::
 
 ### Text Samples Changes
 
-You should ensure that any changes to the grammar text is reflected in the samples. Any change in the grammar text outside of variables should be applied to the corresponding `sample.md` files as well.
+1. Nested clause template should be now identified within contract templates using clause blocks. I.e., if you use a `paymentClause`, you should change your text from:
+   ```
+   ...negate the notices Licensor provides and requires hereunder.
 
-:::note
+   Payment. As consideration in full for the rights granted herein, Licensee shall pay Licensor a one-time fee in the amount of "one hundred US Dollars" (100.0 USD) upon execution of this Agreement, payable as follows: "bank transfer".
+
+   General.
+   ...
+   ```
+   to
+   ```
+   ...negate the notices Licensor provides and requires hereunder.
+
+   {{#clause paymentClause}}
+   Payment. As consideration in full for the rights granted herein, Licensee shall pay Licensor a one-time fee in the amount of "one hundred US Dollars" (100.0 USD) upon execution of this Agreement, payable as follows: "bank transfer".
+   {{/clause}}
+
+   General.
+   ...
+   ```
+2. The text corresponding to formulas should be changed from `{{ ...text...}}` to `{{% ...text... %}}`.
+
+You should also ensure that any changes to the grammar text is reflected in the samples. Any change in the grammar text outside of variables should be applied to the corresponding `sample.md` files as well.
+
+:::tip
 You can check that the samples and grammar are in agreement by using the `cicero parse` command.
 :::
-
-#### Example
-
-Consider the text grammar for the [late delivery and penalty](https://templates.accordproject.org/latedeliveryandpenalty@0.14.1.html) clause:
-
-```md
-Late Delivery and Penalty.
-In case of delayed delivery[{" except for Force Majeure cases,":? forceMajeure}]
-[{seller}] (the Seller) shall pay to [{buyer}] (the Buyer) for every [{penaltyDuration}]
-of delay penalty amounting to [{penaltyPercentage}]% of the total value of the Equipment
-whose delivery has been delayed. Any fractional part of a [{fractionalPart}] is to be
-considered a full [{fractionalPart}]. The total amount of penalty shall not however,
-exceed [{capPercentage}]% of the total value of the Equipment involved in late delivery.
-If the delay is more than [{termination}], the Buyer is entitled to terminate this Contract.
-```
-
-After applying the above rules to the code for the `0.13` version, and identifying the heading for the clause using the new markdown features, the grammar text becomes:
-
-```tem
-## Late Delivery and Penalty.
-
-In case of delayed delivery{{#if forceMajeure}} except for Force Majeure cases,{{/if}}
-{{seller}} (the Seller) shall pay to {{buyer}} (the Buyer) for every {{penaltyDuration}}
-of delay penalty amounting to {{penaltyPercentage}}% of the total value of the Equipment
-whose delivery has been delayed. Any fractional part of a {{fractionalPart}} is to be
-considered a full {{fractionalPart}}. The total amount of penalty shall not however,
-exceed {{capPercentage}}% of the total value of the Equipment involved in late delivery.
-If the delay is more than {{termination}}, the Buyer is entitled to terminate this Contract.
-```
-
-To make sure the `sample.md` file parses as well, the heading needs to be similarly identified using markdown:
-```md
-## Late Delivery and Penalty.
-
-In case of delayed delivery except for Force Majeure cases,
-"Dan" (the Seller) shall pay to "Steve" (the Buyer) for every 2 days
-of delay penalty amounting to 10.5% of the total value of the Equipment
-whose delivery has been delayed. Any fractional part of a days is to be
-considered a full days. The total amount of penalty shall not however,
-exceed 55% of the total value of the Equipment involved in late delivery.
-If the delay is more than 15 days, the Buyer is entitled to terminate this Contract.
-```
 
 ## Model Changes
 
@@ -109,32 +89,17 @@ There should be no logic changes required for this version.
 ## API Changes
 
 A number of API changes may affect Node.js applications using Cicero or Ergo packages. The main API changes are:
-1. Ergo:
-   1. `ergo-engine` package
-      - the `Engine.execute()` call has been renamed `Engine.trigger()`
-2. Cicero:
-   1. `cicero-core` package
-      - the `TemplateInstance.generateText()` call has been renamed `TemplateInstance.draft` **and is now an `async` call**
-      - the `Metadata.getErgoVersion()` call has been removed
-   2. `cicero-engine` package
-      - the `Engine.execute()` call has been renamed `Engine.trigger()`
-      - the `Engine.generateText()` call has been renamed `Engine.draft()`
+1. Cicero:
+   1. `@accordproject/cicero-core` package
+      - the `ParserManager` class has been completely overhauled and moved to the `@accordproject/@markdown-template` package.
+
+## CLI Changes
+
+1. The `cicero draft --wrapVariables` option has been removed
+2. The `ergo draft` command has been removed
 
 ## Cicero Server Changes
 
-Cicero server API has been changed to reflect the new underlying Cicero engine. Specifically:
-1. The `execute` endpoint has been renamed `trigger`
-2. The path to the sample has to include the `text` directory, so instead of `execute/templateName/sample.txt` it should use `trigger/templateName/text%2Fsample.md`
-
-#### Example
-
-Following the [README.md](https://github.com/accordproject/cicero/blob/master/packages/cicero-server/README.md) instructions, instead of calling:
-```
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' http://localhost:6001/execute/latedeliveryandpenalty/sample.txt -d '{ "request": { "$class": "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest", "forceMajeure": false,"agreedDelivery": "December 17, 2017 03:24:00", "deliveredAt": null, "goodsValue": 200.00 }, "state": { "$class": "org.accordproject.cicero.contract.AccordContractState", "stateId" : "org.accordproject.cicero.contract.AccordContractState#1"}}'
-```
-
-You should call:
-```
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' http://localhost:6001/trigger/latedeliveryandpenalty/sample.md -d '{ "request": { "$class": "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest", "forceMajeure": false,"agreedDelivery": "December 17, 2017 03:24:00", "deliveredAt": null, "goodsValue": 200.00 }, "state": { "$class": "org.accordproject.cicero.contract.AccordContractState", "stateId" : "org.accordproject.cicero.contract.AccordContractState#1"}}'
-```
+Cicero server API has been completely overhauled to match the more recent engine interface
+1. The contract data is now passed as part of the REST POST request for the `trigger` endpoint
 
