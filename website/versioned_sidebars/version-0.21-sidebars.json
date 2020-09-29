@@ -1,0 +1,143 @@
+{
+  "version-0.21-docs": {
+    "Introduction": [
+      "version-0.21-accordproject",
+      "version-0.21-accordproject-slc",
+      "version-0.21-accordproject-template",
+      "version-0.21-accordproject-tour",
+      "version-0.21-accordproject-faq"
+    ],
+    "Getting Started": [
+      "version-0.21-started-installation",
+      "version-0.21-started-hello",
+      "version-0.21-started-resources"
+    ],
+    "Template Guides": [
+      {
+        "type": "subcategory",
+        "label": "Markdown Text",
+        "ids": [
+          "version-0.21-markup-preliminaries",
+          "version-0.21-markup-commonmark",
+          "version-0.21-markup-ciceromark",
+          "version-0.21-markup-templatemark"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Concerto Model",
+        "ids": [
+          "version-0.21-model-concerto",
+          "version-0.21-model-namespaces",
+          "version-0.21-model-classes",
+          "version-0.21-model-enums",
+          "version-0.21-model-properties",
+          "version-0.21-model-relationships",
+          "version-0.21-model-decorators",
+          "version-0.21-model-api"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Ergo Logic",
+        "ids": [
+          "version-0.21-logic-ergo",
+          "version-0.21-logic-simple-expr",
+          "version-0.21-logic-simple-type",
+          "version-0.21-logic-complex-type",
+          "version-0.21-logic-advanced-expr",
+          "version-0.21-logic-stmt",
+          "version-0.21-logic-decl",
+          "version-0.21-logic-module"
+        ]
+      }
+    ],
+    "Tutorials": [
+      {
+        "type": "subcategory",
+        "label": "Using Cicero",
+        "ids": [
+          "version-0.21-tutorial-templates",
+          "version-0.21-tutorial-library",
+          "version-0.21-tutorial-create"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Template Authoring",
+        "ids": [
+          "version-0.21-tutorial-studio",
+          "version-0.21-tutorial-vscode"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Template Execution",
+        "ids": [
+          "version-0.21-tutorial-nodejs",
+          "version-0.21-tutorial-hyperledger"
+        ]
+      }
+    ],
+    "Reference Manual": [
+      {
+        "type": "subcategory",
+        "label": "General",
+        "ids": [
+          "version-0.21-ref-glossary",
+          "version-0.21-ref-errors"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Template Migration",
+        "ids": [
+          "version-0.21-ref-migrate-0.13-0.20",
+          "version-0.21-ref-migrate-0.20-0.21"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cicero Reference",
+        "ids": [
+          "version-0.21-ref-cicero-cli",
+          "version-0.21-ref-cicero-api",
+          "version-0.21-ref-cicero-testing"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Markdown Transform Reference",
+        "ids": [
+          "version-0.21-ref-markus-cli"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Concerto Reference",
+        "ids": [
+          "version-0.21-ref-concerto-cli",
+          "version-0.21-ref-concerto-api"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Ergo Reference",
+        "ids": [
+          "version-0.21-ref-ergo-stdlib",
+          "version-0.21-ref-ergo-cli",
+          "version-0.21-ref-ergo-repl",
+          "version-0.21-ref-ergo-api",
+          "version-0.21-ref-ergo-spec"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Web Components Reference",
+        "ids": [
+          "version-0.21-ref-web-components-overview"
+        ]
+      }
+    ]
+  }
+}

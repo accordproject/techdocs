@@ -469,6 +469,120 @@
       },
       "version-0.20/version-0.20-tutorial-templates": {
         "title": "Templates Deep Dive"
+      },
+      "version-0.21/version-0.21-accordproject-faq": {
+        "title": "FAQ"
+      },
+      "version-0.21/version-0.21-accordproject-slc": {
+        "title": "Smart Legal Contracts"
+      },
+      "version-0.21/version-0.21-accordproject-template": {
+        "title": "Accord Project Templates"
+      },
+      "version-0.21/version-0.21-accordproject-tour": {
+        "title": "Online Tour"
+      },
+      "version-0.21/version-0.21-accordproject": {
+        "title": "Overview"
+      },
+      "version-0.21/version-0.21-ergo-tutorial": {
+        "title": "Ergo: A Tutorial"
+      },
+      "version-0.21/version-0.21-logic-stmt": {
+        "title": "Statements"
+      },
+      "version-0.21/version-0.21-markup-ciceromark": {
+        "title": "CiceroMark"
+      },
+      "version-0.21/version-0.21-markup-commonmark": {
+        "title": "CommonMark"
+      },
+      "version-0.21/version-0.21-markup-preliminaries": {
+        "title": "Preliminaries"
+      },
+      "version-0.21/version-0.21-markup-templatemark": {
+        "title": "TemplateMark"
+      },
+      "version-0.21/version-0.21-model-api": {
+        "title": "Using the API"
+      },
+      "version-0.21/version-0.21-model-classes": {
+        "title": "Classes"
+      },
+      "version-0.21/version-0.21-model-properties": {
+        "title": "Properties"
+      },
+      "version-0.21/version-0.21-model-relationships": {
+        "title": "Relationships"
+      },
+      "version-0.21/version-0.21-ref-cicero-api": {
+        "title": "Node.js API"
+      },
+      "version-0.21/version-0.21-ref-cicero-cli": {
+        "title": "Command Line"
+      },
+      "version-0.21/version-0.21-ref-cicero-testing": {
+        "title": "Template Testing"
+      },
+      "version-0.21/version-0.21-ref-concerto-api": {
+        "title": "Node.js API"
+      },
+      "version-0.21/version-0.21-ref-concerto-cli": {
+        "title": "Command Line"
+      },
+      "version-0.21/version-0.21-ref-ergo-api": {
+        "title": "Node.js API"
+      },
+      "version-0.21/version-0.21-ref-ergo-cli": {
+        "title": "Command Line"
+      },
+      "version-0.21/version-0.21-ref-ergo-repl": {
+        "title": "Read-Eval-Print Loop"
+      },
+      "version-0.21/version-0.21-ref-ergo-spec": {
+        "title": "Specification"
+      },
+      "version-0.21/version-0.21-ref-ergo-stdlib": {
+        "title": "Standard Library"
+      },
+      "version-0.21/version-0.21-ref-errors": {
+        "title": "Errors"
+      },
+      "version-0.21/version-0.21-ref-markus-cli": {
+        "title": "Command Line"
+      },
+      "version-0.21/version-0.21-ref-migrate-0.13-0.20": {
+        "title": "0.13 to 0.20"
+      },
+      "version-0.21/version-0.21-ref-migrate-0.20-0.21": {
+        "title": "0.20 to 0.21"
+      },
+      "version-0.21/version-0.21-ref-web-components-overview": {
+        "title": "Overview"
+      },
+      "version-0.21/version-0.21-started-hello": {
+        "title": "Hello World Template"
+      },
+      "version-0.21/version-0.21-started-installation": {
+        "title": "Install Cicero"
+      },
+      "version-0.21/version-0.21-tutorial-create": {
+        "title": "Template Generator"
+      },
+      "version-0.21/version-0.21-tutorial-hyperledger": {
+        "title": "With Hyperledger Fabric"
+      },
+      "version-0.21/version-0.21-tutorial-library": {
+        "title": "Template Library"
+      },
+      "version-0.21/version-0.21-tutorial-studio": {
+        "title": "With Template Studio"
+      },
+      "version-0.21/version-0.21-tutorial-templates": {
+        "title": "Templates Deep Dive"
+      },
+      "version-0.21/version-0.21-tutorial-vscode": {
+        "title": "With VS Code"
       }
     },
     "links": {
