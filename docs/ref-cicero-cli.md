@@ -7,12 +7,14 @@ Install the `@accordproject/cicero-cli` npm package to access the Cicero command
 
 To install the Cicero CLI:
 ```
-npm install -g @accordproject/cicero-cli@0.20
+npm install -g @accordproject/cicero-cli
 ```
 
 ## Usage
 
 ```md
+cicero <cmd> [args]
+
 Commands:
   cicero parse       parse a contract text
   cicero draft       create contract text from data
@@ -28,7 +30,6 @@ Options:
   --version      Show version number                                   [boolean]
   --verbose, -v                                                 [default: false]
   --help         Show help                                             [boolean]
-
 ```
 
 ## cicero parse
@@ -56,18 +57,21 @@ Options:
 `cicero draft` creates contract text from data.
 
 ```md
+cicero draft
+
 create contract text from data
 
 Options:
-  --version        Show version number                                 [boolean]
+  --version           Show version number                              [boolean]
   --verbose, -v                                                 [default: false]
-  --help           Show help                                           [boolean]
-  --template       path to the template                                 [string]
-  --data           path to the contract data                            [string]
-  --output         path to the output file                              [string]
-  --currentTime    set current time                     [string] [default: null]
-  --wrapVariables  wrap variables as XML tags         [boolean] [default: false]
-  --warnings       print warnings                     [boolean] [default: false]
+  --help              Show help                                        [boolean]
+  --template          path to the template                              [string]
+  --data              path to the contract data                         [string]
+  --output            path to the output file                           [string]
+  --currentTime       set current time                  [string] [default: null]
+  --format            target format                                     [string]
+  --unquoteVariables  remove variables quoting        [boolean] [default: false]
+  --warnings          print warnings                  [boolean] [default: false]
 ```
 
 ## cicero normalize
@@ -75,19 +79,23 @@ Options:
 `cicero normalize` normalizes markdown text by parsing and redrafting the text.
 
 ```md
+cicero normalize
+
 normalize markdown (parse & redraft)
 
 Options:
-  --version        Show version number                                 [boolean]
+  --version           Show version number                              [boolean]
   --verbose, -v                                                 [default: false]
-  --help           Show help                                           [boolean]
-  --template       path to the template                                 [string]
-  --sample         path to the contract text                            [string]
-  --overwrite      overwrite the contract text        [boolean] [default: false]
-  --output         path to the output file                              [string]
-  --currentTime    set current time                     [string] [default: null]
-  --warnings       print warnings                     [boolean] [default: false]
-  --wrapVariables  wrap variables as XML tags         [boolean] [default: false]
+  --help              Show help                                        [boolean]
+  --template          path to the template                              [string]
+  --sample            path to the contract text                         [string]
+  --overwrite         overwrite the contract text     [boolean] [default: false]
+  --output            path to the output file                           [string]
+  --currentTime       set current time                  [string] [default: null]
+  --warnings          print warnings                  [boolean] [default: false]
+  --wrapVariables     wrap variables as XML tags      [boolean] [default: false]
+  --format            target format                                     [string]
+  --unquoteVariables  remove variables quoting        [boolean] [default: false]
 ```
 
 ## cicero trigger
@@ -95,6 +103,8 @@ Options:
 `cicero trigger` sends a request to the contract.
 
 ```md
+cicero trigger
+
 send a request to the contract
 
 Options:
@@ -107,7 +117,6 @@ Options:
   --state        path to the JSON state                                 [string]
   --currentTime  set current time                       [string] [default: null]
   --warnings     print warnings                       [boolean] [default: false]
-
 ```
 
 ## cicero invoke
@@ -115,6 +124,8 @@ Options:
 `cicero invoke` invokes a specific clause (`--clauseName`) of the contract.
 
 ```md
+cicero invoke
+
 invoke a clause of the contract
 
 Options:
@@ -128,7 +139,6 @@ Options:
   --state        path to the JSON state                                 [string]
   --currentTime  set current time                       [string] [default: null]
   --warnings     print warnings                       [boolean] [default: false]
-
 ```
 
 ## cicero initialize
@@ -148,7 +158,6 @@ Options:
   --sample       path to the contract text                              [string]
   --currentTime  initialize with this current time      [string] [default: null]
   --warnings     print warnings                       [boolean] [default: false]
-
 ```
 ## cicero archive
 
@@ -167,7 +176,6 @@ Options:
   --target       the target language of the archive   [string] [default: "ergo"]
   --output       file name for new archive              [string] [default: null]
   --warnings     print warnings                       [boolean] [default: false]
-
 ```
 
 ## cicero compile
@@ -187,7 +195,6 @@ Options:
   --target       target of the code generation  [string] [default: "JSONSchema"]
   --output       path to the output directory    [string] [default: "./output/"]
   --warnings     print warnings                       [boolean] [default: false]
-
 ```
 ## cicero get
 

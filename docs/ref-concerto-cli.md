@@ -7,7 +7,7 @@ Install the `@accordproject/concerto-cli` npm package to access the Concerto com
 
 To install the Concerto CLI:
 ```
-npm install -g @accordproject/concerto-cli@0.82
+npm install -g @accordproject/concerto-cli
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ Options:
 `concerto validate` lets you check whether a JSON sample is a valid instance of the given model.
 
 ```md
-## concerto validate
+concerto validate
 
 validate JSON against model files
 
@@ -38,9 +38,10 @@ Options:
   --version      Show version number                                   [boolean]
   --verbose, -v                                                 [default: false]
   --help         Show help                                             [boolean]
-  --sample       sample JSON to validate       [string] [default: "sample.json"]
+  --sample       sample JSON to validate                                [string]
   --ctoSystem    system model to be used                                [string]
-  --ctoFiles     array of CTO files                       [array] [default: "."]
+  --ctoFiles     array of CTO files                                      [array]
+  --offline      do not resolve external models       [boolean] [default: false]
 ```
 
 ### Example
@@ -64,12 +65,11 @@ info:
 }
 ```
 
-
 ## concerto compile
 `Concerto compile` takes an array of local CTO files, downloads any external dependencies (imports) and then converts all the model to the target format.
 
 ```md
-## concerto compile
+concerto compile
 
 generate code for a target platform
 
@@ -78,7 +78,8 @@ Options:
   --verbose, -v                                                 [default: false]
   --help         Show help                                             [boolean]
   --ctoSystem    system model to be used                                [string]
-  --ctoFiles     array of CTO files                       [array] [default: "."]
+  --ctoFiles     array of CTO files                           [array] [required]
+  --offline      do not resolve external models       [boolean] [default: false]
   --target       target of the code generation  [string] [default: "JSONSchema"]
   --output       output directory path           [string] [default: "./output/"]
 ```
@@ -108,7 +109,7 @@ info: Compiled to Go in './output/'.
 `Concerto get` allows you to resolve and download external models from a set of local CTO files.
 
 ```md
-## concerto get
+concerto get
 
 save local copies of external model dependencies
 
@@ -116,10 +117,9 @@ Options:
   --version      Show version number                                   [boolean]
   --verbose, -v                                                 [default: false]
   --help         Show help                                             [boolean]
-  --ctoFiles     array of local CTO files                 [array] [default: "."]
+  --ctoFiles     array of local CTO files                     [array] [required]
   --ctoSystem    system model to be used                                [string]
   --output       output directory path                  [string] [default: "./"]
-
 ```
 
 ### Example

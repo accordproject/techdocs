@@ -7,7 +7,7 @@ Install the `@accordproject/ergo-cli` npm package to access the Ergo command lin
 
 To install the Ergo CLI:
 ```
-npm install -g @accordproject/ergo-cli@0.20
+npm install -g @accordproject/ergo-cli
 ```
 
 This will install `ergo`, to compile and run contracts locally on your machine, and `ergotop`, which is a _read-eval-print-loop_ utility to write Ergo interactively.
@@ -25,7 +25,6 @@ This will install `ergo`, to compile and run contracts locally on your machine, 
 ergo <command>
 
 Commands:
-  ergo draft       create a contract text from data
   ergo trigger     send a request to the contract
   ergo invoke      invoke a clause of the contract
   ergo initialize  initialize the state for a contract
@@ -37,60 +36,11 @@ Options:
   --verbose, -v                                                 [default: false]
 ```
 
-### ergo draft
-
-`ergo draft` allows you to create a contract text from data. Note that `--data` is a required field.
-
-```md
-## ergo draft
-Usage: ergo draft --data [file] [ctos] [ergos]
-
-Options:
-  --help           Show help                                           [boolean]
-  --version        Show version number                                 [boolean]
-  --verbose, -v                                                 [default: false]
-  --data           path to the contract data                          [required]
-  --currentTime    the current time
-                                 [string] [default: "2019-10-30T12:03:24+00:00"]
-  --wrapVariables  wrap variables in curly braces     [boolean] [default: false]
-  --template       path to the template directory       [string] [default: null]
-  --warnings       print warnings                     [boolean] [default: false]
-```
-
-#### Example
-
-For example, using the `draft` command for the [Volume Discount example](https://github.com/accordproject/ergo/tree/master/examples/volumediscount) in the [Ergo Directory](https://github.com/accordproject/ergo):
-
-```md
-ergo draft --template ./examples/volumediscount --data ./examples/volumediscount/data.json
-```
-
-returns:
-
-```md
-info: Volume-Based Card Acceptance Agreement [Abbreviated]
-
-This Agreement is by and between Card, Inc., a New York corporation, and you, the Merchant.
-...
-b) Discount. The Discount is determined according to the following table:
-
-| Annual Dollar Volume      | Discount             |
-| Less than $1.0 million      | 3.0%                |
-| $1.0 million to $10.0 million | 2.9%                |
-| Greater than $10.0 million  | 2.8%                |
-```
-
-The variables specified in the `data.json` file (such as `firstVolume`: 1, `firstRate`: 3) are incorporated into the text of the contract (which can be found in the `./examples/volumediscount` template directory).
-
-> In general, the `data.json` files aren’t part of the template archive from the [Cicero Template Library](https://github.com/accordproject/cicero-template-library/tree/js-release-0.20/src). It is possible to generate one with [cicero parse](cicero-cli#cicero-parse).
-
-
 ## ergo trigger
 `ergo trigger` allows you to send a request to the contract.
 
 ```md
-Usage: ergo trigger --data [file] --state [file] --request [file] [cto files]
-[ergo files]
+Usage: ergo trigger --data [file] --state [file] --request [file] [cto files] [ergo files]
 
 Options:
   --help         Show help                                             [boolean]
@@ -98,7 +48,7 @@ Options:
   --verbose, -v                                                 [default: false]
   --data         path to the contract data                            [required]
   --state        path to the state data                 [string] [default: null]
-  --currentTime  the current time[string] [default: "2019-10-30T20:18:28+00:00"]
+  --currentTime  the current time[string] [default: "2020-09-29T11:06:48-04:00"]
   --request      path to the request data                     [array] [required]
   --template     path to the template directory         [string] [default: null]
   --warnings     print warnings                       [boolean] [default: false]
@@ -137,7 +87,6 @@ returns:
 
 As the `request` was sent for an annual charge volume of 10.4, which falls into the third discount rate category (as specified in the `data.json` file), the `response` returns with a discount rate of 2.8%.
 
-
 ## ergo invoke
 `ergo invoke` allows you to invoke a specific clause of the contract. The main difference between `ergo invoke` and `ergo trigger` is that `ergo invoke` sends data to a specific clause, whereas `ergo trigger` lets the contract choose which clause to invoke. This is why `--clauseName` (the name of the contract you want to execute) is a required field for `ergo invoke`.
 
@@ -146,8 +95,7 @@ You need to pass the CTO and Ergo files (`--template`), the name of the contract
 If contract invocation is successful, `ergorun` will print out the response, the new contract state and any emitted events.
 
 ```md
-Usage: ergo invoke --data [file] --state [file] --params [file] [cto files]
-[ergo files]
+Usage: ergo invoke --data [file] --state [file] --params [file] [cto files] [ergo files]
 
 Options:
   --help         Show help                                             [boolean]
@@ -156,7 +104,7 @@ Options:
   --clauseName   the name of the clause to invoke                     [required]
   --data         path to the contract data                            [required]
   --state        path to the state data                      [string] [required]
-  --currentTime  the current time[string] [default: "2019-10-30T20:18:57+00:00"]
+  --currentTime  the current time[string] [default: "2020-09-29T11:07:24-04:00"]
   --params       path to the parameters        [string] [required] [default: {}]
   --template     path to the template directory         [string] [default: null]
   --warnings     print warnings                       [boolean] [default: false]
@@ -209,11 +157,10 @@ Options:
   --version      Show version number                                   [boolean]
   --verbose, -v                                                 [default: false]
   --data         path to the contract data                            [required]
-  --currentTime  the current time[string] [default: "2019-10-30T20:19:24+00:00"]
+  --currentTime  the current time[string] [default: "2020-09-29T11:07:47-04:00"]
   --params       path to the parameters                 [string] [default: null]
   --template     path to the template directory         [string] [default: null]
   --warnings     print warnings                       [boolean] [default: false]
-
 ```
 
 ### Example
@@ -246,8 +193,7 @@ info:
 
 
 ```md
-Usage: ergo compile --target [lang] --link --monitor --warnings [cto files]
-[ergo files]
+Usage: ergo compile --target [lang] --link --monitor --warnings [cto files] [ergo files]
 
 Options:
   --help         Show help                                             [boolean]
