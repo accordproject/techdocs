@@ -511,7 +511,9 @@ where `blockName` indicates which kind of block it is (e.g., conditional block o
 ### Unordered Lists
 
 ```tem
-{{#ulist rates}}{{volumeAbove}}$ M<= Volume < {{volumeUpTo}}$ M : {{rate}}%{{/ulist}}
+{{#ulist rates}}
+{{volumeAbove}}$ M<= Volume < {{volumeUpTo}}$ M : {{rate}}%
+{{/ulist}}
 ```
 
 #### Example
@@ -555,7 +557,9 @@ results in the following markdown text:
 ### Ordered Lists
 
 ```tem
-{{#olist rates}}{{volumeAbove}}$ M <= Volume < {{volumeUpTo}}$ M : {{rate}}%{{/olist}}
+{{#olist rates}}
+{{volumeAbove}}$ M <= Volume < {{volumeUpTo}}$ M : {{rate}}%
+{{/olist}}
 ```
 
 #### Example
