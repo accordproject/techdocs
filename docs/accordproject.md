@@ -24,7 +24,7 @@ In addition, contributions from businesses are crucial for the development of th
 
 If this interests you, please visit our [Lifecycle and Industry Working Groups](https://www.accordproject.org/liwg) page for more information.
 
-### For Laywers
+### For Lawyers
 
 The Legal world is changing and Legal Tech is growing into a billion dollar industry. The modern lawyer has to be at home in the digital world. Law Schools now teach courses in coding for lawyers, computational law, blockchain and artificial intelligence. Legal Hackers is a world wide movement uniting lawyers across the world in a shared passion for law and technology. Lawyers need to move beyond the the written word on paper.
 

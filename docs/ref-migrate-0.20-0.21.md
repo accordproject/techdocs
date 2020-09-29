@@ -3,7 +3,7 @@ id: ref-migrate-0.20-0.21
 title: 0.20 to 0.21
 ---
 
-The main change between the `0.20` release and the `0.21` release is the new markdown syntax and parser infrastructure based on [`markdown-it`](https://github.com/markdown-it/markdown-it). While most templates designed for `0.20` should still work on `0.21` some change might be needed to the contract or template text to account for the new syntax.
+The main change between the `0.20` release and the `0.21` release is the new markdown syntax and parser infrastructure based on [`markdown-it`](https://github.com/markdown-it/markdown-it). While most templates designed for `0.20` should still work on `0.21` some changes might be needed to the contract or template text to account for this new syntax.
 
 :::note
 Before following those migration instructions, make sure to first install version `0.21` of Cicero, as described in the [Install Cicero](started-installation) Section of this documentation.
@@ -27,18 +27,25 @@ After those changes, the `accordproject` field in your `package.json` should loo
 
 ## Text Changes
 
-Both grammar and sample text for the templates has changed to support rich text annotations through CommonMark and a new syntax for variables. You can find complete information about the new syntax in the [Markdown Text](markup-preliminaries) Section of this documentation. For an existing template, you should apply the following changes.
+Both the markdown for the grammar and sample text have been updated and consolidated in the `0.21` release and may require some adjustments. You can find complete information about the latest syntax in the [Markdown Text](markup-preliminaries) Section of this documentation. For an existing template, you should apply the following changes.
 
 ### Text Grammar Changes
 
-1. Variables should be changed from `[{variableName}]` to `{{variableName}}`
-2. Formatted variables should be changed to from `[{variableName as "FORMAT"}]` to `{{variableName as "FORMAT"}}`
-3. Boolean variables should be changed to use the new block syntax, from `[{"This is a force majeure":?forceMajeure}]` to `{{#if forceMajeure}}This is a force majeure{{/if}}`
-4. Nested clauses should be changed to use the new block syntax, from `[{#payment}]As consideration in full for the rights granted herein...[{/payment}]` to `{{#clause payment}}As consideration in full for the rights granted herein...{{/clause}}`
+1. Clause or list blocks should have their opening and closing tags on a single line terminated by whitespace. I.e., you should change occurrences of :
+   ```
+   {{#clause clauseName}}...clause text...{{/clauseName}}
+   ```
+   to
+   ```
+   {{#clause clauseName}}
+   ...clause text...
+   {{/clauseName}}
+   ```
+   and similarly for ordered and unordeded list blocks (`olist` and `ulist`).
+2. Markdown container blocks are no longer supported inside inline blocks (`if` `join` and `with` blocks)
 
-:::note
-1. Template text is now interpreted as CommonMark which may lead to unexpected results if your text includes CommonMark characters or structure (e.g., `#` or `##` now become headings; `1.` or `-` now become lists). You should review both the grammar and samples so they follow the proper [CommonMark](https://commonmark.org) rules.
-2. The new lexer reserves `{{` instead of reserving `[{` which means you should avoid using `{{` in your text unless for Accord Project variables.
+:::tip
+We recommend using the new [TemplateMark Dingus]().
 :::
 
 ### Text Samples Changes
