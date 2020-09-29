@@ -146,7 +146,7 @@ returns:
 When the transforms allow, you can roundtrip between two formats, i.e., transform from a source to a target format and back to the source target. For instance, the following transform from `markdown` to `slate` and back to markdown:
 
 ```md
-markus transform --from markdown --to slate --input README.md --roundtri
+markus transform --from markdown --to slate --input README.md --roundtrip
 ```
 
 returns:
