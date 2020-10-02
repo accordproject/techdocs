@@ -101,6 +101,9 @@
       "ref-concerto-cli": {
         "title": "Command Line"
       },
+      "ref-decorators": {
+        "title": "Decorators"
+      },
       "ref-ergo-api": {
         "title": "Node.js API"
       },
