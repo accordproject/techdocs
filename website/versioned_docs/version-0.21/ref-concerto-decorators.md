@@ -1,6 +1,7 @@
 ---
-id: ref-decorators
+id: version-0.21-ref-concerto-decorators
 title: Decorators
+original_id: ref-concerto-decorators
 ---
 
 Decorators are used to add metadata to Concerto model elements, typically to control how variables are edited, printed or transformed.

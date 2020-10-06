@@ -116,6 +116,7 @@
         "type": "subcategory",
         "label": "Concerto Reference",
         "ids": [
+          "version-0.21-ref-concerto-decorators",
           "version-0.21-ref-concerto-cli",
           "version-0.21-ref-concerto-api"
         ]

@@ -50,7 +50,7 @@
             {
                 "type": "subcategory",
                 "label": "Cicero Reference",
-                "ids": ["ref-decorators", "ref-cicero-cli", "ref-cicero-api", "ref-cicero-testing"]
+                "ids": ["ref-cicero-cli", "ref-cicero-api", "ref-cicero-testing"]
             },
             {
                 "type": "subcategory",
@@ -60,7 +60,7 @@
             {
                 "type": "subcategory",
                 "label": "Concerto Reference",
-                "ids": ["ref-concerto-cli", "ref-concerto-api"]
+                "ids": ["ref-concerto-decorators", "ref-concerto-cli", "ref-concerto-api"]
             },
             {
                 "type": "subcategory",

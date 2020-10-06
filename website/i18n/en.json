@@ -101,7 +101,7 @@
       "ref-concerto-cli": {
         "title": "Command Line"
       },
-      "ref-decorators": {
+      "ref-concerto-decorators": {
         "title": "Decorators"
       },
       "ref-ergo-api": {
@@ -512,6 +512,9 @@
       "version-0.21/version-0.21-model-classes": {
         "title": "Classes"
       },
+      "version-0.21/version-0.21-model-decorators": {
+        "title": "Decorators"
+      },
       "version-0.21/version-0.21-model-properties": {
         "title": "Properties"
       },
@@ -532,6 +535,9 @@
       },
       "version-0.21/version-0.21-ref-concerto-cli": {
         "title": "Command Line"
+      },
+      "version-0.21/version-0.21-ref-concerto-decorators": {
+        "title": "Decorators"
       },
       "version-0.21/version-0.21-ref-ergo-api": {
         "title": "Node.js API"
