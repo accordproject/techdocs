@@ -31,7 +31,21 @@ Concerto supports the following primitive types:
 
 `String` fields may include an optional regular expression, which is used to validate the contents of the field. Careful use of field validators allows Concerto to perform rich data validation, leading to fewer errors and less boilerplate application code.
 
-`Double`, `Long` or `Integer` fields may include an optional range expression, which is used to validate the contents of the field.
+The example below validates that a `String` variable starts with `abc`:
+
+```
+  o String myString regex=/abc.*/ 
+```
+
+`Double`, `Long` or `Integer` fields may include an optional range expression, which is used to validate the contents of the field. Both the lower and upper bound are optional, however at least one must be specified. The upper bound must be greater than or equal to the lower bound.
+
+```
+  o Integer intLowerUpper range=[-1,1] // greater than or equal to -1 and less than 1
+  o Integer intLower range=[-1,] // greater than or equal to -1
+  o Integer intUpper range=[,1] // less than 1
+```
+
+#### Example
 
 ```
 asset Vehicle {
