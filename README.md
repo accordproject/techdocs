@@ -219,7 +219,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
     <tr>
      <th id="blank"></th>
      <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/dingus">dingus</a></td>
-     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fdingus"><img src="https://badge.fury.io/js/%40accordproject%2Fdingus.svg" alt="npm version"></a></td>
+     <th id="blank"></th>
      <td headers>Tool to edit markdown as HTML or a DOM</td>
     </tr>
  
