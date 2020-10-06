@@ -5,9 +5,6 @@
 </p>
 
 <p align="center">
-  <a href="#contributors">
-    <img src="https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square" alt="Contributors">
-  </a>
   <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/accordproject/cicero?color=bright-green" alt="GitHub license">
   </a>
@@ -154,35 +151,77 @@ Accord Project is an open source, non-profit, initiative working to transform co
     <td headers>Ergo engine</td>
     </tr>
     <tr>
-     <td headers><a href="https://docs.accordproject.org/docs/next/markup-cicero.html">Markdown</a></td>
+     <td headers><a href="https://github.com/accordproject/markdown-transform">Markdown</a></td>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-cicero">markdown-cicero</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero.svg" alt="npm version"></a></td>
+     <td headers>Markdown extensions for contracts, clauses, variables etc.</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-cli">markdown-cli</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cli"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cli.svg" alt="npm version"></a></td>
+     <td headers>CLI for markdown transformations</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
      <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-common">markdown-common</a></td>
      <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-common"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-common.svg" alt="npm version"></a></td>
      <td headers>A framework for transforming markdown</td>
     </tr>
-     <tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-docx">markdown-docx</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-docx"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-docx.svg" alt="npm version"></a></td>
+     <td headers>Transform between CiceroDOM and DOCX</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-html">markdown-html</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-html"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-html.svg" alt="npm version"></a></td>
+     <td headers>Transform between CiceroDOM and HTML</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-it-cicero">markdown-it-cicero</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-it-cicero"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-it-cicero.svg" alt="npm version"></a></td>
+     <td headers>CommonMark extension for CiceroMark for Clause, Variable, and ComputedVariable nodes</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-it-template">markdown-it-template</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-it-template"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-it-template.svg" alt="npm version"></a></td>
+     <td headers>CommonMark extension for TemplateMark for Clause, Variable, and ComputedVariable nodes</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-pdf">markdown-pdf</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-pdf"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-pdf.svg" alt="npm version"></a></td>
+     <td headers>Transform between CiceroDOM and PDF</td>
+    </tr>
+    <tr>
      <th id="blank"></th>
      <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-slate">markdown-slate</a></td>
      <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-slate"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-slate.svg" alt="npm version"></a></td>
      <td headers>Transform markdown to/from CommonMark DOM</td>
-     </tr>
-     <tr>
-     <td headers></td>
-     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-cli"> markdown-cli </a></td>
-     <td headers> <a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cli"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cli.svg" alt="npm version"></a></td>
-     <td headers> CLI for markdown transformations.</td>
     </tr>
-     <tr>
-      <th id="blank"></th>
-      <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-cicero">markdown-cicero</a></td>
-      <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-cicero.svg" alt="npm version"></a></td>
-      <td headers>Markdown extensions for contracts, clauses, variables etc.</td>
-      </tr>
-       <tr>
-      <th id="blank"></th>
-       <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-html">markdown-html</a></td>
-       <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-html"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-html.svg" alt="npm version"></a></td>
-       <td headers>Transform CiceroDOM to HTML</td>
-       </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-template">markdown-template</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-template"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-template.svg" alt="npm version"></a></td>
+     <td headers>CommonMark extension for Clause, Variable, and Formula definitions</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/markdown-transform">markdown-transform</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fmarkdown-transform"><img src="https://badge.fury.io/js/%40accordproject%2Fmarkdown-transform.svg" alt="npm version"></a></td>
+     <td headers>High-level API to transform markdown into different formats</td>
+    </tr>
+    <tr>
+     <th id="blank"></th>
+     <td headers><a href="https://github.com/accordproject/markdown-transform/tree/master/packages/dingus">dingus</a></td>
+     <td headers><a href="https://badge.fury.io/js/%40accordproject%2Fdingus"><img src="https://badge.fury.io/js/%40accordproject%2Fdingus.svg" alt="npm version"></a></td>
+     <td headers>Tool to edit markdown as HTML or a DOM</td>
+    </tr>
  
 </table>
 
@@ -207,22 +246,14 @@ Accord Project is an open source, non-profit, initiative working to transform co
 <table>
   <tr>
     <th headers="blank">Projects</th>
-    <th headers="blank">Cicero ver.</th>
     <th headers="blank">Description</th>
   </tr>
   <tr>
-    <td headers><a href="https://github.com/accordproject/template-studio">Template Studio v1</a></td>
-    <td headers> <b>0.13.4</b></td>
-    <td headers>Web UI for creating, editing and testing Accord Project templates</td>
-  </tr>
-  <tr>
-    <td headers><a href="https://github.com/accordproject/template-studio-v2">Template Studio v2</a></td>
-    <td headers> <b>0.13.4</b></td>
+    <td headers><a href="https://github.com/accordproject/template-studio">Template Studio</a></td>
     <td headers>Web UI for creating, editing and testing Accord Project templates</td>
   </tr>
    <tr>
     <td headers><a href="https://github.com/accordproject/cicero-vscode-extension">VSCode Extension</a></td>
-    <td headers><b>0.13.4</b></td>
     <td headers>VS Code extension for editing Cicero templates and Ergo logic</td>
    </tr>
 </table>
@@ -310,51 +341,3 @@ Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respec
 
 [apache]: https://github.com/accordproject/techdocs/blob/master/LICENSE
 [creativecommons]: http://creativecommons.org/licenses/by/4.0/
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/4dd3r"><img src="https://avatars1.githubusercontent.com/u/1309899?v=4" width="100px;" alt="4dd3r"/><br /><sub><b>4dd3r</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=4dd3r" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/4katie"><img src="https://avatars2.githubusercontent.com/u/45664641?v=4" width="100px;" alt="4katie"/><br /><sub><b>4katie</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=4katie" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Alexandria"><img src="https://avatars1.githubusercontent.com/u/7613670?v=4" width="100px;" alt="It's Lex "/><br /><sub><b>It's Lex </b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=Alexandria" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/DEBSUBHRO"><img src="https://avatars0.githubusercontent.com/u/42496309?v=4" width="100px;" alt="DEBSUBHRA ROY"/><br /><sub><b>DEBSUBHRA ROY</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=DEBSUBHRO" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/FelixKuehl"><img src="https://avatars1.githubusercontent.com/u/13168478?v=4" width="100px;" alt="Felix Kühl"/><br /><sub><b>Felix Kühl</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=FelixKuehl" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/Frozenaught"><img src="https://avatars3.githubusercontent.com/u/34192458?v=4" width="100px;" alt="Nico Britz"/><br /><sub><b>Nico Britz</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=Frozenaught" title="Code">💻</a></td>
-    <td align="center"><a href="http://yashgarg.me"><img src="https://avatars2.githubusercontent.com/u/33605526?v=4" width="100px;" alt="Yash Garg"/><br /><sub><b>Yash Garg</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=Yash-Garg" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://contractpen.com/"><img src="https://avatars3.githubusercontent.com/u/41356995?v=4" width="100px;" alt="ContractPen"/><br /><sub><b>ContractPen</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=contractpendev" title="Code">💻</a></td>
-    <td align="center"><a href="https://twitter.com/daniloff200"><img src="https://avatars1.githubusercontent.com/u/13692220?v=4" width="100px;" alt="Dmitriy Danilov"/><br /><sub><b>Dmitriy Danilov</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=daniloff200" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/dselman"><img src="https://avatars0.githubusercontent.com/u/623108?v=4" width="100px;" alt="Dan Selman"/><br /><sub><b>Dan Selman</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=dselman" title="Code">💻</a></td>
-    <td align="center"><a href="http://jolenelanglinais.com"><img src="https://avatars3.githubusercontent.com/u/36460856?v=4" width="100px;" alt="Jolene Langlinais"/><br /><sub><b>Jolene Langlinais</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=irmerk" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/javiercanossini"><img src="https://avatars3.githubusercontent.com/u/41113584?v=4" width="100px;" alt="Javier Canossini"/><br /><sub><b>Javier Canossini</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=javiercanossini" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/jbesq777"><img src="https://avatars0.githubusercontent.com/u/3835594?v=4" width="100px;" alt="Joseph J Bambara"/><br /><sub><b>Joseph J Bambara</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=jbesq777" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/jeromesimeon"><img src="https://avatars0.githubusercontent.com/u/670099?v=4" width="100px;" alt="Jerome Simeon"/><br /><sub><b>Jerome Simeon</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=jeromesimeon" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="https://lex111.ru/"><img src="https://avatars2.githubusercontent.com/u/4408379?v=4" width="100px;" alt="Alexey Pyltsyn"/><br /><sub><b>Alexey Pyltsyn</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=lex111" title="Code">💻</a></td>
-    <td align="center"><a href="http://clause.io"><img src="https://avatars1.githubusercontent.com/u/7544022?v=4" width="100px;" alt="Matt Roberts"/><br /><sub><b>Matt Roberts</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=mttrbrts" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/nithilan4"><img src="https://avatars0.githubusercontent.com/u/43860191?v=4" width="100px;" alt="Nithilan Kalidoss"/><br /><sub><b>Nithilan Kalidoss</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=nithilan4" title="Code">💻</a></td>
-    <td align="center"><a href="http://oorjitchowdhary.ml"><img src="https://avatars2.githubusercontent.com/u/39333058?v=4" width="100px;" alt="Oorjit Chowdhary"/><br /><sub><b>Oorjit Chowdhary</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=oorjitchowdhary" title="Code">💻</a></td>
-    <td align="center"><a href="http://www.clause.io"><img src="https://avatars1.githubusercontent.com/u/9304034?v=4" width="100px;" alt="Peter Hunn"/><br /><sub><b>Peter Hunn</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=peterhunn" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/pranjalv9"><img src="https://avatars1.githubusercontent.com/u/55620250?v=4" width="100px;" alt="Pranjal Vyas"/><br /><sub><b>Pranjal Vyas</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=pranjalv9" title="Code">💻</a></td>
-    <td align="center"><a href="https://github.com/ryanctlin"><img src="https://avatars2.githubusercontent.com/u/32078126?v=4" width="100px;" alt="Ryan (Chiungting) Lin"/><br /><sub><b>Ryan (Chiungting) Lin</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=ryanctlin" title="Code">💻</a></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="http://deuexsolutions.com"><img src="https://avatars1.githubusercontent.com/u/6761317?v=4" width="100px;" alt="Sanket Shah"/><br /><sub><b>Sanket Shah</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=shahsank3t" title="Code">💻</a></td>
-    <td align="center"><a href="https://steffinstanly.github.io/"><img src="https://avatars0.githubusercontent.com/u/32876873?v=4" width="100px;" alt="Steffin Stanly"/><br /><sub><b>Steffin Stanly</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=steffinstanly" title="Code">💻</a></td>
-    <td align="center"><a href="https://sumitkharche.hashnode.dev/"><img src="https://avatars3.githubusercontent.com/u/43902034?v=4" width="100px;" alt="Sumit Kharche"/><br /><sub><b>Sumit Kharche</b></sub></a><br /><a href="https://github.com/accordproject/techdocs/commits?author=sumitkharche" title="Code">💻</a></td>
-  </tr>
-</table>
-
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
