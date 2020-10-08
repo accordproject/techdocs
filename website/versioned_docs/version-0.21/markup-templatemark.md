@@ -159,15 +159,15 @@ If the variable `variableName` has type `DateTime`:
 ```ergo
 o DateTime variableName
 ```
-The corresponding instance should contain the corresponding date using the format `MM/DD/YYYY`, commonly used in the US.
+The corresponding instance should be a date and time, and can optionally be formatted. The default format is `MM/DD/YYYY`, commonly used in the US.
 
 #### DateTime Formats
 
-DateTime format can be customized inline in a template grammar by including an optional format string using the `as` keyword. The following formatting tokens are supported:
+The textual representation of a DateTime can be customized by including an optional format string using the `as` keyword directly in a template grammar. The following formatting tokens are supported:
 
 Tokens are case-sensitive.
 
-| Input        | Example  .         | Description |
+| Input        | Example            | Description |
 |--------------|--------------------|-------------|
 | `YYYY`       | `2014`             | 4 or 2 digit year |
 | `M`          | `12`               | 1 or 2 digit month number |
@@ -225,6 +225,82 @@ dateTimeProperty: 01/12/2018
 ```tem
 dateTimeProperty: {{dateTimeProperty as "DD-MMM-YYYY H mm:ss.SSSZ"}}
 dateTimeProperty: 04-Jan-2019 2 59:01.001+01:01
+```
+
+### Amount Variables
+
+#### Description
+
+If the variable `variableName` is of type `Integer`, `Long`, `Double` or `MonetaryAmount`:
+```ergo
+o Integer integerVariable
+o Long longVariable
+o Double doubleVariable
+o MonetaryAmount monetaryVariable
+```
+
+The corresponding instance should be a numeric value (with a currency code in the case of monetary amounts), and can optionally be formatted.
+
+#### Amount Formats
+
+The textual representation of an amount can be customized by including an optional format string using the `as` keyword directly in a template grammar. The following formatting tokens are supported:
+
+Tokens are case-sensitive.
+
+| Input        | Example            | Description                        | Type Supported                     |
+|--------------|--------------------|------------------------------------|------------------------------------|
+| `0,0`        | `3,100,200`        | integer part with `,` separator    | Integer,Long,Double,MonetaryAmount |
+| `0 0`        | `3 100 200`        | integer part with ` ` separator    | Integer,Long,Double,MonetaryAmount |
+| `0,0.00`     | `3,100,200.95`     | decimal with two digits precision  | Double,MonetaryAmount |
+| `0 0,00`     | `3 100 200,95`     | decimal with two digits precision  | Double,MonetaryAmount |
+| `0,0.0000`   | `3,100,200.95`     | decimal with four digits precision | Double,MonetaryAmount |
+| `CCC`        | `USD`              | currency code                      | MonetaryAmount |
+| `K`          | `$`                | currency symbol                    | MonetaryAmount |
+
+The general format for the amount is `0{sep}0({sep}0+)?` where `{sep}` is a single character (e.g., `,` or `.`). The first `{sep}` is used to separate every three digits of the integer part. The second `{sep}` is used as a decimal point. And the number of `0` after the second separator is used to indicate precision (number of digits after the decimal point).
+
+
+#### Examples
+
+The following examples show formating for `Integer` or `Long` values.
+
+```
+The manuscript shall be completed within {{days as "0,0"}} days.
+The manuscript shall be completed within 1,001 days.
+```
+
+```
+The manuscript shall contain at most {{words as "0 0"}} words.
+The manuscript shall contain at most 1 500 001 words.
+```
+
+The following examples show formatting for `Double` values.
+
+```
+The effective range of the device should be at least {{distance as "0,0.00mm"}}.
+The effective range of the device should be at least 1,250,400.99mm.
+```
+
+```
+The effective range of the device should be at least {{distance as "0 0,0000mm"}}.
+The effective range of the device should be at least 1 250 400,9900mm.
+```
+
+The following examples show formatting for `MonetaryAmount` values.
+
+```
+The loan principal is {{principal as "0,0.00 CCC"}}.
+The loan principal is 2,000,500,000.00 GBP.
+```
+
+```
+The loan principal is {{principal as "K0,0.00"}}.
+The loan principal is £2,000,500,000.00.
+```
+
+```
+The loan principal is {{principal as "0 0,00 K"}}.
+The loan principal is 2 000 500 000,00 €.
 ```
 
 ## Complex Types Variables
