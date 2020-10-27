@@ -491,6 +491,9 @@
       "version-0.21/version-0.21-ergo-tutorial": {
         "title": "Ergo: A Tutorial"
       },
+      "version-0.21/version-0.21-logic-advanced-expr": {
+        "title": "Advanced Expressions"
+      },
       "version-0.21/version-0.21-logic-stmt": {
         "title": "Statements"
       },

@@ -17,9 +17,21 @@ The following functions are in the `org.accordproject.ergo.stdlib` namespace and
 | `integerLog2`  | `(x:Integer) : Integer` | Base 2 integer logarithm |
 | `integerSqrt`  | `(x:Integer) : Integer` | Integer square root |
 | `integerToDouble`  | `(x:Integer) : Double` | Cast to a Double |
-| `integerMod`  | `(x:Integer, y:Integer) : Integer` | Integer remainder |
+| `integerModulo`  | `(x:Integer, y:Integer) : Integer` | Integer remainder |
 | `integerMin`  | `(x:Integer, y:Integer) : Integer` | Smallest of `x` and `y`  |
 | `integerMax`  | `(x:Integer, y:Integer) : Integer` | Largest of `x` and `y`  |
+
+### Functions on Long
+
+| Name | Signature | Description |
+|------|-----------|-------------|
+| `longAbs`  | `(x:Long) : Long` | Absolute value |
+| `longLog2`  | `(x:Long) : Long` | Base 2 long logarithm |
+| `longSqrt`  | `(x:Long) : Long` | Long square root |
+| `longToDouble`  | `(x:Long) : Double` | Cast to a Double |
+| `longModulo`  | `(x:Long, y:Long) : Long` | Long remainder |
+| `longMin`  | `(x:Long, y:Long) : Long` | Smallest of `x` and `y`  |
+| `longMax`  | `(x:Long, y:Long) : Long` | Largest of `x` and `y`  |
 
 ### Functions on Double
 
@@ -33,7 +45,8 @@ The following functions are in the `org.accordproject.ergo.stdlib` namespace and
 | `ceil`  | `(x:Double) : Double` | Round to closest integer above |
 | `floor`  | `(x:Double) : Double` | Round to closest integer below |
 | `truncate`  | `(x:Double) : Integer` | Cast to an Integer |
-| `doubleToInteger`  | `(x:Double) : Integer` | Same as `truncate`  |
+| `doubleToInteger`  | `(x:Double) : Integer` | Same as `truncate` |
+| `doubleToLong`  | `(x:Double) : Long` | Cast to a Long |
 | `minPair`  | `(x:Double, y:Double) : Double` | Smallest of `x` and `y`  |
 | `maxPair`  | `(x:Double, y:Double) : Double` | Largest of `x` and `y`  |
 
@@ -44,6 +57,12 @@ The following functions are in the `org.accordproject.ergo.stdlib` namespace and
 | `length` | `(x:String) : Integer` | Prints length of a string |
 | `encode` | `(x:String) : String` | Encode as URI component |
 | `decode` | `(x:String) : String` | Decode as URI component |
+| `doubleOpt` | `(x:String) : Double?` | Cast to a Double |
+| `double` | `(x:String) : Double` | Cast to a Double or NaN |
+| `integerOpt` | `(x:String) : Integer?` | Cast to an Integer |
+| `integer` | `(x:String) : Integer` | Cast to a Integer or 0 |
+| `longOpt` | `(x:String) : Long?` | Cast to a Long |
+| `long` | `(x:String) : Long` | Cast to a Long or 0 |
 
 ### Functions on Arrays
 
@@ -56,8 +75,15 @@ The following functions are in the `org.accordproject.ergo.stdlib` namespace and
 | `inArray`  | `(x:Any,y:Any[]) : Boolean` | Whether `x` is in `y` |
 | `containsAll`  | `(x:Any[],y:Any[]) : Boolean` | Whether all elements of `y` are in `x` |
 | `distinct`  | `(x:Any[]) : Any[]` | Duplicates elimination |
+| `singleton` | `(x:Any[]) : Any?` | Single value from singleton array |
 
 *Note*: For most of these functions, the type-checker infers more precise types than indicated here. For instance `concat([1,2],[3,4])` will return `[1,2,3,4]` and have the type `Integer[]`.
+
+### Log functions
+
+| Name | Signature | Description |
+|------|-----------|-------------|
+| `logString` | (x:String) : Unit | Adds string to the log |
 
 ### Aggregate functions
 
