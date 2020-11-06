@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-errors",
+  "id": "version-0.21/ref-errors",
+  "isDocsHomePage": false,
+  "title": "Errors",
+  "description": "As much as possible, errors returned by all projects (notably Cicero and the Ergo compiler) are normalized and categorized in order to facilitate handling of those error by the application code. Those errors are raised as JavaScript exceptions.",
+  "source": "@site/versioned_docs/version-0.21/ref-errors.md",
+  "slug": "/ref-errors",
+  "permalink": "/docs/ref-errors",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Glossary",
+    "permalink": "/docs/ref-glossary"
+  },
+  "next": {
+    "title": "0.13 to 0.20",
+    "permalink": "/docs/ref-migrate-0.13-0.20"
+  }
+}

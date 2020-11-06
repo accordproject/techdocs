@@ -1,0 +1,22 @@
+{
+  "unversionedId": "spec-instance",
+  "id": "version-0.13/spec-instance",
+  "isDocsHomePage": false,
+  "title": "Template Instantiation",
+  "description": "Contract",
+  "source": "@site/versioned_docs/version-0.13/spec-instance.md",
+  "slug": "/spec-instance",
+  "permalink": "/docs/0.13/spec-instance",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.13/docs",
+  "previous": {
+    "title": "Template Structure",
+    "permalink": "/docs/0.13/spec-template"
+  },
+  "next": {
+    "title": "Contract Execution",
+    "permalink": "/docs/0.13/spec-execution"
+  }
+}

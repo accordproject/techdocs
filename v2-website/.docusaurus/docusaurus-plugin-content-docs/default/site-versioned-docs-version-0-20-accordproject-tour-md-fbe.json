@@ -1,0 +1,13 @@
+{
+  "unversionedId": "accordproject-tour",
+  "id": "version-0.20/accordproject-tour",
+  "isDocsHomePage": false,
+  "title": "Online Tour",
+  "description": "To get an better acquainted with Accord Project templates, the easiest way is through the online Template Studio editor.",
+  "source": "@site/versioned_docs/version-0.20/accordproject-tour.md",
+  "slug": "/accordproject-tour",
+  "permalink": "/docs/0.20/accordproject-tour",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

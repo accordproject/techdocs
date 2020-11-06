@@ -1,0 +1,22 @@
+{
+  "unversionedId": "model-concerto",
+  "id": "version-0.21/model-concerto",
+  "isDocsHomePage": false,
+  "title": "Concerto Overview",
+  "description": "Principles",
+  "source": "@site/versioned_docs/version-0.21/model-concerto.md",
+  "slug": "/model-concerto",
+  "permalink": "/docs/model-concerto",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "TemplateMark",
+    "permalink": "/docs/markup-templatemark"
+  },
+  "next": {
+    "title": "Namespaces",
+    "permalink": "/docs/model-namespaces"
+  }
+}

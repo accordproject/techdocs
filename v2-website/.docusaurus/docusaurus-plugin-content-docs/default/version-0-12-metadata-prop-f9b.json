@@ -1,0 +1,291 @@
+{
+  "pluginId": "default",
+  "version": "0.12",
+  "label": "0.12",
+  "isLast": false,
+  "docsSidebars": {
+    "version-0.12/docs": [
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Introduction",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting Started with Accord Project",
+            "href": "/docs/0.12/"
+          },
+          {
+            "type": "link",
+            "label": "Installation",
+            "href": "/docs/0.12/accordproject-installation"
+          },
+          {
+            "type": "link",
+            "label": "Developers Tools",
+            "href": "/docs/0.12/accordproject-tooling"
+          },
+          {
+            "type": "link",
+            "label": "Standard Models",
+            "href": "/docs/0.12/accordproject-models"
+          },
+          {
+            "type": "link",
+            "label": "Open Source Templates",
+            "href": "/docs/0.12/accordproject-templates"
+          },
+          {
+            "type": "link",
+            "label": "Learning Resources",
+            "href": "/docs/0.12/accordproject-resources"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Basic Tutorials",
+        "items": [
+          {
+            "type": "link",
+            "label": "How to Use a Template",
+            "href": "/docs/0.12/basic-use"
+          },
+          {
+            "type": "link",
+            "label": "Take a Look Inside",
+            "href": "/docs/0.12/basic-templates"
+          },
+          {
+            "type": "link",
+            "label": "Creating a New Template",
+            "href": "/docs/0.12/basic-create"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Advanced Tutorials",
+        "items": [
+          {
+            "type": "link",
+            "label": "Authoring in Template Studio",
+            "href": "/docs/0.12/advanced-latedelivery"
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Template Execution",
+            "items": [
+              {
+                "type": "link",
+                "label": "Working with Node.js",
+                "href": "/docs/0.12/advanced-nodejs"
+              },
+              {
+                "type": "link",
+                "label": "Deploying on Hyperledger Fabric",
+                "href": "/docs/0.12/advanced-hyperledger"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Ergo Language Guide",
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/docs/0.12/logic-ergo"
+          },
+          {
+            "type": "link",
+            "label": "Simple Expressions",
+            "href": "/docs/0.12/logic-simple-expr"
+          },
+          {
+            "type": "link",
+            "label": "Introducing Types",
+            "href": "/docs/0.12/logic-simple-type"
+          },
+          {
+            "type": "link",
+            "label": "Complex Values & Types",
+            "href": "/docs/0.12/logic-complex-type"
+          },
+          {
+            "type": "link",
+            "label": "Advanced Expressions",
+            "href": "/docs/0.12/logic-advanced-expr"
+          },
+          {
+            "type": "link",
+            "label": "Statements",
+            "href": "/docs/0.12/logic-stmt"
+          },
+          {
+            "type": "link",
+            "label": "Declarations",
+            "href": "/docs/0.12/logic-decl"
+          },
+          {
+            "type": "link",
+            "label": "Modularity",
+            "href": "/docs/0.12/logic-module"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Template Specification",
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/docs/0.12/spec-overview"
+          },
+          {
+            "type": "link",
+            "label": "Concepts and High-level Architecture",
+            "href": "/docs/0.12/spec-concepts"
+          },
+          {
+            "type": "link",
+            "label": "Example: Late Delivery Clause",
+            "href": "/docs/0.12/spec-example"
+          },
+          {
+            "type": "link",
+            "label": "Template Structure",
+            "href": "/docs/0.12/spec-template"
+          },
+          {
+            "type": "link",
+            "label": "Template Instantiation",
+            "href": "/docs/0.12/spec-instance"
+          },
+          {
+            "type": "link",
+            "label": "Contract Execution",
+            "href": "/docs/0.12/spec-execution"
+          },
+          {
+            "type": "link",
+            "label": "Packaging",
+            "href": "/docs/0.12/spec-packaging"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Reference Manual",
+        "items": [
+          {
+            "type": "link",
+            "label": "Markup Reference",
+            "href": "/docs/0.12/ref-markup"
+          },
+          {
+            "type": "link",
+            "label": "Testing Reference",
+            "href": "/docs/0.12/ref-testing"
+          },
+          {
+            "type": "link",
+            "label": "Ergo Language Reference",
+            "href": "/docs/0.12/ref-logic"
+          },
+          {
+            "type": "link",
+            "label": "Ergo Libraries",
+            "href": "/docs/0.12/ref-logic-stdlib"
+          },
+          {
+            "type": "link",
+            "label": "Ergo Compiler",
+            "href": "/docs/0.12/ref-logic-specification"
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Command Line Interface",
+            "items": [
+              {
+                "type": "link",
+                "label": "Cicero CLI",
+                "href": "/docs/0.12/cicero-cli"
+              },
+              {
+                "type": "link",
+                "label": "Ergo CLI",
+                "href": "/docs/0.12/ergo-cli"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "JavaScript API",
+            "items": [
+              {
+                "type": "link",
+                "label": "Cicero API",
+                "href": "/docs/0.12/cicero-api"
+              },
+              {
+                "type": "link",
+                "label": "Ergo API",
+                "href": "/docs/0.12/ergo-api"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permalinkToSidebar": {
+    "/docs/0.12/": "version-0.12/docs",
+    "/docs/0.12/accordproject-installation": "version-0.12/docs",
+    "/docs/0.12/accordproject-models": "version-0.12/docs",
+    "/docs/0.12/accordproject-resources": "version-0.12/docs",
+    "/docs/0.12/accordproject-templates": "version-0.12/docs",
+    "/docs/0.12/accordproject-tooling": "version-0.12/docs",
+    "/docs/0.12/advanced-hyperledger": "version-0.12/docs",
+    "/docs/0.12/advanced-latedelivery": "version-0.12/docs",
+    "/docs/0.12/advanced-nodejs": "version-0.12/docs",
+    "/docs/0.12/basic-create": "version-0.12/docs",
+    "/docs/0.12/basic-templates": "version-0.12/docs",
+    "/docs/0.12/basic-use": "version-0.12/docs",
+    "/docs/0.12/cicero-api": "version-0.12/docs",
+    "/docs/0.12/cicero-cli": "version-0.12/docs",
+    "/docs/0.12/ergo-api": "version-0.12/docs",
+    "/docs/0.12/ergo-cli": "version-0.12/docs",
+    "/docs/0.12/logic-advanced-expr": "version-0.12/docs",
+    "/docs/0.12/logic-complex-type": "version-0.12/docs",
+    "/docs/0.12/logic-decl": "version-0.12/docs",
+    "/docs/0.12/logic-ergo": "version-0.12/docs",
+    "/docs/0.12/logic-module": "version-0.12/docs",
+    "/docs/0.12/logic-simple-expr": "version-0.12/docs",
+    "/docs/0.12/logic-simple-type": "version-0.12/docs",
+    "/docs/0.12/logic-stmt": "version-0.12/docs",
+    "/docs/0.12/ref-logic": "version-0.12/docs",
+    "/docs/0.12/ref-logic-specification": "version-0.12/docs",
+    "/docs/0.12/ref-logic-stdlib": "version-0.12/docs",
+    "/docs/0.12/ref-markup": "version-0.12/docs",
+    "/docs/0.12/ref-testing": "version-0.12/docs",
+    "/docs/0.12/spec-concepts": "version-0.12/docs",
+    "/docs/0.12/spec-example": "version-0.12/docs",
+    "/docs/0.12/spec-execution": "version-0.12/docs",
+    "/docs/0.12/spec-instance": "version-0.12/docs",
+    "/docs/0.12/spec-overview": "version-0.12/docs",
+    "/docs/0.12/spec-packaging": "version-0.12/docs",
+    "/docs/0.12/spec-template": "version-0.12/docs"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-cicero-cli",
+  "id": "ref-cicero-cli",
+  "isDocsHomePage": false,
+  "title": "Command Line",
+  "description": "Install the @accordproject/cicero-cli npm package to access the Cicero command line interface (CLI). After installation you can use the cicero command and its sub-commands as described below.",
+  "source": "@site/../docs/ref-cicero-cli.md",
+  "slug": "/ref-cicero-cli",
+  "permalink": "/docs/next/ref-cicero-cli",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "0.20 to 0.21",
+    "permalink": "/docs/next/ref-migrate-0.20-0.21"
+  },
+  "next": {
+    "title": "Node.js API",
+    "permalink": "/docs/next/ref-cicero-api"
+  }
+}

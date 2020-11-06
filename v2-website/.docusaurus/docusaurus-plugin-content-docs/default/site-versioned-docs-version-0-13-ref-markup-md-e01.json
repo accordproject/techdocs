@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-markup",
+  "id": "version-0.13/ref-markup",
+  "isDocsHomePage": false,
+  "title": "Markup Reference",
+  "description": "Markup Syntax",
+  "source": "@site/versioned_docs/version-0.13/ref-markup.md",
+  "slug": "/ref-markup",
+  "permalink": "/docs/0.13/ref-markup",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.13/docs",
+  "previous": {
+    "title": "Packaging",
+    "permalink": "/docs/0.13/spec-packaging"
+  },
+  "next": {
+    "title": "Testing Reference",
+    "permalink": "/docs/0.13/ref-testing"
+  }
+}

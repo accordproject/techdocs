@@ -1,0 +1,1722 @@
+{
+  "/-deb": {
+    "component": "component---site-src-pages-index-jsc-4-f-f99",
+    "config": "config---5-e-9-4f3"
+  },
+  "/__docusaurus/debug-3d6": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/config-914": {
+    "component": "component---theme-debug-config-23-a-2ff"
+  },
+  "/__docusaurus/debug/content-c28": {
+    "component": "component---theme-debug-contentba-8-ce7",
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-3cf": {
+    "component": "component---theme-debug-global-dataede-0fa"
+  },
+  "/__docusaurus/debug/metadata-31b": {
+    "component": "component---theme-debug-site-metadata-68-e-3d4"
+  },
+  "/__docusaurus/debug/registry-0da": {
+    "component": "component---theme-debug-registry-679-501"
+  },
+  "/__docusaurus/debug/routes-244": {
+    "component": "component---theme-debug-routes-946-699"
+  },
+  "/blog-6d6": {
+    "component": "component---theme-blog-list-pagea-6-a-7ba",
+    "sidebar": "sidebar---blog-1-b-2-057",
+    "items": [
+      {
+        "content": "content---blogde-6-030"
+      }
+    ],
+    "metadata": "metadata---blogb-2-b-df1"
+  },
+  "/blog/2018/05/18/blog-post-fe0": {
+    "component": "component---theme-blog-post-pageccc-cab",
+    "sidebar": "sidebar---blog-1-b-2-057",
+    "content": "content---blog-2018-05-18-blog-poste-0-b-c51"
+  },
+  "/search-367": {
+    "component": "component---home-prakhar-projects-techdocs-og-techdocs-v-2-website-node-modules-docusaurus-theme-search-algolia-src-theme-search-page-index-js-323-47a"
+  },
+  "/docs/0.12-9f7": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---docs-0-12105-a70"
+  },
+  "/docs/0.12/-c31": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-d-4-f-eee"
+  },
+  "/docs/0.12/accordproject-faq-46a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-faq-6-d-1-b78"
+  },
+  "/docs/0.12/accordproject-installation-7e9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-installation-196-908"
+  },
+  "/docs/0.12/accordproject-models-5db": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-models-4-ae-226"
+  },
+  "/docs/0.12/accordproject-resources-c1f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-resources-1-f-8-d3f"
+  },
+  "/docs/0.12/accordproject-slc-150": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-slc-258-196"
+  },
+  "/docs/0.12/accordproject-studio-142": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-studio-9-b-2-ea5"
+  },
+  "/docs/0.12/accordproject-template-b04": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-template-28-f-3e4"
+  },
+  "/docs/0.12/accordproject-templates-216": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-templatese-4-c-119"
+  },
+  "/docs/0.12/accordproject-tooling-f9f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-tooling-198-e27"
+  },
+  "/docs/0.12/accordproject-tour-87e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-accordproject-tour-59-d-942"
+  },
+  "/docs/0.12/advanced-hyperledger-985": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-advanced-hyperledger-84-d-97f"
+  },
+  "/docs/0.12/advanced-latedelivery-6cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-advanced-latedelivery-608-e46"
+  },
+  "/docs/0.12/advanced-nodejs-f52": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-advanced-nodejs-8-e-6-174"
+  },
+  "/docs/0.12/basic-create-872": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-basic-createcc-2-52b"
+  },
+  "/docs/0.12/basic-library-2ef": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-basic-library-0-cd-3fd"
+  },
+  "/docs/0.12/basic-templates-133": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-basic-templates-857-ab4"
+  },
+  "/docs/0.12/basic-use-b49": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-basic-use-278-6a7"
+  },
+  "/docs/0.12/cicero-api-64f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-cicero-api-64-f-002"
+  },
+  "/docs/0.12/cicero-cli-079": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-cicero-cli-327-369"
+  },
+  "/docs/0.12/ergo-api-28b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ergo-api-878-300"
+  },
+  "/docs/0.12/ergo-cli-57c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ergo-cli-325-5ac"
+  },
+  "/docs/0.12/ergo-tutorial-6c9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ergo-tutorial-000-a95"
+  },
+  "/docs/0.12/example-eatapple-6f0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-example-eatapple-38-c-8fe"
+  },
+  "/docs/0.12/logic-advanced-expr-b02": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-advanced-expr-632-981"
+  },
+  "/docs/0.12/logic-complex-type-195": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-complex-type-061-fec"
+  },
+  "/docs/0.12/logic-decl-c19": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-decl-601-487"
+  },
+  "/docs/0.12/logic-ergo-c08": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-ergo-9-f-0-b7a"
+  },
+  "/docs/0.12/logic-module-e74": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-moduleef-1-adb"
+  },
+  "/docs/0.12/logic-simple-expr-12c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-simple-expr-1-e-8-1b2"
+  },
+  "/docs/0.12/logic-simple-type-fcc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-simple-typee-85-520"
+  },
+  "/docs/0.12/logic-stmt-791": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-logic-stmt-9-dd-d02"
+  },
+  "/docs/0.12/markup-ciceromark-ffe": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-markup-ciceromark-3-b-9-8b0"
+  },
+  "/docs/0.12/markup-commonmark-d91": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-markup-commonmark-04-c-afc"
+  },
+  "/docs/0.12/markup-preliminaries-b0f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-markup-preliminaries-5-ce-b06"
+  },
+  "/docs/0.12/markup-templatemark-54d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-markup-templatemarkf-22-a3a"
+  },
+  "/docs/0.12/model-api-0df": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-api-5-a-0-7fc"
+  },
+  "/docs/0.12/model-classes-d24": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-classesa-86-35c"
+  },
+  "/docs/0.12/model-concerto-42e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-concertoa-4-b-4ac"
+  },
+  "/docs/0.12/model-decorators-d46": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-decorators-9-ff-79e"
+  },
+  "/docs/0.12/model-enums-dc0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-enums-0-a-5-b36"
+  },
+  "/docs/0.12/model-namespaces-907": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-namespacesf-67-dda"
+  },
+  "/docs/0.12/model-properties-ff6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-properties-630-ce1"
+  },
+  "/docs/0.12/model-relationships-272": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-model-relationshipsa-44-bce"
+  },
+  "/docs/0.12/ref-cicero-api-644": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-cicero-api-898-7c7"
+  },
+  "/docs/0.12/ref-cicero-cli-f62": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-cicero-cli-53-b-c96"
+  },
+  "/docs/0.12/ref-cicero-testing-17c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-cicero-testing-2-dd-6b2"
+  },
+  "/docs/0.12/ref-concerto-api-ab6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-concerto-api-165-89e"
+  },
+  "/docs/0.12/ref-concerto-cli-ca2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-concerto-clifff-383"
+  },
+  "/docs/0.12/ref-concerto-decorators-e8b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-concerto-decorators-472-a6b"
+  },
+  "/docs/0.12/ref-ergo-api-c7b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-ergo-api-660-30b"
+  },
+  "/docs/0.12/ref-ergo-cli-210": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-ergo-cli-615-a3b"
+  },
+  "/docs/0.12/ref-ergo-repl-172": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-ergo-replb-22-8f0"
+  },
+  "/docs/0.12/ref-ergo-spec-052": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-ergo-spec-4-df-66c"
+  },
+  "/docs/0.12/ref-ergo-stdlib-820": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-ergo-stdlib-156-28f"
+  },
+  "/docs/0.12/ref-errors-e93": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-errors-569-633"
+  },
+  "/docs/0.12/ref-glossary-a11": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-glossary-95-e-1cd"
+  },
+  "/docs/0.12/ref-logic-664": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-logic-2-f-2-bd5"
+  },
+  "/docs/0.12/ref-logic-specification-018": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-logic-specification-044-8ff"
+  },
+  "/docs/0.12/ref-logic-stdlib-d5c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-logic-stdlibc-54-687"
+  },
+  "/docs/0.12/ref-markup-06c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-markup-950-694"
+  },
+  "/docs/0.12/ref-markus-cli-746": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-markus-clic-4-b-b2b"
+  },
+  "/docs/0.12/ref-migrate-0.13-0.20-0c4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-migrate-0-13-0-2057-e-f25"
+  },
+  "/docs/0.12/ref-migrate-0.20-0.21-0ee": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-migrate-0-20-0-2101-a-43f"
+  },
+  "/docs/0.12/ref-testing-9e1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-testingeb-5-d6e"
+  },
+  "/docs/0.12/ref-web-components-overview-527": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-ref-web-components-overview-4-e-0-ab0"
+  },
+  "/docs/0.12/spec-concepts-f9d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-spec-conceptsc-25-fe6"
+  },
+  "/docs/0.12/spec-example-490": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-spec-example-780-148"
+  },
+  "/docs/0.12/spec-execution-e92": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-spec-executionae-2-394"
+  },
+  "/docs/0.12/spec-instance-42c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-spec-instance-3-f-5-a33"
+  },
+  "/docs/0.12/spec-overview-07f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-spec-overview-5-ef-661"
+  },
+  "/docs/0.12/spec-packaging-f8a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-spec-packaging-839-b20"
+  },
+  "/docs/0.12/spec-template-e9d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-spec-template-2-d-2-8dc"
+  },
+  "/docs/0.12/started-hello-552": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-started-hello-387-6d4"
+  },
+  "/docs/0.12/started-installation-d82": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-started-installationc-91-1c2"
+  },
+  "/docs/0.12/started-resources-626": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-started-resources-92-c-79b"
+  },
+  "/docs/0.12/tutorial-create-ddf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-tutorial-create-89-c-874"
+  },
+  "/docs/0.12/tutorial-hyperledger-365": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-tutorial-hyperledger-56-c-e09"
+  },
+  "/docs/0.12/tutorial-library-b16": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-tutorial-library-049-a6c"
+  },
+  "/docs/0.12/tutorial-nodejs-bf8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-tutorial-nodejsca-0-a34"
+  },
+  "/docs/0.12/tutorial-studio-9dc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-tutorial-studio-287-c0b"
+  },
+  "/docs/0.12/tutorial-templates-594": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-tutorial-templatesc-3-d-a49"
+  },
+  "/docs/0.12/tutorial-vscode-513": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-12-tutorial-vscode-78-c-be3"
+  },
+  "/docs/0.13-037": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---docs-0-1354-d-f6c"
+  },
+  "/docs/0.13/-e26": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-6-b-9-044"
+  },
+  "/docs/0.13/accordproject-faq-df1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-faq-492-b0f"
+  },
+  "/docs/0.13/accordproject-installation-80c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-installation-622-540"
+  },
+  "/docs/0.13/accordproject-models-1cb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-models-1-e-3-dcc"
+  },
+  "/docs/0.13/accordproject-resources-299": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-resources-252-02d"
+  },
+  "/docs/0.13/accordproject-slc-0d3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-slcb-3-b-d5c"
+  },
+  "/docs/0.13/accordproject-studio-fdc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-studioff-5-a6f"
+  },
+  "/docs/0.13/accordproject-template-067": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-templatea-51-9f3"
+  },
+  "/docs/0.13/accordproject-templates-835": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-templatesfd-4-2eb"
+  },
+  "/docs/0.13/accordproject-tooling-d4d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-tooling-4-b-3-986"
+  },
+  "/docs/0.13/accordproject-tour-c9a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-accordproject-tour-0-b-5-a15"
+  },
+  "/docs/0.13/advanced-hyperledger-f7e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-advanced-hyperledger-6-ef-5b7"
+  },
+  "/docs/0.13/advanced-latedelivery-1c6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-advanced-latedeliverye-2-b-130"
+  },
+  "/docs/0.13/advanced-nodejs-768": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-advanced-nodejs-547-15b"
+  },
+  "/docs/0.13/basic-create-fa8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-basic-create-4-b-9-9f1"
+  },
+  "/docs/0.13/basic-library-735": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-basic-library-10-c-c27"
+  },
+  "/docs/0.13/basic-templates-e13": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-basic-templatesd-5-a-bce"
+  },
+  "/docs/0.13/basic-use-e66": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-basic-used-5-d-3e5"
+  },
+  "/docs/0.13/cicero-api-ad5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-cicero-api-47-a-f24"
+  },
+  "/docs/0.13/cicero-cli-f83": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-cicero-clia-96-721"
+  },
+  "/docs/0.13/ergo-api-093": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ergo-apibfb-5ff"
+  },
+  "/docs/0.13/ergo-cli-b08": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ergo-cli-65-e-56a"
+  },
+  "/docs/0.13/ergo-tutorial-dc5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ergo-tutorialf-54-274"
+  },
+  "/docs/0.13/example-eatapple-f1a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-example-eatapple-4-a-7-113"
+  },
+  "/docs/0.13/logic-advanced-expr-b31": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-advanced-expr-8-ad-b52"
+  },
+  "/docs/0.13/logic-complex-type-20a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-complex-type-714-688"
+  },
+  "/docs/0.13/logic-decl-b55": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-decld-6-a-fa9"
+  },
+  "/docs/0.13/logic-ergo-aa3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-ergo-40-f-097"
+  },
+  "/docs/0.13/logic-module-7d0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-module-976-0ff"
+  },
+  "/docs/0.13/logic-simple-expr-15c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-simple-expr-51-b-1de"
+  },
+  "/docs/0.13/logic-simple-type-ddf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-simple-typeb-5-a-1c6"
+  },
+  "/docs/0.13/logic-stmt-b12": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-logic-stmtb-58-525"
+  },
+  "/docs/0.13/markup-ciceromark-542": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-markup-ciceromark-891-8e3"
+  },
+  "/docs/0.13/markup-commonmark-929": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-markup-commonmarkcc-6-4e6"
+  },
+  "/docs/0.13/markup-preliminaries-de2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-markup-preliminaries-904-5a4"
+  },
+  "/docs/0.13/markup-templatemark-e92": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-markup-templatemarkefa-e18"
+  },
+  "/docs/0.13/model-api-9e0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-apifbf-222"
+  },
+  "/docs/0.13/model-classes-cc9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-classese-65-493"
+  },
+  "/docs/0.13/model-concerto-571": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-concerto-475-65d"
+  },
+  "/docs/0.13/model-decorators-f03": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-decoratorsf-9-e-fa5"
+  },
+  "/docs/0.13/model-enums-d36": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-enums-7-eb-f1b"
+  },
+  "/docs/0.13/model-namespaces-b5c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-namespacesb-56-d51"
+  },
+  "/docs/0.13/model-properties-78d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-properties-394-72e"
+  },
+  "/docs/0.13/model-relationships-50d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-model-relationships-7-c-8-110"
+  },
+  "/docs/0.13/ref-cicero-api-ebb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-cicero-apic-7-a-973"
+  },
+  "/docs/0.13/ref-cicero-cli-f51": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-cicero-cli-89-d-64e"
+  },
+  "/docs/0.13/ref-cicero-testing-e8f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-cicero-testing-00-b-fbf"
+  },
+  "/docs/0.13/ref-concerto-api-08b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-concerto-api-8-da-769"
+  },
+  "/docs/0.13/ref-concerto-cli-097": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-concerto-cli-2-a-4-a5e"
+  },
+  "/docs/0.13/ref-concerto-decorators-2c6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-concerto-decorators-969-d94"
+  },
+  "/docs/0.13/ref-ergo-api-e5e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-ergo-api-1-c-1-4a7"
+  },
+  "/docs/0.13/ref-ergo-cli-ce7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-ergo-cli-0-ae-112"
+  },
+  "/docs/0.13/ref-ergo-repl-a51": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-ergo-repl-63-b-4b6"
+  },
+  "/docs/0.13/ref-ergo-spec-35d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-ergo-spec-205-ce6"
+  },
+  "/docs/0.13/ref-ergo-stdlib-7c9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-ergo-stdliba-9-a-311"
+  },
+  "/docs/0.13/ref-errors-eee": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-errors-7-da-f22"
+  },
+  "/docs/0.13/ref-glossary-c98": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-glossaryd-8-d-964"
+  },
+  "/docs/0.13/ref-logic-3ba": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-logic-967-27f"
+  },
+  "/docs/0.13/ref-logic-specification-c38": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-logic-specificationaf-4-9b8"
+  },
+  "/docs/0.13/ref-logic-stdlib-160": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-logic-stdlib-074-c9a"
+  },
+  "/docs/0.13/ref-markup-746": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-markupe-01-374"
+  },
+  "/docs/0.13/ref-markus-cli-c6a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-markus-clid-98-362"
+  },
+  "/docs/0.13/ref-migrate-0.13-0.20-a75": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-migrate-0-13-0-20-dd-7-9e9"
+  },
+  "/docs/0.13/ref-migrate-0.20-0.21-5c0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-migrate-0-20-0-2100-e-86f"
+  },
+  "/docs/0.13/ref-testing-0a9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-testing-72-b-d17"
+  },
+  "/docs/0.13/ref-web-components-overview-c4b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-ref-web-components-overview-819-ca3"
+  },
+  "/docs/0.13/spec-concepts-48f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-spec-concepts-749-432"
+  },
+  "/docs/0.13/spec-example-346": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-spec-example-61-c-86c"
+  },
+  "/docs/0.13/spec-execution-3ae": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-spec-execution-630-338"
+  },
+  "/docs/0.13/spec-instance-2e6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-spec-instance-5-d-7-c8c"
+  },
+  "/docs/0.13/spec-overview-a25": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-spec-overview-96-f-cfc"
+  },
+  "/docs/0.13/spec-packaging-6a8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-spec-packaginge-68-6c7"
+  },
+  "/docs/0.13/spec-template-725": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-spec-template-41-c-eed"
+  },
+  "/docs/0.13/started-hello-b8f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-started-hellob-11-4b6"
+  },
+  "/docs/0.13/started-installation-124": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-started-installationd-2-a-4cd"
+  },
+  "/docs/0.13/started-resources-efd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-started-resources-9-b-7-8bd"
+  },
+  "/docs/0.13/tutorial-create-c0a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-tutorial-create-578-13c"
+  },
+  "/docs/0.13/tutorial-hyperledger-c67": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-tutorial-hyperledger-11-c-814"
+  },
+  "/docs/0.13/tutorial-library-861": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-tutorial-library-356-aa0"
+  },
+  "/docs/0.13/tutorial-nodejs-892": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-tutorial-nodejs-511-14e"
+  },
+  "/docs/0.13/tutorial-studio-e43": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-tutorial-studioe-08-928"
+  },
+  "/docs/0.13/tutorial-templates-d6e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-tutorial-templates-9-f-6-336"
+  },
+  "/docs/0.13/tutorial-vscode-3d0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-13-tutorial-vscode-66-d-398"
+  },
+  "/docs/0.20-5d8": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---docs-0-20817-4fe"
+  },
+  "/docs/0.20/-34e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-46-c-a84"
+  },
+  "/docs/0.20/accordproject-business-fc9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-businessb-1-b-7fd"
+  },
+  "/docs/0.20/accordproject-concepts-0d6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-conceptscfd-efa"
+  },
+  "/docs/0.20/accordproject-developers-09c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-developers-271-7b7"
+  },
+  "/docs/0.20/accordproject-faq-d09": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-faq-869-4b1"
+  },
+  "/docs/0.20/accordproject-installation-45d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-installation-0-ca-ff6"
+  },
+  "/docs/0.20/accordproject-models-c9c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-models-389-e39"
+  },
+  "/docs/0.20/accordproject-resources-6dc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-resourcesfaa-939"
+  },
+  "/docs/0.20/accordproject-slc-d61": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-slc-081-3fd"
+  },
+  "/docs/0.20/accordproject-studio-fe9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-studiob-3-c-c74"
+  },
+  "/docs/0.20/accordproject-template-4f2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-template-534-f7c"
+  },
+  "/docs/0.20/accordproject-templates-e0b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-templates-294-821"
+  },
+  "/docs/0.20/accordproject-tooling-0cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-tooling-31-c-719"
+  },
+  "/docs/0.20/accordproject-tour-86b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-accordproject-tourfbe-161"
+  },
+  "/docs/0.20/advanced-hyperledger-f3c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-advanced-hyperledger-812-83c"
+  },
+  "/docs/0.20/advanced-latedelivery-cac": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-advanced-latedelivery-89-c-a7f"
+  },
+  "/docs/0.20/advanced-nodejs-f6a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-advanced-nodejs-28-f-e5f"
+  },
+  "/docs/0.20/basic-create-f24": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-basic-create-61-f-0a8"
+  },
+  "/docs/0.20/basic-library-935": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-basic-librarydbe-1a8"
+  },
+  "/docs/0.20/basic-templates-eef": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-basic-templates-039-108"
+  },
+  "/docs/0.20/basic-use-b84": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-basic-use-99-e-cba"
+  },
+  "/docs/0.20/cicero-api-138": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-cicero-apicc-8-aee"
+  },
+  "/docs/0.20/cicero-cli-ab7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-cicero-cli-1-fb-32b"
+  },
+  "/docs/0.20/concerto-api-617": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-concerto-api-94-e-e74"
+  },
+  "/docs/0.20/concerto-cli-113": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-concerto-cli-9-ea-ac8"
+  },
+  "/docs/0.20/ergo-api-150": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ergo-api-7-ce-ed6"
+  },
+  "/docs/0.20/ergo-cli-0b0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ergo-cli-023-c3a"
+  },
+  "/docs/0.20/ergo-repl-e47": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ergo-repla-33-2c6"
+  },
+  "/docs/0.20/ergo-tutorial-060": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ergo-tutorial-589-b49"
+  },
+  "/docs/0.20/example-eatapple-bcf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-example-eatapple-510-8da"
+  },
+  "/docs/0.20/logic-advanced-expr-7ea": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-advanced-expr-073-dae"
+  },
+  "/docs/0.20/logic-complex-type-9a7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-complex-typef-43-9d8"
+  },
+  "/docs/0.20/logic-decl-b80": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-decl-684-3ca"
+  },
+  "/docs/0.20/logic-ergo-3e5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-ergo-949-bcc"
+  },
+  "/docs/0.20/logic-module-217": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-module-8-ae-439"
+  },
+  "/docs/0.20/logic-simple-expr-a99": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-simple-exprbb-5-d29"
+  },
+  "/docs/0.20/logic-simple-type-83f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-simple-typea-41-7eb"
+  },
+  "/docs/0.20/logic-stmt-5b3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-logic-stmt-578-588"
+  },
+  "/docs/0.20/markup-blocks-0b2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-blocks-9-fa-bf9"
+  },
+  "/docs/0.20/markup-cicero-853": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-cicero-8-f-6-795"
+  },
+  "/docs/0.20/markup-ciceromark-49f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-ciceromark-474-55f"
+  },
+  "/docs/0.20/markup-commonmark-b77": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-commonmark-20-f-631"
+  },
+  "/docs/0.20/markup-ergo-527": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-ergoddc-160"
+  },
+  "/docs/0.20/markup-preliminaries-d6e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-preliminariesa-2-d-5f6"
+  },
+  "/docs/0.20/markup-templatemark-7c1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-templatemark-968-45f"
+  },
+  "/docs/0.20/markup-variables-5cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markup-variables-37-d-69d"
+  },
+  "/docs/0.20/markus-cli-a61": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-markus-clid-21-dce"
+  },
+  "/docs/0.20/model-api-9da": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-apia-61-366"
+  },
+  "/docs/0.20/model-classes-d96": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-classes-510-d8f"
+  },
+  "/docs/0.20/model-concerto-df0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-concerto-9-d-5-ab7"
+  },
+  "/docs/0.20/model-decorators-a4f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-decoratorsad-7-f35"
+  },
+  "/docs/0.20/model-enums-f97": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-enumsc-7-a-2e2"
+  },
+  "/docs/0.20/model-namespaces-bba": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-namespaces-1-ac-aad"
+  },
+  "/docs/0.20/model-properties-69b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-properties-100-5a7"
+  },
+  "/docs/0.20/model-relationships-71d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-model-relationshipsf-48-a06"
+  },
+  "/docs/0.20/ref-cicero-api-ee8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-cicero-api-42-f-388"
+  },
+  "/docs/0.20/ref-cicero-cli-fac": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-cicero-cli-54-e-f5f"
+  },
+  "/docs/0.20/ref-cicero-testing-f11": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-cicero-testing-37-e-4fa"
+  },
+  "/docs/0.20/ref-cicero-ui-d9d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-cicero-uibf-8-4d0"
+  },
+  "/docs/0.20/ref-concerto-api-f9d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-concerto-api-7-a-3-84c"
+  },
+  "/docs/0.20/ref-concerto-cli-42d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-concerto-clic-5-b-3dd"
+  },
+  "/docs/0.20/ref-concerto-decorators-9a6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-concerto-decoratorsf-53-fce"
+  },
+  "/docs/0.20/ref-ergo-api-f64": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-ergo-api-06-f-a32"
+  },
+  "/docs/0.20/ref-ergo-cli-d2c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-ergo-clibd-1-564"
+  },
+  "/docs/0.20/ref-ergo-repl-c5c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-ergo-replc-5-a-bbf"
+  },
+  "/docs/0.20/ref-ergo-spec-cff": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-ergo-spec-881-baa"
+  },
+  "/docs/0.20/ref-ergo-stdlib-6d3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-ergo-stdliba-2-a-d63"
+  },
+  "/docs/0.20/ref-errors-99e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-errors-884-7a7"
+  },
+  "/docs/0.20/ref-glossary-0c7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-glossarya-5-d-9dd"
+  },
+  "/docs/0.20/ref-logic-768": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-logic-20-c-47e"
+  },
+  "/docs/0.20/ref-logic-specification-9c4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-logic-specification-8-a-0-09d"
+  },
+  "/docs/0.20/ref-logic-stdlib-4e5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-logic-stdlibbc-7-a36"
+  },
+  "/docs/0.20/ref-markup-e5b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-markupbb-6-24b"
+  },
+  "/docs/0.20/ref-markus-cli-de6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-markus-cli-8-f-5-f15"
+  },
+  "/docs/0.20/ref-migrate-0.13-0.20-6fc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-migrate-0-13-0-20769-420"
+  },
+  "/docs/0.20/ref-migrate-0.20-0.21-9ce": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-migrate-0-20-0-21826-abf"
+  },
+  "/docs/0.20/ref-testing-a96": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-testing-4-da-5d0"
+  },
+  "/docs/0.20/ref-web-components-overview-ce9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-ref-web-components-overview-0-d-9-6b9"
+  },
+  "/docs/0.20/spec-concepts-792": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-spec-concepts-6-fe-7ca"
+  },
+  "/docs/0.20/spec-example-630": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-spec-example-107-021"
+  },
+  "/docs/0.20/spec-execution-c50": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-spec-executionfc-1-337"
+  },
+  "/docs/0.20/spec-instance-0cd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-spec-instance-7-cf-83a"
+  },
+  "/docs/0.20/spec-overview-a4e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-spec-overview-14-d-9f5"
+  },
+  "/docs/0.20/spec-packaging-e81": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-spec-packaging-22-b-e99"
+  },
+  "/docs/0.20/spec-template-bf9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-spec-template-4-f-5-c82"
+  },
+  "/docs/0.20/started-hello-113": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-started-hellob-22-6d5"
+  },
+  "/docs/0.20/started-installation-1c0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-started-installation-6-dd-bbc"
+  },
+  "/docs/0.20/started-resources-672": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-started-resources-819-701"
+  },
+  "/docs/0.20/started-studio-668": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-started-studio-776-63e"
+  },
+  "/docs/0.20/tutorial-create-3b7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-create-44-f-7d5"
+  },
+  "/docs/0.20/tutorial-hyperledger-948": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-hyperledgerad-8-39f"
+  },
+  "/docs/0.20/tutorial-latedelivery-0fa": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-latedelivery-77-c-8cb"
+  },
+  "/docs/0.20/tutorial-library-edb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-library-1-f-1-25e"
+  },
+  "/docs/0.20/tutorial-nodejs-199": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-nodejs-144-3d1"
+  },
+  "/docs/0.20/tutorial-studio-05a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-studiocd-2-c4a"
+  },
+  "/docs/0.20/tutorial-templates-b11": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-templatesdf-2-8be"
+  },
+  "/docs/0.20/tutorial-vscode-944": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-0-20-tutorial-vscodeab-2-9aa"
+  },
+  "/docs/next-9d8": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---docs-next-935-7db"
+  },
+  "/docs/next/-3fc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-9-ea-372"
+  },
+  "/docs/next/accordproject-faq-11c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-accordproject-faq-30-f-0fc"
+  },
+  "/docs/next/accordproject-slc-f95": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-accordproject-slcb-06-6b5"
+  },
+  "/docs/next/accordproject-template-f90": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-accordproject-template-87-e-e0a"
+  },
+  "/docs/next/accordproject-tour-aad": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-accordproject-tour-961-2d4"
+  },
+  "/docs/next/ergo-tutorial-414": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ergo-tutorialc-78-63f"
+  },
+  "/docs/next/example-eatapple-bd0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-example-eatapple-09-d-799"
+  },
+  "/docs/next/logic-advanced-expr-426": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-advanced-expr-241-a96"
+  },
+  "/docs/next/logic-complex-type-3e5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-complex-type-3-f-7-2c7"
+  },
+  "/docs/next/logic-decl-ea4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-decldb-9-326"
+  },
+  "/docs/next/logic-ergo-b7e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-ergo-226-d44"
+  },
+  "/docs/next/logic-module-29d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-module-0-dc-55f"
+  },
+  "/docs/next/logic-simple-expr-1f0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-simple-exprad-2-97f"
+  },
+  "/docs/next/logic-simple-type-328": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-simple-typea-9-e-463"
+  },
+  "/docs/next/logic-stmt-d73": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-logic-stmtfc-4-15d"
+  },
+  "/docs/next/markup-ciceromark-e19": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-markup-ciceromark-94-d-631"
+  },
+  "/docs/next/markup-commonmark-083": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-markup-commonmarkb-7-d-59b"
+  },
+  "/docs/next/markup-preliminaries-784": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-markup-preliminariesd-93-5de"
+  },
+  "/docs/next/markup-templatemark-50a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-markup-templatemark-3-ee-598"
+  },
+  "/docs/next/model-api-b39": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-apiaf-1-1be"
+  },
+  "/docs/next/model-classes-6f4": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-classes-8-d-4-d3a"
+  },
+  "/docs/next/model-concerto-7ca": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-concerto-693-165"
+  },
+  "/docs/next/model-decorators-c64": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-decoratorsd-0-d-5dd"
+  },
+  "/docs/next/model-enums-b9c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-enumscef-c71"
+  },
+  "/docs/next/model-namespaces-523": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-namespacesa-16-b3d"
+  },
+  "/docs/next/model-properties-04a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-properties-3-ca-284"
+  },
+  "/docs/next/model-relationships-edd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-model-relationshipsa-7-d-bbc"
+  },
+  "/docs/next/ref-cicero-api-41a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-cicero-api-077-b7a"
+  },
+  "/docs/next/ref-cicero-cli-99c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-cicero-cli-9-cd-9b7"
+  },
+  "/docs/next/ref-cicero-testing-6ae": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-cicero-testing-76-e-eef"
+  },
+  "/docs/next/ref-concerto-api-d77": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-concerto-api-895-0a0"
+  },
+  "/docs/next/ref-concerto-cli-754": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-concerto-cli-186-41b"
+  },
+  "/docs/next/ref-concerto-decorators-086": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-concerto-decoratorsc-88-370"
+  },
+  "/docs/next/ref-ergo-api-43b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-ergo-apia-38-fbc"
+  },
+  "/docs/next/ref-ergo-cli-dbe": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-ergo-cli-252-987"
+  },
+  "/docs/next/ref-ergo-repl-642": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-ergo-repl-2-de-b5c"
+  },
+  "/docs/next/ref-ergo-spec-26a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-ergo-specd-09-68f"
+  },
+  "/docs/next/ref-ergo-stdlib-a21": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-ergo-stdlib-623-970"
+  },
+  "/docs/next/ref-errors-e28": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-errors-04-e-5a3"
+  },
+  "/docs/next/ref-glossary-446": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-glossarye-2-e-d74"
+  },
+  "/docs/next/ref-markus-cli-552": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-markus-cli-4-a-2-9b9"
+  },
+  "/docs/next/ref-migrate-0.13-0.20-08b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-migrate-0-13-0-20-f-0-a-268"
+  },
+  "/docs/next/ref-migrate-0.20-0.21-4d2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-migrate-0-20-0-216-a-9-8a9"
+  },
+  "/docs/next/ref-web-components-overview-804": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-ref-web-components-overview-5-c-3-de8"
+  },
+  "/docs/next/started-hello-778": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-started-hello-061-980"
+  },
+  "/docs/next/started-installation-77d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-started-installation-831-a1c"
+  },
+  "/docs/next/started-resources-2cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-started-resources-3-f-2-aba"
+  },
+  "/docs/next/tutorial-create-dd2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-tutorial-create-5-c-1-917"
+  },
+  "/docs/next/tutorial-hyperledger-a87": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-tutorial-hyperledger-5-bc-477"
+  },
+  "/docs/next/tutorial-library-044": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-tutorial-libraryf-03-558"
+  },
+  "/docs/next/tutorial-nodejs-c78": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-tutorial-nodejs-33-a-c3f"
+  },
+  "/docs/next/tutorial-studio-fc3": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-tutorial-studio-6-ce-27d"
+  },
+  "/docs/next/tutorial-templates-867": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-tutorial-templatesb-00-282"
+  },
+  "/docs/next/tutorial-vscode-f6b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-next-tutorial-vscode-51-d-9f8"
+  },
+  "/docs-562": {
+    "component": "component---theme-doc-page-1-be-9be",
+    "versionMetadata": "versionMetadata---docsdc-7-8e1"
+  },
+  "/docs/-060": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-984-08d"
+  },
+  "/docs/accordproject-business-eb9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-business-922-a6d"
+  },
+  "/docs/accordproject-concepts-cfb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-concepts-6-b-6-5c1"
+  },
+  "/docs/accordproject-developers-617": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-developersb-89-340"
+  },
+  "/docs/accordproject-faq-fe7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-faq-3-e-9-e7d"
+  },
+  "/docs/accordproject-installation-a47": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-installation-0-f-2-bd7"
+  },
+  "/docs/accordproject-models-1e8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-models-79-b-ab7"
+  },
+  "/docs/accordproject-resources-747": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-resources-742-335"
+  },
+  "/docs/accordproject-slc-491": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-slc-096-e62"
+  },
+  "/docs/accordproject-studio-220": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-studioc-83-855"
+  },
+  "/docs/accordproject-template-d99": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-template-144-84c"
+  },
+  "/docs/accordproject-templates-453": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-templates-5-d-3-5a9"
+  },
+  "/docs/accordproject-tooling-2eb": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-toolinga-85-d81"
+  },
+  "/docs/accordproject-tour-6d5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-accordproject-tour-67-c-0e4"
+  },
+  "/docs/advanced-hyperledger-bc0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-hyperledgerbbf-693"
+  },
+  "/docs/advanced-latedelivery-63d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-latedelivery-702-ef8"
+  },
+  "/docs/advanced-nodejs-092": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-nodejscee-081"
+  },
+  "/docs/basic-create-1a5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-basic-create-9-e-4-339"
+  },
+  "/docs/basic-library-f60": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-basic-library-2-ba-3ce"
+  },
+  "/docs/basic-templates-205": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-basic-templatesca-7-cde"
+  },
+  "/docs/basic-use-b73": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-basic-use-99-d-e78"
+  },
+  "/docs/cicero-api-da8": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-cicero-api-75-d-bf8"
+  },
+  "/docs/cicero-cli-643": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-cicero-cli-2-f-2-5bc"
+  },
+  "/docs/concerto-api-292": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-concerto-apidd-1-038"
+  },
+  "/docs/concerto-cli-0cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-concerto-cli-593-a15"
+  },
+  "/docs/ergo-api-16a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ergo-api-8-eb-9fa"
+  },
+  "/docs/ergo-cli-f9a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ergo-cli-591-0aa"
+  },
+  "/docs/ergo-repl-2cf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ergo-replbd-3-d72"
+  },
+  "/docs/ergo-tutorial-2bf": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ergo-tutorial-505-8b8"
+  },
+  "/docs/example-eatapple-c4d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-example-eatapple-860-5bf"
+  },
+  "/docs/logic-advanced-expr-e8c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-advanced-expr-25-c-047"
+  },
+  "/docs/logic-complex-type-ef7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-complex-typedf-5-205"
+  },
+  "/docs/logic-decl-4a0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-decl-711-f57"
+  },
+  "/docs/logic-ergo-6a7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-ergo-63-e-13c"
+  },
+  "/docs/logic-module-bd9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-module-8-d-7-e8d"
+  },
+  "/docs/logic-simple-expr-d0e": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-simple-exprb-24-858"
+  },
+  "/docs/logic-simple-type-f0a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-simple-type-557-ca9"
+  },
+  "/docs/logic-stmt-86a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-logic-stmtc-9-e-a42"
+  },
+  "/docs/markup-blocks-81d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-blocks-65-c-eff"
+  },
+  "/docs/markup-cicero-938": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-cicero-4-c-7-276"
+  },
+  "/docs/markup-ciceromark-71f": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-ciceromark-6-ae-037"
+  },
+  "/docs/markup-commonmark-6ee": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-commonmark-617-2a5"
+  },
+  "/docs/markup-ergo-db5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-ergo-316-4d2"
+  },
+  "/docs/markup-preliminaries-2a9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-preliminaries-6-ef-460"
+  },
+  "/docs/markup-templatemark-d7d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-templatemarkd-2-c-64c"
+  },
+  "/docs/markup-variables-a0d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markup-variables-13-c-851"
+  },
+  "/docs/markus-cli-79c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-markus-clie-25-d99"
+  },
+  "/docs/model-api-15b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-apic-2-d-624"
+  },
+  "/docs/model-classes-379": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-classesf-83-c97"
+  },
+  "/docs/model-concerto-34b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-concerto-8-d-3-851"
+  },
+  "/docs/model-decorators-2f7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-decorators-680-ee5"
+  },
+  "/docs/model-enums-e7c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-enumsa-9-f-6e1"
+  },
+  "/docs/model-namespaces-2b9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-namespacesfb-5-dda"
+  },
+  "/docs/model-properties-10c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-properties-612-42e"
+  },
+  "/docs/model-relationships-e94": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-model-relationships-7-c-5-7b7"
+  },
+  "/docs/ref-cicero-api-315": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-cicero-apidfd-c71"
+  },
+  "/docs/ref-cicero-cli-08b": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-cicero-clic-46-e04"
+  },
+  "/docs/ref-cicero-testing-cc1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-cicero-testing-835-de1"
+  },
+  "/docs/ref-cicero-ui-977": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-cicero-ui-58-e-13e"
+  },
+  "/docs/ref-concerto-api-dfa": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-concerto-api-8-ba-ac4"
+  },
+  "/docs/ref-concerto-cli-4ae": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-concerto-clifbd-d54"
+  },
+  "/docs/ref-concerto-decorators-ba0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-concerto-decoratorsd-76-943"
+  },
+  "/docs/ref-ergo-api-393": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-ergo-api-42-f-f31"
+  },
+  "/docs/ref-ergo-cli-eee": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-ergo-cli-7-c-5-e45"
+  },
+  "/docs/ref-ergo-repl-628": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-ergo-repl-3-da-1e6"
+  },
+  "/docs/ref-ergo-spec-cd1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-ergo-specd-4-a-51b"
+  },
+  "/docs/ref-ergo-stdlib-a56": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-ergo-stdlib-2-b-5-274"
+  },
+  "/docs/ref-errors-07d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-errors-26-f-9a8"
+  },
+  "/docs/ref-glossary-ca0": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-glossarya-68-1c0"
+  },
+  "/docs/ref-logic-b65": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-logicfcc-9d6"
+  },
+  "/docs/ref-logic-specification-eca": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-logic-specification-96-c-7b6"
+  },
+  "/docs/ref-logic-stdlib-fff": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-logic-stdlib-172-a57"
+  },
+  "/docs/ref-markup-e44": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-markup-87-e-fef"
+  },
+  "/docs/ref-markus-cli-6b6": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-markus-cli-9-a-8-bc7"
+  },
+  "/docs/ref-migrate-0.13-0.20-bcc": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-migrate-0-13-0-20-ae-6-5df"
+  },
+  "/docs/ref-migrate-0.20-0.21-5d1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-migrate-0-20-0-21-a-54-834"
+  },
+  "/docs/ref-testing-1b5": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-testingad-5-230"
+  },
+  "/docs/ref-web-components-overview-66d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-ref-web-components-overviewefd-03b"
+  },
+  "/docs/spec-concepts-b1c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-spec-concepts-792-2ad"
+  },
+  "/docs/spec-example-da9": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-spec-example-8-c-7-76d"
+  },
+  "/docs/spec-execution-959": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-spec-execution-250-d5e"
+  },
+  "/docs/spec-instance-330": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-spec-instance-8-f-9-4b4"
+  },
+  "/docs/spec-overview-f90": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-spec-overview-701-019"
+  },
+  "/docs/spec-packaging-eb7": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-spec-packaging-1-d-4-bb2"
+  },
+  "/docs/spec-template-c2a": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-spec-template-6-b-1-ba0"
+  },
+  "/docs/started-hello-455": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-started-hello-8-df-65d"
+  },
+  "/docs/started-installation-998": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-started-installation-91-b-6a7"
+  },
+  "/docs/started-resources-3a1": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-started-resourcesc-13-2d3"
+  },
+  "/docs/started-studio-fa2": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-started-studio-812-cb4"
+  },
+  "/docs/tutorial-create-926": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-createefa-67e"
+  },
+  "/docs/tutorial-hyperledger-934": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-hyperledgerf-35-0fb"
+  },
+  "/docs/tutorial-latedelivery-c6d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-latedelivery-7-e-1-465"
+  },
+  "/docs/tutorial-library-e2d": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-library-4-ea-aa6"
+  },
+  "/docs/tutorial-nodejs-18c": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-nodejsb-9-c-b65"
+  },
+  "/docs/tutorial-studio-542": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-studiofb-0-43d"
+  },
+  "/docs/tutorial-templates-076": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-templates-102-1ff"
+  },
+  "/docs/tutorial-vscode-dad": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-tutorial-vscode-83-f-1fe"
+  }
+}

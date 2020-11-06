@@ -1,0 +1,22 @@
+{
+  "unversionedId": "basic-create",
+  "id": "version-0.12/basic-create",
+  "isDocsHomePage": false,
+  "title": "Creating a New Template",
+  "description": "Now that you have executed an existing template, let's create a new template.",
+  "source": "@site/versioned_docs/version-0.12/basic-create.md",
+  "slug": "/basic-create",
+  "permalink": "/docs/0.12/basic-create",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Take a Look Inside",
+    "permalink": "/docs/0.12/basic-templates"
+  },
+  "next": {
+    "title": "Authoring in Template Studio",
+    "permalink": "/docs/0.12/advanced-latedelivery"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "advanced-nodejs",
+  "id": "version-0.20/advanced-nodejs",
+  "isDocsHomePage": false,
+  "title": "Working with Node.js",
+  "description": "Cicero Node.js API",
+  "source": "@site/versioned_docs/version-0.20/advanced-nodejs.md",
+  "slug": "/advanced-nodejs",
+  "permalink": "/docs/0.20/advanced-nodejs",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

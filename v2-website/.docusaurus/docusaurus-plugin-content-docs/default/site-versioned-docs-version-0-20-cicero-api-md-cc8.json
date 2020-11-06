@@ -1,0 +1,22 @@
+{
+  "unversionedId": "cicero-api",
+  "id": "version-0.20/cicero-api",
+  "isDocsHomePage": false,
+  "title": "Cicero API",
+  "description": "Modules",
+  "source": "@site/versioned_docs/version-0.20/cicero-api.md",
+  "slug": "/cicero-api",
+  "permalink": "/docs/0.20/cicero-api",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Markdown Transform CLI",
+    "permalink": "/docs/0.20/markus-cli"
+  },
+  "next": {
+    "title": "Ergo API",
+    "permalink": "/docs/0.20/ergo-api"
+  }
+}

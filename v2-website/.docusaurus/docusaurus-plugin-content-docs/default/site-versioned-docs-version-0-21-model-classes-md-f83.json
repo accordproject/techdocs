@@ -1,0 +1,22 @@
+{
+  "unversionedId": "model-classes",
+  "id": "version-0.21/model-classes",
+  "isDocsHomePage": false,
+  "title": "Classes",
+  "description": "Concepts",
+  "source": "@site/versioned_docs/version-0.21/model-classes.md",
+  "slug": "/model-classes",
+  "permalink": "/docs/model-classes",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Namespaces",
+    "permalink": "/docs/model-namespaces"
+  },
+  "next": {
+    "title": "Enumerations",
+    "permalink": "/docs/model-enums"
+  }
+}

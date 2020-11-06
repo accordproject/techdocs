@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-simple-expr",
+  "id": "logic-simple-expr",
+  "isDocsHomePage": false,
+  "title": "Simple Expressions",
+  "description": "Literal values",
+  "source": "@site/../docs/logic-simple-expr.md",
+  "slug": "/logic-simple-expr",
+  "permalink": "/docs/next/logic-simple-expr",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Ergo Overview",
+    "permalink": "/docs/next/logic-ergo"
+  },
+  "next": {
+    "title": "Introducing Types",
+    "permalink": "/docs/next/logic-simple-type"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "started-hello",
+  "id": "started-hello",
+  "isDocsHomePage": false,
+  "title": "Hello World Template",
+  "description": "Once you have installed Cicero, you can try it on an existing Accord Project template. This explains how to create an instance of that template and how to run the contract logic.",
+  "source": "@site/../docs/started-hello.md",
+  "slug": "/started-hello",
+  "permalink": "/docs/next/started-hello",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Install Cicero",
+    "permalink": "/docs/next/started-installation"
+  },
+  "next": {
+    "title": "Resources",
+    "permalink": "/docs/next/started-resources"
+  }
+}

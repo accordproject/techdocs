@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-simple-type",
+  "id": "version-0.13/logic-simple-type",
+  "isDocsHomePage": false,
+  "title": "Introducing Types",
+  "description": "We have so far talked about types only informally. When we wrote earlier:",
+  "source": "@site/versioned_docs/version-0.13/logic-simple-type.md",
+  "slug": "/logic-simple-type",
+  "permalink": "/docs/0.13/logic-simple-type",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.13/docs",
+  "previous": {
+    "title": "Simple Expressions",
+    "permalink": "/docs/0.13/logic-simple-expr"
+  },
+  "next": {
+    "title": "Complex Values & Types",
+    "permalink": "/docs/0.13/logic-complex-type"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-logic-stdlib",
+  "id": "version-0.20/ref-logic-stdlib",
+  "isDocsHomePage": false,
+  "title": "Ergo Standard Library",
+  "description": "The following libraries are provided with the Ergo compiler.",
+  "source": "@site/versioned_docs/version-0.20/ref-logic-stdlib.md",
+  "slug": "/ref-logic-stdlib",
+  "permalink": "/docs/0.20/ref-logic-stdlib",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Ergo Language Reference",
+    "permalink": "/docs/0.20/ref-logic"
+  },
+  "next": {
+    "title": "Ergo Compiler",
+    "permalink": "/docs/0.20/ref-logic-specification"
+  }
+}

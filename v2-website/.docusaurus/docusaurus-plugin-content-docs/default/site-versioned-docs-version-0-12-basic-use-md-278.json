@@ -1,0 +1,22 @@
+{
+  "unversionedId": "basic-use",
+  "id": "version-0.12/basic-use",
+  "isDocsHomePage": false,
+  "title": "How to Use a Template",
+  "description": "The simplest way to work with an Accord Project template is through the Cicero command line interface (CLI). In this tutorial, we explain how to download an existing Accord Project template, create an instance of that template and how to execute the contract logic.",
+  "source": "@site/versioned_docs/version-0.12/basic-use.md",
+  "slug": "/basic-use",
+  "permalink": "/docs/0.12/basic-use",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Learning Resources",
+    "permalink": "/docs/0.12/accordproject-resources"
+  },
+  "next": {
+    "title": "Take a Look Inside",
+    "permalink": "/docs/0.12/basic-templates"
+  }
+}

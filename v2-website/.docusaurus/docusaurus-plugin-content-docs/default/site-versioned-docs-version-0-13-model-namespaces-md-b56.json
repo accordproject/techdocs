@@ -1,0 +1,13 @@
+{
+  "unversionedId": "model-namespaces",
+  "id": "version-0.13/model-namespaces",
+  "isDocsHomePage": false,
+  "title": "Namespaces",
+  "description": "Each Concerto file starts with the name of a single namespace, which contains the base definitions of asset, event, participant and transaction. All definitions within a single file belong to the same namespace.",
+  "source": "@site/versioned_docs/version-0.13/model-namespaces.md",
+  "slug": "/model-namespaces",
+  "permalink": "/docs/0.13/model-namespaces",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-advanced-expr",
+  "id": "version-0.21/logic-advanced-expr",
+  "isDocsHomePage": false,
+  "title": "Advanced Expressions",
+  "description": "Match",
+  "source": "@site/versioned_docs/version-0.21/logic-advanced-expr.md",
+  "slug": "/logic-advanced-expr",
+  "permalink": "/docs/logic-advanced-expr",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Complex Values & Types",
+    "permalink": "/docs/logic-complex-type"
+  },
+  "next": {
+    "title": "Statements",
+    "permalink": "/docs/logic-stmt"
+  }
+}

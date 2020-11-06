@@ -1,0 +1,13 @@
+{
+  "unversionedId": "accordproject-studio",
+  "id": "version-0.20/accordproject-studio",
+  "isDocsHomePage": false,
+  "title": "Template Studio",
+  "description": "Template Studio lets you create, edit and test legal clause or contract templates built with the Accord Project.",
+  "source": "@site/versioned_docs/version-0.20/accordproject-studio.md",
+  "slug": "/accordproject-studio",
+  "permalink": "/docs/0.20/accordproject-studio",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

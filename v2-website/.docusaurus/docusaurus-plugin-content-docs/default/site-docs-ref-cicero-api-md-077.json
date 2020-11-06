@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-cicero-api",
+  "id": "ref-cicero-api",
+  "isDocsHomePage": false,
+  "title": "Node.js API",
+  "description": "Modules",
+  "source": "@site/../docs/ref-cicero-api.md",
+  "slug": "/ref-cicero-api",
+  "permalink": "/docs/next/ref-cicero-api",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Command Line",
+    "permalink": "/docs/next/ref-cicero-cli"
+  },
+  "next": {
+    "title": "Template Testing",
+    "permalink": "/docs/next/ref-cicero-testing"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "accordproject-installation",
+  "id": "version-0.21/accordproject-installation",
+  "isDocsHomePage": false,
+  "title": "Installation",
+  "description": "To start working on your own Accord Project templates, you should install the Cicero command-line tools. This will let you author, parse, and execute Accord Project templates.",
+  "source": "@site/versioned_docs/version-0.21/accordproject-installation.md",
+  "slug": "/accordproject-installation",
+  "permalink": "/docs/accordproject-installation",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "ref-cicero-testing",
+  "id": "version-0.13/ref-cicero-testing",
+  "isDocsHomePage": false,
+  "title": "Template Testing",
+  "description": "Cicero uses Cucumber for writing template tests, which provides a human readable syntax.",
+  "source": "@site/versioned_docs/version-0.13/ref-cicero-testing.md",
+  "slug": "/ref-cicero-testing",
+  "permalink": "/docs/0.13/ref-cicero-testing",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

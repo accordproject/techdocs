@@ -1,0 +1,18 @@
+{
+  "unversionedId": "accordproject",
+  "id": "version-0.12/accordproject",
+  "isDocsHomePage": true,
+  "title": "Getting Started with Accord Project",
+  "description": "What is Accord Project?",
+  "source": "@site/versioned_docs/version-0.12/accordproject.md",
+  "slug": "/",
+  "permalink": "/docs/0.12/",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "next": {
+    "title": "Installation",
+    "permalink": "/docs/0.12/accordproject-installation"
+  }
+}

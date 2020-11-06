@@ -1,0 +1,22 @@
+{
+  "unversionedId": "spec-concepts",
+  "id": "version-0.12/spec-concepts",
+  "isDocsHomePage": false,
+  "title": "Concepts and High-level Architecture",
+  "description": "Overview",
+  "source": "@site/versioned_docs/version-0.12/spec-concepts.md",
+  "slug": "/spec-concepts",
+  "permalink": "/docs/0.12/spec-concepts",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/0.12/spec-overview"
+  },
+  "next": {
+    "title": "Example: Late Delivery Clause",
+    "permalink": "/docs/0.12/spec-example"
+  }
+}

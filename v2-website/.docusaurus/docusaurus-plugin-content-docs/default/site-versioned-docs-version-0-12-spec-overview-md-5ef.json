@@ -1,0 +1,22 @@
+{
+  "unversionedId": "spec-overview",
+  "id": "version-0.12/spec-overview",
+  "isDocsHomePage": false,
+  "title": "Overview",
+  "description": "This specification defines the structure of Accord Project Templates: legally enforceable natural language text that is bound to executable business logic.",
+  "source": "@site/versioned_docs/version-0.12/spec-overview.md",
+  "slug": "/spec-overview",
+  "permalink": "/docs/0.12/spec-overview",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Modularity",
+    "permalink": "/docs/0.12/logic-module"
+  },
+  "next": {
+    "title": "Concepts and High-level Architecture",
+    "permalink": "/docs/0.12/spec-concepts"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "tutorial-create",
+  "id": "version-0.12/tutorial-create",
+  "isDocsHomePage": false,
+  "title": "Template Generator",
+  "description": "Now that you have executed an existing template, let's create a new template from scratch. To facilitate the creation of new templates, Cicero comes with a template generator.",
+  "source": "@site/versioned_docs/version-0.12/tutorial-create.md",
+  "slug": "/tutorial-create",
+  "permalink": "/docs/0.12/tutorial-create",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

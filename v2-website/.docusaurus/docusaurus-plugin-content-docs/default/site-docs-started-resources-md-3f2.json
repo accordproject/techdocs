@@ -1,0 +1,22 @@
+{
+  "unversionedId": "started-resources",
+  "id": "started-resources",
+  "isDocsHomePage": false,
+  "title": "Resources",
+  "description": "Accord Project Resources",
+  "source": "@site/../docs/started-resources.md",
+  "slug": "/started-resources",
+  "permalink": "/docs/next/started-resources",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Hello World Template",
+    "permalink": "/docs/next/started-hello"
+  },
+  "next": {
+    "title": "Preliminaries",
+    "permalink": "/docs/next/markup-preliminaries"
+  }
+}

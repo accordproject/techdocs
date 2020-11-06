@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-ergo-stdlib",
+  "id": "ref-ergo-stdlib",
+  "isDocsHomePage": false,
+  "title": "Standard Library",
+  "description": "The following libraries are provided with the Ergo compiler.",
+  "source": "@site/../docs/ref-ergo-stdlib.md",
+  "slug": "/ref-ergo-stdlib",
+  "permalink": "/docs/next/ref-ergo-stdlib",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Node.js API",
+    "permalink": "/docs/next/ref-concerto-api"
+  },
+  "next": {
+    "title": "Command Line",
+    "permalink": "/docs/next/ref-ergo-cli"
+  }
+}

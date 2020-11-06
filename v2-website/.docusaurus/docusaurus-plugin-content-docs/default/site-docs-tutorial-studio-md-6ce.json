@@ -1,0 +1,22 @@
+{
+  "unversionedId": "tutorial-studio",
+  "id": "tutorial-studio",
+  "isDocsHomePage": false,
+  "title": "With Template Studio",
+  "description": "This tutorial will walk you through the steps of editing a clause template in Template Studio.",
+  "source": "@site/../docs/tutorial-studio.md",
+  "slug": "/tutorial-studio",
+  "permalink": "/docs/next/tutorial-studio",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Template Generator",
+    "permalink": "/docs/next/tutorial-create"
+  },
+  "next": {
+    "title": "With VS Code",
+    "permalink": "/docs/next/tutorial-vscode"
+  }
+}

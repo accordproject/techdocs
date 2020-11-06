@@ -1,0 +1,13 @@
+{
+  "unversionedId": "spec-execution",
+  "id": "version-0.20/spec-execution",
+  "isDocsHomePage": false,
+  "title": "Contract Execution",
+  "description": "Interfacing the Template with the Outside World",
+  "source": "@site/versioned_docs/version-0.20/spec-execution.md",
+  "slug": "/spec-execution",
+  "permalink": "/docs/0.20/spec-execution",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

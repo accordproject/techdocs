@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-module",
+  "id": "version-0.12/logic-module",
+  "isDocsHomePage": false,
+  "title": "Modularity",
+  "description": "Finally, we can place multiple Ergo declarations (functions, contracts, etc) into a library so it can be shared with other developers.",
+  "source": "@site/versioned_docs/version-0.12/logic-module.md",
+  "slug": "/logic-module",
+  "permalink": "/docs/0.12/logic-module",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Declarations",
+    "permalink": "/docs/0.12/logic-decl"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/docs/0.12/spec-overview"
+  }
+}

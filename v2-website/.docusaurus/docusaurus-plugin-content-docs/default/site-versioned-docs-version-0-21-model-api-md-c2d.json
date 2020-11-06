@@ -1,0 +1,22 @@
+{
+  "unversionedId": "model-api",
+  "id": "version-0.21/model-api",
+  "isDocsHomePage": false,
+  "title": "Using the API",
+  "description": "Install the Core Library",
+  "source": "@site/versioned_docs/version-0.21/model-api.md",
+  "slug": "/model-api",
+  "permalink": "/docs/model-api",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Decorators",
+    "permalink": "/docs/model-decorators"
+  },
+  "next": {
+    "title": "Ergo Overview",
+    "permalink": "/docs/logic-ergo"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "accordproject-business",
+  "id": "version-0.21/accordproject-business",
+  "isDocsHomePage": false,
+  "title": "For Business",
+  "description": "Why is the Accord Project relevant for business?",
+  "source": "@site/versioned_docs/version-0.21/accordproject-business.md",
+  "slug": "/accordproject-business",
+  "permalink": "/docs/accordproject-business",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

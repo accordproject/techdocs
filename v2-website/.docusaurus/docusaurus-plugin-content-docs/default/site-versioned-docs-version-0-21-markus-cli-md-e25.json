@@ -1,0 +1,13 @@
+{
+  "unversionedId": "markus-cli",
+  "id": "version-0.21/markus-cli",
+  "isDocsHomePage": false,
+  "title": "Markdown Transform CLI",
+  "description": "Install the @accordproject/markdown-cli npm package to access the Markdown Transform command line interface (CLI). After installation you can use the markus command and its sub-commands as described below.",
+  "source": "@site/versioned_docs/version-0.21/markus-cli.md",
+  "slug": "/markus-cli",
+  "permalink": "/docs/markus-cli",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}
