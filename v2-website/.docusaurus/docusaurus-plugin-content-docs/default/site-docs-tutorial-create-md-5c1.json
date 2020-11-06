@@ -1,0 +1,22 @@
+{
+  "unversionedId": "tutorial-create",
+  "id": "tutorial-create",
+  "isDocsHomePage": false,
+  "title": "Template Generator",
+  "description": "Now that you have executed an existing template, let's create a new template from scratch. To facilitate the creation of new templates, Cicero comes with a template generator.",
+  "source": "@site/../docs/tutorial-create.md",
+  "slug": "/tutorial-create",
+  "permalink": "/docs/next/tutorial-create",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Template Library",
+    "permalink": "/docs/next/tutorial-library"
+  },
+  "next": {
+    "title": "With Template Studio",
+    "permalink": "/docs/next/tutorial-studio"
+  }
+}

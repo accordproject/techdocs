@@ -1,0 +1,22 @@
+{
+  "unversionedId": "markup-blocks",
+  "id": "version-0.20/markup-blocks",
+  "isDocsHomePage": false,
+  "title": "Block Expressions",
+  "description": "CiceroMark uses block expressions to enable more advanced scenarios, to handle optional or repeated text (e.g., lists), to change the variables in scope for a given section of the text, etc.",
+  "source": "@site/versioned_docs/version-0.20/markup-blocks.md",
+  "slug": "/markup-blocks",
+  "permalink": "/docs/0.20/markup-blocks",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Variable Expressions",
+    "permalink": "/docs/0.20/markup-variables"
+  },
+  "next": {
+    "title": "Ergo Expressions",
+    "permalink": "/docs/0.20/markup-ergo"
+  }
+}

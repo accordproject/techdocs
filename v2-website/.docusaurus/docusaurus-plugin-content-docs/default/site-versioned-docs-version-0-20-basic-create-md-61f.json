@@ -1,0 +1,13 @@
+{
+  "unversionedId": "basic-create",
+  "id": "version-0.20/basic-create",
+  "isDocsHomePage": false,
+  "title": "Creating a New Template",
+  "description": "Now that you have executed an existing template, let's create a new template.",
+  "source": "@site/versioned_docs/version-0.20/basic-create.md",
+  "slug": "/basic-create",
+  "permalink": "/docs/0.20/basic-create",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

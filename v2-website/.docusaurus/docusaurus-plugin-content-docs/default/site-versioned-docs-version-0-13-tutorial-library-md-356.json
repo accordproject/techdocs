@@ -1,0 +1,13 @@
+{
+  "unversionedId": "tutorial-library",
+  "id": "version-0.13/tutorial-library",
+  "isDocsHomePage": false,
+  "title": "Template Library",
+  "description": "This tutorial explains how to get access, and contribute, to all of the public templates available as part of the the Accord Project Template Library.",
+  "source": "@site/versioned_docs/version-0.13/tutorial-library.md",
+  "slug": "/tutorial-library",
+  "permalink": "/docs/0.13/tutorial-library",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

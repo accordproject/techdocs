@@ -1,0 +1,22 @@
+{
+  "unversionedId": "accordproject-resources",
+  "id": "version-0.13/accordproject-resources",
+  "isDocsHomePage": false,
+  "title": "Learning Resources",
+  "description": "Accord Project Resources",
+  "source": "@site/versioned_docs/version-0.13/accordproject-resources.md",
+  "slug": "/accordproject-resources",
+  "permalink": "/docs/0.13/accordproject-resources",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.13/docs",
+  "previous": {
+    "title": "Open Source Templates",
+    "permalink": "/docs/0.13/accordproject-templates"
+  },
+  "next": {
+    "title": "How to Use a Template",
+    "permalink": "/docs/0.13/basic-use"
+  }
+}

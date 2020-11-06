@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ergo-api",
+  "id": "version-0.20/ergo-api",
+  "isDocsHomePage": false,
+  "title": "Ergo API",
+  "description": "Classes",
+  "source": "@site/versioned_docs/version-0.20/ergo-api.md",
+  "slug": "/ergo-api",
+  "permalink": "/docs/0.20/ergo-api",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Cicero API",
+    "permalink": "/docs/0.20/cicero-api"
+  },
+  "next": {
+    "title": "Concerto API",
+    "permalink": "/docs/0.20/concerto-api"
+  }
+}

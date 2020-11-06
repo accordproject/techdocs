@@ -1,0 +1,22 @@
+{
+  "unversionedId": "started-resources",
+  "id": "version-0.20/started-resources",
+  "isDocsHomePage": false,
+  "title": "Resources",
+  "description": "Accord Project Resources",
+  "source": "@site/versioned_docs/version-0.20/started-resources.md",
+  "slug": "/started-resources",
+  "permalink": "/docs/0.20/started-resources",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Online Tour",
+    "permalink": "/docs/0.20/started-studio"
+  },
+  "next": {
+    "title": "Editing a Late Delivery Clause",
+    "permalink": "/docs/0.20/tutorial-latedelivery"
+  }
+}

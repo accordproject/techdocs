@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-stmt",
+  "id": "version-0.20/logic-stmt",
+  "isDocsHomePage": false,
+  "title": "Statements",
+  "description": "A clause's body is composed of statements. Statements are a special kind of expression which can manipulate the contract state and emit obligations. Unlike other expressions they may return a response or an error.",
+  "source": "@site/versioned_docs/version-0.20/logic-stmt.md",
+  "slug": "/logic-stmt",
+  "permalink": "/docs/0.20/logic-stmt",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Advanced Expressions",
+    "permalink": "/docs/0.20/logic-advanced-expr"
+  },
+  "next": {
+    "title": "Declarations",
+    "permalink": "/docs/0.20/logic-decl"
+  }
+}

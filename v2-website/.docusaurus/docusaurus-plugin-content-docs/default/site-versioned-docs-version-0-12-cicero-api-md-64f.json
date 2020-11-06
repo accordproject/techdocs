@@ -1,0 +1,22 @@
+{
+  "unversionedId": "cicero-api",
+  "id": "version-0.12/cicero-api",
+  "isDocsHomePage": false,
+  "title": "Cicero API",
+  "description": "Modules",
+  "source": "@site/versioned_docs/version-0.12/cicero-api.md",
+  "slug": "/cicero-api",
+  "permalink": "/docs/0.12/cicero-api",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Ergo CLI",
+    "permalink": "/docs/0.12/ergo-cli"
+  },
+  "next": {
+    "title": "Ergo API",
+    "permalink": "/docs/0.12/ergo-api"
+  }
+}

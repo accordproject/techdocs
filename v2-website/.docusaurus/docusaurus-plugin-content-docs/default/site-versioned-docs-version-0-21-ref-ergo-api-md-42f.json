@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-ergo-api",
+  "id": "version-0.21/ref-ergo-api",
+  "isDocsHomePage": false,
+  "title": "Node.js API",
+  "description": "Classes",
+  "source": "@site/versioned_docs/version-0.21/ref-ergo-api.md",
+  "slug": "/ref-ergo-api",
+  "permalink": "/docs/ref-ergo-api",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Read-Eval-Print Loop",
+    "permalink": "/docs/ref-ergo-repl"
+  },
+  "next": {
+    "title": "Specification",
+    "permalink": "/docs/ref-ergo-spec"
+  }
+}

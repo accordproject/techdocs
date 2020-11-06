@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-decl",
+  "id": "version-0.21/logic-decl",
+  "isDocsHomePage": false,
+  "title": "Declarations",
+  "description": "Now that we have values, types, expressions and statements available, we can start writing more complex Ergo logic using by declaring functions, clauses and contracts.",
+  "source": "@site/versioned_docs/version-0.21/logic-decl.md",
+  "slug": "/logic-decl",
+  "permalink": "/docs/logic-decl",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Statements",
+    "permalink": "/docs/logic-stmt"
+  },
+  "next": {
+    "title": "Modules",
+    "permalink": "/docs/logic-module"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "tutorial-nodejs",
+  "id": "version-0.12/tutorial-nodejs",
+  "isDocsHomePage": false,
+  "title": "With Node.js",
+  "description": "Cicero Node.js API",
+  "source": "@site/versioned_docs/version-0.12/tutorial-nodejs.md",
+  "slug": "/tutorial-nodejs",
+  "permalink": "/docs/0.12/tutorial-nodejs",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

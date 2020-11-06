@@ -1,0 +1,13 @@
+{
+  "unversionedId": "accordproject-templates",
+  "id": "version-0.21/accordproject-templates",
+  "isDocsHomePage": false,
+  "title": "Open Source Templates",
+  "description": "Accord Project maintains an Open Source Templates Library of legal clauses and contracts that conform to the Accord Project template specification.",
+  "source": "@site/versioned_docs/version-0.21/accordproject-templates.md",
+  "slug": "/accordproject-templates",
+  "permalink": "/docs/accordproject-templates",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-glossary",
+  "id": "version-0.21/ref-glossary",
+  "isDocsHomePage": false,
+  "title": "Glossary",
+  "description": "Variable",
+  "source": "@site/versioned_docs/version-0.21/ref-glossary.md",
+  "slug": "/ref-glossary",
+  "permalink": "/docs/ref-glossary",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "With Hyperledger Fabric",
+    "permalink": "/docs/tutorial-hyperledger"
+  },
+  "next": {
+    "title": "Errors",
+    "permalink": "/docs/ref-errors"
+  }
+}

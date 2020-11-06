@@ -1,0 +1,22 @@
+{
+  "unversionedId": "tutorial-nodejs",
+  "id": "version-0.20/tutorial-nodejs",
+  "isDocsHomePage": false,
+  "title": "Working with Node.js",
+  "description": "Cicero Node.js API",
+  "source": "@site/versioned_docs/version-0.20/tutorial-nodejs.md",
+  "slug": "/tutorial-nodejs",
+  "permalink": "/docs/0.20/tutorial-nodejs",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Template Generator",
+    "permalink": "/docs/0.20/tutorial-create"
+  },
+  "next": {
+    "title": "Deploying on Hyperledger Fabric",
+    "permalink": "/docs/0.20/tutorial-hyperledger"
+  }
+}

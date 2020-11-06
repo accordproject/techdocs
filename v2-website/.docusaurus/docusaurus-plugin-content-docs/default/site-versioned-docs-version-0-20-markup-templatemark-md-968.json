@@ -1,0 +1,13 @@
+{
+  "unversionedId": "markup-templatemark",
+  "id": "version-0.20/markup-templatemark",
+  "isDocsHomePage": false,
+  "title": "TemplateMark",
+  "description": "TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas.",
+  "source": "@site/versioned_docs/version-0.20/markup-templatemark.md",
+  "slug": "/markup-templatemark",
+  "permalink": "/docs/0.20/markup-templatemark",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

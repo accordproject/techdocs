@@ -1,0 +1,18 @@
+{
+  "unversionedId": "accordproject",
+  "id": "version-0.20/accordproject",
+  "isDocsHomePage": true,
+  "title": "Overview",
+  "description": "What is the Accord Project?",
+  "source": "@site/versioned_docs/version-0.20/accordproject.md",
+  "slug": "/",
+  "permalink": "/docs/0.20/",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "next": {
+    "title": "Key Concepts",
+    "permalink": "/docs/0.20/accordproject-concepts"
+  }
+}

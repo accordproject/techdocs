@@ -1,0 +1,22 @@
+{
+  "unversionedId": "spec-template",
+  "id": "version-0.12/spec-template",
+  "isDocsHomePage": false,
+  "title": "Template Structure",
+  "description": "An Accord Project template is composed of three elements:",
+  "source": "@site/versioned_docs/version-0.12/spec-template.md",
+  "slug": "/spec-template",
+  "permalink": "/docs/0.12/spec-template",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Example: Late Delivery Clause",
+    "permalink": "/docs/0.12/spec-example"
+  },
+  "next": {
+    "title": "Template Instantiation",
+    "permalink": "/docs/0.12/spec-instance"
+  }
+}

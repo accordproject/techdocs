@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ergo-cli",
+  "id": "version-0.13/ergo-cli",
+  "isDocsHomePage": false,
+  "title": "Ergo CLI",
+  "description": "To install the Ergo command-line interface (CLI):",
+  "source": "@site/versioned_docs/version-0.13/ergo-cli.md",
+  "slug": "/ergo-cli",
+  "permalink": "/docs/0.13/ergo-cli",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.13/docs",
+  "previous": {
+    "title": "Cicero CLI",
+    "permalink": "/docs/0.13/cicero-cli"
+  },
+  "next": {
+    "title": "Cicero API",
+    "permalink": "/docs/0.13/cicero-api"
+  }
+}

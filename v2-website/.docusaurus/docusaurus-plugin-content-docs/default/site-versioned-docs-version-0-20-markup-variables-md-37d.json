@@ -1,0 +1,22 @@
+{
+  "unversionedId": "markup-variables",
+  "id": "version-0.20/markup-variables",
+  "isDocsHomePage": false,
+  "title": "Variable Expressions",
+  "description": "Each variable starts with {{ and ends with }} and may include an optional formatting using the keyword as:",
+  "source": "@site/versioned_docs/version-0.20/markup-variables.md",
+  "slug": "/markup-variables",
+  "permalink": "/docs/0.20/markup-variables",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Rich Text Markdown",
+    "permalink": "/docs/0.20/markup-commonmark"
+  },
+  "next": {
+    "title": "Block Expressions",
+    "permalink": "/docs/0.20/markup-blocks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "advanced-hyperledger",
+  "id": "version-0.21/advanced-hyperledger",
+  "isDocsHomePage": false,
+  "title": "Deploying on Hyperledger Fabric",
+  "description": "Hyperledger Fabric 1.3",
+  "source": "@site/versioned_docs/version-0.21/advanced-hyperledger.md",
+  "slug": "/advanced-hyperledger",
+  "permalink": "/docs/advanced-hyperledger",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

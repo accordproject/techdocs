@@ -1,0 +1,22 @@
+{
+  "unversionedId": "accordproject-faq",
+  "id": "version-0.21/accordproject-faq",
+  "isDocsHomePage": false,
+  "title": "FAQ",
+  "description": "Accord Project Frequently asked Questions",
+  "source": "@site/versioned_docs/version-0.21/accordproject-faq.md",
+  "slug": "/accordproject-faq",
+  "permalink": "/docs/accordproject-faq",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Online Tour",
+    "permalink": "/docs/accordproject-tour"
+  },
+  "next": {
+    "title": "Install Cicero",
+    "permalink": "/docs/started-installation"
+  }
+}

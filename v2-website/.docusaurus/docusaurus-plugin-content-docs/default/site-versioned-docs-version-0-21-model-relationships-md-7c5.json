@@ -1,0 +1,22 @@
+{
+  "unversionedId": "model-relationships",
+  "id": "version-0.21/model-relationships",
+  "isDocsHomePage": false,
+  "title": "Relationships",
+  "description": "A relationship in Concerto Modeling Language (CML) is a tuple composed of:",
+  "source": "@site/versioned_docs/version-0.21/model-relationships.md",
+  "slug": "/model-relationships",
+  "permalink": "/docs/model-relationships",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Properties",
+    "permalink": "/docs/model-properties"
+  },
+  "next": {
+    "title": "Decorators",
+    "permalink": "/docs/model-decorators"
+  }
+}

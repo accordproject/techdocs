@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-ergo",
+  "id": "version-0.21/logic-ergo",
+  "isDocsHomePage": false,
+  "title": "Ergo Overview",
+  "description": "Language Goals",
+  "source": "@site/versioned_docs/version-0.21/logic-ergo.md",
+  "slug": "/logic-ergo",
+  "permalink": "/docs/logic-ergo",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Using the API",
+    "permalink": "/docs/model-api"
+  },
+  "next": {
+    "title": "Simple Expressions",
+    "permalink": "/docs/logic-simple-expr"
+  }
+}

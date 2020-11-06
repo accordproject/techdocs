@@ -1,0 +1,22 @@
+{
+  "unversionedId": "accordproject-tooling",
+  "id": "version-0.13/accordproject-tooling",
+  "isDocsHomePage": false,
+  "title": "Developers Tools",
+  "description": "Several tools are available in order to help you develop your own smart legal templates.",
+  "source": "@site/versioned_docs/version-0.13/accordproject-tooling.md",
+  "slug": "/accordproject-tooling",
+  "permalink": "/docs/0.13/accordproject-tooling",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.13/docs",
+  "previous": {
+    "title": "Installation",
+    "permalink": "/docs/0.13/accordproject-installation"
+  },
+  "next": {
+    "title": "Standard Models",
+    "permalink": "/docs/0.13/accordproject-models"
+  }
+}

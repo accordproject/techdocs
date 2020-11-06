@@ -1,0 +1,18 @@
+{
+  "unversionedId": "ref-web-components-overview",
+  "id": "ref-web-components-overview",
+  "isDocsHomePage": false,
+  "title": "Overview",
+  "description": "Accord Project publishes React user interface components for use in web applications. Please refer to the web-components project on GitHub for detailed usage instructions.",
+  "source": "@site/../docs/ref-web-components-overview.md",
+  "slug": "/ref-web-components-overview",
+  "permalink": "/docs/next/ref-web-components-overview",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Specification",
+    "permalink": "/docs/next/ref-ergo-spec"
+  }
+}

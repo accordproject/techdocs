@@ -1,0 +1,22 @@
+{
+  "unversionedId": "markup-commonmark",
+  "id": "version-0.20/markup-commonmark",
+  "isDocsHomePage": false,
+  "title": "Rich Text Markdown",
+  "description": "The following CommonMark guide is non normative, but included for convenience. For a more detailed introduction and the official reference, we refer the reader the CommonMark page.",
+  "source": "@site/versioned_docs/version-0.20/markup-commonmark.md",
+  "slug": "/markup-commonmark",
+  "permalink": "/docs/0.20/markup-commonmark",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "CiceroMark Overview",
+    "permalink": "/docs/0.20/markup-cicero"
+  },
+  "next": {
+    "title": "Variable Expressions",
+    "permalink": "/docs/0.20/markup-variables"
+  }
+}

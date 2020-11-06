@@ -1,0 +1,22 @@
+{
+  "unversionedId": "markup-preliminaries",
+  "id": "version-0.21/markup-preliminaries",
+  "isDocsHomePage": false,
+  "title": "Preliminaries",
+  "description": "Markdown & CommonMark",
+  "source": "@site/versioned_docs/version-0.21/markup-preliminaries.md",
+  "slug": "/markup-preliminaries",
+  "permalink": "/docs/markup-preliminaries",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Resources",
+    "permalink": "/docs/started-resources"
+  },
+  "next": {
+    "title": "CommonMark",
+    "permalink": "/docs/markup-commonmark"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "unversionedId": "accordproject",
+  "id": "version-0.21/accordproject",
+  "isDocsHomePage": true,
+  "title": "Overview",
+  "description": "What is the Accord Project?",
+  "source": "@site/versioned_docs/version-0.21/accordproject.md",
+  "slug": "/",
+  "permalink": "/docs/",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "next": {
+    "title": "Smart Legal Contracts",
+    "permalink": "/docs/accordproject-slc"
+  }
+}

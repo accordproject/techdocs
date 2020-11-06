@@ -1,0 +1,13 @@
+{
+  "unversionedId": "ref-migrate-0.20-0.21",
+  "id": "version-0.13/ref-migrate-0.20-0.21",
+  "isDocsHomePage": false,
+  "title": "0.20 to 0.21",
+  "description": "The main change between the 0.20 release and the 0.21 release is the new markdown syntax and parser infrastructure based on markdown-it. While most templates designed for 0.20 should still work on 0.21 some changes might be needed to the contract or template text to account for this new syntax.",
+  "source": "@site/versioned_docs/version-0.13/ref-migrate-0.20-0.21.md",
+  "slug": "/ref-migrate-0.20-0.21",
+  "permalink": "/docs/0.13/ref-migrate-0.20-0.21",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

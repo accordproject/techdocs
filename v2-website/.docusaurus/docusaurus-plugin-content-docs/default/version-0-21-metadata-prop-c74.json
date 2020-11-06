@@ -1,0 +1,450 @@
+{
+  "pluginId": "default",
+  "version": "0.21",
+  "label": "0.21",
+  "isLast": true,
+  "docsSidebars": {
+    "version-0.21/docs": [
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Introduction",
+        "items": [
+          {
+            "type": "link",
+            "label": "Overview",
+            "href": "/docs/"
+          },
+          {
+            "type": "link",
+            "label": "Smart Legal Contracts",
+            "href": "/docs/accordproject-slc"
+          },
+          {
+            "type": "link",
+            "label": "Accord Project Templates",
+            "href": "/docs/accordproject-template"
+          },
+          {
+            "type": "link",
+            "label": "Online Tour",
+            "href": "/docs/accordproject-tour"
+          },
+          {
+            "type": "link",
+            "label": "FAQ",
+            "href": "/docs/accordproject-faq"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Getting Started",
+        "items": [
+          {
+            "type": "link",
+            "label": "Install Cicero",
+            "href": "/docs/started-installation"
+          },
+          {
+            "type": "link",
+            "label": "Hello World Template",
+            "href": "/docs/started-hello"
+          },
+          {
+            "type": "link",
+            "label": "Resources",
+            "href": "/docs/started-resources"
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Template Guides",
+        "items": [
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Markdown Text",
+            "items": [
+              {
+                "type": "link",
+                "label": "Preliminaries",
+                "href": "/docs/markup-preliminaries"
+              },
+              {
+                "type": "link",
+                "label": "CommonMark",
+                "href": "/docs/markup-commonmark"
+              },
+              {
+                "type": "link",
+                "label": "CiceroMark",
+                "href": "/docs/markup-ciceromark"
+              },
+              {
+                "type": "link",
+                "label": "TemplateMark",
+                "href": "/docs/markup-templatemark"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Concerto Model",
+            "items": [
+              {
+                "type": "link",
+                "label": "Concerto Overview",
+                "href": "/docs/model-concerto"
+              },
+              {
+                "type": "link",
+                "label": "Namespaces",
+                "href": "/docs/model-namespaces"
+              },
+              {
+                "type": "link",
+                "label": "Classes",
+                "href": "/docs/model-classes"
+              },
+              {
+                "type": "link",
+                "label": "Enumerations",
+                "href": "/docs/model-enums"
+              },
+              {
+                "type": "link",
+                "label": "Properties",
+                "href": "/docs/model-properties"
+              },
+              {
+                "type": "link",
+                "label": "Relationships",
+                "href": "/docs/model-relationships"
+              },
+              {
+                "type": "link",
+                "label": "Decorators",
+                "href": "/docs/model-decorators"
+              },
+              {
+                "type": "link",
+                "label": "Using the API",
+                "href": "/docs/model-api"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Ergo Logic",
+            "items": [
+              {
+                "type": "link",
+                "label": "Ergo Overview",
+                "href": "/docs/logic-ergo"
+              },
+              {
+                "type": "link",
+                "label": "Simple Expressions",
+                "href": "/docs/logic-simple-expr"
+              },
+              {
+                "type": "link",
+                "label": "Introducing Types",
+                "href": "/docs/logic-simple-type"
+              },
+              {
+                "type": "link",
+                "label": "Complex Values & Types",
+                "href": "/docs/logic-complex-type"
+              },
+              {
+                "type": "link",
+                "label": "Advanced Expressions",
+                "href": "/docs/logic-advanced-expr"
+              },
+              {
+                "type": "link",
+                "label": "Statements",
+                "href": "/docs/logic-stmt"
+              },
+              {
+                "type": "link",
+                "label": "Declarations",
+                "href": "/docs/logic-decl"
+              },
+              {
+                "type": "link",
+                "label": "Modules",
+                "href": "/docs/logic-module"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Tutorials",
+        "items": [
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Using Cicero",
+            "items": [
+              {
+                "type": "link",
+                "label": "Templates Deep Dive",
+                "href": "/docs/tutorial-templates"
+              },
+              {
+                "type": "link",
+                "label": "Template Library",
+                "href": "/docs/tutorial-library"
+              },
+              {
+                "type": "link",
+                "label": "Template Generator",
+                "href": "/docs/tutorial-create"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Template Authoring",
+            "items": [
+              {
+                "type": "link",
+                "label": "With Template Studio",
+                "href": "/docs/tutorial-studio"
+              },
+              {
+                "type": "link",
+                "label": "With VS Code",
+                "href": "/docs/tutorial-vscode"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Template Execution",
+            "items": [
+              {
+                "type": "link",
+                "label": "Working with Node.js",
+                "href": "/docs/tutorial-nodejs"
+              },
+              {
+                "type": "link",
+                "label": "With Hyperledger Fabric",
+                "href": "/docs/tutorial-hyperledger"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "collapsed": true,
+        "type": "category",
+        "label": "Reference Manual",
+        "items": [
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "General",
+            "items": [
+              {
+                "type": "link",
+                "label": "Glossary",
+                "href": "/docs/ref-glossary"
+              },
+              {
+                "type": "link",
+                "label": "Errors",
+                "href": "/docs/ref-errors"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Template Migration",
+            "items": [
+              {
+                "type": "link",
+                "label": "0.13 to 0.20",
+                "href": "/docs/ref-migrate-0.13-0.20"
+              },
+              {
+                "type": "link",
+                "label": "0.20 to 0.21",
+                "href": "/docs/ref-migrate-0.20-0.21"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Cicero Reference",
+            "items": [
+              {
+                "type": "link",
+                "label": "Command Line",
+                "href": "/docs/ref-cicero-cli"
+              },
+              {
+                "type": "link",
+                "label": "Node.js API",
+                "href": "/docs/ref-cicero-api"
+              },
+              {
+                "type": "link",
+                "label": "Template Testing",
+                "href": "/docs/ref-cicero-testing"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Markdown Transform Reference",
+            "items": [
+              {
+                "type": "link",
+                "label": "Command Line",
+                "href": "/docs/ref-markus-cli"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Concerto Reference",
+            "items": [
+              {
+                "type": "link",
+                "label": "Decorators",
+                "href": "/docs/ref-concerto-decorators"
+              },
+              {
+                "type": "link",
+                "label": "Command Line",
+                "href": "/docs/ref-concerto-cli"
+              },
+              {
+                "type": "link",
+                "label": "Node.js API",
+                "href": "/docs/ref-concerto-api"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Ergo Reference",
+            "items": [
+              {
+                "type": "link",
+                "label": "Standard Library",
+                "href": "/docs/ref-ergo-stdlib"
+              },
+              {
+                "type": "link",
+                "label": "Command Line",
+                "href": "/docs/ref-ergo-cli"
+              },
+              {
+                "type": "link",
+                "label": "Read-Eval-Print Loop",
+                "href": "/docs/ref-ergo-repl"
+              },
+              {
+                "type": "link",
+                "label": "Node.js API",
+                "href": "/docs/ref-ergo-api"
+              },
+              {
+                "type": "link",
+                "label": "Specification",
+                "href": "/docs/ref-ergo-spec"
+              }
+            ]
+          },
+          {
+            "collapsed": true,
+            "type": "category",
+            "label": "Web Components Reference",
+            "items": [
+              {
+                "type": "link",
+                "label": "Overview",
+                "href": "/docs/ref-web-components-overview"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permalinkToSidebar": {
+    "/docs/": "version-0.21/docs",
+    "/docs/accordproject-faq": "version-0.21/docs",
+    "/docs/accordproject-slc": "version-0.21/docs",
+    "/docs/accordproject-template": "version-0.21/docs",
+    "/docs/accordproject-tour": "version-0.21/docs",
+    "/docs/logic-advanced-expr": "version-0.21/docs",
+    "/docs/logic-complex-type": "version-0.21/docs",
+    "/docs/logic-decl": "version-0.21/docs",
+    "/docs/logic-ergo": "version-0.21/docs",
+    "/docs/logic-module": "version-0.21/docs",
+    "/docs/logic-simple-expr": "version-0.21/docs",
+    "/docs/logic-simple-type": "version-0.21/docs",
+    "/docs/logic-stmt": "version-0.21/docs",
+    "/docs/markup-ciceromark": "version-0.21/docs",
+    "/docs/markup-commonmark": "version-0.21/docs",
+    "/docs/markup-preliminaries": "version-0.21/docs",
+    "/docs/markup-templatemark": "version-0.21/docs",
+    "/docs/model-api": "version-0.21/docs",
+    "/docs/model-classes": "version-0.21/docs",
+    "/docs/model-concerto": "version-0.21/docs",
+    "/docs/model-decorators": "version-0.21/docs",
+    "/docs/model-enums": "version-0.21/docs",
+    "/docs/model-namespaces": "version-0.21/docs",
+    "/docs/model-properties": "version-0.21/docs",
+    "/docs/model-relationships": "version-0.21/docs",
+    "/docs/ref-cicero-api": "version-0.21/docs",
+    "/docs/ref-cicero-cli": "version-0.21/docs",
+    "/docs/ref-cicero-testing": "version-0.21/docs",
+    "/docs/ref-concerto-api": "version-0.21/docs",
+    "/docs/ref-concerto-cli": "version-0.21/docs",
+    "/docs/ref-concerto-decorators": "version-0.21/docs",
+    "/docs/ref-ergo-api": "version-0.21/docs",
+    "/docs/ref-ergo-cli": "version-0.21/docs",
+    "/docs/ref-ergo-repl": "version-0.21/docs",
+    "/docs/ref-ergo-spec": "version-0.21/docs",
+    "/docs/ref-ergo-stdlib": "version-0.21/docs",
+    "/docs/ref-errors": "version-0.21/docs",
+    "/docs/ref-glossary": "version-0.21/docs",
+    "/docs/ref-markus-cli": "version-0.21/docs",
+    "/docs/ref-migrate-0.13-0.20": "version-0.21/docs",
+    "/docs/ref-migrate-0.20-0.21": "version-0.21/docs",
+    "/docs/ref-web-components-overview": "version-0.21/docs",
+    "/docs/started-hello": "version-0.21/docs",
+    "/docs/started-installation": "version-0.21/docs",
+    "/docs/started-resources": "version-0.21/docs",
+    "/docs/tutorial-create": "version-0.21/docs",
+    "/docs/tutorial-hyperledger": "version-0.21/docs",
+    "/docs/tutorial-library": "version-0.21/docs",
+    "/docs/tutorial-nodejs": "version-0.21/docs",
+    "/docs/tutorial-studio": "version-0.21/docs",
+    "/docs/tutorial-templates": "version-0.21/docs",
+    "/docs/tutorial-vscode": "version-0.21/docs"
+  }
+}

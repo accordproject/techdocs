@@ -1,0 +1,22 @@
+{
+  "unversionedId": "accordproject-business",
+  "id": "version-0.20/accordproject-business",
+  "isDocsHomePage": false,
+  "title": "For Business",
+  "description": "Why is the Accord Project relevant for business?",
+  "source": "@site/versioned_docs/version-0.20/accordproject-business.md",
+  "slug": "/accordproject-business",
+  "permalink": "/docs/0.20/accordproject-business",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Key Concepts",
+    "permalink": "/docs/0.20/accordproject-concepts"
+  },
+  "next": {
+    "title": "For Developers",
+    "permalink": "/docs/0.20/accordproject-developers"
+  }
+}

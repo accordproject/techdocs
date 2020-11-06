@@ -1,0 +1,13 @@
+{
+  "unversionedId": "ergo-tutorial",
+  "id": "ergo-tutorial",
+  "isDocsHomePage": false,
+  "title": "Ergo: A Tutorial",
+  "description": "Overview of Accord",
+  "source": "@site/../docs/ergo-tutorial.md",
+  "slug": "/ergo-tutorial",
+  "permalink": "/docs/next/ergo-tutorial",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

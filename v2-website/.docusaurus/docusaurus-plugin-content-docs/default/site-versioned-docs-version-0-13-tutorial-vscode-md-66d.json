@@ -1,0 +1,13 @@
+{
+  "unversionedId": "tutorial-vscode",
+  "id": "version-0.13/tutorial-vscode",
+  "isDocsHomePage": false,
+  "title": "With VS Code",
+  "description": "Cicero comes with a VS Code extension for easier development and testing. It includes support for syntax highlighting, allows you to test your template (contract parsing and logic) and to create template archives directly within VS Code.",
+  "source": "@site/versioned_docs/version-0.13/tutorial-vscode.md",
+  "slug": "/tutorial-vscode",
+  "permalink": "/docs/0.13/tutorial-vscode",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

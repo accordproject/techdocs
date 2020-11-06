@@ -1,0 +1,22 @@
+{
+  "unversionedId": "model-enums",
+  "id": "version-0.21/model-enums",
+  "isDocsHomePage": false,
+  "title": "Enumerations",
+  "description": "Enumerations are used to capture lists of domain values.",
+  "source": "@site/versioned_docs/version-0.21/model-enums.md",
+  "slug": "/model-enums",
+  "permalink": "/docs/model-enums",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Classes",
+    "permalink": "/docs/model-classes"
+  },
+  "next": {
+    "title": "Properties",
+    "permalink": "/docs/model-properties"
+  }
+}

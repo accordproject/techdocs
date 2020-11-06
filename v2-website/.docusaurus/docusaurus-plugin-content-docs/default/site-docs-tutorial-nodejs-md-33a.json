@@ -1,0 +1,22 @@
+{
+  "unversionedId": "tutorial-nodejs",
+  "id": "tutorial-nodejs",
+  "isDocsHomePage": false,
+  "title": "With Node.js",
+  "description": "Cicero Node.js API",
+  "source": "@site/../docs/tutorial-nodejs.md",
+  "slug": "/tutorial-nodejs",
+  "permalink": "/docs/next/tutorial-nodejs",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "With VS Code",
+    "permalink": "/docs/next/tutorial-vscode"
+  },
+  "next": {
+    "title": "With Hyperledger Fabric",
+    "permalink": "/docs/next/tutorial-hyperledger"
+  }
+}

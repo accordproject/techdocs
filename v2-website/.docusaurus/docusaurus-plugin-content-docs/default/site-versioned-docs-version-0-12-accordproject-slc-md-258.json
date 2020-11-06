@@ -1,0 +1,13 @@
+{
+  "unversionedId": "accordproject-slc",
+  "id": "version-0.12/accordproject-slc",
+  "isDocsHomePage": false,
+  "title": "Smart Legal Contracts",
+  "description": "A Smart Legal Contract is a human-readable and machine-readable agreement that is digital, consisting of natural language and computable components.",
+  "source": "@site/versioned_docs/version-0.12/accordproject-slc.md",
+  "slug": "/accordproject-slc",
+  "permalink": "/docs/0.12/accordproject-slc",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

@@ -1,0 +1,13 @@
+{
+  "unversionedId": "model-properties",
+  "id": "version-0.12/model-properties",
+  "isDocsHomePage": false,
+  "title": "Properties",
+  "description": "Class declarations contain properties. Each property has a type which can either be a type defined in the same namespace, an imported type, or a primitive type.",
+  "source": "@site/versioned_docs/version-0.12/model-properties.md",
+  "slug": "/model-properties",
+  "permalink": "/docs/0.12/model-properties",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

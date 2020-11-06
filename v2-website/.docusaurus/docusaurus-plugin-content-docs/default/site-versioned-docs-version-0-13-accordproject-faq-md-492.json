@@ -1,0 +1,13 @@
+{
+  "unversionedId": "accordproject-faq",
+  "id": "version-0.13/accordproject-faq",
+  "isDocsHomePage": false,
+  "title": "FAQ",
+  "description": "Accord Project Frequently asked Questions",
+  "source": "@site/versioned_docs/version-0.13/accordproject-faq.md",
+  "slug": "/accordproject-faq",
+  "permalink": "/docs/0.13/accordproject-faq",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

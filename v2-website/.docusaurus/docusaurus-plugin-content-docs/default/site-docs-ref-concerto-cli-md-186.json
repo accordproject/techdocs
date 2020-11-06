@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-concerto-cli",
+  "id": "ref-concerto-cli",
+  "isDocsHomePage": false,
+  "title": "Command Line",
+  "description": "Install the @accordproject/concerto-cli npm package to access the Concerto command line interface (CLI). After installation you can use the concerto command and its sub-commands as described below.",
+  "source": "@site/../docs/ref-concerto-cli.md",
+  "slug": "/ref-concerto-cli",
+  "permalink": "/docs/next/ref-concerto-cli",
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "docs",
+  "previous": {
+    "title": "Decorators",
+    "permalink": "/docs/next/ref-concerto-decorators"
+  },
+  "next": {
+    "title": "Node.js API",
+    "permalink": "/docs/next/ref-concerto-api"
+  }
+}

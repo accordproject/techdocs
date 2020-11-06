@@ -1,0 +1,13 @@
+{
+  "unversionedId": "ref-concerto-decorators",
+  "id": "version-0.13/ref-concerto-decorators",
+  "isDocsHomePage": false,
+  "title": "Decorators",
+  "description": "Decorators are used to add metadata to Concerto model elements, typically to control how variables are edited, printed or transformed.",
+  "source": "@site/versioned_docs/version-0.13/ref-concerto-decorators.md",
+  "slug": "/ref-concerto-decorators",
+  "permalink": "/docs/0.13/ref-concerto-decorators",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

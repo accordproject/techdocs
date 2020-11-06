@@ -1,0 +1,13 @@
+{
+  "unversionedId": "ref-logic-specification",
+  "id": "version-0.21/ref-logic-specification",
+  "isDocsHomePage": false,
+  "title": "Ergo Compiler",
+  "description": "A large part of the Ergo compiler is written as a Coq specification",
+  "source": "@site/versioned_docs/version-0.21/ref-logic-specification.md",
+  "slug": "/ref-logic-specification",
+  "permalink": "/docs/ref-logic-specification",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

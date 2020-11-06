@@ -1,0 +1,22 @@
+{
+  "unversionedId": "tutorial-hyperledger",
+  "id": "version-0.20/tutorial-hyperledger",
+  "isDocsHomePage": false,
+  "title": "Deploying on Hyperledger Fabric",
+  "description": "Hyperledger Fabric 1.3",
+  "source": "@site/versioned_docs/version-0.20/tutorial-hyperledger.md",
+  "slug": "/tutorial-hyperledger",
+  "permalink": "/docs/0.20/tutorial-hyperledger",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Working with Node.js",
+    "permalink": "/docs/0.20/tutorial-nodejs"
+  },
+  "next": {
+    "title": "CiceroMark Overview",
+    "permalink": "/docs/0.20/markup-cicero"
+  }
+}

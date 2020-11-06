@@ -1,0 +1,22 @@
+{
+  "unversionedId": "markup-ciceromark",
+  "id": "version-0.21/markup-ciceromark",
+  "isDocsHomePage": false,
+  "title": "CiceroMark",
+  "description": "CiceroMark is an extension to CommonMark used to write the text in Accord Project contracts. The extension is limited in scope, and designed to help with parsing clauses inside contracts and the result of formulas.",
+  "source": "@site/versioned_docs/version-0.21/markup-ciceromark.md",
+  "slug": "/markup-ciceromark",
+  "permalink": "/docs/markup-ciceromark",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "CommonMark",
+    "permalink": "/docs/markup-commonmark"
+  },
+  "next": {
+    "title": "TemplateMark",
+    "permalink": "/docs/markup-templatemark"
+  }
+}

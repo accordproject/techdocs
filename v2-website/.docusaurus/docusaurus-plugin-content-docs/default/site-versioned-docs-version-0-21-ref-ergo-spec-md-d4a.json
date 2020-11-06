@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-ergo-spec",
+  "id": "version-0.21/ref-ergo-spec",
+  "isDocsHomePage": false,
+  "title": "Specification",
+  "description": "Lexical Conventions",
+  "source": "@site/versioned_docs/version-0.21/ref-ergo-spec.md",
+  "slug": "/ref-ergo-spec",
+  "permalink": "/docs/ref-ergo-spec",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Node.js API",
+    "permalink": "/docs/ref-ergo-api"
+  },
+  "next": {
+    "title": "Overview",
+    "permalink": "/docs/ref-web-components-overview"
+  }
+}

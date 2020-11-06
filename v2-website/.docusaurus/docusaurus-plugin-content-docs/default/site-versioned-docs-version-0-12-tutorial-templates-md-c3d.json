@@ -1,0 +1,13 @@
+{
+  "unversionedId": "tutorial-templates",
+  "id": "version-0.12/tutorial-templates",
+  "isDocsHomePage": false,
+  "title": "Templates Deep Dive",
+  "description": "In the Getting Started section, we learned how to use the existing helloworld@0.13.0.cta template archive. Here we take a look inside that archive to understand the structure of Accord Project templates.",
+  "source": "@site/versioned_docs/version-0.12/tutorial-templates.md",
+  "slug": "/tutorial-templates",
+  "permalink": "/docs/0.12/tutorial-templates",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

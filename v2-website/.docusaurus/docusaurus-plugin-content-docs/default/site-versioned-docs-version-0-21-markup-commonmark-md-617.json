@@ -1,0 +1,22 @@
+{
+  "unversionedId": "markup-commonmark",
+  "id": "version-0.21/markup-commonmark",
+  "isDocsHomePage": false,
+  "title": "CommonMark",
+  "description": "The following CommonMark guide is non normative, but included for convenience. For a more detailed introduction we refer the reader the CommonMark Webpage and Specification.",
+  "source": "@site/versioned_docs/version-0.21/markup-commonmark.md",
+  "slug": "/markup-commonmark",
+  "permalink": "/docs/markup-commonmark",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.21/docs",
+  "previous": {
+    "title": "Preliminaries",
+    "permalink": "/docs/markup-preliminaries"
+  },
+  "next": {
+    "title": "CiceroMark",
+    "permalink": "/docs/markup-ciceromark"
+  }
+}

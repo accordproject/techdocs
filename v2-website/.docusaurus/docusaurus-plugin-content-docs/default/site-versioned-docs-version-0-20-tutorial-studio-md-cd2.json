@@ -1,0 +1,13 @@
+{
+  "unversionedId": "tutorial-studio",
+  "id": "version-0.20/tutorial-studio",
+  "isDocsHomePage": false,
+  "title": "With Template Studio",
+  "description": "This tutorial will walk you through the steps of editing a clause template in Template Studio.",
+  "source": "@site/versioned_docs/version-0.20/tutorial-studio.md",
+  "slug": "/tutorial-studio",
+  "permalink": "/docs/0.20/tutorial-studio",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

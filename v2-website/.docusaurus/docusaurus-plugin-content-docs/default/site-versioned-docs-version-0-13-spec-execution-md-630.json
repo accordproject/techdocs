@@ -1,0 +1,22 @@
+{
+  "unversionedId": "spec-execution",
+  "id": "version-0.13/spec-execution",
+  "isDocsHomePage": false,
+  "title": "Contract Execution",
+  "description": "Interfacing the Template with the Outside World",
+  "source": "@site/versioned_docs/version-0.13/spec-execution.md",
+  "slug": "/spec-execution",
+  "permalink": "/docs/0.13/spec-execution",
+  "version": "0.13",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.13/docs",
+  "previous": {
+    "title": "Template Instantiation",
+    "permalink": "/docs/0.13/spec-instance"
+  },
+  "next": {
+    "title": "Packaging",
+    "permalink": "/docs/0.13/spec-packaging"
+  }
+}

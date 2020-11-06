@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-logic-specification",
+  "id": "version-0.20/ref-logic-specification",
+  "isDocsHomePage": false,
+  "title": "Ergo Compiler",
+  "description": "A large part of the Ergo compiler is written as a Coq specification",
+  "source": "@site/versioned_docs/version-0.20/ref-logic-specification.md",
+  "slug": "/ref-logic-specification",
+  "permalink": "/docs/0.20/ref-logic-specification",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Ergo Standard Library",
+    "permalink": "/docs/0.20/ref-logic-stdlib"
+  },
+  "next": {
+    "title": "0.13 to 0.20",
+    "permalink": "/docs/0.20/ref-migrate-0.13-0.20"
+  }
+}

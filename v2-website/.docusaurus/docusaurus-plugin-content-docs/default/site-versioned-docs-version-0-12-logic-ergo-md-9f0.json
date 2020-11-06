@@ -1,0 +1,22 @@
+{
+  "unversionedId": "logic-ergo",
+  "id": "version-0.12/logic-ergo",
+  "isDocsHomePage": false,
+  "title": "Overview",
+  "description": "Language Goals",
+  "source": "@site/versioned_docs/version-0.12/logic-ergo.md",
+  "slug": "/logic-ergo",
+  "permalink": "/docs/0.12/logic-ergo",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Deploying on Hyperledger Fabric",
+    "permalink": "/docs/0.12/advanced-hyperledger"
+  },
+  "next": {
+    "title": "Simple Expressions",
+    "permalink": "/docs/0.12/logic-simple-expr"
+  }
+}

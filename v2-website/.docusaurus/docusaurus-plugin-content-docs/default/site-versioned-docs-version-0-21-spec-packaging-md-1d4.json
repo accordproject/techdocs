@@ -1,0 +1,13 @@
+{
+  "unversionedId": "spec-packaging",
+  "id": "version-0.21/spec-packaging",
+  "isDocsHomePage": false,
+  "title": "Packaging",
+  "description": "The artifacts that define a template are:",
+  "source": "@site/versioned_docs/version-0.21/spec-packaging.md",
+  "slug": "/spec-packaging",
+  "permalink": "/docs/spec-packaging",
+  "version": "0.21",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055
+}

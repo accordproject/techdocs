@@ -1,0 +1,1938 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": false,
+          "path": "/docs/next",
+          "mainDocId": "accordproject",
+          "docs": [
+            {
+              "id": "accordproject",
+              "path": "/docs/next/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "accordproject-faq",
+              "path": "/docs/next/accordproject-faq",
+              "sidebar": "docs"
+            },
+            {
+              "id": "accordproject-slc",
+              "path": "/docs/next/accordproject-slc",
+              "sidebar": "docs"
+            },
+            {
+              "id": "accordproject-template",
+              "path": "/docs/next/accordproject-template",
+              "sidebar": "docs"
+            },
+            {
+              "id": "accordproject-tour",
+              "path": "/docs/next/accordproject-tour",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ergo-tutorial",
+              "path": "/docs/next/ergo-tutorial"
+            },
+            {
+              "id": "example-eatapple",
+              "path": "/docs/next/example-eatapple"
+            },
+            {
+              "id": "logic-advanced-expr",
+              "path": "/docs/next/logic-advanced-expr",
+              "sidebar": "docs"
+            },
+            {
+              "id": "logic-complex-type",
+              "path": "/docs/next/logic-complex-type",
+              "sidebar": "docs"
+            },
+            {
+              "id": "logic-decl",
+              "path": "/docs/next/logic-decl",
+              "sidebar": "docs"
+            },
+            {
+              "id": "logic-ergo",
+              "path": "/docs/next/logic-ergo",
+              "sidebar": "docs"
+            },
+            {
+              "id": "logic-module",
+              "path": "/docs/next/logic-module",
+              "sidebar": "docs"
+            },
+            {
+              "id": "logic-simple-expr",
+              "path": "/docs/next/logic-simple-expr",
+              "sidebar": "docs"
+            },
+            {
+              "id": "logic-simple-type",
+              "path": "/docs/next/logic-simple-type",
+              "sidebar": "docs"
+            },
+            {
+              "id": "logic-stmt",
+              "path": "/docs/next/logic-stmt",
+              "sidebar": "docs"
+            },
+            {
+              "id": "markup-ciceromark",
+              "path": "/docs/next/markup-ciceromark",
+              "sidebar": "docs"
+            },
+            {
+              "id": "markup-commonmark",
+              "path": "/docs/next/markup-commonmark",
+              "sidebar": "docs"
+            },
+            {
+              "id": "markup-preliminaries",
+              "path": "/docs/next/markup-preliminaries",
+              "sidebar": "docs"
+            },
+            {
+              "id": "markup-templatemark",
+              "path": "/docs/next/markup-templatemark",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-api",
+              "path": "/docs/next/model-api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-classes",
+              "path": "/docs/next/model-classes",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-concerto",
+              "path": "/docs/next/model-concerto",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-decorators",
+              "path": "/docs/next/model-decorators",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-enums",
+              "path": "/docs/next/model-enums",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-namespaces",
+              "path": "/docs/next/model-namespaces",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-properties",
+              "path": "/docs/next/model-properties",
+              "sidebar": "docs"
+            },
+            {
+              "id": "model-relationships",
+              "path": "/docs/next/model-relationships",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-cicero-api",
+              "path": "/docs/next/ref-cicero-api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-cicero-cli",
+              "path": "/docs/next/ref-cicero-cli",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-cicero-testing",
+              "path": "/docs/next/ref-cicero-testing",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-concerto-api",
+              "path": "/docs/next/ref-concerto-api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-concerto-cli",
+              "path": "/docs/next/ref-concerto-cli",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-concerto-decorators",
+              "path": "/docs/next/ref-concerto-decorators",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-ergo-api",
+              "path": "/docs/next/ref-ergo-api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-ergo-cli",
+              "path": "/docs/next/ref-ergo-cli",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-ergo-repl",
+              "path": "/docs/next/ref-ergo-repl",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-ergo-spec",
+              "path": "/docs/next/ref-ergo-spec",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-ergo-stdlib",
+              "path": "/docs/next/ref-ergo-stdlib",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-errors",
+              "path": "/docs/next/ref-errors",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-glossary",
+              "path": "/docs/next/ref-glossary",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-markus-cli",
+              "path": "/docs/next/ref-markus-cli",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-migrate-0.13-0.20",
+              "path": "/docs/next/ref-migrate-0.13-0.20",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-migrate-0.20-0.21",
+              "path": "/docs/next/ref-migrate-0.20-0.21",
+              "sidebar": "docs"
+            },
+            {
+              "id": "ref-web-components-overview",
+              "path": "/docs/next/ref-web-components-overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "started-hello",
+              "path": "/docs/next/started-hello",
+              "sidebar": "docs"
+            },
+            {
+              "id": "started-installation",
+              "path": "/docs/next/started-installation",
+              "sidebar": "docs"
+            },
+            {
+              "id": "started-resources",
+              "path": "/docs/next/started-resources",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-create",
+              "path": "/docs/next/tutorial-create",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-hyperledger",
+              "path": "/docs/next/tutorial-hyperledger",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-library",
+              "path": "/docs/next/tutorial-library",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-nodejs",
+              "path": "/docs/next/tutorial-nodejs",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-studio",
+              "path": "/docs/next/tutorial-studio",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-templates",
+              "path": "/docs/next/tutorial-templates",
+              "sidebar": "docs"
+            },
+            {
+              "id": "tutorial-vscode",
+              "path": "/docs/next/tutorial-vscode",
+              "sidebar": "docs"
+            }
+          ]
+        },
+        {
+          "name": "0.21",
+          "label": "0.21",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "accordproject",
+          "docs": [
+            {
+              "id": "accordproject",
+              "path": "/docs/",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "accordproject-business",
+              "path": "/docs/accordproject-business"
+            },
+            {
+              "id": "accordproject-concepts",
+              "path": "/docs/accordproject-concepts"
+            },
+            {
+              "id": "accordproject-developers",
+              "path": "/docs/accordproject-developers"
+            },
+            {
+              "id": "accordproject-faq",
+              "path": "/docs/accordproject-faq",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "accordproject-installation",
+              "path": "/docs/accordproject-installation"
+            },
+            {
+              "id": "accordproject-models",
+              "path": "/docs/accordproject-models"
+            },
+            {
+              "id": "accordproject-resources",
+              "path": "/docs/accordproject-resources"
+            },
+            {
+              "id": "accordproject-slc",
+              "path": "/docs/accordproject-slc",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "accordproject-studio",
+              "path": "/docs/accordproject-studio"
+            },
+            {
+              "id": "accordproject-template",
+              "path": "/docs/accordproject-template",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "accordproject-templates",
+              "path": "/docs/accordproject-templates"
+            },
+            {
+              "id": "accordproject-tooling",
+              "path": "/docs/accordproject-tooling"
+            },
+            {
+              "id": "accordproject-tour",
+              "path": "/docs/accordproject-tour",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "advanced-hyperledger",
+              "path": "/docs/advanced-hyperledger"
+            },
+            {
+              "id": "advanced-latedelivery",
+              "path": "/docs/advanced-latedelivery"
+            },
+            {
+              "id": "advanced-nodejs",
+              "path": "/docs/advanced-nodejs"
+            },
+            {
+              "id": "basic-create",
+              "path": "/docs/basic-create"
+            },
+            {
+              "id": "basic-library",
+              "path": "/docs/basic-library"
+            },
+            {
+              "id": "basic-templates",
+              "path": "/docs/basic-templates"
+            },
+            {
+              "id": "basic-use",
+              "path": "/docs/basic-use"
+            },
+            {
+              "id": "cicero-api",
+              "path": "/docs/cicero-api"
+            },
+            {
+              "id": "cicero-cli",
+              "path": "/docs/cicero-cli"
+            },
+            {
+              "id": "concerto-api",
+              "path": "/docs/concerto-api"
+            },
+            {
+              "id": "concerto-cli",
+              "path": "/docs/concerto-cli"
+            },
+            {
+              "id": "ergo-api",
+              "path": "/docs/ergo-api"
+            },
+            {
+              "id": "ergo-cli",
+              "path": "/docs/ergo-cli"
+            },
+            {
+              "id": "ergo-repl",
+              "path": "/docs/ergo-repl"
+            },
+            {
+              "id": "ergo-tutorial",
+              "path": "/docs/ergo-tutorial"
+            },
+            {
+              "id": "example-eatapple",
+              "path": "/docs/example-eatapple"
+            },
+            {
+              "id": "logic-advanced-expr",
+              "path": "/docs/logic-advanced-expr",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "logic-complex-type",
+              "path": "/docs/logic-complex-type",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "logic-decl",
+              "path": "/docs/logic-decl",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "logic-ergo",
+              "path": "/docs/logic-ergo",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "logic-module",
+              "path": "/docs/logic-module",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "logic-simple-expr",
+              "path": "/docs/logic-simple-expr",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "logic-simple-type",
+              "path": "/docs/logic-simple-type",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "logic-stmt",
+              "path": "/docs/logic-stmt",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "markup-blocks",
+              "path": "/docs/markup-blocks"
+            },
+            {
+              "id": "markup-cicero",
+              "path": "/docs/markup-cicero"
+            },
+            {
+              "id": "markup-ciceromark",
+              "path": "/docs/markup-ciceromark",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "markup-commonmark",
+              "path": "/docs/markup-commonmark",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "markup-ergo",
+              "path": "/docs/markup-ergo"
+            },
+            {
+              "id": "markup-preliminaries",
+              "path": "/docs/markup-preliminaries",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "markup-templatemark",
+              "path": "/docs/markup-templatemark",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "markup-variables",
+              "path": "/docs/markup-variables"
+            },
+            {
+              "id": "markus-cli",
+              "path": "/docs/markus-cli"
+            },
+            {
+              "id": "model-api",
+              "path": "/docs/model-api",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "model-classes",
+              "path": "/docs/model-classes",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "model-concerto",
+              "path": "/docs/model-concerto",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "model-decorators",
+              "path": "/docs/model-decorators",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "model-enums",
+              "path": "/docs/model-enums",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "model-namespaces",
+              "path": "/docs/model-namespaces",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "model-properties",
+              "path": "/docs/model-properties",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "model-relationships",
+              "path": "/docs/model-relationships",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-cicero-api",
+              "path": "/docs/ref-cicero-api",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-cicero-cli",
+              "path": "/docs/ref-cicero-cli",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-cicero-testing",
+              "path": "/docs/ref-cicero-testing",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-cicero-ui",
+              "path": "/docs/ref-cicero-ui"
+            },
+            {
+              "id": "ref-concerto-api",
+              "path": "/docs/ref-concerto-api",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-concerto-cli",
+              "path": "/docs/ref-concerto-cli",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-concerto-decorators",
+              "path": "/docs/ref-concerto-decorators",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-ergo-api",
+              "path": "/docs/ref-ergo-api",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-ergo-cli",
+              "path": "/docs/ref-ergo-cli",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-ergo-repl",
+              "path": "/docs/ref-ergo-repl",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-ergo-spec",
+              "path": "/docs/ref-ergo-spec",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-ergo-stdlib",
+              "path": "/docs/ref-ergo-stdlib",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-errors",
+              "path": "/docs/ref-errors",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-glossary",
+              "path": "/docs/ref-glossary",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-logic",
+              "path": "/docs/ref-logic"
+            },
+            {
+              "id": "ref-logic-specification",
+              "path": "/docs/ref-logic-specification"
+            },
+            {
+              "id": "ref-logic-stdlib",
+              "path": "/docs/ref-logic-stdlib"
+            },
+            {
+              "id": "ref-markup",
+              "path": "/docs/ref-markup"
+            },
+            {
+              "id": "ref-markus-cli",
+              "path": "/docs/ref-markus-cli",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-migrate-0.13-0.20",
+              "path": "/docs/ref-migrate-0.13-0.20",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-migrate-0.20-0.21",
+              "path": "/docs/ref-migrate-0.20-0.21",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "ref-testing",
+              "path": "/docs/ref-testing"
+            },
+            {
+              "id": "ref-web-components-overview",
+              "path": "/docs/ref-web-components-overview",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "spec-concepts",
+              "path": "/docs/spec-concepts"
+            },
+            {
+              "id": "spec-example",
+              "path": "/docs/spec-example"
+            },
+            {
+              "id": "spec-execution",
+              "path": "/docs/spec-execution"
+            },
+            {
+              "id": "spec-instance",
+              "path": "/docs/spec-instance"
+            },
+            {
+              "id": "spec-overview",
+              "path": "/docs/spec-overview"
+            },
+            {
+              "id": "spec-packaging",
+              "path": "/docs/spec-packaging"
+            },
+            {
+              "id": "spec-template",
+              "path": "/docs/spec-template"
+            },
+            {
+              "id": "started-hello",
+              "path": "/docs/started-hello",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "started-installation",
+              "path": "/docs/started-installation",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "started-resources",
+              "path": "/docs/started-resources",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "started-studio",
+              "path": "/docs/started-studio"
+            },
+            {
+              "id": "tutorial-create",
+              "path": "/docs/tutorial-create",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "tutorial-hyperledger",
+              "path": "/docs/tutorial-hyperledger",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "tutorial-latedelivery",
+              "path": "/docs/tutorial-latedelivery"
+            },
+            {
+              "id": "tutorial-library",
+              "path": "/docs/tutorial-library",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "tutorial-nodejs",
+              "path": "/docs/tutorial-nodejs",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "tutorial-studio",
+              "path": "/docs/tutorial-studio",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "tutorial-templates",
+              "path": "/docs/tutorial-templates",
+              "sidebar": "version-0.21/docs"
+            },
+            {
+              "id": "tutorial-vscode",
+              "path": "/docs/tutorial-vscode",
+              "sidebar": "version-0.21/docs"
+            }
+          ]
+        },
+        {
+          "name": "0.20",
+          "label": "0.20",
+          "isLast": false,
+          "path": "/docs/0.20",
+          "mainDocId": "accordproject",
+          "docs": [
+            {
+              "id": "accordproject",
+              "path": "/docs/0.20/",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "accordproject-business",
+              "path": "/docs/0.20/accordproject-business",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "accordproject-concepts",
+              "path": "/docs/0.20/accordproject-concepts",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "accordproject-developers",
+              "path": "/docs/0.20/accordproject-developers",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "accordproject-faq",
+              "path": "/docs/0.20/accordproject-faq"
+            },
+            {
+              "id": "accordproject-installation",
+              "path": "/docs/0.20/accordproject-installation"
+            },
+            {
+              "id": "accordproject-models",
+              "path": "/docs/0.20/accordproject-models"
+            },
+            {
+              "id": "accordproject-resources",
+              "path": "/docs/0.20/accordproject-resources"
+            },
+            {
+              "id": "accordproject-slc",
+              "path": "/docs/0.20/accordproject-slc"
+            },
+            {
+              "id": "accordproject-studio",
+              "path": "/docs/0.20/accordproject-studio"
+            },
+            {
+              "id": "accordproject-template",
+              "path": "/docs/0.20/accordproject-template"
+            },
+            {
+              "id": "accordproject-templates",
+              "path": "/docs/0.20/accordproject-templates"
+            },
+            {
+              "id": "accordproject-tooling",
+              "path": "/docs/0.20/accordproject-tooling"
+            },
+            {
+              "id": "accordproject-tour",
+              "path": "/docs/0.20/accordproject-tour"
+            },
+            {
+              "id": "advanced-hyperledger",
+              "path": "/docs/0.20/advanced-hyperledger"
+            },
+            {
+              "id": "advanced-latedelivery",
+              "path": "/docs/0.20/advanced-latedelivery"
+            },
+            {
+              "id": "advanced-nodejs",
+              "path": "/docs/0.20/advanced-nodejs"
+            },
+            {
+              "id": "basic-create",
+              "path": "/docs/0.20/basic-create"
+            },
+            {
+              "id": "basic-library",
+              "path": "/docs/0.20/basic-library"
+            },
+            {
+              "id": "basic-templates",
+              "path": "/docs/0.20/basic-templates"
+            },
+            {
+              "id": "basic-use",
+              "path": "/docs/0.20/basic-use"
+            },
+            {
+              "id": "cicero-api",
+              "path": "/docs/0.20/cicero-api",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "cicero-cli",
+              "path": "/docs/0.20/cicero-cli",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "concerto-api",
+              "path": "/docs/0.20/concerto-api",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "concerto-cli",
+              "path": "/docs/0.20/concerto-cli",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ergo-api",
+              "path": "/docs/0.20/ergo-api",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ergo-cli",
+              "path": "/docs/0.20/ergo-cli",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ergo-repl",
+              "path": "/docs/0.20/ergo-repl",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ergo-tutorial",
+              "path": "/docs/0.20/ergo-tutorial"
+            },
+            {
+              "id": "example-eatapple",
+              "path": "/docs/0.20/example-eatapple"
+            },
+            {
+              "id": "logic-advanced-expr",
+              "path": "/docs/0.20/logic-advanced-expr",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "logic-complex-type",
+              "path": "/docs/0.20/logic-complex-type",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "logic-decl",
+              "path": "/docs/0.20/logic-decl",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "logic-ergo",
+              "path": "/docs/0.20/logic-ergo",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "logic-module",
+              "path": "/docs/0.20/logic-module",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "logic-simple-expr",
+              "path": "/docs/0.20/logic-simple-expr",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "logic-simple-type",
+              "path": "/docs/0.20/logic-simple-type",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "logic-stmt",
+              "path": "/docs/0.20/logic-stmt",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "markup-blocks",
+              "path": "/docs/0.20/markup-blocks",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "markup-cicero",
+              "path": "/docs/0.20/markup-cicero",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "markup-ciceromark",
+              "path": "/docs/0.20/markup-ciceromark"
+            },
+            {
+              "id": "markup-commonmark",
+              "path": "/docs/0.20/markup-commonmark",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "markup-ergo",
+              "path": "/docs/0.20/markup-ergo",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "markup-preliminaries",
+              "path": "/docs/0.20/markup-preliminaries"
+            },
+            {
+              "id": "markup-templatemark",
+              "path": "/docs/0.20/markup-templatemark"
+            },
+            {
+              "id": "markup-variables",
+              "path": "/docs/0.20/markup-variables",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "markus-cli",
+              "path": "/docs/0.20/markus-cli",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-api",
+              "path": "/docs/0.20/model-api",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-classes",
+              "path": "/docs/0.20/model-classes",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-concerto",
+              "path": "/docs/0.20/model-concerto",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-decorators",
+              "path": "/docs/0.20/model-decorators",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-enums",
+              "path": "/docs/0.20/model-enums",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-namespaces",
+              "path": "/docs/0.20/model-namespaces",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-properties",
+              "path": "/docs/0.20/model-properties",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "model-relationships",
+              "path": "/docs/0.20/model-relationships",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-cicero-api",
+              "path": "/docs/0.20/ref-cicero-api"
+            },
+            {
+              "id": "ref-cicero-cli",
+              "path": "/docs/0.20/ref-cicero-cli"
+            },
+            {
+              "id": "ref-cicero-testing",
+              "path": "/docs/0.20/ref-cicero-testing"
+            },
+            {
+              "id": "ref-cicero-ui",
+              "path": "/docs/0.20/ref-cicero-ui",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-concerto-api",
+              "path": "/docs/0.20/ref-concerto-api"
+            },
+            {
+              "id": "ref-concerto-cli",
+              "path": "/docs/0.20/ref-concerto-cli"
+            },
+            {
+              "id": "ref-concerto-decorators",
+              "path": "/docs/0.20/ref-concerto-decorators"
+            },
+            {
+              "id": "ref-ergo-api",
+              "path": "/docs/0.20/ref-ergo-api"
+            },
+            {
+              "id": "ref-ergo-cli",
+              "path": "/docs/0.20/ref-ergo-cli"
+            },
+            {
+              "id": "ref-ergo-repl",
+              "path": "/docs/0.20/ref-ergo-repl"
+            },
+            {
+              "id": "ref-ergo-spec",
+              "path": "/docs/0.20/ref-ergo-spec"
+            },
+            {
+              "id": "ref-ergo-stdlib",
+              "path": "/docs/0.20/ref-ergo-stdlib"
+            },
+            {
+              "id": "ref-errors",
+              "path": "/docs/0.20/ref-errors",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-glossary",
+              "path": "/docs/0.20/ref-glossary",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-logic",
+              "path": "/docs/0.20/ref-logic",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-logic-specification",
+              "path": "/docs/0.20/ref-logic-specification",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-logic-stdlib",
+              "path": "/docs/0.20/ref-logic-stdlib",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-markup",
+              "path": "/docs/0.20/ref-markup"
+            },
+            {
+              "id": "ref-markus-cli",
+              "path": "/docs/0.20/ref-markus-cli"
+            },
+            {
+              "id": "ref-migrate-0.13-0.20",
+              "path": "/docs/0.20/ref-migrate-0.13-0.20",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-migrate-0.20-0.21",
+              "path": "/docs/0.20/ref-migrate-0.20-0.21"
+            },
+            {
+              "id": "ref-testing",
+              "path": "/docs/0.20/ref-testing",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "ref-web-components-overview",
+              "path": "/docs/0.20/ref-web-components-overview"
+            },
+            {
+              "id": "spec-concepts",
+              "path": "/docs/0.20/spec-concepts"
+            },
+            {
+              "id": "spec-example",
+              "path": "/docs/0.20/spec-example"
+            },
+            {
+              "id": "spec-execution",
+              "path": "/docs/0.20/spec-execution"
+            },
+            {
+              "id": "spec-instance",
+              "path": "/docs/0.20/spec-instance"
+            },
+            {
+              "id": "spec-overview",
+              "path": "/docs/0.20/spec-overview"
+            },
+            {
+              "id": "spec-packaging",
+              "path": "/docs/0.20/spec-packaging"
+            },
+            {
+              "id": "spec-template",
+              "path": "/docs/0.20/spec-template"
+            },
+            {
+              "id": "started-hello",
+              "path": "/docs/0.20/started-hello",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "started-installation",
+              "path": "/docs/0.20/started-installation",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "started-resources",
+              "path": "/docs/0.20/started-resources",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "started-studio",
+              "path": "/docs/0.20/started-studio",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "tutorial-create",
+              "path": "/docs/0.20/tutorial-create",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "tutorial-hyperledger",
+              "path": "/docs/0.20/tutorial-hyperledger",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "tutorial-latedelivery",
+              "path": "/docs/0.20/tutorial-latedelivery",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "tutorial-library",
+              "path": "/docs/0.20/tutorial-library",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "tutorial-nodejs",
+              "path": "/docs/0.20/tutorial-nodejs",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "tutorial-studio",
+              "path": "/docs/0.20/tutorial-studio"
+            },
+            {
+              "id": "tutorial-templates",
+              "path": "/docs/0.20/tutorial-templates",
+              "sidebar": "version-0.20/docs"
+            },
+            {
+              "id": "tutorial-vscode",
+              "path": "/docs/0.20/tutorial-vscode"
+            }
+          ]
+        },
+        {
+          "name": "0.13",
+          "label": "0.13",
+          "isLast": false,
+          "path": "/docs/0.13",
+          "mainDocId": "accordproject",
+          "docs": [
+            {
+              "id": "accordproject",
+              "path": "/docs/0.13/",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "accordproject-faq",
+              "path": "/docs/0.13/accordproject-faq"
+            },
+            {
+              "id": "accordproject-installation",
+              "path": "/docs/0.13/accordproject-installation",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "accordproject-models",
+              "path": "/docs/0.13/accordproject-models",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "accordproject-resources",
+              "path": "/docs/0.13/accordproject-resources",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "accordproject-slc",
+              "path": "/docs/0.13/accordproject-slc"
+            },
+            {
+              "id": "accordproject-studio",
+              "path": "/docs/0.13/accordproject-studio"
+            },
+            {
+              "id": "accordproject-template",
+              "path": "/docs/0.13/accordproject-template"
+            },
+            {
+              "id": "accordproject-templates",
+              "path": "/docs/0.13/accordproject-templates",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "accordproject-tooling",
+              "path": "/docs/0.13/accordproject-tooling",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "accordproject-tour",
+              "path": "/docs/0.13/accordproject-tour"
+            },
+            {
+              "id": "advanced-hyperledger",
+              "path": "/docs/0.13/advanced-hyperledger",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "advanced-latedelivery",
+              "path": "/docs/0.13/advanced-latedelivery",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "advanced-nodejs",
+              "path": "/docs/0.13/advanced-nodejs",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "basic-create",
+              "path": "/docs/0.13/basic-create",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "basic-library",
+              "path": "/docs/0.13/basic-library"
+            },
+            {
+              "id": "basic-templates",
+              "path": "/docs/0.13/basic-templates",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "basic-use",
+              "path": "/docs/0.13/basic-use",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "cicero-api",
+              "path": "/docs/0.13/cicero-api",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "cicero-cli",
+              "path": "/docs/0.13/cicero-cli",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ergo-api",
+              "path": "/docs/0.13/ergo-api",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ergo-cli",
+              "path": "/docs/0.13/ergo-cli",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ergo-tutorial",
+              "path": "/docs/0.13/ergo-tutorial"
+            },
+            {
+              "id": "example-eatapple",
+              "path": "/docs/0.13/example-eatapple"
+            },
+            {
+              "id": "logic-advanced-expr",
+              "path": "/docs/0.13/logic-advanced-expr",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "logic-complex-type",
+              "path": "/docs/0.13/logic-complex-type",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "logic-decl",
+              "path": "/docs/0.13/logic-decl",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "logic-ergo",
+              "path": "/docs/0.13/logic-ergo",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "logic-module",
+              "path": "/docs/0.13/logic-module",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "logic-simple-expr",
+              "path": "/docs/0.13/logic-simple-expr",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "logic-simple-type",
+              "path": "/docs/0.13/logic-simple-type",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "logic-stmt",
+              "path": "/docs/0.13/logic-stmt",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "markup-ciceromark",
+              "path": "/docs/0.13/markup-ciceromark"
+            },
+            {
+              "id": "markup-commonmark",
+              "path": "/docs/0.13/markup-commonmark"
+            },
+            {
+              "id": "markup-preliminaries",
+              "path": "/docs/0.13/markup-preliminaries"
+            },
+            {
+              "id": "markup-templatemark",
+              "path": "/docs/0.13/markup-templatemark"
+            },
+            {
+              "id": "model-api",
+              "path": "/docs/0.13/model-api"
+            },
+            {
+              "id": "model-classes",
+              "path": "/docs/0.13/model-classes"
+            },
+            {
+              "id": "model-concerto",
+              "path": "/docs/0.13/model-concerto"
+            },
+            {
+              "id": "model-decorators",
+              "path": "/docs/0.13/model-decorators"
+            },
+            {
+              "id": "model-enums",
+              "path": "/docs/0.13/model-enums"
+            },
+            {
+              "id": "model-namespaces",
+              "path": "/docs/0.13/model-namespaces"
+            },
+            {
+              "id": "model-properties",
+              "path": "/docs/0.13/model-properties"
+            },
+            {
+              "id": "model-relationships",
+              "path": "/docs/0.13/model-relationships"
+            },
+            {
+              "id": "ref-cicero-api",
+              "path": "/docs/0.13/ref-cicero-api"
+            },
+            {
+              "id": "ref-cicero-cli",
+              "path": "/docs/0.13/ref-cicero-cli"
+            },
+            {
+              "id": "ref-cicero-testing",
+              "path": "/docs/0.13/ref-cicero-testing"
+            },
+            {
+              "id": "ref-concerto-api",
+              "path": "/docs/0.13/ref-concerto-api"
+            },
+            {
+              "id": "ref-concerto-cli",
+              "path": "/docs/0.13/ref-concerto-cli"
+            },
+            {
+              "id": "ref-concerto-decorators",
+              "path": "/docs/0.13/ref-concerto-decorators"
+            },
+            {
+              "id": "ref-ergo-api",
+              "path": "/docs/0.13/ref-ergo-api"
+            },
+            {
+              "id": "ref-ergo-cli",
+              "path": "/docs/0.13/ref-ergo-cli"
+            },
+            {
+              "id": "ref-ergo-repl",
+              "path": "/docs/0.13/ref-ergo-repl"
+            },
+            {
+              "id": "ref-ergo-spec",
+              "path": "/docs/0.13/ref-ergo-spec"
+            },
+            {
+              "id": "ref-ergo-stdlib",
+              "path": "/docs/0.13/ref-ergo-stdlib"
+            },
+            {
+              "id": "ref-errors",
+              "path": "/docs/0.13/ref-errors",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ref-glossary",
+              "path": "/docs/0.13/ref-glossary"
+            },
+            {
+              "id": "ref-logic",
+              "path": "/docs/0.13/ref-logic",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ref-logic-specification",
+              "path": "/docs/0.13/ref-logic-specification",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ref-logic-stdlib",
+              "path": "/docs/0.13/ref-logic-stdlib",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ref-markup",
+              "path": "/docs/0.13/ref-markup",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ref-markus-cli",
+              "path": "/docs/0.13/ref-markus-cli"
+            },
+            {
+              "id": "ref-migrate-0.13-0.20",
+              "path": "/docs/0.13/ref-migrate-0.13-0.20"
+            },
+            {
+              "id": "ref-migrate-0.20-0.21",
+              "path": "/docs/0.13/ref-migrate-0.20-0.21"
+            },
+            {
+              "id": "ref-testing",
+              "path": "/docs/0.13/ref-testing",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "ref-web-components-overview",
+              "path": "/docs/0.13/ref-web-components-overview"
+            },
+            {
+              "id": "spec-concepts",
+              "path": "/docs/0.13/spec-concepts",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "spec-example",
+              "path": "/docs/0.13/spec-example",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "spec-execution",
+              "path": "/docs/0.13/spec-execution",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "spec-instance",
+              "path": "/docs/0.13/spec-instance",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "spec-overview",
+              "path": "/docs/0.13/spec-overview",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "spec-packaging",
+              "path": "/docs/0.13/spec-packaging",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "spec-template",
+              "path": "/docs/0.13/spec-template",
+              "sidebar": "version-0.13/docs"
+            },
+            {
+              "id": "started-hello",
+              "path": "/docs/0.13/started-hello"
+            },
+            {
+              "id": "started-installation",
+              "path": "/docs/0.13/started-installation"
+            },
+            {
+              "id": "started-resources",
+              "path": "/docs/0.13/started-resources"
+            },
+            {
+              "id": "tutorial-create",
+              "path": "/docs/0.13/tutorial-create"
+            },
+            {
+              "id": "tutorial-hyperledger",
+              "path": "/docs/0.13/tutorial-hyperledger"
+            },
+            {
+              "id": "tutorial-library",
+              "path": "/docs/0.13/tutorial-library"
+            },
+            {
+              "id": "tutorial-nodejs",
+              "path": "/docs/0.13/tutorial-nodejs"
+            },
+            {
+              "id": "tutorial-studio",
+              "path": "/docs/0.13/tutorial-studio"
+            },
+            {
+              "id": "tutorial-templates",
+              "path": "/docs/0.13/tutorial-templates"
+            },
+            {
+              "id": "tutorial-vscode",
+              "path": "/docs/0.13/tutorial-vscode"
+            }
+          ]
+        },
+        {
+          "name": "0.12",
+          "label": "0.12",
+          "isLast": false,
+          "path": "/docs/0.12",
+          "mainDocId": "accordproject",
+          "docs": [
+            {
+              "id": "accordproject",
+              "path": "/docs/0.12/",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "accordproject-faq",
+              "path": "/docs/0.12/accordproject-faq"
+            },
+            {
+              "id": "accordproject-installation",
+              "path": "/docs/0.12/accordproject-installation",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "accordproject-models",
+              "path": "/docs/0.12/accordproject-models",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "accordproject-resources",
+              "path": "/docs/0.12/accordproject-resources",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "accordproject-slc",
+              "path": "/docs/0.12/accordproject-slc"
+            },
+            {
+              "id": "accordproject-studio",
+              "path": "/docs/0.12/accordproject-studio"
+            },
+            {
+              "id": "accordproject-template",
+              "path": "/docs/0.12/accordproject-template"
+            },
+            {
+              "id": "accordproject-templates",
+              "path": "/docs/0.12/accordproject-templates",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "accordproject-tooling",
+              "path": "/docs/0.12/accordproject-tooling",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "accordproject-tour",
+              "path": "/docs/0.12/accordproject-tour"
+            },
+            {
+              "id": "advanced-hyperledger",
+              "path": "/docs/0.12/advanced-hyperledger",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "advanced-latedelivery",
+              "path": "/docs/0.12/advanced-latedelivery",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "advanced-nodejs",
+              "path": "/docs/0.12/advanced-nodejs",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "basic-create",
+              "path": "/docs/0.12/basic-create",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "basic-library",
+              "path": "/docs/0.12/basic-library"
+            },
+            {
+              "id": "basic-templates",
+              "path": "/docs/0.12/basic-templates",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "basic-use",
+              "path": "/docs/0.12/basic-use",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "cicero-api",
+              "path": "/docs/0.12/cicero-api",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "cicero-cli",
+              "path": "/docs/0.12/cicero-cli",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ergo-api",
+              "path": "/docs/0.12/ergo-api",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ergo-cli",
+              "path": "/docs/0.12/ergo-cli",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ergo-tutorial",
+              "path": "/docs/0.12/ergo-tutorial"
+            },
+            {
+              "id": "example-eatapple",
+              "path": "/docs/0.12/example-eatapple"
+            },
+            {
+              "id": "logic-advanced-expr",
+              "path": "/docs/0.12/logic-advanced-expr",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "logic-complex-type",
+              "path": "/docs/0.12/logic-complex-type",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "logic-decl",
+              "path": "/docs/0.12/logic-decl",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "logic-ergo",
+              "path": "/docs/0.12/logic-ergo",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "logic-module",
+              "path": "/docs/0.12/logic-module",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "logic-simple-expr",
+              "path": "/docs/0.12/logic-simple-expr",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "logic-simple-type",
+              "path": "/docs/0.12/logic-simple-type",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "logic-stmt",
+              "path": "/docs/0.12/logic-stmt",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "markup-ciceromark",
+              "path": "/docs/0.12/markup-ciceromark"
+            },
+            {
+              "id": "markup-commonmark",
+              "path": "/docs/0.12/markup-commonmark"
+            },
+            {
+              "id": "markup-preliminaries",
+              "path": "/docs/0.12/markup-preliminaries"
+            },
+            {
+              "id": "markup-templatemark",
+              "path": "/docs/0.12/markup-templatemark"
+            },
+            {
+              "id": "model-api",
+              "path": "/docs/0.12/model-api"
+            },
+            {
+              "id": "model-classes",
+              "path": "/docs/0.12/model-classes"
+            },
+            {
+              "id": "model-concerto",
+              "path": "/docs/0.12/model-concerto"
+            },
+            {
+              "id": "model-decorators",
+              "path": "/docs/0.12/model-decorators"
+            },
+            {
+              "id": "model-enums",
+              "path": "/docs/0.12/model-enums"
+            },
+            {
+              "id": "model-namespaces",
+              "path": "/docs/0.12/model-namespaces"
+            },
+            {
+              "id": "model-properties",
+              "path": "/docs/0.12/model-properties"
+            },
+            {
+              "id": "model-relationships",
+              "path": "/docs/0.12/model-relationships"
+            },
+            {
+              "id": "ref-cicero-api",
+              "path": "/docs/0.12/ref-cicero-api"
+            },
+            {
+              "id": "ref-cicero-cli",
+              "path": "/docs/0.12/ref-cicero-cli"
+            },
+            {
+              "id": "ref-cicero-testing",
+              "path": "/docs/0.12/ref-cicero-testing"
+            },
+            {
+              "id": "ref-concerto-api",
+              "path": "/docs/0.12/ref-concerto-api"
+            },
+            {
+              "id": "ref-concerto-cli",
+              "path": "/docs/0.12/ref-concerto-cli"
+            },
+            {
+              "id": "ref-concerto-decorators",
+              "path": "/docs/0.12/ref-concerto-decorators"
+            },
+            {
+              "id": "ref-ergo-api",
+              "path": "/docs/0.12/ref-ergo-api"
+            },
+            {
+              "id": "ref-ergo-cli",
+              "path": "/docs/0.12/ref-ergo-cli"
+            },
+            {
+              "id": "ref-ergo-repl",
+              "path": "/docs/0.12/ref-ergo-repl"
+            },
+            {
+              "id": "ref-ergo-spec",
+              "path": "/docs/0.12/ref-ergo-spec"
+            },
+            {
+              "id": "ref-ergo-stdlib",
+              "path": "/docs/0.12/ref-ergo-stdlib"
+            },
+            {
+              "id": "ref-errors",
+              "path": "/docs/0.12/ref-errors"
+            },
+            {
+              "id": "ref-glossary",
+              "path": "/docs/0.12/ref-glossary"
+            },
+            {
+              "id": "ref-logic",
+              "path": "/docs/0.12/ref-logic",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ref-logic-specification",
+              "path": "/docs/0.12/ref-logic-specification",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ref-logic-stdlib",
+              "path": "/docs/0.12/ref-logic-stdlib",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ref-markup",
+              "path": "/docs/0.12/ref-markup",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ref-markus-cli",
+              "path": "/docs/0.12/ref-markus-cli"
+            },
+            {
+              "id": "ref-migrate-0.13-0.20",
+              "path": "/docs/0.12/ref-migrate-0.13-0.20"
+            },
+            {
+              "id": "ref-migrate-0.20-0.21",
+              "path": "/docs/0.12/ref-migrate-0.20-0.21"
+            },
+            {
+              "id": "ref-testing",
+              "path": "/docs/0.12/ref-testing",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "ref-web-components-overview",
+              "path": "/docs/0.12/ref-web-components-overview"
+            },
+            {
+              "id": "spec-concepts",
+              "path": "/docs/0.12/spec-concepts",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "spec-example",
+              "path": "/docs/0.12/spec-example",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "spec-execution",
+              "path": "/docs/0.12/spec-execution",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "spec-instance",
+              "path": "/docs/0.12/spec-instance",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "spec-overview",
+              "path": "/docs/0.12/spec-overview",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "spec-packaging",
+              "path": "/docs/0.12/spec-packaging",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "spec-template",
+              "path": "/docs/0.12/spec-template",
+              "sidebar": "version-0.12/docs"
+            },
+            {
+              "id": "started-hello",
+              "path": "/docs/0.12/started-hello"
+            },
+            {
+              "id": "started-installation",
+              "path": "/docs/0.12/started-installation"
+            },
+            {
+              "id": "started-resources",
+              "path": "/docs/0.12/started-resources"
+            },
+            {
+              "id": "tutorial-create",
+              "path": "/docs/0.12/tutorial-create"
+            },
+            {
+              "id": "tutorial-hyperledger",
+              "path": "/docs/0.12/tutorial-hyperledger"
+            },
+            {
+              "id": "tutorial-library",
+              "path": "/docs/0.12/tutorial-library"
+            },
+            {
+              "id": "tutorial-nodejs",
+              "path": "/docs/0.12/tutorial-nodejs"
+            },
+            {
+              "id": "tutorial-studio",
+              "path": "/docs/0.12/tutorial-studio"
+            },
+            {
+              "id": "tutorial-templates",
+              "path": "/docs/0.12/tutorial-templates"
+            },
+            {
+              "id": "tutorial-vscode",
+              "path": "/docs/0.12/tutorial-vscode"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

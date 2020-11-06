@@ -1,0 +1,22 @@
+{
+  "unversionedId": "ref-logic",
+  "id": "version-0.12/ref-logic",
+  "isDocsHomePage": false,
+  "title": "Ergo Language Reference",
+  "description": "Lexical conventions",
+  "source": "@site/versioned_docs/version-0.12/ref-logic.md",
+  "slug": "/ref-logic",
+  "permalink": "/docs/0.12/ref-logic",
+  "version": "0.12",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.12/docs",
+  "previous": {
+    "title": "Testing Reference",
+    "permalink": "/docs/0.12/ref-testing"
+  },
+  "next": {
+    "title": "Ergo Libraries",
+    "permalink": "/docs/0.12/ref-logic-stdlib"
+  }
+}

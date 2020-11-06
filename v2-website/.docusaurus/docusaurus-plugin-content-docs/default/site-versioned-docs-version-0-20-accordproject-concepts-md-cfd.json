@@ -1,0 +1,22 @@
+{
+  "unversionedId": "accordproject-concepts",
+  "id": "version-0.20/accordproject-concepts",
+  "isDocsHomePage": false,
+  "title": "Key Concepts",
+  "description": "What is a Template?",
+  "source": "@site/versioned_docs/version-0.20/accordproject-concepts.md",
+  "slug": "/accordproject-concepts",
+  "permalink": "/docs/0.20/accordproject-concepts",
+  "version": "0.20",
+  "lastUpdatedBy": "Author",
+  "lastUpdatedAt": 1539502055,
+  "sidebar": "version-0.20/docs",
+  "previous": {
+    "title": "Overview",
+    "permalink": "/docs/0.20/"
+  },
+  "next": {
+    "title": "For Business",
+    "permalink": "/docs/0.20/accordproject-business"
+  }
+}
