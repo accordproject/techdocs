@@ -37,15 +37,22 @@ module.exports={
     [
       "@docusaurus/preset-classic",
       {
+        "debug": true,
         "docs": {
           "homePageId": "accordproject",
           "showLastUpdateAuthor": true,
           "showLastUpdateTime": true,
           "path": "../docs",
+          "remarkPlugins": [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
+          ],
           "sidebarPath": "/home/prakhar/projects/techdocs_og/techdocs/v2-website/sidebars.json"
         },
         "blog": {
           "path": "blog"
+        },
+        "pages": {
+          "remarkPlugins": [require('@docusaurus/remark-plugin-npm2yarn')],
         },
         "theme": {
           "customCss": "/home/prakhar/projects/techdocs_og/techdocs/v2-website/src/css/customTheme.css"
@@ -59,15 +66,34 @@ module.exports={
       {
         "fromExtensions": [
           "html"
+        ],
+        "redirects": [
+          {
+            "from": "/*.html",
+            "to": "/*"
+          }
         ]
       }
     ]
   ],
   "themeConfig": {
+    "hideableSidebar": true,
+    "colorMode": {
+      "defaultMode": 'light',
+      "disableSwitch": false,
+      "respectPrefersColorScheme": true,
+    },
+    "prism": {
+      "theme": require('prism-react-renderer/themes/github'),
+      "darkTheme": require('prism-react-renderer/themes/dracula'),
+    },
     "navbar": {
       "title": "Accord Project",
+      "hideOnScroll": true,
       "logo": {
-        "src": "img/A-MARK-ACCORDPROJECT-ONELINE-white.svg"
+        "alt": 'Accord Project Logo',
+        "src": 'img/accord_icon.png',
+        "srcDark": 'img/accord_icon_white.png',
       },
       "items": [
         {
@@ -107,22 +133,20 @@ module.exports={
               "label": "0.12",
               "to": "docs/0.12/"
             },
-            {
-              "label": "Master/Unreleased",
-              "to": "docs/next/",
-              "activeBaseRegex": "docs/next/(?!support|team|resources)"
-            }
           ]
         }
       ]
     },
     "image": "img/docusaurus.png",
     "footer": {
+      "style": 'dark',
       "links": [],
-      "copyright": "Copyright © 2018-2020 Accord Project, LLC.",
+      "copyright": 'Copyright © 2018-' + new Date().getFullYear() + ' Accord Project, LLC.',
       "logo": {
-        "src": "img/accord_icon_white.png"
-      }
+        "alt": 'Accord Project Logo',
+        "src": 'img/accord_icon_white.png',
+        "href": 'https://accordproject.org"',
+      },
     },
     "algolia": {
       "apiKey": "1679802ddfc315329d6b5f4616b30e51",
