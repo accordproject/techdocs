@@ -53,8 +53,23 @@ export default [
   exact: true,
 },
 {
+  path: '/help',
+  component: ComponentCreator('/help','416'),
+  exact: true,
+},
+{
   path: '/search',
   component: ComponentCreator('/search','367'),
+  exact: true,
+},
+{
+  path: '/users',
+  component: ComponentCreator('/users','9b3'),
+  exact: true,
+},
+{
+  path: '/versions',
+  component: ComponentCreator('/versions','b27'),
   exact: true,
 },
 {

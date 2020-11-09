@@ -40,8 +40,20 @@
     "sidebar": "sidebar---blog-1-b-2-057",
     "content": "content---blog-2018-05-18-blog-poste-0-b-c51"
   },
+  "/help-416": {
+    "component": "component---site-src-pages-help-js-7-e-3-222",
+    "config": "config---5-e-9-4f3"
+  },
   "/search-367": {
     "component": "component---home-prakhar-projects-techdocs-og-techdocs-v-2-website-node-modules-docusaurus-theme-search-algolia-src-theme-search-page-index-js-323-47a"
+  },
+  "/users-9b3": {
+    "component": "component---site-src-pages-users-js-1-db-7ac",
+    "config": "config---5-e-9-4f3"
+  },
+  "/versions-b27": {
+    "component": "component---site-src-pages-versions-js-18-b-bfe",
+    "config": "config---5-e-9-4f3"
   },
   "/docs/0.12-9f7": {
     "component": "component---theme-doc-page-1-be-9be",
