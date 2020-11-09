@@ -413,8 +413,8 @@
               "slug": "/",
               "permalink": "/docs/next/",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "next": {
                 "title": "Smart Legal Contracts",
@@ -431,8 +431,8 @@
               "slug": "/accordproject-faq",
               "permalink": "/docs/next/accordproject-faq",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "tmb",
+              "lastUpdatedAt": 1596637858,
               "sidebar": "docs",
               "previous": {
                 "title": "Online Tour",
@@ -453,8 +453,8 @@
               "slug": "/accordproject-slc",
               "permalink": "/docs/next/accordproject-slc",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Overview",
@@ -475,8 +475,8 @@
               "slug": "/accordproject-template",
               "permalink": "/docs/next/accordproject-template",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984,
               "sidebar": "docs",
               "previous": {
                 "title": "Smart Legal Contracts",
@@ -497,8 +497,8 @@
               "slug": "/accordproject-tour",
               "permalink": "/docs/next/accordproject-tour",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Accord Project Templates",
@@ -519,8 +519,8 @@
               "slug": "/ergo-tutorial",
               "permalink": "/docs/next/ergo-tutorial",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "example-eatapple",
@@ -532,8 +532,8 @@
               "slug": "/example-eatapple",
               "permalink": "/docs/next/example-eatapple",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "Dmitry Danilov",
+              "lastUpdatedAt": 1570568845
             },
             {
               "unversionedId": "logic-advanced-expr",
@@ -545,8 +545,8 @@
               "slug": "/logic-advanced-expr",
               "permalink": "/docs/next/logic-advanced-expr",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1603545776,
               "sidebar": "docs",
               "previous": {
                 "title": "Complex Values & Types",
@@ -567,8 +567,8 @@
               "slug": "/logic-complex-type",
               "permalink": "/docs/next/logic-complex-type",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1573072621,
               "sidebar": "docs",
               "previous": {
                 "title": "Introducing Types",
@@ -589,8 +589,8 @@
               "slug": "/logic-decl",
               "permalink": "/docs/next/logic-decl",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1573072621,
               "sidebar": "docs",
               "previous": {
                 "title": "Statements",
@@ -611,8 +611,8 @@
               "slug": "/logic-ergo",
               "permalink": "/docs/next/logic-ergo",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1572807447,
               "sidebar": "docs",
               "previous": {
                 "title": "Using the API",
@@ -633,8 +633,8 @@
               "slug": "/logic-module",
               "permalink": "/docs/next/logic-module",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1573072621,
               "sidebar": "docs",
               "previous": {
                 "title": "Declarations",
@@ -655,8 +655,8 @@
               "slug": "/logic-simple-expr",
               "permalink": "/docs/next/logic-simple-expr",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "shubhendu0099",
+              "lastUpdatedAt": 1571931082,
               "sidebar": "docs",
               "previous": {
                 "title": "Ergo Overview",
@@ -677,8 +677,8 @@
               "slug": "/logic-simple-type",
               "permalink": "/docs/next/logic-simple-type",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1573072621,
               "sidebar": "docs",
               "previous": {
                 "title": "Simple Expressions",
@@ -699,8 +699,8 @@
               "slug": "/logic-stmt",
               "permalink": "/docs/next/logic-stmt",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Dan Selman",
+              "lastUpdatedAt": 1596637820,
               "sidebar": "docs",
               "previous": {
                 "title": "Advanced Expressions",
@@ -721,8 +721,8 @@
               "slug": "/markup-ciceromark",
               "permalink": "/docs/next/markup-ciceromark",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "CommonMark",
@@ -743,8 +743,8 @@
               "slug": "/markup-commonmark",
               "permalink": "/docs/next/markup-commonmark",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Preliminaries",
@@ -765,8 +765,8 @@
               "slug": "/markup-preliminaries",
               "permalink": "/docs/next/markup-preliminaries",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Resources",
@@ -787,8 +787,8 @@
               "slug": "/markup-templatemark",
               "permalink": "/docs/next/markup-templatemark",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1602159287,
               "sidebar": "docs",
               "previous": {
                 "title": "CiceroMark",
@@ -809,8 +809,8 @@
               "slug": "/model-api",
               "permalink": "/docs/next/model-api",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Dan Selman",
+              "lastUpdatedAt": 1593515649,
               "sidebar": "docs",
               "previous": {
                 "title": "Decorators",
@@ -831,8 +831,8 @@
               "slug": "/model-classes",
               "permalink": "/docs/next/model-classes",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Dan Selman",
+              "lastUpdatedAt": 1593515649,
               "sidebar": "docs",
               "previous": {
                 "title": "Namespaces",
@@ -853,8 +853,8 @@
               "slug": "/model-concerto",
               "permalink": "/docs/next/model-concerto",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1572807447,
               "sidebar": "docs",
               "previous": {
                 "title": "TemplateMark",
@@ -875,8 +875,8 @@
               "slug": "/model-decorators",
               "permalink": "/docs/next/model-decorators",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Dan Selman",
+              "lastUpdatedAt": 1602002962,
               "sidebar": "docs",
               "previous": {
                 "title": "Relationships",
@@ -897,8 +897,8 @@
               "slug": "/model-enums",
               "permalink": "/docs/next/model-enums",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "irmerk",
+              "lastUpdatedAt": 1572992030,
               "sidebar": "docs",
               "previous": {
                 "title": "Classes",
@@ -919,8 +919,8 @@
               "slug": "/model-namespaces",
               "permalink": "/docs/next/model-namespaces",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1571521923,
               "sidebar": "docs",
               "previous": {
                 "title": "Concerto Overview",
@@ -941,8 +941,8 @@
               "slug": "/model-properties",
               "permalink": "/docs/next/model-properties",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Dan Selman",
+              "lastUpdatedAt": 1602002962,
               "sidebar": "docs",
               "previous": {
                 "title": "Enumerations",
@@ -963,8 +963,8 @@
               "slug": "/model-relationships",
               "permalink": "/docs/next/model-relationships",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Dan Selman",
+              "lastUpdatedAt": 1593515649,
               "sidebar": "docs",
               "previous": {
                 "title": "Properties",
@@ -985,8 +985,8 @@
               "slug": "/ref-cicero-api",
               "permalink": "/docs/next/ref-cicero-api",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Command Line",
@@ -1007,8 +1007,8 @@
               "slug": "/ref-cicero-cli",
               "permalink": "/docs/next/ref-cicero-cli",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "0.20 to 0.21",
@@ -1029,8 +1029,8 @@
               "slug": "/ref-cicero-testing",
               "permalink": "/docs/next/ref-cicero-testing",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Node.js API",
@@ -1051,8 +1051,8 @@
               "slug": "/ref-concerto-api",
               "permalink": "/docs/next/ref-concerto-api",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Command Line",
@@ -1073,8 +1073,8 @@
               "slug": "/ref-concerto-cli",
               "permalink": "/docs/next/ref-concerto-cli",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Decorators",
@@ -1095,8 +1095,8 @@
               "slug": "/ref-concerto-decorators",
               "permalink": "/docs/next/ref-concerto-decorators",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1602003836,
               "sidebar": "docs",
               "previous": {
                 "title": "Command Line",
@@ -1117,8 +1117,8 @@
               "slug": "/ref-ergo-api",
               "permalink": "/docs/next/ref-ergo-api",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Read-Eval-Print Loop",
@@ -1139,8 +1139,8 @@
               "slug": "/ref-ergo-cli",
               "permalink": "/docs/next/ref-ergo-cli",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Standard Library",
@@ -1161,8 +1161,8 @@
               "slug": "/ref-ergo-repl",
               "permalink": "/docs/next/ref-ergo-repl",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Command Line",
@@ -1183,8 +1183,8 @@
               "slug": "/ref-ergo-spec",
               "permalink": "/docs/next/ref-ergo-spec",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984,
               "sidebar": "docs",
               "previous": {
                 "title": "Node.js API",
@@ -1205,8 +1205,8 @@
               "slug": "/ref-ergo-stdlib",
               "permalink": "/docs/next/ref-ergo-stdlib",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1603803734,
               "sidebar": "docs",
               "previous": {
                 "title": "Node.js API",
@@ -1227,8 +1227,8 @@
               "slug": "/ref-errors",
               "permalink": "/docs/next/ref-errors",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Glossary",
@@ -1249,8 +1249,8 @@
               "slug": "/ref-glossary",
               "permalink": "/docs/next/ref-glossary",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Matt Roberts",
+              "lastUpdatedAt": 1572966134,
               "sidebar": "docs",
               "previous": {
                 "title": "With Hyperledger Fabric",
@@ -1271,8 +1271,8 @@
               "slug": "/ref-markus-cli",
               "permalink": "/docs/next/ref-markus-cli",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601406014,
               "sidebar": "docs",
               "previous": {
                 "title": "Template Testing",
@@ -1293,8 +1293,8 @@
               "slug": "/ref-migrate-0.13-0.20",
               "permalink": "/docs/next/ref-migrate-0.13-0.20",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Errors",
@@ -1315,8 +1315,8 @@
               "slug": "/ref-migrate-0.20-0.21",
               "permalink": "/docs/next/ref-migrate-0.20-0.21",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "0.13 to 0.20",
@@ -1337,8 +1337,8 @@
               "slug": "/ref-web-components-overview",
               "permalink": "/docs/next/ref-web-components-overview",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Specification",
@@ -1355,8 +1355,8 @@
               "slug": "/started-hello",
               "permalink": "/docs/next/started-hello",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Install Cicero",
@@ -1377,8 +1377,8 @@
               "slug": "/started-installation",
               "permalink": "/docs/next/started-installation",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "FAQ",
@@ -1399,8 +1399,8 @@
               "slug": "/started-resources",
               "permalink": "/docs/next/started-resources",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1572882162,
               "sidebar": "docs",
               "previous": {
                 "title": "Hello World Template",
@@ -1421,8 +1421,8 @@
               "slug": "/tutorial-create",
               "permalink": "/docs/next/tutorial-create",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Template Library",
@@ -1443,8 +1443,8 @@
               "slug": "/tutorial-hyperledger",
               "permalink": "/docs/next/tutorial-hyperledger",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "With Node.js",
@@ -1465,8 +1465,8 @@
               "slug": "/tutorial-library",
               "permalink": "/docs/next/tutorial-library",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Templates Deep Dive",
@@ -1487,8 +1487,8 @@
               "slug": "/tutorial-nodejs",
               "permalink": "/docs/next/tutorial-nodejs",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "With VS Code",
@@ -1509,8 +1509,8 @@
               "slug": "/tutorial-studio",
               "permalink": "/docs/next/tutorial-studio",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "docs",
               "previous": {
                 "title": "Template Generator",
@@ -1531,8 +1531,8 @@
               "slug": "/tutorial-templates",
               "permalink": "/docs/next/tutorial-templates",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "Modules",
@@ -1553,8 +1553,8 @@
               "slug": "/tutorial-vscode",
               "permalink": "/docs/next/tutorial-vscode",
               "version": "current",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "Jerome Simeon",
+              "lastUpdatedAt": 1601401606,
               "sidebar": "docs",
               "previous": {
                 "title": "With Template Studio",
@@ -1979,8 +1979,8 @@
               "slug": "/",
               "permalink": "/docs/",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "next": {
                 "title": "Smart Legal Contracts",
@@ -1997,8 +1997,8 @@
               "slug": "/accordproject-business",
               "permalink": "/docs/accordproject-business",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-concepts",
@@ -2010,8 +2010,8 @@
               "slug": "/accordproject-concepts",
               "permalink": "/docs/accordproject-concepts",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "accordproject-developers",
@@ -2023,8 +2023,8 @@
               "slug": "/accordproject-developers",
               "permalink": "/docs/accordproject-developers",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-faq",
@@ -2036,8 +2036,8 @@
               "slug": "/accordproject-faq",
               "permalink": "/docs/accordproject-faq",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Online Tour",
@@ -2058,8 +2058,8 @@
               "slug": "/accordproject-installation",
               "permalink": "/docs/accordproject-installation",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-models",
@@ -2071,8 +2071,8 @@
               "slug": "/accordproject-models",
               "permalink": "/docs/accordproject-models",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-resources",
@@ -2084,8 +2084,8 @@
               "slug": "/accordproject-resources",
               "permalink": "/docs/accordproject-resources",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-slc",
@@ -2097,8 +2097,8 @@
               "slug": "/accordproject-slc",
               "permalink": "/docs/accordproject-slc",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Overview",
@@ -2119,8 +2119,8 @@
               "slug": "/accordproject-studio",
               "permalink": "/docs/accordproject-studio",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-template",
@@ -2132,8 +2132,8 @@
               "slug": "/accordproject-template",
               "permalink": "/docs/accordproject-template",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Smart Legal Contracts",
@@ -2154,8 +2154,8 @@
               "slug": "/accordproject-templates",
               "permalink": "/docs/accordproject-templates",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-tooling",
@@ -2167,8 +2167,8 @@
               "slug": "/accordproject-tooling",
               "permalink": "/docs/accordproject-tooling",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-tour",
@@ -2180,8 +2180,8 @@
               "slug": "/accordproject-tour",
               "permalink": "/docs/accordproject-tour",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Accord Project Templates",
@@ -2202,8 +2202,8 @@
               "slug": "/advanced-hyperledger",
               "permalink": "/docs/advanced-hyperledger",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "advanced-latedelivery",
@@ -2215,8 +2215,8 @@
               "slug": "/advanced-latedelivery",
               "permalink": "/docs/advanced-latedelivery",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "advanced-nodejs",
@@ -2228,8 +2228,8 @@
               "slug": "/advanced-nodejs",
               "permalink": "/docs/advanced-nodejs",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-create",
@@ -2241,8 +2241,8 @@
               "slug": "/basic-create",
               "permalink": "/docs/basic-create",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-library",
@@ -2254,8 +2254,8 @@
               "slug": "/basic-library",
               "permalink": "/docs/basic-library",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-templates",
@@ -2267,8 +2267,8 @@
               "slug": "/basic-templates",
               "permalink": "/docs/basic-templates",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-use",
@@ -2280,8 +2280,8 @@
               "slug": "/basic-use",
               "permalink": "/docs/basic-use",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "cicero-api",
@@ -2293,8 +2293,8 @@
               "slug": "/cicero-api",
               "permalink": "/docs/cicero-api",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "cicero-cli",
@@ -2306,8 +2306,8 @@
               "slug": "/cicero-cli",
               "permalink": "/docs/cicero-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "concerto-api",
@@ -2319,8 +2319,8 @@
               "slug": "/concerto-api",
               "permalink": "/docs/concerto-api",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "concerto-cli",
@@ -2332,8 +2332,8 @@
               "slug": "/concerto-cli",
               "permalink": "/docs/concerto-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ergo-api",
@@ -2345,8 +2345,8 @@
               "slug": "/ergo-api",
               "permalink": "/docs/ergo-api",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ergo-cli",
@@ -2358,8 +2358,8 @@
               "slug": "/ergo-cli",
               "permalink": "/docs/ergo-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ergo-repl",
@@ -2371,8 +2371,8 @@
               "slug": "/ergo-repl",
               "permalink": "/docs/ergo-repl",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ergo-tutorial",
@@ -2384,8 +2384,8 @@
               "slug": "/ergo-tutorial",
               "permalink": "/docs/ergo-tutorial",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "example-eatapple",
@@ -2397,8 +2397,8 @@
               "slug": "/example-eatapple",
               "permalink": "/docs/example-eatapple",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "logic-advanced-expr",
@@ -2410,8 +2410,8 @@
               "slug": "/logic-advanced-expr",
               "permalink": "/docs/logic-advanced-expr",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Complex Values & Types",
@@ -2432,8 +2432,8 @@
               "slug": "/logic-complex-type",
               "permalink": "/docs/logic-complex-type",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Introducing Types",
@@ -2454,8 +2454,8 @@
               "slug": "/logic-decl",
               "permalink": "/docs/logic-decl",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Statements",
@@ -2476,8 +2476,8 @@
               "slug": "/logic-ergo",
               "permalink": "/docs/logic-ergo",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Using the API",
@@ -2498,8 +2498,8 @@
               "slug": "/logic-module",
               "permalink": "/docs/logic-module",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Declarations",
@@ -2520,8 +2520,8 @@
               "slug": "/logic-simple-expr",
               "permalink": "/docs/logic-simple-expr",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Ergo Overview",
@@ -2542,8 +2542,8 @@
               "slug": "/logic-simple-type",
               "permalink": "/docs/logic-simple-type",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Simple Expressions",
@@ -2564,8 +2564,8 @@
               "slug": "/logic-stmt",
               "permalink": "/docs/logic-stmt",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Advanced Expressions",
@@ -2586,8 +2586,8 @@
               "slug": "/markup-blocks",
               "permalink": "/docs/markup-blocks",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-cicero",
@@ -2599,8 +2599,8 @@
               "slug": "/markup-cicero",
               "permalink": "/docs/markup-cicero",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-ciceromark",
@@ -2612,8 +2612,8 @@
               "slug": "/markup-ciceromark",
               "permalink": "/docs/markup-ciceromark",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "CommonMark",
@@ -2634,8 +2634,8 @@
               "slug": "/markup-commonmark",
               "permalink": "/docs/markup-commonmark",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Preliminaries",
@@ -2656,8 +2656,8 @@
               "slug": "/markup-ergo",
               "permalink": "/docs/markup-ergo",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-preliminaries",
@@ -2669,8 +2669,8 @@
               "slug": "/markup-preliminaries",
               "permalink": "/docs/markup-preliminaries",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Resources",
@@ -2691,8 +2691,8 @@
               "slug": "/markup-templatemark",
               "permalink": "/docs/markup-templatemark",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "CiceroMark",
@@ -2713,8 +2713,8 @@
               "slug": "/markup-variables",
               "permalink": "/docs/markup-variables",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markus-cli",
@@ -2726,8 +2726,8 @@
               "slug": "/markus-cli",
               "permalink": "/docs/markus-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-api",
@@ -2739,8 +2739,8 @@
               "slug": "/model-api",
               "permalink": "/docs/model-api",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Decorators",
@@ -2761,8 +2761,8 @@
               "slug": "/model-classes",
               "permalink": "/docs/model-classes",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Namespaces",
@@ -2783,8 +2783,8 @@
               "slug": "/model-concerto",
               "permalink": "/docs/model-concerto",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "TemplateMark",
@@ -2805,8 +2805,8 @@
               "slug": "/model-decorators",
               "permalink": "/docs/model-decorators",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Relationships",
@@ -2827,8 +2827,8 @@
               "slug": "/model-enums",
               "permalink": "/docs/model-enums",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Classes",
@@ -2849,8 +2849,8 @@
               "slug": "/model-namespaces",
               "permalink": "/docs/model-namespaces",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Concerto Overview",
@@ -2871,8 +2871,8 @@
               "slug": "/model-properties",
               "permalink": "/docs/model-properties",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Enumerations",
@@ -2893,8 +2893,8 @@
               "slug": "/model-relationships",
               "permalink": "/docs/model-relationships",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Properties",
@@ -2915,8 +2915,8 @@
               "slug": "/ref-cicero-api",
               "permalink": "/docs/ref-cicero-api",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Command Line",
@@ -2937,8 +2937,8 @@
               "slug": "/ref-cicero-cli",
               "permalink": "/docs/ref-cicero-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "0.20 to 0.21",
@@ -2959,8 +2959,8 @@
               "slug": "/ref-cicero-testing",
               "permalink": "/docs/ref-cicero-testing",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Node.js API",
@@ -2981,8 +2981,8 @@
               "slug": "/ref-cicero-ui",
               "permalink": "/docs/ref-cicero-ui",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-api",
@@ -2994,8 +2994,8 @@
               "slug": "/ref-concerto-api",
               "permalink": "/docs/ref-concerto-api",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Command Line",
@@ -3016,8 +3016,8 @@
               "slug": "/ref-concerto-cli",
               "permalink": "/docs/ref-concerto-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Decorators",
@@ -3038,8 +3038,8 @@
               "slug": "/ref-concerto-decorators",
               "permalink": "/docs/ref-concerto-decorators",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Command Line",
@@ -3060,8 +3060,8 @@
               "slug": "/ref-ergo-api",
               "permalink": "/docs/ref-ergo-api",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Read-Eval-Print Loop",
@@ -3082,8 +3082,8 @@
               "slug": "/ref-ergo-cli",
               "permalink": "/docs/ref-ergo-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Standard Library",
@@ -3104,8 +3104,8 @@
               "slug": "/ref-ergo-repl",
               "permalink": "/docs/ref-ergo-repl",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Command Line",
@@ -3126,8 +3126,8 @@
               "slug": "/ref-ergo-spec",
               "permalink": "/docs/ref-ergo-spec",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Node.js API",
@@ -3148,8 +3148,8 @@
               "slug": "/ref-ergo-stdlib",
               "permalink": "/docs/ref-ergo-stdlib",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Node.js API",
@@ -3170,8 +3170,8 @@
               "slug": "/ref-errors",
               "permalink": "/docs/ref-errors",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Glossary",
@@ -3192,8 +3192,8 @@
               "slug": "/ref-glossary",
               "permalink": "/docs/ref-glossary",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "With Hyperledger Fabric",
@@ -3214,8 +3214,8 @@
               "slug": "/ref-logic",
               "permalink": "/docs/ref-logic",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "ref-logic-specification",
@@ -3227,8 +3227,8 @@
               "slug": "/ref-logic-specification",
               "permalink": "/docs/ref-logic-specification",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-logic-stdlib",
@@ -3240,8 +3240,8 @@
               "slug": "/ref-logic-stdlib",
               "permalink": "/docs/ref-logic-stdlib",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-markup",
@@ -3253,8 +3253,8 @@
               "slug": "/ref-markup",
               "permalink": "/docs/ref-markup",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-markus-cli",
@@ -3266,8 +3266,8 @@
               "slug": "/ref-markus-cli",
               "permalink": "/docs/ref-markus-cli",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Template Testing",
@@ -3288,8 +3288,8 @@
               "slug": "/ref-migrate-0.13-0.20",
               "permalink": "/docs/ref-migrate-0.13-0.20",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Errors",
@@ -3310,8 +3310,8 @@
               "slug": "/ref-migrate-0.20-0.21",
               "permalink": "/docs/ref-migrate-0.20-0.21",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "0.13 to 0.20",
@@ -3332,8 +3332,8 @@
               "slug": "/ref-testing",
               "permalink": "/docs/ref-testing",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-web-components-overview",
@@ -3345,8 +3345,8 @@
               "slug": "/ref-web-components-overview",
               "permalink": "/docs/ref-web-components-overview",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Specification",
@@ -3363,8 +3363,8 @@
               "slug": "/spec-concepts",
               "permalink": "/docs/spec-concepts",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-example",
@@ -3376,8 +3376,8 @@
               "slug": "/spec-example",
               "permalink": "/docs/spec-example",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-execution",
@@ -3389,8 +3389,8 @@
               "slug": "/spec-execution",
               "permalink": "/docs/spec-execution",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-instance",
@@ -3402,8 +3402,8 @@
               "slug": "/spec-instance",
               "permalink": "/docs/spec-instance",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-overview",
@@ -3415,8 +3415,8 @@
               "slug": "/spec-overview",
               "permalink": "/docs/spec-overview",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-packaging",
@@ -3428,8 +3428,8 @@
               "slug": "/spec-packaging",
               "permalink": "/docs/spec-packaging",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-template",
@@ -3441,8 +3441,8 @@
               "slug": "/spec-template",
               "permalink": "/docs/spec-template",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "started-hello",
@@ -3454,8 +3454,8 @@
               "slug": "/started-hello",
               "permalink": "/docs/started-hello",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Install Cicero",
@@ -3476,8 +3476,8 @@
               "slug": "/started-installation",
               "permalink": "/docs/started-installation",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "FAQ",
@@ -3498,8 +3498,8 @@
               "slug": "/started-resources",
               "permalink": "/docs/started-resources",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Hello World Template",
@@ -3520,8 +3520,8 @@
               "slug": "/started-studio",
               "permalink": "/docs/started-studio",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-create",
@@ -3533,8 +3533,8 @@
               "slug": "/tutorial-create",
               "permalink": "/docs/tutorial-create",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Template Library",
@@ -3555,8 +3555,8 @@
               "slug": "/tutorial-hyperledger",
               "permalink": "/docs/tutorial-hyperledger",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Working with Node.js",
@@ -3577,8 +3577,8 @@
               "slug": "/tutorial-latedelivery",
               "permalink": "/docs/tutorial-latedelivery",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-library",
@@ -3590,8 +3590,8 @@
               "slug": "/tutorial-library",
               "permalink": "/docs/tutorial-library",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Templates Deep Dive",
@@ -3612,8 +3612,8 @@
               "slug": "/tutorial-nodejs",
               "permalink": "/docs/tutorial-nodejs",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "With VS Code",
@@ -3634,8 +3634,8 @@
               "slug": "/tutorial-studio",
               "permalink": "/docs/tutorial-studio",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Template Generator",
@@ -3656,8 +3656,8 @@
               "slug": "/tutorial-templates",
               "permalink": "/docs/tutorial-templates",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "Modules",
@@ -3678,8 +3678,8 @@
               "slug": "/tutorial-vscode",
               "permalink": "/docs/tutorial-vscode",
               "version": "0.21",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.21/docs",
               "previous": {
                 "title": "With Template Studio",
@@ -4077,8 +4077,8 @@
               "slug": "/",
               "permalink": "/docs/0.20/",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "next": {
                 "title": "Key Concepts",
@@ -4095,8 +4095,8 @@
               "slug": "/accordproject-business",
               "permalink": "/docs/0.20/accordproject-business",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Key Concepts",
@@ -4117,8 +4117,8 @@
               "slug": "/accordproject-concepts",
               "permalink": "/docs/0.20/accordproject-concepts",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Overview",
@@ -4139,8 +4139,8 @@
               "slug": "/accordproject-developers",
               "permalink": "/docs/0.20/accordproject-developers",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "For Business",
@@ -4161,8 +4161,8 @@
               "slug": "/accordproject-faq",
               "permalink": "/docs/0.20/accordproject-faq",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-installation",
@@ -4174,8 +4174,8 @@
               "slug": "/accordproject-installation",
               "permalink": "/docs/0.20/accordproject-installation",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-models",
@@ -4187,8 +4187,8 @@
               "slug": "/accordproject-models",
               "permalink": "/docs/0.20/accordproject-models",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-resources",
@@ -4200,8 +4200,8 @@
               "slug": "/accordproject-resources",
               "permalink": "/docs/0.20/accordproject-resources",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-slc",
@@ -4213,8 +4213,8 @@
               "slug": "/accordproject-slc",
               "permalink": "/docs/0.20/accordproject-slc",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-studio",
@@ -4226,8 +4226,8 @@
               "slug": "/accordproject-studio",
               "permalink": "/docs/0.20/accordproject-studio",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-template",
@@ -4239,8 +4239,8 @@
               "slug": "/accordproject-template",
               "permalink": "/docs/0.20/accordproject-template",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "accordproject-templates",
@@ -4252,8 +4252,8 @@
               "slug": "/accordproject-templates",
               "permalink": "/docs/0.20/accordproject-templates",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-tooling",
@@ -4265,8 +4265,8 @@
               "slug": "/accordproject-tooling",
               "permalink": "/docs/0.20/accordproject-tooling",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-tour",
@@ -4278,8 +4278,8 @@
               "slug": "/accordproject-tour",
               "permalink": "/docs/0.20/accordproject-tour",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "advanced-hyperledger",
@@ -4291,8 +4291,8 @@
               "slug": "/advanced-hyperledger",
               "permalink": "/docs/0.20/advanced-hyperledger",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "advanced-latedelivery",
@@ -4304,8 +4304,8 @@
               "slug": "/advanced-latedelivery",
               "permalink": "/docs/0.20/advanced-latedelivery",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "advanced-nodejs",
@@ -4317,8 +4317,8 @@
               "slug": "/advanced-nodejs",
               "permalink": "/docs/0.20/advanced-nodejs",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-create",
@@ -4330,8 +4330,8 @@
               "slug": "/basic-create",
               "permalink": "/docs/0.20/basic-create",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-library",
@@ -4343,8 +4343,8 @@
               "slug": "/basic-library",
               "permalink": "/docs/0.20/basic-library",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-templates",
@@ -4356,8 +4356,8 @@
               "slug": "/basic-templates",
               "permalink": "/docs/0.20/basic-templates",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-use",
@@ -4369,8 +4369,8 @@
               "slug": "/basic-use",
               "permalink": "/docs/0.20/basic-use",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "cicero-api",
@@ -4382,8 +4382,8 @@
               "slug": "/cicero-api",
               "permalink": "/docs/0.20/cicero-api",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Markdown Transform CLI",
@@ -4404,8 +4404,8 @@
               "slug": "/cicero-cli",
               "permalink": "/docs/0.20/cicero-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "0.13 to 0.20",
@@ -4426,8 +4426,8 @@
               "slug": "/concerto-api",
               "permalink": "/docs/0.20/concerto-api",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo API",
@@ -4444,8 +4444,8 @@
               "slug": "/concerto-cli",
               "permalink": "/docs/0.20/concerto-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Cicero CLI",
@@ -4466,8 +4466,8 @@
               "slug": "/ergo-api",
               "permalink": "/docs/0.20/ergo-api",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Cicero API",
@@ -4488,8 +4488,8 @@
               "slug": "/ergo-cli",
               "permalink": "/docs/0.20/ergo-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Concerto CLI",
@@ -4510,8 +4510,8 @@
               "slug": "/ergo-repl",
               "permalink": "/docs/0.20/ergo-repl",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo CLI",
@@ -4532,8 +4532,8 @@
               "slug": "/ergo-tutorial",
               "permalink": "/docs/0.20/ergo-tutorial",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "example-eatapple",
@@ -4545,8 +4545,8 @@
               "slug": "/example-eatapple",
               "permalink": "/docs/0.20/example-eatapple",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "logic-advanced-expr",
@@ -4558,8 +4558,8 @@
               "slug": "/logic-advanced-expr",
               "permalink": "/docs/0.20/logic-advanced-expr",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Complex Values & Types",
@@ -4580,8 +4580,8 @@
               "slug": "/logic-complex-type",
               "permalink": "/docs/0.20/logic-complex-type",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Introducing Types",
@@ -4602,8 +4602,8 @@
               "slug": "/logic-decl",
               "permalink": "/docs/0.20/logic-decl",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Statements",
@@ -4624,8 +4624,8 @@
               "slug": "/logic-ergo",
               "permalink": "/docs/0.20/logic-ergo",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Using the API",
@@ -4646,8 +4646,8 @@
               "slug": "/logic-module",
               "permalink": "/docs/0.20/logic-module",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Declarations",
@@ -4668,8 +4668,8 @@
               "slug": "/logic-simple-expr",
               "permalink": "/docs/0.20/logic-simple-expr",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo Overview",
@@ -4690,8 +4690,8 @@
               "slug": "/logic-simple-type",
               "permalink": "/docs/0.20/logic-simple-type",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Simple Expressions",
@@ -4712,8 +4712,8 @@
               "slug": "/logic-stmt",
               "permalink": "/docs/0.20/logic-stmt",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Advanced Expressions",
@@ -4734,8 +4734,8 @@
               "slug": "/markup-blocks",
               "permalink": "/docs/0.20/markup-blocks",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Variable Expressions",
@@ -4756,8 +4756,8 @@
               "slug": "/markup-cicero",
               "permalink": "/docs/0.20/markup-cicero",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Deploying on Hyperledger Fabric",
@@ -4778,8 +4778,8 @@
               "slug": "/markup-ciceromark",
               "permalink": "/docs/0.20/markup-ciceromark",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-commonmark",
@@ -4791,8 +4791,8 @@
               "slug": "/markup-commonmark",
               "permalink": "/docs/0.20/markup-commonmark",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "CiceroMark Overview",
@@ -4813,8 +4813,8 @@
               "slug": "/markup-ergo",
               "permalink": "/docs/0.20/markup-ergo",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Block Expressions",
@@ -4835,8 +4835,8 @@
               "slug": "/markup-preliminaries",
               "permalink": "/docs/0.20/markup-preliminaries",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-templatemark",
@@ -4848,8 +4848,8 @@
               "slug": "/markup-templatemark",
               "permalink": "/docs/0.20/markup-templatemark",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-variables",
@@ -4861,8 +4861,8 @@
               "slug": "/markup-variables",
               "permalink": "/docs/0.20/markup-variables",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Rich Text Markdown",
@@ -4883,8 +4883,8 @@
               "slug": "/markus-cli",
               "permalink": "/docs/0.20/markus-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo REPL",
@@ -4905,8 +4905,8 @@
               "slug": "/model-api",
               "permalink": "/docs/0.20/model-api",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Decorators",
@@ -4927,8 +4927,8 @@
               "slug": "/model-classes",
               "permalink": "/docs/0.20/model-classes",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Namespaces",
@@ -4949,8 +4949,8 @@
               "slug": "/model-concerto",
               "permalink": "/docs/0.20/model-concerto",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo Expressions",
@@ -4971,8 +4971,8 @@
               "slug": "/model-decorators",
               "permalink": "/docs/0.20/model-decorators",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Relationships",
@@ -4993,8 +4993,8 @@
               "slug": "/model-enums",
               "permalink": "/docs/0.20/model-enums",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Classes",
@@ -5015,8 +5015,8 @@
               "slug": "/model-namespaces",
               "permalink": "/docs/0.20/model-namespaces",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Concerto Overview",
@@ -5037,8 +5037,8 @@
               "slug": "/model-properties",
               "permalink": "/docs/0.20/model-properties",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Enumerations",
@@ -5059,8 +5059,8 @@
               "slug": "/model-relationships",
               "permalink": "/docs/0.20/model-relationships",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Properties",
@@ -5081,8 +5081,8 @@
               "slug": "/ref-cicero-api",
               "permalink": "/docs/0.20/ref-cicero-api",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-cli",
@@ -5094,8 +5094,8 @@
               "slug": "/ref-cicero-cli",
               "permalink": "/docs/0.20/ref-cicero-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-testing",
@@ -5107,8 +5107,8 @@
               "slug": "/ref-cicero-testing",
               "permalink": "/docs/0.20/ref-cicero-testing",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-ui",
@@ -5120,8 +5120,8 @@
               "slug": "/ref-cicero-ui",
               "permalink": "/docs/0.20/ref-cicero-ui",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Glossary",
@@ -5142,8 +5142,8 @@
               "slug": "/ref-concerto-api",
               "permalink": "/docs/0.20/ref-concerto-api",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-cli",
@@ -5155,8 +5155,8 @@
               "slug": "/ref-concerto-cli",
               "permalink": "/docs/0.20/ref-concerto-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-decorators",
@@ -5168,8 +5168,8 @@
               "slug": "/ref-concerto-decorators",
               "permalink": "/docs/0.20/ref-concerto-decorators",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-api",
@@ -5181,8 +5181,8 @@
               "slug": "/ref-ergo-api",
               "permalink": "/docs/0.20/ref-ergo-api",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-cli",
@@ -5194,8 +5194,8 @@
               "slug": "/ref-ergo-cli",
               "permalink": "/docs/0.20/ref-ergo-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-repl",
@@ -5207,8 +5207,8 @@
               "slug": "/ref-ergo-repl",
               "permalink": "/docs/0.20/ref-ergo-repl",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-spec",
@@ -5220,8 +5220,8 @@
               "slug": "/ref-ergo-spec",
               "permalink": "/docs/0.20/ref-ergo-spec",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "ref-ergo-stdlib",
@@ -5233,8 +5233,8 @@
               "slug": "/ref-ergo-stdlib",
               "permalink": "/docs/0.20/ref-ergo-stdlib",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-errors",
@@ -5246,8 +5246,8 @@
               "slug": "/ref-errors",
               "permalink": "/docs/0.20/ref-errors",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Testing Reference",
@@ -5268,8 +5268,8 @@
               "slug": "/ref-glossary",
               "permalink": "/docs/0.20/ref-glossary",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Modules",
@@ -5290,8 +5290,8 @@
               "slug": "/ref-logic",
               "permalink": "/docs/0.20/ref-logic",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Errors Reference",
@@ -5312,8 +5312,8 @@
               "slug": "/ref-logic-specification",
               "permalink": "/docs/0.20/ref-logic-specification",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo Standard Library",
@@ -5334,8 +5334,8 @@
               "slug": "/ref-logic-stdlib",
               "permalink": "/docs/0.20/ref-logic-stdlib",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo Language Reference",
@@ -5356,8 +5356,8 @@
               "slug": "/ref-markup",
               "permalink": "/docs/0.20/ref-markup",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-markus-cli",
@@ -5369,8 +5369,8 @@
               "slug": "/ref-markus-cli",
               "permalink": "/docs/0.20/ref-markus-cli",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-migrate-0.13-0.20",
@@ -5382,8 +5382,8 @@
               "slug": "/ref-migrate-0.13-0.20",
               "permalink": "/docs/0.20/ref-migrate-0.13-0.20",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Ergo Compiler",
@@ -5404,8 +5404,8 @@
               "slug": "/ref-migrate-0.20-0.21",
               "permalink": "/docs/0.20/ref-migrate-0.20-0.21",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-testing",
@@ -5417,8 +5417,8 @@
               "slug": "/ref-testing",
               "permalink": "/docs/0.20/ref-testing",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Cicero UI Reference",
@@ -5439,8 +5439,8 @@
               "slug": "/ref-web-components-overview",
               "permalink": "/docs/0.20/ref-web-components-overview",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-concepts",
@@ -5452,8 +5452,8 @@
               "slug": "/spec-concepts",
               "permalink": "/docs/0.20/spec-concepts",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-example",
@@ -5465,8 +5465,8 @@
               "slug": "/spec-example",
               "permalink": "/docs/0.20/spec-example",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-execution",
@@ -5478,8 +5478,8 @@
               "slug": "/spec-execution",
               "permalink": "/docs/0.20/spec-execution",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-instance",
@@ -5491,8 +5491,8 @@
               "slug": "/spec-instance",
               "permalink": "/docs/0.20/spec-instance",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-overview",
@@ -5504,8 +5504,8 @@
               "slug": "/spec-overview",
               "permalink": "/docs/0.20/spec-overview",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-packaging",
@@ -5517,8 +5517,8 @@
               "slug": "/spec-packaging",
               "permalink": "/docs/0.20/spec-packaging",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-template",
@@ -5530,8 +5530,8 @@
               "slug": "/spec-template",
               "permalink": "/docs/0.20/spec-template",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "started-hello",
@@ -5543,8 +5543,8 @@
               "slug": "/started-hello",
               "permalink": "/docs/0.20/started-hello",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Install Cicero",
@@ -5565,8 +5565,8 @@
               "slug": "/started-installation",
               "permalink": "/docs/0.20/started-installation",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "For Developers",
@@ -5587,8 +5587,8 @@
               "slug": "/started-resources",
               "permalink": "/docs/0.20/started-resources",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Online Tour",
@@ -5609,8 +5609,8 @@
               "slug": "/started-studio",
               "permalink": "/docs/0.20/started-studio",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Hello World Template",
@@ -5631,8 +5631,8 @@
               "slug": "/tutorial-create",
               "permalink": "/docs/0.20/tutorial-create",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Template Library",
@@ -5653,8 +5653,8 @@
               "slug": "/tutorial-hyperledger",
               "permalink": "/docs/0.20/tutorial-hyperledger",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Working with Node.js",
@@ -5675,8 +5675,8 @@
               "slug": "/tutorial-latedelivery",
               "permalink": "/docs/0.20/tutorial-latedelivery",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Resources",
@@ -5697,8 +5697,8 @@
               "slug": "/tutorial-library",
               "permalink": "/docs/0.20/tutorial-library",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Templates Deep Dive",
@@ -5719,8 +5719,8 @@
               "slug": "/tutorial-nodejs",
               "permalink": "/docs/0.20/tutorial-nodejs",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Template Generator",
@@ -5741,8 +5741,8 @@
               "slug": "/tutorial-studio",
               "permalink": "/docs/0.20/tutorial-studio",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-templates",
@@ -5754,8 +5754,8 @@
               "slug": "/tutorial-templates",
               "permalink": "/docs/0.20/tutorial-templates",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.20/docs",
               "previous": {
                 "title": "Editing a Late Delivery Clause",
@@ -5776,8 +5776,8 @@
               "slug": "/tutorial-vscode",
               "permalink": "/docs/0.20/tutorial-vscode",
               "version": "0.20",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             }
           ]
         },
@@ -6054,8 +6054,8 @@
               "slug": "/",
               "permalink": "/docs/0.13/",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "next": {
                 "title": "Installation",
@@ -6072,8 +6072,8 @@
               "slug": "/accordproject-faq",
               "permalink": "/docs/0.13/accordproject-faq",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-installation",
@@ -6085,8 +6085,8 @@
               "slug": "/accordproject-installation",
               "permalink": "/docs/0.13/accordproject-installation",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Getting Started with Accord Project",
@@ -6107,8 +6107,8 @@
               "slug": "/accordproject-models",
               "permalink": "/docs/0.13/accordproject-models",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Developers Tools",
@@ -6129,8 +6129,8 @@
               "slug": "/accordproject-resources",
               "permalink": "/docs/0.13/accordproject-resources",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Open Source Templates",
@@ -6151,8 +6151,8 @@
               "slug": "/accordproject-slc",
               "permalink": "/docs/0.13/accordproject-slc",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-studio",
@@ -6164,8 +6164,8 @@
               "slug": "/accordproject-studio",
               "permalink": "/docs/0.13/accordproject-studio",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-template",
@@ -6177,8 +6177,8 @@
               "slug": "/accordproject-template",
               "permalink": "/docs/0.13/accordproject-template",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "accordproject-templates",
@@ -6190,8 +6190,8 @@
               "slug": "/accordproject-templates",
               "permalink": "/docs/0.13/accordproject-templates",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Standard Models",
@@ -6212,8 +6212,8 @@
               "slug": "/accordproject-tooling",
               "permalink": "/docs/0.13/accordproject-tooling",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Installation",
@@ -6234,8 +6234,8 @@
               "slug": "/accordproject-tour",
               "permalink": "/docs/0.13/accordproject-tour",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "advanced-hyperledger",
@@ -6247,8 +6247,8 @@
               "slug": "/advanced-hyperledger",
               "permalink": "/docs/0.13/advanced-hyperledger",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Working with Node.js",
@@ -6269,8 +6269,8 @@
               "slug": "/advanced-latedelivery",
               "permalink": "/docs/0.13/advanced-latedelivery",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Creating a New Template",
@@ -6291,8 +6291,8 @@
               "slug": "/advanced-nodejs",
               "permalink": "/docs/0.13/advanced-nodejs",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Authoring in Template Studio",
@@ -6313,8 +6313,8 @@
               "slug": "/basic-create",
               "permalink": "/docs/0.13/basic-create",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Take a Look Inside",
@@ -6335,8 +6335,8 @@
               "slug": "/basic-library",
               "permalink": "/docs/0.13/basic-library",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-templates",
@@ -6348,8 +6348,8 @@
               "slug": "/basic-templates",
               "permalink": "/docs/0.13/basic-templates",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "How to Use a Template",
@@ -6370,8 +6370,8 @@
               "slug": "/basic-use",
               "permalink": "/docs/0.13/basic-use",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Learning Resources",
@@ -6392,8 +6392,8 @@
               "slug": "/cicero-api",
               "permalink": "/docs/0.13/cicero-api",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Ergo CLI",
@@ -6414,8 +6414,8 @@
               "slug": "/cicero-cli",
               "permalink": "/docs/0.13/cicero-cli",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Ergo Compiler",
@@ -6436,8 +6436,8 @@
               "slug": "/ergo-api",
               "permalink": "/docs/0.13/ergo-api",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Cicero API",
@@ -6454,8 +6454,8 @@
               "slug": "/ergo-cli",
               "permalink": "/docs/0.13/ergo-cli",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Cicero CLI",
@@ -6476,8 +6476,8 @@
               "slug": "/ergo-tutorial",
               "permalink": "/docs/0.13/ergo-tutorial",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "example-eatapple",
@@ -6489,8 +6489,8 @@
               "slug": "/example-eatapple",
               "permalink": "/docs/0.13/example-eatapple",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "logic-advanced-expr",
@@ -6502,8 +6502,8 @@
               "slug": "/logic-advanced-expr",
               "permalink": "/docs/0.13/logic-advanced-expr",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Complex Values & Types",
@@ -6524,8 +6524,8 @@
               "slug": "/logic-complex-type",
               "permalink": "/docs/0.13/logic-complex-type",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Introducing Types",
@@ -6546,8 +6546,8 @@
               "slug": "/logic-decl",
               "permalink": "/docs/0.13/logic-decl",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Statements",
@@ -6568,8 +6568,8 @@
               "slug": "/logic-ergo",
               "permalink": "/docs/0.13/logic-ergo",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Deploying on Hyperledger Fabric",
@@ -6590,8 +6590,8 @@
               "slug": "/logic-module",
               "permalink": "/docs/0.13/logic-module",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Declarations",
@@ -6612,8 +6612,8 @@
               "slug": "/logic-simple-expr",
               "permalink": "/docs/0.13/logic-simple-expr",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Overview",
@@ -6634,8 +6634,8 @@
               "slug": "/logic-simple-type",
               "permalink": "/docs/0.13/logic-simple-type",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Simple Expressions",
@@ -6656,8 +6656,8 @@
               "slug": "/logic-stmt",
               "permalink": "/docs/0.13/logic-stmt",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Advanced Expressions",
@@ -6678,8 +6678,8 @@
               "slug": "/markup-ciceromark",
               "permalink": "/docs/0.13/markup-ciceromark",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-commonmark",
@@ -6691,8 +6691,8 @@
               "slug": "/markup-commonmark",
               "permalink": "/docs/0.13/markup-commonmark",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-preliminaries",
@@ -6704,8 +6704,8 @@
               "slug": "/markup-preliminaries",
               "permalink": "/docs/0.13/markup-preliminaries",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-templatemark",
@@ -6717,8 +6717,8 @@
               "slug": "/markup-templatemark",
               "permalink": "/docs/0.13/markup-templatemark",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-api",
@@ -6730,8 +6730,8 @@
               "slug": "/model-api",
               "permalink": "/docs/0.13/model-api",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-classes",
@@ -6743,8 +6743,8 @@
               "slug": "/model-classes",
               "permalink": "/docs/0.13/model-classes",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-concerto",
@@ -6756,8 +6756,8 @@
               "slug": "/model-concerto",
               "permalink": "/docs/0.13/model-concerto",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-decorators",
@@ -6769,8 +6769,8 @@
               "slug": "/model-decorators",
               "permalink": "/docs/0.13/model-decorators",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-enums",
@@ -6782,8 +6782,8 @@
               "slug": "/model-enums",
               "permalink": "/docs/0.13/model-enums",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-namespaces",
@@ -6795,8 +6795,8 @@
               "slug": "/model-namespaces",
               "permalink": "/docs/0.13/model-namespaces",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-properties",
@@ -6808,8 +6808,8 @@
               "slug": "/model-properties",
               "permalink": "/docs/0.13/model-properties",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-relationships",
@@ -6821,8 +6821,8 @@
               "slug": "/model-relationships",
               "permalink": "/docs/0.13/model-relationships",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-api",
@@ -6834,8 +6834,8 @@
               "slug": "/ref-cicero-api",
               "permalink": "/docs/0.13/ref-cicero-api",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-cli",
@@ -6847,8 +6847,8 @@
               "slug": "/ref-cicero-cli",
               "permalink": "/docs/0.13/ref-cicero-cli",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-testing",
@@ -6860,8 +6860,8 @@
               "slug": "/ref-cicero-testing",
               "permalink": "/docs/0.13/ref-cicero-testing",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-api",
@@ -6873,8 +6873,8 @@
               "slug": "/ref-concerto-api",
               "permalink": "/docs/0.13/ref-concerto-api",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-cli",
@@ -6886,8 +6886,8 @@
               "slug": "/ref-concerto-cli",
               "permalink": "/docs/0.13/ref-concerto-cli",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-decorators",
@@ -6899,8 +6899,8 @@
               "slug": "/ref-concerto-decorators",
               "permalink": "/docs/0.13/ref-concerto-decorators",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-api",
@@ -6912,8 +6912,8 @@
               "slug": "/ref-ergo-api",
               "permalink": "/docs/0.13/ref-ergo-api",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-cli",
@@ -6925,8 +6925,8 @@
               "slug": "/ref-ergo-cli",
               "permalink": "/docs/0.13/ref-ergo-cli",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-repl",
@@ -6938,8 +6938,8 @@
               "slug": "/ref-ergo-repl",
               "permalink": "/docs/0.13/ref-ergo-repl",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-spec",
@@ -6951,8 +6951,8 @@
               "slug": "/ref-ergo-spec",
               "permalink": "/docs/0.13/ref-ergo-spec",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "ref-ergo-stdlib",
@@ -6964,8 +6964,8 @@
               "slug": "/ref-ergo-stdlib",
               "permalink": "/docs/0.13/ref-ergo-stdlib",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-errors",
@@ -6977,8 +6977,8 @@
               "slug": "/ref-errors",
               "permalink": "/docs/0.13/ref-errors",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Testing Reference",
@@ -6999,8 +6999,8 @@
               "slug": "/ref-glossary",
               "permalink": "/docs/0.13/ref-glossary",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-logic",
@@ -7012,8 +7012,8 @@
               "slug": "/ref-logic",
               "permalink": "/docs/0.13/ref-logic",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Errors Reference",
@@ -7034,8 +7034,8 @@
               "slug": "/ref-logic-specification",
               "permalink": "/docs/0.13/ref-logic-specification",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Ergo Libraries",
@@ -7056,8 +7056,8 @@
               "slug": "/ref-logic-stdlib",
               "permalink": "/docs/0.13/ref-logic-stdlib",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Ergo Language Reference",
@@ -7078,8 +7078,8 @@
               "slug": "/ref-markup",
               "permalink": "/docs/0.13/ref-markup",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Packaging",
@@ -7100,8 +7100,8 @@
               "slug": "/ref-markus-cli",
               "permalink": "/docs/0.13/ref-markus-cli",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-migrate-0.13-0.20",
@@ -7113,8 +7113,8 @@
               "slug": "/ref-migrate-0.13-0.20",
               "permalink": "/docs/0.13/ref-migrate-0.13-0.20",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-migrate-0.20-0.21",
@@ -7126,8 +7126,8 @@
               "slug": "/ref-migrate-0.20-0.21",
               "permalink": "/docs/0.13/ref-migrate-0.20-0.21",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-testing",
@@ -7139,8 +7139,8 @@
               "slug": "/ref-testing",
               "permalink": "/docs/0.13/ref-testing",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Markup Reference",
@@ -7161,8 +7161,8 @@
               "slug": "/ref-web-components-overview",
               "permalink": "/docs/0.13/ref-web-components-overview",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-concepts",
@@ -7174,8 +7174,8 @@
               "slug": "/spec-concepts",
               "permalink": "/docs/0.13/spec-concepts",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Overview",
@@ -7196,8 +7196,8 @@
               "slug": "/spec-example",
               "permalink": "/docs/0.13/spec-example",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Concepts and High-level Architecture",
@@ -7218,8 +7218,8 @@
               "slug": "/spec-execution",
               "permalink": "/docs/0.13/spec-execution",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Template Instantiation",
@@ -7240,8 +7240,8 @@
               "slug": "/spec-instance",
               "permalink": "/docs/0.13/spec-instance",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Template Structure",
@@ -7262,8 +7262,8 @@
               "slug": "/spec-overview",
               "permalink": "/docs/0.13/spec-overview",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Modularity",
@@ -7284,8 +7284,8 @@
               "slug": "/spec-packaging",
               "permalink": "/docs/0.13/spec-packaging",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Contract Execution",
@@ -7306,8 +7306,8 @@
               "slug": "/spec-template",
               "permalink": "/docs/0.13/spec-template",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.13/docs",
               "previous": {
                 "title": "Example: Late Delivery Clause",
@@ -7328,8 +7328,8 @@
               "slug": "/started-hello",
               "permalink": "/docs/0.13/started-hello",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "started-installation",
@@ -7341,8 +7341,8 @@
               "slug": "/started-installation",
               "permalink": "/docs/0.13/started-installation",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "started-resources",
@@ -7354,8 +7354,8 @@
               "slug": "/started-resources",
               "permalink": "/docs/0.13/started-resources",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-create",
@@ -7367,8 +7367,8 @@
               "slug": "/tutorial-create",
               "permalink": "/docs/0.13/tutorial-create",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-hyperledger",
@@ -7380,8 +7380,8 @@
               "slug": "/tutorial-hyperledger",
               "permalink": "/docs/0.13/tutorial-hyperledger",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-library",
@@ -7393,8 +7393,8 @@
               "slug": "/tutorial-library",
               "permalink": "/docs/0.13/tutorial-library",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-nodejs",
@@ -7406,8 +7406,8 @@
               "slug": "/tutorial-nodejs",
               "permalink": "/docs/0.13/tutorial-nodejs",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-studio",
@@ -7419,8 +7419,8 @@
               "slug": "/tutorial-studio",
               "permalink": "/docs/0.13/tutorial-studio",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-templates",
@@ -7432,8 +7432,8 @@
               "slug": "/tutorial-templates",
               "permalink": "/docs/0.13/tutorial-templates",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-vscode",
@@ -7445,8 +7445,8 @@
               "slug": "/tutorial-vscode",
               "permalink": "/docs/0.13/tutorial-vscode",
               "version": "0.13",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             }
           ]
         },
@@ -7718,8 +7718,8 @@
               "slug": "/",
               "permalink": "/docs/0.12/",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "next": {
                 "title": "Installation",
@@ -7736,8 +7736,8 @@
               "slug": "/accordproject-faq",
               "permalink": "/docs/0.12/accordproject-faq",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-installation",
@@ -7749,8 +7749,8 @@
               "slug": "/accordproject-installation",
               "permalink": "/docs/0.12/accordproject-installation",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Getting Started with Accord Project",
@@ -7771,8 +7771,8 @@
               "slug": "/accordproject-models",
               "permalink": "/docs/0.12/accordproject-models",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Developers Tools",
@@ -7793,8 +7793,8 @@
               "slug": "/accordproject-resources",
               "permalink": "/docs/0.12/accordproject-resources",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Open Source Templates",
@@ -7815,8 +7815,8 @@
               "slug": "/accordproject-slc",
               "permalink": "/docs/0.12/accordproject-slc",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-studio",
@@ -7828,8 +7828,8 @@
               "slug": "/accordproject-studio",
               "permalink": "/docs/0.12/accordproject-studio",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "accordproject-template",
@@ -7841,8 +7841,8 @@
               "slug": "/accordproject-template",
               "permalink": "/docs/0.12/accordproject-template",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "accordproject-templates",
@@ -7854,8 +7854,8 @@
               "slug": "/accordproject-templates",
               "permalink": "/docs/0.12/accordproject-templates",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Standard Models",
@@ -7876,8 +7876,8 @@
               "slug": "/accordproject-tooling",
               "permalink": "/docs/0.12/accordproject-tooling",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Installation",
@@ -7898,8 +7898,8 @@
               "slug": "/accordproject-tour",
               "permalink": "/docs/0.12/accordproject-tour",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "advanced-hyperledger",
@@ -7911,8 +7911,8 @@
               "slug": "/advanced-hyperledger",
               "permalink": "/docs/0.12/advanced-hyperledger",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Working with Node.js",
@@ -7933,8 +7933,8 @@
               "slug": "/advanced-latedelivery",
               "permalink": "/docs/0.12/advanced-latedelivery",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Creating a New Template",
@@ -7955,8 +7955,8 @@
               "slug": "/advanced-nodejs",
               "permalink": "/docs/0.12/advanced-nodejs",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Authoring in Template Studio",
@@ -7977,8 +7977,8 @@
               "slug": "/basic-create",
               "permalink": "/docs/0.12/basic-create",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Take a Look Inside",
@@ -7999,8 +7999,8 @@
               "slug": "/basic-library",
               "permalink": "/docs/0.12/basic-library",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "basic-templates",
@@ -8012,8 +8012,8 @@
               "slug": "/basic-templates",
               "permalink": "/docs/0.12/basic-templates",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "How to Use a Template",
@@ -8034,8 +8034,8 @@
               "slug": "/basic-use",
               "permalink": "/docs/0.12/basic-use",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Learning Resources",
@@ -8056,8 +8056,8 @@
               "slug": "/cicero-api",
               "permalink": "/docs/0.12/cicero-api",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Ergo CLI",
@@ -8078,8 +8078,8 @@
               "slug": "/cicero-cli",
               "permalink": "/docs/0.12/cicero-cli",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Ergo Compiler",
@@ -8100,8 +8100,8 @@
               "slug": "/ergo-api",
               "permalink": "/docs/0.12/ergo-api",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Cicero API",
@@ -8118,8 +8118,8 @@
               "slug": "/ergo-cli",
               "permalink": "/docs/0.12/ergo-cli",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Cicero CLI",
@@ -8140,8 +8140,8 @@
               "slug": "/ergo-tutorial",
               "permalink": "/docs/0.12/ergo-tutorial",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "example-eatapple",
@@ -8153,8 +8153,8 @@
               "slug": "/example-eatapple",
               "permalink": "/docs/0.12/example-eatapple",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "logic-advanced-expr",
@@ -8166,8 +8166,8 @@
               "slug": "/logic-advanced-expr",
               "permalink": "/docs/0.12/logic-advanced-expr",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Complex Values & Types",
@@ -8188,8 +8188,8 @@
               "slug": "/logic-complex-type",
               "permalink": "/docs/0.12/logic-complex-type",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Introducing Types",
@@ -8210,8 +8210,8 @@
               "slug": "/logic-decl",
               "permalink": "/docs/0.12/logic-decl",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Statements",
@@ -8232,8 +8232,8 @@
               "slug": "/logic-ergo",
               "permalink": "/docs/0.12/logic-ergo",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Deploying on Hyperledger Fabric",
@@ -8254,8 +8254,8 @@
               "slug": "/logic-module",
               "permalink": "/docs/0.12/logic-module",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Declarations",
@@ -8276,8 +8276,8 @@
               "slug": "/logic-simple-expr",
               "permalink": "/docs/0.12/logic-simple-expr",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Overview",
@@ -8298,8 +8298,8 @@
               "slug": "/logic-simple-type",
               "permalink": "/docs/0.12/logic-simple-type",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Simple Expressions",
@@ -8320,8 +8320,8 @@
               "slug": "/logic-stmt",
               "permalink": "/docs/0.12/logic-stmt",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Advanced Expressions",
@@ -8342,8 +8342,8 @@
               "slug": "/markup-ciceromark",
               "permalink": "/docs/0.12/markup-ciceromark",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-commonmark",
@@ -8355,8 +8355,8 @@
               "slug": "/markup-commonmark",
               "permalink": "/docs/0.12/markup-commonmark",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-preliminaries",
@@ -8368,8 +8368,8 @@
               "slug": "/markup-preliminaries",
               "permalink": "/docs/0.12/markup-preliminaries",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "markup-templatemark",
@@ -8381,8 +8381,8 @@
               "slug": "/markup-templatemark",
               "permalink": "/docs/0.12/markup-templatemark",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-api",
@@ -8394,8 +8394,8 @@
               "slug": "/model-api",
               "permalink": "/docs/0.12/model-api",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-classes",
@@ -8407,8 +8407,8 @@
               "slug": "/model-classes",
               "permalink": "/docs/0.12/model-classes",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-concerto",
@@ -8420,8 +8420,8 @@
               "slug": "/model-concerto",
               "permalink": "/docs/0.12/model-concerto",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-decorators",
@@ -8433,8 +8433,8 @@
               "slug": "/model-decorators",
               "permalink": "/docs/0.12/model-decorators",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-enums",
@@ -8446,8 +8446,8 @@
               "slug": "/model-enums",
               "permalink": "/docs/0.12/model-enums",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-namespaces",
@@ -8459,8 +8459,8 @@
               "slug": "/model-namespaces",
               "permalink": "/docs/0.12/model-namespaces",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-properties",
@@ -8472,8 +8472,8 @@
               "slug": "/model-properties",
               "permalink": "/docs/0.12/model-properties",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "model-relationships",
@@ -8485,8 +8485,8 @@
               "slug": "/model-relationships",
               "permalink": "/docs/0.12/model-relationships",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-api",
@@ -8498,8 +8498,8 @@
               "slug": "/ref-cicero-api",
               "permalink": "/docs/0.12/ref-cicero-api",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-cli",
@@ -8511,8 +8511,8 @@
               "slug": "/ref-cicero-cli",
               "permalink": "/docs/0.12/ref-cicero-cli",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-cicero-testing",
@@ -8524,8 +8524,8 @@
               "slug": "/ref-cicero-testing",
               "permalink": "/docs/0.12/ref-cicero-testing",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-api",
@@ -8537,8 +8537,8 @@
               "slug": "/ref-concerto-api",
               "permalink": "/docs/0.12/ref-concerto-api",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-cli",
@@ -8550,8 +8550,8 @@
               "slug": "/ref-concerto-cli",
               "permalink": "/docs/0.12/ref-concerto-cli",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-concerto-decorators",
@@ -8563,8 +8563,8 @@
               "slug": "/ref-concerto-decorators",
               "permalink": "/docs/0.12/ref-concerto-decorators",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-api",
@@ -8576,8 +8576,8 @@
               "slug": "/ref-ergo-api",
               "permalink": "/docs/0.12/ref-ergo-api",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-cli",
@@ -8589,8 +8589,8 @@
               "slug": "/ref-ergo-cli",
               "permalink": "/docs/0.12/ref-ergo-cli",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-repl",
@@ -8602,8 +8602,8 @@
               "slug": "/ref-ergo-repl",
               "permalink": "/docs/0.12/ref-ergo-repl",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-ergo-spec",
@@ -8615,8 +8615,8 @@
               "slug": "/ref-ergo-spec",
               "permalink": "/docs/0.12/ref-ergo-spec",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604687984
             },
             {
               "unversionedId": "ref-ergo-stdlib",
@@ -8628,8 +8628,8 @@
               "slug": "/ref-ergo-stdlib",
               "permalink": "/docs/0.12/ref-ergo-stdlib",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-errors",
@@ -8641,8 +8641,8 @@
               "slug": "/ref-errors",
               "permalink": "/docs/0.12/ref-errors",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-glossary",
@@ -8654,8 +8654,8 @@
               "slug": "/ref-glossary",
               "permalink": "/docs/0.12/ref-glossary",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-logic",
@@ -8667,8 +8667,8 @@
               "slug": "/ref-logic",
               "permalink": "/docs/0.12/ref-logic",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Testing Reference",
@@ -8689,8 +8689,8 @@
               "slug": "/ref-logic-specification",
               "permalink": "/docs/0.12/ref-logic-specification",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Ergo Libraries",
@@ -8711,8 +8711,8 @@
               "slug": "/ref-logic-stdlib",
               "permalink": "/docs/0.12/ref-logic-stdlib",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Ergo Language Reference",
@@ -8733,8 +8733,8 @@
               "slug": "/ref-markup",
               "permalink": "/docs/0.12/ref-markup",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Packaging",
@@ -8755,8 +8755,8 @@
               "slug": "/ref-markus-cli",
               "permalink": "/docs/0.12/ref-markus-cli",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-migrate-0.13-0.20",
@@ -8768,8 +8768,8 @@
               "slug": "/ref-migrate-0.13-0.20",
               "permalink": "/docs/0.12/ref-migrate-0.13-0.20",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-migrate-0.20-0.21",
@@ -8781,8 +8781,8 @@
               "slug": "/ref-migrate-0.20-0.21",
               "permalink": "/docs/0.12/ref-migrate-0.20-0.21",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "ref-testing",
@@ -8794,8 +8794,8 @@
               "slug": "/ref-testing",
               "permalink": "/docs/0.12/ref-testing",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Markup Reference",
@@ -8816,8 +8816,8 @@
               "slug": "/ref-web-components-overview",
               "permalink": "/docs/0.12/ref-web-components-overview",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "spec-concepts",
@@ -8829,8 +8829,8 @@
               "slug": "/spec-concepts",
               "permalink": "/docs/0.12/spec-concepts",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Overview",
@@ -8851,8 +8851,8 @@
               "slug": "/spec-example",
               "permalink": "/docs/0.12/spec-example",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Concepts and High-level Architecture",
@@ -8873,8 +8873,8 @@
               "slug": "/spec-execution",
               "permalink": "/docs/0.12/spec-execution",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Template Instantiation",
@@ -8895,8 +8895,8 @@
               "slug": "/spec-instance",
               "permalink": "/docs/0.12/spec-instance",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Template Structure",
@@ -8917,8 +8917,8 @@
               "slug": "/spec-overview",
               "permalink": "/docs/0.12/spec-overview",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Modularity",
@@ -8939,8 +8939,8 @@
               "slug": "/spec-packaging",
               "permalink": "/docs/0.12/spec-packaging",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Contract Execution",
@@ -8961,8 +8961,8 @@
               "slug": "/spec-template",
               "permalink": "/docs/0.12/spec-template",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055,
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693,
               "sidebar": "version-0.12/docs",
               "previous": {
                 "title": "Example: Late Delivery Clause",
@@ -8983,8 +8983,8 @@
               "slug": "/started-hello",
               "permalink": "/docs/0.12/started-hello",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "started-installation",
@@ -8996,8 +8996,8 @@
               "slug": "/started-installation",
               "permalink": "/docs/0.12/started-installation",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "started-resources",
@@ -9009,8 +9009,8 @@
               "slug": "/started-resources",
               "permalink": "/docs/0.12/started-resources",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-create",
@@ -9022,8 +9022,8 @@
               "slug": "/tutorial-create",
               "permalink": "/docs/0.12/tutorial-create",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-hyperledger",
@@ -9035,8 +9035,8 @@
               "slug": "/tutorial-hyperledger",
               "permalink": "/docs/0.12/tutorial-hyperledger",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-library",
@@ -9048,8 +9048,8 @@
               "slug": "/tutorial-library",
               "permalink": "/docs/0.12/tutorial-library",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-nodejs",
@@ -9061,8 +9061,8 @@
               "slug": "/tutorial-nodejs",
               "permalink": "/docs/0.12/tutorial-nodejs",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-studio",
@@ -9074,8 +9074,8 @@
               "slug": "/tutorial-studio",
               "permalink": "/docs/0.12/tutorial-studio",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-templates",
@@ -9087,8 +9087,8 @@
               "slug": "/tutorial-templates",
               "permalink": "/docs/0.12/tutorial-templates",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             },
             {
               "unversionedId": "tutorial-vscode",
@@ -9100,8 +9100,8 @@
               "slug": "/tutorial-vscode",
               "permalink": "/docs/0.12/tutorial-vscode",
               "version": "0.12",
-              "lastUpdatedBy": "Author",
-              "lastUpdatedAt": 1539502055
+              "lastUpdatedBy": "prakharsr",
+              "lastUpdatedAt": 1604685693
             }
           ]
         }
@@ -9172,6 +9172,9 @@
     ]
   },
   "docusaurus-plugin-debug": {
+    "default": null
+  },
+  "docusaurus-plugin-sitemap": {
     "default": null
   },
   "docusaurus-theme-classic": {
