@@ -9151,8 +9151,23 @@
     "default": [
       {
         "type": "jsx",
+        "permalink": "/help",
+        "source": "@site/src/pages/help.js"
+      },
+      {
+        "type": "jsx",
         "permalink": "/",
         "source": "@site/src/pages/index.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/users",
+        "source": "@site/src/pages/users.js"
+      },
+      {
+        "type": "jsx",
+        "permalink": "/versions",
+        "source": "@site/src/pages/versions.js"
       }
     ]
   },

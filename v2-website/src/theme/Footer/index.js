@@ -46,13 +46,13 @@ function Footer() {
             <h5>Docs</h5>
             <ul>
               <li>
-                <a href={siteConfig["siteConfig"]["baseUrl"] + 'docs/' + 'accordproject.html'}>Overview</a>
+                <a href={siteConfig["siteConfig"]["baseUrl"] + 'docs/' + 'accordproject'}>Overview</a>
               </li>
               <li>
-                <a href={siteConfig["siteConfig"]["baseUrl"] + 'docs/' + 'started-installation.html'}>Getting Started</a>
+                <a href={siteConfig["siteConfig"]["baseUrl"] + 'docs/' + 'started-installation'}>Getting Started</a>
               </li>
               <li>
-                <a href={siteConfig["siteConfig"]["baseUrl"] + 'docs/' + 'markup-cicero.html'}>Template Guides</a>
+                <a href={siteConfig["siteConfig"]["baseUrl"] + 'docs/' + 'markup-cicero'}>Template Guides</a>
               </li>
             </ul>
           </div>
@@ -60,7 +60,7 @@ function Footer() {
             <h5>Community</h5>
             <ul>
               <li>
-                <a href={siteConfig["siteConfig"]["baseUrl"] + 'users.html'}>User Showcase </a>
+                <a href={siteConfig["siteConfig"]["baseUrl"] + 'users'}>User Showcase </a>
               </li>
               <li>
                 <a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a>
