@@ -26,6 +26,18 @@ const users = [
       infoLink: 'https://contractpen.com',
       pinned: true,
   },
+  {
+    caption: 'REIV SmartVicForms',
+    image: 'https://app.smartvicforms.com.au/assets/logo/reiv-smartVicforms-logo.svg',
+    infoLink: 'https://smartvicforms.com.au',
+    pinned: true,
+  },
+  {
+    caption: 'beNEXT',
+    image: 'https://smartvicforms.com.au/assets/Logo/beNext_orange-darkgreen-logo.svg',
+    infoLink: 'https://benext.io',
+    pinned: true,
+  }
 ];
 
 const siteConfig = {
