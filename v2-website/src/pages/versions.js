@@ -12,7 +12,6 @@ const toGitHubRelease = (version) => {
   if (patchMatch) {
     return ciceroGitHub + '/v' + patchMatch[0];
   } else if (minorMatch) {
-    // XXX Only points to the initial release notes
     return ciceroGitHub + '/v' + minorMatch[0] + '.0';
   } else {
     return ciceroGitHub;
@@ -23,7 +22,8 @@ function Versions() {
     const _siteConfig = useDocusaurusContext();
     const siteConfig = _siteConfig.siteConfig;
     const latestVersion = versions[0];
-    return (
+
+    const returnVariable = (
       <Layout
         permalink="/"
         title={siteConfig.title}
@@ -96,6 +96,9 @@ function Versions() {
         </main>
         </Layout>
     );
+
+    if(returnVariable) return returnVariable;
+    else "accordproject";
 }
 
 export default Versions;

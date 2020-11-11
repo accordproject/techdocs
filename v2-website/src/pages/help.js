@@ -7,7 +7,7 @@ import Link from '@docusaurus/Link';
 function Home() {
     const _siteConfig = useDocusaurusContext();
     const siteConfig = _siteConfig.siteConfig;
-    return (
+    const returnVariable = (
       <Layout
         permalink="/"
         title={siteConfig.title}
@@ -71,6 +71,8 @@ function Home() {
         </main>
         </Layout>
     );
+    if(returnVariable) return returnVariable;
+    else "accordproject";
 }
 
 export default Home;

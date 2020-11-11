@@ -7,15 +7,13 @@
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
 
 function Footer() {
 
     const currentYear = new Date().getFullYear();
     const siteConfig = useDocusaurusContext();
     const footer = siteConfig["siteConfig"]["themeConfig"]["footer"];
-
-    return (
+    const returnVariable = (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
           <a href="https://www.accordproject.org/" className="nav-home">
@@ -114,6 +112,8 @@ function Footer() {
         </div>
       </footer>
     );
+    if(returnVariable) return returnVariable;
+    else "accordproject";
 }
 
 export default Footer;

@@ -62,7 +62,9 @@ export default {
           ]
         },
         "theme": {
-          "customCss": "/home/prakhar/projects/techdocs_og/techdocs/v2-website/src/css/customTheme.css"
+          "customCss": [
+            "/home/prakhar/projects/techdocs_og/techdocs/v2-website/src/css/customTheme.css"
+          ]
         }
       }
     ]
