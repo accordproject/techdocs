@@ -46,7 +46,7 @@ module.exports={
           "remarkPlugins": [
             [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
           ],
-          "sidebarPath": "/home/prakhar/projects/techdocs_og/techdocs/v2-website/sidebars.json"
+          "sidebarPath": require.resolve("./sidebars.json")
         },
         "blog": {
           "path": "blog"
@@ -55,7 +55,7 @@ module.exports={
           "remarkPlugins": [require('@docusaurus/remark-plugin-npm2yarn')],
         },
         "theme": {
-          "customCss": "/home/prakhar/projects/techdocs_og/techdocs/v2-website/src/css/customTheme.css"
+          "customCss": [require.resolve("./src/css/customTheme.css")]
         }
       }
     ]

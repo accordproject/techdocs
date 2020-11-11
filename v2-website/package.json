@@ -1,7 +1,7 @@
 {
   "scripts": {
     "examples": "docusaurus-examples",
-    "start": "docusaurus start",
+    "start": "docusaurus start --host 0.0.0.0",
     "build": "docusaurus build",
     "build:api": "./scripts/build_api_md.sh",
     "publish-gh-pages": "docusaurus-publish",
@@ -23,13 +23,11 @@
     "@docusaurus/plugin-client-redirects": "2.0.0-alpha.66",
     "@docusaurus/preset-classic": "2.0.0-alpha.66",
     "@docusaurus/remark-plugin-npm2yarn": "^2.0.0-alpha.66",
-    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.66",
     "@material-ui/core": "^4.11.0",
     "clsx": "^1.1.1",
     "jsdoc-to-markdown": "^5.0.3",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-router-dom": "^5.2.0",
     "remarkable-admonitions": "^0.2.2"
   }
 }

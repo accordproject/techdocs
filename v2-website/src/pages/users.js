@@ -18,7 +18,8 @@ function Users() {
           </a>
         );
       });
-    return (
+
+      const returnVariable = (
       <Layout
         permalink="/"
         title={siteConfig.title}
@@ -42,6 +43,9 @@ function Users() {
         </main>
         </Layout>
     );
+
+    if(returnVariable) return returnVariable;
+    else "accordproject";
 }
 
 export default Users;
