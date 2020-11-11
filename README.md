@@ -23,12 +23,22 @@ Accord Project is an open source, non-profit, initiative working to transform co
 
 ## Installation
 
-To build the documentation locally:
+To build the documentation locally (docusaurus v1):
 ```
 cd ./website
 npm install
 npm run start
 ```
+
+
+To build the documentation locally (docusaurus v2):
+```
+cd ./v2-website
+npm install
+npm run start
+```
+
+
 If you want to re-generate the JSDoc API:
 ```
 npm run build:api
