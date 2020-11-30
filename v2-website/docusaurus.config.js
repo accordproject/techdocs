@@ -25,7 +25,19 @@ module.exports={
         "image": "img/contractpen-logo-sm.png",
         "infoLink": "https://contractpen.com",
         "pinned": true
-      }
+      },
+      {
+        caption: 'REIV SmartVicForms',
+        image: 'https://smartvicforms.com.au/assets/Logo/reiv-smartVicforms%20logo-Full%20Colour.svg',
+        infoLink: 'https://smartvicforms.com.au',
+        pinned: true,
+      },
+      {
+        caption: 'beNEXT',
+        image: 'https://smartvicforms.com.au/assets/Logo/beNext_orange-darkgreen-logo.svg',
+        infoLink: 'https://www.benext.io',
+        pinned: true,
+      },
     ],
     "markdownPlugins": [
       null
