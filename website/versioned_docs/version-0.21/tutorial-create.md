@@ -1,5 +1,5 @@
 ---
-id: version-0.21-tutorial-create
+id: tutorial-create
 title: Template Generator
 original_id: tutorial-create
 ---

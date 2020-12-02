@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-ergo-repl
+id: ref-ergo-repl
 title: Read-Eval-Print Loop
 original_id: ref-ergo-repl
 ---

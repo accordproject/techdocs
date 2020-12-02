@@ -1,5 +1,5 @@
 ---
-id: version-0.21-model-relationships
+id: model-relationships
 title: Relationships
 original_id: model-relationships
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.21-markup-templatemark
+id: markup-templatemark
 title: TemplateMark
 original_id: markup-templatemark
 ---

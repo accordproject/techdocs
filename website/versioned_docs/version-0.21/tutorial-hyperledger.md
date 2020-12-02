@@ -1,5 +1,5 @@
 ---
-id: version-0.21-tutorial-hyperledger
+id: tutorial-hyperledger
 title: With Hyperledger Fabric
 original_id: tutorial-hyperledger
 ---

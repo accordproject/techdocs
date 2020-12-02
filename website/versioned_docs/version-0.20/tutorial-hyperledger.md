@@ -1,5 +1,5 @@
 ---
-id: version-0.20-tutorial-hyperledger
+id: tutorial-hyperledger
 title: Deploying on Hyperledger Fabric
 original_id: tutorial-hyperledger
 ---

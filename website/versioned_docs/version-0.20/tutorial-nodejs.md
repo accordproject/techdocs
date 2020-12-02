@@ -1,5 +1,5 @@
 ---
-id: version-0.20-tutorial-nodejs
+id: tutorial-nodejs
 title: Working with Node.js
 original_id: tutorial-nodejs
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.20-ref-cicero-ui
+id: ref-cicero-ui
 title: Cicero UI Reference
 original_id: ref-cicero-ui
 ---

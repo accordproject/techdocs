@@ -1,5 +1,5 @@
 ---
-id: version-0.12-spec-instance
+id: spec-instance
 title: Template Instantiation
 original_id: spec-instance
 ---

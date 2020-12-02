@@ -1,5 +1,5 @@
 ---
-id: version-0.21-started-installation
+id: started-installation
 title: Install Cicero
 original_id: started-installation
 ---

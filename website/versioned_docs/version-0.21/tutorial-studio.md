@@ -1,5 +1,5 @@
 ---
-id: version-0.21-tutorial-studio
+id: tutorial-studio
 title: With Template Studio
 original_id: tutorial-studio
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.20-concerto-api
+id: concerto-api
 title: Concerto API
 original_id: concerto-api
 ---

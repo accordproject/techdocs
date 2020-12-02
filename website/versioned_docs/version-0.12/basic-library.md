@@ -1,5 +1,5 @@
 ---
-id: version-0.12-basic-library
+id: basic-library
 title: Publishing a Template
 original_id: basic-library
 ---

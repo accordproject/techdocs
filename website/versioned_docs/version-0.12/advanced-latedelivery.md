@@ -1,5 +1,5 @@
 ---
-id: version-0.12-advanced-latedelivery
+id: advanced-latedelivery
 title: Authoring in Template Studio
 original_id: advanced-latedelivery
 ---

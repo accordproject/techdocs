@@ -1,5 +1,5 @@
 ---
-id: version-0.21-accordproject-template
+id: accordproject-template
 title: Accord Project Templates
 original_id: accordproject-template
 ---
@@ -131,7 +131,7 @@ The combination of text and model already makes templates _machine-readable_, wh
 
 ### During Drafting
 
-In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan]():
+In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan](accordproject):
 
 ```tem
 ## Fixed rate loan

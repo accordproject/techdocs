@@ -1,5 +1,5 @@
 ---
-id: version-0.20-markup-cicero
+id: markup-cicero
 title: CiceroMark Overview
 original_id: markup-cicero
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.20-tutorial-latedelivery
+id: tutorial-latedelivery
 title: Editing a Late Delivery Clause
 original_id: tutorial-latedelivery
 ---

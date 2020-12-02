@@ -1,5 +1,5 @@
 ---
-id: version-0.12-ref-logic-specification
+id: ref-logic-specification
 title: Ergo Compiler
 original_id: ref-logic-specification
 ---

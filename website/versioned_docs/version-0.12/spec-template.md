@@ -1,5 +1,5 @@
 ---
-id: version-0.12-spec-template
+id: spec-template
 title: Template Structure
 original_id: spec-template
 ---

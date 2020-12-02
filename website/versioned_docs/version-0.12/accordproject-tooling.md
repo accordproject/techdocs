@@ -1,5 +1,5 @@
 ---
-id: version-0.12-accordproject-tooling
+id: accordproject-tooling
 title: Developers Tools
 original_id: accordproject-tooling
 ---

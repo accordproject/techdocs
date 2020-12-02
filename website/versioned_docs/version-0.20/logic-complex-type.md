@@ -1,5 +1,5 @@
 ---
-id: version-0.20-logic-complex-type
+id: logic-complex-type
 title: Complex Values & Types
 original_id: logic-complex-type
 ---

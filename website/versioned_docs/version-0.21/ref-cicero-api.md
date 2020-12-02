@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-cicero-api
+id: ref-cicero-api
 title: Node.js API
 original_id: ref-cicero-api
 ---

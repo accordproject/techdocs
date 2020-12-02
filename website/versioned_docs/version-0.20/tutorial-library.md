@@ -1,5 +1,5 @@
 ---
-id: version-0.20-tutorial-library
+id: tutorial-library
 title: Template Library
 original_id: tutorial-library
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.20-markup-commonmark
+id: markup-commonmark
 title: Rich Text Markdown
 original_id: markup-commonmark
 ---

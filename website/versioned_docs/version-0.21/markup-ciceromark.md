@@ -1,5 +1,5 @@
 ---
-id: version-0.21-markup-ciceromark
+id: markup-ciceromark
 title: CiceroMark
 original_id: markup-ciceromark
 ---

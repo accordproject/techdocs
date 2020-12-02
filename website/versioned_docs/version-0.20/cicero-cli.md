@@ -1,5 +1,5 @@
 ---
-id: version-0.20-cicero-cli
+id: cicero-cli
 title: Cicero CLI
 original_id: cicero-cli
 ---

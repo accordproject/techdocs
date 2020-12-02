@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-migrate-0.20-0.21
+id: ref-migrate-0.20-0.21
 title: 0.20 to 0.21
 original_id: ref-migrate-0.20-0.21
 ---

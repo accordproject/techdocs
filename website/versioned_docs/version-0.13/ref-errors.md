@@ -1,5 +1,5 @@
 ---
-id: version-0.13-ref-errors
+id: ref-errors
 title: Errors Reference
 original_id: ref-errors
 ---

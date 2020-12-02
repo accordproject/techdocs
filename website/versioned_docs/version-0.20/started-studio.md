@@ -1,5 +1,5 @@
 ---
-id: version-0.20-started-studio
+id: started-studio
 title: Online Tour
 original_id: started-studio
 ---

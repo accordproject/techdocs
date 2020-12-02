@@ -1,5 +1,5 @@
 ---
-id: version-0.12-spec-overview
+id: spec-overview
 title: Overview
 original_id: spec-overview
 ---

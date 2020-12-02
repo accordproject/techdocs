@@ -1,5 +1,5 @@
 ---
-id: version-0.20-ref-logic-stdlib
+id: ref-logic-stdlib
 title: Ergo Standard Library
 original_id: ref-logic-stdlib
 ---
