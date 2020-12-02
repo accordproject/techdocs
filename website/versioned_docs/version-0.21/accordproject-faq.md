@@ -1,5 +1,5 @@
 ---
-id: version-0.21-accordproject-faq
+id: accordproject-faq
 title: FAQ
 original_id: accordproject-faq
 ---

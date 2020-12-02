@@ -1,5 +1,5 @@
 ---
-id: version-0.12-accordproject-templates
+id: accordproject-templates
 title: Open Source Templates
 original_id: accordproject-templates
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-concerto-decorators
+id: ref-concerto-decorators
 title: Decorators
 original_id: ref-concerto-decorators
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.12-spec-concepts
+id: spec-concepts
 title: Concepts and High-level Architecture
 original_id: spec-concepts
 ---

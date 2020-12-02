@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-ergo-stdlib
+id: ref-ergo-stdlib
 title: Standard Library
 original_id: ref-ergo-stdlib
 ---

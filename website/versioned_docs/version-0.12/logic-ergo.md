@@ -1,5 +1,5 @@
 ---
-id: version-0.12-logic-ergo
+id: logic-ergo
 title: Overview
 original_id: logic-ergo
 ---

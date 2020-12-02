@@ -1,5 +1,5 @@
 ---
-id: version-0.20-ref-glossary
+id: ref-glossary
 title: Glossary
 original_id: ref-glossary
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.12-accordproject-resources
+id: accordproject-resources
 title: Learning Resources
 original_id: accordproject-resources
 ---

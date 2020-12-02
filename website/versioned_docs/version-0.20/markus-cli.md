@@ -1,5 +1,5 @@
 ---
-id: version-0.20-markus-cli
+id: markus-cli
 title: Markdown Transform CLI
 original_id: markus-cli
 ---

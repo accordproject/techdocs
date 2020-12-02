@@ -1,5 +1,5 @@
 ---
-id: version-0.12-basic-create
+id: basic-create
 title: Creating a New Template
 original_id: basic-create
 ---

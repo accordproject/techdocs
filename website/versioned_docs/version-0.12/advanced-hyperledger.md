@@ -1,5 +1,5 @@
 ---
-id: version-0.12-advanced-hyperledger
+id: advanced-hyperledger
 title: Deploying on Hyperledger Fabric
 original_id: advanced-hyperledger
 ---

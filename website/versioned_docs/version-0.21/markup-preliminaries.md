@@ -1,5 +1,5 @@
 ---
-id: version-0.21-markup-preliminaries
+id: markup-preliminaries
 title: Preliminaries
 original_id: markup-preliminaries
 ---

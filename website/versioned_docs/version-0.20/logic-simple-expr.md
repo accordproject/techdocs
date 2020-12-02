@@ -1,5 +1,5 @@
 ---
-id: version-0.20-logic-simple-expr
+id: logic-simple-expr
 title: Simple Expressions
 original_id: logic-simple-expr
 ---

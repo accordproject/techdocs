@@ -1,5 +1,5 @@
 ---
-id: version-0.20-model-properties
+id: model-properties
 title: Properties
 original_id: model-properties
 ---

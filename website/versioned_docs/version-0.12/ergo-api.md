@@ -1,5 +1,5 @@
 ---
-id: version-0.12-ergo-api
+id: ergo-api
 title: Ergo API
 original_id: ergo-api
 ---

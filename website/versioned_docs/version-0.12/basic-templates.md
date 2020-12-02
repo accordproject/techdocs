@@ -1,5 +1,5 @@
 ---
-id: version-0.12-basic-templates
+id: basic-templates
 title: Take a Look Inside
 original_id: basic-templates
 ---

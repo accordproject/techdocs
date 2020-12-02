@@ -1,5 +1,5 @@
 ---
-id: version-0.21-started-hello
+id: started-hello
 title: Hello World Template
 original_id: started-hello
 ---

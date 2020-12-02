@@ -1,5 +1,5 @@
 ---
-id: version-0.12-accordproject
+id: accordproject
 title: Getting Started with Accord Project
 original_id: accordproject
 ---

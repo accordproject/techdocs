@@ -1,5 +1,5 @@
 ---
-id: version-0.12-cicero-api
+id: cicero-api
 title: Cicero API
 original_id: cicero-api
 ---

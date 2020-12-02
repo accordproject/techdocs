@@ -1,5 +1,5 @@
 ---
-id: version-0.20-model-classes
+id: model-classes
 title: Classes
 original_id: model-classes
 ---

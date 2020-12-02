@@ -1,5 +1,5 @@
 ---
-id: version-0.12-logic-module
+id: logic-module
 title: Modularity
 original_id: logic-module
 ---

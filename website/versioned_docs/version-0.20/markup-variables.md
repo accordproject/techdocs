@@ -1,5 +1,5 @@
 ---
-id: version-0.20-markup-variables
+id: markup-variables
 title: Variable Expressions
 original_id: markup-variables
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.12-example-eatapple
+id: example-eatapple
 title: A Healthy Clause
 original_id: example-eatapple
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.12-accordproject-models
+id: accordproject-models
 title: Standard Models
 original_id: accordproject-models
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.12-spec-packaging
+id: spec-packaging
 title: Packaging
 original_id: spec-packaging
 ---

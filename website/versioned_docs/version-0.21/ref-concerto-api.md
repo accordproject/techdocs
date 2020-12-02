@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-concerto-api
+id: ref-concerto-api
 title: Node.js API
 original_id: ref-concerto-api
 ---

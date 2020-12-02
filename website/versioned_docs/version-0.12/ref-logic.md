@@ -1,5 +1,5 @@
 ---
-id: version-0.12-ref-logic
+id: ref-logic
 title: Ergo Language Reference
 original_id: ref-logic
 ---

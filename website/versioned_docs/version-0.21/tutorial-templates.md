@@ -1,5 +1,5 @@
 ---
-id: version-0.21-tutorial-templates
+id: tutorial-templates
 title: Templates Deep Dive
 original_id: tutorial-templates
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.20-logic-module
+id: logic-module
 title: Modules
 original_id: logic-module
 ---

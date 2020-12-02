@@ -1,5 +1,5 @@
 ---
-id: version-0.20-model-concerto
+id: model-concerto
 title: Concerto Overview
 original_id: model-concerto
 ---

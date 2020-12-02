@@ -1,5 +1,5 @@
 ---
-id: version-0.13-accordproject-installation
+id: accordproject-installation
 title: Installation
 original_id: accordproject-installation
 ---
