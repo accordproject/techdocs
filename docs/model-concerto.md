@@ -26,7 +26,7 @@ The Concerto metamodel contains the following:
 - [Assets](model-classes#assets)
 - [Participants](model-classes#participants)
 - [Transactions](model-classes#transactions)
-- [Enumerations & Enumeration Values](model-enum)
+- [Enumerations](model-enums)
 - [Properties & Meta Properties](model-properties)
 - [Relationships](model-relationships)
 - [Decorators](model-decorators)
