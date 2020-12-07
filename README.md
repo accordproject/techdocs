@@ -23,17 +23,10 @@ Accord Project is an open source, non-profit, initiative working to transform co
 
 ## Installation
 
-To build the documentation locally (docusaurus v1):
-```
-cd ./website
-npm install
-npm run start
-```
-
 
 To build the documentation locally (docusaurus v2):
 ```
-cd ./v2-website
+cd ./website
 npm install
 npm run start
 ```
