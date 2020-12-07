@@ -1,4 +1,4 @@
-FROM node:12-slim
+FROM node:14-slim
 COPY . ./
-RUN cd v2-website && npm i 
-CMD cd v2-website && npm start
+RUN cd website && npm i 
+CMD cd website && npm start
