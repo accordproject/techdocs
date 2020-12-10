@@ -218,14 +218,16 @@ Precedence determines the order of operations in expressions with operators of d
 Table of operators in Ergo with their associativity and precedence from highest to lowest:
 
 **Order** | **Operator(s)** | **Description** | **Associativity**
---- | --- | --- | --- 1 | . <br /> ?. | field access <br /> field access of
-optional type | left to right 2 | [] | array index access | right to left 3 |
-! | logical not | right to left 4 | \- | arithmetic negation | right to left 5
-| ++ | string concatenation | left to right 6 | ^ | floating point number
-power | left to right 7 | \* <br /> / <br /> % | multiplication <br />{" "}
-division <br /> remainder | left to right 8 | \+ <br /> - | addition <br />{" "}
-subtraction | left to right 9 | ?? | default value of optional type | left to
-right 10 | and | logical conjunction | left to right 11 | or | logical
-disjunction | left to right 12 | &lt; <br /> &gt; <br /> &lt;= <br /> &gt;={" "}
-<br /> = <br /> != | less than <br /> greater than <br /> less or equal <br />{" "}
-greater or equal <br /> equal <br /> not equal | left to right
+--- | --- | --- | ---
+1 | . <br /> ?. | field access <br /> field access of optional type | left to right
+2 | [] | array index access | right to left
+3 | ! | logical not | right to left
+4 | \- | arithmetic negation | right to left
+5 | ++ | string concatenation | left to right
+6 | ^ | floating point number power | left to right
+7 | \* <br /> / <br /> % | multiplication <br /> division <br /> remainder | left to right
+8 | \+ <br /> - | addition <br /> subtraction | left to right
+9 | ?? | default value of optional type | left to right
+10 | and | logical conjunction | left to right
+11 | or | logical disjunction | left to right
+12 | < <br /> > <br /> <= <br /> >= <br /> = <br /> != | less than <br /> greater than <br /> less or equal <br /> greater or equal <br /> equal <br /> not equal | left to right

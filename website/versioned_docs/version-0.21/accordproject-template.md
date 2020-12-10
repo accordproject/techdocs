@@ -1,7 +1,6 @@
 ---
 id: accordproject-template
 title: Accord Project Templates
-original_id: accordproject-template
 ---
 
 An Accord Project template ties legal text to computer code. It is composed of three elements:
@@ -131,7 +130,7 @@ The combination of text and model already makes templates _machine-readable_, wh
 
 ### During Drafting
 
-In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan](accordproject):
+In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan](accordproject-template):
 
 ```tem
 ## Fixed rate loan
