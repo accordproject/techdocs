@@ -826,7 +826,7 @@ Create a template from an URL.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | url | <code>String</code> |  | the URL to a Cicero Template Archive (cta) file |
-| options | <code>object</code> | <code></code> | additional options |
+| options | <code>object</code> | <code> </code> | additional options |
 
 <a name="module_cicero-core.Template.instanceOf"></a>
 

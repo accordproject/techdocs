@@ -850,7 +850,7 @@ the name, version and description of the template).
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | path | <code>String</code> |  | to a local directory |
-| [options] | <code>Object</code> | <code></code> | an optional set of options to configure the instance. |
+| [options] | <code>Object</code> | <code> </code> | an optional set of options to configure the instance. |
 
 <a name="Template.fromArchive"></a>
 
@@ -863,7 +863,7 @@ Create a template from an archive.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | buffer | <code>Buffer</code> |  | the buffer to a Cicero Template Archive (cta) file |
-| [options] | <code>Object</code> | <code></code> | an optional set of options to configure the instance. |
+| [options] | <code>Object</code> | <code> </code> | an optional set of options to configure the instance. |
 
 <a name="Template.fromUrl"></a>
 
@@ -876,7 +876,7 @@ Create a template from an URL.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | url | <code>String</code> |  | the URL to a Cicero Template Archive (cta) file |
-| [options] | <code>Object</code> | <code></code> | an optional set of options to configure the instance. |
+| [options] | <code>Object</code> | <code> </code> | an optional set of options to configure the instance. |
 
 <a name="Template.instanceOf"></a>
 

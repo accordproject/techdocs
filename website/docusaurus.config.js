@@ -78,12 +78,6 @@ module.exports={
       {
         "fromExtensions": [
           "html"
-        ],
-        "redirects": [
-          {
-            "from": "/*.html",
-            "to": "/*"
-          }
         ]
       }
     ]
