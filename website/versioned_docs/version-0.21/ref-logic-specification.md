@@ -32,24 +32,24 @@ compilation phases.
 
 ### Intermediate representations
 
-- Ergo: [Ergo/Lang/Ergo](assets/specification/ErgoSpec.Ergo.Lang.Ergo.html)
-- Ergo calculus: [ErgoC/Lang/ErgoC](assets/specification/ErgoSpec.ErgoC.Lang.ErgoC.html)
-- Ergo NNRC (Named Nested Relational Calculus): [ErgoNNRC/Lang/ErgoNNRC](assets/specification/ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html)
+- Ergo: [Ergo/Lang/Ergo](/docs/assets/specification/ErgoSpec.Ergo.Lang.Ergo.html)
+- Ergo calculus: [ErgoC/Lang/ErgoC](/docs/assets/specification/ErgoSpec.ErgoC.Lang.ErgoC.html)
+- Ergo NNRC (Named Nested Relational Calculus): [ErgoNNRC/Lang/ErgoNNRC](/docs/assets/specification/ErgoSpec.ErgoNNRC.Lang.ErgoNNRC.html)
 
 ### Macro expansion
 
-- Ergo to Ergo: [Ergo/Lang/ErgoExpand](assets/specification/ErgoSpec.Ergo.Lang.ErgoExpand.html)
+- Ergo to Ergo: [Ergo/Lang/ErgoExpand](/docs/assets/specification/ErgoSpec.Ergo.Lang.ErgoExpand.html)
 
 ### Namespace resolution
 
-- Ergo to Ergo: [Translation/ErgoNameResolve](assets/specification/ErgoSpec.Translation.ErgoNameResolve.html)
+- Ergo to Ergo: [Translation/ErgoNameResolve](/docs/assets/specification/ErgoSpec.Translation.ErgoNameResolve.html)
 
 ### Translations between intermediate representations
 
-- Ergo to Ergo calculus: [Translation/ErgotoErgoC](assets/specification/ErgoSpec.Translation.ErgotoErgoC.html)
-- ErgoC to Ergo NNRC: [Translation/ErgoCtoErgoNNRC](assets/specification/ErgoSpec.Translation.ErgoCtoErgoNNRC.html)
+- Ergo to Ergo calculus: [Translation/ErgotoErgoC](/docs/assets/specification/ErgoSpec.Translation.ErgotoErgoC.html)
+- ErgoC to Ergo NNRC: [Translation/ErgoCtoErgoNNRC](/docs/assets/specification/ErgoSpec.Translation.ErgoCtoErgoNNRC.html)
 
 ### Type checking
 
-- ErgoC to ErgoC with types: [ErgoCType](assets/specification/ErgoSpec.ErgoC.Lang.ErgoCType.html)
+- ErgoC to ErgoC with types: [ErgoCType](/docs/assets/specification/ErgoSpec.ErgoC.Lang.ErgoCType.html)
 
