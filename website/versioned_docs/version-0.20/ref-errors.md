@@ -10,7 +10,7 @@ original_id: ref-errors
 
  The hierarchy of errors (or exceptions) is shown on the following diagram:
 
- ![Error Hierarchy](assets/exceptions.png)
+ ![Error Hierarchy](/docs/assets/exceptions.png)
 
  ## CTO Model
 

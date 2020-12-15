@@ -33,13 +33,13 @@ A small number of hosted virtual machines are available from the workshop facili
 
 If you have your own AWS account, you can use the customised Ubuntu image. From your EC2 Dashboard, create a new instance and search for **Cicero** in the Community AMIs. The AMI is available in the Frankfurt and N. Virginia regions.
 
-![Amazon Image](assets/advanced/hlf1.png)
+![Amazon Image](/docs/assets/advanced/hlf1.png)
 
 The `t2.medium` instance type is sufficient for this tutorial.
 
 You'll need also need to add an inbound rule to your Security Group to allow connections on port `3389`. This will allow you to make a remote desktop connection to your server.
 
-![Amazon Image Port](assets/advanced/hlf2.png)
+![Amazon Image Port](/docs/assets/advanced/hlf2.png)
 
 The default username and password for the prebuilt image is:
 - Username: `guest`
@@ -92,7 +92,7 @@ You can simulate the performance of the contract using the **Text Execution** pa
 
 > Change some of the values in the Test Contract, for example increase the lower limit for temperature readings from 2°C to 3°C. If you reset the Test Execution and send the same request again you should notice a penalty in the response.
 
-![Change Test Contract](assets/advanced/hlf3.png)
+![Change Test Contract](/docs/assets/advanced/hlf3.png)
 
 The _Obligations_ that are emitted by the contract are configured to be emitted as Events in Fabric. This allows any party that is involved in the contract to perform an action automatically, for example to add a payment obligation to an invoice. 
 
@@ -234,7 +234,7 @@ If you get really stuck, a solution is available for you to [download](https://d
 :::
 2. Explore the source code of the Cicero chaincode shim that transforms your requests and deployments into Fabric transactions using the Fabric Node SDK. https://github.com/clauseHQ/fabric-samples/tree/master/chaincode/cicero 
 3. Create your own template from scratch using [Template Studio](https://studio.accordproject.org/), or download the [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
-![Change Test Contract](assets/advanced/hlf4.png)
+![Change Test Contract](/docs/assets/advanced/hlf4.png)
 > A separate tutorial for creating a template using the Cicero CLI tool can be found in [Creating a New Template](basic-create).
 
 4. This template also emits Obligations as Fabric events as well as returning a response to the client. Modify the Cicero chaincode to display the events do something interesting with them. How would you notify the parties that a penalty is due?

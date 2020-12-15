@@ -4,7 +4,7 @@ title: Concepts and High-level Architecture
 original_id: spec-concepts
 ---
 
-![Overview](assets/cicero-spec-overview.png)
+![Overview](/docs/assets/cicero-spec-overview.png)
 
 ## Step 1: Creation of Clause Template
 A legal professional analyzes a contract to determine the frequently used/standard clauses that are present. Clauses that are amenable to automation are extracted into a clause template. The template (more details follow) is comprised of the annotated legal text and an accompanying template data model that defines the assets, participants, concepts and events that are relevant to the clause. The business logic for the clause is coded by a developer (with review and in collaboration with the legal professional, or the suitably trained legal professional can code the contract logic themselves using the [Ergo](logic-ergo) DSL).
@@ -30,7 +30,7 @@ The engine invokes the business logic for the template, passing in the parameter
 
 Once a template has been created (Steps 1 to 4), it can be used to _instantiate_ a contract (Step 5) which itself can be executed by the template engine (Steps 5 to 6). Both contract instantiation and execution are shown in greater details on the following figure:
 
-![Execution Context](assets/execution_context.png)
+![Execution Context](/docs/assets/execution_context.png)
 
 > Note that the Accord Project specification does not assume a specific execution environment. [Cicero](https://github.com/accordproject/cicero), which implements the Accord Project specification, includes a Node.js VM based execution engine for contracts created from Accord Project templates. The engine routes incoming requests to template functions, performs data validation, executes the functions within a sandboxed environment, and then validates the response. It can also update the contract state and emit events and/or contract obligations back to the caller.
 
