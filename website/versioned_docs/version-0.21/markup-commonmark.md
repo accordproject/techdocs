@@ -1,5 +1,5 @@
 ---
-id: version-0.21-markup-commonmark
+id: markup-commonmark
 title: CommonMark
 original_id: markup-commonmark
 ---

@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-concerto-cli
+id: ref-concerto-cli
 title: Command Line
 original_id: ref-concerto-cli
 ---

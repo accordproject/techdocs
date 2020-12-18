@@ -1,5 +1,5 @@
 ---
-id: version-0.21-accordproject
+id: accordproject
 title: Overview
 original_id: accordproject
 ---

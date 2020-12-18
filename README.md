@@ -13,6 +13,8 @@
   </a>
 </p>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b6de7e93-88c3-4684-8424-298ed99b6931/deploy-status)](https://app.netlify.com/sites/ecstatic-lewin-144d0e/deploys)
+
 ## Introduction
 
 Technical Documentation for all Accord Project code. This site uses [Docusaurus](https://docusaurus.io) to generate static HTML.
@@ -23,12 +25,15 @@ Accord Project is an open source, non-profit, initiative working to transform co
 
 ## Installation
 
-To build the documentation locally:
+
+To build the documentation locally (docusaurus v2):
 ```
 cd ./website
 npm install
 npm run start
 ```
+
+
 If you want to re-generate the JSDoc API:
 ```
 npm run build:api

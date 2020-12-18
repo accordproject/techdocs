@@ -1,5 +1,5 @@
 ---
-id: version-0.21-logic-advanced-expr
+id: logic-advanced-expr
 title: Advanced Expressions
 original_id: logic-advanced-expr
 ---

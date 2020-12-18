@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-cicero-cli
+id: ref-cicero-cli
 title: Command Line
 original_id: ref-cicero-cli
 ---

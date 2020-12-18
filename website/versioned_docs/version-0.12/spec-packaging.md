@@ -1,5 +1,5 @@
 ---
-id: version-0.12-spec-packaging
+id: spec-packaging
 title: Packaging
 original_id: spec-packaging
 ---
@@ -60,7 +60,7 @@ The data model for a clause template is stored in a set of files under the `/mod
 
 Using the ability to convert CML models to UML we can even visualise all the required types (model, request, response) we have modelled graphically:
 
-![UML diagram](assets/cicero-spec-uml.png)
+![UML diagram](/docs/assets/cicero-spec-uml.png)
 
 ## Execution Logic
 

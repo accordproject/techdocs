@@ -1,5 +1,5 @@
 ---
-id: version-0.21-ref-errors
+id: ref-errors
 title: Errors
 original_id: ref-errors
 ---
@@ -10,7 +10,7 @@ original_id: ref-errors
 
  The hierarchy of errors (or exceptions) is shown on the following diagram:
 
- ![Error Hierarchy](assets/exceptions.png)
+ ![Error Hierarchy](/docs/assets/exceptions.png)
 
  ## Errors Model
 

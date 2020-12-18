@@ -1,4 +1,3 @@
-// Turn off ESLint for this file because it's sent down to users as-is.
 /* eslint-disable */
 window.addEventListener('load', function() {
   function button(label, ariaLabel, icon, className) {
