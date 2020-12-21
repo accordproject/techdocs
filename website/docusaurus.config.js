@@ -5,6 +5,12 @@ module.exports={
   "baseUrl": "/",
   "organizationName": "accordproject",
   "projectName": "techdocs",
+  "stylesheets": [
+    {
+      "href": 'css/main.css',
+      "type": 'text/css',
+    },
+  ],
   "scripts": [
     "https://buttons.github.io/buttons.js",
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
@@ -99,28 +105,13 @@ module.exports={
       "logo": {
         "alt": 'Accord Project Logo',
         "src": 'img/accord_icon.png',
-        "srcDark": 'img/accord_icon_white.png',
+        "srcDark": 'img/A-MARK-ACCORDPROJECT-ONELINE-white.svg',
       },
       "items": [
         {
-          "to": "docs/",
-          "label": "Documentation",
-          "position": "left"
-        },
-        {
-          "href": "https://studio.accordproject.org",
-          "label": "Try Online!",
-          "position": "left"
-        },
-        {
-          "href": "https://github.com/accordproject",
-          "label": "GitHub",
-          "position": "left"
-        },
-        {
           "label": "Version",
           "to": "docs",
-          "position": "right",
+          "position": "left",
           "items": [
             {
               "label": "0.21",
@@ -140,7 +131,22 @@ module.exports={
               "to": "docs/0.12/"
             },
           ]
-        }
+        },
+        {
+          "to": "docs/",
+          "label": "Documentation",
+          "position": "right"
+        },
+        {
+          "href": "https://studio.accordproject.org",
+          "label": "Try Online!",
+          "position": "right"
+        },
+        {
+          "href": "https://github.com/accordproject",
+          "label": "GitHub",
+          "position": "right"
+        },
       ]
     },
     "image": "img/docusaurus.png",
