@@ -1,5 +1,5 @@
 ---
-id: ref-testing
+id: version-0.20-ref-testing
 title: Testing Reference
 original_id: ref-testing
 ---

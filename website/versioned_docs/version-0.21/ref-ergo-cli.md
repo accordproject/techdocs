@@ -1,5 +1,5 @@
 ---
-id: ref-ergo-cli
+id: version-0.21-ref-ergo-cli
 title: Command Line
 original_id: ref-ergo-cli
 ---

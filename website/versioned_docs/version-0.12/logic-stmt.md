@@ -1,5 +1,5 @@
 ---
-id: logic-stmt
+id: version-0.12-logic-stmt
 title: Statements
 original_id: logic-stmt
 ---

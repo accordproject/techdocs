@@ -1,5 +1,5 @@
 ---
-id: advanced-nodejs
+id: version-0.12-advanced-nodejs
 title: Working with Node.js
 original_id: advanced-nodejs
 ---

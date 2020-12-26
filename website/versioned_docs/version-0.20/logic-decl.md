@@ -1,5 +1,5 @@
 ---
-id: logic-decl
+id: version-0.20-logic-decl
 title: Declarations
 original_id: logic-decl
 ---

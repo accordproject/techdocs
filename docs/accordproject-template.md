@@ -9,7 +9,7 @@ An Accord Project template ties legal text to computer code. It is composed of t
 - **Template Model**: the data model that backs the template, acting as a bridge between the text and the logic
 - **Template Logic**: the executable business logic for the template
 
-![Template](/docs/assets/020/template.png)
+![Template](assets/020/template.png)
 
 The three components (Text - Model - Logic) can also be intuitively understood as a **progression**, from _human-readable_ legal text to _machine-readable_ and  _machine-executable_. When combined these three elements allow templates to be edited, validated, and then executed on any computer platform (on your own machine, on a Cloud platform, on Blockchain, etc).
 
@@ -17,7 +17,7 @@ The three components (Text - Model - Logic) can also be intuitively understood a
 
 ## Template Text
 
-![Template Text](/docs/assets/020/template_text.png)
+![Template Text](assets/020/template_text.png)
 
 The template text is the natural language of the clause or contract. It can include markup to indicate [variables](ref-glossary#variable) for that template.
 
@@ -83,7 +83,7 @@ _More information about the Accord Project markup can be found in the [Markdown 
 
 ## Template Model
 
-![Template Model](/docs/assets/020/template_model.png)
+![Template Model](assets/020/template_model.png)
 
 Unlike a standard document template (e.g., in Word or pdf), Accord Project templates associate a _model_ to the natural language text. The model acts as a bridge between the text and logic; it gives the users an overview of the components, as well as the types of different components.
 
@@ -124,13 +124,13 @@ _More information about Concerto can be found in the [Concerto Model](model-conc
 
 ## Template Logic
 
-![Template Logic](/docs/assets/020/template_logic.png)
+![Template Logic](assets/020/template_logic.png)
 
 The combination of text and model already makes templates _machine-readable_, while the logic makes it _machine-executable_.
 
 ### During Drafting
 
-In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan](accordproject-template):
+In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan]():
 
 ```tem
 ## Fixed rate loan

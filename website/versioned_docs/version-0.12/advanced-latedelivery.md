@@ -1,5 +1,5 @@
 ---
-id: advanced-latedelivery
+id: version-0.12-advanced-latedelivery
 title: Authoring in Template Studio
 original_id: advanced-latedelivery
 ---
@@ -14,7 +14,7 @@ We start with a very simple _Late Penalty and Delivery_ Clause and gradually mak
 
 To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at https://templates.accordproject.org/minilatedeliveryandpenalty@0.2.1.html and click the "Open In Template Studio" button.
 
-![Advanced-Late-1](/docs/assets/advanced/late1.png)
+![Advanced-Late-1](assets/advanced/late1.png)
 
 Begin by inspecting the `README` and `package.json` tabs within the `Metadata` section. Feel free to change the name of the template to one you like.
 
@@ -22,17 +22,17 @@ Begin by inspecting the `README` and `package.json` tabs within the `Metadata` s
 
 Then head to the `Template` tab in the `Contract Text` section which shows the natural language for the template. You should see the following text.
 
-![Advanced-Late-2](/docs/assets/advanced/late2.png)
+![Advanced-Late-2](assets/advanced/late2.png)
 
 When the text in the `Template` tab is in sync with the text in the `Test Contract` tab, this results in a valid contract instance in the `Contract Data` tab. The contract data is represented using the JSON format, and contains the value of the variables declared in the contract template. For instance, the value for the `buyer` variable is `Betty Buyer`, highlighted in red:
 
-![Advanced-Late-3](/docs/assets/advanced/late3.png)
+![Advanced-Late-3](assets/advanced/late3.png)
 
 Changes to the variables in the `Test Contract` are reflected in the Contract Data in real time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
 
 If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Contract Text`. The error will be shown in red in the status bar at the bottom of the page. For instance the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.
 
-![Advanced-Late-4](/docs/assets/advanced/late4.png)
+![Advanced-Late-4](assets/advanced/late4.png)
 
 This is because the `Test Contract` relies on the `Template` text as a source of truth. This mechanism ensures that the actual contract always reflects the template, and remains faithful to the original legal text. You can however edit the `Template` itself in order to change the legal text, thereby creating a new template.
 
@@ -42,7 +42,7 @@ Revert your changes, changing the word `timely` back to the original word `delay
 
 Moving along to the `Model` section, you will find the data model for the template variables (the `MiniLateDeliveryClause` type), as well as for the requests (the `LateRequest` type) and response (the `LateResponse` type) for the late delivery and penalty clause.
 
-![Advanced-Late-5](/docs/assets/advanced/late5.png)
+![Advanced-Late-5](assets/advanced/late5.png)
 
 Note that a `namespace` is declared at the beginning of the file for the model, and that several existing models are being imported (using e.g., `import org.accordproject.cicero.contract.*`). Those imports are needed to access the definition for several types used in the model:
 - `AccordClause` which is a generic type for all Accord Project clause templates, and is defined in the `org.accordproject.contract` namespace;
@@ -53,23 +53,23 @@ Note that a `namespace` is declared at the beginning of the file for the model, 
 
 The final part of the template is the `Ergo` tab of the `Logic` section, which describes the business logic.
 
-![Advanced-Late-6](/docs/assets/advanced/late6.png)
+![Advanced-Late-6](assets/advanced/late6.png)
 
 Thanks to the `namespace` at the beginning of this file, the Ergo engine can know the definition for the `MiniLateDeliveryClause`, as well as the `LateRequest`, and `LateResponse` types defined in the `Model` tab.
 
 To test the template execution, go to the `Test Execution` tab in the `Logic` section. It should be already populated with a valid `Request`. Press the `Send Request` button to trigger the smart clause.
 
-![Advanced-Late-7](/docs/assets/advanced/late7.png)
+![Advanced-Late-7](assets/advanced/late7.png)
 
 Since the value of the `deliveredAt` parameter in the request is after the value of the `agreedDelivery` parameter in the request, this should return a new response which includes the calculated penalty.
 
 Changing the date for the `deliveredAt` parameter in the request will result in a different penalty.
 
-![Advanced-Late-8](/docs/assets/advanced/late8.png)
+![Advanced-Late-8](assets/advanced/late8.png)
 
 Note that the clause will return an error if it is called for a timely delivery.
 
-![Advanced-Late-9](/docs/assets/advanced/late9.png)
+![Advanced-Late-9](assets/advanced/late9.png)
 
 ## Add a Penalty Cap
 
@@ -111,7 +111,7 @@ total value of the delayed goods. If the delay is more than
 ```
 This should immediately result in an error when parsing the contract text:
 
-![Advanced-Late-10](/docs/assets/advanced/late10.png)
+![Advanced-Late-10](assets/advanced/late10.png)
 
 As explained in the error message, this is because the new template text uses a variable `capPercentage` which has not been declared in the model.
 
@@ -119,7 +119,7 @@ As explained in the error message, this is because the new template text uses a 
 
 To define this new variable, go to the `Model` tab, and change the `MiniLateDeliveryClause` type to include `o Double capPercentage`. 
 
-![Advanced-Late-11](/docs/assets/advanced/late10b.png)
+![Advanced-Late-11](assets/advanced/late10b.png)
 
 For convenience, you can copy-paste the new `MiniLateDeliveryClause` type from here:
 ```ergo
@@ -135,7 +135,7 @@ asset MiniLateDeliveryClause extends AccordClause {
 
 This result in a new error, this time on the test contract:
 
-![Advanced-Late-11](/docs/assets/advanced/late11.png)
+![Advanced-Late-11](assets/advanced/late11.png)
 
 To fix it, we simply need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
 
@@ -154,7 +154,7 @@ total value of the delayed goods. If the delay is more than
 
 Great, now the edited template should have no more errors, and the contract data should now include the value for the new `capPercentage` variable.
 
-![Advanced-Late-12](/docs/assets/advanced/late12.png)
+![Advanced-Late-12](assets/advanced/late12.png)
 
 Note that the `Current Template` Tab indicates that the template has been changed.
 
@@ -181,13 +181,13 @@ Do not forget to also change the value of the penalty in the returned `LateRespo
 ```
 The logic should now look as follows:
 
-![Advanced-Late-13](/docs/assets/advanced/late13.png)
+![Advanced-Late-13](assets/advanced/late13.png)
 
 ### Execute the new Logic
 
 As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result into a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
 
-![Advanced-Late-14](/docs/assets/advanced/late14.png)
+![Advanced-Late-14](assets/advanced/late14.png)
 
 ## Emit a Payment Obligation.
 
@@ -197,7 +197,7 @@ As a final extension to this template, we can modify it to emit a Payment Obliga
 
 The first place to change is in the metadata for the template. This can be done easily with the `full contract` button in the `Current Template` tab. This will immediately result in an error indicating that the model does not contain an `AccordContract` type.
 
-![Advanced-Late-15](/docs/assets/advanced/late15.png)
+![Advanced-Late-15](assets/advanced/late15.png)
 
 ### Update the Model
 
@@ -256,5 +256,5 @@ Lastly, add a new step between steps `// 4.` and `// 5.` in the logic to emit a 
 ```
 That's it! You can observe in the `Test Execution` that an `Obligation` is now being emitted. Try out adjusting values and continuing to send requests and getting responses and obligations.
 
-![Advanced-Late-16](/docs/assets/advanced/late16.png)
+![Advanced-Late-16](assets/advanced/late16.png)
 

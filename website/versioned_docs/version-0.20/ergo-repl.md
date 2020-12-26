@@ -1,5 +1,5 @@
 ---
-id: ergo-repl
+id: version-0.20-ergo-repl
 title: Ergo REPL
 original_id: ergo-repl
 ---

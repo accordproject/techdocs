@@ -1,5 +1,5 @@
 ---
-id: markup-ergo
+id: version-0.20-markup-ergo
 title: Ergo Expressions
 original_id: markup-ergo
 ---

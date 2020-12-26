@@ -1,5 +1,5 @@
 ---
-id: model-decorators
+id: version-0.21-model-decorators
 title: Decorators
 original_id: model-decorators
 ---

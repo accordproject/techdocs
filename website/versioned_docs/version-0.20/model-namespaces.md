@@ -1,5 +1,5 @@
 ---
-id: model-namespaces
+id: version-0.20-model-namespaces
 title: Namespaces
 original_id: model-namespaces
 ---

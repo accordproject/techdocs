@@ -1,5 +1,5 @@
 ---
-id: spec-execution
+id: version-0.12-spec-execution
 title: Contract Execution
 original_id: spec-execution
 ---

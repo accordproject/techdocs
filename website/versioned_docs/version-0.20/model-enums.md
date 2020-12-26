@@ -1,5 +1,5 @@
 ---
-id: model-enums
+id: version-0.20-model-enums
 title: Enumerations
 original_id: model-enums
 ---

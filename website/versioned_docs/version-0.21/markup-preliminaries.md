@@ -1,5 +1,5 @@
 ---
-id: markup-preliminaries
+id: version-0.21-markup-preliminaries
 title: Preliminaries
 original_id: markup-preliminaries
 ---
@@ -102,17 +102,17 @@ More information and examples can be found in the [TemplateMark](markup-template
 
 You can test your template or contract text using the [TemplateMark Dingus](https://templatemark-dingus.netlify.app), an online tool which lets you edit the markdown and see it rendered as HTML, or as a document object model.
 
-![TemplateMark Dingus](/docs/assets/dingus1.png)
+![TemplateMark Dingus](assets/dingus1.png)
 
 You can select whether to parse your text as pure CommonMark (i.e., according to the CommonMark specification), or with the CiceroMark or TemplateMark extensions.
 
-![TemplateMark Dingus](/docs/assets/dingus2.png)
+![TemplateMark Dingus](assets/dingus2.png)
 
 You can also inspect the HTML source, or the document object model (abstract syntax tree or AST).
 
-![TemplateMark Dingus](/docs/assets/dingus3.png)
+![TemplateMark Dingus](assets/dingus3.png)
 
 For instance, you can open the TemplateMark from the loan example on this page by clicking [this link](https://templatemark-dingus.netlify.app/#md3=%7B%22source%22%3A%22%23%20Loan%20agreement%5Cn%5CnThis%20is%20a%20loan%20agreement%20between%20%7B%7Bborrower%7D%7D%20and%20%7B%7Blender%7D%7D%2C%20which%20shall%20be%20entered%20into%5Cnby%20the%20parties%20on%20%7B%7Bdate%20as%20%5C%22MMMMM%20DD%2C%20YYYY%20-%20hhA%5C%22%7D%7D%7B%7B%23if%20forceMajeure%7D%7D%2C%20except%20in%20the%20event%20of%20a%20force%20majeure%7B%7B%2Fif%7D%7D.%5Cn%5Cn%7B%7B%23clause%20fixedRate%7D%7D%5Cn%23%23%20Fixed%20rate%20loan%5Cn%5CnThis%20is%20a%20_fixed%20interest_%20loan%20to%20the%20amount%20of%20%7B%7BloanAmount%20as%20%5C%22K0%2C0.00%5C%22%7D%7D%5Cnat%20the%20yearly%20interest%20rate%20of%20%7B%7Brate%7D%7D%25%5Cnwith%20a%20loan%20term%20of%20%7B%7BloanDuration%7D%7D%2C%5Cnand%20monthly%20payments%20of%20%7B%7B%25%20monthlyPaymentFormula%28loanAmount%2Crate%2CloanDuration%29%20as%20%5C%22K0%2C0.00%5C%22%20%25%7D%7D%5Cn%7B%7B%2Fclause%7D%7D%5Cn%22%2C%22defaults%22%3A%7B%22templateMark%22%3Atrue%2C%22ciceroMark%22%3Afalse%2C%22html%22%3Atrue%2C%22_highlight%22%3Atrue%2C%22_strict%22%3Afalse%2C%22_view%22%3A%22html%22%7D%7D).
 
-![TemplateMark Dingus](/docs/assets/dingus4.png)
+![TemplateMark Dingus](assets/dingus4.png)
 

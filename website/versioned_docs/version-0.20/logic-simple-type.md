@@ -1,5 +1,5 @@
 ---
-id: logic-simple-type
+id: version-0.20-logic-simple-type
 title: Introducing Types
 original_id: logic-simple-type
 ---

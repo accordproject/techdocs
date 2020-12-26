@@ -1,5 +1,5 @@
 ---
-id: accordproject-slc
+id: version-0.21-accordproject-slc
 title: Smart Legal Contracts
 original_id: accordproject-slc
 ---

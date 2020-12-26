@@ -1,5 +1,5 @@
 ---
-id: ref-cicero-testing
+id: version-0.21-ref-cicero-testing
 title: Template Testing
 original_id: ref-cicero-testing
 ---

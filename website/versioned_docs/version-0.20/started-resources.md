@@ -1,5 +1,5 @@
 ---
-id: started-resources
+id: version-0.20-started-resources
 title: Resources
 original_id: started-resources
 ---

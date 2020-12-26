@@ -1,5 +1,5 @@
 ---
-id: ergo-cli
+id: version-0.13-ergo-cli
 title: Ergo CLI
 original_id: ergo-cli
 ---

@@ -1,5 +1,5 @@
 ---
-id: basic-use
+id: version-0.12-basic-use
 title: How to Use a Template
 original_id: basic-use
 ---

@@ -1,5 +1,5 @@
 ---
-id: ref-markup
+id: version-0.12-ref-markup
 title: Markup Reference
 original_id: ref-markup
 ---

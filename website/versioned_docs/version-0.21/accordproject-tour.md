@@ -1,5 +1,5 @@
 ---
-id: accordproject-tour
+id: version-0.21-accordproject-tour
 title: Online Tour
 original_id: accordproject-tour
 ---

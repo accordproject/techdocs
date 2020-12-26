@@ -1,5 +1,5 @@
 ---
-id: accordproject-studio
+id: version-0.12-accordproject-studio
 title: Template Studio
 original_id: accordproject-studio
 ---

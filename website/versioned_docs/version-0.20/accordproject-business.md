@@ -1,5 +1,5 @@
 ---
-id: accordproject-business
+id: version-0.20-accordproject-business
 title: For Business
 original_id: accordproject-business
 ---

@@ -1,6 +1,6 @@
 ---
-id: ergo-tutorial
-title: "Ergo: A Tutorial"
+id: version-0.13-ergo-tutorial
+title: Ergo: A Tutorial
 original_id: ergo-tutorial
 ---
 

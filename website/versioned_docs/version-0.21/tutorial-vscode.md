@@ -1,5 +1,5 @@
 ---
-id: tutorial-vscode
+id: version-0.21-tutorial-vscode
 title: With VS Code
 original_id: tutorial-vscode
 ---

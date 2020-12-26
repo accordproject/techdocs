@@ -1,6 +1,6 @@
 ---
-id: spec-example
-title: "Example: Late Delivery Clause"
+id: version-0.12-spec-example
+title: Example: Late Delivery Clause
 original_id: spec-example
 ---
 

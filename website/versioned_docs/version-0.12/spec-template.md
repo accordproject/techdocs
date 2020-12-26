@@ -1,5 +1,5 @@
 ---
-id: spec-template
+id: version-0.12-spec-template
 title: Template Structure
 original_id: spec-template
 ---
@@ -10,7 +10,7 @@ An Accord Project template is composed of three elements:
 - Model, the data model that backs the template 
 - Logic, the executable business logic for the template
 
-![Cicero Template](/docs/assets/template.png)
+![Cicero Template](assets/template.png)
 
 When combined these three elements allow templates to be edited, analyzed, queried and executed.
 
