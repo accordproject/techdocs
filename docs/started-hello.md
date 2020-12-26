@@ -197,7 +197,7 @@ Edit your `request.json` file so that the `input` variable is missing:
 }
 ```
 
-Then run `cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json ` again. The output should now be:
+Then run `cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json` again. The output should now be:
 ```
 13:47:35 - error: Instance org.accordproject.helloworld.MyRequest#b0b1cbcc-dcae-4758-b9fc-254a43aa10a8 missing required field input
 ```
