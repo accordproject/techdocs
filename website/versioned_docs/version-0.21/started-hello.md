@@ -137,7 +137,7 @@ You can use Cicero to run the logic associated to a contract using the `cicero t
 
 Use the `cicero trigger` command to parse a clause text based (your `sample.md`) *then* send a request to the clause logic.
 
-To do so you, first create one additional file `request.json` which contains:
+To do so, you first create one additional file `request.json` which contains:
 ```json
 {
   "$class": "org.accordproject.helloworld.MyRequest",
