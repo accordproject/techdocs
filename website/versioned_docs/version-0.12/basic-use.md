@@ -160,7 +160,7 @@ The results of execution displayed back on your terminal is in JSON format, incl
 
 That's it! You have successfully parsed and executed your first Accord Project Clause using the `helloworld` template.
 
-Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the `latedeliveryandpenalty` clause is in the red box in the following image:
+Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template, you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the `latedeliveryandpenalty` clause is in the red box in the following image:
 
 ![Basic-Use-3](/docs/assets/basic/use3.png)
 
