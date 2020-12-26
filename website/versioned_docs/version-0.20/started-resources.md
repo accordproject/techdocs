@@ -31,8 +31,8 @@ Accord Project is also developing tools to help with authoring, testing and runn
 
 ### User Interface Components
 
-- [Markdown Editor](https://github.com/accordproject/markdown-editor): a general purpose react component for markdown rendering editing-
-- [Cicero UI](https://github.com/accordproject/cicero-ui): a library of react components for visualizing, creating, editing Accord Project templates
+- [Markdown Editor](https://github.com/accordproject/markdown-editor): a general purpose react component for markdown rendering and editing
+- [Cicero UI](https://github.com/accordproject/cicero-ui): a library of react components for visualizing, creating and editing Accord Project templates
 
 ## Developers Resources
 
