@@ -26,7 +26,7 @@ The Accord Project provides a complete solution for smart legal contract develop
 
 ### Cicero
 
-Cicero implements a format for legal contract and clause templates based on the [Accord Project Template Specification](accordproject-specification).
+Cicero implements a format for legal contract and clause templates based on the [Accord Project Template Specification](accordproject-template).
 
 The following screenshot shows a Cicero template for an acceptance of delivery clause.
 
