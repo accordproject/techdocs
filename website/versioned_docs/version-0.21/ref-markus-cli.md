@@ -165,7 +165,7 @@ Roundtripping might result in small changes in the source markdown, but should a
 
 ### `--model` `--contract` options
 
-When handling [TemplateMark](markdown-templatemark), one has to provide a model using the `--model` option and whether the template is a clause (default) or a contract (using the `--contract` option).
+When handling [TemplateMark](markup-templatemark), one has to provide a model using the `--model` option and whether the template is a clause (default) or a contract (using the `--contract` option).
 
 For instance the following converts markdown with the template extension to a TemplateMark document object model:
 ```bash
