@@ -203,7 +203,7 @@ follows: "bank transfer".
 
 ## With Blocks
 
-A `with` block can be used to changes variables that are in scope in a specific part of a template grammar:
+A `with` block can be used to change variables that are in scope in a specific part of a template grammar:
 
 ```tem
 For the Tenant: {{#with tenant}}{{partyId}}, domiciled at {{address}}{{/with}}
