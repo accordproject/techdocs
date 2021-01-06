@@ -42,7 +42,7 @@ Consequently, contracts are transformed from business liabilities in constant ne
 
 The Accord Project is a non-profit, member-driven organization that builds open source code and documentation for smart legal contracts for use by transactional attorneys, business and finance professionals, and other contract users. Open source means that anyone can use and contribute to the code and documentation and use it in their own software applications and systems free of charge.
 
-The purpose of the Accord Project is to establish and maintain a common and consistent legal and technical foundation for smart legal contracts. The Accord Project is organized into working groups focused on various use cases for Smart Contracts. The specific working groups are assisted by the Technology Working Group, which builds the underlying open source code and specifications to codify the knowledge of the transactional working groups. More details about the internal governance of the Accord Project are available [here](https://github.com/accordproject/governance).
+The purpose of the Accord Project is to establish and maintain a common and consistent legal and technical foundation for smart legal contracts. The Accord Project is organized into working groups focused on various use cases for Smart COntracts. The specific working groups are assisted by the Technology Working Group, which builds the underlying open source code and specifications to codify the knowledge of the transactional working groups. More details about the internal governance of the Accord Project are available [here](https://github.com/accordproject/governance).
 
 
 ### How can I get involved?

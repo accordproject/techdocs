@@ -119,7 +119,7 @@ As explained in the error message, this is because the new template text uses a 
 
 To define this new variable, go to the `Model` tab, and change the `MiniLateDeliveryClause` type to include `o Double capPercentage`. 
 
-![Advanced-Late-11](assets/advanced/late11.png)
+![Advanced-Late-11](assets/advanced/late10b.png)
 
 For convenience, you can copy-paste the new `MiniLateDeliveryClause` type from here:
 ```ergo
@@ -135,7 +135,7 @@ asset MiniLateDeliveryClause extends AccordClause {
 
 This result in a new error, this time on the test contract:
 
-![Advanced-Late-12](assets/advanced/late12.png)
+![Advanced-Late-11](assets/advanced/late11.png)
 
 To fix it, we simply need to add that same line we added to the template, replacing the `capPercentage` by a value in the `Test Contract`: `The total amount of penalty shall not, however, exceed 52% of the total value of the delayed goods.`
 
@@ -154,7 +154,7 @@ total value of the delayed goods. If the delay is more than
 
 Great, now the edited template should have no more errors, and the contract data should now include the value for the new `capPercentage` variable.
 
-![Advanced-Late-13](assets/advanced/late13.png)
+![Advanced-Late-12](assets/advanced/late12.png)
 
 Note that the `Current Template` Tab indicates that the template has been changed.
 
@@ -181,13 +181,13 @@ Do not forget to also change the value of the penalty in the returned `LateRespo
 ```
 The logic should now look as follows:
 
-![Advanced-Late-14](assets/advanced/late14.png)
+![Advanced-Late-13](assets/advanced/late13.png)
 
 ### Execute the new Logic
 
 As a final test of the new template, you should try again to execute the contract with a long delay in delivery. This should now result into a much smaller penalty, which is capped to 52% of the total value of the goods, or 104 USD.
 
-![Advanced-Late-15](assets/advanced/late15.png)
+![Advanced-Late-14](assets/advanced/late14.png)
 
 ## Emit a Payment Obligation.
 
@@ -197,7 +197,7 @@ As a final extension to this template, we can modify it to emit a Payment Obliga
 
 The first place to change is in the metadata for the template. This can be done easily with the `full contract` button in the `Current Template` tab. This will immediately result in an error indicating that the model does not contain an `AccordContract` type.
 
-![Advanced-Late-16](assets/advanced/late16.png)
+![Advanced-Late-15](assets/advanced/late15.png)
 
 ### Update the Model
 
@@ -256,5 +256,5 @@ Lastly, add a new step between steps `// 4.` and `// 5.` in the logic to emit a 
 ```
 That's it! You can observe in the `Test Execution` that an `Obligation` is now being emitted. Try out adjusting values and continuing to send requests and getting responses and obligations.
 
-![Advanced-Late-17](assets/advanced/late17.png)
+![Advanced-Late-16](assets/advanced/late16.png)
 

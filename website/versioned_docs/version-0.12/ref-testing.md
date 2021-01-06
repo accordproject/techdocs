@@ -54,7 +54,7 @@ Each step starts with a keyword, either **Given**, **When**, **And**, or **Then*
 
 The simplest kind of scenario specifies the response expected for a given request.
 
-For instance, the following scenario describes the expected response for a given request to the [helloworld template](https://templates.accordproject.org/helloworld@0.10.1.html):
+For instance, the following scenario describe the expected response for a given request to the [helloworld template](https://templates.accordproject.org/helloworld@0.10.1.html):
 
 ```gherkin
   Scenario: The contract should say Hello to Betty Buyer, from the ACME Corporation
@@ -77,14 +77,14 @@ For instance, the following scenario describes the expected response for a given
 Both the request and the response are written inside triple quotes `"""` using JSON. If the request or response is not valid wrt. to the data model, this will result in a failing test.
 
 :::warning
-While the syntax for each scenario uses _pseudo_ natural language (e.g., `When it receives the request`), the tests use very specific sentences as illustrated in this guide.
+While the syntax for each scenario uses _pseudo_ natural language (e.g., `When it receives the request`), the tests much use very specific sentences as illustrated in this guide.
 :::
 
 ### Defaults
 
 You can use the sample contract `sample.txt` and request `request.json` provided with a template by using specific steps.
 
-For instance, the following scenario describes the expected response for the default contract text when sending the default request to the [helloworld template](https://templates.accordproject.org/helloworld@0.10.1.html):
+For instance, the following scenario describe the expected response for the default contract text when sending the default request to the [helloworld template](https://templates.accordproject.org/helloworld@0.10.1.html):
 ```gherkin
 Feature: HelloWorld
   This describe the expected behavior for the Accord Project's "Hello World!" contract
@@ -107,7 +107,7 @@ Feature: HelloWorld
 
 Whenever appropriate, it is good practice to include both successful executions, as well as scenarios for cases when a call to a template might fail. This can be written using a **Then** step that describes the error.
 
-For instance, the following scenario describes an expected error for a given request to the [Interest Rate Swap](https://templates.accordproject.org/interest-rate-swap@0.4.1.html) template:
+For instance, the following scenario describe an expected error for a given request to the [Interest Rate Swap](https://templates.accordproject.org/interest-rate-swap@0.4.1.html) template:
 ```gherkin
 Feature: Interest Rate Swap
   This describes the expected behavior for the Accord Project's interest rate swap contract
@@ -180,7 +180,7 @@ The reason for the error is that the contract has been defined with a negative i
 
 For templates which assume and can modify the contract state, the scenario should also include pre- and post- conditions for that state. In addition, some steps are available to define scenarios that specify the expected initial step for the contract.
 
-For instance, the following scenario for the [Installment Sale](https://templates.accordproject.org/installment-sale@0.12.1.html) template describes the expected initial state and execution of one installment:
+For instance, the following scenario for the [Installment Sale](https://templates.accordproject.org/installment-sale@0.12.1.html) template describe the expected initial state and execution of one installment:
 ```gherkin
 Feature: Installment Sale
   This describe the expected behavior for the Accord Project's installment sale contract

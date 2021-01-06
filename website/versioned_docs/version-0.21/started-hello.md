@@ -137,7 +137,7 @@ You can use Cicero to run the logic associated to a contract using the `cicero t
 
 Use the `cicero trigger` command to parse a clause text based (your `sample.md`) *then* send a request to the clause logic.
 
-To do so, you first create one additional file `request.json` which contains:
+To do so you, first create one additional file `request.json` which contains:
 ```json
 {
   "$class": "org.accordproject.helloworld.MyRequest",
@@ -198,7 +198,7 @@ Edit your `request.json` file so that the `input` variable is missing:
 }
 ```
 
-Then run `cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json` again. The output should now be:
+Then run `cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json ` again. The output should now be:
 ```
 13:47:35 - error: Instance org.accordproject.helloworld.MyRequest#b0b1cbcc-dcae-4758-b9fc-254a43aa10a8 missing required field input
 ```
@@ -207,7 +207,7 @@ Then run `cicero trigger --template helloworld@0.13.0.cta --sample sample.md --r
 
 ### Try Other Templates
 
-Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template, you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the [Late Delivery And Penalty](https://templates.accordproject.org/latedeliveryandpenalty@0.15.0.html) clause is in the red box in the following image:
+Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the [Late Delivery And Penalty](https://templates.accordproject.org/latedeliveryandpenalty@0.15.0.html) clause is in the red box in the following image:
 
 ![Basic-Use-3](/docs/assets/basic/use3.png)
 

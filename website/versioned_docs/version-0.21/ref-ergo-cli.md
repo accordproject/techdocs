@@ -15,7 +15,7 @@ This will install `ergo`, to compile and run contracts locally on your machine, 
 
 > In ergo-cli `0.20` release, `ergoc`, the Ergo compiler, and `ergorun`, used to run contracts locally on your machine, which were previously part of the `ergo-cli` npm package, have been merged into `ergo` commands.
 >
-> For more information about the changes that were made for the `0.20` release, please refer to our [Migrating from 0.13.\*](ref-migrate-0.13-0.20.html) guide.
+> For more information about the changes that were made for the `0.20` release, please refer to our [Migrating from 0.13.\*](0.13to0.20.html) guide.
 
 
 ## Ergo

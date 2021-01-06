@@ -4,7 +4,7 @@ title: Decorators
 original_id: model-decorators
 ---
 
-Model elements may have arbitrary decorators (aka annotations) placed on them. These are available via API and can be useful for tools to extend the model. Accord Project decorators are defined in the [Decorators Reference](ref-concerto-decorators).
+Model elements may have arbitrary decorators (aka annotations) placed on them. These are available via API and can be useful for tools to extend the model. Accord Project decorators are defined in the [Decorators Reference](ref-decorators).
 
 ```js
 @foo("arg1", 2)
