@@ -717,24 +717,38 @@ blockquote {
 /* End of Main Container */
 
 /* Navbar */
-.fixedHeaderContainer {
-  background: #1b2540;
+.navbar {
+  background: #1b2540 !important;
   color: #fff;
   min-height: 50px;
   padding: 8px 0;
-  position: fixed;
+  position: fixed !important;
   width: 100%;
   z-index: 9999;
   transform: translate3d(0, 0, 0);
 }
 
+.navbar__inner {
+  margin: 0px auto;
+  padding: 0 20px;
+  max-width: 1400px;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  text-align: left;
+}
+
+strong.navbar__title {
+  display: none !important;
+}
+
 @media only screen and (min-width: 1024px) {
-  .fixedHeaderContainer {
+  .navbar {
     flex-shrink: 0;
   }
 }
 
-.fixedHeaderContainer a {
+.navbar a {
   align-items: center;
   border: 0;
   color: #fff;
@@ -744,28 +758,28 @@ blockquote {
   z-index: 10000;
 }
 
-.fixedHeaderContainer header {
+.navbar header {
   display: flex;
   flex-flow: row nowrap;
   position: relative;
   text-align: left;
 }
 
-.fixedHeaderContainer header img {
+.navbar header img {
   height: 100%;
   margin-right: 10px;
 }
 
-.fixedHeaderContainer header .headerTitle {
+.navbar header .headerTitle {
   font-size: 1.25em;
   margin: 0;
 }
 
-.fixedHeaderContainer header .headerTitleWithLogo {
+.navbar header .headerTitleWithLogo {
   display: none !important;
 }
 
-.fixedHeaderContainer header h3 {
+.navbar header h3 {
   color: white;
   font-size: 16px;
   margin: 0;
@@ -2802,7 +2816,7 @@ a:hover {
   }
 }
 
-.fixedHeaderContainer header .headerTitleWithLogo {
+.navbar header .headerTitleWithLogo {
   color: #fff;
 }
 

@@ -101,7 +101,6 @@ module.exports={
     },
     "navbar": {
       "title": "Accord Project",
-      "hideOnScroll": true,
       "logo": {
         "alt": 'Accord Project Logo',
         "src": 'img/accord_icon.png',
