@@ -17,7 +17,7 @@
 
 ## Introduction
 
-Technical Documentation for all Accord Project code. This site uses [Docusaurus](https://docusaurus.io) to generate static HTML.
+Technical Documentation for all Accord Project code. This site uses [Docusaurus v2](https://v2.docusaurus.io) to generate static HTML.
 
 The site is hosted at: https://docs.accordproject.org
 
