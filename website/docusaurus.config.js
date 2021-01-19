@@ -5,12 +5,6 @@ module.exports={
   "baseUrl": "/",
   "organizationName": "accordproject",
   "projectName": "techdocs",
-  "stylesheets": [
-    {
-      "href": 'css/main.css',
-      "type": 'text/css',
-    },
-  ],
   "scripts": [
     "https://buttons.github.io/buttons.js",
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
@@ -73,7 +67,7 @@ module.exports={
           "remarkPlugins": [require('@docusaurus/remark-plugin-npm2yarn')],
         },
         "theme": {
-          "customCss": [require.resolve("./src/css/customTheme.css")]
+          "customCss": [require.resolve("./static/css/main.css")]
         }
       }
     ]
