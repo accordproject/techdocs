@@ -44,8 +44,8 @@
             },
 	          {
                 "type": "subcategory",
-                "label": "Template Migration",
-                "ids": ["ref-migrate-0.13-0.20","ref-migrate-0.20-0.21"]
+                "label": "Migration",
+                "ids": ["ref-migrate-0.13-0.20","ref-migrate-0.20-0.21", "ref-migrate-concerto-0.82-1.0"]
             },
             {
                 "type": "subcategory",
