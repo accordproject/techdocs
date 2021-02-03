@@ -1,6 +1,6 @@
 ---
 id: ref-migrate-0.20-0.21
-title: 0.20 to 0.21
+title: Cicero 0.20 to 0.21
 ---
 
 The main change between the `0.20` release and the `0.21` release is the new markdown syntax and parser infrastructure based on [`markdown-it`](https://github.com/markdown-it/markdown-it). While most templates designed for `0.20` should still work on `0.21` some changes might be needed to the contract or template text to account for this new syntax.
