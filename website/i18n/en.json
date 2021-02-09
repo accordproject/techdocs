@@ -129,10 +129,13 @@
         "title": "Command Line"
       },
       "ref-migrate-0.13-0.20": {
-        "title": "0.13 to 0.20"
+        "title": "Cicero 0.13 to 0.20"
       },
       "ref-migrate-0.20-0.21": {
-        "title": "0.20 to 0.21"
+        "title": "Cicero 0.20 to 0.21"
+      },
+      "ref-migrate-concerto-0.82-1.0": {
+        "title": "Concerto 0.82 to 1.0"
       },
       "ref-web-components-overview": {
         "title": "Overview"
