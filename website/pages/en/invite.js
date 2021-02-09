@@ -56,7 +56,7 @@ class Invite extends React.Component {
               <br/>
 
               <label for="email">Email:</label>
-              <input type="text" id="email" name="email" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required/>
+              <input type="text" id="email" name="email"/>
               <br/>
 
               <input type="submit" value="Submit"></input>
