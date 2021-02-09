@@ -56,7 +56,7 @@ class Invite extends React.Component {
               <br/>
 
               <label for="email">Email:</label>
-              <input type="text" id="email" name="email"/>
+              <input type="email" id="email" name="email" required/>
               <br/>
 
               <input type="submit" value="Submit"></input>
