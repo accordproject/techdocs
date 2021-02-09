@@ -21,14 +21,14 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: JSON.stringify({
         message: 'success',
-        response: JSON.stringify(response)
+        details: JSON.stringify(response.body)
       }),
     };
   } catch (error) {
     console.log("error", error);
     return {
       statusCode: 400,
-      body: error.message,
+      details: error.message,
     };
   }
 };
