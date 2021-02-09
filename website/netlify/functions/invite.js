@@ -6,7 +6,7 @@ Request body:
   "email": "foo@example.com"
 }
 */
-export async function handler(event, context, callback) {
+exports.handler = async (event, context) => {
   try {
     const payload = JSON.parse(event.body);
     const email = encodeURIComponent(payload.params.email.trim());
@@ -27,4 +27,4 @@ export async function handler(event, context, callback) {
       body: error.message,
     };
   }
-}
+};
