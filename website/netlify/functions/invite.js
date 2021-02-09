@@ -8,6 +8,7 @@ Request body:
 */
 exports.handler = async (event, context) => {
   try {
+    console.log(event.body);
     const payload = JSON.parse(event.body);
     const email = encodeURIComponent(payload.params.email.trim());
     const SLACK_TOKEN = process.env.SLACK_TOKEN;
