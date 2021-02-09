@@ -1,6 +1,4 @@
-import axios from 'axios';
-
-dotenv.config();
+const axios = require("axios");
 
 /*
 Request body:
