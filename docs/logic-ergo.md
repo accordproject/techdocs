@@ -12,7 +12,7 @@ Ergo aims to:
 - ensure safe execution: the language should prevent run-time errors and non-terminating logic
 - be blockchain neutral: the same contract logic can be executed either on and off chain on a variety of distributed ledger technologies
 - be formally specified: the meaning of contracts should be well defined so it can be verified, and preserved during execution
-- be consistent with the [Accord Project Template Specification](accordproject-specification)
+- be consistent with the [Accord Project Template Specification](ref-ergo-spec)
 
 ## Design Choices
 
