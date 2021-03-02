@@ -60,7 +60,7 @@ Conditional expressions can be used to perform different computations depending 
 
 > Typing `return if 1.0 < 0.0 then "negative" else "positive"` in the [Ergo REPL](https://ergorepl.netlify.com), should answer `Response. "positive" : String`.
 
-See also the [Conditional Expression Reference](ergo-reference.html#condition-expressions)
+See also the [Conditional Expression Reference](ref-ergo-spec.html#condition-expressions)
 
 ## Let bindings
 

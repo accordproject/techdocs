@@ -455,7 +455,7 @@ results in the following markdown text:
 
 ### Optional Blocks
 
-Optional blocks enables text which depends on the presence of absence of an `optional` variable in your model:
+Optional blocks enable text which depends on the presence or absence of an `optional` variable in your model:
 
 ```tem
 {{#optional forceMajeure}}This applies except for Force Majeure cases in a {{miles}} miles radius.{{/optional}}
@@ -502,7 +502,7 @@ This applies even in case a force majeure.
 
 ### With Blocks
 
-A `with` block can be used to changes variables that are in scope in a specific part of a template grammar:
+A `with` block can be used to change variables that are in scope in a specific part of a template grammar:
 
 ```tem
 For the Tenant: {{#with tenant}}{{partyId}}, domiciled at {{address}}{{/with}}
