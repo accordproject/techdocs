@@ -79,7 +79,7 @@ TemplateMark is the markup format in which the text for Accord Project templates
 
 It also provides the ability to specify the document structure (e.g., headings, lists), to highlight certain terms (e.g., in bold or italics), to indicate text which is optional in the agreement, and more.
 
-_More information about the Accord Project markup can be found in the [Markdown Text](markup-template) Section of this documentation._
+_More information about the Accord Project markup can be found in the [Markdown Text](markup-preliminaries) Section of this documentation._
 
 ## Template Model
 
