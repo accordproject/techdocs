@@ -67,7 +67,7 @@ module.exports={
           "remarkPlugins": [require('@docusaurus/remark-plugin-npm2yarn')],
         },
         "theme": {
-          "customCss": [require.resolve("./src/css/customTheme.css")]
+          "customCss": [require.resolve("./static/css/main.css")]
         }
       }
     ]
@@ -95,32 +95,16 @@ module.exports={
     },
     "navbar": {
       "title": "Accord Project",
-      "hideOnScroll": true,
       "logo": {
         "alt": 'Accord Project Logo',
         "src": 'img/accord_icon.png',
-        "srcDark": 'img/accord_icon_white.png',
+        "srcDark": 'img/A-MARK-ACCORDPROJECT-ONELINE-white.svg',
       },
       "items": [
         {
-          "to": "docs/",
-          "label": "Documentation",
-          "position": "left"
-        },
-        {
-          "href": "https://studio.accordproject.org",
-          "label": "Try Online!",
-          "position": "left"
-        },
-        {
-          "href": "https://github.com/accordproject",
-          "label": "GitHub",
-          "position": "left"
-        },
-        {
           "label": "Version",
           "to": "docs",
-          "position": "right",
+          "position": "left",
           "items": [
             {
               "label": "0.21",
@@ -140,7 +124,22 @@ module.exports={
               "to": "docs/0.12/"
             },
           ]
-        }
+        },
+        {
+          "to": "docs/",
+          "label": "Documentation",
+          "position": "right"
+        },
+        {
+          "href": "https://studio.accordproject.org",
+          "label": "Try Online!",
+          "position": "right"
+        },
+        {
+          "href": "https://github.com/accordproject",
+          "label": "GitHub",
+          "position": "right"
+        },
       ]
     },
     "image": "img/docusaurus.png",
