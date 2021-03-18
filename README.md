@@ -52,6 +52,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
 ### Documentation
 * [Getting Started with Accord Project][docwelcome]
 * [Concepts and High-level Architecture][dochighlevel]
+* [Install Cicero][docinstall]
 * [How to use the Cicero Templating System][doccicero]
 * [How to Author Accord Project Templates][docstudio]
 * [Ergo Language Guide][docergo]
@@ -333,7 +334,8 @@ Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respec
 [dochighlevel]: https://docs.accordproject.org/docs/spec-concepts.html
 [docergo]: https://docs.accordproject.org/docs/logic-ergo.html
 [docstart]: https://docs.accordproject.org/docs/accordproject.html
-[doccicero]: https://docs.accordproject.org/docs/basic-use.html
+[docinstall]: https://docs.accordproject.org/docs/started-installation.html
+[doccicero]: https://docs.accordproject.org/docs/started-hello.html
 [docstudio]: https://docs.accordproject.org/docs/advanced-latedelivery.html
 
 [contributing]: https://github.com/accordproject/techdocs/blob/master/CONTRIBUTING.md
