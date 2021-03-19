@@ -48,15 +48,6 @@ Accord Project is an open source, non-profit, initiative working to transform co
 * [Accord Project Technical Documentation][apdoc]
 * [Accord Project GitHub][apgit]
 
-
-### Documentation
-* [Getting Started with Accord Project][docwelcome]
-* [Concepts and High-level Architecture][dochighlevel]
-* [Install Cicero][docinstall]
-* [How to use the Cicero Templating System][doccicero]
-* [How to Author Accord Project Templates][docstudio]
-* [Ergo Language Guide][docergo]
-
 ### Ecosystem
 
 #### Core libraries:
@@ -330,13 +321,7 @@ Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respec
 [apslack]: https://accord-project-slack-signup.herokuapp.com
 
 [docspec]: https://docs.accordproject.org/docs/spec-overview.html
-[docwelcome]: https://docs.accordproject.org/docs/accordproject.html
-[dochighlevel]: https://docs.accordproject.org/docs/spec-concepts.html
-[docergo]: https://docs.accordproject.org/docs/logic-ergo.html
 [docstart]: https://docs.accordproject.org/docs/accordproject.html
-[docinstall]: https://docs.accordproject.org/docs/started-installation.html
-[doccicero]: https://docs.accordproject.org/docs/started-hello.html
-[docstudio]: https://docs.accordproject.org/docs/advanced-latedelivery.html
 
 [contributing]: https://github.com/accordproject/techdocs/blob/master/CONTRIBUTING.md
 [developers]: https://github.com/accordproject/techdocs/blob/master/DEVELOPERS.md
