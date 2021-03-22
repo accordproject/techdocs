@@ -7,6 +7,8 @@ Accord Project publishes [React](https://reactjs.org) user interface components 
 
 You can preview these components in [the project's storybook](https://ap-web-components.netlify.app/).
 
+![Template-Studio-V2](/docs/assets/reference/tsv2.png)
+
 ## Contract Editor
 
 The Contract Editor component provides a rich-text content editor for contract text with embedded clauses.
