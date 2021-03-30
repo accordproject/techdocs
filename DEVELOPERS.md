@@ -67,7 +67,14 @@ Each commit message consists of a mandatory **type**, **scope**, **subject**, an
     <type>(<scope>): <subject> - <footer>
 ```
 
-This allows the message to be easier to read on GitHub as well as in various git tools.
+This allows the message to be easier to read on GitHub as well as in various git tools. Some examples:
+
+```md
+feat(core): add API for direct drafting to slate - #559   // feature for core (cicero) that will add API for direct drafting to slate, from issue #559
+fix(ui-markdown-editor): correct typo in readme - #274    // fix for ui-markdown-editor (web-components) that will correct typo in readme, from issue #274
+chore(github): migrate travis ci/cd to gh actions - #4    // chore for github (markdown-transform) that will migrate travis ci/cd to gh actions, from issue #4
+docs(README): add interaction test script                 // docs for README that will add interaction test script, from no issue
+```
 
 ### Revert
 If the commit reverts a previous commit, it should begin with `revert: `, followed by the subject, where it should say: `this reverts commit <hash>.`, where the hash is the SHA of the commit being reverted. A commit with this format is automatically created by the [`git revert`][git-revert] command.
@@ -108,24 +115,41 @@ Pull Request titles should follow [commit message formatting][developers.commits
 Formatting for the body is displayed in this example:
 
 ```shell
-# Issue #20
+<!--- Provide a formatted commit message describing this PR in the Title above -->
+<!--- See our DEVELOPERS guide below: -->
+<!--- https://github.com/accordproject/techdocs/blob/master/DEVELOPERS.md#commit-message-format -->
+# Closes #<CORRESPONDING ISSUE NUMBER>
+<!--- Provide an overall summary of the pull request -->
 
 ### Changes
-- Change one
-  - Subchange one
-  - Subchange two
-- Change two
-- Theoretically this should be listing all the commit messages included in this PR
+<!--- More detailed and granular description of changes -->
+<!--- These should likely be gathered from commit message summaries -->
+- <ONE>
+- <TWO>
 
 ### Flags
-- Possible issues or holds for reviewers to note
-- List any breaking changes here.
+<!--- Provide context or concerns a reviewer should be aware of, such as breaking changes -->
+- <ONE>
+- <TWO>
 
 ### Related Issues
-- Link any issues or pull requests relating to this
+<!--- Link any issues or pull requests relating to this -->
+- Issue #<NUMBER>
+- Pull Request #<NUMBER>
+
+### Author Checklist
+- [ ] Ensure you provide a [DCO sign-off](https://github.com/probot/dco#how-it-works) for your commits using the `--signoff` option of git commit.
+- [ ] Vital features and changes captured in unit and/or integration tests
+- [ ] Commits messages follow [AP format](https://github.com/accordproject/techdocs/blob/master/DEVELOPERS.md#commit-message-format)
+- [ ] Extend the documentation, if necessary
+- [ ] Merging to `master` from `fork:branchname`
+- [ ] Manual accessibility test performed
+    - [ ] Keyboard-only access, including forms
+    - [ ] Contrast at least WCAG Level A
+    - [ ] Appropriate labels, alt text, and instructions
 ```
 
-When approved and ready to merge, a Pull Request should be squashed down to a single buildable commit and merged into master.
+When approved and ready to merge, a Pull Request should be squashed down to a single buildable commit and merged into `master`.
 
 ## <a name="documentation"></a> Writing Documentation
 
