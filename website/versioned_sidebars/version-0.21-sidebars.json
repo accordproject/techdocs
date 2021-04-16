@@ -90,10 +90,11 @@
       },
       {
         "type": "subcategory",
-        "label": "Template Migration",
+        "label": "Migration",
         "ids": [
           "version-0.21-ref-migrate-0.13-0.20",
-          "version-0.21-ref-migrate-0.20-0.21"
+          "version-0.21-ref-migrate-0.20-0.21",
+          "version-0.21-ref-migrate-concerto-0.82-1.0"
         ]
       },
       {
