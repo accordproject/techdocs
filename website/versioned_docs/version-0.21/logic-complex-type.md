@@ -1,6 +1,7 @@
 ---
-id: logic-complex-type
+id: version-0.21-logic-complex-type
 title: Complex Values & Types
+original_id: logic-complex-type
 ---
 
 So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Concerto Modeling](model-concerto) (often referred to as CTO models after the `.cto` file extension). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.
