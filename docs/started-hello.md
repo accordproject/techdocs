@@ -37,7 +37,7 @@ Thank you!
 Then run the `cicero parse` command in your terminal to load the template and parse your sample clause text. This should be echoing the result of parsing back to your terminal.
 
 ```bash
-cicero parse --template helloworld@0.13.0.cta --sample sample.md
+cicero parse --template helloworld@0.14.0.cta --sample sample.md
 ```
 
 :::note
@@ -57,7 +57,7 @@ This should extract the data (or "deal points") from the text and output:
 
 You can save the result of `cicero parse` into a file using the `--output` option:
 ```
-cicero parse --template helloworld@0.13.0.cta --sample sample.md --output data.json
+cicero parse --template helloworld@0.14.0.cta --sample sample.md --output data.json
 ```
 
 ### Parse Non-Valid Text
@@ -71,7 +71,7 @@ FUBAR Name of the person to greet: "Fred Blogs".
 Thank you!
 ```
 
-Then run `cicero parse --template helloworld@0.13.0.cta --sample sample.md` again. The output should now be:
+Then run `cicero parse --template helloworld@0.14.0.cta --sample sample.md` again. The output should now be:
 
 ```text
 2:13:15 AM - error: Parse error at line 1 column 1
@@ -97,7 +97,7 @@ If you have saved the deal data earlier in a `data.json` file, you can edit it t
 
 Then run the `cicero draft` command in your terminal:
 ```
-cicero draft --template helloworld@0.13.0.cta --data data.json
+cicero draft --template helloworld@0.14.0.cta --data data.json
 ```
 
 This should create a new contract text and output:
@@ -108,7 +108,7 @@ Thank you!
 
 You can save the result of `cicero draft` into a file using the `--output` option:
 ```
-cicero draft --template helloworld@0.13.0.cta --data data.json --output new-sample.md
+cicero draft --template helloworld@0.14.0.cta --data data.json --output new-sample.md
 ```
 
 ### Draft from Non-Valid Data
@@ -123,7 +123,7 @@ Edit your `data.json` file so that the `name` variable is missing:
 }
 ```
 
-Then run `cicero draft --template helloworld@0.13.0.cta --data data.json` again. The output should now be:
+Then run `cicero draft --template helloworld@0.14.0.cta --data data.json` again. The output should now be:
 ```
 13:38:11 - error: Instance org.accordproject.helloworld.HelloWorldClause#6f91e060-f837-4108-bead-63891a91ce3a missing required field name
 ```
@@ -149,7 +149,7 @@ This is the request which you will send to trigger the execution of your contrac
 Then run the `cicero trigger` command in your terminal to load the template, parse your clause text *and* send the request. This should be echoing the result of execution back to your terminal.
 
 ```bash
-cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json
+cicero trigger --template helloworld@0.14.0.cta --sample sample.md --request request.json
 ```
 
 This should print this output:
@@ -157,7 +157,7 @@ This should print this output:
 ```json
 13:42:29 - info:
 {
-  "clause": "helloworld@0.13.0-c03393f7e50865012e6005050fcaccb2716481fa7599905f7306673cf15857cf",
+  "clause": "helloworld@0.14.0-c03393f7e50865012e6005050fcaccb2716481fa7599905f7306673cf15857cf",
   "request": {
     "$class": "org.accordproject.helloworld.MyRequest",
     "input": "Accord Project"
@@ -197,7 +197,7 @@ Edit your `request.json` file so that the `input` variable is missing:
 }
 ```
 
-Then run `cicero trigger --template helloworld@0.13.0.cta --sample sample.md --request request.json` again. The output should now be:
+Then run `cicero trigger --template helloworld@0.14.0.cta --sample sample.md --request request.json` again. The output should now be:
 ```
 13:47:35 - error: Instance org.accordproject.helloworld.MyRequest#b0b1cbcc-dcae-4758-b9fc-254a43aa10a8 missing required field input
 ```
