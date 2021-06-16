@@ -41,7 +41,7 @@ cicero parse --template helloworld@0.14.0.cta --sample sample.md
 ```
 
 :::note
-* Templates are tied to a specific version of the cicero tool. Make sure that the version number output from `cicero --version` is compatible with the template. Look for `^0.21.0` or similar at the top of the template web page.
+* Templates are tied to a specific version of the cicero tool. Make sure that the version number output from `cicero --version` is compatible with the template. Look for `^0.22.0` or similar at the top of the template web page.
 * `cicero parse` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
 :::
 
@@ -50,8 +50,9 @@ This should extract the data (or "deal points") from the text and output:
 ```json
 {
   "$class": "org.accordproject.helloworld.HelloWorldClause",
-  "clauseId": "aa3b9db9-f25f-41f4-88a4-64baba728bfe",
-  "name": "Fred Blogs"
+  "name": "Fred Blogs",
+  "clauseId": "71045314-acfc-441f-92b4-0a2707ea6146",
+  "$identifier": "71045314-acfc-441f-92b4-0a2707ea6146"
 }
 ```
 
@@ -102,7 +103,7 @@ cicero draft --template helloworld@0.14.0.cta --data data.json
 
 This should create a new contract text and output:
 ```
-13:17:18 - info: Name of the person to greet: "John Doe".
+13:17:18 - INFO: Name of the person to greet: "John Doe".
 Thank you!
 ```
 
@@ -125,7 +126,7 @@ Edit your `data.json` file so that the `name` variable is missing:
 
 Then run `cicero draft --template helloworld@0.14.0.cta --data data.json` again. The output should now be:
 ```
-13:38:11 - error: Instance org.accordproject.helloworld.HelloWorldClause#6f91e060-f837-4108-bead-63891a91ce3a missing required field name
+13:38:11 - ERROR: Instance org.accordproject.helloworld.HelloWorldClause#6f91e060-f837-4108-bead-63891a91ce3a missing required field name
 ```
 
 ## Trigger: Run the Contract Logic
@@ -155,9 +156,9 @@ cicero trigger --template helloworld@0.14.0.cta --sample sample.md --request req
 This should print this output:
 
 ```json
-13:42:29 - info:
+13:42:29 - INFO:
 {
-  "clause": "helloworld@0.14.0-c03393f7e50865012e6005050fcaccb2716481fa7599905f7306673cf15857cf",
+  "clause": "helloworld@0.14.0-767ffde65292f2f4e8aa474e76bb5f923b80aa29db635cd42afebb6a0cd4c1fa",
   "request": {
     "$class": "org.accordproject.helloworld.MyRequest",
     "input": "Accord Project"
@@ -165,12 +166,11 @@ This should print this output:
   "response": {
     "$class": "org.accordproject.helloworld.MyResponse",
     "output": "Hello Fred Blogs Accord Project",
-    "transactionId": "ecc56a61-713c-4113-9842-550efb09ac74",
-    "timestamp": "2019-11-03T18:42:29.984Z"
+    "$timestamp": "2021-06-16T11:38:42.011-04:00"
   },
   "state": {
-    "$class": "org.accordproject.cicero.contract.AccordContractState",
-    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+    "$class": "org.accordproject.runtime.State",
+    "$identifier": "f4428ec2-73ca-442b-8006-8e9a290930ad"
   },
   "emit": []
 }
@@ -199,7 +199,7 @@ Edit your `request.json` file so that the `input` variable is missing:
 
 Then run `cicero trigger --template helloworld@0.14.0.cta --sample sample.md --request request.json` again. The output should now be:
 ```
-13:47:35 - error: Instance org.accordproject.helloworld.MyRequest#b0b1cbcc-dcae-4758-b9fc-254a43aa10a8 missing required field input
+13:47:35 - ERROR: Instance org.accordproject.helloworld.MyRequest#null missing required field input
 ```
 
 ## What Next?

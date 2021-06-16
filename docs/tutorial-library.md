@@ -16,7 +16,7 @@ Accord Project uses [GitHub](https://github.com/) to maintain its open source te
 * [Lerna](https://lerna.js.org/): A tool for managing JavaScript projects with multiple packages. You can install lerna by running the following command in your terminal:
 
 ```bash
-npm install -g lerna@^3.15.0
+npm install -g lerna
 ```
 
 ### Clone the template library
@@ -54,8 +54,11 @@ You can see the source code for all public Accord Project templates by looking i
 ```sh
 bash-3.2$ ls src
 acceptance-of-delivery
+bill-of-lading
 car-rental-tr
 certificate-of-incorporation
+company-information
+contact-information
 copyright-license
 demandforecast
 docusign-connect
@@ -103,12 +106,13 @@ You should see a response as follows:
 ```json
 {
   "$class": "org.accordproject.acceptanceofdelivery.AcceptanceOfDeliveryClause",
-  "clauseId": "9ed9d255-3bb6-4928-be7b-c6305e083246",
-  "shipper": "Party A",
-  "receiver": "Party B",
+  "shipper": "resource:org.accordproject.organization.Organization#Party%20A",
+  "receiver": "resource:org.accordproject.organization.Organization#Party%20B",
   "deliverable": "Widgets",
   "businessDays": 10,
-  "attachment": "Attachment X"
+  "attachment": "Attachment X",
+  "clauseId": "f1b1434b-8500-4672-8678-7c5003d8d66b",
+  "$identifier": "f1b1434b-8500-4672-8678-7c5003d8d66b"
 }
 ```
 
@@ -120,7 +124,7 @@ You should see a response as follows:
 
 ```json
 {
-  "clause": "latedeliveryandpenalty@0.16.0-f4070225d9792aa6494b2ea1f0ffe7a794f8c671977d43fa25c75e83b3eacc3d",
+  "clause": "latedeliveryandpenalty@0.17.0-a4e00f4f161e2d343a239a6854bfce92ecd16d891f8e7bc5a5adaab46d242782",
   "request": {
     "$class": "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest",
     "forceMajeure": false,
@@ -132,27 +136,26 @@ You should see a response as follows:
     "$class": "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse",
     "penalty": 110.00000000000001,
     "buyerMayTerminate": true,
-    "transactionId": "cca97517-21e8-46b4-8524-e9523d10b6bc",
-    "timestamp": "2020-09-22T15:42:27.464Z"
+    "$timestamp": "2021-06-16T12:26:18.031-04:00"
   },
   "state": {
-    "$class": "org.accordproject.cicero.contract.AccordContractState",
-    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+    "$class": "org.accordproject.runtime.State",
+    "$identifier": "54810499-acad-4a3a-9f78-684b0a3bef65"
   },
   "emit": [
     {
-      "$class": "org.accordproject.cicero.runtime.PaymentObligation",
+      "$class": "org.accordproject.obligation.PaymentObligation",
       "amount": {
         "$class": "org.accordproject.money.MonetaryAmount",
         "doubleValue": 110.00000000000001,
         "currencyCode": "USD"
       },
-      "description": "Dan should pay penalty amount to Steve",
-      "contract": "resource:org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyContract#199b219e-783f-4451-8992-2e5605310d6d",
-      "promisor": "resource:org.accordproject.cicero.contract.AccordParty#Dan",
-      "promisee": "resource:org.accordproject.cicero.contract.AccordParty#Steve",
-      "eventId": "valid",
-      "timestamp": "2020-09-22T15:42:27.465Z"
+      "description": ""resource:org.accordproject.party.Party#Dan" should pay penalty amount to "resource:org.accordproject.party.Party#Steve"",
+      "$identifier": "a9482b16-c0dc-4e09-86bc-60bb59b07523",
+      "contract": "resource:org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyContract#3fecad6b-442c-49d1-99d8-b963616f61d2",
+      "promisor": "resource:org.accordproject.party.Party#Dan",
+      "promisee": "resource:org.accordproject.party.Party#Steve",
+      "$timestamp": "2021-06-16T12:26:18.032-04:00"
     }
   ]
 }

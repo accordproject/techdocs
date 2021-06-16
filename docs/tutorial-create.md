@@ -72,7 +72,8 @@ bash-3.2$ cicero parse
 {
   "$class": "org.acme.lease.MyContract",
   "name": "Dan",
-  "contractId": "635633f9-e188-4d79-a867-6850d8ad6c66"
+  "contractId": "4a7d5b59-0377-42d3-aa41-15062398d25d",
+  "$identifier": "4a7d5b59-0377-42d3-aa41-15062398d25d"
 }
 ```
 And that you can trigger the contract:
@@ -84,7 +85,7 @@ bash-3.2$ cicero trigger
 11:58:23 AM - warn: A state file was not provided, initializing state. Try the --state flag or create a state.json in the root folder of your template.
 11:58:23 AM - info:
 {
-  "clause": "mylease@0.0.0-db65db8a6022ef8dbbc25f2fd9fdc2778596d8ff3473a33c0dab66ae76f1d86e",
+  "clause": "mylease@0.0.0-d186ab29c448b0058e4465a54d8376c3817dddb6fda8dc0ca29a88151b3dbecc",
   "request": {
     "$class": "org.acme.lease.MyRequest",
     "input": "World"
@@ -92,12 +93,11 @@ bash-3.2$ cicero trigger
   "response": {
     "$class": "org.acme.lease.MyResponse",
     "output": "Hello Dan World",
-    "transactionId": "c5ed5a39-5fd3-4013-b53f-bdd46bd96406",
-    "timestamp": "2020-09-22T15:58:23.798Z"
+    "$timestamp": "2021-06-16T12:29:50.317-04:00"
   },
   "state": {
-    "$class": "org.accordproject.cicero.contract.AccordContractState",
-    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+    "$class": "org.accordproject.runtime.State",
+    "$identifier": "03515461-7ee7-4c81-a8f0-d4c667db5f4c"
   },
   "emit": []
 }
