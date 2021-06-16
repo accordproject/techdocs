@@ -107,7 +107,7 @@ You can select whether to parse your text as pure CommonMark (i.e., according to
 
 ![TemplateMark Dingus](assets/dingus2.png)
 
-You can also inspect the HTML source, or the document object model (abstract syntax tree or AST).
+You can also inspect the HTML source, or the document object model (abstract syntax tree or AST), even see a pdf rendering for your template.
 
 ![TemplateMark Dingus](assets/dingus3.png)
 

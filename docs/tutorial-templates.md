@@ -3,7 +3,7 @@ id: tutorial-templates
 title: Templates Deep Dive
 ---
 
-In the [Getting Started](started-hello) section, we learned how to use the existing [helloworld@0.13.0.cta](https://templates.accordproject.org/archives/helloworld@0.13.0.cta) template archive. Here we take a look inside that archive to understand the structure of Accord Project templates.
+In the [Getting Started](started-hello) section, we learned how to use the existing [helloworld@0.14.0.cta](https://templates.accordproject.org/archives/helloworld@0.14.0.cta) template archive. Here we take a look inside that archive to understand the structure of Accord Project templates.
 
 ## Unpack a Template Archive
 
@@ -11,10 +11,10 @@ A `.cta` archive is nothing more than a zip file containing the components of a 
 
 ```bash
 $ mkdir helloworld
-$ mv helloworld@0.13.0.cta helloworld
+$ mv helloworld@0.14.0.cta helloworld
 $ cd helloworld
-$ unzip helloworld@0.13.0.cta
-Archive:  helloworld@0.13.0.cta
+$ unzip helloworld@0.14.0.cta
+Archive:  helloworld@0.14.0.cta
  extracting: package.json            
    creating: text/
  extracting: text/grammar.tem.md     
@@ -22,9 +22,11 @@ Archive:  helloworld@0.13.0.cta
  extracting: text/sample.md          
  extracting: request.json            
    creating: model/
- extracting: model/@models.accordproject.org.cicero.contract.cto  
- extracting: model/@models.accordproject.org.cicero.runtime.cto  
- extracting: model/@models.accordproject.org.money.cto  
+ extracting: model/@models.accordproject.org.time@0.2.0.cto  
+ extracting: model/@models.accordproject.org.accordproject.money@0.2.0.cto  
+ extracting: model/@models.accordproject.org.accordproject.contract.cto  
+ extracting: model/@models.accordproject.org.accordproject.runtime.cto  
+ extracting: model/@org.accordproject.ergo.options.cto  
  extracting: model/model.cto         
    creating: logic/
  extracting: logic/logic.ergo        
@@ -99,12 +101,8 @@ Here is the model for the `helloworld` template:
 ```ergo
 namespace org.accordproject.helloworld
 
-import org.accordproject.cicero.contract.* from https://models.accordproject.org/cicero/contract.cto
-import org.accordproject.cicero.runtime.* from https://models.accordproject.org/cicero/runtime.cto
-
-asset TemplateModel extends AccordClause {
-  o String name // variable 'name' is of type String
-}
+import org.accordproject.contract.* from https://models.accordproject.org/accordproject/contract.cto
+import org.accordproject.runtime.* from https://models.accordproject.org/accordproject/runtime.cto
 
 transaction MyRequest extends Request {
   o String input
@@ -113,14 +111,24 @@ transaction MyRequest extends Request {
 transaction MyResponse extends Response {
   o String output
 }
+
+/**
+ * The template model
+ */
+asset HelloWorldClause extends Clause {
+  /**
+   * The name for the clause
+   */
+  o String name
+}
 ```
 
-The `TemplateModel` as well as the `Request` and `Response` are types which are specified using the [Concerto modeling language](https://github.com/accordproject/concerto).
+The `HelloWorldClause` as well as the `Request` and `Response` are types which are specified using the [Concerto modeling language](https://github.com/accordproject/concerto).
 
-The `TemplateModel` indicate that the template is for a Clause, and should have a variable `name` of type `String` (i.e., text).
+The `HelloWorldClause` indicate that the template is for a Clause, and should have a variable `name` of type `String` (i.e., text).
 
 ```ergo
-asset TemplateModel extends AccordClause {
+asset HelloWorldClause extends Clause {
   o String name // variable 'name' is of type String
 }
 ```
@@ -158,22 +166,23 @@ For instance you can use `cicero parse` or `cicero trigger` as follows:
 ```bash
 $ cd helloworld
 $ cicero parse
-15:35:12 - info: Using current directory as template folder
-15:35:12 - info: Loading a default text/sample.md file.
-15:35:14 - info:
+12:21:37 PM - INFO: Using current directory as template folder
+12:21:37 PM - INFO: Loading a default text/sample.md file.
+12:21:38 PM - INFO: 
 {
   "$class": "org.accordproject.helloworld.HelloWorldClause",
-  "clauseId": "7258ecf6-cf64-4f9b-807d-c4a3ae6b83ed",
-  "name": "Fred Blogs"
+  "name": "Fred Blogs",
+  "clauseId": "ca447073-242f-4721-a5b9-c5c14b57233d",
+  "$identifier": "ca447073-242f-4721-a5b9-c5c14b57233d"
 }
 $ cicero trigger
-15:35:17 - info: Using current directory as template folder
-15:35:17 - info: Loading a default text/sample.md file.
-15:35:17 - info: Loading a default request.json file.
-15:35:19 - warn: A state file was not provided, initializing state. Try the --state flag or create a state.json in the root folder of your template.
-15:35:19 - info:
+12:21:54 PM - INFO: Using current directory as template folder
+12:21:54 PM - INFO: Loading a default text/sample.md file.
+12:21:54 PM - INFO: Loading a default request.json file.
+12:21:55 PM - WARN: A state file was not provided, initializing state. Try the --state flag or create a state.json in the root folder of your template.
+12:21:55 PM - INFO: 
 {
-  "clause": "helloworld@0.13.0-ba2600ef11675ad55a036361c1d99e1e9df9a6025c0a35dd5fbe3fc20a0edd07",
+  "clause": "helloworld@0.14.0-4f8006ff0471176f2b5340500ba40c42adb180f26df50b747d8690c6dad79cfa",
   "request": {
     "$class": "org.accordproject.helloworld.MyRequest",
     "input": "Accord Project"
@@ -181,12 +190,11 @@ $ cicero trigger
   "response": {
     "$class": "org.accordproject.helloworld.MyResponse",
     "output": "Hello Fred Blogs Accord Project",
-    "transactionId": "2d49bd9e-10b1-4ddd-bca6-79a67fe18c9f",
-    "timestamp": "2020-09-22T15:40:03.175Z"
+    "$timestamp": "2021-06-16T12:21:55.749-04:00"
   },
   "state": {
-    "$class": "org.accordproject.cicero.contract.AccordContractState",
-    "stateId": "org.accordproject.cicero.contract.AccordContractState#1"
+    "$class": "org.accordproject.runtime.State",
+    "$identifier": "3fa15a55-d5db-491c-905a-7fcf5eb64d5f"
   },
   "emit": []
 }

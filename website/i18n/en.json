@@ -134,6 +134,9 @@
       "ref-migrate-0.20-0.21": {
         "title": "Cicero 0.20 to 0.21"
       },
+      "ref-migrate-0.21-0.22": {
+        "title": "Cicero 0.21 to 0.22"
+      },
       "ref-migrate-concerto-0.82-1.0": {
         "title": "Concerto 0.82 to 1.0"
       },
@@ -497,6 +500,15 @@
       "version-0.21/version-0.21-logic-advanced-expr": {
         "title": "Advanced Expressions"
       },
+      "version-0.21/version-0.21-logic-complex-type": {
+        "title": "Complex Values & Types"
+      },
+      "version-0.21/version-0.21-logic-ergo": {
+        "title": "Ergo Overview"
+      },
+      "version-0.21/version-0.21-logic-simple-expr": {
+        "title": "Simple Expressions"
+      },
       "version-0.21/version-0.21-logic-stmt": {
         "title": "Statements"
       },
@@ -517,6 +529,9 @@
       },
       "version-0.21/version-0.21-model-classes": {
         "title": "Classes"
+      },
+      "version-0.21/version-0.21-model-concerto": {
+        "title": "Concerto Overview"
       },
       "version-0.21/version-0.21-model-decorators": {
         "title": "Decorators"
@@ -567,10 +582,13 @@
         "title": "Command Line"
       },
       "version-0.21/version-0.21-ref-migrate-0.13-0.20": {
-        "title": "0.13 to 0.20"
+        "title": "Cicero 0.13 to 0.20"
       },
       "version-0.21/version-0.21-ref-migrate-0.20-0.21": {
-        "title": "0.20 to 0.21"
+        "title": "Cicero 0.20 to 0.21"
+      },
+      "version-0.21/version-0.21-ref-migrate-concerto-0.82-1.0": {
+        "title": "Concerto 0.82 to 1.0"
       },
       "version-0.21/version-0.21-ref-web-components-overview": {
         "title": "Overview"
@@ -581,6 +599,9 @@
       "version-0.21/version-0.21-started-installation": {
         "title": "Install Cicero"
       },
+      "version-0.21/version-0.21-started-resources": {
+        "title": "Resources"
+      },
       "version-0.21/version-0.21-tutorial-create": {
         "title": "Template Generator"
       },
@@ -589,6 +610,9 @@
       },
       "version-0.21/version-0.21-tutorial-library": {
         "title": "Template Library"
+      },
+      "version-0.21/version-0.21-tutorial-nodejs": {
+        "title": "With Node.js"
       },
       "version-0.21/version-0.21-tutorial-studio": {
         "title": "With Template Studio"
