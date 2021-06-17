@@ -1,6 +1,7 @@
 ---
-id: ref-cicero-cli
+id: version-0.22-ref-cicero-cli
 title: Command Line
+original_id: ref-cicero-cli
 ---
 
 Install the `@accordproject/cicero-cli` npm package to access the Cicero command line interface (CLI). After installation you can use the `cicero` command and its sub-commands as described below.
