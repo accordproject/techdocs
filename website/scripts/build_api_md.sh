@@ -15,18 +15,18 @@
 
 # Build the Cicero API
 git clone https://github.com/accordproject/cicero.git
-./node_modules/.bin/jsdoc2md -c ./scripts/cicero-jsdoc.conf --files ./cicero/packages/cicero-engine/{*,lib/*,lib/**/*}.js ./cicero/packages/cicero-core/{*,src/*,src/**/*}.js > ../docs/cicero-api.md
-./node_modules/.bin/jsdoc2md --template ./scripts/cicero-api.hbs -c ./scripts/cicero-jsdoc.conf --files ./cicero/packages/cicero-engine/{*,lib/*,lib/**/*}.js ./cicero/packages/cicero-core/{*,src/*,src/**/*}.js > ../docs/cicero-api.md
+./node_modules/.bin/jsdoc2md -c ./scripts/cicero-jsdoc.conf --files ./cicero/packages/cicero-engine/{*,lib/*,lib/**/*}.js ./cicero/packages/cicero-core/{*,src/*,src/**/*}.js > ../docs/ref-cicero-api.md
+./node_modules/.bin/jsdoc2md --template ./scripts/cicero-api.hbs -c ./scripts/cicero-jsdoc.conf --files ./cicero/packages/cicero-engine/{*,lib/*,lib/**/*}.js ./cicero/packages/cicero-core/{*,src/*,src/**/*}.js > ../docs/ref-cicero-api.md
 rm -rf cicero
 
 # Build the Ergo API
 git clone https://github.com/accordproject/ergo.git
-./node_modules/.bin/jsdoc2md -c ./scripts/ergo-jsdoc.conf --files ./ergo/packages/**/lib/*.js > ../docs/ergo-api.md
-./node_modules/.bin/jsdoc2md --template ./scripts/ergo-api.hbs -c ./scripts/ergo-jsdoc.conf --files ./ergo/packages/**/lib/*.js > ../docs/ergo-api.md
+./node_modules/.bin/jsdoc2md -c ./scripts/ergo-jsdoc.conf --files ./ergo/packages/**/lib/*.js > ../docs/ref-ergo-api.md
+./node_modules/.bin/jsdoc2md --template ./scripts/ergo-api.hbs -c ./scripts/ergo-jsdoc.conf --files ./ergo/packages/**/lib/*.js > ../docs/ref-ergo-api.md
 rm -rf ergo
 
 ## Build the Concerto API
 git clone https://github.com/accordproject/concerto.git
-./node_modules/.bin/jsdoc2md -c ./scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/{*,lib/*,lib/**/*}.js > ../docs/concerto-api.md
-./node_modules/.bin/jsdoc2md --template ./scripts/concerto-api.hbs -c ./scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/{*,lib/*,lib/**/*}.js > ../docs/concerto-api.md
+./node_modules/.bin/jsdoc2md -c ./scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/{*,lib/*,lib/**/*}.js > ../docs/ref-concerto-api.md
+./node_modules/.bin/jsdoc2md --template ./scripts/concerto-api.hbs -c ./scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/{*,lib/*,lib/**/*}.js > ../docs/ref-concerto-api.md
 rm -rf concerto
