@@ -622,6 +622,36 @@
       },
       "version-0.21/version-0.21-tutorial-vscode": {
         "title": "With VS Code"
+      },
+      "version-0.22/version-0.22-markup-preliminaries": {
+        "title": "Preliminaries"
+      },
+      "version-0.22/version-0.22-ref-cicero-api": {
+        "title": "Cicero API"
+      },
+      "version-0.22/version-0.22-ref-concerto-api": {
+        "title": "Concerto API"
+      },
+      "version-0.22/version-0.22-ref-ergo-api": {
+        "title": "Ergo API"
+      },
+      "version-0.22/version-0.22-ref-migrate-0.21-0.22": {
+        "title": "Cicero 0.21 to 0.22"
+      },
+      "version-0.22/version-0.22-started-hello": {
+        "title": "Hello World Template"
+      },
+      "version-0.22/version-0.22-tutorial-create": {
+        "title": "Template Generator"
+      },
+      "version-0.22/version-0.22-tutorial-library": {
+        "title": "Template Library"
+      },
+      "version-0.22/version-0.22-tutorial-studio": {
+        "title": "With Template Studio"
+      },
+      "version-0.22/version-0.22-tutorial-templates": {
+        "title": "Templates Deep Dive"
       }
     },
     "links": {
