@@ -1,6 +1,6 @@
 ---
 id: ref-cicero-api
-title: Node.js API
+title: Cicero API
 ---
 
 ## Modules
@@ -17,9 +17,6 @@ title: Node.js API
 ## Classes
 
 <dl>
-<dt><a href="#AmountFormatParser">AmountFormatParser</a></dt>
-<dd><p>Parses an amount format string</p>
-</dd>
 <dt><a href="#Clause">Clause</a></dt>
 <dd><p>A Clause is executable business logic, linked to a natural language (legally enforceable) template.
 A Clause must be constructed with a template and then prior to execution the data for the clause must be set.
@@ -32,20 +29,8 @@ A Clause must be constructed with a template and then prior to execution the dat
 Set the data for the clause (an instance of the template model) by either calling the setData method or by
 calling the parse method and passing in natural language text that conforms to the template grammar.</p>
 </dd>
-<dt><a href="#DateTimeFormatParser">DateTimeFormatParser</a></dt>
-<dd><p>Parses a date/time format string</p>
-</dd>
-<dt><a href="#FormatParser">FormatParser</a></dt>
-<dd><p>Parses a format string</p>
-</dd>
 <dt><a href="#Metadata">Metadata</a></dt>
 <dd><p>Defines the metadata for a Template, including the name, version, README markdown.</p>
-</dd>
-<dt><a href="#MonetaryAmountFormatParser">MonetaryAmountFormatParser</a></dt>
-<dd><p>Parses a monetary/amount format string</p>
-</dd>
-<dt><a href="#ParserManager">ParserManager</a></dt>
-<dd><p>Generates and manages a Nearley parser for a template.</p>
 </dd>
 <dt><a href="#Template">Template</a></dt>
 <dd><p>A template for a legal clause or contract. A Template has a template model, request/response transaction types,
@@ -68,9 +53,6 @@ loader that accepts a URL.</p>
 ## Functions
 
 <dl>
-<dt><a href="#locationOfError">locationOfError(error)</a> ⇒ <code>object</code></dt>
-<dd><p>Extract the file location from the parse error</p>
-</dd>
 <dt><a href="#isPNG">isPNG(buffer)</a> ⇒ <code>Boolean</code></dt>
 <dd><p>Checks whether the file is PNG</p>
 </dd>
@@ -86,30 +68,28 @@ Clause Engine
 
 
 * [cicero-engine](#module_cicero-engine)
-    * [~Engine](#module_cicero-engine.Engine)
+    * [.Engine](#module_cicero-engine.Engine)
         * [new Engine()](#new_module_cicero-engine.Engine_new)
-        * [.trigger(clause, request, state, currentTime)](#module_cicero-engine.Engine+trigger) ⇒ <code>Promise</code>
-        * [.invoke(clause, clauseName, params, state, currentTime)](#module_cicero-engine.Engine+invoke) ⇒ <code>Promise</code>
-        * [.init(clause, currentTime)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
-        * [.draft(clause, [options], currentTime)](#module_cicero-engine.Engine+draft) ⇒ <code>Promise</code>
+        * [.trigger(clause, request, state, [currentTime], [utcOffset])](#module_cicero-engine.Engine+trigger) ⇒ <code>Promise</code>
+        * [.invoke(clause, clauseName, params, state, [currentTime], [utcOffset])](#module_cicero-engine.Engine+invoke) ⇒ <code>Promise</code>
+        * [.init(clause, [currentTime], [utcOffset], params)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
         * [.getErgoEngine()](#module_cicero-engine.Engine+getErgoEngine) ⇒ <code>ErgoEngine</code>
 
 <a name="module_cicero-engine.Engine"></a>
 
-### cicero-engine~Engine
+### cicero-engine.Engine
 <p>
 Engine class. Stateless execution of clauses against a request object, returning a response to the caller.
 </p>
 
-**Kind**: inner class of [<code>cicero-engine</code>](#module_cicero-engine)  
+**Kind**: static class of [<code>cicero-engine</code>](#module_cicero-engine)  
 **Access**: public  
 
-* [~Engine](#module_cicero-engine.Engine)
+* [.Engine](#module_cicero-engine.Engine)
     * [new Engine()](#new_module_cicero-engine.Engine_new)
-    * [.trigger(clause, request, state, currentTime)](#module_cicero-engine.Engine+trigger) ⇒ <code>Promise</code>
-    * [.invoke(clause, clauseName, params, state, currentTime)](#module_cicero-engine.Engine+invoke) ⇒ <code>Promise</code>
-    * [.init(clause, currentTime)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
-    * [.draft(clause, [options], currentTime)](#module_cicero-engine.Engine+draft) ⇒ <code>Promise</code>
+    * [.trigger(clause, request, state, [currentTime], [utcOffset])](#module_cicero-engine.Engine+trigger) ⇒ <code>Promise</code>
+    * [.invoke(clause, clauseName, params, state, [currentTime], [utcOffset])](#module_cicero-engine.Engine+invoke) ⇒ <code>Promise</code>
+    * [.init(clause, [currentTime], [utcOffset], params)](#module_cicero-engine.Engine+init) ⇒ <code>Promise</code>
     * [.getErgoEngine()](#module_cicero-engine.Engine+getErgoEngine) ⇒ <code>ErgoEngine</code>
 
 <a name="new_module_cicero-engine.Engine_new"></a>
@@ -119,7 +99,7 @@ Create the Engine.
 
 <a name="module_cicero-engine.Engine+trigger"></a>
 
-#### engine.trigger(clause, request, state, currentTime) ⇒ <code>Promise</code>
+#### engine.trigger(clause, request, state, [currentTime], [utcOffset]) ⇒ <code>Promise</code>
 Send a request to a clause for execution
 
 **Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
@@ -130,11 +110,12 @@ Send a request to a clause for execution
 | clause | [<code>Clause</code>](#Clause) | the clause |
 | request | <code>object</code> | the request, a JS object that can be deserialized using the Composer serializer. |
 | state | <code>object</code> | the contract state, a JS object that can be deserialized using the Composer serializer. |
-| currentTime | <code>string</code> | the definition of 'now' |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
 
 <a name="module_cicero-engine.Engine+invoke"></a>
 
-#### engine.invoke(clause, clauseName, params, state, currentTime) ⇒ <code>Promise</code>
+#### engine.invoke(clause, clauseName, params, state, [currentTime], [utcOffset]) ⇒ <code>Promise</code>
 Invoke a specific clause for execution
 
 **Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
@@ -146,11 +127,12 @@ Invoke a specific clause for execution
 | clauseName | <code>string</code> | the clause name |
 | params | <code>object</code> | the clause parameters, a JS object whose fields that can be deserialized using the Composer serializer. |
 | state | <code>object</code> | the contract state, a JS object that can be deserialized using the Composer serializer. |
-| currentTime | <code>string</code> | the definition of 'now' |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
 
 <a name="module_cicero-engine.Engine+init"></a>
 
-#### engine.init(clause, currentTime) ⇒ <code>Promise</code>
+#### engine.init(clause, [currentTime], [utcOffset], params) ⇒ <code>Promise</code>
 Initialize a clause
 
 **Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
@@ -159,21 +141,9 @@ Initialize a clause
 | Param | Type | Description |
 | --- | --- | --- |
 | clause | [<code>Clause</code>](#Clause) | the clause |
-| currentTime | <code>string</code> | the definition of 'now' |
-
-<a name="module_cicero-engine.Engine+draft"></a>
-
-#### engine.draft(clause, [options], currentTime) ⇒ <code>Promise</code>
-Generate Text for a clause
-
-**Kind**: instance method of [<code>Engine</code>](#module_cicero-engine.Engine)  
-**Returns**: <code>Promise</code> - a promise that resolves to a result for the clause initialization  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| clause | [<code>Clause</code>](#Clause) | the clause |
-| [options] | <code>\*</code> | text generation options. options.wrapVariables encloses variables and editable sections in '<variable ...' and '/>' |
-| currentTime | <code>string</code> | the definition of 'now' |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
+| params | <code>object</code> | the clause parameters, a JS object whose fields that can be deserialized using the Composer serializer. |
 
 <a name="module_cicero-engine.Engine+getErgoEngine"></a>
 
@@ -186,72 +156,6 @@ Provides access to the underlying Ergo engine.
 
 ## cicero-core
 Cicero Core - defines the core data types for Cicero.
-
-<a name="AmountFormatParser"></a>
-
-## AmountFormatParser
-Parses an amount format string
-
-**Kind**: global class  
-**Access**: public  
-
-* [AmountFormatParser](#AmountFormatParser)
-    * _instance_
-        * [.addGrammars(grammars, field)](#AmountFormatParser+addGrammars)
-        * [.buildFormatRules(formatString)](#AmountFormatParser+buildFormatRules) ⇒ <code>Object</code>
-    * _static_
-        * [.parseAmountFormatField(field)](#AmountFormatParser.parseAmountFormatField) ⇒ <code>string</code>
-        * [.amountFormatField(field)](#AmountFormatParser.amountFormatField) ⇒ <code>string</code>
-
-<a name="AmountFormatParser+addGrammars"></a>
-
-### amountFormatParser.addGrammars(grammars, field)
-Given current grammar parts, add necessary grammars parts for the format.
-
-**Kind**: instance method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
-| field | <code>string</code> | grammar field |
-
-<a name="AmountFormatParser+buildFormatRules"></a>
-
-### amountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code>
-Converts a format string to a Nearley action
-
-**Kind**: instance method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
-**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| formatString | <code>string</code> | the input format string |
-
-<a name="AmountFormatParser.parseAmountFormatField"></a>
-
-### AmountFormatParser.parseAmountFormatField(field) ⇒ <code>string</code>
-Given a format field (like 0,0.0) this method returns
-a logical name for the field. Note the logical names
-have been picked to align with the moment constructor that takes an object.
-
-**Kind**: static method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
-**Returns**: <code>string</code> - the field designator  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| field | <code>string</code> | the input format field |
-
-<a name="AmountFormatParser.amountFormatField"></a>
-
-### AmountFormatParser.amountFormatField(field) ⇒ <code>string</code>
-Given a double format field (like 0,0.0) this method returns a new unique field name
-
-**Kind**: static method of [<code>AmountFormatParser</code>](#AmountFormatParser)  
-**Returns**: <code>string</code> - the field designator  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| field | <code>string</code> | the input format field |
 
 <a name="Clause"></a>
 
@@ -273,97 +177,6 @@ calling the parse method and passing in natural language text that conforms to t
 
 **Kind**: global class  
 **Access**: public  
-<a name="DateTimeFormatParser"></a>
-
-## DateTimeFormatParser
-Parses a date/time format string
-
-**Kind**: global class  
-**Access**: public  
-
-* [DateTimeFormatParser](#DateTimeFormatParser)
-    * _instance_
-        * [.addGrammars(grammars, field)](#DateTimeFormatParser+addGrammars)
-        * [.buildFormatRules(formatString)](#DateTimeFormatParser+buildFormatRules) ⇒ <code>Object</code>
-    * _static_
-        * [.parseDateTimeFormatField(field)](#DateTimeFormatParser.parseDateTimeFormatField) ⇒ <code>string</code>
-
-<a name="DateTimeFormatParser+addGrammars"></a>
-
-### dateTimeFormatParser.addGrammars(grammars, field)
-Given current grammar parts, add necessary grammars parts for the format.
-
-**Kind**: instance method of [<code>DateTimeFormatParser</code>](#DateTimeFormatParser)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
-| field | <code>string</code> | grammar field |
-
-<a name="DateTimeFormatParser+buildFormatRules"></a>
-
-### dateTimeFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code>
-Converts a format string to a Nearley action
-
-**Kind**: instance method of [<code>DateTimeFormatParser</code>](#DateTimeFormatParser)  
-**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| formatString | <code>string</code> | the input format string |
-
-<a name="DateTimeFormatParser.parseDateTimeFormatField"></a>
-
-### DateTimeFormatParser.parseDateTimeFormatField(field) ⇒ <code>string</code>
-Given a format field (like HH or D) this method returns
-a logical name for the field. Note the logical names
-have been picked to align with the moment constructor that takes an object.
-
-**Kind**: static method of [<code>DateTimeFormatParser</code>](#DateTimeFormatParser)  
-**Returns**: <code>string</code> - the field designator  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| field | <code>string</code> | the input format field |
-
-<a name="FormatParser"></a>
-
-## FormatParser
-Parses a format string
-
-**Kind**: global class  
-**Access**: public  
-
-* [FormatParser](#FormatParser)
-    * _instance_
-        * [.addGrammars(grammars, field)](#FormatParser+addGrammars)
-    * _static_
-        * [.buildFormatRules(format)](#FormatParser.buildFormatRules)
-
-<a name="FormatParser+addGrammars"></a>
-
-### formatParser.addGrammars(grammars, field)
-Given current grammar parts, add necessary grammars parts for the format.
-
-**Kind**: instance method of [<code>FormatParser</code>](#FormatParser)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
-| field | <code>string</code> | grammar field |
-
-<a name="FormatParser.buildFormatRules"></a>
-
-### FormatParser.buildFormatRules(format)
-Given a format, returns grammar rules to parse that format
-
-**Kind**: static method of [<code>FormatParser</code>](#FormatParser)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| format | <code>string</code> | the format |
-|  | <code>Array.&lt;object&gt;</code> | grammar rules for the format |
-
 <a name="Metadata"></a>
 
 ## Metadata
@@ -591,282 +404,6 @@ Checks if dimensions for the image are correct.
 | buffer | <code>Buffer</code> | the buffer object |
 | mimeType | <code>string</code> | the mime type of the object |
 
-<a name="MonetaryAmountFormatParser"></a>
-
-## MonetaryAmountFormatParser
-Parses a monetary/amount format string
-
-**Kind**: global class  
-**Access**: public  
-
-* [MonetaryAmountFormatParser](#MonetaryAmountFormatParser)
-    * _instance_
-        * [.addGrammars(grammars, field)](#MonetaryAmountFormatParser+addGrammars)
-        * [.buildFormatRules(formatString)](#MonetaryAmountFormatParser+buildFormatRules) ⇒ <code>Object</code>
-    * _static_
-        * [.parseMonetaryAmountFormatField(field)](#MonetaryAmountFormatParser.parseMonetaryAmountFormatField) ⇒ <code>string</code>
-
-<a name="MonetaryAmountFormatParser+addGrammars"></a>
-
-### monetaryAmountFormatParser.addGrammars(grammars, field)
-Given current grammar parts, add necessary grammars parts for the format.
-
-**Kind**: instance method of [<code>MonetaryAmountFormatParser</code>](#MonetaryAmountFormatParser)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| grammars | <code>Array.&lt;object&gt;</code> | the current grammar parts |
-| field | <code>string</code> | grammar field |
-
-<a name="MonetaryAmountFormatParser+buildFormatRules"></a>
-
-### monetaryAmountFormatParser.buildFormatRules(formatString) ⇒ <code>Object</code>
-Converts a format string to a Nearley action
-
-**Kind**: instance method of [<code>MonetaryAmountFormatParser</code>](#MonetaryAmountFormatParser)  
-**Returns**: <code>Object</code> - the tokens and action and name to use for the Nearley rule  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| formatString | <code>string</code> | the input format string |
-
-<a name="MonetaryAmountFormatParser.parseMonetaryAmountFormatField"></a>
-
-### MonetaryAmountFormatParser.parseMonetaryAmountFormatField(field) ⇒ <code>string</code>
-Given a format field (like CCC or 0,0.0) this method returns
-a logical name for the field. Note the logical names
-have been picked to align with the moment constructor that takes an object.
-
-**Kind**: static method of [<code>MonetaryAmountFormatParser</code>](#MonetaryAmountFormatParser)  
-**Returns**: <code>string</code> - the field designator  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| field | <code>string</code> | the input format field |
-
-<a name="ParserManager"></a>
-
-## ParserManager
-Generates and manages a Nearley parser for a template.
-
-**Kind**: global class  
-
-* [ParserManager](#ParserManager)
-    * [new ParserManager(template)](#new_ParserManager_new)
-    * _instance_
-        * [.getParser()](#ParserManager+getParser) ⇒ <code>object</code>
-        * [.getTemplateAst()](#ParserManager+getTemplateAst) ⇒ <code>object</code>
-        * [.setGrammar(grammar)](#ParserManager+setGrammar)
-        * [.buildGrammar(templatizedGrammar)](#ParserManager+buildGrammar)
-        * [.buildGrammarRules(ast, templateModel, prefix, parts)](#ParserManager+buildGrammarRules)
-        * [.handleBinding(templateModel, parts, inputRule, element)](#ParserManager+handleBinding)
-        * [.cleanChunk(input)](#ParserManager+cleanChunk) ⇒ <code>string</code>
-        * [.findFirstBinding(propertyName, elements)](#ParserManager+findFirstBinding) ⇒ <code>int</code>
-        * [.getGrammar()](#ParserManager+getGrammar) ⇒ <code>String</code>
-        * [.getTemplatizedGrammar()](#ParserManager+getTemplatizedGrammar) ⇒ <code>String</code>
-        * [.roundtripMarkdown(text)](#ParserManager+roundtripMarkdown) ⇒ <code>string</code>
-        * [.formatText(text, options, format)](#ParserManager+formatText) ⇒ <code>string</code>
-    * _static_
-        * [.adjustListBlock(x, separator)](#ParserManager.adjustListBlock) ⇒ <code>object</code>
-        * [.getProperty(templateModel, element)](#ParserManager.getProperty) ⇒ <code>\*</code>
-        * [._throwTemplateExceptionForElement(message, element)](#ParserManager._throwTemplateExceptionForElement)
-        * [.compileGrammar(sourceCode)](#ParserManager.compileGrammar) ⇒ <code>object</code>
-
-<a name="new_ParserManager_new"></a>
-
-### new ParserManager(template)
-Create the ParserManager.
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| template | <code>object</code> | the template instance |
-
-<a name="ParserManager+getParser"></a>
-
-### parserManager.getParser() ⇒ <code>object</code>
-Gets a parser object for this template
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>object</code> - the parser for this template  
-<a name="ParserManager+getTemplateAst"></a>
-
-### parserManager.getTemplateAst() ⇒ <code>object</code>
-Gets the AST for the template
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>object</code> - the AST for the template  
-<a name="ParserManager+setGrammar"></a>
-
-### parserManager.setGrammar(grammar)
-Set the grammar for the template
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| grammar | <code>String</code> | the grammar for the template |
-
-<a name="ParserManager+buildGrammar"></a>
-
-### parserManager.buildGrammar(templatizedGrammar)
-Build a grammar from a template
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| templatizedGrammar | <code>String</code> | the annotated template using the markdown parser |
-
-<a name="ParserManager+buildGrammarRules"></a>
-
-### parserManager.buildGrammarRules(ast, templateModel, prefix, parts)
-Build grammar rules from a template
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| ast | <code>object</code> | the AST from which to build the grammar |
-| templateModel | <code>ClassDeclaration</code> | the type of the parent class for this AST |
-| prefix | <code>String</code> | A unique prefix for the grammar rules |
-| parts | <code>Object</code> | Result object to acculumate rules and required sub-grammars |
-
-<a name="ParserManager+handleBinding"></a>
-
-### parserManager.handleBinding(templateModel, parts, inputRule, element)
-Utility method to generate a grammar rule for a variable binding
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| templateModel | <code>ClassDeclaration</code> | the current template model |
-| parts | <code>\*</code> | the parts, where the rule will be added |
-| inputRule | <code>\*</code> | the rule we are processing in the AST |
-| element | <code>\*</code> | the current element in the AST |
-
-<a name="ParserManager+cleanChunk"></a>
-
-### parserManager.cleanChunk(input) ⇒ <code>string</code>
-Cleans a chunk of text to make it safe to include
-as a grammar rule. We need to remove linefeeds and
-escape any '"' characters.
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>string</code> - cleaned text  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| input | <code>string</code> | the input text from the template |
-
-<a name="ParserManager+findFirstBinding"></a>
-
-### parserManager.findFirstBinding(propertyName, elements) ⇒ <code>int</code>
-Finds the first binding for the given property
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>int</code> - the index of the element or -1  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| propertyName | <code>string</code> | the name of the property |
-| elements | <code>Array.&lt;object&gt;</code> | the result of parsing the template_txt. |
-
-<a name="ParserManager+getGrammar"></a>
-
-### parserManager.getGrammar() ⇒ <code>String</code>
-Get the (compiled) grammar for the template
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>String</code> - - the grammar for the template  
-<a name="ParserManager+getTemplatizedGrammar"></a>
-
-### parserManager.getTemplatizedGrammar() ⇒ <code>String</code>
-Returns the templatized grammar
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>String</code> - the contents of the templatized grammar  
-<a name="ParserManager+roundtripMarkdown"></a>
-
-### parserManager.roundtripMarkdown(text) ⇒ <code>string</code>
-Round-trip markdown
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>string</code> - the result of parsing and printing back the text  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| text | <code>string</code> | the markdown text |
-
-<a name="ParserManager+formatText"></a>
-
-### parserManager.formatText(text, options, format) ⇒ <code>string</code>
-Format text
-
-**Kind**: instance method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>string</code> - the result of parsing and printing back the text  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| text | <code>string</code> | the markdown text |
-| options | <code>object</code> | parameters to the formatting |
-| format | <code>string</code> | to the text generation |
-
-<a name="ParserManager.adjustListBlock"></a>
-
-### ParserManager.adjustListBlock(x, separator) ⇒ <code>object</code>
-Adjust the template for list blocks
-
-**Kind**: static method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>object</code> - the new template AST node  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| x | <code>object</code> | The current template AST node |
-| separator | <code>String</code> | The list separator |
-
-<a name="ParserManager.getProperty"></a>
-
-### ParserManager.getProperty(templateModel, element) ⇒ <code>\*</code>
-Throws an error if a template variable doesn't exist on the model.
-
-**Kind**: static method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>\*</code> - the property  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| templateModel | <code>\*</code> | the model for the template |
-| element | <code>\*</code> | the current element in the AST |
-
-<a name="ParserManager._throwTemplateExceptionForElement"></a>
-
-### ParserManager.\_throwTemplateExceptionForElement(message, element)
-Throw a template exception for the element
-
-**Kind**: static method of [<code>ParserManager</code>](#ParserManager)  
-**Throws**:
-
-- <code>TemplateException</code> 
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| message | <code>string</code> | the error message |
-| element | <code>object</code> | the AST |
-
-<a name="ParserManager.compileGrammar"></a>
-
-### ParserManager.compileGrammar(sourceCode) ⇒ <code>object</code>
-Compiles a Nearley grammar to its AST
-
-**Kind**: static method of [<code>ParserManager</code>](#ParserManager)  
-**Returns**: <code>object</code> - the AST for the grammar  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| sourceCode | <code>string</code> | the source text for the grammar |
-
 <a name="Template"></a>
 
 ## *Template*
@@ -890,7 +427,7 @@ template.
         * *[.getDescription()](#Template+getDescription) ⇒ <code>String</code>*
         * *[.getHash()](#Template+getHash) ⇒ <code>string</code>*
         * *[.toArchive([language], [options], logo)](#Template+toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
-        * *[.getParserManager()](#Template+getParserManager) ⇒ [<code>ParserManager</code>](#ParserManager)*
+        * *[.getParserManager()](#Template+getParserManager) ⇒ <code>ParserManager</code>*
         * *[.getLogicManager()](#Template+getLogicManager) ⇒ <code>LogicManager</code>*
         * *[.getIntrospector()](#Template+getIntrospector) ⇒ <code>Introspector</code>*
         * *[.getFactory()](#Template+getFactory) ⇒ <code>Factory</code>*
@@ -900,7 +437,6 @@ template.
         * *[.getEmitTypes()](#Template+getEmitTypes) ⇒ <code>Array</code>*
         * *[.getStateTypes()](#Template+getStateTypes) ⇒ <code>Array</code>*
         * *[.hasLogic()](#Template+hasLogic) ⇒ <code>boolean</code>*
-        * *[.grammarHasErgoExpression()](#Template+grammarHasErgoExpression) ⇒ <code>boolean</code>*
     * _static_
         * *[.fromDirectory(path, [options])](#Template.fromDirectory) ⇒ [<code>Promise.&lt;Template&gt;</code>](#Template)*
         * *[.fromArchive(buffer, [options])](#Template.fromArchive) ⇒ [<code>Promise.&lt;Template&gt;</code>](#Template)*
@@ -928,6 +464,7 @@ retrieve instances from [fromArchive](#Template.fromArchive) or [fromDirectory](
 
 ### *template.validate()*
 Verifies that the template is well formed.
+Compiles the Ergo logic.
 Throws an exception with the details of any validation errors.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
@@ -1010,13 +547,13 @@ Persists this template to a Cicero Template Archive (cta) file.
 
 <a name="Template+getParserManager"></a>
 
-### *template.getParserManager() ⇒ [<code>ParserManager</code>](#ParserManager)*
+### *template.getParserManager() ⇒ <code>ParserManager</code>*
 Provides access to the parser manager for this template.
 The parser manager can convert template data to and from
 natural language text.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
-**Returns**: [<code>ParserManager</code>](#ParserManager) - the ParserManager for this template  
+**Returns**: <code>ParserManager</code> - the ParserManager for this template  
 <a name="Template+getLogicManager"></a>
 
 ### *template.getLogicManager() ⇒ <code>LogicManager</code>*
@@ -1085,13 +622,6 @@ Returns true if the template has logic, i.e. has more than one script file.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
 **Returns**: <code>boolean</code> - true if the template has logic  
-<a name="Template+grammarHasErgoExpression"></a>
-
-### *template.grammarHasErgoExpression() ⇒ <code>boolean</code>*
-Checks whether the template grammar has computer (Ergo) expressions
-
-**Kind**: instance method of [<code>Template</code>](#Template)  
-**Returns**: <code>boolean</code> - True if the template grammar has Ergo expressions (`{{% ... %}}`)  
 <a name="Template.fromDirectory"></a>
 
 ### *Template.fromDirectory(path, [options]) ⇒ [<code>Promise.&lt;Template&gt;</code>](#Template)*
@@ -1168,14 +698,16 @@ calling the parse method and passing in natural language text that conforms to t
         * *[.getData()](#TemplateInstance+getData) ⇒ <code>object</code>*
         * *[.getEngine()](#TemplateInstance+getEngine) ⇒ <code>object</code>*
         * *[.getDataAsConcertoObject()](#TemplateInstance+getDataAsConcertoObject) ⇒ <code>object</code>*
-        * *[.parse(input, [currentTime], [fileName])](#TemplateInstance+parse)*
-        * *[.draft([options], currentTime)](#TemplateInstance+draft) ⇒ <code>string</code>*
+        * *[.parse(input, [currentTime], [utcOffset], [fileName])](#TemplateInstance+parse)*
+        * *[.draft([options], [currentTime], [utcOffset])](#TemplateInstance+draft) ⇒ <code>string</code>*
+        * *[.formatCiceroMark(ciceroMarkParsed, options, format)](#TemplateInstance+formatCiceroMark) ⇒ <code>string</code>*
         * *[.getIdentifier()](#TemplateInstance+getIdentifier) ⇒ <code>String</code>*
         * *[.getTemplate()](#TemplateInstance+getTemplate) ⇒ [<code>Template</code>](#Template)*
         * *[.getLogicManager()](#TemplateInstance+getLogicManager) ⇒ <code>LogicManager</code>*
         * *[.toJSON()](#TemplateInstance+toJSON) ⇒ <code>object</code>*
     * _static_
-        * *[.convertFormattedParsed(obj, utcOffset)](#TemplateInstance.convertFormattedParsed) ⇒ <code>\*</code>*
+        * *[.ciceroFormulaEval(logicManager, clauseId, ergoEngine, name)](#TemplateInstance.ciceroFormulaEval) ⇒ <code>\*</code>*
+        * *[.rebuildParser(parserManager, logicManager, ergoEngine, templateName, grammar)](#TemplateInstance.rebuildParser)*
 
 <a name="new_TemplateInstance_new"></a>
 
@@ -1223,7 +755,7 @@ plain JS object suitable for serialization call toJSON() and retrieve the `data`
 **Returns**: <code>object</code> - - the data for the clause, or null if it has not been set  
 <a name="TemplateInstance+parse"></a>
 
-### *templateInstance.parse(input, [currentTime], [fileName])*
+### *templateInstance.parse(input, [currentTime], [utcOffset], [fileName])*
 Set the data for the clause by parsing natural language text.
 
 **Kind**: instance method of [<code>TemplateInstance</code>](#TemplateInstance)  
@@ -1231,12 +763,13 @@ Set the data for the clause by parsing natural language text.
 | Param | Type | Description |
 | --- | --- | --- |
 | input | <code>string</code> | the text for the clause |
-| [currentTime] | <code>string</code> | the definition of 'now' (optional) |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
 | [fileName] | <code>string</code> | the fileName for the text (optional) |
 
 <a name="TemplateInstance+draft"></a>
 
-### *templateInstance.draft([options], currentTime) ⇒ <code>string</code>*
+### *templateInstance.draft([options], [currentTime], [utcOffset]) ⇒ <code>string</code>*
 Generates the natural language text for a contract or clause clause; combining the text from the template
 and the instance data.
 
@@ -1246,8 +779,23 @@ the template with the JSON data for the clause.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| [options] | <code>\*</code> | text generation options. options.wrapVariables encloses variables and editable sections in '<variable ...' and '/>' |
-| currentTime | <code>string</code> | the definition of 'now' (optional) |
+| [options] | <code>\*</code> | text generation options. |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
+
+<a name="TemplateInstance+formatCiceroMark"></a>
+
+### *templateInstance.formatCiceroMark(ciceroMarkParsed, options, format) ⇒ <code>string</code>*
+Format CiceroMark
+
+**Kind**: instance method of [<code>TemplateInstance</code>](#TemplateInstance)  
+**Returns**: <code>string</code> - the result of parsing and printing back the text  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ciceroMarkParsed | <code>object</code> | the parsed CiceroMark DOM |
+| options | <code>object</code> | parameters to the formatting |
+| format | <code>string</code> | to the text generation |
 
 <a name="TemplateInstance+getIdentifier"></a>
 
@@ -1278,19 +826,35 @@ Returns a JSON representation of the clause
 
 **Kind**: instance method of [<code>TemplateInstance</code>](#TemplateInstance)  
 **Returns**: <code>object</code> - the JS object for serialization  
-<a name="TemplateInstance.convertFormattedParsed"></a>
+<a name="TemplateInstance.ciceroFormulaEval"></a>
 
-### *TemplateInstance.convertFormattedParsed(obj, utcOffset) ⇒ <code>\*</code>*
-Recursive function that converts all instances of Formated objects (ParsedDateTime or ParsedMonetaryAmount)
-to a Moment.
+### *TemplateInstance.ciceroFormulaEval(logicManager, clauseId, ergoEngine, name) ⇒ <code>\*</code>*
+Constructs a function for formula evaluation based for this template instance
 
 **Kind**: static method of [<code>TemplateInstance</code>](#TemplateInstance)  
-**Returns**: <code>\*</code> - the converted object  
+**Returns**: <code>\*</code> - A function from formula code + input data to result  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| obj | <code>\*</code> | the input object |
-| utcOffset | <code>number</code> | the default utcOffset |
+| logicManager | <code>\*</code> | the logic manager |
+| clauseId | <code>string</code> | this instance identifier |
+| ergoEngine | <code>\*</code> | the evaluation engine |
+| name | <code>string</code> | the name of the formula |
+
+<a name="TemplateInstance.rebuildParser"></a>
+
+### *TemplateInstance.rebuildParser(parserManager, logicManager, ergoEngine, templateName, grammar)*
+Utility to rebuild a parser when the grammar changes
+
+**Kind**: static method of [<code>TemplateInstance</code>](#TemplateInstance)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| parserManager | <code>\*</code> | the parser manager |
+| logicManager | <code>\*</code> | the logic manager |
+| ergoEngine | <code>\*</code> | the evaluation engine |
+| templateName | <code>string</code> | this template name |
+| grammar | <code>string</code> | the new grammar |
 
 <a name="CompositeArchiveLoader"></a>
 
@@ -1353,18 +917,6 @@ Load a Archive from a URL and return it
 | --- | --- | --- |
 | url | <code>string</code> | the url to get |
 | options | <code>object</code> | additional options |
-
-<a name="locationOfError"></a>
-
-## locationOfError(error) ⇒ <code>object</code>
-Extract the file location from the parse error
-
-**Kind**: global function  
-**Returns**: <code>object</code> - - the file location information  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| error | <code>object</code> | the error object |
 
 <a name="isPNG"></a>
 
