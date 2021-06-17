@@ -87,7 +87,7 @@
         "title": "Relationships"
       },
       "ref-cicero-api": {
-        "title": "Node.js API"
+        "title": "Cicero API"
       },
       "ref-cicero-cli": {
         "title": "Command Line"
@@ -96,7 +96,7 @@
         "title": "Template Testing"
       },
       "ref-concerto-api": {
-        "title": "Node.js API"
+        "title": "Concerto API"
       },
       "ref-concerto-cli": {
         "title": "Command Line"
@@ -105,7 +105,7 @@
         "title": "Decorators"
       },
       "ref-ergo-api": {
-        "title": "Node.js API"
+        "title": "Ergo API"
       },
       "ref-ergo-cli": {
         "title": "Command Line"

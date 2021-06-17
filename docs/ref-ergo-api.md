@@ -1,6 +1,6 @@
 ---
 id: ref-ergo-api
-title: Node.js API
+title: Ergo API
 ---
 
 ## Classes
@@ -29,13 +29,25 @@ title: Node.js API
 <dt><a href="#fromFiles">fromFiles(files, [options])</a> ⇒ <code>Promise.&lt;LogicManager&gt;</code></dt>
 <dd><p>Builds a LogicManager from files.</p>
 </dd>
-<dt><a href="#setCurrentTime">setCurrentTime(currentTime)</a> ⇒ <code>object</code></dt>
-<dd><p>Ensures there is a proper current time</p>
+<dt><a href="#validateContract">validateContract(modelManager, contract, utcOffset, options)</a> ⇒ <code>object</code></dt>
+<dd><p>Validate contract JSON</p>
 </dd>
-<dt><a href="#init">init(engine, logicManager, contractJson, currentTime)</a> ⇒ <code>object</code></dt>
+<dt><a href="#validateInput">validateInput(modelManager, input, utcOffset)</a> ⇒ <code>object</code></dt>
+<dd><p>Validate input JSON</p>
+</dd>
+<dt><a href="#validateInputRecord">validateInputRecord(modelManager, input, utcOffset)</a> ⇒ <code>object</code></dt>
+<dd><p>Validate input JSON record</p>
+</dd>
+<dt><a href="#validateOutput">validateOutput(modelManager, output, utcOffset)</a> ⇒ <code>object</code></dt>
+<dd><p>Validate output JSON</p>
+</dd>
+<dt><a href="#validateOutputArray">validateOutputArray(modelManager, output, utcOffset)</a> ⇒ <code>Array.&lt;object&gt;</code></dt>
+<dd><p>Validate output JSON array</p>
+</dd>
+<dt><a href="#init">init(engine, logicManager, contractJson, currentTime, utcOffset)</a> ⇒ <code>object</code></dt>
 <dd><p>Invoke Ergo contract initialization</p>
 </dd>
-<dt><a href="#trigger">trigger(engine, logicManager, contractJson, stateJson, currentTime, requestJson)</a> ⇒ <code>object</code></dt>
+<dt><a href="#trigger">trigger(engine, logicManager, contractJson, stateJson, currentTime, utcOffset, requestJson)</a> ⇒ <code>object</code></dt>
 <dd><p>Trigger the Ergo contract with a request</p>
 </dd>
 <dt><a href="#resolveRootDir">resolveRootDir(parameters)</a> ⇒ <code>string</code></dt>
@@ -57,32 +69,15 @@ Utility class that implements the commands exposed by the Ergo CLI.
 **Kind**: global class  
 
 * [Commands](#Commands)
-    * [.draft(template, files, contractInput, currentTime, options)](#Commands.draft) ⇒ <code>object</code>
-    * [.trigger(template, files, contractInput, stateInput, currentTime, requestsInput, warnings)](#Commands.trigger) ⇒ <code>object</code>
-    * [.invoke(template, files, clauseName, contractInput, stateInput, currentTime, paramsInput, warnings)](#Commands.invoke) ⇒ <code>object</code>
-    * [.initialize(template, files, contractInput, currentTime, paramsInput, warnings)](#Commands.initialize) ⇒ <code>object</code>
+    * [.trigger(template, files, contractInput, stateInput, [currentTime], [utcOffset], requestsInput, warnings)](#Commands.trigger) ⇒ <code>object</code>
+    * [.invoke(template, files, clauseName, contractInput, stateInput, [currentTime], [utcOffset], paramsInput, warnings)](#Commands.invoke) ⇒ <code>object</code>
+    * [.initialize(template, files, contractInput, [currentTime], [utcOffset], paramsInput, warnings)](#Commands.initialize) ⇒ <code>object</code>
     * [.parseCTOtoFileSync(ctoPath)](#Commands.parseCTOtoFileSync) ⇒ <code>string</code>
     * [.parseCTOtoFile(ctoPath)](#Commands.parseCTOtoFile) ⇒ <code>string</code>
 
-<a name="Commands.draft"></a>
-
-### Commands.draft(template, files, contractInput, currentTime, options) ⇒ <code>object</code>
-Invoke draft for an Ergo contract
-
-**Kind**: static method of [<code>Commands</code>](#Commands)  
-**Returns**: <code>object</code> - Promise to the result of execution  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| template | <code>string</code> | template directory |
-| files | <code>Array.&lt;string&gt;</code> | input files |
-| contractInput | <code>string</code> | the contract data |
-| currentTime | <code>string</code> | the definition of 'now' |
-| options | <code>object</code> | to the text generation |
-
 <a name="Commands.trigger"></a>
 
-### Commands.trigger(template, files, contractInput, stateInput, currentTime, requestsInput, warnings) ⇒ <code>object</code>
+### Commands.trigger(template, files, contractInput, stateInput, [currentTime], [utcOffset], requestsInput, warnings) ⇒ <code>object</code>
 Send a request an Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
@@ -94,13 +89,14 @@ Send a request an Ergo contract
 | files | <code>Array.&lt;string&gt;</code> | input files |
 | contractInput | <code>string</code> | the contract data |
 | stateInput | <code>string</code> | the contract state |
-| currentTime | <code>string</code> | the definition of 'now' |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
 | requestsInput | <code>Array.&lt;string&gt;</code> | the requests |
 | warnings | <code>boolean</code> | whether to print warnings |
 
 <a name="Commands.invoke"></a>
 
-### Commands.invoke(template, files, clauseName, contractInput, stateInput, currentTime, paramsInput, warnings) ⇒ <code>object</code>
+### Commands.invoke(template, files, clauseName, contractInput, stateInput, [currentTime], [utcOffset], paramsInput, warnings) ⇒ <code>object</code>
 Invoke an Ergo contract's clause
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
@@ -113,13 +109,14 @@ Invoke an Ergo contract's clause
 | clauseName | <code>string</code> | the name of the clause to invoke |
 | contractInput | <code>string</code> | the contract data |
 | stateInput | <code>string</code> | the contract state |
-| currentTime | <code>string</code> | the definition of 'now' |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
 | paramsInput | <code>object</code> | the parameters for the clause |
 | warnings | <code>boolean</code> | whether to print warnings |
 
 <a name="Commands.initialize"></a>
 
-### Commands.initialize(template, files, contractInput, currentTime, paramsInput, warnings) ⇒ <code>object</code>
+### Commands.initialize(template, files, contractInput, [currentTime], [utcOffset], paramsInput, warnings) ⇒ <code>object</code>
 Invoke init for an Ergo contract
 
 **Kind**: static method of [<code>Commands</code>](#Commands)  
@@ -130,7 +127,8 @@ Invoke init for an Ergo contract
 | template | <code>string</code> | template directory |
 | files | <code>Array.&lt;string&gt;</code> | input files |
 | contractInput | <code>string</code> | the contract data |
-| currentTime | <code>string</code> | the definition of 'now' |
+| [currentTime] | <code>string</code> | the definition of 'now', defaults to current time |
+| [utcOffset] | <code>number</code> | UTC Offset for this execution, defaults to local offset |
 | paramsInput | <code>object</code> | the parameters for the clause |
 | warnings | <code>boolean</code> | whether to print warnings |
 
@@ -222,21 +220,80 @@ Builds a LogicManager from files.
 | files | <code>Array.&lt;String&gt;</code> | file names |
 | [options] | <code>Object</code> | an optional set of options to configure the instance. |
 
-<a name="setCurrentTime"></a>
+<a name="validateContract"></a>
 
-## setCurrentTime(currentTime) ⇒ <code>object</code>
-Ensures there is a proper current time
+## validateContract(modelManager, contract, utcOffset, options) ⇒ <code>object</code>
+Validate contract JSON
 
 **Kind**: global function  
-**Returns**: <code>object</code> - if valid, the moment object for the current time  
+**Returns**: <code>object</code> - the validated contract  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| currentTime | <code>string</code> | the definition of 'now' |
+| modelManager | <code>object</code> | the Concerto model manager |
+| contract | <code>object</code> | the contract JSON |
+| utcOffset | <code>number</code> | UTC Offset for DateTime values |
+| options | <code>object</code> | parameters for contract variables validation |
+
+<a name="validateInput"></a>
+
+## validateInput(modelManager, input, utcOffset) ⇒ <code>object</code>
+Validate input JSON
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the validated input  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>object</code> | the Concerto model manager |
+| input | <code>object</code> | the input JSON |
+| utcOffset | <code>number</code> | UTC Offset for DateTime values |
+
+<a name="validateInputRecord"></a>
+
+## validateInputRecord(modelManager, input, utcOffset) ⇒ <code>object</code>
+Validate input JSON record
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the validated input  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>object</code> | the Concerto model manager |
+| input | <code>object</code> | the input JSON record |
+| utcOffset | <code>number</code> | UTC Offset for DateTime values |
+
+<a name="validateOutput"></a>
+
+## validateOutput(modelManager, output, utcOffset) ⇒ <code>object</code>
+Validate output JSON
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the validated output  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>object</code> | the Concerto model manager |
+| output | <code>object</code> | the output JSON |
+| utcOffset | <code>number</code> | UTC Offset for DateTime values |
+
+<a name="validateOutputArray"></a>
+
+## validateOutputArray(modelManager, output, utcOffset) ⇒ <code>Array.&lt;object&gt;</code>
+Validate output JSON array
+
+**Kind**: global function  
+**Returns**: <code>Array.&lt;object&gt;</code> - the validated output array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>object</code> | the Concerto model manager |
+| output | <code>\*</code> | the output JSON array |
+| utcOffset | <code>number</code> | UTC Offset for DateTime values |
 
 <a name="init"></a>
 
-## init(engine, logicManager, contractJson, currentTime) ⇒ <code>object</code>
+## init(engine, logicManager, contractJson, currentTime, utcOffset) ⇒ <code>object</code>
 Invoke Ergo contract initialization
 
 **Kind**: global function  
@@ -248,10 +305,11 @@ Invoke Ergo contract initialization
 | logicManager | <code>object</code> | the Template Logic |
 | contractJson | <code>object</code> | contract data in JSON |
 | currentTime | <code>string</code> | the definition of 'now' |
+| utcOffset | <code>utcOffset</code> | UTC Offset for this execution |
 
 <a name="trigger"></a>
 
-## trigger(engine, logicManager, contractJson, stateJson, currentTime, requestJson) ⇒ <code>object</code>
+## trigger(engine, logicManager, contractJson, stateJson, currentTime, utcOffset, requestJson) ⇒ <code>object</code>
 Trigger the Ergo contract with a request
 
 **Kind**: global function  
@@ -264,6 +322,7 @@ Trigger the Ergo contract with a request
 | contractJson | <code>object</code> | contract data in JSON |
 | stateJson | <code>object</code> | state data in JSON |
 | currentTime | <code>string</code> | the definition of 'now' |
+| utcOffset | <code>utcOffset</code> | UTC Offset for this execution |
 | requestJson | <code>object</code> | state data in JSON |
 
 <a name="resolveRootDir"></a>
