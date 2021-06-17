@@ -11,7 +11,7 @@ We start with a very simple _Late Penalty and Delivery_ Clause and gradually mak
 
 ### Load the Template
 
-To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at [Mini Late Delivery And Penalty](https://templates.accordproject.org/minilatedeliveryandpenalty@0.5.0.html) and click the "Open In Template Studio" button.
+To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at [Mini Late Delivery And Penalty](https://templates.accordproject.org/minilatedeliveryandpenalty@0.6.0.html) and click the "Open In Template Studio" button.
 
 ![Advanced-Late-1](assets/advanced/late1.png)
 
@@ -29,6 +29,10 @@ When the text in the `Grammar` tab is in sync with the text in the `Sample` tab,
 
 Changes to the variables in the `Sample` are reflected in the `Contract Data` tab in real time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
 
+:::note
+The JSON data `resource:org.accordproject.party.Party#Betty%20Buyer` indicate that the value is a relationship of type `Party` whose identifier is `Betty Buyer`. Consult the [Concerto Guide](model-relationships) for more details on modeling relationships.
+:::
+
 If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Sample`. The error will be shown in red in the status bar at the bottom of the page. For instance, the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.
 
 ![Advanced-Late-4](assets/advanced/late4.png)
@@ -43,8 +47,9 @@ Moving along to the `Model` section, you will find the data model for the templa
 
 ![Advanced-Late-5](assets/advanced/late5.png)
 
-Note that a `namespace` is declared at the beginning of the file for the model, and that several existing models are being imported (using e.g., `import org.accordproject.cicero.contract.*`). Those imports are needed to access the definition for several types used in the model:
-- `AccordClause` which is a generic type for all Accord Project clause templates, and is defined in the `org.accordproject.contract` namespace;
+Note that a `namespace` is declared at the beginning of the file for the model, and that several existing models are being imported (using e.g., `import org.accordproject.contract.*`). Those imports are needed to access the definition for several types used in the model:
+- `Clause` which is a generic type for all Accord Project clause templates, and is defined in the `org.accordproject.contract` namespace;
+- `Party` which is a generic type for all Accord Project parties, and is defined in the `org.accordproject.party` namespace;
 - `Request` and `Response` which are generic types for responses and requests, and are defined in the `org.accordproject.runtime` namespace;
 - `Duration` which is defined in the `org.accordproject.time` namespace.
 
@@ -122,9 +127,9 @@ To define this new variable, go to the `Model` tab, and change the `MiniLateDeli
 
 For convenience, you can copy-paste the new `MiniLateDeliveryClause` type from here:
 ```ergo
-asset MiniLateDeliveryClause extends AccordClause {
-  o AccordParty buyer         // Party to the contract (buyer)
-  o AccordParty seller        // Party to the contract (seller)
+asset MiniLateDeliveryClause extends Clause {
+  --> Party buyer         // Party to the contract (buyer)
+  --> Party seller        // Party to the contract (seller)
   o Duration penaltyDuration  // Length of time resulting in penalty
   o Double penaltyPercentage  // Penalty percentage
   o Double capPercentage      // Maximum penalty percentage
@@ -189,7 +194,7 @@ As a final test of the new template, you should try again to run the contract wi
 ![Advanced-Late-15](assets/advanced/late15.png)
 
 :::tip
-A full version of the template after those changes have been applied can be found as the [Mini Late Delivery And Penalty Capped](https://templates.accordproject.org/minilatedeliveryandpenalty-capped@0.5.0.html) in the Template Library.
+A full version of the template after those changes have been applied can be found as the [Mini Late Delivery And Penalty Capped](https://templates.accordproject.org/minilatedeliveryandpenalty-capped@0.6.0.html) in the Template Library.
 :::
 
 ## Emit a Payment Obligation.
@@ -198,7 +203,7 @@ As a final extension to this template, we can modify it to emit a Payment Obliga
 
 ### Switch to a Contract Template
 
-The first place to change is in the metadata for the template. This can be done easily with the `full contract` button in the `Current Template` tab. This will immediately result in an error indicating that the model does not contain an `AccordContract` type.
+The first place to change is in the metadata for the template. This can be done easily with the `full contract` button in the `Current Template` tab. This will immediately result in an error indicating that the model does not contain an `Contract` type.
 
 ![Advanced-Late-16](assets/advanced/late16.png)
 
@@ -206,9 +211,9 @@ The first place to change is in the metadata for the template. This can be done 
 
 To fix this, change the model to reflect that we are now editing a contract template, and change the type `AccordClause` to `AccordContract` in the type definition for the template variables:
 ```ergo
-asset MiniLateDeliveryContract extends AccordContract {
-  o AccordParty buyer         // Party to the contract (buyer)
-  o AccordParty seller        // Party to the contract (seller)
+asset MiniLateDeliveryContract extends Contract {
+  --> Party buyer         // Party to the contract (buyer)
+  --> Party seller        // Party to the contract (seller)
   o Duration penaltyDuration  // Length of time resulting in penalty
   o Double penaltyPercentage  // Penalty percentage
   o Double capPercentage      // Maximum penalty percentage
@@ -262,5 +267,5 @@ That's it! You can observe in the `Request` tab that an `Obligation` is now bein
 ![Advanced-Late-17](assets/advanced/late17.png)
 
 :::tip
-A full version of the template after those changes have been applied can be found as the [Mini-Late Delivery and Penalty Payment](https://templates.accordproject.org/minilatedeliveryandpenalty-payment@0.5.0.html) in the Template Library.
+A full version of the template after those changes have been applied can be found as the [Mini-Late Delivery and Penalty Payment](https://templates.accordproject.org/minilatedeliveryandpenalty-payment@0.6.0.html) in the Template Library.
 :::
