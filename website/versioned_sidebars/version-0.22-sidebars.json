@@ -13,6 +13,7 @@
       "version-0.22-started-resources"
     ],
     "Template Guides": [
+      "version-0.22-high-level-architecture",
       {
         "type": "subcategory",
         "label": "Markdown Text",
