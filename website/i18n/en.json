@@ -629,11 +629,20 @@
       "version-0.22/version-0.22-ref-cicero-api": {
         "title": "Cicero API"
       },
+      "version-0.22/version-0.22-ref-cicero-cli": {
+        "title": "Command Line"
+      },
       "version-0.22/version-0.22-ref-concerto-api": {
         "title": "Concerto API"
       },
+      "version-0.22/version-0.22-ref-concerto-cli": {
+        "title": "Command Line"
+      },
       "version-0.22/version-0.22-ref-ergo-api": {
         "title": "Ergo API"
+      },
+      "version-0.22/version-0.22-ref-ergo-cli": {
+        "title": "Command Line"
       },
       "version-0.22/version-0.22-ref-migrate-0.21-0.22": {
         "title": "Cicero 0.21 to 0.22"
