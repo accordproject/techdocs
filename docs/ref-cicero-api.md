@@ -415,9 +415,9 @@ template.
 **Access**: public  
 
 * *[Template](#Template)*
-    * *[new Template(packageJson, readme, samples, request, logo, options)](#new_Template_new)*
+    * *[new Template(packageJson, readme, samples, request, logo, options, authorSignature)](#new_Template_new)*
     * _instance_
-        * *[.validate()](#Template+validate)*
+        * *[.validate(options)](#Template+validate)*
         * *[.getTemplateModel()](#Template+getTemplateModel) ⇒ <code>ClassDeclaration</code>*
         * *[.getIdentifier()](#Template+getIdentifier) ⇒ <code>String</code>*
         * *[.getMetadata()](#Template+getMetadata) ⇒ [<code>Metadata</code>](#Metadata)*
@@ -426,7 +426,9 @@ template.
         * *[.getVersion()](#Template+getVersion) ⇒ <code>String</code>*
         * *[.getDescription()](#Template+getDescription) ⇒ <code>String</code>*
         * *[.getHash()](#Template+getHash) ⇒ <code>string</code>*
-        * *[.toArchive([language], [options], logo)](#Template+toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
+        * *[.verifyTemplateSignature()](#Template+verifyTemplateSignature)*
+        * *[.signTemplate(p12File, passphrase, timestamp)](#Template+signTemplate)*
+        * *[.toArchive([language], [options])](#Template+toArchive) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
         * *[.getParserManager()](#Template+getParserManager) ⇒ <code>ParserManager</code>*
         * *[.getLogicManager()](#Template+getLogicManager) ⇒ <code>LogicManager</code>*
         * *[.getIntrospector()](#Template+getIntrospector) ⇒ <code>Introspector</code>*
@@ -445,7 +447,7 @@ template.
 
 <a name="new_Template_new"></a>
 
-### *new Template(packageJson, readme, samples, request, logo, options)*
+### *new Template(packageJson, readme, samples, request, logo, options, authorSignature)*
 Create the Template.
 Note: Only to be called by framework code. Applications should
 retrieve instances from [fromArchive](#Template.fromArchive) or [fromDirectory](#Template.fromDirectory).
@@ -459,15 +461,21 @@ retrieve instances from [fromArchive](#Template.fromArchive) or [fromDirectory](
 | request | <code>object</code> | the JS object for the sample request |
 | logo | <code>Buffer</code> | the bytes data of logo |
 | options | <code>Object</code> | e.g., { warnings: true } |
+| authorSignature | <code>Object</code> | object containing template hash, timestamp, author's certificate, signature |
 
 <a name="Template+validate"></a>
 
-### *template.validate()*
+### *template.validate(options)*
 Verifies that the template is well formed.
 Compiles the Ergo logic.
 Throws an exception with the details of any validation errors.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| options | <code>Object</code> | e.g., { verify: true } |
+
 <a name="Template+getTemplateModel"></a>
 
 ### *template.getTemplateModel() ⇒ <code>ClassDeclaration</code>*
@@ -531,9 +539,29 @@ all the models and all the script files.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
 **Returns**: <code>string</code> - the SHA-256 hash in hex format  
+<a name="Template+verifyTemplateSignature"></a>
+
+### *template.verifyTemplateSignature()*
+verifies the signature stored in the template object using the template hash and timestamp
+
+**Kind**: instance method of [<code>Template</code>](#Template)  
+<a name="Template+signTemplate"></a>
+
+### *template.signTemplate(p12File, passphrase, timestamp)*
+signs a string made up of template hash and time stamp using private key derived
+from the keystore
+
+**Kind**: instance method of [<code>Template</code>](#Template)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| p12File | <code>String</code> | encoded string of p12 keystore file |
+| passphrase | <code>String</code> | passphrase for the keystore file |
+| timestamp | <code>Number</code> | timestamp of the moment of signature is done |
+
 <a name="Template+toArchive"></a>
 
-### *template.toArchive([language], [options], logo) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
+### *template.toArchive([language], [options]) ⇒ <code>Promise.&lt;Buffer&gt;</code>*
 Persists this template to a Cicero Template Archive (cta) file.
 
 **Kind**: instance method of [<code>Template</code>](#Template)  
@@ -542,8 +570,7 @@ Persists this template to a Cicero Template Archive (cta) file.
 | Param | Type | Description |
 | --- | --- | --- |
 | [language] | <code>string</code> | target language for the archive (should be 'ergo') |
-| [options] | <code>Object</code> | JSZip options |
-| logo | <code>Buffer</code> | Bytes data of the PNG file |
+| [options] | <code>Object</code> | JSZip options and keystore object containing path and passphrase for the keystore |
 
 <a name="Template+getParserManager"></a>
 
