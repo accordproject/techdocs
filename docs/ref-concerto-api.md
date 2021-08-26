@@ -29,6 +29,78 @@ specific models.</p>
 <dt><a href="#setCurrentTime">setCurrentTime([currentTime], [utcOffset])</a> ⇒ <code>object</code></dt>
 <dd><p>Ensures there is a proper current time</p>
 </dd>
+<dt><a href="#createMetaModelManager">createMetaModelManager()</a> ⇒ <code>*</code></dt>
+<dd><p>Create a metamodel manager (for validation against the metamodel)</p>
+</dd>
+<dt><a href="#validateMetaModel">validateMetaModel(input)</a> ⇒ <code>object</code></dt>
+<dd><p>Validate against the metamodel</p>
+</dd>
+<dt><a href="#createNameTable">createNameTable(modelManager, metaModel)</a> ⇒ <code>object</code></dt>
+<dd><p>Create a name resolution table</p>
+</dd>
+<dt><a href="#resolveName">resolveName(name, table)</a> ⇒ <code>string</code></dt>
+<dd><p>Resolve a name using the name table</p>
+</dd>
+<dt><a href="#resolveTypeNames">resolveTypeNames(metaModel, table)</a> ⇒ <code>object</code></dt>
+<dd><p>Name resolution for metamodel</p>
+</dd>
+<dt><a href="#enumFieldToMetaModel">enumFieldToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for an enum field</p>
+</dd>
+<dt><a href="#decoratorArgToMetaModel">decoratorArgToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for a decorator argument</p>
+</dd>
+<dt><a href="#decoratorToMetaModel">decoratorToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for a decorator</p>
+</dd>
+<dt><a href="#decoratorsToMetaModel">decoratorsToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for a list of decorators</p>
+</dd>
+<dt><a href="#fieldToMetaModel">fieldToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for a class field</p>
+</dd>
+<dt><a href="#relationshipToMetaModel">relationshipToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for a relationship</p>
+</dd>
+<dt><a href="#enumDeclToMetaModel">enumDeclToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for an enum declaration</p>
+</dd>
+<dt><a href="#classDeclToMetaModel">classDeclToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for a class declaration</p>
+</dd>
+<dt><a href="#declToMetaModel">declToMetaModel(ast)</a> ⇒ <code>object</code></dt>
+<dd><p>Create metamodel for a declaration</p>
+</dd>
+<dt><a href="#modelToMetaModel">modelToMetaModel(ast, [validate])</a> ⇒ <code>object</code></dt>
+<dd><p>Export metamodel from an AST</p>
+</dd>
+<dt><a href="#modelFileToMetaModel">modelFileToMetaModel(modelFile, [validate])</a> ⇒ <code>object</code></dt>
+<dd><p>Export metamodel from a model file</p>
+</dd>
+<dt><a href="#decoratorArgFromMetaModel">decoratorArgFromMetaModel(mm)</a> ⇒ <code>string</code></dt>
+<dd><p>Create decorator argument string from a metamodel</p>
+</dd>
+<dt><a href="#decoratorFromMetaModel">decoratorFromMetaModel(mm)</a> ⇒ <code>string</code></dt>
+<dd><p>Create decorator string from a metamodel</p>
+</dd>
+<dt><a href="#decoratorsFromMetaModel">decoratorsFromMetaModel(mm, prefix)</a> ⇒ <code>string</code></dt>
+<dd><p>Create decorators string from a metamodel</p>
+</dd>
+<dt><a href="#fieldFromMetaModel">fieldFromMetaModel(mm)</a> ⇒ <code>string</code></dt>
+<dd><p>Create a field string from a metamodel</p>
+</dd>
+<dt><a href="#declFromMetaModel">declFromMetaModel(mm)</a> ⇒ <code>string</code></dt>
+<dd><p>Create a declaration string from a metamodel</p>
+</dd>
+<dt><a href="#ctoFromMetaModel">ctoFromMetaModel(metaModel, [validate])</a> ⇒ <code>string</code></dt>
+<dd><p>Create a model string from a metamodel</p>
+</dd>
+<dt><a href="#ctoToMetaModel">ctoToMetaModel(model, [validate])</a> ⇒ <code>object</code></dt>
+<dd><p>Export metamodel from a model string</p>
+</dd>
+<dt><a href="#ctoToMetaModelAndResolve">ctoToMetaModelAndResolve(modelManager, model, [validate])</a> ⇒ <code>object</code></dt>
+<dd><p>Export metamodel from a model string and resolve names</p>
+</dd>
 <dt><a href="#randomNumberInRangeWithPrecision">randomNumberInRangeWithPrecision(userMin, userMax, precision, systemMin, systemMax)</a> ⇒ <code>number</code></dt>
 <dd><p>Generate a random number within a given range with
 a prescribed precision and inside a global range</p>
@@ -74,6 +146,7 @@ specific models.
             * [.newTransaction(ns, type, [id], [options])](#module_concerto-core.Factory+newTransaction) ⇒ <code>Resource</code>
             * [.newEvent(ns, type, [id], [options])](#module_concerto-core.Factory+newEvent) ⇒ <code>Resource</code>
         * _static_
+            * [.newId()](#module_concerto-core.Factory.newId) ⇒ <code>string</code>
             * [.Symbol.hasInstance(object)](#module_concerto-core.Factory.Symbol.hasInstance) ⇒ <code>boolean</code>
     * [.ModelLoader](#module_concerto-core.ModelLoader)
         * [.loadModelManager(ctoFiles, options)](#module_concerto-core.ModelLoader.loadModelManager) ⇒ <code>object</code>
@@ -213,6 +286,7 @@ specific models.
             * [.getAllDeclarations()](#module_concerto-core.ModelFile+getAllDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
             * [.getDefinitions()](#module_concerto-core.ModelFile+getDefinitions) ⇒ <code>string</code>
             * [.getConcertoVersion()](#module_concerto-core.ModelFile+getConcertoVersion) ⇒ <code>string</code>
+            * [.isCompatibleVersion()](#module_concerto-core.ModelFile+isCompatibleVersion)
         * _static_
             * [.Symbol.hasInstance(object)](#module_concerto-core.ModelFile.Symbol.hasInstance) ⇒ <code>boolean</code>
     * [.ParticipantDeclaration](#module_concerto-core.ParticipantDeclaration) ⇐ <code>ClassDeclaration</code>
@@ -539,6 +613,7 @@ and assets.
         * [.newTransaction(ns, type, [id], [options])](#module_concerto-core.Factory+newTransaction) ⇒ <code>Resource</code>
         * [.newEvent(ns, type, [id], [options])](#module_concerto-core.Factory+newEvent) ⇒ <code>Resource</code>
     * _static_
+        * [.newId()](#module_concerto-core.Factory.newId) ⇒ <code>string</code>
         * [.Symbol.hasInstance(object)](#module_concerto-core.Factory.Symbol.hasInstance) ⇒ <code>boolean</code>
 
 <a name="new_module_concerto-core.Factory_new"></a>
@@ -652,6 +727,13 @@ set to a UUID.
 | [options.generate] | <code>String</code> | Pass one of: <dl> <dt>sample</dt><dd>return a resource instance with generated sample data.</dd> <dt>empty</dt><dd>return a resource instance with empty property values.</dd></dl> |
 | [options.includeOptionalFields] | <code>boolean</code> | if <code>options.generate</code> is specified, whether optional fields should be generated. |
 
+<a name="module_concerto-core.Factory.newId"></a>
+
+#### Factory.newId() ⇒ <code>string</code>
+Create a new ID for an object.
+
+**Kind**: static method of [<code>Factory</code>](#module_concerto-core.Factory)  
+**Returns**: <code>string</code> - a new ID  
 <a name="module_concerto-core.Factory.Symbol.hasInstance"></a>
 
 #### Factory.Symbol.hasInstance(object) ⇒ <code>boolean</code>
@@ -1911,6 +1993,7 @@ and a set of model elements: assets, transactions etc.
         * [.getAllDeclarations()](#module_concerto-core.ModelFile+getAllDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
         * [.getDefinitions()](#module_concerto-core.ModelFile+getDefinitions) ⇒ <code>string</code>
         * [.getConcertoVersion()](#module_concerto-core.ModelFile+getConcertoVersion) ⇒ <code>string</code>
+        * [.isCompatibleVersion()](#module_concerto-core.ModelFile+isCompatibleVersion)
     * _static_
         * [.Symbol.hasInstance(object)](#module_concerto-core.ModelFile.Symbol.hasInstance) ⇒ <code>boolean</code>
 
@@ -2120,6 +2203,12 @@ Get the expected concerto version
 
 **Kind**: instance method of [<code>ModelFile</code>](#module_concerto-core.ModelFile)  
 **Returns**: <code>string</code> - The semver range for compatible concerto versions  
+<a name="module_concerto-core.ModelFile+isCompatibleVersion"></a>
+
+#### modelFile.isCompatibleVersion()
+Check whether this modelfile is compatible with the concerto version
+
+**Kind**: instance method of [<code>ModelFile</code>](#module_concerto-core.ModelFile)  
 <a name="module_concerto-core.ModelFile.Symbol.hasInstance"></a>
 
 #### ModelFile.Symbol.hasInstance(object) ⇒ <code>boolean</code>
@@ -2566,6 +2655,299 @@ Ensures there is a proper current time
 | --- | --- | --- |
 | [currentTime] | <code>string</code> | the definition of 'now' |
 | [utcOffset] | <code>number</code> | UTC Offset for this execution |
+
+<a name="createMetaModelManager"></a>
+
+## createMetaModelManager() ⇒ <code>\*</code>
+Create a metamodel manager (for validation against the metamodel)
+
+**Kind**: global function  
+**Returns**: <code>\*</code> - the metamodel manager  
+<a name="validateMetaModel"></a>
+
+## validateMetaModel(input) ⇒ <code>object</code>
+Validate against the metamodel
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the validated metamodel in JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| input | <code>object</code> | the metamodel in JSON |
+
+<a name="createNameTable"></a>
+
+## createNameTable(modelManager, metaModel) ⇒ <code>object</code>
+Create a name resolution table
+
+**Kind**: global function  
+**Returns**: <code>object</code> - mapping from local to fully qualified names  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>\*</code> | the model manager |
+| metaModel | <code>object</code> | the metamodel (JSON) |
+
+<a name="resolveName"></a>
+
+## resolveName(name, table) ⇒ <code>string</code>
+Resolve a name using the name table
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the fully qualified name  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | the name of the type to resolve |
+| table | <code>object</code> | the name table |
+
+<a name="resolveTypeNames"></a>
+
+## resolveTypeNames(metaModel, table) ⇒ <code>object</code>
+Name resolution for metamodel
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel with fully qualified names  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| metaModel | <code>object</code> | the metamodel (JSON) |
+| table | <code>object</code> | the name table |
+
+<a name="enumFieldToMetaModel"></a>
+
+## enumFieldToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for an enum field
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this field  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the field |
+
+<a name="decoratorArgToMetaModel"></a>
+
+## decoratorArgToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for a decorator argument
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this decorator argument  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the decorator argument |
+
+<a name="decoratorToMetaModel"></a>
+
+## decoratorToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for a decorator
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this decorator  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the decorator |
+
+<a name="decoratorsToMetaModel"></a>
+
+## decoratorsToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for a list of decorators
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for the decorators  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the decorators |
+
+<a name="fieldToMetaModel"></a>
+
+## fieldToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for a class field
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this field  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the field |
+
+<a name="relationshipToMetaModel"></a>
+
+## relationshipToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for a relationship
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this relationship  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the relationtion |
+
+<a name="enumDeclToMetaModel"></a>
+
+## enumDeclToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for an enum declaration
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this enum declaration  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the enum declaration |
+
+<a name="classDeclToMetaModel"></a>
+
+## classDeclToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for a class declaration
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this class declaration  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the class declaration |
+
+<a name="declToMetaModel"></a>
+
+## declToMetaModel(ast) ⇒ <code>object</code>
+Create metamodel for a declaration
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this declaration  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>object</code> | the AST for the declaration |
+
+<a name="modelToMetaModel"></a>
+
+## modelToMetaModel(ast, [validate]) ⇒ <code>object</code>
+Export metamodel from an AST
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this model  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| ast | <code>object</code> |  | the AST for the model |
+| [validate] | <code>boolean</code> | <code>true</code> | whether to perform validation |
+
+<a name="modelFileToMetaModel"></a>
+
+## modelFileToMetaModel(modelFile, [validate]) ⇒ <code>object</code>
+Export metamodel from a model file
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this model  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelFile | <code>object</code> | the AST for the model |
+| [validate] | <code>boolean</code> | whether to perform validation |
+
+<a name="decoratorArgFromMetaModel"></a>
+
+## decoratorArgFromMetaModel(mm) ⇒ <code>string</code>
+Create decorator argument string from a metamodel
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the string for the decorator argument  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mm | <code>object</code> | the metamodel |
+
+<a name="decoratorFromMetaModel"></a>
+
+## decoratorFromMetaModel(mm) ⇒ <code>string</code>
+Create decorator string from a metamodel
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the string for the decorator  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mm | <code>object</code> | the metamodel |
+
+<a name="decoratorsFromMetaModel"></a>
+
+## decoratorsFromMetaModel(mm, prefix) ⇒ <code>string</code>
+Create decorators string from a metamodel
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the string for the decorators  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mm | <code>object</code> | the metamodel |
+| prefix | <code>string</code> | indentation |
+
+<a name="fieldFromMetaModel"></a>
+
+## fieldFromMetaModel(mm) ⇒ <code>string</code>
+Create a field string from a metamodel
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the string for that field  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mm | <code>object</code> | the metamodel |
+
+<a name="declFromMetaModel"></a>
+
+## declFromMetaModel(mm) ⇒ <code>string</code>
+Create a declaration string from a metamodel
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the string for that declaration  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| mm | <code>object</code> | the metamodel |
+
+<a name="ctoFromMetaModel"></a>
+
+## ctoFromMetaModel(metaModel, [validate]) ⇒ <code>string</code>
+Create a model string from a metamodel
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the string for that model  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| metaModel | <code>object</code> |  | the metamodel |
+| [validate] | <code>boolean</code> | <code>true</code> | whether to perform validation |
+
+<a name="ctoToMetaModel"></a>
+
+## ctoToMetaModel(model, [validate]) ⇒ <code>object</code>
+Export metamodel from a model string
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this model  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| model | <code>string</code> | the string for the model |
+| [validate] | <code>boolean</code> | whether to perform validation |
+
+<a name="ctoToMetaModelAndResolve"></a>
+
+## ctoToMetaModelAndResolve(modelManager, model, [validate]) ⇒ <code>object</code>
+Export metamodel from a model string and resolve names
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this model  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>\*</code> | the model manager |
+| model | <code>string</code> | the string for the model |
+| [validate] | <code>boolean</code> | whether to perform validation |
 
 <a name="randomNumberInRangeWithPrecision"></a>
 
