@@ -94,7 +94,7 @@ const Block = props => (
     padding={['bottom', 'top']}
     id={props.id}
     background={props.background}>
-    <GridBlock align="center" contents={props.children} layout={props.layout} />
+    <GridBlock align="center" contents={props.children} layout={props.layout}/>
   </Container>
 );
 
