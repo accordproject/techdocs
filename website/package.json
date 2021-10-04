@@ -16,7 +16,7 @@
     "url": "https://github.com/accordproject/techdocs.git"
   },
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.2",
     "docusaurus": "^1.14.7",
     "jsdoc-to-markdown": "^5.0.3",
     "qs": "^6.9.6",
