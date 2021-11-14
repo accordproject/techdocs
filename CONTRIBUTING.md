@@ -20,7 +20,7 @@ Help us keep the Accord Project open and inclusive. Please read and follow our [
 
 ### <a name="question"></a> Got a Question or Problem?
 
-We want to keep GitHub Issues dedicated to bug reports and feature requests. Any general support questions are better directed towards a dedicated support platform, the best being the [Accord Project Slack Channel][apslack].
+We want to keep GitHub Issues dedicated to bug reports and feature requests. Any general support questions are better directed towards a dedicated support platform, the best being the [Accord Project Discord Channel][disc].
 
 ### <a name="issue"></a> Found an Issue or Bug?
 
@@ -163,6 +163,7 @@ Accord Project documentation files are made available under the [Creative Common
 
 [coc]: https://lfprojects.org/policies/code-of-conduct/
 [apslack]: https://accord-project-slack-signup.herokuapp.com
+[disc]: https://discord.gg/Zm99SKhhtA
 
 [contribute.coc]: CONTRIBUTING.md#coc
 [contribute.cla]: CONTRIBUTING.md#cla
