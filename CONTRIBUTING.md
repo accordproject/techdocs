@@ -165,6 +165,7 @@ Accord Project documentation files are made available under the [Creative Common
 [apslack]: https://accord-project-slack-signup.herokuapp.com
 [disc]: https://discord.gg/Zm99SKhhtA
 
+
 [contribute.coc]: CONTRIBUTING.md#coc
 [contribute.cla]: CONTRIBUTING.md#cla
 [contribute.question]: CONTRIBUTING.md#question
