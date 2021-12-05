@@ -36,7 +36,7 @@ The two sequences of characters `{{` and `}}` are reserved and used for the Cice
       ```
       {{#blockName variableName}}
       ... text or markdown ... 
-      {{/blockBane}}
+      {{/blockName}}
       ```
 
 ### CiceroMark
