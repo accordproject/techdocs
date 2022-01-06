@@ -13,10 +13,13 @@ Documentation for the API can be found in [Cicero API](ref-cicero-api.html).
 
 ### Import the Template class
 
-To import the Cicero class for templates:
+To import the Cicero classes for templates and clauses, we'll also import the Cicero engine and some helper utilities
 
 ```js
-const Template = require('@accordproject/cicero-core').Template;
+const fs = require("fs");
+const path = require("path");
+const { Template, Clause } = require("@accordproject/cicero-core");
+const { Engine } = require("@accordproject/cicero-engine");
 ```
 
 ### Load a Template
@@ -24,33 +27,33 @@ const Template = require('@accordproject/cicero-core').Template;
 To create a Template instance in memory call the `fromDirectory`, `fromArchive` or `fromUrl` methods:
 
 ```js
-    const template = await Template.fromDirectory('./test/data/latedeliveryandpenalty');
+const template = await Template.fromDirectory(
+  "./test/data/latedeliveryandpenalty"
+);
 ```
 
 These methods are asynchronous and return a `Promise`, so you should use `await` to wait for the promise to be resolved.
 
+> Note that you'll need to wrap this `await` inside an `async` function or use a [top-level await inside a module](https://v8.dev/features/top-level-await)
+
 ### Instantiate a Template
 
 Once a Template has been loaded, you can create a Clause based on the Template. You can either instantiate
-the Clause using source DSL text (by calling `parse`), or you can set an instance of the template model 
+the Clause using source DSL text (by calling `parse`), or you can set an instance of the template model
 as JSON data (by calling `setData`):
 
 ```js
-    // load the DSL text for the template
-    const testLatePenaltyInput = fs.readFileSync(path.resolve(__dirname, 'text/', 'sample.md'), 'utf8');
+// load the DSL text for the template
+const testLatePenaltyInput = fs.readFileSync(
+  path.resolve(__dirname, "text/", "sample.md"),
+  "utf8"
+);
 
-    const clause = new Clause(template);
-    clause.parse(testLatePenaltyInput);
+const clause = new Clause(template);
+clause.parse(testLatePenaltyInput);
 
-    // get the JSON object created from the parse
-    const data = clause.getData();
-```
-
-OR - create a contract and set the data from a JSON object.
-
-```js
-    const clause = new Clause(template);
-    clause.setData( {$class: 'org.acme.MyTemplateModel', 'foo': 42 } );
+// get the JSON object created from the parse
+const data = clause.getData();
 ```
 
 ## Executing a Template Instance
@@ -59,27 +62,28 @@ Once you have instantiated a clause or contract instance, you can execute it.
 
 ### Import the Engine class
 
-To execute a Clause you first need to create an instance of the ``Engine`` class:
+To execute a Clause you first need to create an instance of the `Engine` class:
 
 ```js
-const Engine = require('@accordproject/cicero-engine').Engine;
+const engine = new Engine();
 ```
 
 ### Send a request to the contract
 
-You can then call ``execute`` on it, passing in the clause or contract instance, and the request:
+You can then call `execute` on it, passing in the clause or contract instance, and the request:
 
 ```js
-    const request = {
-        '$class': 'org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest',
-        'forceMajeure': false,
-        'agreedDelivery': '2017-10-07T16:38:01.412Z',
-        'goodsValue': 200,
-        'transactionId': '402c8f50-9e61-433e-a7c1-afe61c06ef00',
-        'timestamp': '2017-11-12T17:38:01.412Z'
-    };
-    const state = {};
-    state.$class = 'org.accordproject.cicero.contract.AccordContractState';
-    state.stateId = 'org.accordproject.cicero.contract.AccordContractState#1';
-    const result = await engine.execute(clause, request, state);
+const request = {
+  $class:
+    "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest",
+  forceMajeure: false,
+  agreedDelivery: "2017-10-07T16:38:01.412Z",
+  goodsValue: 200,
+};
+const state = {
+  $class: "org.accordproject.runtime.State",
+};
+
+const result = await engine.trigger(clause, request, state);
+console.log(result);
 ```
