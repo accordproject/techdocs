@@ -1,6 +1,7 @@
 ---
-id: tutorial-nodejs
+id: version-0.22-tutorial-nodejs
 title: With Node.js
+original_id: tutorial-nodejs
 ---
 
 ## Cicero Node.js API
