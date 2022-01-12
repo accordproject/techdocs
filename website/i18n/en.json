@@ -86,6 +86,9 @@
       "model-relationships": {
         "title": "Relationships"
       },
+      "model-vocabulary": {
+        "title": "Vocabulary"
+      },
       "ref-cicero-api": {
         "title": "Cicero API"
       },
