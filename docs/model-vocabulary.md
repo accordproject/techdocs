@@ -7,7 +7,7 @@ The Vocabulary module for Concerto optionally allows human-readable labels (Term
 
 For example, a Concerto model that defines an enumeration with the values `RED`, `GREEN`, `BLUE` can be associated with an English vocabulary with the terms "Red", "Green", "Blue" and a French Vocabulary with terms "Rouge", "Vert", "Bleue".
 
-The VocabularyManager class manages access to a set of Vocabulary files, and includes logic to retrieve the most appropriate term for a requested locale.
+The `VocabularyManager` class manages access to a set of Vocabulary files, and includes logic to retrieve the most appropriate term for a requested locale.
 
 ### Example Model
 
