@@ -89,6 +89,72 @@ declarations:
 
 As you can see in the vocabularies above, a vocabulary can supplement or override terms from a base vocabulary, as is the case of the `en-gb` vocabulary which redefines and adds terms specific to British English over the generic English `en` vocabulary.
 
-> Vocabularies may define additional terms, or may be missing terms, for the declarations and properties in their associated namespace. Use the `VocabularyManager.validate` method to detect missing or additional terms. Note that allowing vocabularies to evolve independently of their associated namespace provides definition and translation workflow flexibility.
+## API Usage
 
-Please refer to the reference API for the `concerto-vocabulary` module for detailed API guidance.
+Use the `VocabularyManager` classs to define new vocabularies, retrieve terms for a locale, or to validate
+a vocabulary using a `ModelManager`.
+
+### Adding a Vocabulary
+
+Load the YAML file for the Vocabulary and add it to a `VocabularyManager`:
+
+```
+vocabularyManager = new VocabularyManager();
+const enVocString = fs.readFileSync('./test/org.acme_en.voc', 'utf-8');
+vocabularyManager.addVocabulary(enVocString);
+```
+
+### Retrieving a Term
+
+Use the `getTerm` method on the `VocabularyManager` to retrieve a term for
+a declaration or property within a namespace:
+
+
+```
+const term = vocabularyManager.getTerm('org.acme', 'en-gb', 'Color');
+// term.should.equal('A colour');
+```
+
+```
+const term = vocabularyManager.getTerm('org.acme', 'en-gb', 'Vehicle', 'vin');
+// term.should.equal('Vehicle Identification Number');
+```
+
+### Resolve a Term using ModelManager Type Hierarchy
+
+The `resolveTerm` method on the `VocabularyManager` may be used to lookup a term
+based on the type hierarchy defined by a `ModelManager`. In the example below, the property
+`vin` is not defined on the `Truck` declaration but rather on the `Vehicle` super-type.
+
+```
+modelManager = new ModelManager();
+const model = fs.readFileSync('./test/org.acme.cto', 'utf-8');
+modelManager.addModelFile(model);
+const term = vocabularyManager.resolveTerm(modelManager, 'org.acme', 'en-gb', 'Truck', 'vin');
+// term.should.equal('Vehicle Identification Number');
+```
+
+### Validating a Vocabulary Manager
+
+Use the `validate` method on the `VocabularyManager` to detect missing and redudant vocabulary 
+terms — comparing the terms in the `VocabularyManager` with the declarations in a `ModelManager`.
+The return value from `validate` is an object containing information for the missing and additional terms. 
+
+> Note that allowing vocabularies to evolve independently of their associated namespace provides definition and translation workflow flexibility.
+
+```
+const result = vocabularyManager.validate(modelManager);
+// result.missingVocabularies.length.should.equal(1);
+// result.missingVocabularies[0].should.equal('org.accordproject');
+// result.additionalVocabularies.length.should.equal(1);
+// result.additionalVocabularies[0].getNamespace().should.equal('com.example');
+// result.vocabularies['org.acme/en'].additionalTerms.should.have.members(['Vehicle.model']);
+// result.vocabularies['org.acme/en'].missingTerms.should.have.members(['Color.RED', 'Color.BLUE', 'Color.GREEN', 'Vehicle.color']);
+// result.vocabularies['org.acme/en-gb'].additionalTerms.should.have.members(['Milkfloat']);
+// result.vocabularies['org.acme/fr'].missingTerms.should.have.members(['Color', 'Vehicle.color', 'Truck']);
+// result.vocabularies['org.acme/fr'].additionalTerms.should.have.members([]);
+// result.vocabularies['org.acme/zh-cn'].missingTerms.should.have.members(['Truck']);
+// result.vocabularies['org.acme/zh-cn'].additionalTerms.should.have.members([]);
+```
+
+Please refer to the [reference API](ref-concerto-api) for the `concerto-vocabulary` module for detailed API guidance.
