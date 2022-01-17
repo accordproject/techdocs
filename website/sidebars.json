@@ -11,7 +11,7 @@
             {
                 "type": "subcategory",
                 "label": "Concerto Model",
-                "ids": ["model-concerto", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators", "model-api"]
+                "ids": ["model-concerto", "model-vocabulary", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators", "model-api"]
             },
             {
                 "type": "subcategory",

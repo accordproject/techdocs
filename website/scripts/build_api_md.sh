@@ -26,10 +26,10 @@ git clone https://github.com/accordproject/ergo.git
 ./website/node_modules/.bin/jsdoc2md --template ./website/scripts/ergo-api.hbs -c ./website/scripts/ergo-jsdoc.conf --files ./ergo/packages/**/lib/*.js > ./docs/ref-ergo-api.md
 rm -rf ergo
 
-## Build the Concerto API
+## Build the Concerto Core API
 git clone https://github.com/accordproject/concerto.git
-./website/node_modules/.bin/jsdoc2md -c ./website/scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/{*,lib/*,lib/**/*}.js > ./docs/ref-concerto-api.md
-./website/node_modules/.bin/jsdoc2md --template ./website/scripts/concerto-api.hbs -c ./website/scripts/concerto-jsdoc.conf --files ./concerto/packages/concerto-core/{*,lib/*,lib/**/*}.js > ./docs/ref-concerto-api.md
+./website/node_modules/.bin/jsdoc2md -c ./website/scripts/concerto-jsdoc.conf --files ./concerto/**/*.js > ./docs/ref-concerto-api.md
+./website/node_modules/.bin/jsdoc2md --template ./website/scripts/concerto-api.hbs -c ./website/scripts/concerto-jsdoc.conf --files ./concerto/**/*.js > ./docs/ref-concerto-api.md
 rm -rf concerto
 
 cd ./website

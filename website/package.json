@@ -18,8 +18,10 @@
   "dependencies": {
     "axios": "^0.21.2",
     "docusaurus": "^1.14.7",
-    "jsdoc-to-markdown": "^5.0.3",
     "qs": "^6.9.6",
     "remarkable-admonitions": "^0.2.2"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^7.1.0"
   }
 }
