@@ -32,7 +32,7 @@ The template in an Accord Project Contract is pure legal text that can be drafte
 
 As a lawyer, contributing to the Accord Project would be a great opportunity to learn about smart legal contracts. Through the Accord Project, you can understand the foundations of open source technologies and learn how to develop smart agreements.
 
-If your organization wants to become a member of the Accord Project, please [join our community](https://www.accordproject.org/membership).
+If your organization wants to become a member of the Accord Project, please [join our community](https://discord.com/invite/Zm99SKhhtA).
 
 ### For Developers
 
@@ -40,7 +40,7 @@ The Accord Project provides a universal format for smart legal contracts, and th
 
 The Accord Project is developing tools including a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), [React based web components](https://github.com/accordproject/web-components) and a command line interface for working with Accord Project Contracts. You can integrate contracts into existing applications, create new applications or simply assist lawyers with developing applications with the Ergo language. 
 
-There is a welcoming community on Slack that is eager to help. [Join our Community](https://www.accordproject.org/membership/)
+There is a welcoming community on Discord that is eager to help. [Join our Community](https://discord.com/invite/Zm99SKhhtA)
 
 
 ## About this documentation
