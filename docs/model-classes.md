@@ -80,7 +80,7 @@ Transactions are typically used in models for the identifiable business events o
 
 ## Events
 
-Events are similar to participants in that they are also class declarations that have a single `String` property acting as an identifier. You can use the `modelManager.getEventDeclarations` API to look up all transactions.
+Events are similar to participants in that they are also class declarations that have a single `String` property acting as an identifier. You can use the `modelManager.getEventDeclarations` API to look up all events.
 
 ```js
 event LateDelivery identified by eventId {
