@@ -39,9 +39,17 @@ The example below validates that a `String` variable starts with `abc`:
 `Double`, `Long` or `Integer` fields may include an optional range expression, which is used to validate the contents of the field. Both the lower and upper bound are optional, however at least one must be specified. The upper bound must be greater than or equal to the lower bound.
 
 ```
-  o Integer intLowerUpper range=[-1,1] // greater than or equal to -1 and less than 1
+  o Integer intLowerUpper range=[-1,1] // greater than or equal to -1 and less than or equal to 1
   o Integer intLower range=[-1,] // greater than or equal to -1
-  o Integer intUpper range=[,1] // less than 1
+  o Integer intUpper range=[,1] // less than or equal to 1
+
+  o Long longLowerUpper range=[-1,1] // greater than or equal to -1 and less than or equal to 1
+  o Long longLower range=[-1,] // greater than or equal to -1
+  o Long longUpper range=[,1] // less than or equal to 1
+
+  o Double doubleLowerUpper range=[-1.0,1.0] // greater than or equal to -1 and less than or equal to 1
+  o Double doubleLower range=[-1.0,] // greater than or equal to -1
+  o Double doubleUpper range=[,1.0] // less than or equal to 1
 ```
 
 #### Example
