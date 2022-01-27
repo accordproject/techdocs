@@ -37,6 +37,7 @@ jobs:
       - name: NPM Build
         if: github.ref == 'refs/heads/master'
         run: |
+          cd ./website
           pwd
           npm run build
 
