@@ -44,4 +44,4 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
-          SOURCE_DIR: 'build'
+          SOURCE_DIR: 'website/build/techdocs'
