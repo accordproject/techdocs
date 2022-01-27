@@ -31,11 +31,14 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: |
           cd ./website
+          pwd
           npm install
 
       - name: NPM Build
         if: github.ref == 'refs/heads/master'
-        run: npm run build
+        run: |
+          pwd
+          npm run build
 
       - name: Set S3 
         if: github.ref == 'refs/heads/master'
