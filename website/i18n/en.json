@@ -659,6 +659,9 @@
       "version-0.22/version-0.22-tutorial-library": {
         "title": "Template Library"
       },
+      "version-0.22/version-0.22-tutorial-nodejs": {
+        "title": "With Node.js"
+      },
       "version-0.22/version-0.22-tutorial-studio": {
         "title": "With Template Studio"
       },

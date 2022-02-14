@@ -43,9 +43,9 @@ class Invite extends React.Component {
         <Container className="mainContainer documentContainer postContainer">
           <div className="post">
             <header className="postHeader">
-              <h2>Join the Accord Project Slack Community</h2>
+              <h2>Join the Accord Project Discord Community</h2>
             </header>
-            <p>Please complete the form below to receive an email to join the Accord Project Slack community.</p>
+            <p>Please complete the form below to receive an email to join the Accord Project Discord community.</p>
             <form action="https://docs.accordproject.org/.netlify/functions/invite" method="POST">
               <label for="fname">First name:</label>
               <input type="text" id="fname" name="fname"/>

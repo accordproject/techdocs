@@ -8,7 +8,7 @@ title: Resources
 - The Main Web site includes latest news, links to working groups, organizational announcements, etc. : https://www.accordproject.org
 - This Technical Documentation: https://docs.accordproject.org
 - Recording of Working Group discussions, Tutorial Videos are available on Vimeo: https://vimeo.com/accordproject
-- Join the [Accord Project Slack](https://accord-project-slack-signup.herokuapp.com) to get involved!
+- Join the [Accord Project Discord](https://discord.gg/Zm99SKhhtA) to get involved!
 
 ## User Content
 
@@ -37,7 +37,7 @@ Accord Project is also developing tools to help with authoring, testing and runn
 
 All the Accord Project technology is being developed as open source. The software packages are being actively maintained on [GitHub](https://github.com/accordproject) and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
 
-Join us on the [#technology-wg Slack channel](https://accord-project-slack-signup.herokuapp.com) for technical discussions and weekly updates.
+Join us on the [#technology-wg Discord channel](https://discord.gg/Zm99SKhhtA) for technical discussions and weekly updates.
 
 ### Cicero
 
