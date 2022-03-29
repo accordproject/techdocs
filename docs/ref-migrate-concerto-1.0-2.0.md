@@ -5,7 +5,7 @@ title: Concerto 1.0 to 2.0
 
 Concerto `2.0` delivers fundamental improvements over previous releases, whilst maintaining a high-degree (though not total!) of backwards compatibility with `1.x`. In particular all of the `1.x` Concerto syntax remains valid in `2.0`.
 
-The release includes over 75 commits, and over 400 files changed. Thank you to all the contributors!
+> The release includes over 75 commits, and over 400 files changed. Thank you to all the contributors!
 
 :::note
 We are currently in the process of migrating the Accord Project stack to Concero v2.0. While the migration is underway you may see some components that still depend upon Concerto v1.x.
