@@ -14,6 +14,10 @@ specific models.</p>
 <dd><p>Concerto CTO concrete syntax module. Concerto is a framework for defining domain
 specific models.</p>
 </dd>
+<dt><a href="#module_concerto-metamodel">concerto-metamodel</a></dt>
+<dd><p>Concerto metamodel management. Concerto is a framework for defining domain
+specific models.</p>
+</dd>
 <dt><a href="#module_concerto-tools">concerto-tools</a></dt>
 <dd><p>Concerto Tools module.</p>
 </dd>
@@ -30,9 +34,6 @@ specific models.</p>
 ## Classes
 
 <dl>
-<dt><a href="#MetaModel">MetaModel</a></dt>
-<dd><p>Class to work with the Concerto metamodel</p>
-</dd>
 <dt><a href="#AbstractPlugin">AbstractPlugin</a></dt>
 <dd><p>Simple plug-in class for code-generation. This lists functions that can be passed to extend the default code-generation behavior.</p>
 </dd>
@@ -44,6 +45,11 @@ specific models.</p>
 ## Constants
 
 <dl>
+<dt><a href="#rootModelAst">rootModelAst</a> : <code>unknown</code></dt>
+<dd></dd>
+<dt><a href="#metaModelAst">metaModelAst</a> : <code>unknown</code></dt>
+<dd><p>The metamodel itself, as an AST.</p>
+</dd>
 <dt><a href="#metaModelCto">metaModelCto</a></dt>
 <dd><p>The metamodel itself, as a CTO string</p>
 </dd>
@@ -61,12 +67,31 @@ specific models.</p>
 <dt><a href="#setCurrentTime">setCurrentTime([currentTime], [utcOffset])</a> ⇒ <code>object</code></dt>
 <dd><p>Ensures there is a proper current time</p>
 </dd>
+<dt><a href="#newMetaModelManager">newMetaModelManager()</a> ⇒ <code>*</code></dt>
+<dd><p>Create a metamodel manager (for validation against the metamodel)</p>
+</dd>
+<dt><a href="#validateMetaModel">validateMetaModel(input)</a> ⇒ <code>object</code></dt>
+<dd><p>Validate metamodel instance against the metamodel</p>
+</dd>
+<dt><a href="#modelManagerFromMetaModel">modelManagerFromMetaModel(metaModel, [validate])</a> ⇒ <code>object</code></dt>
+<dd><p>Import metamodel to a model manager</p>
+</dd>
 <dt><a href="#randomNumberInRangeWithPrecision">randomNumberInRangeWithPrecision(userMin, userMax, precision, systemMin, systemMax)</a> ⇒ <code>number</code></dt>
 <dd><p>Generate a random number within a given range with
 a prescribed precision and inside a global range</p>
 </dd>
+<dt><a href="#updateModels">updateModels(models, newModel)</a> ⇒ <code>*</code></dt>
+<dd><p>Update models with a new model</p>
+</dd>
+<dt><a href="#resolveExternal">resolveExternal(models, [options], [fileDownloader])</a> ⇒ <code>Promise</code></dt>
+<dd><p>Downloads all ModelFiles that are external dependencies and adds or
+updates them in this ModelManager.</p>
+</dd>
 <dt><a href="#parse">parse(cto, [fileName])</a> ⇒ <code>object</code></dt>
 <dd><p>Create decorator argument string from a metamodel</p>
+</dd>
+<dt><a href="#parseModels">parseModels(files)</a> ⇒ <code>*</code></dt>
+<dd><p>Parses an array of model files</p>
 </dd>
 <dt><a href="#decoratorArgFromMetaModel">decoratorArgFromMetaModel(mm)</a> ⇒ <code>string</code></dt>
 <dd><p>Create decorator argument string from a metamodel</p>
@@ -85,6 +110,27 @@ a prescribed precision and inside a global range</p>
 </dd>
 <dt><a href="#toCTO">toCTO(metaModel)</a> ⇒ <code>string</code></dt>
 <dd><p>Create a model string from a metamodel</p>
+</dd>
+<dt><a href="#findNamespace">findNamespace(priorModels, namespace)</a> ⇒ <code>*</code></dt>
+<dd><p>Find the model for a given namespace</p>
+</dd>
+<dt><a href="#findDeclaration">findDeclaration(thisModel, name)</a> ⇒ <code>*</code></dt>
+<dd><p>Find a declaration for a given name in a model</p>
+</dd>
+<dt><a href="#createNameTable">createNameTable(priorModels, metaModel)</a> ⇒ <code>object</code></dt>
+<dd><p>Create a name resolution table</p>
+</dd>
+<dt><a href="#resolveName">resolveName(name, table)</a> ⇒ <code>string</code></dt>
+<dd><p>Resolve a name using the name table</p>
+</dd>
+<dt><a href="#resolveTypeNames">resolveTypeNames(metaModel, table)</a> ⇒ <code>object</code></dt>
+<dd><p>Name resolution for metamodel</p>
+</dd>
+<dt><a href="#resolveLocalNames">resolveLocalNames(priorModels, metaModel)</a> ⇒ <code>object</code></dt>
+<dd><p>Resolve the namespace for names in the metamodel</p>
+</dd>
+<dt><a href="#resolveLocalNamesForAll">resolveLocalNamesForAll(allModels)</a> ⇒ <code>object</code></dt>
+<dd><p>Resolve the namespace for names in the metamodel</p>
 </dd>
 <dt><a href="#inferModelFile">inferModelFile(defaultNamespace, defaultType, schema)</a> ⇒ <code>string</code></dt>
 <dd><p>Infers a Concerto model from a JSON Schema.</p>
@@ -134,6 +180,15 @@ a prescribed precision and inside a global range</p>
 <dt><a href="#inferModel">inferModel(namespace, rootTypeName, input)</a> ⇒ <code>string</code></dt>
 <dd><p>Infers a Concerto model from a JSON instance.</p>
 </dd>
+<dt><a href="#labelToSentence">labelToSentence(labelName)</a> ⇒ <code>string</code></dt>
+<dd><p>Inserts correct spacing and capitalization to a camelCase label</p>
+</dd>
+<dt><a href="#sentenceToLabel">sentenceToLabel(sentence)</a> ⇒ <code>string</code></dt>
+<dd><p>Create a camelCase label from a sentence</p>
+</dd>
+<dt><a href="#writeModelsToFileSystem">writeModelsToFileSystem(files, path, options)</a></dt>
+<dd><p>Writes a set of model files to disk</p>
+</dd>
 <dt><a href="#camelCaseToSentence">camelCaseToSentence(text)</a> ⇒ <code>string</code></dt>
 <dd><p>Converts a camel case string to a sentence</p>
 </dd>
@@ -147,198 +202,679 @@ specific models.
 
 
 * [concerto-core](#module_concerto-core)
-    * [.Concerto](#module_concerto-core.Concerto)
-        * [new Concerto(modelManager)](#new_module_concerto-core.Concerto_new)
-        * [.validate(obj, [options])](#module_concerto-core.Concerto+validate)
-        * [.getModelManager()](#module_concerto-core.Concerto+getModelManager) ⇒ <code>\*</code>
-        * [.isObject(obj)](#module_concerto-core.Concerto+isObject) ⇒ <code>boolean</code>
-        * [.getTypeDeclaration(obj)](#module_concerto-core.Concerto+getTypeDeclaration) ⇒ <code>\*</code>
-        * [.getIdentifier(obj)](#module_concerto-core.Concerto+getIdentifier) ⇒ <code>string</code>
-        * [.isIdentifiable(obj)](#module_concerto-core.Concerto+isIdentifiable) ⇒ <code>boolean</code>
-        * [.isRelationship(obj)](#module_concerto-core.Concerto+isRelationship) ⇒ <code>boolean</code>
-        * [.setIdentifier(obj, id)](#module_concerto-core.Concerto+setIdentifier) ⇒ <code>\*</code>
-        * [.getFullyQualifiedIdentifier(obj)](#module_concerto-core.Concerto+getFullyQualifiedIdentifier) ⇒ <code>string</code>
-        * [.toURI(obj)](#module_concerto-core.Concerto+toURI) ⇒ <code>string</code>
-        * [.fromURI(uri)](#module_concerto-core.Concerto+fromURI) ⇒ <code>\*</code>
-        * [.getType(obj)](#module_concerto-core.Concerto+getType) ⇒ <code>string</code>
-        * [.getNamespace(obj)](#module_concerto-core.Concerto+getNamespace) ⇒ <code>string</code>
-    * [.Factory](#module_concerto-core.Factory)
-        * [new Factory(modelManager)](#new_module_concerto-core.Factory_new)
-        * _instance_
-            * [.newResource(ns, type, [id], [options])](#module_concerto-core.Factory+newResource) ⇒ <code>Resource</code>
-            * [.newConcept(ns, type, [id], [options])](#module_concerto-core.Factory+newConcept) ⇒ <code>Resource</code>
-            * [.newRelationship(ns, type, id)](#module_concerto-core.Factory+newRelationship) ⇒ <code>Relationship</code>
-            * [.newTransaction(ns, type, [id], [options])](#module_concerto-core.Factory+newTransaction) ⇒ <code>Resource</code>
-            * [.newEvent(ns, type, [id], [options])](#module_concerto-core.Factory+newEvent) ⇒ <code>Resource</code>
-        * _static_
-            * [.newId()](#module_concerto-core.Factory.newId) ⇒ <code>string</code>
-    * [.AssetDeclaration](#module_concerto-core.AssetDeclaration) ⇐ <code>ClassDeclaration</code>
-        * [new AssetDeclaration(modelFile, ast)](#new_module_concerto-core.AssetDeclaration_new)
-    * *[.ClassDeclaration](#module_concerto-core.ClassDeclaration)*
-        * *[new ClassDeclaration(modelFile, ast)](#new_module_concerto-core.ClassDeclaration_new)*
-        * *[._resolveSuperType()](#module_concerto-core.ClassDeclaration+_resolveSuperType) ⇒ <code>ClassDeclaration</code>*
-        * *[.isAbstract()](#module_concerto-core.ClassDeclaration+isAbstract) ⇒ <code>boolean</code>*
-        * *[.getName()](#module_concerto-core.ClassDeclaration+getName) ⇒ <code>string</code>*
-        * *[.getNamespace()](#module_concerto-core.ClassDeclaration+getNamespace) ⇒ <code>string</code>*
-        * *[.getFullyQualifiedName()](#module_concerto-core.ClassDeclaration+getFullyQualifiedName) ⇒ <code>string</code>*
-        * *[.isIdentified()](#module_concerto-core.ClassDeclaration+isIdentified) ⇒ <code>Boolean</code>*
-        * *[.isSystemIdentified()](#module_concerto-core.ClassDeclaration+isSystemIdentified) ⇒ <code>Boolean</code>*
-        * *[.isExplicitlyIdentified()](#module_concerto-core.ClassDeclaration+isExplicitlyIdentified) ⇒ <code>Boolean</code>*
-        * *[.getIdentifierFieldName()](#module_concerto-core.ClassDeclaration+getIdentifierFieldName) ⇒ <code>string</code>*
-        * *[.getOwnProperty(name)](#module_concerto-core.ClassDeclaration+getOwnProperty) ⇒ <code>Property</code>*
-        * *[.getOwnProperties()](#module_concerto-core.ClassDeclaration+getOwnProperties) ⇒ <code>Array.&lt;Property&gt;</code>*
-        * *[.getSuperType()](#module_concerto-core.ClassDeclaration+getSuperType) ⇒ <code>string</code>*
-        * *[.getSuperTypeDeclaration()](#module_concerto-core.ClassDeclaration+getSuperTypeDeclaration) ⇒ <code>ClassDeclaration</code>*
-        * *[.getAssignableClassDeclarations()](#module_concerto-core.ClassDeclaration+getAssignableClassDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>*
-        * *[.getAllSuperTypeDeclarations()](#module_concerto-core.ClassDeclaration+getAllSuperTypeDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>*
-        * *[.getProperty(name)](#module_concerto-core.ClassDeclaration+getProperty) ⇒ <code>Property</code>*
-        * *[.getProperties()](#module_concerto-core.ClassDeclaration+getProperties) ⇒ <code>Array.&lt;Property&gt;</code>*
-        * *[.getNestedProperty(propertyPath)](#module_concerto-core.ClassDeclaration+getNestedProperty) ⇒ <code>Property</code>*
-        * *[.toString()](#module_concerto-core.ClassDeclaration+toString) ⇒ <code>String</code>*
-        * *[.isAsset()](#module_concerto-core.ClassDeclaration+isAsset) ⇒ <code>boolean</code>*
-        * *[.isParticipant()](#module_concerto-core.ClassDeclaration+isParticipant) ⇒ <code>boolean</code>*
-        * *[.isTransaction()](#module_concerto-core.ClassDeclaration+isTransaction) ⇒ <code>boolean</code>*
-        * *[.isEvent()](#module_concerto-core.ClassDeclaration+isEvent) ⇒ <code>boolean</code>*
-        * *[.isConcept()](#module_concerto-core.ClassDeclaration+isConcept) ⇒ <code>boolean</code>*
-        * *[.isEnum()](#module_concerto-core.ClassDeclaration+isEnum) ⇒ <code>boolean</code>*
-        * *[.isClassDeclaration()](#module_concerto-core.ClassDeclaration+isClassDeclaration) ⇒ <code>boolean</code>*
-    * [.ConceptDeclaration](#module_concerto-core.ConceptDeclaration) ⇐ <code>ClassDeclaration</code>
-        * [new ConceptDeclaration(modelFile, ast)](#new_module_concerto-core.ConceptDeclaration_new)
-    * [.Decorator](#module_concerto-core.Decorator)
-        * [new Decorator(parent, ast)](#new_module_concerto-core.Decorator_new)
-        * [.getParent()](#module_concerto-core.Decorator+getParent) ⇒ <code>ClassDeclaration</code> \| <code>Property</code>
-        * [.getName()](#module_concerto-core.Decorator+getName) ⇒ <code>string</code>
-        * [.getArguments()](#module_concerto-core.Decorator+getArguments) ⇒ <code>Array.&lt;object&gt;</code>
-    * [.DecoratorFactory](#module_concerto-core.DecoratorFactory)
-        * *[.newDecorator(parent, ast)](#module_concerto-core.DecoratorFactory+newDecorator) ⇒ <code>Decorator</code>*
-    * [.EnumDeclaration](#module_concerto-core.EnumDeclaration) ⇐ <code>ClassDeclaration</code>
-        * [new EnumDeclaration(modelFile, ast)](#new_module_concerto-core.EnumDeclaration_new)
-        * [.toString()](#module_concerto-core.EnumDeclaration+toString) ⇒ <code>String</code>
-    * [.EnumValueDeclaration](#module_concerto-core.EnumValueDeclaration) ⇐ <code>Property</code>
-        * [new EnumValueDeclaration(parent, ast)](#new_module_concerto-core.EnumValueDeclaration_new)
-        * [.isEnumValue()](#module_concerto-core.EnumValueDeclaration+isEnumValue) ⇒ <code>boolean</code>
-    * [.EventDeclaration](#module_concerto-core.EventDeclaration) ⇐ <code>ClassDeclaration</code>
-        * [new EventDeclaration(modelFile, ast)](#new_module_concerto-core.EventDeclaration_new)
-    * *[.IdentifiedDeclaration](#module_concerto-core.IdentifiedDeclaration) ⇐ <code>ClassDeclaration</code>*
-        * *[new IdentifiedDeclaration(modelFile, ast)](#new_module_concerto-core.IdentifiedDeclaration_new)*
-    * [.IllegalModelException](#module_concerto-core.IllegalModelException) ⇐ <code>BaseFileException</code>
-        * [new IllegalModelException(message, [modelFile], [fileLocation], [component])](#new_module_concerto-core.IllegalModelException_new)
-    * [.Introspector](#module_concerto-core.Introspector)
-        * [new Introspector(modelManager)](#new_module_concerto-core.Introspector_new)
-        * [.getClassDeclarations()](#module_concerto-core.Introspector+getClassDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
-        * [.getClassDeclaration(fullyQualifiedTypeName)](#module_concerto-core.Introspector+getClassDeclaration) ⇒ <code>ClassDeclaration</code>
-    * [.ModelFile](#module_concerto-core.ModelFile)
-        * [new ModelFile(modelManager, ast, [definitions], [fileName])](#new_module_concerto-core.ModelFile_new)
-        * [.isModelFile()](#module_concerto-core.ModelFile+isModelFile) ⇒ <code>boolean</code>
-        * [.isSystemModelFile()](#module_concerto-core.ModelFile+isSystemModelFile) ⇒ <code>Boolean</code>
-        * [.isExternal()](#module_concerto-core.ModelFile+isExternal) ⇒ <code>boolean</code>
-        * [.getModelManager()](#module_concerto-core.ModelFile+getModelManager) ⇒ <code>ModelManager</code>
-        * [.getImports()](#module_concerto-core.ModelFile+getImports) ⇒ <code>Array.&lt;string&gt;</code>
-        * [.isDefined(type)](#module_concerto-core.ModelFile+isDefined) ⇒ <code>boolean</code>
-        * [.getLocalType(type)](#module_concerto-core.ModelFile+getLocalType) ⇒ <code>ClassDeclaration</code>
-        * [.getAssetDeclaration(name)](#module_concerto-core.ModelFile+getAssetDeclaration) ⇒ <code>AssetDeclaration</code>
-        * [.getTransactionDeclaration(name)](#module_concerto-core.ModelFile+getTransactionDeclaration) ⇒ <code>TransactionDeclaration</code>
-        * [.getEventDeclaration(name)](#module_concerto-core.ModelFile+getEventDeclaration) ⇒ <code>EventDeclaration</code>
-        * [.getParticipantDeclaration(name)](#module_concerto-core.ModelFile+getParticipantDeclaration) ⇒ <code>ParticipantDeclaration</code>
-        * [.getNamespace()](#module_concerto-core.ModelFile+getNamespace) ⇒ <code>string</code>
-        * [.getName()](#module_concerto-core.ModelFile+getName) ⇒ <code>string</code>
-        * [.getAssetDeclarations()](#module_concerto-core.ModelFile+getAssetDeclarations) ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
-        * [.getTransactionDeclarations()](#module_concerto-core.ModelFile+getTransactionDeclarations) ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
-        * [.getEventDeclarations()](#module_concerto-core.ModelFile+getEventDeclarations) ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
-        * [.getParticipantDeclarations()](#module_concerto-core.ModelFile+getParticipantDeclarations) ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
-        * [.getConceptDeclarations()](#module_concerto-core.ModelFile+getConceptDeclarations) ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
-        * [.getEnumDeclarations()](#module_concerto-core.ModelFile+getEnumDeclarations) ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
-        * [.getDeclarations(type)](#module_concerto-core.ModelFile+getDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
-        * [.getAllDeclarations()](#module_concerto-core.ModelFile+getAllDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
-        * [.getDefinitions()](#module_concerto-core.ModelFile+getDefinitions) ⇒ <code>string</code>
-        * [.getAst()](#module_concerto-core.ModelFile+getAst) ⇒ <code>object</code>
-        * [.getConcertoVersion()](#module_concerto-core.ModelFile+getConcertoVersion) ⇒ <code>string</code>
-        * [.isCompatibleVersion()](#module_concerto-core.ModelFile+isCompatibleVersion)
-    * [.ParticipantDeclaration](#module_concerto-core.ParticipantDeclaration) ⇐ <code>ClassDeclaration</code>
-        * [new ParticipantDeclaration(modelFile, ast)](#new_module_concerto-core.ParticipantDeclaration_new)
-    * [.Property](#module_concerto-core.Property)
-        * [new Property(parent, ast)](#new_module_concerto-core.Property_new)
-        * [.getParent()](#module_concerto-core.Property+getParent) ⇒ <code>ClassDeclaration</code>
-        * [.getName()](#module_concerto-core.Property+getName) ⇒ <code>string</code>
-        * [.getType()](#module_concerto-core.Property+getType) ⇒ <code>string</code>
-        * [.isOptional()](#module_concerto-core.Property+isOptional) ⇒ <code>boolean</code>
-        * [.getFullyQualifiedTypeName()](#module_concerto-core.Property+getFullyQualifiedTypeName) ⇒ <code>string</code>
-        * [.getFullyQualifiedName()](#module_concerto-core.Property+getFullyQualifiedName) ⇒ <code>string</code>
-        * [.getNamespace()](#module_concerto-core.Property+getNamespace) ⇒ <code>string</code>
-        * [.isArray()](#module_concerto-core.Property+isArray) ⇒ <code>boolean</code>
-        * [.isTypeEnum()](#module_concerto-core.Property+isTypeEnum) ⇒ <code>boolean</code>
-        * [.isPrimitive()](#module_concerto-core.Property+isPrimitive) ⇒ <code>boolean</code>
-    * [.RelationshipDeclaration](#module_concerto-core.RelationshipDeclaration) ⇐ <code>Property</code>
-        * [new RelationshipDeclaration(parent, ast)](#new_module_concerto-core.RelationshipDeclaration_new)
-        * [.toString()](#module_concerto-core.RelationshipDeclaration+toString) ⇒ <code>String</code>
-        * [.isRelationship()](#module_concerto-core.RelationshipDeclaration+isRelationship) ⇒ <code>boolean</code>
-    * [.TransactionDeclaration](#module_concerto-core.TransactionDeclaration) ⇐ <code>ClassDeclaration</code>
-        * [new TransactionDeclaration(modelFile, ast)](#new_module_concerto-core.TransactionDeclaration_new)
-    * [.Resource](#module_concerto-core.Resource) ⇐ <code>Identifiable</code>
-        * [new Resource(modelManager, classDeclaration, ns, type, id, timestamp)](#new_module_concerto-core.Resource_new)
-        * [.toString()](#module_concerto-core.Resource+toString) ⇒ <code>String</code>
-        * [.isResource()](#module_concerto-core.Resource+isResource) ⇒ <code>boolean</code>
-        * [.isConcept()](#module_concerto-core.Resource+isConcept) ⇒ <code>boolean</code>
-        * [.isIdentifiable()](#module_concerto-core.Resource+isIdentifiable) ⇒ <code>boolean</code>
-        * [.toJSON()](#module_concerto-core.Resource+toJSON) ⇒ <code>Object</code>
-    * [.ModelLoader](#module_concerto-core.ModelLoader)
-        * [.loadModelManager(ctoFiles, options)](#module_concerto-core.ModelLoader.loadModelManager) ⇒ <code>object</code>
-        * [.loadModelManagerFromModelFiles(modelFiles, [fileNames], options)](#module_concerto-core.ModelLoader.loadModelManagerFromModelFiles) ⇒ <code>object</code>
-    * [.ModelManager](#module_concerto-core.ModelManager)
-        * [new ModelManager([options])](#new_module_concerto-core.ModelManager_new)
-        * [.isModelManager()](#module_concerto-core.ModelManager+isModelManager) ⇒ <code>boolean</code>
-        * [.accept(visitor, parameters)](#module_concerto-core.ModelManager+accept) ⇒ <code>Object</code>
-        * [.validateModelFile(modelFile, [fileName])](#module_concerto-core.ModelManager+validateModelFile)
-        * [.addModelFile(modelFile, fileName, [disableValidation])](#module_concerto-core.ModelManager+addModelFile) ⇒ <code>Object</code>
-        * [.updateModelFile(modelFile, [fileName], [disableValidation])](#module_concerto-core.ModelManager+updateModelFile) ⇒ <code>Object</code>
-        * [.deleteModelFile(namespace)](#module_concerto-core.ModelManager+deleteModelFile)
-        * [.addModelFiles(modelFiles, [fileNames], [disableValidation])](#module_concerto-core.ModelManager+addModelFiles) ⇒ <code>Array.&lt;Object&gt;</code>
-        * [.validateModelFiles()](#module_concerto-core.ModelManager+validateModelFiles)
-        * [.updateExternalModels([options], [fileDownloader])](#module_concerto-core.ModelManager+updateExternalModels) ⇒ <code>Promise</code>
-        * [.writeModelsToFileSystem(path, [options])](#module_concerto-core.ModelManager+writeModelsToFileSystem)
-        * [.getModels([options])](#module_concerto-core.ModelManager+getModels) ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>
-        * [.clearModelFiles()](#module_concerto-core.ModelManager+clearModelFiles)
-        * [.getModelFile(namespace)](#module_concerto-core.ModelManager+getModelFile) ⇒ <code>ModelFile</code>
-        * [.getNamespaces()](#module_concerto-core.ModelManager+getNamespaces) ⇒ <code>Array.&lt;string&gt;</code>
-        * [.getType(qualifiedName)](#module_concerto-core.ModelManager+getType) ⇒ <code>ClassDeclaration</code>
-        * [.getAssetDeclarations()](#module_concerto-core.ModelManager+getAssetDeclarations) ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
-        * [.getTransactionDeclarations()](#module_concerto-core.ModelManager+getTransactionDeclarations) ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
-        * [.getEventDeclarations()](#module_concerto-core.ModelManager+getEventDeclarations) ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
-        * [.getParticipantDeclarations()](#module_concerto-core.ModelManager+getParticipantDeclarations) ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
-        * [.getEnumDeclarations()](#module_concerto-core.ModelManager+getEnumDeclarations) ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
-        * [.getConceptDeclarations()](#module_concerto-core.ModelManager+getConceptDeclarations) ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
-        * [.getFactory()](#module_concerto-core.ModelManager+getFactory) ⇒ <code>Factory</code>
-        * [.getSerializer()](#module_concerto-core.ModelManager+getSerializer) ⇒ <code>Serializer</code>
-        * [.getDecoratorFactories()](#module_concerto-core.ModelManager+getDecoratorFactories) ⇒ <code>Array.&lt;DecoratorFactory&gt;</code>
-        * [.addDecoratorFactory(factory)](#module_concerto-core.ModelManager+addDecoratorFactory)
-        * [.derivesFrom(fqt1, fqt2)](#module_concerto-core.ModelManager+derivesFrom) ⇒ <code>boolean</code>
-    * [.SecurityException](#module_concerto-core.SecurityException) ⇐ <code>BaseException</code>
-        * [new SecurityException(message)](#new_module_concerto-core.SecurityException_new)
-    * [.Serializer](#module_concerto-core.Serializer)
-        * [new Serializer(factory, modelManager, [options])](#new_module_concerto-core.Serializer_new)
-        * [.setDefaultOptions(newDefaultOptions)](#module_concerto-core.Serializer+setDefaultOptions)
-        * [.toJSON(resource, [options])](#module_concerto-core.Serializer+toJSON) ⇒ <code>Object</code>
-        * [.fromJSON(jsonObject, [options])](#module_concerto-core.Serializer+fromJSON) ⇒ <code>Resource</code>
-    * [.TypeNotFoundException](#module_concerto-core.TypeNotFoundException) ⇐ <code>BaseException</code>
-        * [new TypeNotFoundException(typeName, [message], component)](#new_module_concerto-core.TypeNotFoundException_new)
-        * [.getTypeName()](#module_concerto-core.TypeNotFoundException+getTypeName) ⇒ <code>string</code>
-    * [.BaseException](#module_concerto-core.BaseException) ⇐ <code>Error</code>
-        * [new BaseException(message, component)](#new_module_concerto-core.BaseException_new)
-    * [.BaseFileException](#module_concerto-core.BaseFileException) ⇐ <code>BaseException</code>
-        * [new BaseFileException(message, fileLocation, fullMessage, [fileName], [component])](#new_module_concerto-core.BaseFileException_new)
-        * [.getFileLocation()](#module_concerto-core.BaseFileException+getFileLocation) ⇒ <code>string</code>
-        * [.getShortMessage()](#module_concerto-core.BaseFileException+getShortMessage) ⇒ <code>string</code>
-        * [.getFileName()](#module_concerto-core.BaseFileException+getFileName) ⇒ <code>string</code>
-    * [.FileDownloader](#module_concerto-core.FileDownloader)
-        * [new FileDownloader(fileLoader, getExternalImports, concurrency)](#new_module_concerto-core.FileDownloader_new)
-        * [.downloadExternalDependencies(files, [options])](#module_concerto-core.FileDownloader+downloadExternalDependencies) ⇒ <code>Promise</code>
-        * [.runJob(job, fileLoader)](#module_concerto-core.FileDownloader+runJob) ⇒ <code>Promise</code>
-    * [.TypedStack](#module_concerto-core.TypedStack)
-        * [new TypedStack(resource)](#new_module_concerto-core.TypedStack_new)
-        * [.push(obj, expectedType)](#module_concerto-core.TypedStack+push)
-        * [.pop(expectedType)](#module_concerto-core.TypedStack+pop) ⇒ <code>Object</code>
-        * [.peek(expectedType)](#module_concerto-core.TypedStack+peek) ⇒ <code>Object</code>
-        * [.clear()](#module_concerto-core.TypedStack+clear)
+    * _static_
+        * [.AstModelManager](#module_concerto-core.AstModelManager)
+            * [new AstModelManager([options])](#new_module_concerto-core.AstModelManager_new)
+        * [.BaseModelManager](#module_concerto-core.BaseModelManager)
+            * [new BaseModelManager([options], [processFile])](#new_module_concerto-core.BaseModelManager_new)
+            * [.isModelManager()](#module_concerto-core.BaseModelManager+isModelManager) ⇒ <code>boolean</code>
+            * [.accept(visitor, parameters)](#module_concerto-core.BaseModelManager+accept) ⇒ <code>Object</code>
+            * [.validateModelFile(modelFile, [fileName])](#module_concerto-core.BaseModelManager+validateModelFile)
+            * [.addModelFile(modelFile, [cto], [fileName], [disableValidation])](#module_concerto-core.BaseModelManager+addModelFile) ⇒ <code>Object</code>
+            * [.addModel(modelInput, [cto], [fileName], [disableValidation])](#module_concerto-core.BaseModelManager+addModel) ⇒ <code>Object</code>
+            * [.updateModelFile(modelFile, [fileName], [disableValidation])](#module_concerto-core.BaseModelManager+updateModelFile) ⇒ <code>Object</code>
+            * [.deleteModelFile(namespace)](#module_concerto-core.BaseModelManager+deleteModelFile)
+            * [.addModelFiles(modelFiles, [fileNames], [disableValidation])](#module_concerto-core.BaseModelManager+addModelFiles) ⇒ <code>Array.&lt;Object&gt;</code>
+            * [.validateModelFiles()](#module_concerto-core.BaseModelManager+validateModelFiles)
+            * [.updateExternalModels([options], [fileDownloader])](#module_concerto-core.BaseModelManager+updateExternalModels) ⇒ <code>Promise</code>
+            * [.writeModelsToFileSystem(path, [options])](#module_concerto-core.BaseModelManager+writeModelsToFileSystem)
+            * [.getModels([options])](#module_concerto-core.BaseModelManager+getModels) ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>
+            * [.clearModelFiles()](#module_concerto-core.BaseModelManager+clearModelFiles)
+            * [.getModelFile(namespace)](#module_concerto-core.BaseModelManager+getModelFile) ⇒ <code>ModelFile</code>
+            * [.getNamespaces()](#module_concerto-core.BaseModelManager+getNamespaces) ⇒ <code>Array.&lt;string&gt;</code>
+            * [.getType(qualifiedName)](#module_concerto-core.BaseModelManager+getType) ⇒ <code>ClassDeclaration</code>
+            * [.getAssetDeclarations()](#module_concerto-core.BaseModelManager+getAssetDeclarations) ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
+            * [.getTransactionDeclarations()](#module_concerto-core.BaseModelManager+getTransactionDeclarations) ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
+            * [.getEventDeclarations()](#module_concerto-core.BaseModelManager+getEventDeclarations) ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
+            * [.getParticipantDeclarations()](#module_concerto-core.BaseModelManager+getParticipantDeclarations) ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
+            * [.getEnumDeclarations()](#module_concerto-core.BaseModelManager+getEnumDeclarations) ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
+            * [.getConceptDeclarations()](#module_concerto-core.BaseModelManager+getConceptDeclarations) ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
+            * [.getFactory()](#module_concerto-core.BaseModelManager+getFactory) ⇒ <code>Factory</code>
+            * [.getSerializer()](#module_concerto-core.BaseModelManager+getSerializer) ⇒ <code>Serializer</code>
+            * [.getDecoratorFactories()](#module_concerto-core.BaseModelManager+getDecoratorFactories) ⇒ <code>Array.&lt;DecoratorFactory&gt;</code>
+            * [.addDecoratorFactory(factory)](#module_concerto-core.BaseModelManager+addDecoratorFactory)
+            * [.derivesFrom(fqt1, fqt2)](#module_concerto-core.BaseModelManager+derivesFrom) ⇒ <code>boolean</code>
+            * [.resolveMetaModel(metaModel)](#module_concerto-core.BaseModelManager+resolveMetaModel) ⇒ <code>object</code>
+            * [.fromAst(ast)](#module_concerto-core.BaseModelManager+fromAst)
+            * [.getAst([resolve])](#module_concerto-core.BaseModelManager+getAst) ⇒ <code>\*</code>
+        * [.Concerto](#module_concerto-core.Concerto)
+            * [new Concerto(modelManager)](#new_module_concerto-core.Concerto_new)
+            * [.validate(obj, [options])](#module_concerto-core.Concerto+validate)
+            * [.getModelManager()](#module_concerto-core.Concerto+getModelManager) ⇒ <code>\*</code>
+            * [.isObject(obj)](#module_concerto-core.Concerto+isObject) ⇒ <code>boolean</code>
+            * [.getTypeDeclaration(obj)](#module_concerto-core.Concerto+getTypeDeclaration) ⇒ <code>\*</code>
+            * [.getIdentifier(obj)](#module_concerto-core.Concerto+getIdentifier) ⇒ <code>string</code>
+            * [.isIdentifiable(obj)](#module_concerto-core.Concerto+isIdentifiable) ⇒ <code>boolean</code>
+            * [.isRelationship(obj)](#module_concerto-core.Concerto+isRelationship) ⇒ <code>boolean</code>
+            * [.setIdentifier(obj, id)](#module_concerto-core.Concerto+setIdentifier) ⇒ <code>\*</code>
+            * [.getFullyQualifiedIdentifier(obj)](#module_concerto-core.Concerto+getFullyQualifiedIdentifier) ⇒ <code>string</code>
+            * [.toURI(obj)](#module_concerto-core.Concerto+toURI) ⇒ <code>string</code>
+            * [.fromURI(uri)](#module_concerto-core.Concerto+fromURI) ⇒ <code>\*</code>
+            * [.getType(obj)](#module_concerto-core.Concerto+getType) ⇒ <code>string</code>
+            * [.getNamespace(obj)](#module_concerto-core.Concerto+getNamespace) ⇒ <code>string</code>
+        * [.DecoratorManager](#module_concerto-core.DecoratorManager)
+            * [.decorateModels(modelManager, decoratorCommandSet)](#module_concerto-core.DecoratorManager.decorateModels) ⇒ <code>ModelManager</code>
+            * [.falsyOrEqual(test, value)](#module_concerto-core.DecoratorManager.falsyOrEqual) ⇒ <code>Boolean</code>
+            * [.applyDecorator(decorated, type, newDecorator)](#module_concerto-core.DecoratorManager.applyDecorator)
+            * [.executeCommand(namespace, declaration, command)](#module_concerto-core.DecoratorManager.executeCommand)
+        * [.Factory](#module_concerto-core.Factory)
+            * [new Factory(modelManager)](#new_module_concerto-core.Factory_new)
+            * _instance_
+                * [.newResource(ns, type, [id], [options])](#module_concerto-core.Factory+newResource) ⇒ <code>Resource</code>
+                * [.newConcept(ns, type, [id], [options])](#module_concerto-core.Factory+newConcept) ⇒ <code>Resource</code>
+                * [.newRelationship(ns, type, id)](#module_concerto-core.Factory+newRelationship) ⇒ <code>Relationship</code>
+                * [.newTransaction(ns, type, [id], [options])](#module_concerto-core.Factory+newTransaction) ⇒ <code>Resource</code>
+                * [.newEvent(ns, type, [id], [options])](#module_concerto-core.Factory+newEvent) ⇒ <code>Resource</code>
+            * _static_
+                * [.newId()](#module_concerto-core.Factory.newId) ⇒ <code>string</code>
+        * [.AssetDeclaration](#module_concerto-core.AssetDeclaration) ⇐ <code>ClassDeclaration</code>
+            * [new AssetDeclaration(modelFile, ast)](#new_module_concerto-core.AssetDeclaration_new)
+            * [.declarationKind()](#module_concerto-core.AssetDeclaration+declarationKind) ⇒ <code>string</code>
+        * *[.ClassDeclaration](#module_concerto-core.ClassDeclaration)*
+            * *[new ClassDeclaration(modelFile, ast)](#new_module_concerto-core.ClassDeclaration_new)*
+            * *[._resolveSuperType()](#module_concerto-core.ClassDeclaration+_resolveSuperType) ⇒ <code>ClassDeclaration</code>*
+            * *[.validate()](#module_concerto-core.ClassDeclaration+validate)*
+            * *[.isAbstract()](#module_concerto-core.ClassDeclaration+isAbstract) ⇒ <code>boolean</code>*
+            * *[.getName()](#module_concerto-core.ClassDeclaration+getName) ⇒ <code>string</code>*
+            * *[.getNamespace()](#module_concerto-core.ClassDeclaration+getNamespace) ⇒ <code>string</code>*
+            * *[.getFullyQualifiedName()](#module_concerto-core.ClassDeclaration+getFullyQualifiedName) ⇒ <code>string</code>*
+            * *[.isIdentified()](#module_concerto-core.ClassDeclaration+isIdentified) ⇒ <code>Boolean</code>*
+            * *[.isSystemIdentified()](#module_concerto-core.ClassDeclaration+isSystemIdentified) ⇒ <code>Boolean</code>*
+            * *[.isExplicitlyIdentified()](#module_concerto-core.ClassDeclaration+isExplicitlyIdentified) ⇒ <code>Boolean</code>*
+            * *[.getIdentifierFieldName()](#module_concerto-core.ClassDeclaration+getIdentifierFieldName) ⇒ <code>string</code>*
+            * *[.getOwnProperty(name)](#module_concerto-core.ClassDeclaration+getOwnProperty) ⇒ <code>Property</code>*
+            * *[.getOwnProperties()](#module_concerto-core.ClassDeclaration+getOwnProperties) ⇒ <code>Array.&lt;Property&gt;</code>*
+            * *[.getSuperType()](#module_concerto-core.ClassDeclaration+getSuperType) ⇒ <code>string</code>*
+            * *[.getSuperTypeDeclaration()](#module_concerto-core.ClassDeclaration+getSuperTypeDeclaration) ⇒ <code>ClassDeclaration</code>*
+            * *[.getAssignableClassDeclarations()](#module_concerto-core.ClassDeclaration+getAssignableClassDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>*
+            * *[.getAllSuperTypeDeclarations()](#module_concerto-core.ClassDeclaration+getAllSuperTypeDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>*
+            * *[.getProperty(name)](#module_concerto-core.ClassDeclaration+getProperty) ⇒ <code>Property</code>*
+            * *[.getProperties()](#module_concerto-core.ClassDeclaration+getProperties) ⇒ <code>Array.&lt;Property&gt;</code>*
+            * *[.getNestedProperty(propertyPath)](#module_concerto-core.ClassDeclaration+getNestedProperty) ⇒ <code>Property</code>*
+            * *[.toString()](#module_concerto-core.ClassDeclaration+toString) ⇒ <code>String</code>*
+            * *[.isAsset()](#module_concerto-core.ClassDeclaration+isAsset) ⇒ <code>boolean</code>*
+            * *[.isParticipant()](#module_concerto-core.ClassDeclaration+isParticipant) ⇒ <code>boolean</code>*
+            * *[.isTransaction()](#module_concerto-core.ClassDeclaration+isTransaction) ⇒ <code>boolean</code>*
+            * *[.isEvent()](#module_concerto-core.ClassDeclaration+isEvent) ⇒ <code>boolean</code>*
+            * *[.isConcept()](#module_concerto-core.ClassDeclaration+isConcept) ⇒ <code>boolean</code>*
+            * *[.isEnum()](#module_concerto-core.ClassDeclaration+isEnum) ⇒ <code>boolean</code>*
+            * *[.isClassDeclaration()](#module_concerto-core.ClassDeclaration+isClassDeclaration) ⇒ <code>boolean</code>*
+        * [.ConceptDeclaration](#module_concerto-core.ConceptDeclaration) ⇐ <code>ClassDeclaration</code>
+            * [new ConceptDeclaration(modelFile, ast)](#new_module_concerto-core.ConceptDeclaration_new)
+            * [.declarationKind()](#module_concerto-core.ConceptDeclaration+declarationKind) ⇒ <code>string</code>
+        * [.Decorator](#module_concerto-core.Decorator)
+            * [new Decorator(parent, ast)](#new_module_concerto-core.Decorator_new)
+            * [.getParent()](#module_concerto-core.Decorator+getParent) ⇒ <code>ClassDeclaration</code> \| <code>Property</code>
+            * [.getName()](#module_concerto-core.Decorator+getName) ⇒ <code>string</code>
+            * [.getArguments()](#module_concerto-core.Decorator+getArguments) ⇒ <code>Array.&lt;object&gt;</code>
+        * [.DecoratorFactory](#module_concerto-core.DecoratorFactory)
+            * *[.newDecorator(parent, ast)](#module_concerto-core.DecoratorFactory+newDecorator) ⇒ <code>Decorator</code>*
+        * [.EnumDeclaration](#module_concerto-core.EnumDeclaration) ⇐ <code>ClassDeclaration</code>
+            * [new EnumDeclaration(modelFile, ast)](#new_module_concerto-core.EnumDeclaration_new)
+            * [.toString()](#module_concerto-core.EnumDeclaration+toString) ⇒ <code>String</code>
+            * [.declarationKind()](#module_concerto-core.EnumDeclaration+declarationKind) ⇒ <code>string</code>
+        * [.EnumValueDeclaration](#module_concerto-core.EnumValueDeclaration) ⇐ <code>Property</code>
+            * [new EnumValueDeclaration(parent, ast)](#new_module_concerto-core.EnumValueDeclaration_new)
+            * [.isEnumValue()](#module_concerto-core.EnumValueDeclaration+isEnumValue) ⇒ <code>boolean</code>
+        * [.EventDeclaration](#module_concerto-core.EventDeclaration) ⇐ <code>ClassDeclaration</code>
+            * [new EventDeclaration(modelFile, ast)](#new_module_concerto-core.EventDeclaration_new)
+            * [.declarationKind()](#module_concerto-core.EventDeclaration+declarationKind) ⇒ <code>string</code>
+        * *[.IdentifiedDeclaration](#module_concerto-core.IdentifiedDeclaration) ⇐ <code>ClassDeclaration</code>*
+            * *[new IdentifiedDeclaration(modelFile, ast)](#new_module_concerto-core.IdentifiedDeclaration_new)*
+        * [.IllegalModelException](#module_concerto-core.IllegalModelException) ⇐ <code>BaseFileException</code>
+            * [new IllegalModelException(message, [modelFile], [fileLocation], [component])](#new_module_concerto-core.IllegalModelException_new)
+        * [.Introspector](#module_concerto-core.Introspector)
+            * [new Introspector(modelManager)](#new_module_concerto-core.Introspector_new)
+            * [.getClassDeclarations()](#module_concerto-core.Introspector+getClassDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
+            * [.getClassDeclaration(fullyQualifiedTypeName)](#module_concerto-core.Introspector+getClassDeclaration) ⇒ <code>ClassDeclaration</code>
+        * [.ModelFile](#module_concerto-core.ModelFile)
+            * [new ModelFile(modelManager, ast, [definitions], [fileName])](#new_module_concerto-core.ModelFile_new)
+            * [.isModelFile()](#module_concerto-core.ModelFile+isModelFile) ⇒ <code>boolean</code>
+            * [.isSystemModelFile()](#module_concerto-core.ModelFile+isSystemModelFile) ⇒ <code>Boolean</code>
+            * [.isExternal()](#module_concerto-core.ModelFile+isExternal) ⇒ <code>boolean</code>
+            * [.getModelManager()](#module_concerto-core.ModelFile+getModelManager) ⇒ <code>ModelManager</code>
+            * [.getImports()](#module_concerto-core.ModelFile+getImports) ⇒ <code>Array.&lt;string&gt;</code>
+            * [.isDefined(type)](#module_concerto-core.ModelFile+isDefined) ⇒ <code>boolean</code>
+            * [.getLocalType(type)](#module_concerto-core.ModelFile+getLocalType) ⇒ <code>ClassDeclaration</code>
+            * [.getAssetDeclaration(name)](#module_concerto-core.ModelFile+getAssetDeclaration) ⇒ <code>AssetDeclaration</code>
+            * [.getTransactionDeclaration(name)](#module_concerto-core.ModelFile+getTransactionDeclaration) ⇒ <code>TransactionDeclaration</code>
+            * [.getEventDeclaration(name)](#module_concerto-core.ModelFile+getEventDeclaration) ⇒ <code>EventDeclaration</code>
+            * [.getParticipantDeclaration(name)](#module_concerto-core.ModelFile+getParticipantDeclaration) ⇒ <code>ParticipantDeclaration</code>
+            * [.getNamespace()](#module_concerto-core.ModelFile+getNamespace) ⇒ <code>string</code>
+            * [.getName()](#module_concerto-core.ModelFile+getName) ⇒ <code>string</code>
+            * [.getAssetDeclarations()](#module_concerto-core.ModelFile+getAssetDeclarations) ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
+            * [.getTransactionDeclarations()](#module_concerto-core.ModelFile+getTransactionDeclarations) ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
+            * [.getEventDeclarations()](#module_concerto-core.ModelFile+getEventDeclarations) ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
+            * [.getParticipantDeclarations()](#module_concerto-core.ModelFile+getParticipantDeclarations) ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
+            * [.getConceptDeclarations()](#module_concerto-core.ModelFile+getConceptDeclarations) ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
+            * [.getEnumDeclarations()](#module_concerto-core.ModelFile+getEnumDeclarations) ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
+            * [.getDeclarations(type)](#module_concerto-core.ModelFile+getDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
+            * [.getAllDeclarations()](#module_concerto-core.ModelFile+getAllDeclarations) ⇒ <code>Array.&lt;ClassDeclaration&gt;</code>
+            * [.getDefinitions()](#module_concerto-core.ModelFile+getDefinitions) ⇒ <code>string</code>
+            * [.getAst()](#module_concerto-core.ModelFile+getAst) ⇒ <code>object</code>
+            * [.getConcertoVersion()](#module_concerto-core.ModelFile+getConcertoVersion) ⇒ <code>string</code>
+            * [.isCompatibleVersion()](#module_concerto-core.ModelFile+isCompatibleVersion)
+        * [.ParticipantDeclaration](#module_concerto-core.ParticipantDeclaration) ⇐ <code>ClassDeclaration</code>
+            * [new ParticipantDeclaration(modelFile, ast)](#new_module_concerto-core.ParticipantDeclaration_new)
+            * [.declarationKind()](#module_concerto-core.ParticipantDeclaration+declarationKind) ⇒ <code>string</code>
+        * [.Property](#module_concerto-core.Property)
+            * [new Property(parent, ast)](#new_module_concerto-core.Property_new)
+            * [.getParent()](#module_concerto-core.Property+getParent) ⇒ <code>ClassDeclaration</code>
+            * [.validate(classDecl)](#module_concerto-core.Property+validate)
+            * [.getName()](#module_concerto-core.Property+getName) ⇒ <code>string</code>
+            * [.getType()](#module_concerto-core.Property+getType) ⇒ <code>string</code>
+            * [.isOptional()](#module_concerto-core.Property+isOptional) ⇒ <code>boolean</code>
+            * [.getFullyQualifiedTypeName()](#module_concerto-core.Property+getFullyQualifiedTypeName) ⇒ <code>string</code>
+            * [.getFullyQualifiedName()](#module_concerto-core.Property+getFullyQualifiedName) ⇒ <code>string</code>
+            * [.getNamespace()](#module_concerto-core.Property+getNamespace) ⇒ <code>string</code>
+            * [.isArray()](#module_concerto-core.Property+isArray) ⇒ <code>boolean</code>
+            * [.isTypeEnum()](#module_concerto-core.Property+isTypeEnum) ⇒ <code>boolean</code>
+            * [.isPrimitive()](#module_concerto-core.Property+isPrimitive) ⇒ <code>boolean</code>
+        * [.RelationshipDeclaration](#module_concerto-core.RelationshipDeclaration) ⇐ <code>Property</code>
+            * [new RelationshipDeclaration(parent, ast)](#new_module_concerto-core.RelationshipDeclaration_new)
+            * [.validate(classDecl)](#module_concerto-core.RelationshipDeclaration+validate)
+            * [.toString()](#module_concerto-core.RelationshipDeclaration+toString) ⇒ <code>String</code>
+            * [.isRelationship()](#module_concerto-core.RelationshipDeclaration+isRelationship) ⇒ <code>boolean</code>
+        * [.TransactionDeclaration](#module_concerto-core.TransactionDeclaration) ⇐ <code>ClassDeclaration</code>
+            * [new TransactionDeclaration(modelFile, ast)](#new_module_concerto-core.TransactionDeclaration_new)
+            * [.declarationKind()](#module_concerto-core.TransactionDeclaration+declarationKind) ⇒ <code>string</code>
+        * *[.Identifiable](#module_concerto-core.Identifiable) ⇐ <code>Typed</code>*
+            * *[new Identifiable(modelManager, classDeclaration, ns, type, id, timestamp)](#new_module_concerto-core.Identifiable_new)*
+            * *[.getTimestamp()](#module_concerto-core.Identifiable+getTimestamp) ⇒ <code>string</code>*
+            * *[.getIdentifier()](#module_concerto-core.Identifiable+getIdentifier) ⇒ <code>string</code>*
+            * *[.setIdentifier(id)](#module_concerto-core.Identifiable+setIdentifier)*
+            * *[.getFullyQualifiedIdentifier()](#module_concerto-core.Identifiable+getFullyQualifiedIdentifier) ⇒ <code>string</code>*
+            * *[.toString()](#module_concerto-core.Identifiable+toString) ⇒ <code>String</code>*
+            * *[.isRelationship()](#module_concerto-core.Identifiable+isRelationship) ⇒ <code>boolean</code>*
+            * *[.isResource()](#module_concerto-core.Identifiable+isResource) ⇒ <code>boolean</code>*
+            * *[.toURI()](#module_concerto-core.Identifiable+toURI) ⇒ <code>String</code>*
+        * [.Resource](#module_concerto-core.Resource) ⇐ <code>Identifiable</code>
+            * [new Resource(modelManager, classDeclaration, ns, type, id, timestamp)](#new_module_concerto-core.Resource_new)
+            * [.toString()](#module_concerto-core.Resource+toString) ⇒ <code>String</code>
+            * [.isResource()](#module_concerto-core.Resource+isResource) ⇒ <code>boolean</code>
+            * [.isConcept()](#module_concerto-core.Resource+isConcept) ⇒ <code>boolean</code>
+            * [.isIdentifiable()](#module_concerto-core.Resource+isIdentifiable) ⇒ <code>boolean</code>
+            * [.toJSON()](#module_concerto-core.Resource+toJSON) ⇒ <code>Object</code>
+        * *[.Typed](#module_concerto-core.Typed)*
+            * *[new Typed(modelManager, classDeclaration, ns, type)](#new_module_concerto-core.Typed_new)*
+            * *[.getType()](#module_concerto-core.Typed+getType) ⇒ <code>string</code>*
+            * *[.getFullyQualifiedType()](#module_concerto-core.Typed+getFullyQualifiedType) ⇒ <code>string</code>*
+            * *[.getNamespace()](#module_concerto-core.Typed+getNamespace) ⇒ <code>string</code>*
+            * *[.setPropertyValue(propName, value)](#module_concerto-core.Typed+setPropertyValue)*
+            * *[.addArrayValue(propName, value)](#module_concerto-core.Typed+addArrayValue)*
+            * *[.instanceOf(fqt)](#module_concerto-core.Typed+instanceOf) ⇒ <code>boolean</code>*
+            * *[.toJSON()](#module_concerto-core.Typed+toJSON)*
+        * [.ModelLoader](#module_concerto-core.ModelLoader)
+            * [.loadModelManager(ctoFiles, options)](#module_concerto-core.ModelLoader.loadModelManager) ⇒ <code>object</code>
+            * [.loadModelManagerFromModelFiles(modelFiles, [fileNames], options)](#module_concerto-core.ModelLoader.loadModelManagerFromModelFiles) ⇒ <code>object</code>
+        * [.ModelManager](#module_concerto-core.ModelManager)
+            * [new ModelManager([options])](#new_module_concerto-core.ModelManager_new)
+            * [.addCTOModel(cto, [fileName], [disableValidation])](#module_concerto-core.ModelManager+addCTOModel) ⇒ <code>Object</code>
+        * [.SecurityException](#module_concerto-core.SecurityException) ⇐ <code>BaseException</code>
+            * [new SecurityException(message)](#new_module_concerto-core.SecurityException_new)
+        * [.Serializer](#module_concerto-core.Serializer)
+            * [new Serializer(factory, modelManager, [options])](#new_module_concerto-core.Serializer_new)
+            * [.setDefaultOptions(newDefaultOptions)](#module_concerto-core.Serializer+setDefaultOptions)
+            * [.toJSON(resource, [options])](#module_concerto-core.Serializer+toJSON) ⇒ <code>Object</code>
+            * [.fromJSON(jsonObject, [options])](#module_concerto-core.Serializer+fromJSON) ⇒ <code>Resource</code>
+        * [.TypeNotFoundException](#module_concerto-core.TypeNotFoundException) ⇐ <code>BaseException</code>
+            * [new TypeNotFoundException(typeName, message, component)](#new_module_concerto-core.TypeNotFoundException_new)
+            * [.getTypeName()](#module_concerto-core.TypeNotFoundException+getTypeName) ⇒ <code>string</code>
+        * [.BaseException](#module_concerto-core.BaseException) ⇐ <code>Error</code>
+            * [new BaseException(message, component)](#new_module_concerto-core.BaseException_new)
+        * [.BaseFileException](#module_concerto-core.BaseFileException) ⇐ <code>BaseException</code>
+            * [new BaseFileException(message, fileLocation, fullMessage, [fileName], [component])](#new_module_concerto-core.BaseFileException_new)
+            * [.getFileLocation()](#module_concerto-core.BaseFileException+getFileLocation) ⇒ <code>string</code>
+            * [.getShortMessage()](#module_concerto-core.BaseFileException+getShortMessage) ⇒ <code>string</code>
+            * [.getFileName()](#module_concerto-core.BaseFileException+getFileName) ⇒ <code>string</code>
+        * [.FileDownloader](#module_concerto-core.FileDownloader)
+            * [new FileDownloader(fileLoader, getExternalImports, concurrency)](#new_module_concerto-core.FileDownloader_new)
+            * [.downloadExternalDependencies(files, [options])](#module_concerto-core.FileDownloader+downloadExternalDependencies) ⇒ <code>Promise</code>
+            * [.runJob(job, fileLoader)](#module_concerto-core.FileDownloader+runJob) ⇒ <code>Promise</code>
+        * [.TypedStack](#module_concerto-core.TypedStack)
+            * [new TypedStack(resource)](#new_module_concerto-core.TypedStack_new)
+            * [.push(obj, expectedType)](#module_concerto-core.TypedStack+push)
+            * [.pop(expectedType)](#module_concerto-core.TypedStack+pop) ⇒ <code>Object</code>
+            * [.peek(expectedType)](#module_concerto-core.TypedStack+peek) ⇒ <code>Object</code>
+            * [.clear()](#module_concerto-core.TypedStack+clear)
+    * _inner_
+        * [~version](#module_concerto-core..version) : <code>Object</code>
+
+<a name="module_concerto-core.AstModelManager"></a>
+
+### concerto-core.AstModelManager
+Manages the Concerto model files in AST format.
+
+The structure of [Resource](Resource)s (Assets, Transactions, Participants) is modelled
+in a set of Concerto files. The contents of these files are managed
+by the [ModelManager](ModelManager). Each Concerto file has a single namespace and contains
+a set of asset, transaction and participant type definitions.
+
+Concerto applications load their Concerto files and then call the [addModelFile](ModelManager#addModelFile)
+method to register the Concerto file(s) with the ModelManager.
+
+**Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
+<a name="new_module_concerto-core.AstModelManager_new"></a>
+
+#### new AstModelManager([options])
+Create the ModelManager.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [options] | <code>object</code> | Serializer options |
+
+<a name="module_concerto-core.BaseModelManager"></a>
+
+### concerto-core.BaseModelManager
+Manages the Concerto model files.
+
+The structure of [Resource](Resource)s (Assets, Transactions, Participants) is modelled
+in a set of Concerto files. The contents of these files are managed
+by the [ModelManager](ModelManager). Each Concerto file has a single namespace and contains
+a set of asset, transaction and participant type definitions.
+
+Concerto applications load their Concerto files and then call the [addModelFile](ModelManager#addModelFile)
+method to register the Concerto file(s) with the ModelManager.
+
+Use the [Concerto](Concerto) class to validate instances.
+
+**Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
+
+* [.BaseModelManager](#module_concerto-core.BaseModelManager)
+    * [new BaseModelManager([options], [processFile])](#new_module_concerto-core.BaseModelManager_new)
+    * [.isModelManager()](#module_concerto-core.BaseModelManager+isModelManager) ⇒ <code>boolean</code>
+    * [.accept(visitor, parameters)](#module_concerto-core.BaseModelManager+accept) ⇒ <code>Object</code>
+    * [.validateModelFile(modelFile, [fileName])](#module_concerto-core.BaseModelManager+validateModelFile)
+    * [.addModelFile(modelFile, [cto], [fileName], [disableValidation])](#module_concerto-core.BaseModelManager+addModelFile) ⇒ <code>Object</code>
+    * [.addModel(modelInput, [cto], [fileName], [disableValidation])](#module_concerto-core.BaseModelManager+addModel) ⇒ <code>Object</code>
+    * [.updateModelFile(modelFile, [fileName], [disableValidation])](#module_concerto-core.BaseModelManager+updateModelFile) ⇒ <code>Object</code>
+    * [.deleteModelFile(namespace)](#module_concerto-core.BaseModelManager+deleteModelFile)
+    * [.addModelFiles(modelFiles, [fileNames], [disableValidation])](#module_concerto-core.BaseModelManager+addModelFiles) ⇒ <code>Array.&lt;Object&gt;</code>
+    * [.validateModelFiles()](#module_concerto-core.BaseModelManager+validateModelFiles)
+    * [.updateExternalModels([options], [fileDownloader])](#module_concerto-core.BaseModelManager+updateExternalModels) ⇒ <code>Promise</code>
+    * [.writeModelsToFileSystem(path, [options])](#module_concerto-core.BaseModelManager+writeModelsToFileSystem)
+    * [.getModels([options])](#module_concerto-core.BaseModelManager+getModels) ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>
+    * [.clearModelFiles()](#module_concerto-core.BaseModelManager+clearModelFiles)
+    * [.getModelFile(namespace)](#module_concerto-core.BaseModelManager+getModelFile) ⇒ <code>ModelFile</code>
+    * [.getNamespaces()](#module_concerto-core.BaseModelManager+getNamespaces) ⇒ <code>Array.&lt;string&gt;</code>
+    * [.getType(qualifiedName)](#module_concerto-core.BaseModelManager+getType) ⇒ <code>ClassDeclaration</code>
+    * [.getAssetDeclarations()](#module_concerto-core.BaseModelManager+getAssetDeclarations) ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
+    * [.getTransactionDeclarations()](#module_concerto-core.BaseModelManager+getTransactionDeclarations) ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
+    * [.getEventDeclarations()](#module_concerto-core.BaseModelManager+getEventDeclarations) ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
+    * [.getParticipantDeclarations()](#module_concerto-core.BaseModelManager+getParticipantDeclarations) ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
+    * [.getEnumDeclarations()](#module_concerto-core.BaseModelManager+getEnumDeclarations) ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
+    * [.getConceptDeclarations()](#module_concerto-core.BaseModelManager+getConceptDeclarations) ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
+    * [.getFactory()](#module_concerto-core.BaseModelManager+getFactory) ⇒ <code>Factory</code>
+    * [.getSerializer()](#module_concerto-core.BaseModelManager+getSerializer) ⇒ <code>Serializer</code>
+    * [.getDecoratorFactories()](#module_concerto-core.BaseModelManager+getDecoratorFactories) ⇒ <code>Array.&lt;DecoratorFactory&gt;</code>
+    * [.addDecoratorFactory(factory)](#module_concerto-core.BaseModelManager+addDecoratorFactory)
+    * [.derivesFrom(fqt1, fqt2)](#module_concerto-core.BaseModelManager+derivesFrom) ⇒ <code>boolean</code>
+    * [.resolveMetaModel(metaModel)](#module_concerto-core.BaseModelManager+resolveMetaModel) ⇒ <code>object</code>
+    * [.fromAst(ast)](#module_concerto-core.BaseModelManager+fromAst)
+    * [.getAst([resolve])](#module_concerto-core.BaseModelManager+getAst) ⇒ <code>\*</code>
+
+<a name="new_module_concerto-core.BaseModelManager_new"></a>
+
+#### new BaseModelManager([options], [processFile])
+Create the ModelManager.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [options] | <code>object</code> | Serializer options |
+| [processFile] | <code>\*</code> | how to obtain a concerto AST from an input to the model manager |
+
+<a name="module_concerto-core.BaseModelManager+isModelManager"></a>
+
+#### baseModelManager.isModelManager() ⇒ <code>boolean</code>
+Returns true
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>boolean</code> - true  
+<a name="module_concerto-core.BaseModelManager+accept"></a>
+
+#### baseModelManager.accept(visitor, parameters) ⇒ <code>Object</code>
+Visitor design pattern
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Object</code> - the result of visiting or null  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| visitor | <code>Object</code> | the visitor |
+| parameters | <code>Object</code> | the parameter |
+
+<a name="module_concerto-core.BaseModelManager+validateModelFile"></a>
+
+#### baseModelManager.validateModelFile(modelFile, [fileName])
+Validates a Concerto file (as a string) to the ModelManager.
+Concerto files have a single namespace.
+
+Note that if there are dependencies between multiple files the files
+must be added in dependency order, or the addModelFiles method can be
+used to add a set of files irrespective of dependencies.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Throws**:
+
+- <code>IllegalModelException</code> 
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelFile | <code>string</code> \| <code>ModelFile</code> | The Concerto file as a string |
+| [fileName] | <code>string</code> | a file name to associate with the model file |
+
+<a name="module_concerto-core.BaseModelManager+addModelFile"></a>
+
+#### baseModelManager.addModelFile(modelFile, [cto], [fileName], [disableValidation]) ⇒ <code>Object</code>
+Adds a Concerto file (as an AST) to the ModelManager.
+Concerto files have a single namespace. If a Concerto file with the
+same namespace has already been added to the ModelManager then it
+will be replaced.
+Note that if there are dependencies between multiple files the files
+must be added in dependency order, or the addModelFiles method can be
+used to add a set of files irrespective of dependencies.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Object</code> - The newly added model file (internal).  
+**Throws**:
+
+- <code>IllegalModelException</code> 
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelFile | <code>ModelFile</code> | Model as a ModelFile object |
+| [cto] | <code>string</code> | an optional cto string |
+| [fileName] | <code>string</code> | an optional file name to associate with the model file |
+| [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
+
+<a name="module_concerto-core.BaseModelManager+addModel"></a>
+
+#### baseModelManager.addModel(modelInput, [cto], [fileName], [disableValidation]) ⇒ <code>Object</code>
+Adds a model to the ModelManager.
+Concerto files have a single namespace. If a Concerto file with the
+same namespace has already been added to the ModelManager then it
+will be replaced.
+Note that if there are dependencies between multiple files the files
+must be added in dependency order, or the addModel method can be
+used to add a set of files irrespective of dependencies.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Object</code> - The newly added model file (internal).  
+**Throws**:
+
+- <code>IllegalModelException</code> 
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelInput | <code>\*</code> | Model (as a string or object) |
+| [cto] | <code>string</code> | an optional cto string |
+| [fileName] | <code>string</code> | an optional file name to associate with the model file |
+| [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
+
+<a name="module_concerto-core.BaseModelManager+updateModelFile"></a>
+
+#### baseModelManager.updateModelFile(modelFile, [fileName], [disableValidation]) ⇒ <code>Object</code>
+Updates a Concerto file (as a string) on the ModelManager.
+Concerto files have a single namespace. If a Concerto file with the
+same namespace has already been added to the ModelManager then it
+will be replaced.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Object</code> - The newly added model file (internal).  
+**Throws**:
+
+- <code>IllegalModelException</code> 
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelFile | <code>string</code> \| <code>ModelFile</code> | Model as a string or object |
+| [fileName] | <code>string</code> | a file name to associate with the model file |
+| [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
+
+<a name="module_concerto-core.BaseModelManager+deleteModelFile"></a>
+
+#### baseModelManager.deleteModelFile(namespace)
+Remove the Concerto file for a given namespace
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| namespace | <code>string</code> | The namespace of the model file to delete. |
+
+<a name="module_concerto-core.BaseModelManager+addModelFiles"></a>
+
+#### baseModelManager.addModelFiles(modelFiles, [fileNames], [disableValidation]) ⇒ <code>Array.&lt;Object&gt;</code>
+Add a set of Concerto files to the model manager.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;Object&gt;</code> - The newly added model files (internal).  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelFiles | <code>Array.&lt;string&gt;</code> \| <code>Array.&lt;ModelFile&gt;</code> | An array of models as strings or ModelFile objects. |
+| [fileNames] | <code>Array.&lt;string&gt;</code> | A array of file names to associate with the model files |
+| [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
+
+<a name="module_concerto-core.BaseModelManager+validateModelFiles"></a>
+
+#### baseModelManager.validateModelFiles()
+Validates all models files in this model manager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+<a name="module_concerto-core.BaseModelManager+updateExternalModels"></a>
+
+#### baseModelManager.updateExternalModels([options], [fileDownloader]) ⇒ <code>Promise</code>
+Downloads all ModelFiles that are external dependencies and adds or
+updates them in this ModelManager.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Promise</code> - a promise when the download and update operation is completed.  
+**Throws**:
+
+- <code>IllegalModelException</code> if the models fail validation
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [options] | <code>Object</code> | Options object passed to ModelFileLoaders |
+| [fileDownloader] | <code>FileDownloader</code> | an optional FileDownloader |
+
+<a name="module_concerto-core.BaseModelManager+writeModelsToFileSystem"></a>
+
+#### baseModelManager.writeModelsToFileSystem(path, [options])
+Write all models in this model manager to the specified path in the file system
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>string</code> | to a local directory |
+| [options] | <code>Object</code> | Options object |
+| options.includeExternalModels | <code>boolean</code> | If true, external models are written to the file system. Defaults to true |
+
+<a name="module_concerto-core.BaseModelManager+getModels"></a>
+
+#### baseModelManager.getModels([options]) ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>
+Gets all the Concerto models
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;{name:string, content:string}&gt;</code> - the name and content of each CTO file  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [options] | <code>Object</code> | Options object |
+| options.includeExternalModels | <code>boolean</code> | If true, external models are written to the file system. Defaults to true |
+
+<a name="module_concerto-core.BaseModelManager+clearModelFiles"></a>
+
+#### baseModelManager.clearModelFiles()
+Remove all registered Concerto files
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+<a name="module_concerto-core.BaseModelManager+getModelFile"></a>
+
+#### baseModelManager.getModelFile(namespace) ⇒ <code>ModelFile</code>
+Get the ModelFile associated with a namespace
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>ModelFile</code> - registered ModelFile for the namespace or null  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| namespace | <code>string</code> | the namespace containing the ModelFile |
+
+<a name="module_concerto-core.BaseModelManager+getNamespaces"></a>
+
+#### baseModelManager.getNamespaces() ⇒ <code>Array.&lt;string&gt;</code>
+Get the namespaces registered with the ModelManager.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;string&gt;</code> - namespaces - the namespaces that have been registered.  
+<a name="module_concerto-core.BaseModelManager+getType"></a>
+
+#### baseModelManager.getType(qualifiedName) ⇒ <code>ClassDeclaration</code>
+Look up a type in all registered namespaces.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>ClassDeclaration</code> - - the class declaration for the specified type.  
+**Throws**:
+
+- <code>TypeNotFoundException</code> - if the type cannot be found or is a primitive type.
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| qualifiedName | <code>string</code> | fully qualified type name. |
+
+<a name="module_concerto-core.BaseModelManager+getAssetDeclarations"></a>
+
+#### baseModelManager.getAssetDeclarations() ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
+Get the AssetDeclarations defined in this model manager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;AssetDeclaration&gt;</code> - the AssetDeclarations defined in the model manager  
+<a name="module_concerto-core.BaseModelManager+getTransactionDeclarations"></a>
+
+#### baseModelManager.getTransactionDeclarations() ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
+Get the TransactionDeclarations defined in this model manager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;TransactionDeclaration&gt;</code> - the TransactionDeclarations defined in the model manager  
+<a name="module_concerto-core.BaseModelManager+getEventDeclarations"></a>
+
+#### baseModelManager.getEventDeclarations() ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
+Get the EventDeclarations defined in this model manager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;EventDeclaration&gt;</code> - the EventDeclaration defined in the model manager  
+<a name="module_concerto-core.BaseModelManager+getParticipantDeclarations"></a>
+
+#### baseModelManager.getParticipantDeclarations() ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
+Get the ParticipantDeclarations defined in this model manager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;ParticipantDeclaration&gt;</code> - the ParticipantDeclaration defined in the model manager  
+<a name="module_concerto-core.BaseModelManager+getEnumDeclarations"></a>
+
+#### baseModelManager.getEnumDeclarations() ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
+Get the EnumDeclarations defined in this model manager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;EnumDeclaration&gt;</code> - the EnumDeclaration defined in the model manager  
+<a name="module_concerto-core.BaseModelManager+getConceptDeclarations"></a>
+
+#### baseModelManager.getConceptDeclarations() ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
+Get the Concepts defined in this model manager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;ConceptDeclaration&gt;</code> - the ConceptDeclaration defined in the model manager  
+<a name="module_concerto-core.BaseModelManager+getFactory"></a>
+
+#### baseModelManager.getFactory() ⇒ <code>Factory</code>
+Get a factory for creating new instances of types defined in this model manager.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Factory</code> - A factory for creating new instances of types defined in this model manager.  
+<a name="module_concerto-core.BaseModelManager+getSerializer"></a>
+
+#### baseModelManager.getSerializer() ⇒ <code>Serializer</code>
+Get a serializer for serializing instances of types defined in this model manager.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Serializer</code> - A serializer for serializing instances of types defined in this model manager.  
+<a name="module_concerto-core.BaseModelManager+getDecoratorFactories"></a>
+
+#### baseModelManager.getDecoratorFactories() ⇒ <code>Array.&lt;DecoratorFactory&gt;</code>
+Get the decorator factories for this model manager.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>Array.&lt;DecoratorFactory&gt;</code> - The decorator factories for this model manager.  
+<a name="module_concerto-core.BaseModelManager+addDecoratorFactory"></a>
+
+#### baseModelManager.addDecoratorFactory(factory)
+Add a decorator factory to this model manager.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| factory | <code>DecoratorFactory</code> | The decorator factory to add to this model manager. |
+
+<a name="module_concerto-core.BaseModelManager+derivesFrom"></a>
+
+#### baseModelManager.derivesFrom(fqt1, fqt2) ⇒ <code>boolean</code>
+Checks if this fully qualified type name is derived from another.
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>boolean</code> - True if this instance is an instance of the specified fully
+qualified type name, false otherwise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fqt1 | <code>string</code> | The fully qualified type name to check. |
+| fqt2 | <code>string</code> | The fully qualified type name it is may be derived from. |
+
+<a name="module_concerto-core.BaseModelManager+resolveMetaModel"></a>
+
+#### baseModelManager.resolveMetaModel(metaModel) ⇒ <code>object</code>
+Resolve the namespace for names in the metamodel
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>object</code> - the resolved metamodel  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| metaModel | <code>object</code> | the MetaModel |
+
+<a name="module_concerto-core.BaseModelManager+fromAst"></a>
+
+#### baseModelManager.fromAst(ast)
+Populates the model manager from a models metamodel AST
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ast | <code>\*</code> | the metamodel |
+
+<a name="module_concerto-core.BaseModelManager+getAst"></a>
+
+#### baseModelManager.getAst([resolve]) ⇒ <code>\*</code>
+Get the full ast (metamodel instances) for a modelmanager
+
+**Kind**: instance method of [<code>BaseModelManager</code>](#module_concerto-core.BaseModelManager)  
+**Returns**: <code>\*</code> - the metamodel  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [resolve] | <code>boolean</code> | whether to resolve names |
 
 <a name="module_concerto-core.Concerto"></a>
 
@@ -538,6 +1074,75 @@ Returns the namespace for the object
 | --- | --- | --- |
 | obj | <code>\*</code> | the input object |
 
+<a name="module_concerto-core.DecoratorManager"></a>
+
+### concerto-core.DecoratorManager
+Utility functions to work with
+[DecoratorCommandSet](https://models.accordproject.org/concerto/decorators.cto)
+
+**Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
+
+* [.DecoratorManager](#module_concerto-core.DecoratorManager)
+    * [.decorateModels(modelManager, decoratorCommandSet)](#module_concerto-core.DecoratorManager.decorateModels) ⇒ <code>ModelManager</code>
+    * [.falsyOrEqual(test, value)](#module_concerto-core.DecoratorManager.falsyOrEqual) ⇒ <code>Boolean</code>
+    * [.applyDecorator(decorated, type, newDecorator)](#module_concerto-core.DecoratorManager.applyDecorator)
+    * [.executeCommand(namespace, declaration, command)](#module_concerto-core.DecoratorManager.executeCommand)
+
+<a name="module_concerto-core.DecoratorManager.decorateModels"></a>
+
+#### DecoratorManager.decorateModels(modelManager, decoratorCommandSet) ⇒ <code>ModelManager</code>
+Applies all the decorator commands from the DecoratorCommandSet
+to the ModelManager.
+
+**Kind**: static method of [<code>DecoratorManager</code>](#module_concerto-core.DecoratorManager)  
+**Returns**: <code>ModelManager</code> - a new model manager with the decorations applied  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>ModelManager</code> | the input model manager |
+| decoratorCommandSet | <code>\*</code> | the DecoratorCommandSet object |
+
+<a name="module_concerto-core.DecoratorManager.falsyOrEqual"></a>
+
+#### DecoratorManager.falsyOrEqual(test, value) ⇒ <code>Boolean</code>
+Compares two values. If the first argument is falsy
+the function returns true.
+
+**Kind**: static method of [<code>DecoratorManager</code>](#module_concerto-core.DecoratorManager)  
+**Returns**: <code>Boolean</code> - true if the lhs is falsy or test === value  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| test | <code>string</code> \| <code>null</code> | the value to test (lhs) |
+| value | <code>string</code> | the value to compare (rhs) |
+
+<a name="module_concerto-core.DecoratorManager.applyDecorator"></a>
+
+#### DecoratorManager.applyDecorator(decorated, type, newDecorator)
+Applies a decorator to a decorated model element.
+
+**Kind**: static method of [<code>DecoratorManager</code>](#module_concerto-core.DecoratorManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| decorated | <code>\*</code> | the type to apply the decorator to |
+| type | <code>string</code> | the command type |
+| newDecorator | <code>\*</code> | the decorator to add |
+
+<a name="module_concerto-core.DecoratorManager.executeCommand"></a>
+
+#### DecoratorManager.executeCommand(namespace, declaration, command)
+Executes a Command against a ClassDeclaration, adding
+decorators to the ClassDeclaration, or its properties, as required.
+
+**Kind**: static method of [<code>DecoratorManager</code>](#module_concerto-core.DecoratorManager)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| namespace | <code>string</code> | the namespace for the declaration |
+| declaration | <code>\*</code> | the class declaration |
+| command | <code>\*</code> | the Command object from the org.accordproject.decoratorcommands model |
+
 <a name="module_concerto-core.Factory"></a>
 
 ### concerto-core.Factory
@@ -686,6 +1291,11 @@ identifying field.
 **Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
 **Extends**: <code>ClassDeclaration</code>  
 **See**: See [ClassDeclaration](ClassDeclaration)  
+
+* [.AssetDeclaration](#module_concerto-core.AssetDeclaration) ⇐ <code>ClassDeclaration</code>
+    * [new AssetDeclaration(modelFile, ast)](#new_module_concerto-core.AssetDeclaration_new)
+    * [.declarationKind()](#module_concerto-core.AssetDeclaration+declarationKind) ⇒ <code>string</code>
+
 <a name="new_module_concerto-core.AssetDeclaration_new"></a>
 
 #### new AssetDeclaration(modelFile, ast)
@@ -701,6 +1311,13 @@ Create an AssetDeclaration.
 | modelFile | <code>ModelFile</code> | the ModelFile for this class |
 | ast | <code>Object</code> | The AST created by the parser |
 
+<a name="module_concerto-core.AssetDeclaration+declarationKind"></a>
+
+#### assetDeclaration.declarationKind() ⇒ <code>string</code>
+Returns the kind of declaration
+
+**Kind**: instance method of [<code>AssetDeclaration</code>](#module_concerto-core.AssetDeclaration)  
+**Returns**: <code>string</code> - what kind of declaration this is  
 <a name="module_concerto-core.ClassDeclaration"></a>
 
 ### *concerto-core.ClassDeclaration*
@@ -715,6 +1332,7 @@ defines all the classes that are part of a namespace.
 * *[.ClassDeclaration](#module_concerto-core.ClassDeclaration)*
     * *[new ClassDeclaration(modelFile, ast)](#new_module_concerto-core.ClassDeclaration_new)*
     * *[._resolveSuperType()](#module_concerto-core.ClassDeclaration+_resolveSuperType) ⇒ <code>ClassDeclaration</code>*
+    * *[.validate()](#module_concerto-core.ClassDeclaration+validate)*
     * *[.isAbstract()](#module_concerto-core.ClassDeclaration+isAbstract) ⇒ <code>boolean</code>*
     * *[.getName()](#module_concerto-core.ClassDeclaration+getName) ⇒ <code>string</code>*
     * *[.getNamespace()](#module_concerto-core.ClassDeclaration+getNamespace) ⇒ <code>string</code>*
@@ -764,6 +1382,19 @@ Resolve the super type on this class and store it as an internal property.
 
 **Kind**: instance method of [<code>ClassDeclaration</code>](#module_concerto-core.ClassDeclaration)  
 **Returns**: <code>ClassDeclaration</code> - The super type, or null if non specified.  
+<a name="module_concerto-core.ClassDeclaration+validate"></a>
+
+#### *classDeclaration.validate()*
+Semantic validation of the structure of this class. Subclasses should
+override this method to impose additional semantic constraints on the
+contents/relations of fields.
+
+**Kind**: instance method of [<code>ClassDeclaration</code>](#module_concerto-core.ClassDeclaration)  
+**Throws**:
+
+- <code>IllegalModelException</code> 
+
+**Access**: protected  
 <a name="module_concerto-core.ClassDeclaration+isAbstract"></a>
 
 #### *classDeclaration.isAbstract() ⇒ <code>boolean</code>*
@@ -978,6 +1609,11 @@ identifying field.
 **Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
 **Extends**: <code>ClassDeclaration</code>  
 **See**: [ClassDeclaration](ClassDeclaration)  
+
+* [.ConceptDeclaration](#module_concerto-core.ConceptDeclaration) ⇐ <code>ClassDeclaration</code>
+    * [new ConceptDeclaration(modelFile, ast)](#new_module_concerto-core.ConceptDeclaration_new)
+    * [.declarationKind()](#module_concerto-core.ConceptDeclaration+declarationKind) ⇒ <code>string</code>
+
 <a name="new_module_concerto-core.ConceptDeclaration_new"></a>
 
 #### new ConceptDeclaration(modelFile, ast)
@@ -993,6 +1629,13 @@ Create a ConceptDeclaration.
 | modelFile | <code>ModelFile</code> | the ModelFile for this class |
 | ast | <code>Object</code> | The AST created by the parser |
 
+<a name="module_concerto-core.ConceptDeclaration+declarationKind"></a>
+
+#### conceptDeclaration.declarationKind() ⇒ <code>string</code>
+Returns the kind of declaration
+
+**Kind**: instance method of [<code>ConceptDeclaration</code>](#module_concerto-core.ConceptDeclaration)  
+**Returns**: <code>string</code> - what kind of declaration this is  
 <a name="module_concerto-core.Decorator"></a>
 
 ### concerto-core.Decorator
@@ -1075,6 +1718,7 @@ EnumDeclaration defines an enumeration of static values.
 * [.EnumDeclaration](#module_concerto-core.EnumDeclaration) ⇐ <code>ClassDeclaration</code>
     * [new EnumDeclaration(modelFile, ast)](#new_module_concerto-core.EnumDeclaration_new)
     * [.toString()](#module_concerto-core.EnumDeclaration+toString) ⇒ <code>String</code>
+    * [.declarationKind()](#module_concerto-core.EnumDeclaration+declarationKind) ⇒ <code>string</code>
 
 <a name="new_module_concerto-core.EnumDeclaration_new"></a>
 
@@ -1098,6 +1742,13 @@ Returns the string representation of this class
 
 **Kind**: instance method of [<code>EnumDeclaration</code>](#module_concerto-core.EnumDeclaration)  
 **Returns**: <code>String</code> - the string representation of the class  
+<a name="module_concerto-core.EnumDeclaration+declarationKind"></a>
+
+#### enumDeclaration.declarationKind() ⇒ <code>string</code>
+Returns the kind of declaration
+
+**Kind**: instance method of [<code>EnumDeclaration</code>](#module_concerto-core.EnumDeclaration)  
+**Returns**: <code>string</code> - what kind of declaration this is  
 <a name="module_concerto-core.EnumValueDeclaration"></a>
 
 ### concerto-core.EnumValueDeclaration ⇐ <code>Property</code>
@@ -1141,6 +1792,11 @@ Class representing the definition of an Event.
 **Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
 **Extends**: <code>ClassDeclaration</code>  
 **See**: See  [ClassDeclaration](ClassDeclaration)  
+
+* [.EventDeclaration](#module_concerto-core.EventDeclaration) ⇐ <code>ClassDeclaration</code>
+    * [new EventDeclaration(modelFile, ast)](#new_module_concerto-core.EventDeclaration_new)
+    * [.declarationKind()](#module_concerto-core.EventDeclaration+declarationKind) ⇒ <code>string</code>
+
 <a name="new_module_concerto-core.EventDeclaration_new"></a>
 
 #### new EventDeclaration(modelFile, ast)
@@ -1156,6 +1812,13 @@ Create an EventDeclaration.
 | modelFile | <code>ModelFile</code> | the ModelFile for this class |
 | ast | <code>Object</code> | The AST created by the parser |
 
+<a name="module_concerto-core.EventDeclaration+declarationKind"></a>
+
+#### eventDeclaration.declarationKind() ⇒ <code>string</code>
+Returns the kind of declaration
+
+**Kind**: instance method of [<code>EventDeclaration</code>](#module_concerto-core.EventDeclaration)  
+**Returns**: <code>string</code> - what kind of declaration this is  
 <a name="module_concerto-core.IdentifiedDeclaration"></a>
 
 ### *concerto-core.IdentifiedDeclaration ⇐ <code>ClassDeclaration</code>*
@@ -1521,6 +2184,11 @@ Class representing the definition of a Participant.
 **Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
 **Extends**: <code>ClassDeclaration</code>  
 **See**: See  [ClassDeclaration](ClassDeclaration)  
+
+* [.ParticipantDeclaration](#module_concerto-core.ParticipantDeclaration) ⇐ <code>ClassDeclaration</code>
+    * [new ParticipantDeclaration(modelFile, ast)](#new_module_concerto-core.ParticipantDeclaration_new)
+    * [.declarationKind()](#module_concerto-core.ParticipantDeclaration+declarationKind) ⇒ <code>string</code>
+
 <a name="new_module_concerto-core.ParticipantDeclaration_new"></a>
 
 #### new ParticipantDeclaration(modelFile, ast)
@@ -1536,6 +2204,13 @@ Create an ParticipantDeclaration.
 | modelFile | <code>ModelFile</code> | the ModelFile for this class |
 | ast | <code>Object</code> | The AST created by the parser |
 
+<a name="module_concerto-core.ParticipantDeclaration+declarationKind"></a>
+
+#### participantDeclaration.declarationKind() ⇒ <code>string</code>
+Returns the kind of declaration
+
+**Kind**: instance method of [<code>ParticipantDeclaration</code>](#module_concerto-core.ParticipantDeclaration)  
+**Returns**: <code>string</code> - what kind of declaration this is  
 <a name="module_concerto-core.Property"></a>
 
 ### concerto-core.Property
@@ -1547,6 +2222,7 @@ either a Field or a Relationship.
 * [.Property](#module_concerto-core.Property)
     * [new Property(parent, ast)](#new_module_concerto-core.Property_new)
     * [.getParent()](#module_concerto-core.Property+getParent) ⇒ <code>ClassDeclaration</code>
+    * [.validate(classDecl)](#module_concerto-core.Property+validate)
     * [.getName()](#module_concerto-core.Property+getName) ⇒ <code>string</code>
     * [.getType()](#module_concerto-core.Property+getType) ⇒ <code>string</code>
     * [.isOptional()](#module_concerto-core.Property+isOptional) ⇒ <code>boolean</code>
@@ -1579,6 +2255,22 @@ Returns the owner of this property
 
 **Kind**: instance method of [<code>Property</code>](#module_concerto-core.Property)  
 **Returns**: <code>ClassDeclaration</code> - the parent class declaration  
+<a name="module_concerto-core.Property+validate"></a>
+
+#### property.validate(classDecl)
+Validate the property
+
+**Kind**: instance method of [<code>Property</code>](#module_concerto-core.Property)  
+**Throws**:
+
+- <code>IllegalModelException</code> 
+
+**Access**: protected  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| classDecl | <code>ClassDeclaration</code> | the class declaration of the property |
+
 <a name="module_concerto-core.Property+getName"></a>
 
 #### property.getName() ⇒ <code>string</code>
@@ -1653,6 +2345,7 @@ Class representing a relationship between model elements
 
 * [.RelationshipDeclaration](#module_concerto-core.RelationshipDeclaration) ⇐ <code>Property</code>
     * [new RelationshipDeclaration(parent, ast)](#new_module_concerto-core.RelationshipDeclaration_new)
+    * [.validate(classDecl)](#module_concerto-core.RelationshipDeclaration+validate)
     * [.toString()](#module_concerto-core.RelationshipDeclaration+toString) ⇒ <code>String</code>
     * [.isRelationship()](#module_concerto-core.RelationshipDeclaration+isRelationship) ⇒ <code>boolean</code>
 
@@ -1670,6 +2363,22 @@ Create a Relationship.
 | --- | --- | --- |
 | parent | <code>ClassDeclaration</code> | The owner of this property |
 | ast | <code>Object</code> | The AST created by the parser |
+
+<a name="module_concerto-core.RelationshipDeclaration+validate"></a>
+
+#### relationshipDeclaration.validate(classDecl)
+Validate the property
+
+**Kind**: instance method of [<code>RelationshipDeclaration</code>](#module_concerto-core.RelationshipDeclaration)  
+**Throws**:
+
+- <code>IllegalModelException</code> 
+
+**Access**: protected  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| classDecl | <code>ClassDeclaration</code> | the class declaration of the property |
 
 <a name="module_concerto-core.RelationshipDeclaration+toString"></a>
 
@@ -1693,6 +2402,11 @@ Class representing the definition of an Transaction.
 **Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
 **Extends**: <code>ClassDeclaration</code>  
 **See**: See  [ClassDeclaration](ClassDeclaration)  
+
+* [.TransactionDeclaration](#module_concerto-core.TransactionDeclaration) ⇐ <code>ClassDeclaration</code>
+    * [new TransactionDeclaration(modelFile, ast)](#new_module_concerto-core.TransactionDeclaration_new)
+    * [.declarationKind()](#module_concerto-core.TransactionDeclaration+declarationKind) ⇒ <code>string</code>
+
 <a name="new_module_concerto-core.TransactionDeclaration_new"></a>
 
 #### new TransactionDeclaration(modelFile, ast)
@@ -1708,6 +2422,117 @@ Create an TransactionDeclaration.
 | modelFile | <code>ModelFile</code> | the ModelFile for this class |
 | ast | <code>Object</code> | The AST created by the parser |
 
+<a name="module_concerto-core.TransactionDeclaration+declarationKind"></a>
+
+#### transactionDeclaration.declarationKind() ⇒ <code>string</code>
+Returns the kind of declaration
+
+**Kind**: instance method of [<code>TransactionDeclaration</code>](#module_concerto-core.TransactionDeclaration)  
+**Returns**: <code>string</code> - what kind of declaration this is  
+<a name="module_concerto-core.Identifiable"></a>
+
+### *concerto-core.Identifiable ⇐ <code>Typed</code>*
+Identifiable is an entity with a namespace, type and an identifier.
+Applications should retrieve instances from [Factory](Factory)
+This class is abstract.
+
+**Kind**: static abstract class of [<code>concerto-core</code>](#module_concerto-core)  
+**Extends**: <code>Typed</code>  
+**Access**: protected  
+
+* *[.Identifiable](#module_concerto-core.Identifiable) ⇐ <code>Typed</code>*
+    * *[new Identifiable(modelManager, classDeclaration, ns, type, id, timestamp)](#new_module_concerto-core.Identifiable_new)*
+    * *[.getTimestamp()](#module_concerto-core.Identifiable+getTimestamp) ⇒ <code>string</code>*
+    * *[.getIdentifier()](#module_concerto-core.Identifiable+getIdentifier) ⇒ <code>string</code>*
+    * *[.setIdentifier(id)](#module_concerto-core.Identifiable+setIdentifier)*
+    * *[.getFullyQualifiedIdentifier()](#module_concerto-core.Identifiable+getFullyQualifiedIdentifier) ⇒ <code>string</code>*
+    * *[.toString()](#module_concerto-core.Identifiable+toString) ⇒ <code>String</code>*
+    * *[.isRelationship()](#module_concerto-core.Identifiable+isRelationship) ⇒ <code>boolean</code>*
+    * *[.isResource()](#module_concerto-core.Identifiable+isResource) ⇒ <code>boolean</code>*
+    * *[.toURI()](#module_concerto-core.Identifiable+toURI) ⇒ <code>String</code>*
+
+<a name="new_module_concerto-core.Identifiable_new"></a>
+
+#### *new Identifiable(modelManager, classDeclaration, ns, type, id, timestamp)*
+Create an instance.
+<p>
+<strong>Note: Only to be called by framework code. Applications should
+retrieve instances from [Factory](Factory)</strong>
+</p>
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>ModelManager</code> | The ModelManager for this instance |
+| classDeclaration | <code>ClassDeclaration</code> | The class declaration for this instance. |
+| ns | <code>string</code> | The namespace this instance. |
+| type | <code>string</code> | The type this instance. |
+| id | <code>string</code> | The identifier of this instance. |
+| timestamp | <code>string</code> | The timestamp of this instance |
+
+<a name="module_concerto-core.Identifiable+getTimestamp"></a>
+
+#### *identifiable.getTimestamp() ⇒ <code>string</code>*
+Get the timestamp of this instance
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+**Returns**: <code>string</code> - The timestamp for this object  
+<a name="module_concerto-core.Identifiable+getIdentifier"></a>
+
+#### *identifiable.getIdentifier() ⇒ <code>string</code>*
+Get the identifier of this instance
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+**Returns**: <code>string</code> - The identifier for this object  
+<a name="module_concerto-core.Identifiable+setIdentifier"></a>
+
+#### *identifiable.setIdentifier(id)*
+Set the identifier of this instance
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | the new identifier for this object |
+
+<a name="module_concerto-core.Identifiable+getFullyQualifiedIdentifier"></a>
+
+#### *identifiable.getFullyQualifiedIdentifier() ⇒ <code>string</code>*
+Get the fully qualified identifier of this instance.
+(namespace '.' type '#' identifier).
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+**Returns**: <code>string</code> - the fully qualified identifier of this instance  
+<a name="module_concerto-core.Identifiable+toString"></a>
+
+#### *identifiable.toString() ⇒ <code>String</code>*
+Returns the string representation of this class
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+**Returns**: <code>String</code> - the string representation of the class  
+<a name="module_concerto-core.Identifiable+isRelationship"></a>
+
+#### *identifiable.isRelationship() ⇒ <code>boolean</code>*
+Determine if this identifiable is a relationship.
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+**Returns**: <code>boolean</code> - True if this identifiable is a relationship,
+false if not.  
+<a name="module_concerto-core.Identifiable+isResource"></a>
+
+#### *identifiable.isResource() ⇒ <code>boolean</code>*
+Determine if this identifiable is a resource.
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+**Returns**: <code>boolean</code> - True if this identifiable is a resource,
+false if not.  
+<a name="module_concerto-core.Identifiable+toURI"></a>
+
+#### *identifiable.toURI() ⇒ <code>String</code>*
+Returns a URI representation of a reference to this identifiable
+
+**Kind**: instance method of [<code>Identifiable</code>](#module_concerto-core.Identifiable)  
+**Returns**: <code>String</code> - the URI for the identifiable  
 <a name="module_concerto-core.Resource"></a>
 
 ### concerto-core.Resource ⇐ <code>Identifiable</code>
@@ -1794,6 +2619,110 @@ for the serializer, use the [Serializer#toJSON](Serializer#toJSON) method instea
 
 **Kind**: instance method of [<code>Resource</code>](#module_concerto-core.Resource)  
 **Returns**: <code>Object</code> - A JavaScript object suitable for serialization to JSON.  
+<a name="module_concerto-core.Typed"></a>
+
+### *concerto-core.Typed*
+Object is an instance with a namespace and a type.
+
+This class is abstract.
+
+**Kind**: static abstract class of [<code>concerto-core</code>](#module_concerto-core)  
+**Access**: protected  
+
+* *[.Typed](#module_concerto-core.Typed)*
+    * *[new Typed(modelManager, classDeclaration, ns, type)](#new_module_concerto-core.Typed_new)*
+    * *[.getType()](#module_concerto-core.Typed+getType) ⇒ <code>string</code>*
+    * *[.getFullyQualifiedType()](#module_concerto-core.Typed+getFullyQualifiedType) ⇒ <code>string</code>*
+    * *[.getNamespace()](#module_concerto-core.Typed+getNamespace) ⇒ <code>string</code>*
+    * *[.setPropertyValue(propName, value)](#module_concerto-core.Typed+setPropertyValue)*
+    * *[.addArrayValue(propName, value)](#module_concerto-core.Typed+addArrayValue)*
+    * *[.instanceOf(fqt)](#module_concerto-core.Typed+instanceOf) ⇒ <code>boolean</code>*
+    * *[.toJSON()](#module_concerto-core.Typed+toJSON)*
+
+<a name="new_module_concerto-core.Typed_new"></a>
+
+#### *new Typed(modelManager, classDeclaration, ns, type)*
+Create an instance.
+<p>
+<strong>Note: Only to be called by framework code. Applications should
+retrieve instances from [Factory](Factory)</strong>
+</p>
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>ModelManager</code> | The ModelManager for this instance |
+| classDeclaration | <code>ClassDeclaration</code> | The class declaration for this instance. |
+| ns | <code>string</code> | The namespace this instance. |
+| type | <code>string</code> | The type this instance. |
+
+<a name="module_concerto-core.Typed+getType"></a>
+
+#### *typed.getType() ⇒ <code>string</code>*
+Get the type of the instance (a short name, not including namespace).
+
+**Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
+**Returns**: <code>string</code> - The type of this object  
+<a name="module_concerto-core.Typed+getFullyQualifiedType"></a>
+
+#### *typed.getFullyQualifiedType() ⇒ <code>string</code>*
+Get the fully-qualified type name of the instance (including namespace).
+
+**Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
+**Returns**: <code>string</code> - The fully-qualified type name of this object  
+<a name="module_concerto-core.Typed+getNamespace"></a>
+
+#### *typed.getNamespace() ⇒ <code>string</code>*
+Get the namespace of the instance.
+
+**Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
+**Returns**: <code>string</code> - The namespace of this object  
+<a name="module_concerto-core.Typed+setPropertyValue"></a>
+
+#### *typed.setPropertyValue(propName, value)*
+Sets a property on this Resource
+
+**Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| propName | <code>string</code> | the name of the field |
+| value | <code>string</code> | the value of the property |
+
+<a name="module_concerto-core.Typed+addArrayValue"></a>
+
+#### *typed.addArrayValue(propName, value)*
+Adds a value to an array property on this Resource
+
+**Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| propName | <code>string</code> | the name of the field |
+| value | <code>string</code> | the value of the property |
+
+<a name="module_concerto-core.Typed+instanceOf"></a>
+
+#### *typed.instanceOf(fqt) ⇒ <code>boolean</code>*
+Check to see if this instance is an instance of the specified fully qualified
+type name.
+
+**Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
+**Returns**: <code>boolean</code> - True if this instance is an instance of the specified fully
+qualified type name, false otherwise.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fqt | <code>String</code> | The fully qualified type name. |
+
+<a name="module_concerto-core.Typed+toJSON"></a>
+
+#### *typed.toJSON()*
+Overriden to prevent people accidentally converting a resource to JSON
+without using the Serializer.
+
+**Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
+**Access**: protected  
 <a name="module_concerto-core.ModelLoader"></a>
 
 ### concerto-core.ModelLoader
@@ -1841,7 +2770,7 @@ Load system and models in a new model manager from model files objects
 <a name="module_concerto-core.ModelManager"></a>
 
 ### concerto-core.ModelManager
-Manages the Concerto model files.
+Manages the Concerto model files in CTO format.
 
 The structure of [Resource](Resource)s (Assets, Transactions, Participants) is modelled
 in a set of Concerto files. The contents of these files are managed
@@ -1851,38 +2780,11 @@ a set of asset, transaction and participant type definitions.
 Concerto applications load their Concerto files and then call the [addModelFile](ModelManager#addModelFile)
 method to register the Concerto file(s) with the ModelManager.
 
-Use the [Concerto](Concerto) class to validate instances.
-
 **Kind**: static class of [<code>concerto-core</code>](#module_concerto-core)  
 
 * [.ModelManager](#module_concerto-core.ModelManager)
     * [new ModelManager([options])](#new_module_concerto-core.ModelManager_new)
-    * [.isModelManager()](#module_concerto-core.ModelManager+isModelManager) ⇒ <code>boolean</code>
-    * [.accept(visitor, parameters)](#module_concerto-core.ModelManager+accept) ⇒ <code>Object</code>
-    * [.validateModelFile(modelFile, [fileName])](#module_concerto-core.ModelManager+validateModelFile)
-    * [.addModelFile(modelFile, fileName, [disableValidation])](#module_concerto-core.ModelManager+addModelFile) ⇒ <code>Object</code>
-    * [.updateModelFile(modelFile, [fileName], [disableValidation])](#module_concerto-core.ModelManager+updateModelFile) ⇒ <code>Object</code>
-    * [.deleteModelFile(namespace)](#module_concerto-core.ModelManager+deleteModelFile)
-    * [.addModelFiles(modelFiles, [fileNames], [disableValidation])](#module_concerto-core.ModelManager+addModelFiles) ⇒ <code>Array.&lt;Object&gt;</code>
-    * [.validateModelFiles()](#module_concerto-core.ModelManager+validateModelFiles)
-    * [.updateExternalModels([options], [fileDownloader])](#module_concerto-core.ModelManager+updateExternalModels) ⇒ <code>Promise</code>
-    * [.writeModelsToFileSystem(path, [options])](#module_concerto-core.ModelManager+writeModelsToFileSystem)
-    * [.getModels([options])](#module_concerto-core.ModelManager+getModels) ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>
-    * [.clearModelFiles()](#module_concerto-core.ModelManager+clearModelFiles)
-    * [.getModelFile(namespace)](#module_concerto-core.ModelManager+getModelFile) ⇒ <code>ModelFile</code>
-    * [.getNamespaces()](#module_concerto-core.ModelManager+getNamespaces) ⇒ <code>Array.&lt;string&gt;</code>
-    * [.getType(qualifiedName)](#module_concerto-core.ModelManager+getType) ⇒ <code>ClassDeclaration</code>
-    * [.getAssetDeclarations()](#module_concerto-core.ModelManager+getAssetDeclarations) ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
-    * [.getTransactionDeclarations()](#module_concerto-core.ModelManager+getTransactionDeclarations) ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
-    * [.getEventDeclarations()](#module_concerto-core.ModelManager+getEventDeclarations) ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
-    * [.getParticipantDeclarations()](#module_concerto-core.ModelManager+getParticipantDeclarations) ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
-    * [.getEnumDeclarations()](#module_concerto-core.ModelManager+getEnumDeclarations) ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
-    * [.getConceptDeclarations()](#module_concerto-core.ModelManager+getConceptDeclarations) ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
-    * [.getFactory()](#module_concerto-core.ModelManager+getFactory) ⇒ <code>Factory</code>
-    * [.getSerializer()](#module_concerto-core.ModelManager+getSerializer) ⇒ <code>Serializer</code>
-    * [.getDecoratorFactories()](#module_concerto-core.ModelManager+getDecoratorFactories) ⇒ <code>Array.&lt;DecoratorFactory&gt;</code>
-    * [.addDecoratorFactory(factory)](#module_concerto-core.ModelManager+addDecoratorFactory)
-    * [.derivesFrom(fqt1, fqt2)](#module_concerto-core.ModelManager+derivesFrom) ⇒ <code>boolean</code>
+    * [.addCTOModel(cto, [fileName], [disableValidation])](#module_concerto-core.ModelManager+addCTOModel) ⇒ <code>Object</code>
 
 <a name="new_module_concerto-core.ModelManager_new"></a>
 
@@ -1894,57 +2796,11 @@ Create the ModelManager.
 | --- | --- | --- |
 | [options] | <code>object</code> | Serializer options |
 
-<a name="module_concerto-core.ModelManager+isModelManager"></a>
+<a name="module_concerto-core.ModelManager+addCTOModel"></a>
 
-#### modelManager.isModelManager() ⇒ <code>boolean</code>
-Returns true
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>boolean</code> - true  
-<a name="module_concerto-core.ModelManager+accept"></a>
-
-#### modelManager.accept(visitor, parameters) ⇒ <code>Object</code>
-Visitor design pattern
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Object</code> - the result of visiting or null  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| visitor | <code>Object</code> | the visitor |
-| parameters | <code>Object</code> | the parameter |
-
-<a name="module_concerto-core.ModelManager+validateModelFile"></a>
-
-#### modelManager.validateModelFile(modelFile, [fileName])
-Validates a Concerto file (as a string) to the ModelManager.
-Concerto files have a single namespace.
-
-Note that if there are dependencies between multiple files the files
-must be added in dependency order, or the addModelFiles method can be
-used to add a set of files irrespective of dependencies.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Throws**:
-
-- <code>IllegalModelException</code> 
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| modelFile | <code>string</code> \| <code>ModelFile</code> | The Concerto file as a string |
-| [fileName] | <code>string</code> | a file name to associate with the model file |
-
-<a name="module_concerto-core.ModelManager+addModelFile"></a>
-
-#### modelManager.addModelFile(modelFile, fileName, [disableValidation]) ⇒ <code>Object</code>
-Adds a Concerto file (as a string) to the ModelManager.
-Concerto files have a single namespace. If a Concerto file with the
-same namespace has already been added to the ModelManager then it
-will be replaced.
-Note that if there are dependencies between multiple files the files
-must be added in dependency order, or the addModelFiles method can be
-used to add a set of files irrespective of dependencies.
+#### modelManager.addCTOModel(cto, [fileName], [disableValidation]) ⇒ <code>Object</code>
+Adds a model in CTO format to the ModelManager.
+This is a convenience function equivalent to `addModel` but useful since it avoids having to copy the input CTO.
 
 **Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
 **Returns**: <code>Object</code> - The newly added model file (internal).  
@@ -1955,234 +2811,9 @@ used to add a set of files irrespective of dependencies.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| modelFile | <code>string</code> \| <code>ModelFile</code> | Model as a string or object |
-| fileName | <code>string</code> | an optional file name to associate with the model file |
+| cto | <code>string</code> | a cto string |
+| [fileName] | <code>string</code> | an optional file name to associate with the model file |
 | [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
-
-<a name="module_concerto-core.ModelManager+updateModelFile"></a>
-
-#### modelManager.updateModelFile(modelFile, [fileName], [disableValidation]) ⇒ <code>Object</code>
-Updates a Concerto file (as a string) on the ModelManager.
-Concerto files have a single namespace. If a Concerto file with the
-same namespace has already been added to the ModelManager then it
-will be replaced.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Object</code> - The newly added model file (internal).  
-**Throws**:
-
-- <code>IllegalModelException</code> 
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| modelFile | <code>string</code> \| <code>ModelFile</code> | Model as a string or object |
-| [fileName] | <code>string</code> | a file name to associate with the model file |
-| [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
-
-<a name="module_concerto-core.ModelManager+deleteModelFile"></a>
-
-#### modelManager.deleteModelFile(namespace)
-Remove the Concerto file for a given namespace
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| namespace | <code>string</code> | The namespace of the model file to delete. |
-
-<a name="module_concerto-core.ModelManager+addModelFiles"></a>
-
-#### modelManager.addModelFiles(modelFiles, [fileNames], [disableValidation]) ⇒ <code>Array.&lt;Object&gt;</code>
-Add a set of Concerto files to the model manager.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;Object&gt;</code> - The newly added model files (internal).  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| modelFiles | <code>Array.&lt;string&gt;</code> \| <code>Array.&lt;ModelFile&gt;</code> | An array of models as strings or ModelFile objects. |
-| [fileNames] | <code>Array.&lt;string&gt;</code> | A array of file names to associate with the model files |
-| [disableValidation] | <code>boolean</code> | If true then the model files are not validated |
-
-<a name="module_concerto-core.ModelManager+validateModelFiles"></a>
-
-#### modelManager.validateModelFiles()
-Validates all models files in this model manager
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-<a name="module_concerto-core.ModelManager+updateExternalModels"></a>
-
-#### modelManager.updateExternalModels([options], [fileDownloader]) ⇒ <code>Promise</code>
-Downloads all ModelFiles that are external dependencies and adds or
-updates them in this ModelManager.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Promise</code> - a promise when the download and update operation is completed.  
-**Throws**:
-
-- <code>IllegalModelException</code> if the models fail validation
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [options] | <code>Object</code> | Options object passed to ModelFileLoaders |
-| [fileDownloader] | <code>FileDownloader</code> | an optional FileDownloader |
-
-<a name="module_concerto-core.ModelManager+writeModelsToFileSystem"></a>
-
-#### modelManager.writeModelsToFileSystem(path, [options])
-Write all models in this model manager to the specified path in the file system
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| path | <code>string</code> | to a local directory |
-| [options] | <code>Object</code> | Options object |
-| options.includeExternalModels | <code>boolean</code> | If true, external models are written to the file system. Defaults to true |
-
-<a name="module_concerto-core.ModelManager+getModels"></a>
-
-#### modelManager.getModels([options]) ⇒ <code>Array.&lt;{name:string, content:string}&gt;</code>
-Gets all the Concerto models
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;{name:string, content:string}&gt;</code> - the name and content of each CTO file  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| [options] | <code>Object</code> | Options object |
-| options.includeExternalModels | <code>boolean</code> | If true, external models are written to the file system. Defaults to true |
-
-<a name="module_concerto-core.ModelManager+clearModelFiles"></a>
-
-#### modelManager.clearModelFiles()
-Remove all registered Concerto files
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-<a name="module_concerto-core.ModelManager+getModelFile"></a>
-
-#### modelManager.getModelFile(namespace) ⇒ <code>ModelFile</code>
-Get the ModelFile associated with a namespace
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>ModelFile</code> - registered ModelFile for the namespace or null  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| namespace | <code>string</code> | the namespace containing the ModelFile |
-
-<a name="module_concerto-core.ModelManager+getNamespaces"></a>
-
-#### modelManager.getNamespaces() ⇒ <code>Array.&lt;string&gt;</code>
-Get the namespaces registered with the ModelManager.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;string&gt;</code> - namespaces - the namespaces that have been registered.  
-<a name="module_concerto-core.ModelManager+getType"></a>
-
-#### modelManager.getType(qualifiedName) ⇒ <code>ClassDeclaration</code>
-Look up a type in all registered namespaces.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>ClassDeclaration</code> - - the class declaration for the specified type.  
-**Throws**:
-
-- <code>TypeNotFoundException</code> - if the type cannot be found or is a primitive type.
-
-
-| Param | Type | Description |
-| --- | --- | --- |
-| qualifiedName | <code>string</code> | fully qualified type name. |
-
-<a name="module_concerto-core.ModelManager+getAssetDeclarations"></a>
-
-#### modelManager.getAssetDeclarations() ⇒ <code>Array.&lt;AssetDeclaration&gt;</code>
-Get the AssetDeclarations defined in this model manager
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;AssetDeclaration&gt;</code> - the AssetDeclarations defined in the model manager  
-<a name="module_concerto-core.ModelManager+getTransactionDeclarations"></a>
-
-#### modelManager.getTransactionDeclarations() ⇒ <code>Array.&lt;TransactionDeclaration&gt;</code>
-Get the TransactionDeclarations defined in this model manager
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;TransactionDeclaration&gt;</code> - the TransactionDeclarations defined in the model manager  
-<a name="module_concerto-core.ModelManager+getEventDeclarations"></a>
-
-#### modelManager.getEventDeclarations() ⇒ <code>Array.&lt;EventDeclaration&gt;</code>
-Get the EventDeclarations defined in this model manager
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;EventDeclaration&gt;</code> - the EventDeclaration defined in the model manager  
-<a name="module_concerto-core.ModelManager+getParticipantDeclarations"></a>
-
-#### modelManager.getParticipantDeclarations() ⇒ <code>Array.&lt;ParticipantDeclaration&gt;</code>
-Get the ParticipantDeclarations defined in this model manager
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;ParticipantDeclaration&gt;</code> - the ParticipantDeclaration defined in the model manager  
-<a name="module_concerto-core.ModelManager+getEnumDeclarations"></a>
-
-#### modelManager.getEnumDeclarations() ⇒ <code>Array.&lt;EnumDeclaration&gt;</code>
-Get the EnumDeclarations defined in this model manager
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;EnumDeclaration&gt;</code> - the EnumDeclaration defined in the model manager  
-<a name="module_concerto-core.ModelManager+getConceptDeclarations"></a>
-
-#### modelManager.getConceptDeclarations() ⇒ <code>Array.&lt;ConceptDeclaration&gt;</code>
-Get the Concepts defined in this model manager
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;ConceptDeclaration&gt;</code> - the ConceptDeclaration defined in the model manager  
-<a name="module_concerto-core.ModelManager+getFactory"></a>
-
-#### modelManager.getFactory() ⇒ <code>Factory</code>
-Get a factory for creating new instances of types defined in this model manager.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Factory</code> - A factory for creating new instances of types defined in this model manager.  
-<a name="module_concerto-core.ModelManager+getSerializer"></a>
-
-#### modelManager.getSerializer() ⇒ <code>Serializer</code>
-Get a serializer for serializing instances of types defined in this model manager.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Serializer</code> - A serializer for serializing instances of types defined in this model manager.  
-<a name="module_concerto-core.ModelManager+getDecoratorFactories"></a>
-
-#### modelManager.getDecoratorFactories() ⇒ <code>Array.&lt;DecoratorFactory&gt;</code>
-Get the decorator factories for this model manager.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>Array.&lt;DecoratorFactory&gt;</code> - The decorator factories for this model manager.  
-<a name="module_concerto-core.ModelManager+addDecoratorFactory"></a>
-
-#### modelManager.addDecoratorFactory(factory)
-Add a decorator factory to this model manager.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| factory | <code>DecoratorFactory</code> | The decorator factory to add to this model manager. |
-
-<a name="module_concerto-core.ModelManager+derivesFrom"></a>
-
-#### modelManager.derivesFrom(fqt1, fqt2) ⇒ <code>boolean</code>
-Checks if this fully qualified type name is derived from another.
-
-**Kind**: instance method of [<code>ModelManager</code>](#module_concerto-core.ModelManager)  
-**Returns**: <code>boolean</code> - True if this instance is an instance of the specified fully
-qualified type name, false otherwise.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| fqt1 | <code>string</code> | The fully qualified type name to check. |
-| fqt2 | <code>string</code> | The fully qualified type name it is may be derived from. |
 
 <a name="module_concerto-core.SecurityException"></a>
 
@@ -2296,12 +2927,12 @@ Error thrown when a Concerto type does not exist.
 **See**: see [BaseException](BaseException)  
 
 * [.TypeNotFoundException](#module_concerto-core.TypeNotFoundException) ⇐ <code>BaseException</code>
-    * [new TypeNotFoundException(typeName, [message], component)](#new_module_concerto-core.TypeNotFoundException_new)
+    * [new TypeNotFoundException(typeName, message, component)](#new_module_concerto-core.TypeNotFoundException_new)
     * [.getTypeName()](#module_concerto-core.TypeNotFoundException+getTypeName) ⇒ <code>string</code>
 
 <a name="new_module_concerto-core.TypeNotFoundException_new"></a>
 
-#### new TypeNotFoundException(typeName, [message], component)
+#### new TypeNotFoundException(typeName, message, component)
 Constructor. If the optional 'message' argument is not supplied, it will be set to a default value that
 includes the type name.
 
@@ -2309,7 +2940,7 @@ includes the type name.
 | Param | Type | Description |
 | --- | --- | --- |
 | typeName | <code>string</code> | fully qualified type name. |
-| [message] | <code>string</code> | error message. |
+| message | <code>string</code> \| <code>undefined</code> | error message. |
 | component | <code>string</code> | the optional component which throws this error |
 
 <a name="module_concerto-core.TypeNotFoundException+getTypeName"></a>
@@ -2505,10 +3136,20 @@ Peek the top of the stack
 Clears the stack
 
 **Kind**: instance method of [<code>TypedStack</code>](#module_concerto-core.TypedStack)  
+<a name="module_concerto-core..version"></a>
+
+### concerto-core~version : <code>Object</code>
+**Kind**: inner constant of [<code>concerto-core</code>](#module_concerto-core)  
 <a name="module_concerto-cto"></a>
 
 ## concerto-cto
 Concerto CTO concrete syntax module. Concerto is a framework for defining domain
+specific models.
+
+<a name="module_concerto-metamodel"></a>
+
+## concerto-metamodel
+Concerto metamodel management. Concerto is a framework for defining domain
 specific models.
 
 <a name="module_concerto-tools"></a>
@@ -2544,13 +3185,14 @@ specific models.
         * _instance_
             * [.clear()](#module_concerto-vocabulary.VocabularyManager+clear)
             * [.removeVocabulary(namespace, locale)](#module_concerto-vocabulary.VocabularyManager+removeVocabulary)
-            * [.addVocabulary(contents)](#module_concerto-vocabulary.VocabularyManager+addVocabulary)
+            * [.addVocabulary(contents)](#module_concerto-vocabulary.VocabularyManager+addVocabulary) ⇒ <code>Vocabulary</code>
             * [.getVocabulary(namespace, locale, [options])](#module_concerto-vocabulary.VocabularyManager+getVocabulary) ⇒ <code>Vocabulary</code>
             * [.getVocabulariesForNamespace(namespace)](#module_concerto-vocabulary.VocabularyManager+getVocabulariesForNamespace) ⇒ <code>Array.&lt;Vocabulary&gt;</code>
             * [.getVocabulariesForLocale(locale)](#module_concerto-vocabulary.VocabularyManager+getVocabulariesForLocale) ⇒ <code>Array.&lt;Vocabulary&gt;</code>
             * [.resolveTerm(modelManager, namespace, locale, declarationName, [propertyName])](#module_concerto-vocabulary.VocabularyManager+resolveTerm) ⇒ <code>string</code>
             * [.getTerm(namespace, locale, declarationName, [propertyName])](#module_concerto-vocabulary.VocabularyManager+getTerm) ⇒ <code>string</code>
-            * [.validate(modelManager)](#module_concerto-vocabulary.VocabularyManager+validate) ⇒ <code>\*</code>
+            * [.generateDecoratorCommands(modelManager, locale)](#module_concerto-vocabulary.VocabularyManager+generateDecoratorCommands) ⇒ <code>\*</code>
+            * [.validate(modelManager, locale)](#module_concerto-vocabulary.VocabularyManager+validate) ⇒ <code>\*</code>
         * _static_
             * [.englishMissingTermGenerator(namespace, locale, declarationName, [propertyName])](#module_concerto-vocabulary.VocabularyManager.englishMissingTermGenerator) ⇒ <code>string</code>
             * [.findVocabulary(requestedLocale, vocabularies, [options])](#module_concerto-vocabulary.VocabularyManager.findVocabulary) ⇒ <code>Vocabulary</code>
@@ -2659,13 +3301,14 @@ is associated with a BCP-47 language tag and a Concerto namespace.
     * _instance_
         * [.clear()](#module_concerto-vocabulary.VocabularyManager+clear)
         * [.removeVocabulary(namespace, locale)](#module_concerto-vocabulary.VocabularyManager+removeVocabulary)
-        * [.addVocabulary(contents)](#module_concerto-vocabulary.VocabularyManager+addVocabulary)
+        * [.addVocabulary(contents)](#module_concerto-vocabulary.VocabularyManager+addVocabulary) ⇒ <code>Vocabulary</code>
         * [.getVocabulary(namespace, locale, [options])](#module_concerto-vocabulary.VocabularyManager+getVocabulary) ⇒ <code>Vocabulary</code>
         * [.getVocabulariesForNamespace(namespace)](#module_concerto-vocabulary.VocabularyManager+getVocabulariesForNamespace) ⇒ <code>Array.&lt;Vocabulary&gt;</code>
         * [.getVocabulariesForLocale(locale)](#module_concerto-vocabulary.VocabularyManager+getVocabulariesForLocale) ⇒ <code>Array.&lt;Vocabulary&gt;</code>
         * [.resolveTerm(modelManager, namespace, locale, declarationName, [propertyName])](#module_concerto-vocabulary.VocabularyManager+resolveTerm) ⇒ <code>string</code>
         * [.getTerm(namespace, locale, declarationName, [propertyName])](#module_concerto-vocabulary.VocabularyManager+getTerm) ⇒ <code>string</code>
-        * [.validate(modelManager)](#module_concerto-vocabulary.VocabularyManager+validate) ⇒ <code>\*</code>
+        * [.generateDecoratorCommands(modelManager, locale)](#module_concerto-vocabulary.VocabularyManager+generateDecoratorCommands) ⇒ <code>\*</code>
+        * [.validate(modelManager, locale)](#module_concerto-vocabulary.VocabularyManager+validate) ⇒ <code>\*</code>
     * _static_
         * [.englishMissingTermGenerator(namespace, locale, declarationName, [propertyName])](#module_concerto-vocabulary.VocabularyManager.englishMissingTermGenerator) ⇒ <code>string</code>
         * [.findVocabulary(requestedLocale, vocabularies, [options])](#module_concerto-vocabulary.VocabularyManager.findVocabulary) ⇒ <code>Vocabulary</code>
@@ -2701,10 +3344,11 @@ Removes a vocabulary from the vocabulary manager
 
 <a name="module_concerto-vocabulary.VocabularyManager+addVocabulary"></a>
 
-#### vocabularyManager.addVocabulary(contents)
+#### vocabularyManager.addVocabulary(contents) ⇒ <code>Vocabulary</code>
 Adds a vocabulary to the vocabulary manager
 
 **Kind**: instance method of [<code>VocabularyManager</code>](#module_concerto-vocabulary.VocabularyManager)  
+**Returns**: <code>Vocabulary</code> - the vocabulary the was added  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -2783,9 +3427,25 @@ from a more general vocabulary if required
 | declarationName | <code>string</code> | the name of a concept or enum |
 | [propertyName] | <code>string</code> | the name of a property (optional) |
 
+<a name="module_concerto-vocabulary.VocabularyManager+generateDecoratorCommands"></a>
+
+#### vocabularyManager.generateDecoratorCommands(modelManager, locale) ⇒ <code>\*</code>
+Creates a DecoractorCommandSet with @Term decorators
+to decorate all model elements based on the vocabulary for a locale.
+Pass the return value to the DecoratorManager.decorateModel to apply
+the decorators to a ModelManager.
+
+**Kind**: instance method of [<code>VocabularyManager</code>](#module_concerto-vocabulary.VocabularyManager)  
+**Returns**: <code>\*</code> - the decorator command set used to decorate the model.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>ModelManager</code> | the Model Manager |
+| locale | <code>string</code> | the BCP-47 locale identifier |
+
 <a name="module_concerto-vocabulary.VocabularyManager+validate"></a>
 
-#### vocabularyManager.validate(modelManager) ⇒ <code>\*</code>
+#### vocabularyManager.validate(modelManager, locale) ⇒ <code>\*</code>
 Validates the terms in the vocabulary against the namespaces and declarations
 within a ModelManager
 
@@ -2795,6 +3455,7 @@ within a ModelManager
 | Param | Type | Description |
 | --- | --- | --- |
 | modelManager | <code>ModelManager</code> | the Model Manager |
+| locale | <code>string</code> | the BCP-47 locale identifier |
 
 <a name="module_concerto-vocabulary.VocabularyManager.englishMissingTermGenerator"></a>
 
@@ -2827,144 +3488,6 @@ vocabulary is found, null is returned
 | vocabularies | <code>Array.&lt;Vocabulary&gt;</code> | the vocabularies to match against |
 | [options] | <code>\*</code> | options to configure vocabulary lookup |
 | [options.localeMatcher] | <code>\*</code> | Pass 'lookup' to find a general vocabulary, if available |
-
-<a name="MetaModel"></a>
-
-## MetaModel
-Class to work with the Concerto metamodel
-
-**Kind**: global class  
-
-* [MetaModel](#MetaModel)
-    * [.getMetaModelCto()](#MetaModel.getMetaModelCto) ⇒ <code>string</code>
-    * [.createMetaModelManager()](#MetaModel.createMetaModelManager) ⇒ <code>\*</code>
-    * [.validateMetaModel(input)](#MetaModel.validateMetaModel) ⇒ <code>object</code>
-    * [.createNameTable(modelManager, metaModel)](#MetaModel.createNameTable) ⇒ <code>object</code>
-    * [.resolveName(name, table)](#MetaModel.resolveName) ⇒ <code>string</code>
-    * [.resolveTypeNames(metaModel, table)](#MetaModel.resolveTypeNames) ⇒ <code>object</code>
-    * [.resolveMetaModel(modelManager, metaModel, [validate])](#MetaModel.resolveMetaModel) ⇒ <code>object</code>
-    * [.modelFileToMetaModel(modelFile, [validate])](#MetaModel.modelFileToMetaModel) ⇒ <code>object</code>
-    * [.modelManagerToMetaModel(modelManager, [resolve], [validate])](#MetaModel.modelManagerToMetaModel) ⇒ <code>object</code>
-    * [.modelManagerFromMetaModel(metaModel, [validate])](#MetaModel.modelManagerFromMetaModel) ⇒ <code>object</code>
-
-<a name="MetaModel.getMetaModelCto"></a>
-
-### MetaModel.getMetaModelCto() ⇒ <code>string</code>
-Returns the metamodel CTO
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>string</code> - the metamodel as a CTO string  
-<a name="MetaModel.createMetaModelManager"></a>
-
-### MetaModel.createMetaModelManager() ⇒ <code>\*</code>
-Create a metamodel manager (for validation against the metamodel)
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>\*</code> - the metamodel manager  
-<a name="MetaModel.validateMetaModel"></a>
-
-### MetaModel.validateMetaModel(input) ⇒ <code>object</code>
-Validate against the metamodel
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>object</code> - the validated metamodel in JSON  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| input | <code>object</code> | the metamodel in JSON |
-
-<a name="MetaModel.createNameTable"></a>
-
-### MetaModel.createNameTable(modelManager, metaModel) ⇒ <code>object</code>
-Create a name resolution table
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>object</code> - mapping from a name to its namespace  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| modelManager | <code>\*</code> | the model manager |
-| metaModel | <code>object</code> | the metamodel (JSON) |
-
-<a name="MetaModel.resolveName"></a>
-
-### MetaModel.resolveName(name, table) ⇒ <code>string</code>
-Resolve a name using the name table
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>string</code> - the namespace for that name  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| name | <code>string</code> | the name of the type to resolve |
-| table | <code>object</code> | the name table |
-
-<a name="MetaModel.resolveTypeNames"></a>
-
-### MetaModel.resolveTypeNames(metaModel, table) ⇒ <code>object</code>
-Name resolution for metamodel
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>object</code> - the metamodel with fully qualified names  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| metaModel | <code>object</code> | the metamodel (JSON) |
-| table | <code>object</code> | the name table |
-
-<a name="MetaModel.resolveMetaModel"></a>
-
-### MetaModel.resolveMetaModel(modelManager, metaModel, [validate]) ⇒ <code>object</code>
-Resolve the namespace for names in the metamodel
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>object</code> - the resolved metamodel  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| modelManager | <code>object</code> |  | the ModelManager |
-| metaModel | <code>object</code> |  | the MetaModel |
-| [validate] | <code>boolean</code> | <code>true</code> | whether to perform validation |
-
-<a name="MetaModel.modelFileToMetaModel"></a>
-
-### MetaModel.modelFileToMetaModel(modelFile, [validate]) ⇒ <code>object</code>
-Export metamodel from a model file
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>object</code> - the metamodel for this model  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| modelFile | <code>object</code> |  | the ModelFile |
-| [validate] | <code>boolean</code> | <code>true</code> | whether to perform validation |
-
-<a name="MetaModel.modelManagerToMetaModel"></a>
-
-### MetaModel.modelManagerToMetaModel(modelManager, [resolve], [validate]) ⇒ <code>object</code>
-Export metamodel from a model manager
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>object</code> - the metamodel for this model manager  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| modelManager | <code>object</code> |  | the ModelManager |
-| [resolve] | <code>boolean</code> |  | whether to resolve names |
-| [validate] | <code>boolean</code> | <code>true</code> | whether to perform validation |
-
-<a name="MetaModel.modelManagerFromMetaModel"></a>
-
-### MetaModel.modelManagerFromMetaModel(metaModel, [validate]) ⇒ <code>object</code>
-Import metamodel to a model manager
-
-**Kind**: static method of [<code>MetaModel</code>](#MetaModel)  
-**Returns**: <code>object</code> - the metamodel for this model manager  
-
-| Param | Type | Default | Description |
-| --- | --- | --- | --- |
-| metaModel | <code>object</code> |  | the metamodel |
-| [validate] | <code>boolean</code> | <code>true</code> | whether to perform validation |
 
 <a name="AbstractPlugin"></a>
 
@@ -3092,6 +3615,16 @@ Additional annotations to generate in enums
 | enumDecl | <code>EnumDeclaration</code> | the enum being visited |
 | parameters | <code>Object</code> | the parameter |
 
+<a name="rootModelAst"></a>
+
+## rootModelAst : <code>unknown</code>
+**Kind**: global constant  
+<a name="metaModelAst"></a>
+
+## metaModelAst : <code>unknown</code>
+The metamodel itself, as an AST.
+
+**Kind**: global constant  
 <a name="metaModelCto"></a>
 
 ## metaModelCto
@@ -3123,6 +3656,38 @@ Ensures there is a proper current time
 | [currentTime] | <code>string</code> | the definition of 'now' |
 | [utcOffset] | <code>number</code> | UTC Offset for this execution |
 
+<a name="newMetaModelManager"></a>
+
+## newMetaModelManager() ⇒ <code>\*</code>
+Create a metamodel manager (for validation against the metamodel)
+
+**Kind**: global function  
+**Returns**: <code>\*</code> - the metamodel manager  
+<a name="validateMetaModel"></a>
+
+## validateMetaModel(input) ⇒ <code>object</code>
+Validate metamodel instance against the metamodel
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the validated metamodel instance in JSON  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| input | <code>object</code> | the metamodel instance in JSON |
+
+<a name="modelManagerFromMetaModel"></a>
+
+## modelManagerFromMetaModel(metaModel, [validate]) ⇒ <code>object</code>
+Import metamodel to a model manager
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel for this model manager  
+
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| metaModel | <code>object</code> |  | the metamodel |
+| [validate] | <code>boolean</code> | <code>true</code> | whether to perform validation |
+
 <a name="randomNumberInRangeWithPrecision"></a>
 
 ## randomNumberInRangeWithPrecision(userMin, userMax, precision, systemMin, systemMax) ⇒ <code>number</code>
@@ -3140,6 +3705,38 @@ a prescribed precision and inside a global range
 | systemMin | <code>\*</code> | Global minimum on the range, takes precidence over the userMin |
 | systemMax | <code>\*</code> | Global maximum on the range, takes precidence over the userMax |
 
+<a name="updateModels"></a>
+
+## updateModels(models, newModel) ⇒ <code>\*</code>
+Update models with a new model
+
+**Kind**: global function  
+**Returns**: <code>\*</code> - the updated models  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| models | <code>\*</code> | existing models |
+| newModel | <code>\*</code> | new model |
+
+<a name="resolveExternal"></a>
+
+## resolveExternal(models, [options], [fileDownloader]) ⇒ <code>Promise</code>
+Downloads all ModelFiles that are external dependencies and adds or
+updates them in this ModelManager.
+
+**Kind**: global function  
+**Returns**: <code>Promise</code> - a promise when the download and update operation is completed.  
+**Throws**:
+
+- <code>IllegalModelException</code> if the models fail validation
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| models | <code>\*</code> | the AST for all the known models |
+| [options] | <code>Object</code> | Options object passed to ModelFileLoaders |
+| [fileDownloader] | <code>FileDownloader</code> | an optional FileDownloader |
+
 <a name="parse"></a>
 
 ## parse(cto, [fileName]) ⇒ <code>object</code>
@@ -3152,6 +3749,18 @@ Create decorator argument string from a metamodel
 | --- | --- | --- |
 | cto | <code>string</code> | the Concerto string |
 | [fileName] | <code>string</code> | an optional file name |
+
+<a name="parseModels"></a>
+
+## parseModels(files) ⇒ <code>\*</code>
+Parses an array of model files
+
+**Kind**: global function  
+**Returns**: <code>\*</code> - the AST / metamodel  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| files | <code>Array.&lt;string&gt;</code> | array of cto files |
 
 <a name="decoratorArgFromMetaModel"></a>
 
@@ -3225,6 +3834,96 @@ Create a model string from a metamodel
 | Param | Type | Description |
 | --- | --- | --- |
 | metaModel | <code>object</code> | the metamodel |
+
+<a name="findNamespace"></a>
+
+## findNamespace(priorModels, namespace) ⇒ <code>\*</code>
+Find the model for a given namespace
+
+**Kind**: global function  
+**Returns**: <code>\*</code> - the model  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| priorModels | <code>\*</code> | known models |
+| namespace | <code>string</code> | the namespace |
+
+<a name="findDeclaration"></a>
+
+## findDeclaration(thisModel, name) ⇒ <code>\*</code>
+Find a declaration for a given name in a model
+
+**Kind**: global function  
+**Returns**: <code>\*</code> - the declaration  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| thisModel | <code>\*</code> | the model |
+| name | <code>string</code> | the declaration name |
+
+<a name="createNameTable"></a>
+
+## createNameTable(priorModels, metaModel) ⇒ <code>object</code>
+Create a name resolution table
+
+**Kind**: global function  
+**Returns**: <code>object</code> - mapping from a name to its namespace  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| priorModels | <code>\*</code> | known models |
+| metaModel | <code>object</code> | the metamodel (JSON) |
+
+<a name="resolveName"></a>
+
+## resolveName(name, table) ⇒ <code>string</code>
+Resolve a name using the name table
+
+**Kind**: global function  
+**Returns**: <code>string</code> - the namespace for that name  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | the name of the type to resolve |
+| table | <code>object</code> | the name table |
+
+<a name="resolveTypeNames"></a>
+
+## resolveTypeNames(metaModel, table) ⇒ <code>object</code>
+Name resolution for metamodel
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the metamodel with fully qualified names  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| metaModel | <code>object</code> | the metamodel (JSON) |
+| table | <code>object</code> | the name table |
+
+<a name="resolveLocalNames"></a>
+
+## resolveLocalNames(priorModels, metaModel) ⇒ <code>object</code>
+Resolve the namespace for names in the metamodel
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the resolved metamodel  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| priorModels | <code>\*</code> | known models |
+| metaModel | <code>object</code> | the MetaModel |
+
+<a name="resolveLocalNamesForAll"></a>
+
+## resolveLocalNamesForAll(allModels) ⇒ <code>object</code>
+Resolve the namespace for names in the metamodel
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the resolved metamodel  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| allModels | <code>\*</code> | known models |
 
 <a name="inferModelFile"></a>
 
@@ -3424,6 +4123,43 @@ Infers a Concerto model from a JSON instance.
 | namespace | <code>string</code> | the namespace to use for the model |
 | rootTypeName | <code>\*</code> | the name for the root concept |
 | input | <code>\*</code> | the input json object |
+
+<a name="labelToSentence"></a>
+
+## labelToSentence(labelName) ⇒ <code>string</code>
+Inserts correct spacing and capitalization to a camelCase label
+
+**Kind**: global function  
+**Returns**: <code>string</code> - - The label text formatted for rendering  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| labelName | <code>string</code> | the label text to be transformed |
+
+<a name="sentenceToLabel"></a>
+
+## sentenceToLabel(sentence) ⇒ <code>string</code>
+Create a camelCase label from a sentence
+
+**Kind**: global function  
+**Returns**: <code>string</code> - - The camelCase label  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| sentence | <code>string</code> | the sentence |
+
+<a name="writeModelsToFileSystem"></a>
+
+## writeModelsToFileSystem(files, path, options)
+Writes a set of model files to disk
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| files | <code>\*</code> | the set of files to write, with names and whether they are external |
+| path | <code>string</code> | a path to the directory where to write the files |
+| options | <code>\*</code> | a set of options |
 
 <a name="camelCaseToSentence"></a>
 

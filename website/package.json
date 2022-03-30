@@ -22,6 +22,6 @@
     "remarkable-admonitions": "^0.2.2"
   },
   "devDependencies": {
-    "jsdoc-to-markdown": "^7.1.0"
+    "jsdoc-to-markdown": "^7.1.1"
   }
 }

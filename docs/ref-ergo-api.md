@@ -35,6 +35,9 @@ title: Ergo API
 <dt><a href="#validateInput">validateInput(modelManager, input, utcOffset)</a> ⇒ <code>object</code></dt>
 <dd><p>Validate input JSON</p>
 </dd>
+<dt><a href="#validateStandard">validateStandard(modelManager, input, utcOffset)</a> ⇒ <code>object</code></dt>
+<dd><p>Validate standard</p>
+</dd>
 <dt><a href="#validateInputRecord">validateInputRecord(modelManager, input, utcOffset)</a> ⇒ <code>object</code></dt>
 <dd><p>Validate input JSON record</p>
 </dd>
@@ -239,6 +242,20 @@ Validate contract JSON
 
 ## validateInput(modelManager, input, utcOffset) ⇒ <code>object</code>
 Validate input JSON
+
+**Kind**: global function  
+**Returns**: <code>object</code> - the validated input  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| modelManager | <code>object</code> | the Concerto model manager |
+| input | <code>object</code> | the input JSON |
+| utcOffset | <code>number</code> | UTC Offset for DateTime values |
+
+<a name="validateStandard"></a>
+
+## validateStandard(modelManager, input, utcOffset) ⇒ <code>object</code>
+Validate standard
 
 **Kind**: global function  
 **Returns**: <code>object</code> - the validated input  

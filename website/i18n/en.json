@@ -143,6 +143,9 @@
       "ref-migrate-concerto-0.82-1.0": {
         "title": "Concerto 0.82 to 1.0"
       },
+      "ref-migrate-concerto-1.0-2.0": {
+        "title": "Concerto 1.0 to 2.0"
+      },
       "ref-web-components-overview": {
         "title": "Overview"
       },
@@ -658,6 +661,9 @@
       },
       "version-0.22/version-0.22-tutorial-library": {
         "title": "Template Library"
+      },
+      "version-0.22/version-0.22-tutorial-nodejs": {
+        "title": "With Node.js"
       },
       "version-0.22/version-0.22-tutorial-studio": {
         "title": "With Template Studio"
