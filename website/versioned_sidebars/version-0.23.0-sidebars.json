@@ -1,0 +1,148 @@
+{
+  "version-0.23.0-docs": {
+    "Introduction": [
+      "version-0.23.0-accordproject",
+      "version-0.23.0-accordproject-slc",
+      "version-0.23.0-accordproject-template",
+      "version-0.23.0-accordproject-tour",
+      "version-0.23.0-accordproject-faq"
+    ],
+    "Getting Started": [
+      "version-0.23.0-started-installation",
+      "version-0.23.0-started-hello",
+      "version-0.23.0-started-resources"
+    ],
+    "Template Guides": [
+      {
+        "type": "subcategory",
+        "label": "Markdown Text",
+        "ids": [
+          "version-0.23.0-markup-preliminaries",
+          "version-0.23.0-markup-commonmark",
+          "version-0.23.0-markup-ciceromark",
+          "version-0.23.0-markup-templatemark"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Concerto Model",
+        "ids": [
+          "version-0.23.0-model-concerto",
+          "version-0.23.0-model-vocabulary",
+          "version-0.23.0-model-namespaces",
+          "version-0.23.0-model-classes",
+          "version-0.23.0-model-enums",
+          "version-0.23.0-model-properties",
+          "version-0.23.0-model-relationships",
+          "version-0.23.0-model-decorators",
+          "version-0.23.0-model-api"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Ergo Logic",
+        "ids": [
+          "version-0.23.0-logic-ergo",
+          "version-0.23.0-logic-simple-expr",
+          "version-0.23.0-logic-simple-type",
+          "version-0.23.0-logic-complex-type",
+          "version-0.23.0-logic-advanced-expr",
+          "version-0.23.0-logic-stmt",
+          "version-0.23.0-logic-decl",
+          "version-0.23.0-logic-module"
+        ]
+      }
+    ],
+    "Tutorials": [
+      {
+        "type": "subcategory",
+        "label": "Using Cicero",
+        "ids": [
+          "version-0.23.0-tutorial-templates",
+          "version-0.23.0-tutorial-library",
+          "version-0.23.0-tutorial-create"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Template Authoring",
+        "ids": [
+          "version-0.23.0-tutorial-studio",
+          "version-0.23.0-tutorial-vscode"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Template Execution",
+        "ids": [
+          "version-0.23.0-tutorial-nodejs",
+          "version-0.23.0-tutorial-hyperledger"
+        ]
+      }
+    ],
+    "Reference Manual": [
+      {
+        "type": "subcategory",
+        "label": "General",
+        "ids": [
+          "version-0.23.0-ref-glossary",
+          "version-0.23.0-ref-errors"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Migration",
+        "ids": [
+          "version-0.23.0-ref-migrate-0.13-0.20",
+          "version-0.23.0-ref-migrate-0.20-0.21",
+          "version-0.23.0-ref-migrate-0.21-0.22",
+          "version-0.23.0-ref-migrate-concerto-0.82-1.0",
+          "version-0.23.0-ref-migrate-concerto-1.0-2.0"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Cicero Reference",
+        "ids": [
+          "version-0.23.0-ref-cicero-cli",
+          "version-0.23.0-ref-cicero-api",
+          "version-0.23.0-ref-cicero-testing"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Markdown Transform Reference",
+        "ids": [
+          "version-0.23.0-ref-markus-cli"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Concerto Reference",
+        "ids": [
+          "version-0.23.0-ref-concerto-decorators",
+          "version-0.23.0-ref-concerto-cli",
+          "version-0.23.0-ref-concerto-api"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Ergo Reference",
+        "ids": [
+          "version-0.23.0-ref-ergo-stdlib",
+          "version-0.23.0-ref-ergo-cli",
+          "version-0.23.0-ref-ergo-repl",
+          "version-0.23.0-ref-ergo-api",
+          "version-0.23.0-ref-ergo-spec"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Web Components Reference",
+        "ids": [
+          "version-0.23.0-ref-web-components-overview"
+        ]
+      }
+    ]
+  }
+}
