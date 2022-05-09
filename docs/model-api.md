@@ -18,7 +18,7 @@ Below are examples of API use.
 const ModelManager = require('@accordproject/concerto-core').ModelManager;
 const Concerto = require('@accordproject/concerto-core').Concerto;
 const modelManager = new ModelManager();
-modelManager.addModelFile( `namespace org.acme.address
+modelManager.addCTOModel( `namespace org.acme.address
 concept PostalAddress {
   o String streetAddress optional
   o String postalCode optional
