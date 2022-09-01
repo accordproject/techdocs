@@ -165,6 +165,59 @@ will be rendered as:
 >    - sell or otherwise dispose...
 >    - mortgage, ...
 
+## Tables
+
+To create a table, use pipes `|` to separate each column and use three or more hyphens `---` for each column's header. For compatibility, you should not create a table without a header and add also add a pipe on either end of a row.
+
+#### Example
+
+```md
+| Header 1    | Header 2    |
+| ----------- | ----------- |
+| Column 1    | Column 2    |
+```
+
+will be rendered as
+
+>| Header 1    | Header 2    |
+>| ----------- | ----------- |
+>| Column 1    | Column 2    |
+
+It is not necessary to have identical cell widths for the whole table. The rendered output will look the same irrespective of varying cell widths.
+
+```md
+| Header 1    | Header 2    |
+| ---------| ---------|
+| Column 1    | Column 2      |
+```
+
+will be rendered as
+
+>| Header 1    | Header 2    |
+>| ---------| ---------|
+>| Column 1    | Column 2      |
+
+### Formatting the Tables
+
+A table can contain links, code (words or phrases in backticks (`) only) , formatted text (bold, italics) or images. However, adding lists, headings, blockquotes, code blocks, horizontal rules or nested tables is not possible.
+
+#### Example
+
+```md
+| Column1     | Column 2    |
+| ----------- | ----------- |
+| text | ![ap_logo](https://docs.accordproject.org/docs/assets/020/template.png "AP triangle")       | 
+| \`\`\`code block\`\`\`   | **Bold content**     |
+| [link](http://clause.io) | *Italics* |
+```
+will be rendered as 
+
+>| Column1     | Column 2    |
+>| ----------- | ----------- |
+>| text | ![ap_logo](https://docs.accordproject.org/docs/assets/020/template.png "AP triangle")       | 
+>| \`\`\`code block\`\`\`   | **Bold content**     |
+>| [link](http://clause.io) | *Italics* |
+
 ## Horizontal Rule
 
 A horizontal rule may be used to create a "thematic break" between paragraph-level elements. In markdown, you can create a thematic break using either of the following:
