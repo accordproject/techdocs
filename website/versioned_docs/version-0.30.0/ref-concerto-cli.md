@@ -1,6 +1,7 @@
 ---
-id: ref-concerto-cli
+id: version-0.30.0-ref-concerto-cli
 title: Command Line
+original_id: ref-concerto-cli
 ---
 
 Install the `@accordproject/concerto-cli` npm package to access the Concerto command line interface (CLI). After installation you can use the `concerto` command and its sub-commands as described below.

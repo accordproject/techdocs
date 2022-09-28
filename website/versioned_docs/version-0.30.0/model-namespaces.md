@@ -1,6 +1,7 @@
 ---
-id: model-namespaces
+id: version-0.30.0-model-namespaces
 title: Namespaces
+original_id: model-namespaces
 ---
 
 Each Concerto file starts with the name and version of a single namespace. A Concerto namespace declares a set of *declarations*. A declaration is one of: enumeration, concept, asset, participant, transaction, event. All declarations within a single file belong to the same namespace.

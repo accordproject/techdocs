@@ -146,6 +146,9 @@
       "ref-migrate-concerto-1.0-2.0": {
         "title": "Concerto 1.0 to 2.0"
       },
+      "ref-migrate-concerto-2.0-3.0": {
+        "title": "Concerto 2.0 to 3.0"
+      },
       "ref-web-components-overview": {
         "title": "Overview"
       },
@@ -670,6 +673,33 @@
       },
       "version-0.22/version-0.22-tutorial-templates": {
         "title": "Templates Deep Dive"
+      },
+      "version-0.23.0/version-0.23.0-accordproject": {
+        "title": "Overview"
+      },
+      "version-0.23.0/version-0.23.0-markup-preliminaries": {
+        "title": "Preliminaries"
+      },
+      "version-0.23.0/version-0.23.0-model-classes": {
+        "title": "Classes"
+      },
+      "version-0.23.0/version-0.23.0-model-properties": {
+        "title": "Properties"
+      },
+      "version-0.23.0/version-0.23.0-model-vocabulary": {
+        "title": "Vocabulary"
+      },
+      "version-0.23.0/version-0.23.0-ref-cicero-api": {
+        "title": "Cicero API"
+      },
+      "version-0.23.0/version-0.23.0-ref-concerto-api": {
+        "title": "Concerto API"
+      },
+      "version-0.23.0/version-0.23.0-ref-ergo-api": {
+        "title": "Ergo API"
+      },
+      "version-0.23.0/version-0.23.0-ref-migrate-concerto-1.0-2.0": {
+        "title": "Concerto 1.0 to 2.0"
       }
     },
     "links": {
