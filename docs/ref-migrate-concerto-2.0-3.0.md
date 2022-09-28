@@ -37,30 +37,32 @@ concept Person {
 ```
 
 
-It is recommended that you migrate your CTO files to use versioned namespaced. In the future the default setting for `strict` will be `true`, likely followed by deprecate of the `strict:false` behavior and eventual removal of support for unversioned namespaces.
+It is recommended that you migrate your CTO files to use versioned namespaces. In the future the default setting for `strict` will be `true`, likely followed by deprecation of the `strict:false` behavior and eventual removal of support for unversioned namespaces. You have been warned!
 
 
 ## CLI Enhancements
 
 The `concerto-cli` command line utility has been improved and extended, with support for checking semver compatability of models, incrementing namespace versions, generating code from models, and parser performance improvements.
 
-Please see the updated CLI documentation for details.
+Please see the updated [CLI documentation](ref-concerto-cli.md) for details.
 
 ## Core Enhancements
 
 A new `InMemoryWriter` class is provided which adheres to the `FileWriter` interface, while storing files in memory. This makes it easier to integrate code generation into environments without access to a local filesystem.
 
+### Security Enhancements
+
 The regular expression (regex) engine used by core to validate string values is now pluggable, allowing integrators to protect themselves from recursive regular expressions, or other attacks.
 
 ## Tools Enhancements
 
-Many improvemements to code generation have been delivered, including support for versioned namespaces. Two new code generation targets are available:
-- Mermaid, a textual format to represent class diagrams
-- Markdown, a textual format to provide an overview of a model, including a nested Mermaid format diagram
+Many improvemements to code generation have been delivered, including support for versioned namespaces, and much improved C# code generations. In addition, two new code generation targets are available:
+- [Mermaid](https://mermaid-js.github.io), a textual format to represent class diagrams
+- Markdown, a textual format to provide an overview of a model, including a nested Mermaid format diagram, as [supported by GitHub](https://github.blog/2022-02-14-include-diagrams-markdown-files-mermaid/).
 
 ## Analysis (New Feature!)
 
-A new package `concerto-analysis` has been delivered, and exposed via the CLI, allowing users to compare two Concerto models, to detect new, updated, removed model elements. The results of analysis can then be used to update the versions of namespaces, adhering to  semantic versioning best practices.
+A new package `concerto-analysis` has been delivered, and exposed via the CLI, allowing users to compare two Concerto models, to detect new, updated, and removed model elements. The results of analysis can then be used to update the versions of namespaces, adhering to  semantic versioning best practices.
 
 
 
