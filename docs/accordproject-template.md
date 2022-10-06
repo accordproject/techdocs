@@ -19,7 +19,7 @@ The three components (Text - Model - Logic) can also be intuitively understood a
 
 ![Template Text](assets/020/template_text.png)
 
-The template text is the natural language of the clause or contract. It can include markup to indicate [variables](ref-glossary#variable) for that template.
+The template text is the natural language of the clause or contract. It can include markup to indicate [variables](ref-glossary.md#variable) for that template.
 
 The following shows the text of an **Acceptance of Delivery** clause.
 
@@ -79,7 +79,7 @@ TemplateMark is the markup format in which the text for Accord Project templates
 
 It also provides the ability to specify the document structure (e.g., headings, lists), to highlight certain terms (e.g., in bold or italics), to indicate text which is optional in the agreement, and more.
 
-_More information about the Accord Project markup can be found in the [Markdown Text](markup-templatemark) Section of this documentation._
+_More information about the Accord Project markup can be found in the [Markdown Text](markup-templatemark.md) Section of this documentation._
 
 ## Template Model
 
@@ -114,13 +114,13 @@ asset AcceptanceOfDeliveryClause extends AccordClause {
 
 Thanks to that model, the computer knows that the `shipper` variable (`"Party A"` in the example) and the `receiver` variable (`"Party B"` in the example) are both `Organization` types. The computer also knows that variable `businessDays` (`10` in the example) is an `Integer` type; and that the variable `deliverable` (`"Widgets"` in the example) is a `String` type, and can contain any text description.
 
-> If you are unfamiliar with the different types of variables, or want a more thorough explanation of what variables are, please refer to our [Glossary](ref-glossary#data-models) for a more detailed explanation.
+> If you are unfamiliar with the different types of variables, or want a more thorough explanation of what variables are, please refer to our [Glossary](ref-glossary.md#data-models) for a more detailed explanation.
 
 ### Concerto
 
 Concerto is the language which is used to write models in Accord Project templates. Concerto offers modern modeling capabilities including support for primitive types (numbers, dates, etc), nested or optional data structures, enumerations, relationships, object-oriented style inheritance, and more.
 
-_More information about Concerto can be found in the [Concerto Model](model-concerto) section of this documentation._
+_More information about Concerto can be found in the [Concerto Model](model-concerto.md) section of this documentation._
 
 ## Template Logic
 
@@ -130,7 +130,7 @@ The combination of text and model already makes templates _machine-readable_, wh
 
 ### During Drafting
 
-In the [Overview](accordproject) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan]():
+In the [Overview](accordproject.md) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan]():
 
 ```tem
 ## Fixed rate loan
@@ -193,21 +193,21 @@ This logic describes what conditions must be met for a delivery to be accepted. 
 
 Ergo is the programming language which is used to express contractual logic in templates. Ergo is specifically designed for legal agreements, and is intended to be accessible for those creating the corresponding prose for those computable legal contracts. Ergo expressions can also be embedded in the text for a template.
 
-_More information about Ergo can be found in the [Ergo Logic](logic-ergo) Section of this documentation._
+_More information about Ergo can be found in the [Ergo Logic](logic-ergo.md) Section of this documentation._
 
 ## Cicero
 
 The implementation for the Accord Project templates is called [Cicero](https://github.com/accordproject/cicero). It defines and can read the structure of templates, with natural language bound to a data model and logic. By doing this, Cicero allows users to create, validate and execute software templates which embody all three components in the template triangle above.
 
-_More information about how to install Cicero and get started with Accord Project templates can be found in the [Installation](started-installation) Section of this documentation._
+_More information about how to install Cicero and get started with Accord Project templates can be found in the [Installation](started-installation.md) Section of this documentation._
 
 Let's look at each component of the template triangle, starting with the text.
 
 ### What next?
 
-Build your first smart legal contract templates, either [online](tutorial-latedelivery) with Template Studio, or by [installing Cicero](started-installation).
+Build your first smart legal contract templates, either [online](tutorial-latedelivery.md) with Template Studio, or by [installing Cicero](started-installation.md).
 
-Explore [sample templates](started-resources) and other resources in the rest of this documentation.
+Explore [sample templates](started-resources.md) and other resources in the rest of this documentation.
 
-If some of technical words are unfamiliar, please consult the [Glossary](ref-glossary) for more detailed explanations.
+If some of technical words are unfamiliar, please consult the [Glossary](ref-glossary.md) for more detailed explanations.
 

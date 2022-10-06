@@ -45,14 +45,14 @@ There is a welcoming community on Discord that is eager to help. [Join our Commu
 
 ## About this documentation
 
-If you are new to Accord Project, you may want to first read about the notion of [Smart Legal Contracts](accordproject-slc) and about [Accord Project Templates](accordproject-template). We also recommend taking the [Online Tour](accordproject-tour).
+If you are new to Accord Project, you may want to first read about the notion of [Smart Legal Contracts](accordproject-slc.md) and about [Accord Project Templates](accordproject-template.md). We also recommend taking the [Online Tour](accordproject-tour.md).
 
 To start using Accord Project templates, follow the [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instructions in the _Getting Started_ Section of the documentation.
 
 You can find in-depth guides for the different components of a template in the _Template Guides_ part of the documentation:
-- Learn how to write contract or template text in the [Markdown Text](markup-preliminaries) Guide
-- Learn how to design your data model in the [Concerto Model](model-concerto) Guide
-- Learn how to write smart contract logic in the [Ergo Logic](logic-ergo) Guide
+- Learn how to write contract or template text in the [Markdown Text](markup-preliminaries.md) Guide
+- Learn how to design your data model in the [Concerto Model](model-concerto.md) Guide
+- Learn how to write smart contract logic in the [Ergo Logic](logic-ergo.md) Guide
 
-Finally, the documentation includes several step by step [Tutorials](tutorial-templates) and some reference information (for APIs, command-line tools, etc.) can be found in the [Reference Manual](ref-glossary).
+Finally, the documentation includes several step by step [Tutorials](tutorial-templates.md) and some reference information (for APIs, command-line tools, etc.) can be found in the [Reference Manual](ref-glossary.md).
 

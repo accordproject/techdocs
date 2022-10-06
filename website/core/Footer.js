@@ -71,7 +71,7 @@ class Footer extends React.Component {
                 <a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a>
               </li>
               <li>
-                <a href="https://accord-project-slack-signup.herokuapp.com">Slack</a>
+                <a href="https://discord.com/invite/Zm99SKhhtA">Discord</a>
               </li>
               <li>
                 <a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">

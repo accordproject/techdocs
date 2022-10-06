@@ -3,7 +3,7 @@ id: logic-complex-type
 title: Complex Values & Types
 ---
 
-So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Concerto Modeling](model-concerto) (often referred to as CTO models after the `.cto` file extension). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.
+So far we only considered atomic values and types, such as string values or integers, which are not sufficient for most contracts. In Ergo, values and types are based on the [Concerto Modeling](model-concerto.md) (often referred to as CTO models after the `.cto` file extension). This provides a rich vocabulary to define the parameters of your contract, the information associated to contract participants, the structure of contract obligation, etc.
 
 In Ergo, you can either import an existing CTO model or declare types directly within your code. Let us look at the different kinds of types you can define and how to create values with those types.
 
@@ -30,7 +30,7 @@ You can construct arrays using other expressions:
     [pi,e,golden]
 ```
 
-Ergo also provides functions to manipulate arrays as parts of its [standard library](ref-logic-stdlib.html#functions-on-arrays). The following example uses the `sum` function to calculate the sum of all the elements in the `prettynumbers` array.
+Ergo also provides functions to manipulate arrays as parts of its [standard library](ref-logic-stdlib.md#functions-on-arrays). The following example uses the `sum` function to calculate the sum of all the elements in the `prettynumbers` array.
 ```ergo
     let pi = 3.14;
     let e = 2.72;

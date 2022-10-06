@@ -20,14 +20,14 @@ The Concerto Modeling Language (CML) allows you to:
 ### Metamodel Components
 
 The Concerto metamodel contains the following:
-- [Namespaces](model-namespaces)
-- [Imports](model-namespaces#imports)
-- [Concepts](model-classes#concepts)
-- [Assets](model-classes#assets)
-- [Participants](model-classes#participants)
-- [Transactions](model-classes#transactions)
-- [Enumerations](model-enums)
-- [Properties & Meta Properties](model-properties)
-- [Relationships](model-relationships)
-- [Decorators](model-decorators)
+- [Namespaces](model-namespaces.md)
+- [Imports](model-namespaces.md#imports)
+- [Concepts](model-classes.md#concepts)
+- [Assets](model-classes.md#assets)
+- [Participants](model-classes.md#participants)
+- [Transactions](model-classes.md#transactions)
+- [Enumerations](model-enums.md)
+- [Properties & Meta Properties](model-properties.md)
+- [Relationships](model-relationships.md)
+- [Decorators](model-decorators.md)
 
