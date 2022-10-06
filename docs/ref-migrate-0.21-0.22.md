@@ -6,7 +6,7 @@ title: Cicero 0.21 to 0.22
 The main change between the `0.21` release and the `0.22` release is the switch to version `1.0` of the Concerto modeling language and library. This change comes along with a complete revision for the Accord Project "base models" which define key types for: clause and contract data, parties, obligations and requests / responses. We encourage developers to get familiarized with the [new base models](https://github.com/accordproject/models/tree/master/src/accordproject) before switching to Cicero `0.22`.
 
 :::note
-Before following those migration instructions, make sure to first install version `0.22` of Cicero, as described in the [Install Cicero](started-installation) Section of this documentation.
+Before following those migration instructions, make sure to first install version `0.22` of Cicero, as described in the [Install Cicero](started-installation.md) Section of this documentation.
 :::
 
 ## Metadata Changes

@@ -74,7 +74,7 @@ and should return the array `[{a: 3.0, b: 4.0, c: 5.0}, {a: 4.0, b: 3.0, c: 5.0}
 
 ## Template Literals
 
-Template literals are similar to [String literals](logic-simple-expr#literal-values) but with the ability to embed Ergo expressions. They are written with between `` ` `` and may contains Ergo expressions inside `{{%` and `%}}`.
+Template literals are similar to [String literals](logic-simple-expr.md#literal-values) but with the ability to embed Ergo expressions. They are written with between `` ` `` and may contains Ergo expressions inside `{{%` and `%}}`.
 
 The following Ergo expressions illustrates the use of a template literal to construct a String describing the content of a record.
 ```
@@ -88,7 +88,7 @@ Should return the string literal `"Course \"Law for developers\" (Cost: 29.99)"`
 
 ## Formatting
 
-One can use template formatting using the `Expr as "FORMAT"` Ergo expression. Supported formats are the same as those available in TemplateMark [Formatted Variables](markup-templatemark#formatted-variables).
+One can use template formatting using the `Expr as "FORMAT"` Ergo expression. Supported formats are the same as those available in TemplateMark [Formatted Variables](markup-templatemark.md#formatted-variables).
 
 For instance:
 ```

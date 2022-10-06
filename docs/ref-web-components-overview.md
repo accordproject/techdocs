@@ -18,7 +18,7 @@ The Contract Editor component provides a rich-text content editor for contract t
 The contract editor does not support templates which use the following CiceroMark features:
 
 * Lists containing [nested lists](markup-commonmark.md#nested-lists)
-* Templates [list blocks](markup-blocks.md#list-blocks)
+* List blocks [list blocks](markup-commonmark.md#list-blocks)
 
 ## Error Logger
 

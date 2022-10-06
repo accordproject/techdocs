@@ -6,7 +6,7 @@ title: Cicero 0.20 to 0.21
 The main change between the `0.20` release and the `0.21` release is the new markdown syntax and parser infrastructure based on [`markdown-it`](https://github.com/markdown-it/markdown-it). While most templates designed for `0.20` should still work on `0.21` some changes might be needed to the contract or template text to account for this new syntax.
 
 :::note
-Before following those migration instructions, make sure to first install version `0.21` of Cicero, as described in the [Install Cicero](started-installation) Section of this documentation.
+Before following those migration instructions, make sure to first install version `0.21` of Cicero, as described in the [Install Cicero](started-installation.md) Section of this documentation.
 :::
 
 ## Metadata Changes

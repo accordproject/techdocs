@@ -13,7 +13,7 @@ the comments mention that `"John Smith"` is of type `String`, and that `1` is of
 
 In reality, the Ergo compiler understands which types your expressions have and can detect whether those expressions apply to the right type(s) or not.
 
-Ergo types are based on the [Concerto Modeling](model-concerto) Language.
+Ergo types are based on the [Concerto Modeling](model-concerto.md) Language.
 
 ## Primitive types
 

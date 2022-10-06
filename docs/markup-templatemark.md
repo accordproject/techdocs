@@ -5,7 +5,7 @@ title: TemplateMark
 
 TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas.
 
-The kind of extension which can be used is based on the _type_ of the variable in the [Concerto Model](model-concerto) for your template. For each type in your model differrent markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.
+The kind of extension which can be used is based on the _type_ of the variable in the [Concerto Model](model-concerto.md) for your template. For each type in your model differrent markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.
 
 ## Variables
 

@@ -9,7 +9,7 @@ The text for Accord Project templates is written using markdown. It builds on th
 
 As with other markup languages, CommonMark can express the document structure (e.g., headings, paragraphs, lists) and formatting useful for readability (e.g., italics, bold, quotations).
 
-The main reference is the [CommonMark Specification](https://spec.commonmark.org/0.29/) but you can find an overview of CommonMark main features in the [CommonMark](markup-commonmark) Section of this guide.
+The main reference is the [CommonMark Specification](https://spec.commonmark.org/0.29/) but you can find an overview of CommonMark main features in the [CommonMark](markup-commonmark.md) Section of this guide.
 
 ## Accord Project Extensions
 
@@ -69,7 +69,7 @@ and monthly payments of {{%£667.00%}}
 {{/clause}}
 ```
 
-More information and examples can be found in the [CiceroMark](markup-ciceromark) part of this guide.
+More information and examples can be found in the [CiceroMark](markup-ciceromark.md) part of this guide.
 
 ### TemplateMark
 
@@ -95,7 +95,7 @@ and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) 
 {{/clause}}
 ```
 
-More information and examples can be found in the [TemplateMark](markup-templatemark) part of this guide.
+More information and examples can be found in the [TemplateMark](markup-templatemark.md) part of this guide.
 
 ## Dingus
 

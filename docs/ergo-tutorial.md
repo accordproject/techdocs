@@ -39,7 +39,7 @@ Before you can build Ergo, you must install and configure the following dependen
 
 ### Git
 
-* Git: The [Github Guide to Installing Git][git-setup] is a good source of information.
+* Git: The [Github Guide to Installing Git][git-setup.md] is a good source of information.
  
 ### Node.js
 

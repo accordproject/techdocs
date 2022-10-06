@@ -30,7 +30,7 @@ You can construct arrays using other expressions:
     [pi,e,golden]
 ```
 
-Ergo also provides functions to manipulate arrays as parts of its [standard library](ref-logic-stdlib.md#functions-on-arrays). The following example uses the `sum` function to calculate the sum of all the elements in the `prettynumbers` array.
+Ergo also provides functions to manipulate arrays as parts of its [standard library](ref-ergo-stdlib.md#functions-on-arrays). The following example uses the `sum` function to calculate the sum of all the elements in the `prettynumbers` array.
 ```ergo
     let pi = 3.14;
     let e = 2.72;
@@ -49,7 +49,7 @@ You can access the element at a given position inside the array using an index:
     fruits[4]          // Returns: none
 ```
 
- Note that the index starts at `0` for the first element and that indexed-based access returns an optional value, since Ergo compiler cannot statically determine whether there will be an element at the corresponding index. You can learn more about how to handle optional values and types in the [Optionals](logic-complex-type#optionals) Section below.
+ Note that the index starts at `0` for the first element and that indexed-based access returns an optional value, since Ergo compiler cannot statically determine whether there will be an element at the corresponding index. You can learn more about how to handle optional values and types in the [Optionals](logic-complex-type.md#optionals) Section below.
 
 ## Classes
 
@@ -181,7 +181,7 @@ else "I found nothing :-("
 ```
 and should return `"I found nothing :-("`.
 
-More details on match expressions can be found in [Advanced Expressions](logic-advanced-expr#match).
+More details on match expressions can be found in [Advanced Expressions](logic-advanced-expr.md#match).
 
 For conciseness, a few operators are also available on optional values. One can give a default value when the optional is `none` using the operator `??`. For instance:
 
