@@ -42,6 +42,8 @@ concept Product identified {
 }
 ```
 
+When using `identified by`, the explicitly named identity field must be of type `String`. Identifying fields of other types are not supported.
+
 ## Assets
 
 An asset is a class declaration that has a single `String` property which acts as an identifier. You can use the `modelManager.getAssetDeclarations` API to look up all assets.
