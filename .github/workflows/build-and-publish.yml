@@ -28,26 +28,26 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: NPM Install
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
           cd ./website
           pwd
           npm install
 
       - name: NPM Build
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
           cd ./website
           pwd
           npm run build
 
       - name: Set S3 
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         run: |
             echo "AWS_S3_BUCKET=${{secrets.AWS_S3_BUCKET}}" >> $GITHUB_ENV
 
       - name: Deploy to S3
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
