@@ -22,7 +22,7 @@ Concepts can be declared `abstract` if it should not be instantiated (must be su
 
 ## Identity
 
-Concepts may optionally declare an identifying field, using either the `identified by` (explicitly named identity field) or `identified` (`$identifier` system identity field) syntax.
+Concepts may optionally declare an identifying field, using either the `identified by` (explicitly named identity field) or `identified` (`$identifier` system identity field) syntax. Identifying fields must have type `String`.
 
 `Person` below is defined to use the `email` property as its identifying field.
 
@@ -53,6 +53,8 @@ asset Vehicle identified by vin {
 }
 ```
 
+Assets are implicitly `identified` if you do not specify your own identifing property. The property name is `$identifier`.
+
 Assets are typically used in your models for the long-lived identifiable Things (or nouns) in the model: cars, orders, shipping containers, products, etc.
 
 ## Participants
@@ -65,15 +67,16 @@ participant Customer identified by email {
 }
 ```
 
+Participants are implicitly `identified` if you do not specify your own identifing property. The property name is `$identifier`.
+
 Participants are typically used for the identifiable people or organizations in the model: person, customer, company, business, auditor, etc.
 
 ## Transactions
 
-Transactions are similar to participants in that they are also class declarations that have a single `String` property acting as an identifier. You can use the `modelManager.getTransactionDeclarations` API to look up all transactions.
+Transactions have an implicit `$timestamp` property with type `DateTime`. You can use the `modelManager.getTransactionDeclarations` API to look up all transactions.
 
 ```js
-transaction Order identified by orderId {
-  o String orderId
+transaction Order {
 }
 ```
 
@@ -81,11 +84,10 @@ Transactions are typically used in models for the identifiable business events o
 
 ## Events
 
-Events are similar to participants in that they are also class declarations that have a single `String` property acting as an identifier. You can use the `modelManager.getEventDeclarations` API to look up all events.
+Events are similar to Transactions in that they are also class declarations that have a `$timestamp` property. You can use the `modelManager.getEventDeclarations` API to look up all events.
 
 ```js
-event LateDelivery identified by eventId {
-  o String eventId
+event LateDelivery {
 }
 ```
 
