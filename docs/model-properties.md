@@ -15,8 +15,27 @@ Concerto supports the following primitive types:
 |`Double` | a double precision 64 bit numeric value.
 |`Integer` | a 32 bit signed whole number.
 |`Long` | a 64 bit signed whole number.
-|`DateTime` | an ISO-8601 compatible time instance, with optional time zone and UTZ offset.
+|`DateTime` | an ISO 8601 & RFC 3339 compatible date or dateTime instance, with UTC offset.
 |`Boolean` | a Boolean value, either true or false.
+
+:::note
+The most general form of supported `DateTime` values is `2022-11-28T12:10:05.105-05:00` however, other values are supported. During validation, `DateTime` values will be normalized to this format.
+
+We guarantee to support values that are included in the ISO 8601-1:2019, RFC 3339 and HTML Living Standard specifications. Other formats may be accepted depending on your platforms, but are subject to change.
+
+Supported date & dateTime formats foe the `DateTime` primitive type:
+- `YYYY-MM-DD`
+- `YYYY-MM-DDTHH:mm:ssZ`
+- `YYYY-MM-DDTHH:mm:ss.SZ`
+- `YYYY-MM-DDTHH:mm:ss.SSZ`
+- `YYYY-MM-DDTHH:mm:ss.SSSZ`
+- `YYYY-MM-DDTHH:mm:ss.S±HH:mm`
+- `YYYY-MM-DDTHH:mm:ss.SS±HH:mm`
+- `YYYY-MM-DDTHH:mm:ss.SSS±HH:mm`
+
+Milliseconds will be truncated at 3 digits.
+:::
+
 
 ### Meta Properties
 
