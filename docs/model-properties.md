@@ -19,13 +19,10 @@ Concerto supports the following primitive types:
 |`Boolean` | a Boolean value, either true or false.
 
 :::note
-The most general form of supported `DateTime` values is `2022-11-28T12:10:05.105-05:00` however, other values are supported. During validation, `DateTime` values will be normalized to this format.
-
-We guarantee to support values that are included in the ISO 8601-1:2019, RFC 3339 and HTML Living Standard specifications. Other formats may be accepted depending on your platforms, but are subject to change.
-
-Supported date & dateTime formats foe the `DateTime` primitive type:
+Supported date & date-time formats for the `DateTime` primitive type:
 - `YYYY-MM-DD`
 - `YYYY-MM-DDTHH:mm:ssZ`
+- `YYYY-MM-DDTHH:mm:ss±HH:mm`
 - `YYYY-MM-DDTHH:mm:ss.SZ`
 - `YYYY-MM-DDTHH:mm:ss.SSZ`
 - `YYYY-MM-DDTHH:mm:ss.SSSZ`
@@ -34,6 +31,8 @@ Supported date & dateTime formats foe the `DateTime` primitive type:
 - `YYYY-MM-DDTHH:mm:ss.SSS±HH:mm`
 
 Milliseconds will be truncated at 3 digits.
+
+We guarantee to support values that are included by the ISO 8601-1:2019, RFC 3339 and HTML Living Standard specifications. However, other formats may be accepted depending on your platforms, but are subject to change. During validation, `DateTime` values will be normalized to the `YYYY-MM-DDTHH:mm:ss.SSSZ` format. 
 :::
 
 
