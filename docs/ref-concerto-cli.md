@@ -23,6 +23,7 @@ Commands:
   concerto print              print a JSON syntax tree to a cto string
   concerto version <release>  modify the version of one or more model files
   concerto compare            compare two Concerto model files
+  concerto infer              generate a concerto model from a source schema
   concerto generate <mode>    generate a sample JSON object for a concept
 
 Options:
@@ -229,6 +230,33 @@ Options:
       --new      the new Concerto model file                 [string] [required]
 ```
 
+## concerto infer
+`concerto infer` allows you to generate a Concerto model from a source schema such as JSON Schema or an OpenAPI definition.
+
+```md
+concerto infer
+
+generate a concerto model from a source schema
+
+Options:
+      --version          Show version number                       [boolean]
+  -v, --verbose                                             [default: false]
+      --help             Show help                                 [boolean]
+      --input            path to the input file          [string] [required]
+      --output           path to the output file                    [string]
+      --format           either `openapi` or `jsonSchema`
+                                            [string] [default: "jsonSchema"]
+      --namespace        The namespace for the output model
+                                                         [string] [required]
+      --typeName         The name of the root type[string] [default: "Root"]
+      --capitalizeFirst  Capitalize the first character of type names
+                                                  [boolean] [default: false]
+```
+
+### Example
+```console
+concerto infer --namespace com.example.restapi --format openapi --input example.swagger.json --output example.cto 
+```
 
 ## concerto generate
 `concerto generate` allows you to generate a sample instance for a type in a model
