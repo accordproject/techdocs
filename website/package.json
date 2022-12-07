@@ -18,7 +18,7 @@
   "dependencies": {
     "axios": "^0.21.2",
     "docusaurus": "^1.14.7",
-    "qs": "^6.9.6",
+    "qs": "^6.9.7",
     "remarkable-admonitions": "^0.2.2"
   },
   "devDependencies": {
