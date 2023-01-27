@@ -52,7 +52,7 @@ To start using Accord Project templates, follow the [Install Cicero](https://doc
 
 You can find in-depth guides for the different components of a template in the _Template Guides_ part of the documentation:
 - Learn how to write contract or template text in the [Markdown Text](markup-preliminaries.md) Guide
-- Learn how to design your data model in the [Concerto Model](model-concerto.md) Guide
+- Learn how to design your data model in the [Concerto Model](https://concerto.accordproject.org/docs/intro) Guide
 - Learn how to write smart contract logic in the [Ergo Logic](logic-ergo.md) Guide
 
 Finally, the documentation includes several step by step [Tutorials](tutorial-templates.md) and some reference information (for APIs, command-line tools, etc.) can be found in the [Reference Manual](ref-glossary.md).

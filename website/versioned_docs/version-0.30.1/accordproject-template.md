@@ -121,7 +121,7 @@ Thanks to that model, the computer knows that the `shipper` variable (`"Party A"
 
 Concerto is the language which is used to write models in Accord Project templates. Concerto offers modern modeling capabilities including support for primitive types (numbers, dates, etc), nested or optional data structures, enumerations, relationships, object-oriented style inheritance, and more.
 
-_More information about Concerto can be found in the [Concerto Model](model-concerto.md) section of this documentation._
+_More information about Concerto can be found in the [Concerto Model](https://concerto.accordproject.org/docs/intro) section of this documentation._
 
 ## Template Logic
 
