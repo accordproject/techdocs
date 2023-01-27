@@ -62,33 +62,6 @@
       "markup-templatemark": {
         "title": "TemplateMark"
       },
-      "model-api": {
-        "title": "Using the API"
-      },
-      "model-classes": {
-        "title": "Classes"
-      },
-      "model-concerto": {
-        "title": "Concerto Overview"
-      },
-      "model-decorators": {
-        "title": "Decorators"
-      },
-      "model-enums": {
-        "title": "Enumerations"
-      },
-      "model-namespaces": {
-        "title": "Namespaces"
-      },
-      "model-properties": {
-        "title": "Properties"
-      },
-      "model-relationships": {
-        "title": "Relationships"
-      },
-      "model-vocabulary": {
-        "title": "Vocabulary"
-      },
       "ref-cicero-api": {
         "title": "Cicero API"
       },
@@ -139,15 +112,6 @@
       },
       "ref-migrate-0.21-0.22": {
         "title": "Cicero 0.21 to 0.22"
-      },
-      "ref-migrate-concerto-0.82-1.0": {
-        "title": "Concerto 0.82 to 1.0"
-      },
-      "ref-migrate-concerto-1.0-2.0": {
-        "title": "Concerto 1.0 to 2.0"
-      },
-      "ref-migrate-concerto-2.0-3.0": {
-        "title": "Concerto 2.0 to 3.0"
       },
       "ref-web-components-overview": {
         "title": "Overview"
@@ -751,12 +715,6 @@
       },
       "version-0.30.1/version-0.30.1-markup-templatemark": {
         "title": "TemplateMark"
-      },
-      "version-0.30.1/version-0.30.1-model-concerto": {
-        "title": "Concerto Overview"
-      },
-      "version-0.30.1/version-0.30.1-model-decorators": {
-        "title": "Decorators"
       },
       "version-0.30.1/version-0.30.1-ref-migrate-0.13-0.20": {
         "title": "Cicero 0.13 to 0.20"

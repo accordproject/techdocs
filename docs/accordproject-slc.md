@@ -39,7 +39,7 @@ To make sense of the data, a _Data Model_, expressed in the Concerto schema lang
   o Double monthlyPayment // monthlyPayment is a floating-point number
 ```
 
-The Data Types allow a computer to validate values inserted into each of the `{{variable}}` placeholders (e.g., `2.5` is a valid `{{rate}}` but `January` isn't). In other words, the Data Model lets a computer make sense of the structure of (and data in) the clause. To learn more about Data Types see [Concerto Modeling](model-concerto.md).
+The Data Types allow a computer to validate values inserted into each of the `{{variable}}` placeholders (e.g., `2.5` is a valid `{{rate}}` but `January` isn't). In other words, the Data Model lets a computer make sense of the structure of (and data in) the clause. To learn more about Data Types see [Concerto Modeling](https://concerto.accordproject.org/docs/intro).
 
 The clause data (the 'deal points') can then be capture as a machine-readable representation:
 
