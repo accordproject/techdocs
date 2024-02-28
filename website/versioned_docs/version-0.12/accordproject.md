@@ -67,7 +67,7 @@ Beyond a core technology for executable legal templates, Accord Project is build
 
 Several tools are also available to facilitate authoring of Accord Project templates:
 
-- [Template Studio](https://studio.accordproject.org/): a Web-based editor for Accord Project templates
+- [Template Playground](https://playground.accordproject.org/): a Web-based editor for Accord Project templates
 - [VSCode Plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/)
 
 ## Open Source Community
@@ -78,9 +78,9 @@ Join the Accord Project Technology Working Group <a href="https://docs.google.co
 
 ## Try Accord Project Online
 
-The simplest way to get an introduction to the Accord Project technology is through the online [Template Studio](https://studio.accordproject.org) editor (you can open template studio from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right of the page).
+The simplest way to get an introduction to the Accord Project technology is through the online [Template Playground](https://studio.accordproject.org) editor (you can open Template Playground from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right of the page).
 
-The following video offers a tour of Template Studio and an introduction to the key concepts behind the Accord Project technology.
+The following video offers a tour of Template Playground and an introduction to the key concepts behind the Accord Project technology.
 
 <iframe src="https://player.vimeo.com/video/328933628" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 

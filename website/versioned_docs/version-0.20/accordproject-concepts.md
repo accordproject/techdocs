@@ -208,7 +208,7 @@ _More information about Ergo can be found in the [Ergo Logic](logic-ergo) Sectio
 
 ## What next?
 
-Build your first smart legal contract templates, either [online](tutorial-latedelivery) with Template Studio, or by [installing Cicero](started-installation).
+Build your first smart legal contract templates, either [online](tutorial-latedelivery) with Template Playground, or by [installing Cicero](started-installation).
 
 Explore [sample templates](started-resources) and other resources in the rest of this documentation.
 

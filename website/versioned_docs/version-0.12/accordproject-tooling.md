@@ -29,8 +29,8 @@ A simple VIM mode for Ergo can be found in the [ergo.vim](https://github.com/acc
 
 > Those are not maintained as actively as the rest of the Accord Project. If you know emacs lisp or are a VIM user and would like to contribute, please contact us on the Accord Project Slack or directly through GitHub!
 
-## Template Studio
+## Template Playground
 
-Finally, [Template Studio](https://studio.accordproject.org) lets you create, edit and test legal clause or contract templates built with the Accord Project directly from your browser, without having to install anything.
+Finally, [Template Playground](https://studio.accordproject.org) lets you create, edit and test legal clause or contract templates built with the Accord Project directly from your browser, without having to install anything.
 
 ![Model Repository](/img/studio.png)

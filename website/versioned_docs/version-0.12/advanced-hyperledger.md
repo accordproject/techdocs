@@ -57,11 +57,11 @@ Once you've provisioned your server, install all of the required tools using the
 - [Git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)
 - [Fabric](https://hyperledger-fabric.readthedocs.io/en/release-1.3/getting_started.html)
 
-## Create your Smart Legal Contract with Template Studio
+## Create your Smart Legal Contract with Template Playground
 
-Cicero Templates are the magic glue that binds your clever legal words with the logic that will run on your network. In this first step, we'll create a template in [Template Studio](https://studio.accordproject.org/).
+Cicero Templates are the magic glue that binds your clever legal words with the logic that will run on your network. In this first step, we'll create a template in [Template Playground](https://playground.accordproject.org/).
 
-Template Studio is a browser-based development environment for Cicero Templates. Your templates are only every stored in your browser (and are not shared with the Accord Project), so you should **Export** your work to save it for another time.
+Template Playground is a browser-based development environment for Cicero Templates. Your templates are only every stored in your browser (and are not shared with the Accord Project), so you should **Export** your work to save it for another time.
 
 This tutorial uses the `supplyagreement-perishable-goods` template. This Smart Legal Agreement combines a plaintext contract for the shipment of goods that impose conditions on temperature and humidity until the shipment is delivered. 
 
@@ -73,9 +73,9 @@ Once you've connected to your system, open https://studio.accordproject.org in a
 In the hosted images, Mozilla Firefox is preinstalled, click the icon on the top-left toolbar to launch it.
 ::: 
 
-The Template Studio allows you to load sample templates for smart legal agreements from the [Accord Project template library](https://templates.accordproject.org/).
+The Template Playground allows you to load sample templates for smart legal agreements from the [Accord Project template library](https://templates.accordproject.org/).
 
-> In the Template Studio search bar, type **supplyagreement-perishable-goods**. Select the 0.12.1 version.
+> In the Template Playground search bar, type **supplyagreement-perishable-goods**. Select the 0.12.1 version.
 
 Explore the source components of the template.
 
@@ -100,7 +100,7 @@ The _Obligations_ that are emitted by the contract are configured to be emitted 
 
 Save your CTA (Cicero Template Archive) file somewhere safe, as you'll need to use it in a later step. We suggest saving the file in user's the home folder.
 
-> Create a `request.json` file with the contents of the **Request** box from the **Logic** -> **Test Execution** page in Template Studio. 
+> Create a `request.json` file with the contents of the **Request** box from the **Logic** -> **Test Execution** page in Template Playground. 
 
 For example:
 ```json
@@ -123,7 +123,7 @@ For example:
   }
 ```
 
-Finally, create a `contract.txt` file with the contents of the Test Contract  box from the Contract Text page in Template Studio.
+Finally, create a `contract.txt` file with the contents of the Test Contract  box from the Contract Text page in Template Playground.
 
 :::note
 It's important that your sample contract text exactly matches your grammar's structure, this includes trailing spaces and line breaks. To be sure that you copy everything, right click the window and choose Select All, before choosing Copy.
@@ -233,7 +233,7 @@ Take a look at some of the other stateful Cicero Templates to see what changes y
 If you get really stuck, a solution is available for you to [download](https://drive.google.com/file/d/1cak_P_x01w8dz43aZX8N16G5DUNp6VbG/view?usp=sharing).
 :::
 2. Explore the source code of the Cicero chaincode shim that transforms your requests and deployments into Fabric transactions using the Fabric Node SDK. https://github.com/clauseHQ/fabric-samples/tree/master/chaincode/cicero 
-3. Create your own template from scratch using [Template Studio](https://studio.accordproject.org/), or download the [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
+3. Create your own template from scratch using [Template Playground](https://playground.accordproject.org/), or download the [VSCode plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
 ![Change Test Contract](assets/advanced/hlf4.png)
 > A separate tutorial for creating a template using the Cicero CLI tool can be found in [Creating a New Template](basic-create).
 

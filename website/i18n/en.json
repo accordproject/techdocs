@@ -138,7 +138,7 @@
         "title": "With Node.js"
       },
       "tutorial-studio": {
-        "title": "With Template Studio"
+        "title": "With Template Playground"
       },
       "tutorial-templates": {
         "title": "Templates Deep Dive"
@@ -156,7 +156,7 @@
         "title": "Learning Resources"
       },
       "version-0.12/version-0.12-accordproject-studio": {
-        "title": "Template Studio"
+        "title": "Template Playground"
       },
       "version-0.12/version-0.12-accordproject-templates": {
         "title": "Open Source Templates"
@@ -171,7 +171,7 @@
         "title": "Deploying on Hyperledger Fabric"
       },
       "version-0.12/version-0.12-advanced-latedelivery": {
-        "title": "Authoring in Template Studio"
+        "title": "Authoring in Template Playground"
       },
       "version-0.12/version-0.12-advanced-nodejs": {
         "title": "Working with Node.js"
@@ -588,7 +588,7 @@
         "title": "With Node.js"
       },
       "version-0.21/version-0.21-tutorial-studio": {
-        "title": "With Template Studio"
+        "title": "With Template Playground"
       },
       "version-0.21/version-0.21-tutorial-templates": {
         "title": "Templates Deep Dive"
@@ -633,7 +633,7 @@
         "title": "With Node.js"
       },
       "version-0.22/version-0.22-tutorial-studio": {
-        "title": "With Template Studio"
+        "title": "With Template Playground"
       },
       "version-0.22/version-0.22-tutorial-templates": {
         "title": "Templates Deep Dive"

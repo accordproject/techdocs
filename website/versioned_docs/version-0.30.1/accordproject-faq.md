@@ -51,9 +51,9 @@ The Accord Project Community is developing several working groups focusing on di
 
 A primary purpose of the working groups is to develop a universally accessible and widely used open source library of modular, smart legal contracts, smart templates and models that reflect input from the community. Smart legal contract templates are built according to the Project’s [Cicero Specification](https://github.com/accordproject/cicero).
 
-Members can provide feedback into the templates and models relevant to a particular working group. You can immediately start contributing smart legal contract templates and models by using the Accord Project’s [Template Studio](https://studio.accordproject.org/).
+Members can provide feedback into the templates and models relevant to a particular working group. You can immediately start contributing smart legal contract templates and models by using the Accord Project’s [Template Playground](https://playground.accordproject.org/).
 
 The Accord Project has developed an easy-to-use programming language for building and executing smart legal contracts called Ergo. The goals of Ergo are to be accessible and usable by non-technical professionals, portable across, and compatible with, a variety of environments such as SaaS platforms and different blockchains, and meeting security, safety, and other requirements. 
 
-You can use the Accord Project’s [Template Studio](https://studio.accordproject.org/) to create and test your smart legal contracts.
+You can use the Accord Project’s [Template Playground](https://playground.accordproject.org/) to create and test your smart legal contracts.
 
