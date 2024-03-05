@@ -6,7 +6,7 @@ original_id: ref-cicero-ui
 
 Accord Project publishes [React](https://reactjs.org) user interface components for use in web-applications. Please refer to the cicero-ui project [on GitHub](https://github.com/accordproject/cicero-ui) for detailed usage instructions.
 
-You can preview these components in [Template Playground v2](https://accordproject-studio.netlify.com).
+You can preview these components in [Template Studio v2](https://accordproject-studio.netlify.com).
 
 ![Template-Studio-V2](/docs/assets/reference/tsv2.png)
 
