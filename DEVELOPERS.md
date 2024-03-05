@@ -28,4 +28,8 @@ If you want to re-generate the JSDoc API:
 npm run build:api
 ```
 
+## Commits
+When commiting your changes, it is required you adhere to the [commit message conventions]. This is important because the release notes are automatically generated from these messages.
+
 [apdev]: https://github.com/accordproject/techdocs/blob/master/DEVELOPERS.md
+[commit message conventions]: https://www.conventionalcommits.org/en/v1.0.0/
