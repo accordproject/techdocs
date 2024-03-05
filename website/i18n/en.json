@@ -14,9 +14,6 @@
       "accordproject-template": {
         "title": "Accord Project Templates"
       },
-      "accordproject-tour": {
-        "title": "Online Tour"
-      },
       "accordproject": {
         "title": "Overview"
       },
@@ -136,9 +133,6 @@
       },
       "tutorial-nodejs": {
         "title": "With Node.js"
-      },
-      "tutorial-studio": {
-        "title": "With Template Studio"
       },
       "tutorial-templates": {
         "title": "Templates Deep Dive"

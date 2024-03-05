@@ -78,7 +78,7 @@ Join the Accord Project Technology Working Group <a href="https://docs.google.co
 
 ## Try Accord Project Online
 
-The simplest way to get an introduction to the Accord Project technology is through the online [Template Studio](https://studio.accordproject.org) editor (you can open template studio from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right of the page).
+The simplest way to get an introduction to the Accord Project technology is through the online [Template Studio](https://studio.accordproject.org) editor (you can open Template Studio from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right of the page).
 
 The following video offers a tour of Template Studio and an introduction to the key concepts behind the Accord Project technology.
 
