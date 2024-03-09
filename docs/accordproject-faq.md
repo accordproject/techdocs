@@ -17,7 +17,7 @@ While the Accord Project technology is targeted at the development of smart lega
 
 ### How is an Accord Project "Smart Contract" different from "Smart Contracts" on the blockchain?
 
-Accord Project Smart legal contracts should not be confused with so-called blockchain “smart contracts”, which are scripts that necesarily operate on a blockchain. On the blockchain a smart contract is often written in a specific language like solidity that executes and operates on the blockchain. It lives in a closed world. An Accord Project Smart Contract contains text based template that integrates with a data model and the Ergo language. The three components are integrated into a whole. Using Ergo an Accord Project Smart contract can communicate with other systems, it can send and receive data, it can perform calculations and it can interact with a blockchain.
+Accord Project Smart legal contracts should not be confused with so-called blockchain “smart contracts”, which are scripts that necessarily operate on a blockchain. On the blockchain a smart contract is often written in a specific language like solidity that executes and operates on the blockchain. It lives in a closed world. An Accord Project Smart Contract contains text based template that integrates with a data model and the Ergo language. The three components are integrated into a whole. Using Ergo an Accord Project Smart contract can communicate with other systems, it can send and receive data, it can perform calculations and it can interact with a blockchain.
 
 ### What benefits do Smart Legal Contracts provide?
 
