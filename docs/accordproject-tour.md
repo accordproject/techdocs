@@ -15,7 +15,7 @@ The following video offers a tour of Template Studio and an introduction to the 
 
 Here is a timestamp of what is covered in the video:
 
-- **00:08** : Introduction to template Studio & pointing to the other parts of the docs / AP website
+- **00:08** : Introduction to template Studio & pointers the other parts of the docs / AP website
 - **03:51** : Helloworld template tutorial start
 - **04:48** : Template Studio - Metadata
 - **06:56** : Template Studio - Contract Text
