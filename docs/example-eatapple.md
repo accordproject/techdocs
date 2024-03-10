@@ -11,7 +11,7 @@ For this example, let us look first at the template for that legal clause writte
 
 ```markdown
 Eating healthy clause between [{employee}] (the Employee) and [{company}] (the Company).
-The canteen only sells apple products. Apples, apple juice, apple flapjacks, toffee
+The canteen only sells apple products. Apples, apple juice, apple flapjacks, and toffee
 apples. Employee gets fired if caught eating anything without apples in it.
 THE EMPLOYEE, IF ALLERGIC TO APPLES, SHALL ALWAYS BE HUNGRY.
 Apple products at the canteen are subject to a [{tax}]% tax.

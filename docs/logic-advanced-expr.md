@@ -47,7 +47,7 @@ Should return the array `["Product (Blender)", "Car (Batmobile) with range Infin
 
 ## Foreach
 
-Foreach expressions allow to apply an expression of every element in
+Foreach expressions allow to apply an expression on every element in
 an input array of values and returns a new array:
 
 ```ergo
@@ -61,7 +61,7 @@ iterated over:
   foreach x in [1.0,-2.0,3.0] where x > 0.0 return x + 1.0
 ```
 
-Foreach expressions can iterate over multiple arrays. For example, the following foreach expression returns all all [Pythagorean triples](https://en.wikipedia.org/wiki/Pythagorean_triple):
+Foreach expressions can iterate over multiple arrays. For example, the following foreach expression returns all [Pythagorean triples](https://en.wikipedia.org/wiki/Pythagorean_triple):
 ```ergo
 let nums = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0];
 foreach x in nums
