@@ -1,7 +1,7 @@
 # Cicero Development Guide
 
 ## ❗ Accord Project Development Guide ❗
-We'd love for you to help develop improvements to Accord Project technology! Please refer to this Accord Project Development guidelines we'd like you to follow.
+We'd love for you to help develop improvements to Accord Project technology! Please refer to these Accord Project Development guidelines we'd like you to follow.
 
 ## Installation
 
