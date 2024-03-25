@@ -596,6 +596,9 @@
       "version-0.21/version-0.21-tutorial-vscode": {
         "title": "With VS Code"
       },
+      "version-0.22/version-0.22-high-level-architecture": {
+        "title": "Concepts and High-level Architecture"
+      },
       "version-0.22/version-0.22-markup-preliminaries": {
         "title": "Preliminaries"
       },
