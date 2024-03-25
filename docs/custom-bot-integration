@@ -33,6 +33,5 @@ We have decided to integrate Concerto models through chatbots into our project. 
 - **Testing:** Implement tests to ensure the integration works as expected and handles various scenarios.
 
 ## References
-
 - [OpenAI API Documentation](https://beta.openai.com/docs/)
 - [DialogFlow Documentatio](https://cloud.google.com/dialogflow?hl=en/)
