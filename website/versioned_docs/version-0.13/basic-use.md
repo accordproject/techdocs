@@ -91,7 +91,7 @@ Unexpected "F"
 
 ## Execute the Clause
 
-***Note** : `execute` command is deprecated in versions from `v0.22.0`. Therefore, if you are using the latest version, please refrain from using this deprecated command, as it is no longer functional.
+**Note** : `execute` command is deprecated in versions from `v0.22.0`. Therefore, if you are using the latest version, please refrain from using this deprecated command, as it is no longer functional.
 
 Use the `cicero execute` command to parse a clause text based (your `sample.txt`) *and* execute the clause logic using an incoming request in JSON format. To do so you need to create two additional files.
 
