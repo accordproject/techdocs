@@ -19,8 +19,7 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
-  const overrideIds = [
-    "model-concerto", "model-vocabulary", "model-namespaces", 
+  const overrideIds = [ "model-vocabulary", "model-namespaces", 
     "model-classes", "model-enums", "model-properties", 
     "model-relationships", "model-decorators"];
 
