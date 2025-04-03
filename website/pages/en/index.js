@@ -22,8 +22,7 @@ function docUrl(doc, language) {
   const overrideIds = [
     "model-concerto", "model-vocabulary", "model-namespaces", 
     "model-classes", "model-enums", "model-properties", 
-    "model-relationships", "model-decorators", "model-api"
-  ];
+    "model-relationships", "model-decorators"];
 
   if (overrideIds.includes(doc)) {
     return "https://docs.accordproject.org/docs/markup-ciceromark.html";
