@@ -19,8 +19,19 @@ function imgUrl(img) {
 }
 
 function docUrl(doc, language) {
+  const overrideIds = [
+    "model-concerto", "model-vocabulary", "model-namespaces", 
+    "model-classes", "model-enums", "model-properties", 
+    "model-relationships", "model-decorators", "model-api"
+  ];
+
+  if (overrideIds.includes(doc)) {
+    return "https://docs.accordproject.org/docs/markup-ciceromark.html";
+  }
+
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
 }
+
 
 function pageUrl(page, language) {
   return siteConfig.baseUrl + (language ? language + '/' : '') + page;
