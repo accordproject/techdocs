@@ -24,7 +24,7 @@ function docUrl(doc, language) {
     "model-relationships", "model-decorators"];
 
   if (overrideIds.includes(doc)) {
-    return "https://docs.accordproject.org/docs/markup-ciceromark.html";
+    return "https://concerto.accordproject.org/docs/intro/";
   }
 
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
