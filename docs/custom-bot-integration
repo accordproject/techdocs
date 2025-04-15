@@ -1,0 +1,37 @@
+# ADR: Integration of a Custom Chatbot
+
+## Status
+
+Accepted
+
+## Context
+
+Our project requires a conversational AI assistant to enhance user interactions and provide helpful responses.
+
+## Decision
+
+We have decided to integrate Concerto models through chatbots into our project. AI bots like ChatGPT,OpenAI, Bard, Anthropic etc are powerful language models that can generate human-like text based on the input it receives. This integration will allow us to provide more engaging and intelligent interactions for our users.
+
+## Consequences
+
+- **Pros:**
+  - Enhanced user experience with intelligent responses.
+  - Ability to handle a wide range of user queries and inputs.
+  - Potential for improved user engagement and satisfaction.
+- **Cons:**
+  - Requires integration effort and API usage.
+  - May require additional processing for complex interactions.
+  - Privacy and security considerations for handling user data.
+  - Requires extensive custom requests and responses/intents to be added to the bot
+   
+
+## Implementation Details
+
+- **Location:** Create a new module or service file (e.g., `chatGPTService.js`) to handle interactions with the bot API. In this case: Dialogflow
+- **API Key:** Store the API key securely and avoid hardcoding it in the source code.
+- **Integration:** Use the OpenAI SDK or direct API calls to interact with Dialogflow.
+- **Testing:** Implement tests to ensure the integration works as expected and handles various scenarios.
+
+## References
+- [OpenAI API Documentation](https://beta.openai.com/docs/)
+- [DialogFlow Documentatio](https://cloud.google.com/dialogflow?hl=en/)
