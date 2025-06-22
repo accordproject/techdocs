@@ -4,7 +4,7 @@ title: Editing a Late Delivery Clause
 original_id: tutorial-latedelivery
 ---
 
-This tutorial will walk you through the steps of authoring a clause template in [Template Studio](https://studio.accordproject.org/).
+This tutorial will walk you through the steps of authoring a clause template in [](https://studio.accordproject.org/).
 
 We start with a very simple _Late Penalty and Delivery_ Clause and gradually make it more complex, adding both legal text to it and the corresponding business logic in Ergo.
 

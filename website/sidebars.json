@@ -28,7 +28,7 @@
             {
                 "type": "subcategory",
                 "label": "Template Authoring",
-                "ids": ["tutorial-studio","tutorial-vscode"]
+                "ids": ["tutorial-playground","tutorial-vscode"]
             },
             {
                 "type": "subcategory",
