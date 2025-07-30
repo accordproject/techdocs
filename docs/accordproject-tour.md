@@ -10,7 +10,7 @@ You can open template playground from anywhere in this documentation by clicking
 :::
 
 The following video offers a tour of Template playground and an introduction to the key concepts behind the Accord Project technology.
-
+<!-- 
 <iframe src="https://player.vimeo.com/video/328933628" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 Here is a timestamp of what is covered in the video:
@@ -28,4 +28,4 @@ Here is a timestamp of what is covered in the video:
 - **14:44** : Template Playground - Logic - Test Execution (request, response)
   - **15:57** : Test Execution - contract state
   - **16:49** : Test Execution - obligations
-- **18:20** : Wrap-up
+- **18:20** : Wrap-up -->
