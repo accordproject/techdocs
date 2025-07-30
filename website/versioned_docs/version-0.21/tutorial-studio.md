@@ -1,10 +1,10 @@
 ---
 id: version-0.21-tutorial-studio
-title: With Template Studio
-original_id: tutorial-studio
+title: With Template Playground
+original_id: tutorial-playground
 ---
 
-This tutorial will walk you through the steps of editing a clause template in [Template Studio](https://studio.accordproject.org/).
+This tutorial will walk you through the steps of editing a clause template in [Template Playground](https://playground.accordproject.org/).
 
 We start with a very simple _Late Penalty and Delivery_ Clause and gradually make it more complex, adding both legal text to it and the corresponding business logic in Ergo.
 

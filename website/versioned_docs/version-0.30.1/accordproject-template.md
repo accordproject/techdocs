@@ -206,7 +206,7 @@ Let's look at each component of the template triangle, starting with the text.
 
 ### What next?
 
-Build your first smart legal contract templates, either [online](tutorial-studio.md) with Template Studio, or by [installing Cicero](started-installation.md).
+Build your first smart legal contract templates, either [online](tutorial-studio.md) with Template Playground, or by [installing Cicero](started-installation.md).
 
 Explore [sample templates](started-resources.md) and other resources in the rest of this documentation.
 
