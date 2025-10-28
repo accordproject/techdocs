@@ -1,25 +1,26 @@
 {
-  "scripts": {
-    "examples": "docusaurus-examples",
-    "start": "docusaurus-start",
-    "build": "docusaurus-build",
-    "build:api": "./scripts/build_api_md.sh",
-    "publish-gh-pages": "docusaurus-publish",
-    "write-translations": "docusaurus-write-translations",
-    "version": "docusaurus-version",
-    "rename-version": "docusaurus-rename-version"
-  },
+  "name": "accordproject-techdocs",
+  "private": true,
   "description": "Technical Documentation for the Accord Project",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/accordproject/techdocs.git"
   },
+  "scripts": {
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "swizzle": "docusaurus swizzle",
+    "build:api": "./scripts/build_api_md.sh"
+  },
   "dependencies": {
+    "@docusaurus/core": "^2.4.3",
+    "@docusaurus/preset-classic": "^2.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "axios": "^0.21.2",
-    "docusaurus": "^1.14.7",
-    "qs": "^6.9.6",
-    "remarkable-admonitions": "^0.2.2"
+    "qs": "^6.9.6"
   },
   "devDependencies": {
     "jsdoc-to-markdown": "^7.1.1"
