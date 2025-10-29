@@ -13,6 +13,8 @@ npm install @accordproject/concerto-core@0.20 --save
 
 Below are examples of API use.
 
+> Note: The Concerto "functional API" is not available in Concerto 0.20.x. Use the class-based APIs illustrated in this page. References you may see to a functional API apply to later 1.x alpha builds and not to 0.20.x.
+
 ## Create a Concerto File
 
 ```js
