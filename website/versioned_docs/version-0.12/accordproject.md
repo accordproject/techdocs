@@ -74,7 +74,7 @@ Several tools are also available to facilitate authoring of Accord Project templ
 
 The Accord Project technology is being developed as open source. All the software packages are being actively maintained on [GitHub](https://github.com/accordproject) and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
 
-Join the Accord Project Technology Working Group <a href="https://docs.google.com/forms/d/e/1FAIpQLScmPLO6vflTKFTRTJXiopCjGEvS5mMeH-ZlBnuStiQ3U4k19A/viewform">Slack channel</a> to get involved!
+Join the Accord Project Technology Working Group on <a href="https://discord.gg/Zm99SKhhtA">Discord</a> to get involved!
 
 ## Try Accord Project Online
 

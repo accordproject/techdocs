@@ -10,7 +10,7 @@ The Accord Project provides a universal format for smart legal contracts, and th
 
 Developers can contribute by converting legal text into corresponding computer code, creating Accord Project templates to be used by lawyers and businesses. In addition, developers can provide input on the development of its technology stack: language, models, templating, and other tools.
 
-If this interests you, please visit our [Technology Working Group](https://www.accordproject.org/working-groups/technology) page, and join our [slack channel](https://accord-project-slack-signup.herokuapp.com/)!
+If this interests you, please visit our [Technology Working Group](https://www.accordproject.org/working-groups/technology) page, and join our [Discord server](https://discord.gg/Zm99SKhhtA)!
 
 ## How to navigate this documentation?
 
