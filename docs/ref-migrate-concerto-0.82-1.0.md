@@ -1,7 +1,6 @@
 ---
-id: version-0.21-ref-migrate-concerto-0.82-1.0
+id: ref-migrate-concerto-0.82-1.0
 title: Concerto 0.82 to 1.0
-original_id: ref-migrate-concerto-0.82-1.0
 ---
 
 Concerto `1.0` delivers fundamental improvements over previous releases, whilst maintaining a high-degree (though not total!) of backwards compatibility with `0.82`. In particular all of the `0.82` Concerto syntax remains valid in `1.0`.
@@ -66,7 +65,7 @@ See: [#180](https://github.com/accordproject/concerto/issues/180)
 
 All declared types now have `concerto.Concept` as their super type, and the `concerto` namespace is reserved. Note that the super type for `concerto.Concept` is null.
 
-## Functional API (experimental)
+## Functional API
 
 See: [#188](https://github.com/accordproject/concerto/issues/188)
 
