@@ -27,7 +27,7 @@ A simple Emacs mode for Ergo can be found in the [ergo-mode](https://github.com/
 
 A simple VIM mode for Ergo can be found in the [ergo.vim](https://github.com/accordproject/ergo/tree/master/ergo.vim) directory in the Ergo source code on GitHub.
 
-> Those are not maintained as actively as the rest of the Accord Project. If you know emacs lisp or are a VIM user and would like to contribute, please contact us on the Accord Project Slack or directly through GitHub!
+> Those are not maintained as actively as the rest of the Accord Project. If you know emacs lisp or are a VIM user and would like to contribute, please contact us on the Accord Project Discord or directly through GitHub!
 
 ## Template Studio
 
