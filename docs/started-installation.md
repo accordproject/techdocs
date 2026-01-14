@@ -21,13 +21,12 @@ To install the latest version of the Cicero command-line tools:
 npm install -g @accordproject/cicero-cli
 ```
 
-:::note
-You can install a specific version by appending `@version` at the end of the `npm install` command. For instance to install version `0.20.3` or version `0.13.4`:
-```bash
-npm install -g @accordproject/cicero-cli@0.20.3
-npm install -g @accordproject/cicero-cli@0.13.4
-```
-:::
+> You can install a specific version by appending `@version` at the end of the `npm install` command. For instance to install version `0.24.0` or version `0.13.4`:
+>
+> ```bash
+> npm install -g @accordproject/cicero-cli@0.24.0
+> npm install -g @accordproject/cicero-cli@0.13.4
+> ```
 
 To check that Cicero has been properly installed, and display the version number:
 ```bash
