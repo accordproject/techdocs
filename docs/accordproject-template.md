@@ -207,6 +207,8 @@ Let's look at each component of the template triangle, starting with the text.
 
 Build your first smart legal contract templates, either [online](tutorial-studio.md) with Template Studio, or by [installing Cicero](started-installation.md).
 
+Learn about composing full contracts (advanced markup, modularity, embedded expressions) in [Full Contracts](full-contracts.md).
+
 Explore [sample templates](started-resources.md) and other resources in the rest of this documentation.
 
 If some of technical words are unfamiliar, please consult the [Glossary](ref-glossary.md) for more detailed explanations.
