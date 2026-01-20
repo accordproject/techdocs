@@ -9,9 +9,9 @@ To experiment with Accord Project, you can install the Cicero command-line. This
 
 You must first obtain and configure the following dependency:
 
-* [Node.js (LTS)](http://nodejs.org): We use Node.js to run cicero, generate the documentation, run a development web server, testing, and produce distributable files. Depending on your system, you can install Node either from source or as a pre-packaged bundle.
+- [Node.js (LTS)](https://nodejs.org): We use Node.js to run cicero, generate the documentation, run a development web server, testing, and produce distributable files. Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
->  We recommend using [nvm](https://github.com/creationix/nvm) (or [nvm-windows](https://github.com/coreybutler/nvm-windows)) to manage and install Node.js, which makes it easy to change the version of Node.js per project.
+> We recommend using [nvm](https://github.com/nvm-sh/nvm) (or [nvm-windows](https://github.com/coreybutler/nvm-windows)) to manage and install Node.js, which makes it easy to change the version of Node.js per project.
 
 ## Installing Cicero
 
@@ -36,9 +36,9 @@ cicero --version
 To get command line help:
 ```bash
 cicero --help
-cicero parse --help     // To parse a sample clause/contract
-cicero draft --help     // To draft a sample clause/contract
-cicero trigger --help   // To send a request to a clause/contract
+cicero parse --help     # To parse a sample clause/contract
+cicero draft --help     # To draft a sample clause/contract
+cicero trigger --help   # To send a request to a clause/contract
 ```
 
 ## Optional Packages
