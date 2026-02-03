@@ -272,7 +272,7 @@ Cicero server API has been changed to reflect the new underlying Cicero engine. 
 
 #### Example
 
-Following the [README.md](https://github.com/accordproject/cicero/blob/master/packages/cicero-server/README.md) instructions, instead of calling:
+Following the [README.md](https://github.com/accordproject/cicero-perishable-network/blob/main/README.md) instructions, instead of calling:
 ```
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' http://localhost:6001/execute/latedeliveryandpenalty/sample.txt -d '{ "request": { "$class": "org.accordproject.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest", "forceMajeure": false,"agreedDelivery": "December 17, 2017 03:24:00", "deliveredAt": null, "goodsValue": 200.00 }, "state": { "$class": "org.accordproject.cicero.contract.AccordContractState", "stateId" : "org.accordproject.cicero.contract.AccordContractState#1"}}'
 ```
