@@ -307,7 +307,8 @@ Feature: IP Payment Contract
 
 If the template execution emits obligations, those can also be specified in the scenario as one of the **Then** steps.
 
-For instance, the following shows a scenario for the [Rental Deposit](https://templates.accordproject.org/ip-payment@0.10.1.html) template, which describes the expected list of obligations that should be emitted for a given request:
+For instance, the following shows a scenario for the [Rental Deposit](https://templates.accordproject.org/rental-deposit@0.10.1.html) template, which describes the expected list of obligations that should be emitted for a given request:
+
 ```gherkin
 Feature: Rental Deposit
   This describe the expected behavior for the Accord Project's rental deposit contract
