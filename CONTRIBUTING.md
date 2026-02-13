@@ -3,6 +3,7 @@
 We'd love for you to contribute to our source code and to make Accord Project technology even better than it is today! Here are the guidelines we'd like you to follow:
 
 * [Code of Conduct][contribute.coc]
+* [Using GitHub Discussions][contribute.discussion]
 * [Questions and Problems][contribute.question]
 * [Issues and Bugs][contribute.issue]
 * [Feature Requests][contribute.feature]
@@ -15,6 +16,10 @@ We'd love for you to contribute to our source code and to make Accord Project te
 ## <a name="coc"></a> Code of Conduct
 
 Help us keep the Accord Project open and inclusive. Please read and follow our [Code of Conduct][coc].
+
+## <a name="discussion"></a> Using GitHub Discussions
+
+If you are new, try our [GitHub Discussion][discussion] to get familiar with the community .
 
 ## <a name="requests"></a> Questions, Bugs, Features
 
@@ -162,9 +167,11 @@ Accord Project source code files are made available under the [Apache License, V
 Accord Project documentation files are made available under the [Creative Commons Attribution 4.0 International License][creativecommons] (CC-BY-4.0).
 
 [coc]: https://lfprojects.org/policies/code-of-conduct/
+[discussion]: https://github.com/accordproject/techdocs/discussions/
 [apdiscord]: https://discord.gg/Zm99SKhhtA
 
 [contribute.coc]: CONTRIBUTING.md#coc
+[contribute.discussion]: CONTRIBUTING.md#discussion
 [contribute.cla]: CONTRIBUTING.md#cla
 [contribute.question]: CONTRIBUTING.md#question
 [contribute.issue]: CONTRIBUTING.md#issue
