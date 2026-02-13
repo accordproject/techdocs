@@ -26,7 +26,7 @@ If this interests you, please visit our [Lifecycle and Industry Working Groups](
 
 ### For Lawyers
 
-The Legal world is changing and Legal Tech is growing into a billion dollar industry. The modern lawyer has to be at home in the digital world. Law Schools now teach courses in coding for lawyers, computational law, blockchain and artificial intelligence. Legal Hackers is a world wide movement uniting lawyers across the world in a shared passion for law and technology. Lawyers need to move beyond the the written word on paper.
+The Legal world is changing and Legal Tech is growing into a billion dollar industry. The modern lawyer has to be at home in the digital world. Law Schools now teach courses in coding for lawyers, computational law, blockchain and artificial intelligence. Legal Hackers is a world wide movement uniting lawyers across the world in a shared passion for law and technology. Lawyers need to move beyond the written word on paper.
 
 The template in an Accord Project Contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract can easily be transformed into a template by adding data points between curly braces that represent the Concerto model and Ergo logic can be added as an integral part of the contract. The template language is subject to judicial interpretation and the Concerto model and Ergo logic can be interpreted by a computer creating a bridge between the two worlds.
 
