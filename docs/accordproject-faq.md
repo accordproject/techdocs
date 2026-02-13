@@ -2,57 +2,110 @@
 id: accordproject-faq
 title: FAQ
 ---
-## Accord Project Frequently asked Questions
 
-### What is a "Smart Contract" in the Accord Project?
+# Accord Project — Frequently Asked Questions
 
-A “smart” legal contract is a legally binding agreement that is digital and able to connect its terms and the performance of its obligations to external sources of data and software systems. The benefit is to enable a wide variety of efficiencies, automation, and real time visibility for lawyers, businesses, nonprofits, and government. The potential applications of smart legal contracts are limitless. Although the operation of smart legal contracts may be enhanced by using blockchain technology, a blockchain is not necessary, smart legal contracts can operate using traditional software systems without blockchain. A central goal of Accord Project technology is to be blockchain agnostic.
+---
 
-A smart legal contract consists of natural language text with certain parts (e.g. clauses, sections) of the agreement constructed as machine executable components. The libraries provided by the Accord Project enable a document to be:
+## 🧠 What is a “Smart Contract” in the Accord Project?
 
-* Structured as machine readable data objects; and
-* Executed on, or integrated with, external systems (e.g. to initiate a payment or update an invoice)
+A **smart legal contract** is a legally binding agreement written in digital form that can connect its terms and obligations to external data or systems.  
 
-While the Accord Project technology is targeted at the development of smart legal contracts, the open source codebase may also be used to develop other forms of machine-readable and executable documentation.
+These contracts allow:
+- **Automation** of legal or business processes (e.g., triggering a payment when a shipment is delivered).
+- **Real-time visibility** and validation for all parties involved.
+- **Integration** with both traditional software and emerging technologies like blockchain.
 
-### How is an Accord Project "Smart Contract" different from "Smart Contracts" on the blockchain?
+> ⚙️ **Note:** Blockchain is **optional**.  
+> Accord Project contracts are **blockchain-agnostic** — they can run on blockchains *or* on standard software systems.
 
-Accord Project Smart legal contracts should not be confused with so-called blockchain “smart contracts”, which are scripts that necessarily operate on a blockchain. On the blockchain a smart contract is often written in a specific language like solidity that executes and operates on the blockchain. It lives in a closed world. An Accord Project Smart Contract contains text based template that integrates with a data model and the Ergo language. The three components are integrated into a whole. Using Ergo an Accord Project Smart contract can communicate with other systems, it can send and receive data, it can perform calculations and it can interact with a blockchain.
+A smart legal contract combines:
+- **Natural language text** — the readable part of the agreement.  
+- **Machine-executable logic** — defined using the Accord Project libraries.
 
-### What benefits do Smart Legal Contracts provide?
+This enables documents to be:
+- Structured as **machine-readable data objects**  
+- Executed or integrated with external systems (e.g., payments, invoicing, updates)
 
-Contractual agreements sit at the heart of any organization, governing relationships with employees, shareholders, customers, suppliers, financiers, and more. Yet contracts today are not capable of being efficiently managed as the valuable assets they are. Currently contracts exist as static text documents stored in cloud storage services, dated contract management systems, or even email inboxes. Often these documents are Word files or PDFs that can only be interpreted by humans. A smart legal contract, by contrast, can be interpreted by machines. 
+Although the primary focus is smart legal contracts, Accord Project technology can be adapted for any type of **machine-readable or executable documentation**.
 
-Smart Legal Contracts can be easily searched, analyzed, queried, and understood. By associating a data model to a contract, it is possible to extract a host of valuable data about a contract or draft a series of contracts from existing data points (i.e., variables and their values).
+---
 
-The data model is used to ensure that all of the necessary data is present in the contract, and that this data is valid. In addition, it provides the necessary structure to enable contracts to "come alive" by adding executable logic.
+## 🔗 How is an Accord Project “Smart Contract” different from blockchain “Smart Contracts”?
 
-The result is a contract that is:
+Accord Project **Smart Legal Contracts** are not the same as blockchain “smart contracts.”  
 
+| Aspect | Blockchain Smart Contracts | Accord Project Smart Legal Contracts |
+|--------|-----------------------------|--------------------------------------|
+| **Environment** | Operate *within* a blockchain only | Work on or *off* a blockchain |
+| **Language** | Usually written in Solidity (e.g., Ethereum) | Use **Ergo** and natural language templates |
+| **Integration** | Closed system, limited communication | Open — can send, receive, and process data |
+| **Structure** | Code-centric | Combines text templates, data models, and executable logic |
 
-* Searchable 
-* Analyzable 
-* Real-time 
-* Integrated 
+In short, Accord Project contracts **bridge the legal and technical worlds**, allowing contracts to interact dynamically with external systems — including blockchains if desired.
 
-Consequently, contracts are transformed from business liabilities in constant need of management to assets capable of providing real business intelligence and value. A Smart Contract contains a data model so that the data is part of the contract and not something held in an external system. The logical operations of the contract are also part of the contract. The contract can update itself and react to the outside world. Rather than being stored in filing cabinet it is a living breathing process.
+---
 
-### What is the Accord Project and what is its purpose?
+## ⚙️ What benefits do Smart Legal Contracts provide?
 
-The Accord Project is a non-profit, member-driven organization that builds open source code and documentation for smart legal contracts for use by transactional attorneys, business and finance professionals, and other contract users. Open source means that anyone can use and contribute to the code and documentation and use it in their own software applications and systems free of charge.
+Traditional contracts are static documents — often Word or PDF files — that humans must interpret.  
+Smart legal contracts, on the other hand, can be:
+- **Searched** and **queried** like structured data.  
+- **Analyzed** and **monitored** in real time.  
+- **Integrated** directly with business systems (ERP, CRM, payment APIs, etc.).  
 
-The purpose of the Accord Project is to establish and maintain a common and consistent legal and technical foundation for smart legal contracts. The Accord Project is organized into working groups focused on various use cases for Smart Contracts. The specific working groups are assisted by the Technology Working Group, which builds the underlying open source code and specifications to codify the knowledge of the transactional working groups. More details about the internal governance of the Accord Project are available [here](https://github.com/accordproject/governance).
+### ✅ Key Benefits
+- **Accuracy** — data models ensure all necessary fields are complete and valid.  
+- **Automation** — contracts can self-update or trigger actions automatically.  
+- **Insight** — real-time data turns contracts into live business assets instead of static records.  
 
+A Smart Legal Contract becomes a **living process** — it contains the text, the data model, and the logic that can react to the outside world.
 
-### How can I get involved?
+---
 
-The Accord Project Community is developing several working groups focusing on different applications of  smart contracts. The working groups have frequent calls and use the Accord Project’s Discord group chat application (join by clicking [here](https://discord.com/invite/Zm99SKhhtA)) for discussion. The dates, dial-in instructions, and agendas for the working groups are all listed in the Project’s public calendar and typically also in working group’s respective Discord channels.
+## 🌐 What is the Accord Project and what is its purpose?
 
-A primary purpose of the working groups is to develop a universally accessible and widely used open source library of modular, smart legal contracts, smart templates and models that reflect input from the community. Smart legal contract templates are built according to the Project’s [Cicero Specification](https://github.com/accordproject/cicero).
+The **Accord Project** is a non-profit, member-driven organization creating **open source tools and standards** for smart legal contracts.  
 
-Members can provide feedback into the templates and models relevant to a particular working group. You can immediately start contributing smart legal contract templates and models by using the Accord Project’s [Template Studio](https://studio.accordproject.org/).
+Its goal is to provide a **common legal and technical foundation** that helps businesses, lawyers, and developers build interoperable smart contracts.
 
-The Accord Project has developed an easy-to-use programming language for building and executing smart legal contracts called Ergo. The goals of Ergo are to be accessible and usable by non-technical professionals, portable across, and compatible with, a variety of environments such as SaaS platforms and different blockchains, and meeting security, safety, and other requirements. 
+### Key aspects:
+- Open source and free to use.  
+- Governed by multiple **working groups** focused on specific use cases (e.g., finance, legal, operations).  
+- Supported by a **Technology Working Group** that develops core specifications and reference implementations.  
 
-You can use the Accord Project’s [Template Studio](https://studio.accordproject.org/) to create and test your smart legal contracts.
+📘 Learn more: [Accord Project Governance](https://github.com/accordproject/governance)
 
+---
+
+## 🤝 How can I get involved?
+
+The Accord Project community is open to everyone — developers, lawyers, and organizations.
+
+### Ways to Participate
+- **Join Working Groups** – Focused on specific smart contract applications.  
+- **Participate in Discussions** – Join the [Discord Community](https://discord.com/invite/Zm99SKhhtA) for regular updates and collaboration.  
+- **Contribute Templates and Models** – Build and share your own smart legal contract templates using the [Template Studio](https://studio.accordproject.org/).  
+
+The community’s goal is to build a **universal, open library** of modular smart contracts based on the [Cicero Specification](https://github.com/accordproject/cicero).
+
+### About Ergo
+The Accord Project has developed **Ergo**, a programming language designed for smart legal contracts.  
+Ergo is:
+- **Readable** by both lawyers and developers.  
+- **Portable** across SaaS platforms and blockchains.  
+- **Secure** and **safe** for legally enforceable automation.  
+
+You can try Ergo directly in the [Template Studio](https://studio.accordproject.org/).
+
+---
+
+## 🏁 Summary
+
+- Smart legal contracts combine human-readable language and machine-executable logic.  
+- They can run *with or without* blockchain, offering flexibility and automation.  
+- The Accord Project provides the **standards, libraries, and community** to make this possible.  
+
+---
+
+*Last updated: October 2025*
