@@ -204,7 +204,7 @@ const TryOut = props => (
     {[
       {
         content:
-          '<div class="typeset">You can author and test templates online in the Accord Project <a href="https://studio.accordproject.org">Template Studio</a>. Search for existing templates, edit the contract text and execute the logic.</div>',
+          '<div class="typeset">You can author and test templates online in the Accord Project <a href="https://studio.accordproject.org"></a>. Search for existing templates, edit the contract text and execute the logic.</div>',
         image: imgUrl("../docs/assets/020/studio.png"),
         imageAlt:
           "An example a template being edited. There is an option to edit the full contract or a single clause. There is also a search bar at the top center for users to search for specific templates.",

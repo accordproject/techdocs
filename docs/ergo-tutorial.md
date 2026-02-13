@@ -1,6 +1,6 @@
 ---
 id: ergo-tutorial
-title: Ergo: A Tutorial
+title: "Ergo: A Tutorial"
 ---
 
 ## Overview of Accord
