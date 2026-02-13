@@ -26,7 +26,7 @@ Accord Project is an open source, non-profit, initiative working to transform co
 
 ## Contributing
 
-The Accord Project technology is being developed as open source. All the software packages are being actively maintained on GitHub and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates, and code.
+The Accord Project technology is being developed as open source. All the software packages are being actively maintained on GitHub and we encourage organizations and individuals to contribute requirements, documentation, issues, new templates and code.
 
 Find out what’s coming on our [blog][apblog].
 
@@ -51,13 +51,11 @@ Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respec
 
 [linuxfound]: https://www.linuxfoundation.org
 [charter]: https://github.com/accordproject/techdocs/blob/master/CHARTER.md
-[apmain]: https://accordproject.org/ 
+[apmain]: https://accordproject.org/
 [apblog]: https://medium.com/@accordhq
 [apdoc]: https://docs.accordproject.org/
 [apslack]: https://discord.gg/Zm99SKhhtA
-
 [contributing]: https://github.com/accordproject/techdocs/blob/master/CONTRIBUTING.md
 [developers]: https://github.com/accordproject/techdocs/blob/master/DEVELOPERS.md
-
 [apache]: https://github.com/accordproject/techdocs/blob/master/LICENSE
 [creativecommons]: http://creativecommons.org/licenses/by/4.0/
