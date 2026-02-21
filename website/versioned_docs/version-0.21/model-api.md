@@ -13,6 +13,8 @@ npm install @accordproject/concerto-core --save
 
 Below are examples of API use.
 
+> Note: The Concerto "functional API" discussed in some materials was experimental around the 1.0.0-alpha releases. For Concerto 0.21.x, use the class-based APIs shown below. If you are using a 1.x alpha with the functional API, refer to the matching versioned documentation for that release.
+
 ## Validating JSON data using a Model
 
 ```js

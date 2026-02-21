@@ -22,7 +22,7 @@ Relationships must be resolved to retrieve an instance of the object being refer
 
 A property of a class may be declared as a relationship using the `-->` syntax instead of the `o` syntax. The `o` syntax declares that the class contains (has-a) property of that type, whereas the `-->` syntax declares a typed pointer to an external identifiable instance.
 
-In this example, the model declares that an `Order` has-an array of reference to `OrderLines`. Deleting the `Order` has no impact on the `OrderLine`. When the `Order` is serialized the JSON only the IDs of the `OrderLines` are stored within the `Order`, not the `OrderLines` themselves.
+In this example, the model declares that an `Order` has an array of references to `OrderLines`. Deleting the `Order` has no impact on the `OrderLine`. When the `Order` is serialized to JSON, only the IDs of the `OrderLines` are stored within the `Order`, not the `OrderLines` themselves.
 
 ```js
 asset OrderLine identified by orderLineId {
