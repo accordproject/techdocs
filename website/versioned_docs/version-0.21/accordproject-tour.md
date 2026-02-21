@@ -4,7 +4,7 @@ title: Online Tour
 original_id: accordproject-tour
 ---
 
-To get an better acquainted with Accord Project templates, the easiest way is through the online [Template Studio](https://studio.accordproject.org) editor.
+To get an better acquainted with Accord Project templates, the easiest way is through the online [Template Playground](https://playground.accordproject.org) editor.
 
 :::tip
 You can open template studio from anywhere in this documentation by clicking the [Try Online!](https://studio.accordproject.org) button located in the top-right of the page.

@@ -4,73 +4,68 @@
         "Getting Started": ["started-installation", "started-hello", "started-resources"],
         "Template Guides": [
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Markdown Text",
-                "ids": ["markup-preliminaries", "markup-commonmark", "markup-ciceromark", "markup-templatemark"]
+                "items": ["markup-preliminaries", "markup-commonmark", "markup-ciceromark", "markup-templatemark"]
             },
             {
-                "type": "subcategory",
-                "label": "Concerto Model",
-                "ids": ["model-concerto", "model-vocabulary", "model-namespaces", "model-classes", "model-enums", "model-properties", "model-relationships", "model-decorators", "model-api"]
-            },
-            {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Ergo Logic",
-                "ids": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"]
+                "items": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"]
             }
         ],
         "Tutorials": [
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Using Cicero",
-                "ids": ["tutorial-templates", "tutorial-library", "tutorial-create"]
+                "items": ["tutorial-templates", "tutorial-library", "tutorial-create"]
             },
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Template Authoring",
-                "ids": ["tutorial-studio","tutorial-vscode"]
+                "items": ["tutorial-playground","tutorial-vscode"]
             },
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Template Execution",
-                "ids": ["tutorial-nodejs", "tutorial-hyperledger"]
+                "items": ["tutorial-nodejs", "tutorial-hyperledger"]
             }
         ],
         "Reference Manual": [
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "General",
-                "ids": ["ref-glossary", "ref-errors"]
+                "items": ["ref-glossary", "ref-errors"]
             },
 	          {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Migration",
-                "ids": ["ref-migrate-0.13-0.20", "ref-migrate-0.20-0.21", "ref-migrate-0.21-0.22", "ref-migrate-concerto-0.82-1.0", "ref-migrate-concerto-1.0-2.0", "ref-migrate-concerto-2.0-3.0"]
+                "items": ["ref-migrate-0.13-0.20", "ref-migrate-0.20-0.21", "ref-migrate-0.21-0.22"]
             },
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Cicero Reference",
-                "ids": ["ref-cicero-cli", "ref-cicero-api", "ref-cicero-testing"]
+                "items": ["ref-cicero-cli", "ref-cicero-api", "ref-cicero-testing"]
             },
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Markdown Transform Reference",
-                "ids": ["ref-markus-cli"]
+                "items": ["ref-markus-cli"]
             },
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Concerto Reference",
-                "ids": ["ref-concerto-decorators", "ref-concerto-cli", "ref-concerto-api"]
+                "items": ["ref-concerto-decorators", "ref-concerto-cli", "ref-concerto-api"]
             },
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Ergo Reference",
-                "ids": ["ref-ergo-stdlib", "ref-ergo-cli", "ref-ergo-repl", "ref-ergo-api", "ref-ergo-spec"]
+                "items": ["ref-ergo-stdlib", "ref-ergo-cli", "ref-ergo-repl", "ref-ergo-api", "ref-ergo-spec"]
             },
             {
-                "type": "subcategory",
+                "type": "category",
                 "label": "Web Components Reference",
-                "ids": ["ref-web-components-overview"]
+                "items": ["ref-web-components-overview"]
             }
         ]
     }
