@@ -14,13 +14,22 @@ const GridBlock = CompLibrary.GridBlock;
 
 const siteConfig = require(process.cwd() + '/siteConfig.js');
 
-function imgUrl(img) {
+function imgUrl(img) {  
   return siteConfig.baseUrl + 'img/' + img;
 }
 
 function docUrl(doc, language) {
+  const overrideIds = [ "model-vocabulary", "model-namespaces", 
+    "model-classes", "model-enums", "model-properties", 
+    "model-relationships", "model-decorators"];
+
+  if (overrideIds.includes(doc)) {
+    return "https://concerto.accordproject.org/docs/intro/";
+  }
+
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
 }
+
 
 function pageUrl(page, language) {
   return siteConfig.baseUrl + (language ? language + '/' : '') + page;
