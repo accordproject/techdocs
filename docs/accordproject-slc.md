@@ -3,23 +3,45 @@ id: accordproject-slc
 title: Smart Legal Contracts
 ---
 
-A Smart Legal Contract is a human-readable _and_ machine-readable agreement that is digital, consisting of natural language and computable components.
+# Smart Legal Contracts
 
-The human-readable nature of the document ensures that signatories, lawyers, contracting parties and others are able to understand the contract.
+---
 
-The machine-readable nature of the document enables it to be interpreted and executed by computers, making the document "smart".
+## 💡 What Is a Smart Legal Contract?
 
-Contracts drafted with Accord Project can contain both traditional and machine-readable clauses. For example, a Smart Legal Contract may include a smart payment clause while all of the other provisions of the contract (Definitions, Jurisdiction clause, Force Majeure clause, ...) are being documented solely in regular natural language text.
+A **Smart Legal Contract (SLC)** is both **human-readable** and **machine-readable** — a digital agreement that combines traditional legal text with computable components.
 
-A Smart Legal Contract is a general term to refer to two compatible, architectural forms of contract:
-- Machine-Readable Contracts, which tie legal text to data
-- Machine-Executable Contracts, which tie legal text to data and executable code
+In simple terms:
+- Humans can **read and understand** it like any normal contract.
+- Computers can **interpret and execute** it to automate actions.
 
-### Machine-Readable Contracts
+This dual nature makes contracts *“smart”* — enabling real-time validation, automation, and integration with business systems.
 
-By combining Text and a data, a clause or contract becomes machine-readable.
+For example:  
+> A Smart Legal Contract might include a **smart payment clause** that automatically triggers a transfer once delivery is confirmed, while the rest of the clauses (e.g., Jurisdiction, Force Majeure) remain plain natural language.
 
-For instance, the clause below for a [fixed rate loan](https://templates.accordproject.org/fixed-interests-static@0.2.0.html) includes natural language text coupled with variables. Together, these variables refer to some data for the clause and correspond to the 'deal points':
+---
+
+## 🧱 The Two Architectures of Smart Legal Contracts
+
+Smart Legal Contracts generally fall into **two compatible architectural forms**:
+
+| Type | Description |
+|------|--------------|
+| **Machine-Readable Contracts** | Tie legal text to data |
+| **Machine-Executable Contracts** | Tie legal text to both data **and executable logic** |
+
+Let’s explore each.
+
+---
+
+## 🧩 Machine-Readable Contracts
+
+Machine-readable contracts combine **natural language text** with **structured data**, allowing computers to understand key business terms (“deal points”).
+
+### 🧠 Example: Fixed Rate Loan
+
+A [fixed rate loan clause](https://templates.accordproject.org/fixed-interests-static@0.2.0.html) might look like this:
 
 ```tem
 ## Fixed rate loan
