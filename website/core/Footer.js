@@ -51,13 +51,13 @@ class Footer extends React.Component {
             <h5>Docs</h5>
             <ul>
               <li>
-                <a href={this.docUrl('accordproject.html')}>Overview</a>
+                <a className='footer-link' href={this.docUrl('accordproject.html')}> Overview</a>
               </li>
               <li>
-                <a href={this.docUrl('started-installation.html')}>Getting Started</a>
+                <a className='footer-link' href={this.docUrl('started-installation.html')}> Getting Started</a>
               </li>
               <li>
-                <a href={this.docUrl('markup-cicero.html')}>Template Guides</a>
+                <a className='footer-link' href={this.docUrl('markup-cicero.html')}>Template Guides</a>
               </li>
             </ul>
           </div>
@@ -65,16 +65,16 @@ class Footer extends React.Component {
             <h5>Community</h5>
             <ul>
               <li>
-                <a href={this.pageUrl('users.html')}>User Showcase </a>
+                <a className='footer-link' href={this.pageUrl('users.html')}>User Showcase </a>
               </li>
               <li>
-                <a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a>
+                <a className='footer-link' href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener"> Stack Overflow</a>
               </li>
               <li>
-                <a href="https://discord.com/invite/Zm99SKhhtA">Discord</a>
+                <a className='footer-link' href="https://discord.com/invite/Zm99SKhhtA">Discord</a>
               </li>
               <li>
-                <a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">
+                <a className='footer-link' href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">
                   Twitter
                 </a>
               </li>
@@ -84,16 +84,16 @@ class Footer extends React.Component {
             <h5>More</h5>
             <ul>
               <li>
-                <a href="https://medium.com/@accordhq">Blog</a>
+                <a className='footer-link' href="https://medium.com/@accordhq">Blog</a>
               </li>
               <li>
-                <a href="https://vimeo.com/accordproject">Vimeo</a>
+                <a className='footer-link' href="https://vimeo.com/accordproject">Vimeo</a>
               </li>
               <li>
-                <a href="https://github.com/accordproject">GitHub</a>
+                <a className='footer-link' href="https://github.com/accordproject">GitHub</a>
               </li>
               <li>
-                <a className="github-button" href={this.props.config.repoUrl} data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count={true} data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a>
+                <a className='footer-link github-button' href={this.props.config.repoUrl} data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count={true} data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub"> Star </a>
               </li>
             </ul>
           </div>
