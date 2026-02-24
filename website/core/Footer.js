@@ -104,8 +104,8 @@ class Footer extends React.Component {
           <div className="col col-twothird">
 
             <div className="linux-foundation-logo">
-              <a href="https://www.linuxfoundation.org/projects/">
-                <img src="/img/LF-logo.png" alt="The Linux Foundation Projects"/>
+              <a href="https://www.linuxfoundation.org/projects/" className="linux-foundation-link">
+                Linux Foundation Project
               </a>
             </div>
 

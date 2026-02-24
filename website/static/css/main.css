@@ -2382,10 +2382,33 @@ input::placeholder {
   margin: 0 -10px;
 }
 
-.nav-footer .linux-foundation-logo img {
-  width: 300px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+.nav-footer .linux-foundation-logo {
+  margin: 30px 0;
+}
+
+.nav-footer .linux-foundation-link {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffffcc;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+.nav-footer .linux-foundation-link:hover {
+  color: #19c6c6;
+  border-color: #19c6c6;
+}
+
+@media only screen and (max-width: 735px) {
+  .nav-footer .linux-foundation-logo {
+    text-align: left;
+  }
 }
 
 .nav-footer .fbOpenSource {

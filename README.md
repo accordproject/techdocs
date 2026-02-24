@@ -49,7 +49,7 @@ Accord Project documentation files are made available under the [Creative Common
 
 Copyright 2018-2019 Clause, Inc. All trademarks are the property of their respective owners. See [LF Projects Trademark Policy](https://lfprojects.org/policies/trademark-policy/).
 
-[linuxfound]: https://www.linuxfoundation.org
+[linuxfound]: https://www.linuxfoundation.org/projects/
 [charter]: https://github.com/accordproject/techdocs/blob/master/CHARTER.md
 [apmain]: https://accordproject.org/ 
 [apblog]: https://medium.com/@accordhq
