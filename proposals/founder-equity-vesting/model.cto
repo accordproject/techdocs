@@ -1,0 +1,30 @@
+namespace org.accordproject.foundervesting
+
+import org.accordproject.contract.* from https://models.accordproject.org/accordproject/contract.cto
+import org.accordproject.runtime.* from https://models.accordproject.org/accordproject/runtime.cto
+import org.accordproject.time.* from https://models.accordproject.org/time@0.2.0.cto
+
+/**
+ * The data model for the Founder Equity Vesting template.
+ */
+asset FounderVestingContract extends AccordContract {
+  o String founderName
+  o Double totalEquity
+  o Integer cliffMonths
+  o Integer totalVestingMonths
+  o Double cliffPercentage
+}
+
+/**
+ * The request to calculate the current vested equity.
+ */
+transaction VestingRequest extends Request {
+  o Integer monthsWorked
+}
+
+/**
+ * The response containing the calculated vested equity.
+ */
+transaction VestingResponse extends Response {
+  o Double vestedEquity
+}

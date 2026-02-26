@@ -1,0 +1,40 @@
+namespace org.accordproject.foundervesting
+
+import org.accordproject.foundervesting.*
+
+contract FounderVesting over FounderVestingContract {
+  clause calculateVesting(request : VestingRequest) : VestingResponse {
+    let monthsWorked = request.monthsWorked;
+    let cliffMonths = contract.cliffMonths;
+    let totalVestingMonths = contract.totalVestingMonths;
+    let totalEquity = contract.totalEquity;
+    let cliffPercentage = contract.cliffPercentage;
+
+    // 1. If founder leaves before cliff period -> 0%
+    if monthsWorked < cliffMonths then
+      return VestingResponse{ vestedEquity: 0.0 }
+    else
+      // 2. Cliff reached, calculate cliff equity
+      let cliffEquity = (cliffPercentage / 100.0) * totalEquity;
+
+      // 3. Calculate remaining equity to be vested monthly
+      let remainingEquity = totalEquity - cliffEquity;
+      let monthlyVestingRate = remainingEquity / doubleToReal(totalVestingMonths - cliffMonths);
+
+      // 4. Calculate additional months worked past cliff
+      let additionalMonths = monthsWorked - cliffMonths;
+      let additionalVested = doubleToReal(additionalMonths) * monthlyVestingRate;
+
+      // 5. Total vested cannot exceed total equity
+      let totalVested = cliffEquity + additionalVested;
+      
+      return VestingResponse{ 
+        vestedEquity: singleton(totalVested, totalEquity)
+      }
+  }
+}
+
+// Helper for Math.min logic in Ergo
+define function singleton(val: Double, max: Double) : Double {
+  if val > max then return max else return val
+}
