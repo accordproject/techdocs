@@ -2408,6 +2408,20 @@ input::placeholder {
 .nav-footer .social {
   padding: 5px 0;
 }
+/* Ensure social icons in the footer follow the theme color and hover to white.
+   Use currentColor so SVG paths inherit the anchor color; apply !important to
+   override inline fills in vendor-provided SVGs (e.g., GitHub/Discord svgs). */
+.nav-footer .social a {
+  color: #19c6c6;
+  transition: color 150ms ease-in-out;
+}
+.nav-footer .social a svg,
+.nav-footer .social a svg path {
+  fill: currentColor !important;
+}
+.nav-footer .social a:hover {
+  color: #ffffff;
+}
 /* End of Footer */
 
 .tabs {
