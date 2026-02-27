@@ -2408,6 +2408,17 @@ input::placeholder {
 .nav-footer .social {
   padding: 5px 0;
 }
+
+/* Fix: Linux Foundation logo hover consistency */
+.nav-footer .linux-foundation-logo a {
+  opacity: 0.6;
+  transition: opacity 0.15s ease-in-out;
+}
+
+.nav-footer .linux-foundation-logo a:hover {
+  opacity: 1;
+}
+
 /* End of Footer */
 
 .tabs {
