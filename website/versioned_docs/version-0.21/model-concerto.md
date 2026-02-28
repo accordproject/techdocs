@@ -8,7 +8,7 @@ original_id: model-concerto
 
 The Concerto Modeling Language (CML) allows you to:
 - Define an object-oriented model using a domain-specific language that is much easier to read and write than JSON/XML Schema, XMI or equivalents.
-- Optionally edit your models using a powerful [VS Code add-on](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension) with syntax highlighting and validation
+- Optionally edit your models using a powerful [VS Code add-on](https://marketplace.visualstudio.com/items?itemName=accordproject.concerto-vscode-extension) with syntax highlighting and validation
 - Create runtime instances of your model
 - Serialize your instances to JSON
 - Deserialize (and optionally validate) instances from JSON

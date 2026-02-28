@@ -57,7 +57,7 @@ bash-3.2$
 ```
 
 :::tip
-You may find it easier to edit the grammar, model and logic for your template in [VSCode](https://code.visualstudio.com/), installing the [Accord Project extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension). The extension gives you syntax highlighting and parser errors within VS Code.
+You may find it easier to edit the grammar, model and logic for your template in [VSCode](https://code.visualstudio.com/), installing the [Accord Project extension](https://marketplace.visualstudio.com/items?itemName=accordproject.concerto-vscode-extension). The extension gives you syntax highlighting and parser errors within VS Code.
 
 For more information on how to use VS Code with the Accord Project extension, please consult the [Using the VS Code extension](tutorial-vscode) tutorial.
 :::

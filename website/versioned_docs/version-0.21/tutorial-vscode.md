@@ -15,7 +15,7 @@ To follow this tutorial on how to use the Cicero VS Code extension, we recommend
 1. [Yeoman](https://yeoman.io)
 1. [Accord Project Yeoman Generator](https://github.com/accordproject/cicero/tree/master/packages/generator-cicero-template)
 1. [Camel Tooling Yeoman VS Code extension](https://marketplace.visualstudio.com/items?itemName=camel-tooling.yo)
-1. [Accord Project VS Code extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension)
+1. [Accord Project VS Code extension](https://marketplace.visualstudio.com/items?itemName=accordproject.concerto-vscode-extension)
 
 ## Video Tutorial
 
