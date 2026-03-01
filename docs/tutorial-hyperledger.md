@@ -3,6 +3,8 @@ id: tutorial-hyperledger
 title: With Hyperledger Fabric
 ---
 
+> **Deprecated:** Blockchain integrations (Hyperledger Fabric, Corda, QLDB) are no longer actively maintained by Accord Project.
+
 ## Hyperledger Fabric 2.2
 
 Sample chaincode for Hyperledger Fabric that shows how to execute a Cicero template:

@@ -1,9 +1,9 @@
 ---
 id: tutorial-studio
-title: With Template Studio
+title: With Template Playground
 ---
 
-This tutorial will walk you through the steps of editing a clause template in [Template Studio](https://studio.accordproject.org/).
+This tutorial will walk you through the steps of editing a clause template in [Template Playground](https://playground.accordproject.org).
 
 We start with a very simple _Late Penalty and Delivery_ Clause and gradually make it more complex, adding both legal text to it and the corresponding business logic in Ergo.
 
@@ -11,7 +11,7 @@ We start with a very simple _Late Penalty and Delivery_ Clause and gradually mak
 
 ### Load the Template
 
-To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at [Mini Late Delivery And Penalty](https://templates.accordproject.org/minilatedeliveryandpenalty@0.6.0.html) and click the "Open In Template Studio" button.
+To get started, head to the `minilatedeliveryandpenalty` template in the Accord Project Template Library at [Mini Late Delivery And Penalty](https://templates.accordproject.org/minilatedeliveryandpenalty@0.6.0.html) and click the "Open In Template Playground" button.
 
 ![Advanced-Late-1](assets/advanced/late1.png)
 
@@ -30,7 +30,7 @@ When the text in the `Grammar` tab is in sync with the text in the `Sample` tab,
 Changes to the variables in the `Sample` are reflected in the `Contract Data` tab in real time, and vice versa. For instance, change `Betty Buyer` to a different name in the contract text to see the `partyId` change in the contract data.
 
 :::note
-The JSON data `resource:org.accordproject.party.Party#Betty%20Buyer` indicate that the value is a relationship of type `Party` whose identifier is `Betty Buyer`. Consult the [Concerto Guide](model-relationships) for more details on modeling relationships.
+The JSON data `resource:org.accordproject.party.Party#Betty%20Buyer` indicate that the value is a relationship of type `Party` whose identifier is `Betty Buyer`. Consult the [Concerto Guide](https://concerto.accordproject.org) for more details on modeling relationships.
 :::
 
 If you edit part of the text which is not a variable in the template, this results in an error when parsing the `Sample`. The error will be shown in red in the status bar at the bottom of the page. For instance, the following image shows the parsing error obtained when changing the word `delayed` to the word `timely` in the contract text.

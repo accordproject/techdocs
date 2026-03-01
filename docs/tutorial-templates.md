@@ -66,7 +66,7 @@ request.json (optional)
     A sample valid request to trigger execution for the template
 ```
 
-In a nutshell, the template archive contains the three main components of the [Template Triangle](accordproject-concepts#what-is-a-template) in the corresponding directories (the natural language text of your clause or contract in the `text` directory, the data model in the `model` directory, and the contract logic in the `logic` directory). Additional files include metadata and samples which can be used to illustrate or test the template.
+In a nutshell, the template archive contains the three main components of the [Template Triangle](accordproject-template) in the corresponding directories (the natural language text of your clause or contract in the `text` directory, the data model in the `model` directory, and the contract logic in the `logic` directory). Additional files include metadata and samples which can be used to illustrate or test the template.
 
 Let us look at each of those components.
 
@@ -94,7 +94,7 @@ Thank you!
 
 ### Template Model
 
-The file in `model/model.cto` contains the data model for the template. This includes a description for each of the template variables, including what kind of variable it is (also called their [type](ref-glossary.html#components-of-data-models)).
+The file in `model/model.cto` contains the data model for the template. This includes a description for each of the template variables, including what kind of variable it is (also called their [type](ref-glossary#components-of-data-models)).
 
 Here is the model for the `helloworld` template:
 

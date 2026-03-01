@@ -7,7 +7,7 @@ title: With Node.js
 
 You can work with Accord Project templates directly in JavaScript using Node.js.
 
-Documentation for the API can be found in [Cicero API](ref-cicero-api.html).
+Documentation for the API can be found in [Cicero API](ref-cicero-api).
 
 ## Working with Templates
 
