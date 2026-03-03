@@ -45,7 +45,7 @@ bash-3.2$ yo @accordproject/cicero-template
    create mylease/logo.png
    create mylease/package.json
    create mylease/request.json
-   create mylease/logic/logic.ergo
+   create mylease/logic/logic.ts
    create mylease/model/model.cto
    create mylease/test/logic_default.feature
    create mylease/text/grammar.tem.md
@@ -109,13 +109,14 @@ bash-3.2$ npm install
 bash-3.2$ npm run test 
 
 > mylease@0.0.0 test /Users/jeromesimeon/tmp/mylease
-> cucumber-js test -r .cucumber.js
+> vitest run
 
-....
+ ✓ logic.test.ts (1 test)
 
-1 scenario (1 passed)
-3 steps (3 passed)
-0m01.257s
+ Test Files 1 passed (1)
+      Tests 1 passed (1)
+   Start at 12:01:05
+   Duration 1.25s
 bash-3.2$ 
 ```
 
@@ -162,10 +163,25 @@ caller.
 
 ### Edit the Template Logic
 
-Now edit the business logic of the template itself. This is expressed in the Ergo language, which is a strongly-typed function domain specific language for contract logic. Open the file `logic/logic.ergo`
-and edit the `helloworld` clause to perform the calculations your logic requires.
+Now edit the business logic of the template itself. Template logic is written in **TypeScript** using a class-based pattern. Open the file `logic/logic.ts` and edit the `trigger` method to perform the calculations your logic requires.
 
-Looking at the Ergo logic for other example templates will help you understand the syntax and capabilities of Ergo.
+For example, a basic TypeScript logic class looks like this:
+```typescript
+import { MyContract, MyRequest, MyResponse } from './model/model';
+import { TemplateLogic } from '@accordproject/cicero-core';
+
+class MyLogic extends TemplateLogic<MyContract> {
+  async trigger(data: MyContract, request: MyRequest): Promise<{ response: MyResponse }> {
+    const response: MyResponse = {
+      $class: 'org.acme.lease.MyResponse',
+      output: `Hello ${data.name} ${request.input}`,
+    };
+    return { response };
+  }
+}
+```
+
+Looking at the TypeScript logic for other example templates in the [cicero-template-library](https://github.com/accordproject/cicero-template-library) will help you understand the syntax and capabilities.
 
 ## Publishing your template
 
