@@ -106,10 +106,6 @@ const Features = props => (
         title: `[![Cicero](${imgUrl('cicero-logo.svg')})](${siteConfig.baseUrl}docs/started-installation.html)`,
       },
       {
-        content: `Write executable business logic for legal contracts using the [Ergo](${siteConfig.baseUrl}docs/logic-ergo.html) domain-specific language.`,
-        title: `[![Ergo](${imgUrl('ergo-logo.svg')})](${siteConfig.baseUrl}docs/logic-ergo.html)`,
-      },
-      {
         content: `Model the data for your contracts in a platform neutral format with the [Concerto](${siteConfig.baseUrl}docs/model-concerto.html) schema language.`,
         title: `[Concerto](${siteConfig.baseUrl}docs/model-concerto.html)`,
       },
@@ -184,21 +180,6 @@ const Model = props => (
   </Block>
 );
 
-const Logic = props => (
-  <Block background="dark" id="logic">
-    {[
-      {
-        content:
-          '<div class="typeset">Ergo is a <em>strongly-typed</em> domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create <strong>safe</strong> smart legal contract logic.</div>',
-        image: imgUrl("../docs/assets/020/ergo.png"),
-        imageAlt: "Example of an Ergo file",
-        imageAlign: "left",
-        title: "Logic"
-      }
-    ]}
-  </Block>
-);
-
 const TryOut = props => (
   <Block id="try">
     {[
@@ -261,7 +242,6 @@ class Index extends React.Component {
           <Templates />
           <Grammar />
           <Model />
-          <Logic />
           <TryOut />
         </div>
       </div>
