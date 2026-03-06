@@ -54,7 +54,7 @@ A DSL is a computer language that is targeted to a particular kind of problem, r
 
 The following screenshot shows the Ergo logic for the acceptance of delivery clause.
 
-![Ergo Logic](/img/ergo-vscode.png)
+
 
 It is important that a developer and a lawyer can together agree that clauses in a computable legal contract have the same semantics as the equivalent computer code. For that reason, Ergo is intended to be accessible to Lawyers who create the corresponding prose for those computable legal contracts. As a programming language, the Ergo syntax also adheres to programming conventions.
 

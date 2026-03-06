@@ -13,8 +13,6 @@ This provides syntax highlighting, and error reporting when working on source Er
 
 Install the Accord Project extension by visiting the [Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=accordproject.accordproject-vscode-plugin).
 
-![VSCode plugin](/img/ergo-vscode.png)
-
 ## Syntax highlighting
 
 Languages modes, which provide syntax highlighting for Ergo, also exist for a couple of other editors.
