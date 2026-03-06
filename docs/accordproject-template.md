@@ -114,7 +114,7 @@ asset AcceptanceOfDeliveryClause extends AccordClause {
 
 Thanks to that model, the computer knows that the `shipper` variable (`"Party A"` in the example) and the `receiver` variable (`"Party B"` in the example) are both `Organization` types. The computer also knows that variable `businessDays` (`10` in the example) is an `Integer` type; and that the variable `deliverable` (`"Widgets"` in the example) is a `String` type, and can contain any text description.
 
-> If you are unfamiliar with the different types of variables, or want a more thorough explanation of what variables are, please refer to our [Glossary](ref-glossary.md#data-models) for a more detailed explanation.
+> If you are unfamiliar with the different types of variables, or want a more thorough explanation of what variables are, please refer to our [Glossary](ref-glossary#data-model) for a more detailed explanation.
 
 ### Concerto
 
@@ -126,11 +126,11 @@ _More information about Concerto can be found in the [Concerto Model](https://co
 
 ![Template Logic](assets/020/template_logic.png)
 
-The combination of text and model already makes templates _machine-readable_, while the logic makes it _machine-executable_.
+The combination of text and model already makes templates _machine-readable_, while the logic makes it _machine-executable_. Template logic is written in **TypeScript** for new templates, using a class-based pattern that integrates directly with the Concerto data model.
 
 ### During Drafting
 
-In the [Overview](accordproject.md) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan]():
+In the [Overview](accordproject.md) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan](https://playground.accordproject.org):
 
 ```tem
 ## Fixed rate loan
@@ -142,19 +142,18 @@ and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) 
 ``` 
 
 This uses a `monthlyPaymentFormula` function which calculates the monthly payment based on the other data points in the text:
-```ergo
-define function monthlyPaymentFormula(loanAmount: Double, rate: Double, loanDuration: Integer) : Double {
-  let term = longToDouble(loanDuration * 12);       // Term in months
-  if (rate = 0.0) then return (loanAmount / term)   // If the rate is 0
-  else
-    let monthlyRate = (rate / 12.0) / 100.0;        // Rate in months
-    let monthlyPayment =                            // Payment calculation
-      (monthlyRate * loanAmount)
-      / (1.0 - ((1.0 + monthlyRate) ^ (-term)));
-    return roundn(monthlyPayment, 0)                // Rounding
+```typescript
+function monthlyPaymentFormula(loanAmount: number, rate: number, loanDuration: number): number {
+  const term = loanDuration * 12;                      // Term in months
+  if (rate === 0.0) return loanAmount / term;           // If the rate is 0
+  const monthlyRate = rate / 12.0 / 100.0;             // Rate in months
+  const monthlyPayment =                               // Payment calculation
+    (monthlyRate * loanAmount)
+    / (1.0 - Math.pow(1.0 + monthlyRate, -term));
+  return Math.round(monthlyPayment);                   // Rounding
 }
 ```
-Each logic function has a _name_ (e.g., `monthlyPayment`), a _signature_ indicating the parameters with their types (e.g., `loanAmount:Double`), and a _body_ which performs the appropriate computation based on the parameters. The main payment calculation is here based on the [standardized calculation used in the United States](https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula) with `*` standing for multiplication, `/` for division, and `^` for exponentiation.
+Each logic function has a _name_ (e.g., `monthlyPaymentFormula`), a _signature_ indicating the parameters with their types (e.g., `loanAmount: number`), and a _body_ which performs the appropriate computation based on the parameters. The main payment calculation is here based on the [standardized calculation used in the United States](https://en.wikipedia.org/wiki/Mortgage_calculator#Monthly_payment_formula) with `*` standing for multiplication, `/` for division, and `Math.pow` for exponentiation.
 
 ### After Signature
 
@@ -162,38 +161,43 @@ The logic can also be used to associate behavior to the template _after_ the con
 
 The following shows post-signature logic for the **Acceptance of Delivery** clause.
 
-```ergo
-contract SupplyAgreement over SupplyAgreementModel {
-  clause acceptanceofdelivery(request : InspectDeliverable) : InspectionResponse {
+```typescript
+class SupplyAgreement extends TemplateLogic<SupplyAgreementModel> {
+  async trigger(data: SupplyAgreementModel, request: InspectDeliverable): Promise<{ result: InspectionResponse }> {
 
-    let received = request.deliverableReceivedAt;
-    enforce isBefore(received,now()) else
-      throw ErgoErrorResponse{ message : "Transaction time is before the deliverable date." }
-    ;
-
-    let status =
-      if isAfter(now(), addDuration(received, Duration{ amount: contract.businessDays, unit: ~org.accordproject.time.TemporalUnit.days}))
-      then OUTSIDE_INSPECTION_PERIOD
-      else if request.inspectionPassed
-      then PASSED_TESTING
-      else FAILED_TESTING
-    ;
-    return InspectionResponse{
-      status : status,
-      shipper : contract.shipper,
-      receiver : contract.receiver
+    const received = new Date(request.deliverableReceivedAt);
+    if (received > new Date()) {
+      throw new Error("Transaction time is before the deliverable date.");
     }
+
+    const inspectionDeadline = new Date(received);
+    inspectionDeadline.setDate(inspectionDeadline.getDate() + data.businessDays);
+
+    let status: string;
+    if (new Date() > inspectionDeadline) {
+      status = 'OUTSIDE_INSPECTION_PERIOD';
+    } else if (request.inspectionPassed) {
+      status = 'PASSED_TESTING';
+    } else {
+      status = 'FAILED_TESTING';
+    }
+
+    return {
+      result: { status, shipper: data.shipper, receiver: data.receiver }
+    };
   }
 }
 ```
 
 This logic describes what conditions must be met for a delivery to be accepted. It checks whether the delivery has already been made; whether the acceptance is timely, within the specified inspection date; and whether the inspection has passed or not.
 
-### Ergo
+### Template Logic Language
 
-Ergo is the programming language which is used to express contractual logic in templates. Ergo is specifically designed for legal agreements, and is intended to be accessible for those creating the corresponding prose for those computable legal contracts. Ergo expressions can also be embedded in the text for a template.
+**TypeScript** is the recommended language for writing contract logic in new Accord Project templates. Logic is expressed as a TypeScript class that extends `TemplateLogic`, with types generated from the Concerto model. Inline TypeScript expressions (using `{{% return ... %}}` syntax) can also be embedded directly in the template text.
 
-_More information about Ergo can be found in the [Ergo Logic](logic-ergo.md) Section of this documentation._
+Ergo was the original domain-specific language for Accord Project contract logic and is still supported for existing templates. New templates should use TypeScript.
+
+_More information about TypeScript template logic can be found in the [demo-template](https://github.com/accordproject/demo-template) repository. For legacy templates, the [Ergo Logic](logic-ergo.md) guide remains available._
 
 ## Cicero
 
@@ -205,7 +209,7 @@ Let's look at each component of the template triangle, starting with the text.
 
 ### What next?
 
-Build your first smart legal contract templates, either [online](tutorial-studio.md) with Template Studio, or by [installing Cicero](started-installation.md).
+Build your first smart legal contract templates, either [online](tutorial-studio.md) with Template Playground, or by [installing Cicero](started-installation.md).
 
 Explore [sample templates](started-resources.md) and other resources in the rest of this documentation.
 

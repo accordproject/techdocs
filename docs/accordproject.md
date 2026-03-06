@@ -5,7 +5,7 @@ title: Overview
 
 ## What is the Accord Project?
 
-Accord Project is an open source, non-profit initiative aimed at transforming contract management and contract automation by digitizing contracts. It provides an open, standardized format for Smart Legal Contracts.
+Accord Project is an open source, non-profit initiative aimed at transforming contract management and contract automation by digitizing contracts. It provides an open, standardized format for Smart Legal Contracts (also referred to as Computable Contracts).
 
 The Accord Project defines a notion of a legal template with associated computing logic which is expressive, open-source, and portable. Accord Project templates are similar to a clause or contract template in any document format, but they can be read, interpreted, and run by a computer.
 
@@ -28,7 +28,7 @@ If this interests you, please visit our [Lifecycle and Industry Working Groups](
 
 The Legal world is changing and Legal Tech is growing into a billion dollar industry. The modern lawyer has to be at home in the digital world. Law Schools now teach courses in coding for lawyers, computational law, blockchain and artificial intelligence. Legal Hackers is a world wide movement uniting lawyers across the world in a shared passion for law and technology. Lawyers need to move beyond the written word on paper.
 
-The template in an Accord Project Contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract can easily be transformed into a template by adding data points between curly braces that represent the Concerto model and Ergo logic can be added as an integral part of the contract. The template language is subject to judicial interpretation and the Concerto model and Ergo logic can be interpreted by a computer creating a bridge between the two worlds.
+The template in an Accord Project Contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract can easily be transformed into a template by adding data points between curly braces that represent the Concerto model, and contract logic can be added as an integral part of the contract. The template language is subject to judicial interpretation and the Concerto model and contract logic can be interpreted by a computer, creating a bridge between the two worlds.
 
 As a lawyer, contributing to the Accord Project would be a great opportunity to learn about smart legal contracts. Through the Accord Project, you can understand the foundations of open source technologies and learn how to develop smart agreements.
 
@@ -38,7 +38,7 @@ If your organization wants to become a member of the Accord Project, please [joi
 
 The Accord Project provides a universal format for smart legal contracts, and this format is embodied in a variety of open source projects that comprise the Accord Project technology stack. The Accord Project is an open source project and welcomes contributions from anyone.
 
-The Accord Project is developing tools including a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), [React based web components](https://github.com/accordproject/web-components) and a command line interface for working with Accord Project Contracts. You can integrate contracts into existing applications, create new applications or simply assist lawyers with developing applications with the Ergo language. 
+The Accord Project is developing tools including a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), the [APAP agreement server API](https://github.com/accordproject/apap), and a command line interface for working with Accord Project Contracts. You can integrate contracts into existing applications, create new applications, or write contract logic in TypeScript.
 
 There is a welcoming community on Discord that is eager to help. [Join our Community](https://discord.com/invite/Zm99SKhhtA)
 
@@ -52,7 +52,7 @@ To start using Accord Project templates, follow the [Install Cicero](https://doc
 You can find in-depth guides for the different components of a template in the _Template Guides_ part of the documentation:
 - Learn how to write contract or template text in the [Markdown Text](markup-preliminaries.md) Guide
 - Learn how to design your data model in the [Concerto Model](https://concerto.accordproject.org/docs/intro) Guide
-- Learn how to write smart contract logic in the [Ergo Logic](logic-ergo.md) Guide
+- Learn how to write smart contract logic in TypeScript in the [Template Logic](logic-typescript.md) Guide (or the legacy [Ergo Logic](logic-ergo.md) guide for existing Ergo templates)
 
 Finally, the documentation includes several step by step [Tutorials](tutorial-templates.md) and some reference information (for APIs, command-line tools, etc.) can be found in the [Reference Manual](ref-glossary.md).
 

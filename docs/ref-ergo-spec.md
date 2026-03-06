@@ -106,7 +106,7 @@ The value of message after running this code will be `"Low Price"`.
 
 ### Related
 
--   [Match expression](ref-logic#match-expressions) - where many
+-   [Match expression](#match-expressions) - where many
     alternative conditions check the same variable
 
 ## Match Expressions

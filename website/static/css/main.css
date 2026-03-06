@@ -422,7 +422,6 @@ article iframe {
 .anchor {
   display: block;
   position: relative;
-  top: -80px;
 }
 
 .hash-link {

@@ -67,7 +67,7 @@ Returning a failure from a clause can be done by using a `throw` statement:
     throw MyOwnError{ message: "This is wrong and costs a fee", fee: 29.99 }
 ```
 
-For convenience, Ergo provides a `failure` function which takes a string as part of its [standard library](ref-logic-stdlib#other-functions), so you can also write:
+For convenience, Ergo provides a `failure` function which takes a string as part of its [standard library](ref-ergo-stdlib#other-functions), so you can also write:
 ```ergo
     throw failure("This is wrong")
 ```

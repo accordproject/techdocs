@@ -1,0 +1,212 @@
+:root {
+  --ifm-color-primary: #19C6C6;
+  --ifm-color-primary-dark: #16b2b2;
+  --ifm-color-primary-darker: #14a8a8;
+  --ifm-color-primary-darkest: #118a8a;
+  --ifm-color-primary-light: #1cdada;
+  --ifm-color-primary-lighter: #1ee0e0;
+  --ifm-color-primary-lightest: #36e5e5;
+  --ifm-navbar-background-color: #1b2540;
+  --ifm-navbar-link-color: #ffffff;
+  --ifm-navbar-link-hover-color: #19C6C6;
+  --ifm-footer-background-color: #1b2540;
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: #adb5bd;
+  --ifm-footer-link-hover-color: #19C6C6;
+}
+
+/* ===== HOMEPAGE HERO ===== */
+.heroCover {
+  background: linear-gradient(135deg, #1b2540 0%, #0d1526 100%);
+  color: #ffffff;
+}
+
+.homeContainer {
+  text-align: center;
+  padding: 60px 20px 20px;
+  color: #ffffff;
+}
+
+.homeContainer .projectTitle {
+  color: #ffffff;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.homeContainer .projectTitle .lead {
+  color: #19C6C6;
+}
+
+/* CTA buttons on hero */
+.pluginWrapper.buttonWrapper {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.homeContainer .button,
+.heroCover .button {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 4px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.homeContainer .button:hover,
+.heroCover .button:hover {
+  background: #19C6C6;
+  border-color: #19C6C6;
+  color: #1b2540;
+}
+
+/* ===== FEATURES SECTION ===== */
+#features {
+  background: #1b2540;
+  padding: 40px 0;
+}
+
+#features .blockContent h2 {
+  color: #19C6C6;
+  font-size: 1.1rem;
+}
+
+#features .blockContent h2 a {
+  color: #19C6C6;
+  text-decoration: none;
+}
+
+#features .blockContent h2 a:hover {
+  color: #ffffff;
+}
+
+#features .blockContent > div {
+  color: #adb5bd;
+  font-size: 0.95rem;
+}
+
+/* ===== CONTENT BLOCKS ===== */
+.darkBackground {
+  background-color: #f0f4f8;
+}
+
+.paddingBottom {
+  padding-bottom: 40px;
+}
+
+.paddingTop {
+  padding-top: 40px;
+}
+
+.blockElement {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.blockElement.imageAlignRight {
+  flex-direction: row;
+}
+
+.blockElement.imageAlignLeft {
+  flex-direction: row-reverse;
+}
+
+.blockImage img {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.blockContent h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1b2540;
+}
+
+.darkBackground .blockContent h2 {
+  color: #1b2540;
+}
+
+.typeset {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.darkBackground .typeset {
+  color: #333;
+}
+
+/* ===== SHOWCASE SECTION ===== */
+.productShowcaseSection {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8f9fa;
+}
+
+.productShowcaseSection h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.productShowcaseSection .logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px 0;
+}
+
+.productShowcaseSection .logos img {
+  height: 50px;
+  object-fit: contain;
+  filter: grayscale(0.3);
+  transition: filter 0.3s;
+}
+
+.productShowcaseSection .logos img:hover {
+  filter: none;
+}
+
+.button-filled {
+  background: #1b2540;
+  color: #fff !important;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background 0.3s;
+  text-decoration: none !important;
+}
+
+.button-filled:hover {
+  background: #19C6C6;
+  color: #1b2540 !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .blockElement.imageAlignRight,
+  .blockElement.imageAlignLeft {
+    flex-direction: column;
+  }
+
+  .blockImage img {
+    max-width: 100%;
+  }
+
+  .homeContainer .projectTitle {
+    font-size: 2rem;
+  }
+}

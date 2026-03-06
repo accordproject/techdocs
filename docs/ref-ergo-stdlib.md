@@ -140,7 +140,7 @@ They rely on the [time.cto](https://models.accordproject.org/v2.0/time.html) typ
 | `isSame` | `(x:DateTime, y:DateTime) : Boolean` | Whether `x` is the same DateTime as `y` |
 | `dateTimeMin` | `(x:DateTime[]) : DateTime` | The earliest in an array of DateTime |
 | `dateTimeMax` | `(x:DateTime[]) : DateTime` | The latest in an array of DateTime |
-| `format` | `(x:DateTime,f:String) : String` | Prints date `x` according to [format](markup-variables#datetime-formats) `f` |
+| `format` | `(x:DateTime,f:String) : String` | Prints date `x` according to [format](markup-templatemark#datetime-variables) `f` |
 
 ### Functions on Duration
 

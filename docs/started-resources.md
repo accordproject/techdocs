@@ -15,7 +15,7 @@ title: Resources
 Accord Project also maintains libraries containing open source, community-contributed content to help you when authoring your own templates:
 
 - [Model Repository](https://models.accordproject.org/) : a repository of open source Concerto data models for use in templates
-- [Template Library](https://templates.accordproject.org/) : a library of open source Clause and Contract templates for various legal domains (supply-chain, loans, intellectual property, etc.)
+- [Template Library](https://templates.accordproject.org/) : a library of open source Clause and Contract templates for various legal domains (supply-chain, loans, intellectual property, etc.) _(legacy; for current templates see [Template Playground](https://playground.accordproject.org))_
 
 ## Ecosystem & Tools
 
@@ -23,15 +23,21 @@ Accord Project is also developing tools to help with authoring, testing and runn
 
 ### Editors
 
-- [Template Studio](https://studio.accordproject.org/): a Web-based editor for Accord Project templates
+- [Template Playground](https://playground.accordproject.org): a Web-based editor for Accord Project templates
 - [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/) Editor
-- [Emacs Mode](https://github.com/accordproject/ergo/tree/master/ergo.emacs): Emacs Major mode for Ergo (alpha)
-- [VIM Plugin](https://github.com/accordproject/ergo/tree/master/ergo.vim): VIM plugin for Ergo (alpha)
+- [Emacs Mode](https://github.com/accordproject/ergo/tree/master/ergo.emacs): Emacs Major mode for Ergo (alpha, unmaintained)
+- [VIM Plugin](https://github.com/accordproject/ergo/tree/master/ergo.vim): VIM plugin for Ergo (alpha, unmaintained)
 
 ### User Interface Components
 
+> **Deprecated:** These React web components are no longer actively maintained. We recommend using the [Template Playground](https://playground.accordproject.org) for web-based template editing.
+
 - [Markdown Editor](https://github.com/accordproject/markdown-editor): a general purpose react component for markdown rendering and editing
 - [Cicero UI](https://github.com/accordproject/cicero-ui): a library of react components for visualizing, creating and editing Accord Project templates
+
+### API & Integration
+
+- [APAP](ref-apap.md): the Accord Project Agreement Protocol — a REST API for deploying templates, generating documents, executing logic, and managing the agreement lifecycle. See the [Agreement Protocol guide](ref-apap.md) for a full overview and examples.
 
 ## Developers Resources
 
@@ -44,7 +50,11 @@ Join us on the [#technology-wg Discord channel](https://discord.com/invite/Zm99S
 - GitHub: https://github.com/accordproject/cicero
 - Technical Questions and Answers on [Stack Overflow](https://stackoverflow.com/questions/tagged/cicero)
 
-### Ergo
+### Template Logic
+
+- The [Template Logic Guide](logic-typescript.md) covers how to write contract logic in TypeScript.
+
+### Ergo (legacy)
 
 - GitHub: https://github.com/accordproject/ergo
-- The [Ergo Language Guide](logic-ergo.md) is a good place to get started with Ergo.
+- The [Ergo Language Guide](logic-ergo.md) documents Ergo for existing templates.
