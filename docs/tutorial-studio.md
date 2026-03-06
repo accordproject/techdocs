@@ -209,7 +209,7 @@ The first place to change is in the metadata for the template. This can be done 
 
 ### Update the Model
 
-To fix this, change the model to reflect that we are now editing a contract template, and change the type `AccordClause` to `AccordContract` in the type definition for the template variables:
+To fix this, change the model to reflect that we are now editing a contract template, and change the type `Clause` to `Contract` in the type definition for the template variables:
 ```ergo
 asset MiniLateDeliveryContract extends Contract {
   --> Party buyer         // Party to the contract (buyer)

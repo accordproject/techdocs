@@ -155,7 +155,7 @@ Note that you can import common types (address, monetary amount, country code, e
 
 Your template expects to receive data as input and will produce data as output. The structure of
 this request/response data is captured in the `MyRequest` and `MyResponse` transaction types in your model
-namespace. Open up the file `models/model.cto` and edit the definition of the `MyRequest` type to
+namespace. Open up the file `model/model.cto` and edit the definition of the `MyRequest` type to
 include all the data you expect to receive from the outside world and that will be used by the
 business logic of your template. Similarly edit the definition of the `MyResponse` type to include
 all the data that the business logic for your template will compute and would like to return to the
