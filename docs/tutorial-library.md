@@ -29,7 +29,7 @@ git clone https://github.com/accordproject/cicero-template-library
 
 Alternatively, you can download the library directly by visiting the [GitHub Repository for the Template Library](https://github.com/accordproject/cicero-template-library) and use the "Download" button as shown on this snapshot:
 
-![Basic-Library-1](/docs/assets/basic/library1.png)
+![Basic-Library-1](./assets/basic/library1.png)
 
 ### Install the Library
 
@@ -82,14 +82,13 @@ $ bash-3.2$ ls -laR
   ./sample.md
 
 ./logic:
-   logic.ergo
+   logic.ts
 
 ./model:
    model.cto
 
 ./test:
-  logic.feature
-  logic_default.feature
+  logic.test.ts
 
 ./request.json
 ./state.json

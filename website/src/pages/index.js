@@ -28,7 +28,7 @@ const users = [
   },
 ];
 
-function Button({href, target, children}) {
+function Button({ href, target, children }) {
   return (
     <div className="pluginWrapper buttonWrapper">
       <a className="button" href={href} target={target || '_self'}>
@@ -70,12 +70,12 @@ function Features() {
       content: 'Create templates for human-readable and machine-executable contracts using Open Source <a href="/docs/started-installation">Cicero</a>.',
     },
     {
-      title: <a href="/docs/logic-ergo"><img src="/img/ergo-logo.svg" alt="Ergo" /></a>,
-      content: 'Write executable business logic for legal contracts using the <a href="/docs/logic-ergo">Ergo</a> domain-specific language.',
+      title: <a href="/docs/logic-typescript"><strong>Template Logic</strong></a>,
+      content: 'Write executable business logic for legal contracts using <a href="/docs/logic-typescript">TypeScript</a>, with types generated from your Concerto model.',
     },
     {
-      title: <a href="/docs/model-concerto">Concerto</a>,
-      content: 'Model the data for your contracts in a platform neutral format with the <a href="/docs/model-concerto">Concerto</a> schema language.',
+      title: <a href="https://concerto.accordproject.org/docs/intro">Concerto</a>,
+      content: 'Model the data for your contracts in a platform neutral format with the <a href="https://concerto.accordproject.org/docs/intro">Concerto</a> schema language.',
     },
     {
       title: <a href="https://templates.accordproject.org/">Template Library</a>,
@@ -95,7 +95,7 @@ function Features() {
             <div key={i} className="blockElement alignCenter threeByGridBlock">
               <div className="blockContent">
                 <h2>{item.title}</h2>
-                <div dangerouslySetInnerHTML={{__html: item.content}} />
+                <div dangerouslySetInnerHTML={{ __html: item.content }} />
               </div>
             </div>
           ))}
@@ -105,7 +105,7 @@ function Features() {
   );
 }
 
-function ContentBlock({id, background, imageAlign, title, content, image, imageAlt}) {
+function ContentBlock({ id, background, imageAlign, title, content, image, imageAlt }) {
   const bgClass = background === 'dark' ? 'darkBackground' : '';
   const hasImage = !!image;
   const imageAlignClass = imageAlign === 'right' ? 'imageAlignRight' : 'imageAlignLeft';
@@ -124,8 +124,8 @@ function ContentBlock({id, background, imageAlign, title, content, image, imageA
               </div>
             )}
             <div className="blockContent">
-              <h2 dangerouslySetInnerHTML={{__html: title}} />
-              <div dangerouslySetInnerHTML={{__html: content}} />
+              <h2 dangerouslySetInnerHTML={{ __html: title }} />
+              <div dangerouslySetInnerHTML={{ __html: content }} />
             </div>
             {hasImage && imageAlign !== 'left' && (
               <div className="blockImage">
@@ -197,7 +197,7 @@ export default function Home() {
           <ContentBlock
             id="model"
             title="Model"
-            content='<div class="typeset">Concerto lets you model the data used in your templates in a flexible and expressive way. Models can be written in a modular and portable way so they can be reused in a variety of contracts.</div>'
+            content='<div class="typeset">Concerto lets you model the data used in your templates in a flexible and expressive way. Models can be written in a modular and portable way so they can be reused in a variety of contracts. <a href="https://concerto.accordproject.org/docs/intro">Learn more about Concerto.</a></div>'
             image="/img/model-uml.png"
             imageAlt="A diagram with an example of a Concerto model"
             imageAlign="right"
@@ -206,9 +206,9 @@ export default function Home() {
             id="logic"
             background="dark"
             title="Logic"
-            content='<div class="typeset">Ergo is a <em>strongly-typed</em> domain specific language designed to capture computational aspects of legal contracts and clauses. Use Ergo to create <strong>safe</strong> smart legal contract logic.</div>'
-            image="/docs/assets/020/ergo.png"
-            imageAlt="Example of an Ergo file"
+            content='<div class="typeset">Template logic is written in <em>TypeScript</em> using a class-based pattern that integrates directly with the Concerto data model. Logic can be embedded inline in template text or defined in a separate TypeScript class that extends <code>TemplateLogic</code>.</div>'
+            image="/docs/assets/020/template_logic.png"
+            imageAlt="Example of TypeScript template logic code"
             imageAlign="left"
           />
           <ContentBlock

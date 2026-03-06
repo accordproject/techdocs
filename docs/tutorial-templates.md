@@ -26,10 +26,9 @@ Archive:  helloworld@0.14.0.cta
  extracting: model/@models.accordproject.org.accordproject.money@0.2.0.cto  
  extracting: model/@models.accordproject.org.accordproject.contract.cto  
  extracting: model/@models.accordproject.org.accordproject.runtime.cto  
- extracting: model/@org.accordproject.ergo.options.cto  
  extracting: model/model.cto         
    creating: logic/
- extracting: logic/logic.ergo        
+ extracting: logic/logic.ts        
 ```
 
 ## Template Components
@@ -54,7 +53,7 @@ model/
     and models for the State, Request, Response, and Obligations used during execution.
 
 logic/
-    A collection of Ergo files that implement the business logic for the template
+    A collection of TypeScript files that implement the business logic for the template
 
 test/
     A collection of unit tests for the template
@@ -98,7 +97,7 @@ The file in `model/model.cto` contains the data model for the template. This inc
 
 Here is the model for the `helloworld` template:
 
-```ergo
+```concerto
 namespace org.accordproject.helloworld
 
 import org.accordproject.contract.* from https://models.accordproject.org/accordproject/contract.cto
@@ -137,26 +136,24 @@ Types are always declared within a namespace (here `org.accordproject.helloworld
 
 ### Template Logic
 
-The file in `logic/logic.ergo` contains the executable logic. Each Ergo file is identified by a namespace, and contains declarations (e.g., constants, functions, contracts). Here is the Ergo logic for the `helloworld` template:
+The file in `logic/logic.ts` contains the executable TypeScript logic. Here is the TypeScript logic for the `helloworld` template:
 
-```ergo
-namespace org.accordproject.helloworld
+```typescript
+import { HelloWorldClause, MyRequest, MyResponse } from './model/model';
+import { TemplateLogic } from '@accordproject/cicero-core';
 
-contract HelloWorld over TemplateModel {
-  // Simple Clause
-  clause greet(request : MyRequest) : MyResponse {
-    return MyResponse{ output: "Hello " ++ contract.name ++ " " ++ request.input }
+class HelloWorld extends TemplateLogic<HelloWorldClause> {
+  async trigger(data: HelloWorldClause, request: MyRequest): Promise<{ response: MyResponse }> {
+    const response: MyResponse = {
+      $class: 'org.accordproject.helloworld.MyResponse',
+      output: `Hello ${data.name} ${request.input}`,
+    };
+    return { response };
   }
 }
 ```
 
-This declares a single `HelloWorld` contract in the `org.accordproject.helloworld` namespace, with one `greet` clause.
-
-It also declares that this contract `HelloWorld` is parameterized over the given `TemplateModel` found in the `models/model.cto` file.
-
-The `greet` clause takes a request of type `MyRequest` as input and returns a response of type `MyResponse`.
-
-The code for the `greet` clause returns a new `MyResponse` response with a single property `output` which is a string. That string is constructed using the string concatenation operator (`++`) in Ergo from the `name` in the contract (`contract.name`) and the input from the request (`request.input`).
+This declares a `HelloWorld` class extending `TemplateLogic`, typed with the `HelloWorldClause` model. The `trigger` method takes the clause data and a `MyRequest` as input and returns a `MyResponse` with an `output` string.
 
 ## Use the Template
 
