@@ -64,13 +64,13 @@ Before you submit your pull request consider the following guidelines:
 * Make your changes in a new git branch: techdocs
 
   ```text
-    git checkout -b name/issue-tracker/short-description master
+    git checkout -b name/issue-tracker/short-description main
   ```
 
   Name can be initials or GitHub username. An example of this could be:
 
   ```text
-    git checkout -b irmerk/i75/readme-typos master
+    git checkout -b irmerk/i75/readme-typos main
   ```
 
 * Create your patch commit, **including appropriate test cases**.
@@ -87,10 +87,10 @@ Before you submit your pull request consider the following guidelines:
 
   Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
 
-* Before creating the Pull Request, ensure your branch sits on top of master (as opposed to branch off a branch). This ensures the reviewer will need only minimal effort to integrate your work by fast-fowarding master:
+* Before creating the Pull Request, ensure your branch sits on top of main (as opposed to branch off a branch). This ensures the reviewer will need only minimal effort to integrate your work by fast-fowarding main:
 
   ```text
-    git rebase upstream/master
+    git rebase upstream/main
   ```
 
 * Last step before creating the Pull Request, package and run all tests a last time:
@@ -105,7 +105,7 @@ Before you submit your pull request consider the following guidelines:
     git push origin name/issue-tracker/short-description
   ```
 
-* In GitHub, send a pull request to `<REPOSITORY>:master` by following our [pull request conventions][developers.pullrequest]. This will trigger the check of the [Contributor License Agreement][contribute.cla] and the Travis integration.
+* In GitHub, send a pull request to `<REPOSITORY>:main` by following our [pull request conventions][developers.pullrequest]. This will trigger the check of the [Contributor License Agreement][contribute.cla] and the Travis integration.
 * If you find that the Travis integration has failed, look into the logs on Travis to find out if your changes caused test failures, the commit message was malformed, etc. If you find that the tests failed or times out for unrelated reasons, you can ping a team member so that the build can be restarted.
 * If we suggest changes, then:
   * Make the required updates.
@@ -116,7 +116,7 @@ Before you submit your pull request consider the following guidelines:
     You can also amend the initial commits and force push them to the branch.
 
     ```text
-    git rebase master -i
+    git rebase main -i
     git push origin name/issue-tracker/short-description -f
     ```
 
@@ -134,10 +134,10 @@ After your pull request is merged, you can safely delete your branch and pull th
     git push origin --delete name/issue-tracker/short-description
   ```
 
-* Check out the master branch:
+* Check out the main branch:
 
   ```text
-    git checkout master -f
+    git checkout main -f
   ```
 
 * Delete the local branch:
@@ -146,13 +146,13 @@ After your pull request is merged, you can safely delete your branch and pull th
     git branch -D name/issue-tracker/short-description
   ```
 
-* Update your master with the latest upstream version:
+* Update your main with the latest upstream version:
 
   ```text
-    git checkout master
+    git checkout main
     git fetch --all --prune
-    git rebase upstream/master
-    git push origin master
+    git rebase upstream/main
+    git push origin main
   ```
 
 ## License <a name="license"></a>
@@ -185,5 +185,5 @@ Accord Project documentation files are made available under the [Creative Common
 
 [dcohow]: https://github.com/probot/dco#how-it-works
 
-[apache]: https://github.com/accordproject/techdocs/blob/master/LICENSE
+[apache]: https://github.com/accordproject/techdocs/blob/main/LICENSE
 [creativecommons]: http://creativecommons.org/licenses/by/4.0/
