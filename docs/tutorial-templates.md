@@ -34,7 +34,7 @@ Archive:  helloworld@0.14.0.cta
 
 ## Template Components
 
-Once you have unziped the archive, the directory should contain the following files and sub-directories:
+Once you have unzipped the archive, the directory should contain the following files and sub-directories:
 
 ```text
 package.json

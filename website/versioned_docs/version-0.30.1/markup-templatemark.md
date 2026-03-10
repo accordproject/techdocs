@@ -6,7 +6,7 @@ original_id: markup-templatemark
 
 TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas.
 
-The kind of extension which can be used is based on the _type_ of the variable in the [Concerto Model](https://concerto.accordproject.org/docs/intro) for your template. For each type in your model differrent markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.
+The kind of extension which can be used is based on the _type_ of the variable in the [Concerto Model](https://concerto.accordproject.org/docs/intro) for your template. For each type in your model different markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.
 
 ## Variables
 
@@ -262,7 +262,7 @@ The general format for the amount is `0{sep}0({sep}0+)?` where `{sep}` is a sing
 
 #### Examples
 
-The following examples show formating for `Integer` or `Long` values.
+The following examples show formatting for `Integer` or `Long` values.
 
 ```
 The manuscript shall be completed within {{days as "0,0"}} days.

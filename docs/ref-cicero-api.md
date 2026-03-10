@@ -227,7 +227,7 @@ retrieve instances from [Template](#Template)</strong>
 | readme | <code>String</code> | the README.md for the template (may be null) |
 | samples | <code>object</code> | the sample markdown for the template in different locales, |
 | request | <code>object</code> | the JS object for the sample request |
-| logo | <code>Buffer</code> | the bytes data for the image represented as an object whose keys are the locales and whose values are the sample markdown. For example:  {      default: 'default sample markdown',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). THe `default` key represents sample template text in a non-specified language, stored in a file called `sample.md`. |
+| logo | <code>Buffer</code> | the bytes data for the image represented as an object whose keys are the locales and whose values are the sample markdown. For example:  {      default: 'default sample markdown',      en: 'sample text in english',      fr: 'example de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). THe `default` key represents sample template text in a non-specified language, stored in a file called `sample.md`. |
 
 <a name="Metadata+getTemplateType"></a>
 
@@ -906,7 +906,7 @@ Create the CompositeArchiveLoader. Used to delegate to a set of ArchiveLoaders.
 <a name="CompositeArchiveLoader+addArchiveLoader"></a>
 
 ### compositeArchiveLoader.addArchiveLoader(archiveLoader)
-Adds a ArchiveLoader implemenetation to the ArchiveLoader
+Adds a ArchiveLoader implementation to the ArchiveLoader
 
 **Kind**: instance method of [<code>CompositeArchiveLoader</code>](#CompositeArchiveLoader)  
 

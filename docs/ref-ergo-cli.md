@@ -146,7 +146,7 @@ Although this looks very similar to what `ergo trigger` returns, it is important
 `ergo initialize` allows you to obtain the initial state of the contract. This is the state of the contract without requests or responses.
 
 ```md
-Usage: ergo intialize --data [file] --params [file] [cto files] [ergo files]
+Usage: ergo initialize --data [file] --params [file] [cto files] [ergo files]
 
 Options:
   --help         Show help                                             [boolean]
