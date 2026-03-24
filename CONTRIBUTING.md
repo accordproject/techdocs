@@ -7,10 +7,8 @@ We'd love for you to contribute to our source code and to make Accord Project te
 * [Issues and Bugs][contribute.issue]
 * [Feature Requests][contribute.feature]
 * [Improving Documentation][contribute.docs]
-* [Updating Documentation][contribute.updating]
 * [Issue Submission Guidelines][contribute.submit]
 * [Pull Request Submission Guidelines][contribute.submitpr]
-* [Technical Documentation][contribute.techdocs]
 
 ## <a name="coc"></a> Code of Conduct
 
@@ -105,7 +103,7 @@ Before you submit your pull request consider the following guidelines:
     git push origin name/issue-tracker/short-description
   ```
 
-* In GitHub, send a pull request to `<REPOSITORY>:main` by following our [pull request conventions][developers.pullrequest]. This will trigger the check of the [Contributor License Agreement][contribute.cla] and the Travis integration.
+* In GitHub, send a pull request to `<REPOSITORY>:main` by following our [pull request conventions][contribute.submit-pr]. This will trigger the check of the [Developer Certificate of Origin (DCO)][contribute.cla] and the Travis integration.
 * If you find that the Travis integration has failed, look into the logs on Travis to find out if your changes caused test failures, the commit message was malformed, etc. If you find that the tests failed or times out for unrelated reasons, you can ping a team member so that the build can be restarted.
 * If we suggest changes, then:
   * Make the required updates.
@@ -177,11 +175,7 @@ Accord Project documentation files are made available under the [Creative Common
 
 
 [developers]: DEVELOPERS.md
-[developers.setup]: DEVELOPERS.md#-development-setup
 [developers.commits]: DEVELOPERS.md#commits
-[developers.rules]: DEVELOPERS.md#rules
-[developers.documentation]: DEVELOPERS.md#documentation
-[developers.unit-tests]: DEVELOPERS.md#-running-the-unit-test-suite
 
 [dcohow]: https://github.com/probot/dco#how-it-works
 
