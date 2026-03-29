@@ -74,4 +74,4 @@ and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) 
 This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause. In this example, we display the contract text using the underlying [Markup](markup-preliminaries.md) format, instead of the rich-text output that would be found in [editor tools](started-resources.md#ecosystem-tools) and PDF outputs.
 
 More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
-
+small change 
