@@ -130,7 +130,7 @@ The combination of text and model already makes templates _machine-readable_, wh
 
 ### During Drafting
 
-In the [Overview](accordproject.md) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a [fixed rate loan]():
+In the [Overview](accordproject.md) Section, we already saw how logic can be embedded in the text of the template itself to automatically calculate a monthly payment for a fixed rate loan:
 
 ```tem
 ## Fixed rate loan
@@ -210,4 +210,3 @@ Build your first smart legal contract templates, either [online](tutorial-studio
 Explore [sample templates](started-resources.md) and other resources in the rest of this documentation.
 
 If some of technical words are unfamiliar, please consult the [Glossary](ref-glossary.md) for more detailed explanations.
-
