@@ -1,6 +1,6 @@
 ---
 id: version-0.12-spec-example
-title: Example: Late Delivery Clause
+title: "Example: Late Delivery Clause"
 original_id: spec-example
 ---
 
@@ -21,4 +21,3 @@ The Late Delivery And Penalty clause in the typical legal contract looks like th
 ```
 
 This specification can be used to convert the late delivery and penalty clause into a reusable fragment (a template), that can be executed by a suitable runtime. The complete template can be found in the [Accord Project Template Library](https://templates.accordproject.org/latedeliveryandpenalty@0.13.0.html).
-
