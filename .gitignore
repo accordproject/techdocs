@@ -14,3 +14,7 @@ website/i18n/*
 !website/i18n/en.json
 
 thumbs.db
+
+# Dolt database files (added by bd init)
+.dolt/
+*.db
