@@ -40,9 +40,9 @@ follows: "bank transfer".
 For purposes of this Agreement, (a) the words "include," "includes," and "including" are deemed to be followed by the words "without limitation"; (b) the word "or" is not exclusive; and (c) the words "herein," "hereof," "hereby," "hereto," and "hereunder" refer to this Agreement as a whole. This Agreement is intended to be construed without regard to any presumption or rule requiring construction or interpretation against the party drafting an instrument or causing any instrument to be drafted.
 ```
 
-## Ergo Formulas
+## Template Formulas
 
-Ergo formulas in template text are essentially similar to Excel formulas. They let you create legal text dynamically based on the other variables in your contract.
+Template formulas in template text are essentially similar to Excel formulas. They let you create legal text dynamically based on the other variables in your contract.
 
 If your contract contains the result of evaluating a formula, the corresponding text should be written `{{% resultOfFormula %}}` where `resultOfFormula` is the expected result of that formula.
 

@@ -5,7 +5,11 @@ title: With Template Playground
 
 This tutorial will walk you through the steps of editing a clause template in [Template Playground](https://playground.accordproject.org).
 
-We start with a very simple _Late Penalty and Delivery_ Clause and gradually make it more complex, adding both legal text to it and the corresponding business logic in Ergo.
+We start with a very simple _Late Penalty and Delivery_ Clause and gradually make it more complex, adding both legal text to it and the corresponding business logic.
+
+:::note
+This tutorial uses templates written in [Ergo](ref-ergo-logic.md), the legacy Accord Project logic language. For new templates, TypeScript is recommended.
+:::
 
 ## Initial Late Delivery Clause
 
@@ -55,11 +59,11 @@ Note that a `namespace` is declared at the beginning of the file for the model, 
 
 ### The Logic
 
-The final part of the template is the `Ergo` tab of the `Logic` section, which describes the business logic.
+The final part of the template is the `Logic` tab of the `Logic` section, which describes the business logic.
 
 ![Advanced-Late-6](assets/advanced/late6.png)
 
-Thanks to the `namespace` at the beginning of this file, the Ergo engine can know the definition for the `MiniLateDeliveryClause`, as well as the `LateRequest`, and `LateResponse` types defined in the `Model` tab.
+Thanks to the `namespace` at the beginning of this file, the template engine can access the definition for the `MiniLateDeliveryClause`, as well as the `LateRequest`, and `LateResponse` types defined in the `Model` tab.
 
 To test the template execution, go to the `Request` tab in the `Logic` section. It should be already populated with a valid request. Press the `Trigger` button to trigger the clause.
 
@@ -126,7 +130,7 @@ To define this new variable, go to the `Model` tab, and change the `MiniLateDeli
 ![Advanced-Late-11](assets/advanced/late11.png)
 
 For convenience, you can copy-paste the new `MiniLateDeliveryClause` type from here:
-```ergo
+```concerto
 asset MiniLateDeliveryClause extends Clause {
   --> Party buyer         // Party to the contract (buyer)
   --> Party seller        // Party to the contract (seller)
@@ -164,7 +168,7 @@ Note that the `Current Template` Tab indicates that the template has been change
 
 ### Update the Logic
 
-At this point, executing the logic will still result in large penalties. This is because the logic does not take advantage of the new `capPercentage` variable. Edit the `logic.ergo` code to do so. After step `// 2. Penalty formula` in the logic, apply the penalty cap by adding some logic as follows:
+At this point, executing the logic will still result in large penalties. This is because the logic does not take advantage of the new `capPercentage` variable. Edit the logic code to do so. After step `// 2. Penalty formula` in the logic, apply the penalty cap by adding some logic as follows:
 ```ergo
     // 3. Capped Penalty
     let cap = contract.capPercentage / 100.0 * request.goodsValue;
@@ -210,7 +214,7 @@ The first place to change is in the metadata for the template. This can be done 
 ### Update the Model
 
 To fix this, change the model to reflect that we are now editing a contract template, and change the type `Clause` to `Contract` in the type definition for the template variables:
-```ergo
+```concerto
 asset MiniLateDeliveryContract extends Contract {
   --> Party buyer         // Party to the contract (buyer)
   --> Party seller        // Party to the contract (seller)

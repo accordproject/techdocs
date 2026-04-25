@@ -126,7 +126,7 @@ The `HelloWorldClause` as well as the `Request` and `Response` are types which a
 
 The `HelloWorldClause` indicate that the template is for a Clause, and should have a variable `name` of type `String` (i.e., text).
 
-```ergo
+```concerto
 asset HelloWorldClause extends Clause {
   o String name // variable 'name' is of type String
 }

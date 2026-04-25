@@ -32,7 +32,7 @@ and monthly payments of {{monthlyPayment}}.
 
 To make sense of the data, a _Data Model_, expressed in the Concerto schema language, defines the variables for the template and their associated Data Types:
 
-```ergo
+```concerto
   o Double loanAmount     // loanAmount is a floating-point number
   o Double rate           // rate is a floating-point number
   o Integer loanDuration  // loanDuration is an integer

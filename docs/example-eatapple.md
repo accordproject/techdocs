@@ -28,7 +28,7 @@ this includes the input request for the clause (`Food`), the response
 to that request (`Outcome`) and possible events emitted during the
 clause execution (`Bill`).
 
-```ergo
+```concerto
 namespace org.accordproject.canteen
 
 @AccordTemplateModel("eat-apples")
@@ -53,21 +53,25 @@ event Bill {
 }
 ```
 
-The last component of a smart legal template is the Ergo logic. In our example, it is a single clause `eathealthy` which can be used to process a `Food` request.
+The last component of a smart legal template is the TypeScript logic. In our example, the `trigger` method processes a `Food` request and either fires the employee or emits a `Bill` event.
 
-```ergo
-namespace org.accordproject.canteen
-
-contract EatApples over CanteenContract {
-  clause eathealthy(request : Food) : Outcome {
-    enforce request.produce = "apple"
-    else return Outcome{ notice : "You're fired!" };
-
-    emit Bill{
-      billTo: contract.employee,
-      amount: request.price * (1.0 + contract.tax / 100.0)
+```typescript
+class EatApples extends TemplateLogic<CanteenContract> {
+  async trigger(data: CanteenContract, request: Food, state: IState): Promise<TriggerResponse> {
+    if (request.produce !== 'apple') {
+      return {
+        result: { $class: 'org.accordproject.canteen.Outcome', notice: "You're fired!" }
+      };
+    }
+    const bill: Bill = {
+      $class: 'org.accordproject.canteen.Bill',
+      billTo: data.employee,
+      amount: request.price * (1.0 + data.tax / 100.0)
     };
-    return Outcome{ notice : "Very healthy!" }
+    return {
+      result: { $class: 'org.accordproject.canteen.Outcome', notice: 'Very healthy!' },
+      events: [bill]
+    };
   }
 }
 ```

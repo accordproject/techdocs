@@ -15,7 +15,7 @@ title: Errors
 
  For reference, those can also be described using the following Concerto model:
 
- ```ergo
+ ```concerto
 namespace org.accordproject.errors
  /** Common */
 concept LocationPoint {

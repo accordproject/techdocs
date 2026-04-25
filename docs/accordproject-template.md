@@ -91,7 +91,7 @@ The model categorizes variables (is it a number, a monetary amount, a date, a re
 
 The following shows the model for the **Acceptance of Delivery** clause.
 
-```ergo
+```concerto
 /* The template model */
 asset AcceptanceOfDeliveryClause extends AccordClause {
 
