@@ -14,18 +14,7 @@ const users = [
     infoLink: 'https://contractpen.com',
     pinned: true,
   },
-  {
-    caption: 'REIV SmartVicForms',
-    image: 'https://smartvicforms.com.au/assets/Logo/reiv-smartVicforms%20logo-Full%20Colour.svg',
-    infoLink: 'https://smartvicforms.com.au',
-    pinned: true,
-  },
-  {
-    caption: 'beNEXT',
-    image: 'https://smartvicforms.com.au/assets/Logo/beNext_orange-darkgreen-logo.svg',
-    infoLink: 'https://www.benext.io',
-    pinned: true,
-  },
+
 ];
 
 function Button({ href, target, children }) {
@@ -45,7 +34,7 @@ function HomeSplash() {
         <div className="wrapper homeWrapper">
           <div className="inner">
             <h1 className="projectTitle">
-              <span className="lead">Open Source </span>Documentation
+              <span className="lead">Smart Legal Contracts, </span>Open Source
             </h1>
             <div className="section promoSection">
               <div className="promoRow">
@@ -64,26 +53,31 @@ function HomeSplash() {
 }
 
 function Features() {
-  const items = [
+  const coreTools = [
     {
       title: <a href="/docs/started-installation"><img src="/img/cicero-logo.svg" alt="Cicero" /></a>,
       content: 'Create templates for human-readable and machine-executable contracts using Open Source <a href="/docs/started-installation">Cicero</a>.',
     },
     {
-      title: <a href="/docs/logic-typescript"><strong>Template Logic</strong></a>,
+      title: <a href="/docs/logic-typescript"><img src="/img/typescript-logo.svg" alt="TypeScript" /></a>,
       content: 'Write executable business logic for legal contracts using <a href="/docs/logic-typescript">TypeScript</a>, with types generated from your Concerto model.',
     },
     {
-      title: <a href="https://concerto.accordproject.org/docs/intro">Concerto</a>,
+      title: <a href="https://concerto.accordproject.org/docs/intro"><img src="/img/concerto-logo.svg" alt="Concerto" /></a>,
       content: 'Model the data for your contracts in a platform neutral format with the <a href="https://concerto.accordproject.org/docs/intro">Concerto</a> schema language.',
     },
+  ];
+
+  const ecosystemLinks = [
     {
-      title: <a href="https://templates.accordproject.org/">Template Library</a>,
-      content: 'Find user-contributed open source templates in the <a href="https://templates.accordproject.org/">Template Library</a>.',
+      href: 'https://templates.accordproject.org/',
+      label: 'Template Library',
+      content: 'Browse user-contributed open source templates',
     },
     {
-      title: <a href="https://models.accordproject.org/">Model Repository</a>,
-      content: 'Use models from the <a href="https://models.accordproject.org/">Model Repository</a> to ensure interoperability between your templates.',
+      href: 'https://models.accordproject.org/',
+      label: 'Model Repository',
+      content: 'Reuse shared Concerto data models',
     },
   ];
 
@@ -91,13 +85,30 @@ function Features() {
     <div id="features" className="paddingBottom paddingTop">
       <div className="wrapper">
         <div className="gridBlock">
-          {items.map((item, i) => (
+          {coreTools.map((item, i) => (
             <div key={i} className="blockElement alignCenter threeByGridBlock">
               <div className="blockContent">
                 <h2>{item.title}</h2>
                 <div dangerouslySetInnerHTML={{ __html: item.content }} />
               </div>
             </div>
+          ))}
+        </div>
+        <div style={{
+          borderTop: '1px solid rgba(255,255,255,0.15)',
+          marginTop: '1.5rem',
+          paddingTop: '1rem',
+          textAlign: 'center',
+          lineHeight: '2',
+        }}>
+          <span style={{ color: '#888', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginRight: '1.5rem' }}>Ecosystem</span>
+          {ecosystemLinks.map((link, i) => (
+            <React.Fragment key={i}>
+              {i > 0 && <span style={{ color: '#555', margin: '0 1rem' }}>·</span>}
+              <a href={link.href} style={{ fontSize: '0.9rem', color: '#aaa' }}>
+                {link.label} <span style={{ color: '#666', fontSize: '0.8rem' }}>— {link.content}</span>
+              </a>
+            </React.Fragment>
           ))}
         </div>
       </div>
@@ -141,26 +152,28 @@ function ContentBlock({ id, background, imageAlign, title, content, image, image
 
 function Showcase() {
   const pinnedUsers = users.filter(u => u.pinned);
-  if (pinnedUsers.length === 0) return null;
-  return (
-    <div className="productShowcaseSection paddingBottom" id="showcase">
-      <span className="line line--vertical"></span>
-      <h2>{"Who's"} <span className="strong">{"Using This?"}</span></h2>
-      <div className="typeset"><p>This project is used by the following companies</p></div>
-      <div className="logos">
-        {pinnedUsers.map((user, i) => (
-          <a href={user.infoLink} key={i}>
-            <img src={user.image} alt={user.caption} title={user.caption} />
-          </a>
-        ))}
-      </div>
-      <div className="more-users">
-        <a className="button button-filled" href="/users">
-          More Accord Project Users
-        </a>
-      </div>
-    </div>
-  );
+  return null;
+  // Disable while this section is rebuilt
+  // if (pinnedUsers.length === 0) return null;
+  // return (
+  //   <div className="productShowcaseSection paddingBottom" id="showcase">
+  //     <span className="line line--vertical"></span>
+  //     <h2>{"Who's"} <span className="strong">{"Using This?"}</span></h2>
+  //     <div className="typeset"><p>This project is used by the following companies</p></div>
+  //     <div className="logos">
+  //       {pinnedUsers.map((user, i) => (
+  //         <a href={user.infoLink} key={i}>
+  //           <img src={user.image} alt={user.caption} title={user.caption} />
+  //         </a>
+  //       ))}
+  //     </div>
+  //     <div className="more-users">
+  //       <a className="button button-filled" href="/users">
+  //         More Accord Project Users
+  //       </a>
+  //     </div>
+  //   </div>
+  // );
 }
 
 export default function Home() {
@@ -175,13 +188,13 @@ export default function Home() {
           <ContentBlock
             id="digitize-legal-contracts"
             title='Digitize <span class="strong">Legal Contracts</span>'
-            content="<div class='typeset'>Use <b><em>open source</em></b> tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud or a blockchain platform. The projects comprise all of the software necessary to author, edit and execute smart legal contracts in a standardized fashion.</div>"
+            content="<div class='typeset'>Use <b><em>open source</em></b> tools from the Accord Project to digitize new or existing legal contracts, connect them to web services and deploy them to the cloud. The projects comprise all of the software necessary to author, edit and execute smart legal contracts in a standardized fashion.</div>"
           />
           <ContentBlock
             id="templates"
             title="Templates"
             content="<div class='typeset'>Accord Project Templates are composed of three elements: the Text (the natural language), the Model (the data model), and the Logic (the executable business logic). When combined these three elements allow Accord Project templates to be both <b><em>human-readable</em></b> and <b><em>machine-executable</em></b>.</div>"
-            image="/docs/assets/020/template.png"
+            image="/img/template.png"
             imageAlt="The three elements of Accord Project templates: Text, Model, Logic. These elements form a triangle."
             imageAlign="right"
           />
@@ -190,7 +203,7 @@ export default function Home() {
             background="dark"
             title="Text"
             content='<div class="typeset">CiceroMark lets you capture the data in a natural language clause or contract text through <b><em>template variables</em></b>. And it supports rich text <b><em>markdown</em></b> to ensure that your contracts look professional.</div>'
-            image="/docs/assets/020/grammar.png"
+            image="/img/grammar.png"
             imageAlt="An example of an Accord Project template text. There are 3 paragraphs of a contract with variables in each paragraphs and markdown annotations for formatting"
             imageAlign="left"
           />
@@ -207,15 +220,15 @@ export default function Home() {
             background="dark"
             title="Logic"
             content='<div class="typeset">Template logic is written in <em>TypeScript</em> using a class-based pattern that integrates directly with the Concerto data model. Logic can be embedded inline in template text or defined in a separate TypeScript class that extends <code>TemplateLogic</code>.</div>'
-            image="/docs/assets/020/template_logic.png"
+            image="/img/template_logic.png"
             imageAlt="Example of TypeScript template logic code"
             imageAlign="left"
           />
           <ContentBlock
             id="try"
-            title='Author <span class="strong">and Edit</span>'
+            title='Template <span class="strong">Playground</span>'
             content='<div class="typeset">You can author and test templates online in the Accord Project <a href="https://playground.accordproject.org">Template Playground</a>. Search for existing templates, edit the contract text and execute the logic.</div>'
-            image="/docs/assets/020/studio.png"
+            image="/img/template-playground.png"
             imageAlt="An example a template being edited. There is an option to edit the full contract or a single clause. There is also a search bar at the top center for users to search for specific templates."
             imageAlign="right"
           />

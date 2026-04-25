@@ -47,16 +47,7 @@ export default function Footer() {
           <h5>Community</h5>
           <ul>
             <li>
-              <a href="/users">User Showcase</a>
-            </li>
-            <li>
-              <a href="http://stackoverflow.com/questions/tagged/cicero" target="_blank" rel="noreferrer noopener">Stack Overflow</a>
-            </li>
-            <li>
               <a href="https://discord.com/invite/Zm99SKhhtA">Discord</a>
-            </li>
-            <li>
-              <a href="https://twitter.com/accordhq" target="_blank" rel="noreferrer noopener">Twitter</a>
             </li>
           </ul>
         </div>
@@ -64,16 +55,13 @@ export default function Footer() {
           <h5>More</h5>
           <ul>
             <li>
-              <a href="https://medium.com/@accordhq">Blog</a>
-            </li>
-            <li>
               <a href="https://vimeo.com/accordproject">Vimeo</a>
             </li>
             <li>
               <a href="https://github.com/accordproject">GitHub</a>
             </li>
             <li>
-              <a className="github-button" href="https://github.com/accordproject/cicero" data-icon="octicon-star" data-count-href="/accordproject/cicero/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a>
+              <a className="github-button" href="https://github.com/accordproject/template-archive" data-icon="octicon-star" data-count-href="/accordproject/template-engine/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a>
             </li>
           </ul>
         </div>
