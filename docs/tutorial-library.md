@@ -29,7 +29,7 @@ git clone https://github.com/accordproject/cicero-template-library
 
 Alternatively, you can download the library directly by visiting the [GitHub Repository for the Template Library](https://github.com/accordproject/cicero-template-library) and use the "Download" button as shown on this snapshot:
 
-![Basic-Library-1](/docs/assets/basic/library1.png)
+![Basic-Library-1](./assets/basic/library1.png)
 
 ### Install the Library
 
@@ -82,14 +82,13 @@ $ bash-3.2$ ls -laR
   ./sample.md
 
 ./logic:
-   logic.ergo
+   logic.ts
 
 ./model:
    model.cto
 
 ./test:
-  logic.feature
-  logic_default.feature
+  logic.test.ts
 
 ./request.json
 ./state.json
@@ -165,5 +164,5 @@ You should see a response as follows:
 
 To contribute a change to the Accord Project library, please [fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) the repository and then create a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests).
 
-Note that templates should have unit tests. See any of the `./test` directories in the templates contained in the template library for an examples with unit tests, or consult the [Testing Reference](ref-testing) Section of this documentation.
+Note that templates should have unit tests. See any of the `./test` directories in the templates contained in the template library for an examples with unit tests, or consult the [Testing Reference](ref-cicero-testing) Section of this documentation.
 

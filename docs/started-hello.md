@@ -11,13 +11,13 @@ You can download a single clause or contract template from the [Accord Project T
 
 If you click on the Template Library link, you should see a Web Page which looks as follows:
 
-![Basic-Use-1](/docs/assets/basic/use1.png)
+![Basic-Use-1](./assets/basic/use1.png)
 
 Scrolling down that page, you can see the index for the open-source templates along with their version, and whether they are a Clause or Contract template.
 
 Click on the link to the `helloworld` template. You should be taken to a page which looks as follows:
 
-![Basic-Use-2](/docs/assets/basic/use2.png)
+![Basic-Use-2](./assets/basic/use2.png)
 
 Then click on the `Download Archive` button under the description for the template (highlighted in the red box in the figure). This should download the latest template archive for the `helloworld` template.
 
@@ -208,7 +208,7 @@ Then run `cicero trigger --template helloworld@0.14.0.cta --sample sample.md --r
 
 Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template, you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the [Late Delivery And Penalty](https://templates.accordproject.org/latedeliveryandpenalty@0.15.0.html) clause is in the red box in the following image:
 
-![Basic-Use-3](/docs/assets/basic/use3.png)
+![Basic-Use-3](./assets/basic/use3.png)
 
 ### More About Cicero
 

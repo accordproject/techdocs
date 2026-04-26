@@ -9,7 +9,7 @@ Cicero comes with a VS Code extension for easier development and testing. It inc
 
 To follow this tutorial on how to use the Cicero VS Code extension, we recommend you install the following:
 
-1. [Node, LTS version](nodejs.org)
+1. [Node, LTS version](https://nodejs.org)
 1. [VS Code](https://code.visualstudio.com)
 1. [Yeoman](https://yeoman.io)
 1. [Accord Project Yeoman Generator](https://github.com/accordproject/cicero/tree/master/packages/generator-cicero-template)
