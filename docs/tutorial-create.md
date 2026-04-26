@@ -30,7 +30,7 @@ bash-3.2$ yo @accordproject/cicero-template
 
      _-----_     ╭──────────────────────────╮
     |       |    │      Welcome to the      │
-    |--(o)--|    │ generator-cicero-templat │
+    |--(o)--|    │ generator-cicero-template │
    `---------´   │       e generator!       │
     ( _´U`_ )    ╰──────────────────────────╯
     /___A___\   /
