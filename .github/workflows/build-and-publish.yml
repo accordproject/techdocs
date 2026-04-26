@@ -63,8 +63,9 @@ jobs:
 
       - name: Invalidate Cloudfront
         if: github.ref == 'refs/heads/main'
-        uses: chetan/invalidate-cloudfront-action@master
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
         env:
-          DISTRIBUTION: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
-          PATHS: '/*'
           AWS_REGION: ${{ secrets.AWS_REGION }}
