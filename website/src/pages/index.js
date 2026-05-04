@@ -36,6 +36,10 @@ function HomeSplash() {
             <h1 className="projectTitle">
               <span className="lead">Smart Legal Contracts, </span>Open Source
             </h1>
+            <p className="projectTagline">
+              Legal text drafted by lawyers, interpreted by courts, and executable by software —
+              from the same open source template.
+            </p>
             <div className="section promoSection">
               <div className="promoRow">
                 <div className="pluginRowBlock">
@@ -56,15 +60,15 @@ function Features() {
   const coreTools = [
     {
       title: <a href="/docs/started-installation"><img src="/img/cicero-logo.svg" alt="Cicero" /></a>,
-      content: 'Create templates for human-readable and machine-executable contracts using Open Source <a href="/docs/started-installation">Cicero</a>.',
+      content: 'Create templates where lawyers write the contract text in <b>Markdown</b> and software executes the logic. Use open source <a href="/docs/started-installation">Cicero</a> to render, validate, and run them — or call them from an AI agent.',
     },
     {
       title: <a href="/docs/logic-typescript"><img src="/img/typescript-logo.svg" alt="TypeScript" /></a>,
-      content: 'Write executable business logic for legal contracts using <a href="/docs/logic-typescript">TypeScript</a>, with types generated from your Concerto model.',
+      content: 'Write <b>TypeScript</b> logic that precisely captures what the legal text says — strongly typed, so the compiler enforces intent before a contract is signed. Types are generated directly from your Concerto data model.',
     },
     {
       title: <a href="https://concerto.accordproject.org/docs/intro"><img src="/img/concerto-logo.svg" alt="Concerto" /></a>,
-      content: 'Model the data for your contracts in a platform neutral format with the <a href="https://concerto.accordproject.org/docs/intro">Concerto</a> schema language.',
+      content: 'Model the deal terms in your contracts with the <b>Concerto</b> schema language — portable across JSON Schema, TypeScript, Java, Go, and more, so the data means the same thing everywhere. <a href="https://concerto.accordproject.org/docs/intro">Learn more.</a>',
     },
   ];
 
@@ -78,6 +82,11 @@ function Features() {
       href: 'https://models.accordproject.org/',
       label: 'Model Repository',
       content: 'Reuse shared Concerto data models',
+    },
+    {
+      href: 'https://accordproject.org/whitepaper-2024/',
+      label: 'Whitepaper',
+      content: 'An Introduction to Computable Contracts',
     },
   ];
 
@@ -101,12 +110,12 @@ function Features() {
           textAlign: 'center',
           lineHeight: '2',
         }}>
-          <span style={{ color: '#888', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginRight: '1.5rem' }}>Ecosystem</span>
+          <span style={{ color: '#bbb', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginRight: '1.5rem' }}>Ecosystem</span>
           {ecosystemLinks.map((link, i) => (
             <React.Fragment key={i}>
-              {i > 0 && <span style={{ color: '#555', margin: '0 1rem' }}>·</span>}
-              <a href={link.href} style={{ fontSize: '0.9rem', color: '#aaa' }}>
-                {link.label} <span style={{ color: '#666', fontSize: '0.8rem' }}>— {link.content}</span>
+              {i > 0 && <span style={{ color: '#888', margin: '0 1rem' }}>·</span>}
+              <a href={link.href} style={{ fontSize: '0.9rem', color: '#ddd' }}>
+                {link.label} <span style={{ color: '#aaa', fontSize: '0.8rem' }}>— {link.content}</span>
               </a>
             </React.Fragment>
           ))}
@@ -122,7 +131,7 @@ function ContentBlock({ id, background, imageAlign, title, content, image, image
   const imageAlignClass = imageAlign === 'right' ? 'imageAlignRight' : 'imageAlignLeft';
   const elementClass = hasImage
     ? `blockElement ${imageAlignClass} twoByGridBlock imageAlignSide`
-    : 'blockElement twoByGridBlock';
+    : 'blockElement twoByGridBlock alignCenter';
 
   return (
     <div id={id} className={`paddingBottom paddingTop ${bgClass}`}>
@@ -154,26 +163,6 @@ function Showcase() {
   const pinnedUsers = users.filter(u => u.pinned);
   return null;
   // Disable while this section is rebuilt
-  // if (pinnedUsers.length === 0) return null;
-  // return (
-  //   <div className="productShowcaseSection paddingBottom" id="showcase">
-  //     <span className="line line--vertical"></span>
-  //     <h2>{"Who's"} <span className="strong">{"Using This?"}</span></h2>
-  //     <div className="typeset"><p>This project is used by the following companies</p></div>
-  //     <div className="logos">
-  //       {pinnedUsers.map((user, i) => (
-  //         <a href={user.infoLink} key={i}>
-  //           <img src={user.image} alt={user.caption} title={user.caption} />
-  //         </a>
-  //       ))}
-  //     </div>
-  //     <div className="more-users">
-  //       <a className="button button-filled" href="/users">
-  //         More Accord Project Users
-  //       </a>
-  //     </div>
-  //   </div>
-  // );
 }
 
 export default function Home() {
@@ -202,7 +191,7 @@ export default function Home() {
             id="accord"
             background="dark"
             title="Text"
-            content='<div class="typeset">CiceroMark lets you capture the data in a natural language clause or contract text through <b><em>template variables</em></b>. And it supports rich text <b><em>markdown</em></b> to ensure that your contracts look professional.</div>'
+            content='<div class="typeset">CiceroMark lets you capture the data in a natural language clause or contract text through <b><em>template variables</em></b>. And it supports rich text <b><em>markdown</em></b> to ensure that your contracts look professional — and are natively legible to large language models.</div>'
             image="/img/grammar.png"
             imageAlt="An example of an Accord Project template text. There are 3 paragraphs of a contract with variables in each paragraphs and markdown annotations for formatting"
             imageAlign="left"
@@ -210,7 +199,7 @@ export default function Home() {
           <ContentBlock
             id="model"
             title="Model"
-            content='<div class="typeset">Concerto lets you model the data used in your templates in a flexible and expressive way. Models can be written in a modular and portable way so they can be reused in a variety of contracts. <a href="https://concerto.accordproject.org/docs/intro">Learn more about Concerto.</a></div>'
+            content='<div class="typeset">Concerto lets you model the data used in your templates in a flexible and expressive way. Models can be written in a modular and portable way so they can be reused in a variety of contracts. The schema grounds agent-generated output — invalid types fail at validation, not at runtime. <a href="https://concerto.accordproject.org/docs/intro">Learn more about Concerto.</a></div>'
             image="/img/model-uml.png"
             imageAlt="A diagram with an example of a Concerto model"
             imageAlign="right"
@@ -219,7 +208,7 @@ export default function Home() {
             id="logic"
             background="dark"
             title="Logic"
-            content='<div class="typeset">Template logic is written in <em>TypeScript</em> using a class-based pattern that integrates directly with the Concerto data model. Logic can be embedded inline in template text or defined in a separate TypeScript class that extends <code>TemplateLogic</code>.</div>'
+            content='<div class="typeset">Template logic is written in <em>TypeScript</em> using a class-based pattern that integrates directly with the Concerto data model. Logic can be embedded inline in template text or defined in a separate TypeScript class that extends <code>TemplateLogic</code>. TypeScript&apos;s strong typing means agents can generate and statically verify contract logic before execution.</div>'
             image="/img/template_logic.png"
             imageAlt="Example of TypeScript template logic code"
             imageAlign="left"
@@ -231,6 +220,17 @@ export default function Home() {
             image="/img/template-playground.png"
             imageAlt="An example a template being edited. There is an option to edit the full contract or a single clause. There is also a search bar at the top center for users to search for specific templates."
             imageAlign="right"
+          />
+          <ContentBlock
+            id="agent-workflows"
+            background="dark"
+            title='Built for <span class="strong">Agent Workflows</span>'
+            content={`<div class='typeset'>
+              <p>Accord Project's three-component template architecture maps directly onto how modern AI agents operate.</p>
+              <p>The <b>natural language text</b> (TemplateMark/Markdown) is the format agents read and write fluently. The <b>Concerto schema</b> provides the structured type contract that constrains agent output. The <b>TypeScript logic</b> lets agents generate verifiable, type-safe business rules, with the compiler catching errors before they reach production.</p>
+              <p>The <a href="/docs/ref-apap">Agreement Protocol API (APAP)</a> exposes contract templates over a REST interface — including a <b>Model Context Protocol (MCP) endpoint</b> — so any AI assistant or orchestration framework can author, fill, validate, and execute contracts as tool calls.</p>
+              <p><a href="/docs/accordproject-ai">Learn more about AI &amp; Agent Workflows →</a> &nbsp;·&nbsp; <a href="https://accordproject.org/whitepaper-2024/">Read the Whitepaper →</a></p>
+            </div>`}
           />
           <Showcase />
         </div>
