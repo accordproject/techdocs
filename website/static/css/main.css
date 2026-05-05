@@ -1721,12 +1721,6 @@ input::placeholder {
   color: #393939;
 }
 
-@media only screen and (max-width: 735px) {
-  .anchor {
-    top: -144px;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   .toc {
     padding: 40px 0;
