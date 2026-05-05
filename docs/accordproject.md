@@ -26,9 +26,11 @@ If this interests you, please visit our [Lifecycle and Industry Working Groups](
 
 ### For Lawyers
 
-The Legal world is changing and Legal Tech is growing into a billion dollar industry. The modern lawyer has to be at home in the digital world. Law Schools now teach courses in coding for lawyers, computational law, blockchain and artificial intelligence. Legal Hackers is a world wide movement uniting lawyers across the world in a shared passion for law and technology. Lawyers need to move beyond the written word on paper.
+The legal world is changing and Legal Tech is a [billion dollar industry](https://fortune.com/2023/10/02/global-trade-4-billion-paper-documents-daily-uk-document-act-law-finance-geraldine-mcbride/). The modern lawyer must be at home in the digital world. [Legal Hackers](https://legalhackers.org/) is a worldwide movement uniting lawyers across the world in a shared passion for law and technology. Increasingly, AI tools are being used to draft, review, and negotiate contracts — and the Accord Project gives legal professionals a path to digitize contract knowledge in a structured way that AI can reliably work with.
 
-The template in an Accord Project Contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract can easily be transformed into a template by adding data points between curly braces that represent the Concerto model, and contract logic can be added as an integral part of the contract. The template language is subject to judicial interpretation and the Concerto model and contract logic can be interpreted by a computer, creating a bridge between the two worlds.
+The template in an Accord Project Contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract can easily be transformed into a template by adding data points between curly braces that represent the Concerto model, and contract logic can be added as an integral part of the contract. The template language is subject to judicial interpretation, and the Concerto model and contract logic can be interpreted by a computer, creating a bridge between the two worlds.
+
+In November 2021, the Law Commission of England and Wales [concluded](https://lawcom.gov.uk/project/smart-contracts/) that the current legal framework is sufficiently robust and adaptable to support the use of smart legal contracts — confirming they are legally binding and enforceable agreements.
 
 As a lawyer, contributing to the Accord Project would be a great opportunity to learn about smart legal contracts. Through the Accord Project, you can understand the foundations of open source technologies and learn how to develop smart agreements.
 
@@ -40,12 +42,14 @@ The Accord Project provides a universal format for smart legal contracts, and th
 
 The Accord Project is developing tools including a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), the [APAP agreement server API](https://github.com/accordproject/apap), and a command line interface for working with Accord Project Contracts. You can integrate contracts into existing applications, create new applications, or write contract logic in TypeScript.
 
+If you are building AI agents or LLM-powered applications, Accord Project templates provide a structured, validated, and legally meaningful data layer. Templates can be invoked via the [APAP REST API](ref-apap.md) — including a **Model Context Protocol (MCP) endpoint** — so your agent can author, validate, and execute contracts as tool calls. The Concerto schema language provides a type-safe wire format that significantly reduces hallucination risk in agent-generated contract data. See the [AI & Agent Workflows](accordproject-ai.md) guide for details.
+
 There is a welcoming community on Discord that is eager to help. [Join our Community](https://discord.com/invite/Zm99SKhhtA)
 
 
 ## About this documentation
 
-If you are new to Accord Project, you may want to first read about the notion of [Smart Legal Contracts](accordproject-slc.md) and about [Accord Project Templates](accordproject-template.md). We also recommend taking the [Online Tour](accordproject-tour.md).
+If you are new to Accord Project, you may want to first read about the notion of [Smart Legal Contracts](accordproject-slc.md) and about [Accord Project Templates](accordproject-template.md). We also recommend taking the [Online Tour](accordproject-tour.md). For AI and agent integration, see the [AI & Agent Workflows](accordproject-ai.md) guide.
 
 To start using Accord Project templates, follow the [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instructions in the _Getting Started_ Section of the documentation.
 

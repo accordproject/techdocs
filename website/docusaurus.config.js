@@ -55,7 +55,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Accord Project',
+        title: '',
         logo: {
           alt: 'Accord Project Logo',
           src: 'img/A-MARK-ACCORDPROJECT-ONELINE-white.svg',

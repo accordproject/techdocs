@@ -6,7 +6,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Introduction',
-      items: ['accordproject', 'accordproject-slc', 'accordproject-template', 'accordproject-tour', 'accordproject-faq'],
+      items: ['accordproject', 'accordproject-slc', 'accordproject-ai', 'accordproject-template', 'accordproject-tour', 'accordproject-faq'],
     },
     {
       type: 'category',

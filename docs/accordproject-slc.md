@@ -75,3 +75,17 @@ This is a simple example of the benefits of Machine-Executable contract, here ad
 
 More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
 
+### Machine-Legible to AI Agents
+
+Smart Legal Contracts are not just executable by traditional software — they are legible and generatable by AI agents. The 2024 whitepaper [*An Introduction to Computable Contracts*](https://accordproject.org/whitepaper-2024/) identifies several properties that make the three-component template architecture particularly well-suited to AI-assisted workflows:
+
+- **Markdown text** is the lingua franca of LLMs. An agent that drafts or reviews a TemplateMark document is working in a format it already understands at training-data scale.
+- **Concerto schemas** act as a type contract for agent output. When an agent populates template variables, the schema enforces that `{{rate}}` receives a `Double`, not the string `"January"` — catching hallucinations structurally, not just by prompt instruction.
+- **TypeScript logic** allows agents to generate contract calculation code that is statically verified by the TypeScript compiler before execution. Type errors surface before they can cause incorrect payment calculations or clause misfires.
+
+Academic research has demonstrated AI-to-template pipelines in practice. NLP pipelines at [Northwestern University / Adobe Research](https://doi.org/10.1145/3594536.3595162) and [National Taiwan Normal University / UCL / HSBC](https://arxiv.org/abs/2210.08954) have demonstrated automated extraction of contract obligations directly into Accord Project templates from natural language source documents.
+
+The [Agreement Protocol API (APAP)](ref-apap.md) exposes templates over a REST interface — including a Model Context Protocol (MCP) endpoint — so AI assistants and orchestration frameworks can author, fill, validate, and execute contracts as tool calls.
+
+See the [AI & Agent Workflows](accordproject-ai.md) guide for a full walkthrough.
+
