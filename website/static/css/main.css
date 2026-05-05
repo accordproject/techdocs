@@ -1722,7 +1722,6 @@ input::placeholder {
 
 @media only screen and (max-width: 735px) {
   .anchor {
-    top: -144px;
   }
 }
 
