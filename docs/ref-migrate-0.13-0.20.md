@@ -63,7 +63,7 @@ Consider the [late delivery and penalty](https://templates.accordproject.org/lat
 
 ## Text Changes
 
-Both grammar and sample text for the templates has changed to support rich text annotations through CommonMark and a new syntax for variables. You can find complete information about the new syntax in the [CiceroMark](markup-cicero) Section of this documentation. For an existing template, you should apply the following changes.
+Both grammar and sample text for the templates has changed to support rich text annotations through CommonMark and a new syntax for variables. You can find complete information about the new syntax in the [CiceroMark](markup-ciceromark) Section of this documentation. For an existing template, you should apply the following changes.
 
 ### Text Grammar Changes
 
@@ -248,7 +248,7 @@ Note that several options have been renamed for consistency as well. Some of the
 2. `--format` has been replaced by `--target` in the new `cicero compile` command
 3. `--contract` has been replaced by `--data` in all `ergo` commands
 
-For more details on the new command line interface, please consult the corresponding [Cicero CLI](cicero-cli), [Concerto CLI](concerto-cli), [Ergo CLI](ergo-cli), and [Markus CLI](markus-cli) Sections in the reference manual.
+For more details on the new command line interface, please consult the corresponding [Cicero CLI](ref-cicero-cli), [Concerto CLI](ref-concerto-cli), [Ergo CLI](ref-ergo-cli), and [Markus CLI](ref-markus-cli) Sections in the reference manual.
 
 ## API Changes
 

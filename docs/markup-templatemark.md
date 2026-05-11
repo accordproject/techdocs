@@ -5,7 +5,7 @@ title: TemplateMark
 
 TemplateMark is an extension to CommonMark used to write the text in Accord Project templates. The extension includes new markdown for variables, inline and container elements of the markdown and template formulas.
 
-The kind of extension which can be used is based on the _type_ of the variable in the [Concerto Model](https://concerto.accordproject.org/docs/intro) for your template. For each type in your model differrent markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.
+The kind of extension which can be used is based on the _type_ of the variable in the [Concerto Model](https://concerto.accordproject.org/docs/intro) for your template. For each type in your model different markdown elements apply: variable markdown for atomic types in the model, list blocks for array types in the model, optional blocks for optional types in the model, etc.
 
 ## Variables
 
@@ -24,7 +24,7 @@ The way variables are handled (both during parsing and drafting) is based on the
 #### Description
 
 If the variable `variableName` has type `String` in the model:
-```ergo
+```concerto
 o String variableName
 ```
 The corresponding instance should contain text between quotes (`"`).
@@ -33,7 +33,7 @@ The corresponding instance should contain text between quotes (`"`).
 
 For example, consider the following model:
 
-```ergo
+```concerto
 asset Template extends AccordClause {
   o String buyer
   o String supplier
@@ -64,7 +64,7 @@ This Supply Sales Agreement is made between Steve Supplier and Betty Byer.
 #### Description
 
 If the variable `variableName` has type `Double`, `Integer` or `Long` in the model:
-```ergo
+```concerto
 o Double variableName
 o Integer variableName2
 o Long variableName3
@@ -75,7 +75,7 @@ The corresponding instance should contain the corresponding number.
 
 For example, consider the following model:
 
-```ergo
+```concerto
 asset Template extends AccordClause {
   o Double penaltyPercentage
 }
@@ -105,7 +105,7 @@ The penalty amount is "10.5"% of the total value of the Equipment whose delivery
 #### Description
 
 If the variable `variableName` has an enumerated type:
-```ergo
+```concerto
 o EnumType variableName
 ```
 
@@ -114,7 +114,7 @@ The corresponding instance should contain a corresponding enumerated value witho
 #### Examples
 
 For example, consider the following model:
-```ergo
+```concerto
 import org.accordproject.money.CurrencyCode from https://models.accordproject.org/money.cto
 asset Template extends AccordClause {
   o CurrencyCode currency
@@ -155,7 +155,7 @@ The contract was signed on {{contractDate as "DD/MM/YYYY"}}.
 #### Description
 
 If the variable `variableName` has type `DateTime`:
-```ergo
+```concerto
 o DateTime variableName
 ```
 The corresponding instance should be a date and time, and can optionally be formatted. The default format is `MM/DD/YYYY`, commonly used in the US.
@@ -231,7 +231,7 @@ dateTimeProperty: 04-Jan-2019 2 59:01.001+01:01
 #### Description
 
 If the variable `variableName` is of type `Integer`, `Long`, `Double` or `MonetaryAmount`:
-```ergo
+```concerto
 o Integer integerVariable
 o Long longVariable
 o Double doubleVariable
@@ -261,7 +261,7 @@ The general format for the amount is `0{sep}0({sep}0+)?` where `{sep}` is a sing
 
 #### Examples
 
-The following examples show formating for `Integer` or `Long` values.
+The following examples show formatting for `Integer` or `Long` values.
 
 ```
 The manuscript shall be completed within {{days as "0,0"}} days.
@@ -309,7 +309,7 @@ The loan principal is 2 000 500 000,00 €.
 #### Description
 
 If the variable `variableName` has type `Duration`:
-```ergo
+```concerto
 import org.accordproject.time.Duration
 o Duration variableName
 ```
@@ -319,7 +319,7 @@ The corresponding instance should contain the corresponding duration written wit
 #### Examples
 
 For example, consider the following model:
-```ergo
+```concerto
 asset Template extends AccordClause {
   o Duration termination
 }
@@ -353,7 +353,7 @@ If the delay is more than "two weeks", the Buyer is entitled to terminate this C
 #### Description
 
 If the variable `variableName` has a complex type `ComplexType` (such as an `asset`, a `concept`, etc.)
-```ergo
+```concerto
 o ComplexType variableName
 ```
 
@@ -362,7 +362,7 @@ The corresponding instance should contain all fields in the corresponding comple
 #### Examples
 
 For example, consider the following model:
-```ergo
+```concerto
 import org.accordproject.address.PostalAddress from https://models.accordproject.org/address.cto
 asset Template extends AccordClause {
   o PostalAddress address

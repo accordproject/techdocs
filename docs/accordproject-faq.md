@@ -17,7 +17,7 @@ While the Accord Project technology is targeted at the development of smart lega
 
 ### How is an Accord Project "Smart Contract" different from "Smart Contracts" on the blockchain?
 
-Accord Project Smart legal contracts should not be confused with so-called blockchain “smart contracts”, which are scripts that necessarily operate on a blockchain. On the blockchain a smart contract is often written in a specific language like solidity that executes and operates on the blockchain. It lives in a closed world. An Accord Project Smart Contract contains text based template that integrates with a data model and the Ergo language. The three components are integrated into a whole. Using Ergo an Accord Project Smart contract can communicate with other systems, it can send and receive data, it can perform calculations and it can interact with a blockchain.
+Accord Project Smart legal contracts should not be confused with so-called blockchain “smart contracts”, which are scripts that necessarily operate on a blockchain. On the blockchain a smart contract is often written in a specific language like solidity that executes and operates on the blockchain. It lives in a closed world. An Accord Project Smart Contract contains a text-based template that integrates with a data model and contract logic written in TypeScript. The three components are integrated into a whole. Using this logic an Accord Project Smart Contract can communicate with other systems, send and receive data, perform calculations, and interact with a blockchain.
 
 ### What benefits do Smart Legal Contracts provide?
 
@@ -50,9 +50,9 @@ The Accord Project Community is developing several working groups focusing on di
 
 A primary purpose of the working groups is to develop a universally accessible and widely used open source library of modular, smart legal contracts, smart templates and models that reflect input from the community. Smart legal contract templates are built according to the Project’s [Cicero Specification](https://github.com/accordproject/cicero).
 
-Members can provide feedback into the templates and models relevant to a particular working group. You can immediately start contributing smart legal contract templates and models by using the Accord Project’s [Template Studio](https://studio.accordproject.org/).
+Members can provide feedback into the templates and models relevant to a particular working group. You can immediately start contributing smart legal contract templates and models by using the Accord Project’s [Template Playground](https://playground.accordproject.org).
 
-The Accord Project has developed an easy-to-use programming language for building and executing smart legal contracts called Ergo. The goals of Ergo are to be accessible and usable by non-technical professionals, portable across, and compatible with, a variety of environments such as SaaS platforms and different blockchains, and meeting security, safety, and other requirements. 
+Contract logic for Accord Project templates is written in TypeScript, making it accessible to the large community of JavaScript and TypeScript developers. Templates can be integrated with a variety of environments including SaaS platforms and business applications.
 
-You can use the Accord Project’s [Template Studio](https://studio.accordproject.org/) to create and test your smart legal contracts.
+You can use the Accord Project’s [Template Playground](https://playground.accordproject.org) to create and test your smart legal contracts.
 

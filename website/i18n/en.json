@@ -50,6 +50,9 @@
       "logic-stmt": {
         "title": "Statements"
       },
+      "logic-typescript": {
+        "title": "Template Logic"
+      },
       "markup-ciceromark": {
         "title": "CiceroMark"
       },
@@ -61,6 +64,9 @@
       },
       "markup-templatemark": {
         "title": "TemplateMark"
+      },
+      "ref-apap": {
+        "title": "Agreement Protocol (APAP)"
       },
       "ref-cicero-api": {
         "title": "Cicero API"
@@ -138,7 +144,7 @@
         "title": "With Node.js"
       },
       "tutorial-studio": {
-        "title": "With Template Studio"
+        "title": "With Template Playground"
       },
       "tutorial-templates": {
         "title": "Templates Deep Dive"

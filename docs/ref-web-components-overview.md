@@ -3,6 +3,8 @@ id: ref-web-components-overview
 title: Overview
 ---
 
+> **Deprecated:** These components are no longer actively maintained. We recommend using the [Template Playground](https://playground.accordproject.org) for web-based template editing.
+
 Accord Project publishes [React](https://reactjs.org) user interface components for use in web applications. Please refer to the web-components project [on GitHub](https://github.com/accordproject/web-components) for detailed usage instructions.
 
 You can preview these components in [the project's storybook](https://ap-web-components.netlify.app/).
@@ -18,7 +20,7 @@ The Contract Editor component provides a rich-text content editor for contract t
 The contract editor does not support templates which use the following CiceroMark features:
 
 * Lists containing [nested lists](markup-commonmark.md#nested-lists)
-* List blocks [list blocks](markup-commonmark.md#list-blocks)
+* List blocks [list blocks](markup-commonmark#lists)
 
 ## Error Logger
 

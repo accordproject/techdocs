@@ -7,10 +7,8 @@ We'd love for you to contribute to our source code and to make Accord Project te
 * [Issues and Bugs][contribute.issue]
 * [Feature Requests][contribute.feature]
 * [Improving Documentation][contribute.docs]
-* [Updating Documentation][contribute.updating]
 * [Issue Submission Guidelines][contribute.submit]
 * [Pull Request Submission Guidelines][contribute.submitpr]
-* [Technical Documentation][contribute.techdocs]
 
 ## <a name="coc"></a> Code of Conduct
 
@@ -87,7 +85,7 @@ Before you submit your pull request consider the following guidelines:
 
   Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
 
-* Before creating the Pull Request, ensure your branch sits on top of main (as opposed to branch off a branch). This ensures the reviewer will need only minimal effort to integrate your work by fast-fowarding main:
+* Before creating the Pull Request, ensure your branch sits on top of main (as opposed to branch off a branch). This ensures the reviewer will need only minimal effort to integrate your work by fast-forwarding main:
 
   ```text
     git rebase upstream/main
@@ -105,7 +103,7 @@ Before you submit your pull request consider the following guidelines:
     git push origin name/issue-tracker/short-description
   ```
 
-* In GitHub, send a pull request to `<REPOSITORY>:main` by following our [pull request conventions][developers.pullrequest]. This will trigger the check of the [Contributor License Agreement][contribute.cla] and the Travis integration.
+* In GitHub, send a pull request to `<REPOSITORY>:main`. Ensure you have provided a DCO sign-off for your commits using `git commit --signoff`.
 * If you find that the Travis integration has failed, look into the logs on Travis to find out if your changes caused test failures, the commit message was malformed, etc. If you find that the tests failed or times out for unrelated reasons, you can ping a team member so that the build can be restarted.
 * If we suggest changes, then:
   * Make the required updates.
@@ -165,15 +163,12 @@ Accord Project documentation files are made available under the [Creative Common
 [apdiscord]: https://discord.gg/Zm99SKhhtA
 
 [contribute.coc]: CONTRIBUTING.md#coc
-[contribute.cla]: CONTRIBUTING.md#cla
 [contribute.question]: CONTRIBUTING.md#question
 [contribute.issue]: CONTRIBUTING.md#issue
 [contribute.feature]: CONTRIBUTING.md#feature
 [contribute.docs]: CONTRIBUTING.md#docs
-[contribute.updating]: CONTRIBUTING.md#updating
 [contribute.submit]: CONTRIBUTING.md#submit
 [contribute.submitpr]: CONTRIBUTING.md#submit-pr
-[contribute.techdocs]: CONTRIBUTING.md#techdocs
 
 
 [developers]: DEVELOPERS.md

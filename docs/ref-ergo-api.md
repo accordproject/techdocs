@@ -64,7 +64,7 @@ title: Ergo API
 </dd>
 </dl>
 
-<a name="Commands"></a>
+<a id="Commands"></a>
 
 ## Commands
 Utility class that implements the commands exposed by the Ergo CLI.
@@ -78,7 +78,7 @@ Utility class that implements the commands exposed by the Ergo CLI.
     * [.parseCTOtoFileSync(ctoPath)](#Commands.parseCTOtoFileSync) ⇒ <code>string</code>
     * [.parseCTOtoFile(ctoPath)](#Commands.parseCTOtoFile) ⇒ <code>string</code>
 
-<a name="Commands.trigger"></a>
+<a id="Commands.trigger"></a>
 
 ### Commands.trigger(template, files, contractInput, stateInput, [currentTime], [utcOffset], requestsInput, warnings) ⇒ <code>object</code>
 Send a request an Ergo contract
@@ -97,7 +97,7 @@ Send a request an Ergo contract
 | requestsInput | <code>Array.&lt;string&gt;</code> | the requests |
 | warnings | <code>boolean</code> | whether to print warnings |
 
-<a name="Commands.invoke"></a>
+<a id="Commands.invoke"></a>
 
 ### Commands.invoke(template, files, clauseName, contractInput, stateInput, [currentTime], [utcOffset], paramsInput, warnings) ⇒ <code>object</code>
 Invoke an Ergo contract's clause
@@ -117,7 +117,7 @@ Invoke an Ergo contract's clause
 | paramsInput | <code>object</code> | the parameters for the clause |
 | warnings | <code>boolean</code> | whether to print warnings |
 
-<a name="Commands.initialize"></a>
+<a id="Commands.initialize"></a>
 
 ### Commands.initialize(template, files, contractInput, [currentTime], [utcOffset], paramsInput, warnings) ⇒ <code>object</code>
 Invoke init for an Ergo contract
@@ -135,7 +135,7 @@ Invoke init for an Ergo contract
 | paramsInput | <code>object</code> | the parameters for the clause |
 | warnings | <code>boolean</code> | whether to print warnings |
 
-<a name="Commands.parseCTOtoFileSync"></a>
+<a id="Commands.parseCTOtoFileSync"></a>
 
 ### Commands.parseCTOtoFileSync(ctoPath) ⇒ <code>string</code>
 Parse CTO to JSON File
@@ -147,7 +147,7 @@ Parse CTO to JSON File
 | --- | --- | --- |
 | ctoPath | <code>string</code> | path to CTO model file |
 
-<a name="Commands.parseCTOtoFile"></a>
+<a id="Commands.parseCTOtoFile"></a>
 
 ### Commands.parseCTOtoFile(ctoPath) ⇒ <code>string</code>
 Parse CTO to JSON File
@@ -159,7 +159,7 @@ Parse CTO to JSON File
 | --- | --- | --- |
 | ctoPath | <code>string</code> | path to CTO model file |
 
-<a name="getJson"></a>
+<a id="getJson"></a>
 
 ## getJson(input) ⇒ <code>object</code>
 Load a file or JSON string
@@ -171,7 +171,7 @@ Load a file or JSON string
 | --- | --- | --- |
 | input | <code>object</code> | either a file name or a json string |
 
-<a name="loadTemplate"></a>
+<a id="loadTemplate"></a>
 
 ## loadTemplate(template, files) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
 Load a template from directory or files
@@ -184,7 +184,7 @@ Load a template from directory or files
 | template | <code>string</code> | template directory |
 | files | <code>Array.&lt;string&gt;</code> | input files |
 
-<a name="fromDirectory"></a>
+<a id="fromDirectory"></a>
 
 ## fromDirectory(path, [options]) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
 Builds a LogicManager from a directory.
@@ -197,7 +197,7 @@ Builds a LogicManager from a directory.
 | path | <code>String</code> | to a local directory |
 | [options] | <code>Object</code> | an optional set of options to configure the instance. |
 
-<a name="fromZip"></a>
+<a id="fromZip"></a>
 
 ## fromZip(buffer, [options]) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
 Builds a LogicManager from a Zip.
@@ -210,7 +210,7 @@ Builds a LogicManager from a Zip.
 | buffer | <code>Buffer</code> | the buffer to a Zip (zip) file |
 | [options] | <code>Object</code> | an optional set of options to configure the instance. |
 
-<a name="fromFiles"></a>
+<a id="fromFiles"></a>
 
 ## fromFiles(files, [options]) ⇒ <code>Promise.&lt;LogicManager&gt;</code>
 Builds a LogicManager from files.
@@ -223,7 +223,7 @@ Builds a LogicManager from files.
 | files | <code>Array.&lt;String&gt;</code> | file names |
 | [options] | <code>Object</code> | an optional set of options to configure the instance. |
 
-<a name="validateContract"></a>
+<a id="validateContract"></a>
 
 ## validateContract(modelManager, contract, utcOffset, options) ⇒ <code>object</code>
 Validate contract JSON
@@ -238,7 +238,7 @@ Validate contract JSON
 | utcOffset | <code>number</code> | UTC Offset for DateTime values |
 | options | <code>object</code> | parameters for contract variables validation |
 
-<a name="validateInput"></a>
+<a id="validateInput"></a>
 
 ## validateInput(modelManager, input, utcOffset) ⇒ <code>object</code>
 Validate input JSON
@@ -252,7 +252,7 @@ Validate input JSON
 | input | <code>object</code> | the input JSON |
 | utcOffset | <code>number</code> | UTC Offset for DateTime values |
 
-<a name="validateStandard"></a>
+<a id="validateStandard"></a>
 
 ## validateStandard(modelManager, input, utcOffset) ⇒ <code>object</code>
 Validate standard
@@ -266,7 +266,7 @@ Validate standard
 | input | <code>object</code> | the input JSON |
 | utcOffset | <code>number</code> | UTC Offset for DateTime values |
 
-<a name="validateInputRecord"></a>
+<a id="validateInputRecord"></a>
 
 ## validateInputRecord(modelManager, input, utcOffset) ⇒ <code>object</code>
 Validate input JSON record
@@ -280,7 +280,7 @@ Validate input JSON record
 | input | <code>object</code> | the input JSON record |
 | utcOffset | <code>number</code> | UTC Offset for DateTime values |
 
-<a name="validateOutput"></a>
+<a id="validateOutput"></a>
 
 ## validateOutput(modelManager, output, utcOffset) ⇒ <code>object</code>
 Validate output JSON
@@ -294,7 +294,7 @@ Validate output JSON
 | output | <code>object</code> | the output JSON |
 | utcOffset | <code>number</code> | UTC Offset for DateTime values |
 
-<a name="validateOutputArray"></a>
+<a id="validateOutputArray"></a>
 
 ## validateOutputArray(modelManager, output, utcOffset) ⇒ <code>Array.&lt;object&gt;</code>
 Validate output JSON array
@@ -308,7 +308,7 @@ Validate output JSON array
 | output | <code>\*</code> | the output JSON array |
 | utcOffset | <code>number</code> | UTC Offset for DateTime values |
 
-<a name="init"></a>
+<a id="init"></a>
 
 ## init(engine, logicManager, contractJson, currentTime, utcOffset) ⇒ <code>object</code>
 Invoke Ergo contract initialization
@@ -324,7 +324,7 @@ Invoke Ergo contract initialization
 | currentTime | <code>string</code> | the definition of 'now' |
 | utcOffset | <code>utcOffset</code> | UTC Offset for this execution |
 
-<a name="trigger"></a>
+<a id="trigger"></a>
 
 ## trigger(engine, logicManager, contractJson, stateJson, currentTime, utcOffset, requestJson) ⇒ <code>object</code>
 Trigger the Ergo contract with a request
@@ -342,7 +342,7 @@ Trigger the Ergo contract with a request
 | utcOffset | <code>utcOffset</code> | UTC Offset for this execution |
 | requestJson | <code>object</code> | state data in JSON |
 
-<a name="resolveRootDir"></a>
+<a id="resolveRootDir"></a>
 
 ## resolveRootDir(parameters) ⇒ <code>string</code>
 Resolve the root directory
@@ -354,7 +354,7 @@ Resolve the root directory
 | --- | --- | --- |
 | parameters | <code>string</code> | Cucumber's World parameters |
 
-<a name="compareComponent"></a>
+<a id="compareComponent"></a>
 
 ## compareComponent(expected, actual)
 Compare actual and expected result components
@@ -366,7 +366,7 @@ Compare actual and expected result components
 | expected | <code>string</code> | the expected component as specified in the test workload |
 | actual | <code>string</code> | the actual component as returned by the engine |
 
-<a name="compareSuccess"></a>
+<a id="compareSuccess"></a>
 
 ## compareSuccess(expected, actual)
 Compare actual result and expected result

@@ -32,7 +32,7 @@ and monthly payments of {{monthlyPayment}}.
 
 To make sense of the data, a _Data Model_, expressed in the Concerto schema language, defines the variables for the template and their associated Data Types:
 
-```ergo
+```concerto
   o Double loanAmount     // loanAmount is a floating-point number
   o Double rate           // rate is a floating-point number
   o Integer loanDuration  // loanDuration is an integer
@@ -60,7 +60,7 @@ The values entered into the template text are associated with the name of the va
 
 By adding Logic to a machine-readable clause or contract in the form of expressions - much like in a spreadsheet - the contract is able to execute operations based upon data included in the contract.
 
-For instance, the clause below is a variant of the earlier [fixed rate loan](https://templates.accordproject.org/fixed-interests@0.2.0.html). While it is consistent with the previous one, the `{{monthlyPayment}}` variable is replaced with an [Ergo](logic-ergo.md) expression `monthlyPaymentFormula(loanAmount,rate,loanDuration)` which calculates the monthly interest rate based upon the values of the other variables: `{{loanAmount}}`, `{{rate}}`, and `{{loanDuration}}`.  To learn more about contract Logic see [Ergo Logic](logic-ergo.md).
+For instance, the clause below is a variant of the earlier [fixed rate loan](https://templates.accordproject.org/fixed-interests@0.2.0.html). While it is consistent with the previous one, the `{{monthlyPayment}}` variable is replaced with a computed expression `monthlyPaymentFormula(loanAmount,rate,loanDuration)` which calculates the monthly payment based upon the values of the other variables: `{{loanAmount}}`, `{{rate}}`, and `{{loanDuration}}`. Contract logic is written in TypeScript for new templates (or Ergo for legacy templates). To learn more see [Template Logic](accordproject-template.md).
 
 ```tem
 ## Fixed rate loan
@@ -71,7 +71,21 @@ with a loan term of {{loanDuration}},
 and monthly payments of {{% monthlyPaymentFormula(loanAmount,rate,loanDuration) %}}.
 ```
 
-This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause. In this example, we display the contract text using the underlying [Markup](markup-preliminaries.md) format, instead of the rich-text output that would be found in [editor tools](started-resources.md#ecosystem-tools) and PDF outputs.
+This is a simple example of the benefits of Machine-Executable contract, here adding logic to ensure that the value of the `{{monthlyPayment}}` in the text is always consistent with the other variables in the clause. In this example, we display the contract text using the underlying [Markup](markup-preliminaries.md) format, instead of the rich-text output that would be found in [editor tools](started-resources#ecosystem--tools) and PDF outputs.
 
 More complex examples, (e.g., how to add post-signature logic which responds to data sent to the contract or which triggers operations on external systems) can be found in the rest of this documentation.
+
+### Machine-Legible to AI Agents
+
+Smart Legal Contracts are not just executable by traditional software — they are legible and generatable by AI agents. The 2024 whitepaper [*An Introduction to Computable Contracts*](https://accordproject.org/whitepaper-2024/) identifies several properties that make the three-component template architecture particularly well-suited to AI-assisted workflows:
+
+- **Markdown text** is the lingua franca of LLMs. An agent that drafts or reviews a TemplateMark document is working in a format it already understands at training-data scale.
+- **Concerto schemas** act as a type contract for agent output. When an agent populates template variables, the schema enforces that `{{rate}}` receives a `Double`, not the string `"January"` — catching hallucinations structurally, not just by prompt instruction.
+- **TypeScript logic** allows agents to generate contract calculation code that is statically verified by the TypeScript compiler before execution. Type errors surface before they can cause incorrect payment calculations or clause misfires.
+
+Academic research has demonstrated AI-to-template pipelines in practice. NLP pipelines at [Northwestern University / Adobe Research](https://doi.org/10.1145/3594536.3595162) and [National Taiwan Normal University / UCL / HSBC](https://arxiv.org/abs/2210.08954) have demonstrated automated extraction of contract obligations directly into Accord Project templates from natural language source documents.
+
+The [Agreement Protocol API (APAP)](ref-apap.md) exposes templates over a REST interface — including a Model Context Protocol (MCP) endpoint — so AI assistants and orchestration frameworks can author, fill, validate, and execute contracts as tool calls.
+
+See the [AI & Agent Workflows](accordproject-ai.md) guide for a full walkthrough.
 

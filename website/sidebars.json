@@ -15,8 +15,8 @@
             },
             {
                 "type": "subcategory",
-                "label": "Ergo Logic",
-                "ids": ["logic-ergo", "logic-simple-expr", "logic-simple-type", "logic-complex-type", "logic-advanced-expr", "logic-stmt", "logic-decl", "logic-module"]
+                "label": "Template Logic",
+                "ids": ["logic-typescript"]
             }
         ],
         "Tutorials": [
@@ -33,7 +33,7 @@
             {
                 "type": "subcategory",
                 "label": "Template Execution",
-                "ids": ["tutorial-nodejs", "tutorial-hyperledger"]
+                "ids": ["tutorial-nodejs", "tutorial-apap"]
             }
         ],
         "Reference Manual": [
@@ -66,6 +66,11 @@
                 "type": "subcategory",
                 "label": "Ergo Reference",
                 "ids": ["ref-ergo-stdlib", "ref-ergo-cli", "ref-ergo-repl", "ref-ergo-api", "ref-ergo-spec"]
+            },
+            {
+                "type": "subcategory",
+                "label": "Agreement Protocol",
+                "ids": ["ref-apap"]
             },
             {
                 "type": "subcategory",
