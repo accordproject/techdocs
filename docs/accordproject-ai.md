@@ -148,6 +148,31 @@ Academic research has validated LLM-to-template pipelines in production scenario
 
 ---
 
+## Agent Skills
+
+[Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) are reusable, model-agnostic packages of instructions that help AI coding agents perform specialised tasks well. A skill is a directory containing a `SKILL.md` file with frontmatter (name, description) and a body describing when and how the skill applies. Compatible agent harnesses — including Claude Code and the Claude Agent SDK — load skills automatically when a user's request matches the skill's description.
+
+The Accord Project maintains a set of Agent Skills in the [`accordproject/skills`](https://github.com/accordproject/skills) repository:
+
+| Skill | What it does |
+|---|---|
+| [`concerto-author`](https://github.com/accordproject/skills/tree/main/skills/concerto-author) | Author and edit Concerto `.cto` model files. |
+| [`concerto-validate`](https://github.com/accordproject/skills/tree/main/skills/concerto-validate) | Validate JSON instances against a Concerto model and explain errors. |
+| [`concerto-migrate`](https://github.com/accordproject/skills/tree/main/skills/concerto-migrate) | Migrate Concerto models and data across major versions. |
+| [`concerto-codegen`](https://github.com/accordproject/skills/tree/main/skills/concerto-codegen) | Generate code and schema artifacts from a `.cto` model. |
+| [`template-author`](https://github.com/accordproject/skills/tree/main/skills/template-author) | Scaffold and edit Accord Project smart legal contract templates. |
+
+To install a skill for Claude Code, copy its directory into your user-level skills folder:
+
+```
+git clone https://github.com/accordproject/skills.git
+cp -r skills/skills/concerto-author ~/.claude/skills/
+```
+
+Other agent harnesses load skills from their own configured locations — consult the harness documentation.
+
+---
+
 ## Further Reading
 
 - [2024 Whitepaper: *An Introduction to Computable Contracts*](https://accordproject.org/whitepaper-2024/) — the full case for computable contracts as agent infrastructure (also available as [Markdown on GitHub](https://github.com/accordproject/whitepaper-2024/blob/main/whitepaper.md))
