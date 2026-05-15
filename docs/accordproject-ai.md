@@ -161,6 +161,7 @@ The Accord Project maintains a set of Agent Skills in the [`accordproject/skills
 | [`concerto-migrate`](https://github.com/accordproject/skills/tree/main/skills/concerto-migrate) | Migrate Concerto models and data across major versions. |
 | [`concerto-codegen`](https://github.com/accordproject/skills/tree/main/skills/concerto-codegen) | Generate code and schema artifacts from a `.cto` model. |
 | [`template-author`](https://github.com/accordproject/skills/tree/main/skills/template-author) | Scaffold and edit Accord Project smart legal contract templates. |
+| [`template-migrate`](https://github.com/accordproject/skills/tree/main/skills/template-migrate) | Migrate Cicero templates between major versions (e.g. 0.24/0.25 → 0.26). |
 
 To install a skill for Claude Code, copy its directory into your user-level skills folder:
 
