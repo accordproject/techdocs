@@ -201,6 +201,9 @@ Then run `cicero trigger --template helloworld@0.14.0.cta --sample sample.md --r
 ```
 13:47:35 - ERROR: Instance org.accordproject.helloworld.MyRequest#null missing required field input
 ```
+## Troubleshooting
+
+For common issues when working with Cicero templates, refer to the [Errors Reference](ref-errors.md).
 
 ## What Next?
 

@@ -59,3 +59,33 @@ concept SystemException extends BaseFileException {
 concept TemplateException extends ParseException {
 }
 ```
+
+## Common User Errors
+
+The following are common issues encountered when working with Cicero templates and how to resolve them.
+
+### Invalid or Missing Identifier
+
+This occurs when your model defines an identifier field but it is not included in `data.json`.
+Ensure all required fields defined in `model.cto` are provided in your JSON data file.
+
+### Missing `data.json`
+
+The `cicero draft` command requires a JSON data file.
+If your data file has a different name, specify it using:
+
+```bash
+cicero draft --data your-file.json
+```
+
+### Namespace Mismatch
+
+Ensure the `$class` value in your JSON matches the namespace and asset defined in `model.cto`.
+
+Example:
+
+```json
+{
+  "$class": "org.accordproject.template.MyClause"
+}
+```
