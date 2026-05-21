@@ -36,9 +36,9 @@ cicero --version
 To get command line help:
 ```bash
 cicero --help
-cicero parse --help     # To parse a sample clause/contract
-cicero draft --help     # To draft a sample clause/contract
-cicero trigger --help   # To send a request to a clause/contract
+cicero draft --help     # To create text from a template and data
+cicero archive --help   # To create a template archive
+cicero compile --help   # To generate code for a target platform
 ```
 
 ## Optional Packages
