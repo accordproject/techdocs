@@ -3,7 +3,7 @@ id: started-hello
 title: Hello World Template
 ---
 
-Once you have installed Cicero, you can try it on an existing Accord Project template. This explains how to create an instance of that template and how to run the contract logic.
+Once you have installed Cicero, you can try it on an existing Accord Project template. This explains how to download a template and use it to create contract text from data.
 
 ## Download a Template
 
@@ -21,186 +21,64 @@ Click on the link to the `helloworld` template. You should be taken to a page wh
 
 Then click on the `Download Archive` button under the description for the template (highlighted in the red box in the figure). This should download the latest template archive for the `helloworld` template.
 
-## Parse: Extract Deal Data from Text
-
-You can use Cicero to extract deal data from a contract text using the `cicero parse` command.
-
-### Parse Valid Text
-
-Using your terminal, change into the directory (or `cd` into the directory) that contains the template archive you just downloaded, then create a sample clause text `sample.md` which contains the following text:
-
-```md
-Name of the person to greet: "Fred Blogs".
-Thank you!
-```
-
-Then run the `cicero parse` command in your terminal to load the template and parse your sample clause text. This should be echoing the result of parsing back to your terminal.
-
-```bash
-cicero parse --template helloworld@0.14.0.cta --sample sample.md
-```
-
 :::note
-* Templates are tied to a specific version of the cicero tool. Make sure that the version number output from `cicero --version` is compatible with the template. Look for `^0.22.0` or similar at the top of the template web page.
-* `cicero parse` requires network access. Make sure that you are online and that your firewall or proxy allows access to `https://models.accordproject.org`
+Templates are tied to a specific version of the Cicero tool. Make sure that the version number from `cicero --version` is compatible with the template. Look for `^0.26.0` or similar near the top of the template's web page.
 :::
 
-This should extract the data (or "deal points") from the text and output:
+## Draft: Create Text from Data
 
-```json
-{
-  "$class": "org.accordproject.helloworld.HelloWorldClause",
-  "name": "Fred Blogs",
-  "clauseId": "71045314-acfc-441f-92b4-0a2707ea6146",
-  "$identifier": "71045314-acfc-441f-92b4-0a2707ea6146"
-}
-```
-
-You can save the result of `cicero parse` into a file using the `--output` option:
-```
-cicero parse --template helloworld@0.14.0.cta --sample sample.md --output data.json
-```
-
-### Parse Non-Valid Text
-
-If you attempt to parse text which is not valid according to the template, this same command should return an error.
-
-Edit your `sample.md` file to add text that is not consistent with the template:
-
-```text
-FUBAR Name of the person to greet: "Fred Blogs".
-Thank you!
-```
-
-Then run `cicero parse --template helloworld@0.14.0.cta --sample sample.md` again. The output should now be:
-
-```text
-2:13:15 AM - error: Parse error at line 1 column 1
-FUBAR Name of the person to greet: "Fred Blogs".
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Expected: 'Name of the person to greet: '
-```
-
-## Draft: Create Text from Deal Data
-
-You can use Cicero to create new contract text from deal data using the `cicero draft` command.
+You can use Cicero to create contract text from deal data using the `cicero draft` command. The command merges a JSON data file with the template and prints the resulting text.
 
 ### Draft from Valid Data
 
-If you have saved the deal data earlier in a `data.json` file, you can edit it to change the name from `Fred Blogs` to `John Doe`, or create a brand new `data.json` file containing:
+Using your terminal, change into the directory (or `cd` into the directory) that contains the template archive you just downloaded. Then create a `data.json` file containing:
+
 ```json
 {
-  "$class": "org.accordproject.helloworld.HelloWorldClause",
+  "$class": "org.accordproject.helloworld@0.1.0.TemplateModel",
   "clauseId": "aa3b9db9-f25f-41f4-88a4-64baba728bfe",
   "name": "John Doe"
 }
 ```
 
 Then run the `cicero draft` command in your terminal:
-```
-cicero draft --template helloworld@0.14.0.cta --data data.json
+
+```bash
+cicero draft --template helloworld@0.15.0.cta --data data.json
 ```
 
-This should create a new contract text and output:
-```
-13:17:18 - INFO: Name of the person to greet: "John Doe".
+This should create the contract text and output:
+
+```text
+Name of the person to greet: John Doe.
 Thank you!
 ```
 
-You can save the result of `cicero draft` into a file using the `--output` option:
-```
-cicero draft --template helloworld@0.14.0.cta --data data.json --output new-sample.md
+You can choose the output format with the `--format` option (for example `markdown` or `html`), and save the result to a file with the `--output` option:
+
+```bash
+cicero draft --template helloworld@0.15.0.cta --data data.json --output sample.md
 ```
 
 ### Draft from Non-Valid Data
 
-If you attempt to draft from data which is not valid according to the template, this same command should return an error.
+If you attempt to draft from data which is not valid according to the template, the command returns an error.
 
-Edit your `data.json` file so that the `name` variable is missing:
+Edit your `data.json` file so that the `name` field is missing:
+
 ```json
 {
-  "$class": "org.accordproject.helloworld.HelloWorldClause",
+  "$class": "org.accordproject.helloworld@0.1.0.TemplateModel",
   "clauseId": "aa3b9db9-f25f-41f4-88a4-64baba728bfe"
 }
 ```
 
-Then run `cicero draft --template helloworld@0.14.0.cta --data data.json` again. The output should now be:
-```
-13:38:11 - ERROR: Instance org.accordproject.helloworld.HelloWorldClause#6f91e060-f837-4108-bead-63891a91ce3a missing required field name
-```
+Then run `cicero draft --template helloworld@0.15.0.cta --data data.json` again. The output should now be:
 
-## Trigger: Run the Contract Logic
-
-You can use Cicero to run the logic associated to a contract using the `cicero trigger` command.
-
-### Trigger with a Valid Request
-
-Use the `cicero trigger` command to parse a clause text based (your `sample.md`) *then* send a request to the clause logic.
-
-To do so, you first create one additional file `request.json` which contains:
-```json
-{
-  "$class": "org.accordproject.helloworld.MyRequest",
-  "input": "Accord Project"
-}
+```text
+error: The instance "org.accordproject.helloworld@0.1.0.TemplateModel#aa3b9db9-f25f-41f4-88a4-64baba728bfe" is missing the required field "name".
 ```
 
-This is the request which you will send to trigger the execution of your contract.
-
-Then run the `cicero trigger` command in your terminal to load the template, parse your clause text *and* send the request. This should be echoing the result of execution back to your terminal.
-
-```bash
-cicero trigger --template helloworld@0.14.0.cta --sample sample.md --request request.json
-```
-
-This should print this output:
-
-```json
-13:42:29 - INFO:
-{
-  "clause": "helloworld@0.14.0-767ffde65292f2f4e8aa474e76bb5f923b80aa29db635cd42afebb6a0cd4c1fa",
-  "request": {
-    "$class": "org.accordproject.helloworld.MyRequest",
-    "input": "Accord Project"
-  },
-  "response": {
-    "$class": "org.accordproject.helloworld.MyResponse",
-    "output": "Hello Fred Blogs Accord Project",
-    "$timestamp": "2021-06-16T11:38:42.011-04:00"
-  },
-  "state": {
-    "$class": "org.accordproject.runtime.State",
-    "$identifier": "f4428ec2-73ca-442b-8006-8e9a290930ad"
-  },
-  "emit": []
-}
-```
-
-The results of execution displayed back on your terminal is in JSON format. It includes the following information:
-
-* Details of the `clause` being triggered (name, version, SHA256 hash of the template)
-* The incoming `request` object (the same request from your `request.json` file)
-* The output `response` object
-* The output `state` (unchanged in this example)
-* An array of `emit`ted events (empty in this example)
-
-That's it! You have successfully parsed and executed your first Accord Project Clause using the `helloworld` template.
-
-### Trigger with a Non-Valid Request
-
-If you attempt to trigger the contract from a request which is not valid according to the template, this same command should return an error.
-
-Edit your `request.json` file so that the `input` variable is missing:
-```json
-{
-  "$class": "org.accordproject.helloworld.MyRequest"
-}
-```
-
-Then run `cicero trigger --template helloworld@0.14.0.cta --sample sample.md --request request.json` again. The output should now be:
-```
-13:47:35 - ERROR: Instance org.accordproject.helloworld.MyRequest#null missing required field input
-```
 ## Troubleshooting
 
 For common issues when working with Cicero templates, refer to the [Errors Reference](ref-errors.md).
@@ -209,7 +87,7 @@ For common issues when working with Cicero templates, refer to the [Errors Refer
 
 ### Try Other Templates
 
-Feel free to try the same commands to parse and execute other templates from the Accord Project Library. Note that for each template, you can find samples for the text, for the request and for the state on the corresponding Web page. For instance, a sample for the [Late Delivery And Penalty](https://templates.accordproject.org/latedeliveryandpenalty@0.15.0.html) clause is in the red box in the following image:
+Feel free to try the same command to draft text from other templates in the Accord Project Library. Note that for each template you can find a sample for the text and the data model on the corresponding Web page. For instance, a sample for the [Late Delivery And Penalty](https://templates.accordproject.org/latedeliveryandpenalty@0.15.0.html) clause is in the red box in the following image:
 
 ![Basic-Use-3](./assets/basic/use3.png)
 
@@ -217,7 +95,6 @@ Feel free to try the same commands to parse and execute other templates from the
 
 You can find more information on how to create or publish Accord Project templates in the [Work with Cicero](tutorial-templates) tutorials.
 
-### Run on Different Platforms
+### Use on Different Platforms
 
-Templates may be executed on different platforms, not only from the command line. You can find more information on how to execute Accord Project templates on different platforms (Node.js, Hyperledger Fabric, etc.) in the [Template Execution](tutorial-nodejs) tutorials.
-
+Templates may be used on different platforms, not only from the command line. You can find more information on how to use Accord Project templates on different platforms (Node.js, etc.) in the [Template Execution](tutorial-nodejs) tutorials.
