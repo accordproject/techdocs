@@ -288,11 +288,10 @@
 
 /* ===== DARK MODE — Homepage sections ===== */
 
-/* The mainContainer content blocks use hardcoded light colours */
-[data-theme='dark'] .mainContainer {
-  background-color: #1b2540;
-}
-
+/* The mainContainer content blocks use hardcoded light colours.
+   Deliberately NOT setting a background here — the dark bg is on body.
+   The #digitize-legal-contracts::before gradient has z-index: -1, so it
+   paints behind .mainContainer. Setting a background here would hide it. */
 [data-theme='dark'] .blockContent h2 {
   color: #ffffff;
 }
@@ -305,7 +304,7 @@
    Docusaurus dark-mode concept. It already has a dark bg, but in dark mode the
    surrounding non-dark sections must also blend, so we lighten the contrast. */
 [data-theme='dark'] .darkBackground {
-  background-color: #222d4a;
+  background-color: #263558;
 }
 
 [data-theme='dark'] .darkBackground .blockContent h2 {
@@ -391,3 +390,28 @@
 [data-theme='dark'] .table-of-contents__link--active {
   color: var(--ifm-color-primary);
 }
+
+/* Homepage diagonal background gradients in dark mode */
+[data-theme='dark'] #digitize-legal-contracts::before {
+  background: linear-gradient(135deg, #1b2540, #1b2540 40%, #0000 0, #0000) !important;
+}
+
+[data-theme='dark'] #showcase::after {
+  background: linear-gradient(-45deg, #1b2540, #1b2540 55%, #0000 0, #0000) !important;
+}
+
+/* Ensure homepage text and heading colors suit dark mode */
+[data-theme='dark'] #digitize-legal-contracts h2,
+[data-theme='dark'] #digitize-legal-contracts h2 .strong,
+[data-theme='dark'] #templates h2,
+[data-theme='dark'] #accord h2,
+[data-theme='dark'] #accord h2 .strong,
+[data-theme='dark'] #model h2,
+[data-theme='dark'] #logic h2,
+[data-theme='dark'] #try h2,
+[data-theme='dark'] #try h2 .strong,
+[data-theme='dark'] #agent-workflows h2,
+[data-theme='dark'] #agent-workflows h2 .strong {
+  color: #ffffff !important;
+}
+
