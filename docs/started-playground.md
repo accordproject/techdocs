@@ -55,6 +55,13 @@ With it you can:
 4. Validate a sample piece of data against your model.
 5. Generate an output format from your model to see how the same structure looks in another language.
 
+## Explore more samples
+
+Beyond the built-in samples, the Accord Project maintains open libraries you can browse and reuse:
+
+- **[Template Library](https://templates.accordproject.org)** — open-source Clause and Contract templates across many legal domains (supply chain, loans, intellectual property, and more). Open any template to see its text, model, and sample data, then launch it in Template Playground.
+- **[Model Repository](https://models.accordproject.org)** — open-source [Concerto](https://concerto.accordproject.org/docs/intro) data models (postal addresses, monetary amounts, time, and more) that you can import into your own models and templates.
+
 ## When you're ready for more
 
 The Playgrounds are ideal for learning, experimenting, and prototyping. When you want to work with templates on your own machine, automate them, or build them into an application, move on to:
