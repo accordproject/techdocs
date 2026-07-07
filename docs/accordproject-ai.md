@@ -167,11 +167,10 @@ The Accord Project maintains a set of Agent Skills in the [`accordproject/skills
 | [`template-author`](https://github.com/accordproject/skills/tree/main/skills/template-author) | Scaffold and edit Accord Project smart legal contract templates. |
 | [`template-migrate`](https://github.com/accordproject/skills/tree/main/skills/template-migrate) | Migrate Cicero templates between major versions (e.g. 0.24/0.25 → 0.26). |
 
-To install a skill for Claude Code, copy its directory into your user-level skills folder:
+To install these skills for Claude Code, use the `skills` CLI:
 
 ```
-git clone https://github.com/accordproject/skills.git
-cp -r skills/skills/concerto-author ~/.claude/skills/
+npx skills add accordproject/skills
 ```
 
 Other agent harnesses load skills from their own configured locations — consult the harness documentation.
