@@ -1,6 +1,6 @@
 ---
 id: accordproject-agentic-commerce
-title: Accord Project & Agentic Commerce
+title: Agentic Commerce
 ---
 
 ## The enforceable-terms layer for autonomous commerce
@@ -18,16 +18,16 @@ Accord Project is the **agreement** layer. The others authorize and route a tran
 
 ```
 ┌───────────────────────────────────────────────────────────────┐
-│  IDENTITY & TRUST        who is the agent?                     │
+│  IDENTITY & TRUST        who is the agent?                    │
 ├───────────────────────────────────────────────────────────────┤
-│  AUTHORIZATION PROOF     what was authorized? did the agent    │
-│  Verifiable Intent, AP2  stay in bounds? (cryptographic proof) │
+│  AUTHORIZATION PROOF     what was authorized? did the agent   │
+│  Verifiable Intent, AP2  stay in bounds? (cryptographic proof)│
 ├───────────────────────────────────────────────────────────────┤
-│  PAYMENT & CHECKOUT      how is the transaction routed and     │
+│  PAYMENT & CHECKOUT      how is the transaction routed and    │
 │  UCP, ACP, Agent Pay     settled?                             │
 ├───────────────────────────────────────────────────────────────┤
-│  THE AGREEMENT           what are the enforceable terms, and   │
-│  ▶ Accord Project        how do obligations run over time?     │
+│  THE AGREEMENT           what are the enforceable terms, and  │
+│  ▶ Accord Project        how do obligations run over time?    │
 └───────────────────────────────────────────────────────────────┘
 ```
 

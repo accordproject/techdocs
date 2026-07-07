@@ -47,7 +47,7 @@ Increasingly, AI tools and agents are used to draft, review, negotiate, and exec
 
 ### What is Accord Project's role in AI agentic commerce?
 
-As AI agents begin to transact on people's behalf, new trust layers — such as Verifiable Intent, the Agent Payments Protocol (AP2), and agentic commerce protocols — provide cryptographic proof of *what a user authorized an agent to do*. They do not, by themselves, define the *agreement* behind a transaction: its enforceable terms, the obligations that continue after payment, and the remedies if something goes wrong. That is the layer Accord Project provides — terms that are both machine-executable and legally interpretable. In short: those layers prove what an agent was *authorized* to do, and Accord Project defines and executes the *agreement* it was authorized to enter. See [Accord Project & Agentic Commerce](accordproject-agentic-commerce.md) for how these layers fit together.
+As AI agents begin to transact on people's behalf, new trust layers — such as Verifiable Intent, the Agent Payments Protocol (AP2), and agentic commerce protocols — provide cryptographic proof of *what a user authorized an agent to do*. They do not, by themselves, define the *agreement* behind a transaction: its enforceable terms, the obligations that continue after payment, and the remedies if something goes wrong. That is the layer Accord Project provides — terms that are both machine-executable and legally interpretable. In short: those layers prove what an agent was *authorized* to do, and Accord Project defines and executes the *agreement* it was authorized to enter. See [Agentic Commerce](accordproject-agentic-commerce.md) for how these layers fit together.
 
 ### What is the Accord Project and what is its purpose?
 

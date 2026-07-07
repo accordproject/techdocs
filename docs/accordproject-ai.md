@@ -13,7 +13,7 @@ The 2024 Accord Project whitepaper, [*An Introduction to Computable Contracts*](
 
 Accord Project's three-component template architecture — **Text**, **Model**, and **Logic** — maps directly onto how modern AI agents operate. Each component is a format that agents can reliably read, write, validate, and reason over.
 
-This guide covers how agents work *with the contract format* — drafting, validating, and executing templates. For how Accord Project fits the wider agentic commerce stack — where agents *transact* on a user's behalf and authorization layers like Verifiable Intent and AP2 come into play — see the [Accord Project & Agentic Commerce](accordproject-agentic-commerce.md) guide.
+This guide covers how agents work *with the contract format* — drafting, validating, and executing templates. For how Accord Project fits the wider agentic commerce stack — where agents *transact* on a user's behalf and authorization layers like Verifiable Intent and AP2 come into play — see the [Agentic Commerce](accordproject-agentic-commerce.md) guide.
 
 ---
 
@@ -131,7 +131,7 @@ POST /triggers/{templateId}
 }
 ```
 
-In an agentic commerce flow, APAP is the interface through which an agent enters and executes the *agreement* — the terms authorized and settled by layers such as Verifiable Intent, AP2, and the payment networks. See [Accord Project & Agentic Commerce](accordproject-agentic-commerce.md) for how these layers fit together.
+In an agentic commerce flow, APAP is the interface through which an agent enters and executes the *agreement* — the terms authorized and settled by layers such as Verifiable Intent, AP2, and the payment networks. See [Agentic Commerce](accordproject-agentic-commerce.md) for how these layers fit together.
 
 See the [APAP tutorial](tutorial-apap.md) and [APAP reference](ref-apap.md) for full documentation.
 
@@ -179,7 +179,7 @@ Other agent harnesses load skills from their own configured locations — consul
 
 ## Further Reading
 
-- [Accord Project & Agentic Commerce](accordproject-agentic-commerce.md) — how Accord Project is the enforceable-terms layer for autonomous commerce, alongside Verifiable Intent, AP2, UCP, and ACP
+- [Agentic Commerce](accordproject-agentic-commerce.md) — how Accord Project is the enforceable-terms layer for autonomous commerce, alongside Verifiable Intent, AP2, UCP, and ACP
 - [2024 Whitepaper: *An Introduction to Computable Contracts*](https://accordproject.org/whitepaper-2024/) — the full case for computable contracts as agent infrastructure (also available as [Markdown on GitHub](https://github.com/accordproject/whitepaper-2024/blob/main/whitepaper.md))
 - [Smart Legal Contracts](accordproject-slc.md) — how machine-readable and machine-executable contracts work
 - [APAP Reference](ref-apap.md) — full API specification including MCP endpoint

@@ -71,4 +71,4 @@ The Playgrounds are ideal for learning, experimenting, and prototyping. When you
 - **[Concerto documentation](https://concerto.accordproject.org/docs/intro)** — the full modelling language guide.
 - **[Template Authoring tutorials](tutorial-studio.md)** — deeper guides to building your own templates.
 
-Curious how this fits into AI and agentic commerce? See the [AI & Agent Workflows](accordproject-ai.md) and [Accord Project & Agentic Commerce](accordproject-agentic-commerce.md) guides.
+Curious how this fits into AI and agentic commerce? See the [AI & Agent Workflows](accordproject-ai.md) and [Agentic Commerce](accordproject-agentic-commerce.md) guides.

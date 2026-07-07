@@ -25,7 +25,7 @@ That solves *authorization*. It does not, by itself, produce the **agreement**: 
 
 > **Verifiable Intent proves what an agent was *authorized* to do. Accord Project defines and executes the *agreement* it was authorized to enter.**
 
-The two layers are complementary. An authorization credential can bind to an Accord Project contract as its enforceable terms; the contract's typed model can describe the constraints an agent must honour; and its logic can execute the obligations that outlive the moment of payment. See **[Accord Project & Agentic Commerce](accordproject-agentic-commerce.md)** for how Accord Project fits alongside Verifiable Intent, AP2, UCP, and ACP.
+The two layers are complementary. An authorization credential can bind to an Accord Project contract as its enforceable terms; the contract's typed model can describe the constraints an agent must honour; and its logic can execute the obligations that outlive the moment of payment. See **[Agentic Commerce](accordproject-agentic-commerce.md)** for how Accord Project fits alongside Verifiable Intent, AP2, UCP, and ACP.
 
 ## Who Accord Project is for
 
@@ -53,7 +53,7 @@ Contracting is undergoing a digital transformation driven by the need to deliver
 
 ## About this documentation
 
-If you are new to Accord Project, start with [Smart Legal Contracts](accordproject-slc.md) and [Accord Project Templates](accordproject-template.md), then [try it in your browser](started-playground.md). For AI and agent integration, see the [AI & Agent Workflows](accordproject-ai.md) guide; for how Accord Project positions in the agentic commerce stack, see [Accord Project & Agentic Commerce](accordproject-agentic-commerce.md).
+If you are new to Accord Project, start with [Smart Legal Contracts](accordproject-slc.md) and [Accord Project Templates](accordproject-template.md), then [try it in your browser](started-playground.md). For AI and agent integration, see the [AI & Agent Workflows](accordproject-ai.md) guide; for how Accord Project positions in the agentic commerce stack, see [Agentic Commerce](accordproject-agentic-commerce.md).
 
 To start using Accord Project templates, follow the [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instructions in the _Getting Started_ section.
 
