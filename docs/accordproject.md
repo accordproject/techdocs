@@ -5,58 +5,65 @@ title: Overview
 
 ## What is the Accord Project?
 
-Accord Project is an open source, non-profit initiative aimed at transforming contract management and contract automation by digitizing contracts. It provides an open, standardized format for Smart Legal Contracts (also referred to as Computable Contracts).
+Accord Project is an open source, non-profit initiative — operating under the umbrella of the [Linux Foundation](https://www.linuxfoundation.org/) — that provides an open, standardized format for **Smart Legal Contracts** (also called Computable Contracts): agreements that can be read and interpreted by people and courts, *and* executed by machines.
 
-The Accord Project defines a notion of a legal template with associated computing logic which is expressive, open-source, and portable. Accord Project templates are similar to a clause or contract template in any document format, but they can be read, interpreted, and run by a computer.
+An Accord Project template has three components, each a format that both people and software can reliably work with:
 
-## Why is the Accord Project relevant?
+- **Text** — the legal prose, written in [TemplateMark](markup-templatemark.md), a minimal extension of [CommonMark Markdown](markup-commonmark.md). It is subject to judicial interpretation, and it is a format modern LLMs already understand at training-data scale.
+- **Model** — a strongly-typed data model written in [Concerto](https://concerto.accordproject.org/docs/intro), the schema language that grounds the contract's data and gives it a portable, validated wire format.
+- **Logic** — executable [TypeScript](logic-typescript.md) that computes obligations, payments, and outcomes over the life of the agreement.
 
-The Accord Project provides a universal format for smart legal contracts, and this format is embodied in a variety of open source projects that comprise the Accord Project technology stack. Input from businesses, lawyers and developers is crucial for the Accord Project.
+Together they turn a contract from a static word-processed document — where the key terms are hard for machines to extract and the logic is impossible to run — into a live, machine-executable artifact that remains legally meaningful. Unlike blockchain "smart contracts," an Accord Project contract does not depend on any distributed ledger; it integrates with your existing technology platforms and can operate over the full lifespan of the agreement.
 
-### For Businesses
+## Why now: the legal foundation for AI agentic commerce
 
-Contracting is undergoing a digital transformation driven by a need to deliver customer-centric legal and business solutions faster, and at lower cost. This imperative is fueling the adoption of a broad range of new technologies to improve the efficiency of drafting, managing, and executing legal contracting operations; the Accord Project is proud to be part of that movement.
+Commerce is entering an agentic era. AI agents are moving from *assisting* people to *acting* for them — planning purchases, comparing terms, and executing transactions autonomously. As they do, a new question comes into focus: **when an agent acts on someone's behalf, what exactly was agreed — and is it enforceable?**
 
-The Accord Project provides a Smart Contract that does not depend on a blockchain, that can integrate text
-and data and that can continue operating over its lifespan. The Accord Project smart contract can integrate with your technology platforms and become part of your digital infrastructure.
+A new trust layer is emerging to answer part of this. Initiatives such as Mastercard and Google's [Verifiable Intent](https://verifiableintent.dev/), Google's [Agent Payments Protocol (AP2)](https://github.com/google-agentic-commerce/AP2), and the [Agentic Commerce Protocol (ACP)](https://github.com/agentic-commerce-protocol/agentic-commerce-protocol) give the ecosystem cryptographic **proof of what a user authorized an agent to do**, and proof that the agent stayed within those bounds.
 
-In addition, contributions from businesses are crucial for the development of the Accord Project. The expertise of stakeholders, such as business professionals and attorneys, is invaluable in improving the functionality and content of the Accord Project's codebase and specifications, to ensure that the templates meet real-world business requirements.
+That solves *authorization*. It does not, by itself, produce the **agreement**: the substantive terms, the obligations that run after checkout, and the remedies if something goes wrong — all expressed so that both a machine *and* a court can act on them. That is the layer Accord Project provides.
 
-If this interests you, please visit our [Lifecycle and Industry Working Groups](https://www.accordproject.org/liwg) page for more information.
+> **Verifiable Intent proves what an agent was *authorized* to do. Accord Project defines and executes the *agreement* it was authorized to enter.**
 
-### For Lawyers
+The two layers are complementary. An authorization credential can bind to an Accord Project contract as its enforceable terms; the contract's typed model can describe the constraints an agent must honour; and its logic can execute the obligations that outlive the moment of payment. See **[Accord Project & Agentic Commerce](accordproject-agentic-commerce.md)** for how Accord Project fits alongside Verifiable Intent, AP2, UCP, and ACP.
 
-The legal world is changing and Legal Tech is a [billion dollar industry](https://fortune.com/2023/10/02/global-trade-4-billion-paper-documents-daily-uk-document-act-law-finance-geraldine-mcbride/). The modern lawyer must be at home in the digital world. [Legal Hackers](https://legalhackers.org/) is a worldwide movement uniting lawyers across the world in a shared passion for law and technology. Increasingly, AI tools are being used to draft, review, and negotiate contracts — and the Accord Project gives legal professionals a path to digitize contract knowledge in a structured way that AI can reliably work with.
+## Who Accord Project is for
 
-The template in an Accord Project Contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract can easily be transformed into a template by adding data points between curly braces that represent the Concerto model, and contract logic can be added as an integral part of the contract. The template language is subject to judicial interpretation, and the Concerto model and contract logic can be interpreted by a computer, creating a bridge between the two worlds.
+The Accord Project format is embodied in a family of open source projects that make up the Accord Project technology stack. Input from platform builders, developers, lawyers, and businesses is what keeps the format grounded in real-world requirements.
 
-In November 2021, the Law Commission of England and Wales [concluded](https://lawcom.gov.uk/project/smart-contracts/) that the current legal framework is sufficiently robust and adaptable to support the use of smart legal contracts — confirming they are legally binding and enforceable agreements.
+### For agent & commerce platforms
 
-As a lawyer, contributing to the Accord Project would be a great opportunity to learn about smart legal contracts. Through the Accord Project, you can understand the foundations of open source technologies and learn how to develop smart agreements.
+If you are building agentic commerce experiences — payment orchestration, checkout, procurement, or autonomous purchasing — Accord Project gives you the **enforceable-terms layer** that authorization protocols deliberately leave open. A contract's terms are machine-executable and legally interpretable at the same time, so an agent-initiated transaction rests on an agreement a court could enforce, not just a record that a click occurred. Read the [Agentic Commerce](accordproject-agentic-commerce.md) guide for the integration patterns.
 
-If your organization wants to become a member of the Accord Project, please [join our community](https://discord.com/invite/Zm99SKhhtA).
+### For developers
 
-### For Developers
+Accord Project is open source and welcomes contributions from anyone. The stack includes a [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), the [APAP agreement server](https://github.com/accordproject/apap), and a command line interface for working with contracts. You can integrate contracts into existing applications, build new ones, or author contract logic in TypeScript.
 
-The Accord Project provides a universal format for smart legal contracts, and this format is embodied in a variety of open source projects that comprise the Accord Project technology stack. The Accord Project is an open source project and welcomes contributions from anyone.
+If you are building AI agents or LLM-powered applications, Accord Project templates provide a structured, validated, and legally meaningful data layer. Templates can be invoked via the [APAP REST API](ref-apap.md) — including a **Model Context Protocol (MCP) endpoint** — so your agent can author, validate, and execute contracts as tool calls. The [Concerto](https://concerto.accordproject.org/docs/intro) schema language provides a type-safe wire format that significantly reduces hallucination risk in agent-generated contract data. See the [AI & Agent Workflows](accordproject-ai.md) guide for details.
 
-The Accord Project is developing tools including a [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), the [APAP agreement server API](https://github.com/accordproject/apap), and a command line interface for working with Accord Project Contracts. You can integrate contracts into existing applications, create new applications, or write contract logic in TypeScript.
+### For lawyers
 
-If you are building AI agents or LLM-powered applications, Accord Project templates provide a structured, validated, and legally meaningful data layer. Templates can be invoked via the [APAP REST API](ref-apap.md) — including a **Model Context Protocol (MCP) endpoint** — so your agent can author, validate, and execute contracts as tool calls. The Concerto schema language provides a type-safe wire format that significantly reduces hallucination risk in agent-generated contract data. See the [AI & Agent Workflows](accordproject-ai.md) guide for details.
+The template in an Accord Project contract is pure legal text that can be drafted by lawyers and interpreted by courts. An existing contract becomes a template by adding data points between curly braces (the Concerto model), and contract logic can be added as an integral part of the agreement — creating a bridge between prose subject to judicial interpretation and terms a computer can execute. This matters more, not less, as AI systems draft, review, and negotiate contracts on our behalf: a structured, machine-readable format is what lets AI work with contract knowledge reliably rather than by guesswork.
 
-There is a welcoming community on Discord that is eager to help. [Join our Community](https://discord.com/invite/Zm99SKhhtA)
+In November 2021, the Law Commission of England and Wales [concluded](https://lawcom.gov.uk/project/smart-contracts/) that the current legal framework is sufficiently robust and adaptable to support smart legal contracts — confirming they are legally binding and enforceable agreements.
 
+### For businesses
+
+Contracting is undergoing a digital transformation driven by the need to deliver legal and business outcomes faster and at lower cost. Accord Project contracts integrate text and data, can operate over their full lifespan, and become part of your digital infrastructure. Expertise from business professionals and attorneys is invaluable in ensuring templates meet real-world requirements — see the [Lifecycle and Industry Working Groups](https://www.accordproject.org/liwg) page to get involved.
 
 ## About this documentation
 
-If you are new to Accord Project, you may want to first read about the notion of [Smart Legal Contracts](accordproject-slc.md) and about [Accord Project Templates](accordproject-template.md). We also recommend taking the [Online Tour](accordproject-tour.md). For AI and agent integration, see the [AI & Agent Workflows](accordproject-ai.md) guide.
+If you are new to Accord Project, start with [Smart Legal Contracts](accordproject-slc.md) and [Accord Project Templates](accordproject-template.md), then [try it in your browser](started-playground.md). For AI and agent integration, see the [AI & Agent Workflows](accordproject-ai.md) guide; for how Accord Project positions in the agentic commerce stack, see [Accord Project & Agentic Commerce](accordproject-agentic-commerce.md).
 
-To start using Accord Project templates, follow the [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instructions in the _Getting Started_ Section of the documentation.
+To start using Accord Project templates, follow the [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instructions in the _Getting Started_ section.
 
-You can find in-depth guides for the different components of a template in the _Template Guides_ part of the documentation:
-- Learn how to write contract or template text in the [Markdown Text](markup-preliminaries.md) Guide
-- Learn how to design your data model in the [Concerto Model](https://concerto.accordproject.org/docs/intro) Guide
-- Learn how to write smart contract logic in TypeScript in the [Template Logic](logic-typescript.md) Guide (or the legacy [Ergo Logic](logic-ergo.md) guide for existing Ergo templates)
+In-depth guides for the components of a template are in the _Template Guides_ section:
+- Learn how to write contract or template text in the [Markdown Text](markup-preliminaries.md) guide
+- Learn how to design your data model in the [Concerto Model](https://concerto.accordproject.org/docs/intro) guide
+- Learn how to write smart contract logic in the [Template Logic](logic-typescript.md) guide (or the legacy [Ergo Logic](logic-ergo.md) guide for existing Ergo templates)
 
-Finally, the documentation includes several step by step [Tutorials](tutorial-templates.md) and some reference information (for APIs, command-line tools, etc.) can be found in the [Reference Manual](ref-glossary.md).
+The documentation also includes step-by-step [Tutorials](tutorial-templates.md) and reference material (APIs, command-line tools, and more) in the [Reference Manual](ref-glossary.md).
 
+## Get involved
+
+The Accord Project technology is developed in the open. We encourage organizations and individuals to contribute requirements, documentation, issues, templates, and code. Read the [CONTRIBUTING guide](https://github.com/accordproject/techdocs/blob/main/CONTRIBUTING.md) and join the welcoming community on [Discord](https://discord.com/invite/Zm99SKhhtA).
