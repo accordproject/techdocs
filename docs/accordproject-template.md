@@ -1,6 +1,6 @@
 ---
 id: accordproject-template
-title: Accord Project Templates
+title: Templates
 ---
 
 An Accord Project template ties legal text to computer code. It is composed of three elements:
