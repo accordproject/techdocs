@@ -15,7 +15,7 @@ title: Resources
 Accord Project also maintains libraries containing open source, community-contributed content to help you when authoring your own templates:
 
 - [Model Repository](https://models.accordproject.org/) : a repository of open source Concerto data models for use in templates
-- [Template Library](https://templates.accordproject.org/) : a library of open source Clause and Contract templates for various legal domains (supply-chain, loans, intellectual property, etc.) _(legacy; for current templates see [Template Playground](https://playground.accordproject.org))_
+- [Template Library](https://templates.accordproject.org/) : a library of open source Clause and Contract templates for various legal domains (supply-chain, loans, intellectual property, etc.). You can open any template and launch it directly in the [Template Playground](https://playground.accordproject.org).
 
 ## Ecosystem & Tools
 

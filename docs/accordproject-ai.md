@@ -13,6 +13,8 @@ The 2024 Accord Project whitepaper, [*An Introduction to Computable Contracts*](
 
 Accord Project's three-component template architecture — **Text**, **Model**, and **Logic** — maps directly onto how modern AI agents operate. Each component is a format that agents can reliably read, write, validate, and reason over.
 
+This guide covers how agents work *with the contract format* — drafting, validating, and executing templates. For how Accord Project fits the wider agentic commerce stack — where agents *transact* on a user's behalf and authorization layers like Verifiable Intent and AP2 come into play — see the [Agentic Commerce](accordproject-agentic-commerce.md) guide.
+
 ---
 
 ## Why Markdown?
@@ -129,6 +131,8 @@ POST /triggers/{templateId}
 }
 ```
 
+In an agentic commerce flow, APAP is the interface through which an agent enters and executes the *agreement* — the terms authorized and settled by layers such as Verifiable Intent, AP2, and the payment networks. See [Agentic Commerce](accordproject-agentic-commerce.md) for how these layers fit together.
+
 See the [APAP tutorial](tutorial-apap.md) and [APAP reference](ref-apap.md) for full documentation.
 
 ---
@@ -163,11 +167,10 @@ The Accord Project maintains a set of Agent Skills in the [`accordproject/skills
 | [`template-author`](https://github.com/accordproject/skills/tree/main/skills/template-author) | Scaffold and edit Accord Project smart legal contract templates. |
 | [`template-migrate`](https://github.com/accordproject/skills/tree/main/skills/template-migrate) | Migrate Cicero templates between major versions (e.g. 0.24/0.25 → 0.26). |
 
-To install a skill for Claude Code, copy its directory into your user-level skills folder:
+To install these skills for Claude Code, use the `skills` CLI:
 
 ```
-git clone https://github.com/accordproject/skills.git
-cp -r skills/skills/concerto-author ~/.claude/skills/
+npx skills add accordproject/skills
 ```
 
 Other agent harnesses load skills from their own configured locations — consult the harness documentation.
@@ -176,6 +179,7 @@ Other agent harnesses load skills from their own configured locations — consul
 
 ## Further Reading
 
+- [Agentic Commerce](accordproject-agentic-commerce.md) — how Accord Project is the enforceable-terms layer for autonomous commerce, alongside Verifiable Intent, AP2, UCP, and ACP
 - [2024 Whitepaper: *An Introduction to Computable Contracts*](https://accordproject.org/whitepaper-2024/) — the full case for computable contracts as agent infrastructure (also available as [Markdown on GitHub](https://github.com/accordproject/whitepaper-2024/blob/main/whitepaper.md))
 - [Smart Legal Contracts](accordproject-slc.md) — how machine-readable and machine-executable contracts work
 - [APAP Reference](ref-apap.md) — full API specification including MCP endpoint

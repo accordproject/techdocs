@@ -6,12 +6,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'Introduction',
-      items: ['accordproject', 'accordproject-slc', 'accordproject-ai', 'accordproject-template', 'accordproject-tour', 'accordproject-faq'],
+      items: ['accordproject', 'accordproject-slc', 'accordproject-ai', 'accordproject-agentic-commerce', 'accordproject-template', 'accordproject-faq'],
     },
     {
       type: 'category',
       label: 'Getting Started',
-      items: ['started-installation', 'started-hello', 'started-resources'],
+      items: ['started-playground', 'started-installation', 'started-hello', 'started-resources'],
     },
     {
       type: 'category',

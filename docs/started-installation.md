@@ -5,6 +5,10 @@ title: Install Cicero
 
 To experiment with Accord Project, you can install the Cicero command-line. This will let you author, validate, and run Accord Project templates on your own machine.
 
+:::tip
+Prefer not to install anything? You can edit and test contracts and data models entirely in your browser — see [Try It in Your Browser](started-playground.md). This command-line path is for when you want to work locally, automate templates, or integrate them into an application.
+:::
+
 ## Prerequisites
 
 You must first obtain and configure the following dependency:

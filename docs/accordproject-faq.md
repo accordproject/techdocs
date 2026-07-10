@@ -37,6 +37,18 @@ The result is a contract that is:
 
 Consequently, contracts are transformed from business liabilities in constant need of management to assets capable of providing real business intelligence and value. A Smart Contract contains a data model so that the data is part of the contract and not something held in an external system. The logical operations of the contract are also part of the contract. The contract can update itself and react to the outside world. Rather than being stored in filing cabinet it is a living breathing process.
 
+### Do I need to be a developer to use Accord Project?
+
+No. You can explore, edit, and test Accord Project contracts and data models entirely in your web browser — no installation and no coding required. The [Template Playground](https://playground.accordproject.org) lets you edit a contract's text, data, and logic and see the result update live, and the [Concerto Playground](https://concerto-playground.accordproject.org) lets you design and validate data models. See [Try It in Your Browser](started-playground.md) to get started. When you are ready to work locally or integrate templates into an application, developers can use the Cicero command-line tools and write contract logic in TypeScript.
+
+### How does Accord Project relate to AI and AI agents?
+
+Increasingly, AI tools and agents are used to draft, review, negotiate, and execute contracts. Accord Project gives them a structured, validated, and legally meaningful format to work with, rather than free-form documents they must interpret by guesswork. Template text is written in Markdown (which language models already understand well), the data model is a strongly-typed [Concerto](https://concerto.accordproject.org/docs/intro) schema that grounds AI output and reduces hallucination, and contract logic is TypeScript whose compiler catches errors before execution. Templates can also be called directly by agents over the [APAP REST API](ref-apap.md), including a Model Context Protocol (MCP) endpoint. See the [AI & Agent Workflows](accordproject-ai.md) guide for details.
+
+### What is Accord Project's role in AI agentic commerce?
+
+As AI agents begin to transact on people's behalf, new trust layers — such as Verifiable Intent, the Agent Payments Protocol (AP2), and agentic commerce protocols — provide cryptographic proof of *what a user authorized an agent to do*. They do not, by themselves, define the *agreement* behind a transaction: its enforceable terms, the obligations that continue after payment, and the remedies if something goes wrong. That is the layer Accord Project provides — terms that are both machine-executable and legally interpretable. In short: those layers prove what an agent was *authorized* to do, and Accord Project defines and executes the *agreement* it was authorized to enter. See [Agentic Commerce](accordproject-agentic-commerce.md) for how these layers fit together.
+
 ### What is the Accord Project and what is its purpose?
 
 The Accord Project is a non-profit, member-driven organization that builds open source code and documentation for smart legal contracts for use by transactional attorneys, business and finance professionals, and other contract users. Open source means that anyone can use and contribute to the code and documentation and use it in their own software applications and systems free of charge.
