@@ -34,6 +34,9 @@ jobs:
         # Ensure npm 11.5.1 or later for trusted publishing
       - run: npm install -g npm@latest
 
+        # preinstall script requires these tools before npm install runs
+      - run: npm install -g lockfile-lint syncpack
+
       - name: NPM Install
         if: github.ref == 'refs/heads/main'
         working-directory: ./website
