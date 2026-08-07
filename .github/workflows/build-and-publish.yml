@@ -39,6 +39,11 @@ jobs:
         working-directory: ./website
         run: npm install
 
+      - name: NPM Lint
+        if: github.ref == 'refs/heads/main'
+        working-directory: ./website
+        run: npm run lint
+
       - name: NPM Build
         if: github.ref == 'refs/heads/main'
         working-directory: ./website
