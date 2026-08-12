@@ -15,6 +15,81 @@
   --ifm-footer-link-hover-color: #19C6C6;
 }
 
+/* ===== DARK MODE ===== */
+[data-theme='dark'] {
+  --ifm-color-primary: #1cdada;
+  --ifm-color-primary-dark: #19C6C6;
+  --ifm-color-primary-darker: #16b2b2;
+  --ifm-color-primary-darkest: #118a8a;
+  --ifm-color-primary-light: #36e5e5;
+  --ifm-color-primary-lighter: #5aebeb;
+  --ifm-color-primary-lightest: #7ef0f0;
+  --ifm-background-color: #1b2540;
+  --ifm-background-surface-color: #222d4a;
+  --ifm-navbar-background-color: #111a30;
+  --ifm-footer-background-color: #111a30;
+  --ifm-font-color-base: #e3e8f0;
+  --ifm-heading-color: #ffffff;
+  --ifm-link-color: #1cdada;
+  --ifm-menu-color: #c8d0e0;
+  --ifm-menu-color-active: #1cdada;
+  --ifm-toc-link-color: #c8d0e0;
+  --ifm-color-content-secondary: #a0aec0;
+  --ifm-code-background: rgba(255,255,255,0.08);
+  --ifm-table-stripe-background: rgba(255,255,255,0.04);
+  --ifm-table-border-color: rgba(255,255,255,0.1);
+  --ifm-hr-border-color: rgba(255,255,255,0.1);
+}
+
+/* Force dark‑mode overrides for hardcoded colours in static/css/main.css */
+[data-theme='dark'] body {
+  color: #e3e8f0;
+  background-color: #1b2540;
+}
+
+[data-theme='dark'] a {
+  color: #1cdada;
+}
+
+[data-theme='dark'] a:hover {
+  color: #36e5e5;
+}
+
+[data-theme='dark'] h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] h3,
+[data-theme='dark'] h4,
+[data-theme='dark'] h5,
+[data-theme='dark'] h6 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] table tr {
+  border-color: rgba(255,255,255,0.1);
+}
+
+[data-theme='dark'] table tr:nth-child(2n) {
+  background-color: rgba(255,255,255,0.04);
+}
+
+[data-theme='dark'] table th,
+[data-theme='dark'] table td {
+  border-color: rgba(255,255,255,0.1);
+}
+
+[data-theme='dark'] blockquote {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] code {
+  background-color: rgba(255,255,255,0.08);
+  color: #e3e8f0;
+}
+
+[data-theme='dark'] hr {
+  border-color: rgba(255,255,255,0.1);
+}
+
 /* ===== HOMEPAGE HERO ===== */
 .heroCover {
   background: linear-gradient(135deg, #1b2540 0%, #0d1526 100%);
@@ -210,3 +285,133 @@
     font-size: 2rem;
   }
 }
+
+/* ===== DARK MODE — Homepage sections ===== */
+
+/* The mainContainer content blocks use hardcoded light colours.
+   Deliberately NOT setting a background here — the dark bg is on body.
+   The #digitize-legal-contracts::before gradient has z-index: -1, so it
+   paints behind .mainContainer. Setting a background here would hide it. */
+[data-theme='dark'] .blockContent h2 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .typeset {
+  color: #c8d0e0;
+}
+
+/* .darkBackground is a homepage CSS class for alternating sections — NOT the
+   Docusaurus dark-mode concept. It already has a dark bg, but in dark mode the
+   surrounding non-dark sections must also blend, so we lighten the contrast. */
+[data-theme='dark'] .darkBackground {
+  background-color: #263558;
+}
+
+[data-theme='dark'] .darkBackground .blockContent h2 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .darkBackground .typeset {
+  color: #c8d0e0;
+}
+
+/* Showcase / users section */
+[data-theme='dark'] .productShowcaseSection {
+  background: #222d4a;
+  color: #e3e8f0;
+}
+
+/* Filled button on homepage */
+[data-theme='dark'] .button-filled {
+  background: #19C6C6;
+  color: #1b2540 !important;
+}
+
+[data-theme='dark'] .button-filled:hover {
+  background: #36e5e5;
+}
+
+/* Hero buttons stay visible in dark mode */
+[data-theme='dark'] .homeContainer .button,
+[data-theme='dark'] .heroCover .button {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+/* Custom footer (.nav-footer) — dark mode overrides */
+[data-theme='dark'] .nav-footer {
+  background-color: #111a30;
+}
+
+[data-theme='dark'] .nav-footer .sitemap h5 {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .nav-footer .sitemap a {
+  color: #c8d0e0;
+}
+
+[data-theme='dark'] .nav-footer .sitemap a:hover,
+[data-theme='dark'] .nav-footer .sitemap a:focus {
+  color: #1cdada;
+}
+
+[data-theme='dark'] .nav-footer .copyright {
+  color: #a0aec0;
+}
+
+[data-theme='dark'] .nav-footer svg path,
+[data-theme='dark'] .nav-footer svg polygon {
+  fill: #ffffff;
+}
+
+/* Users / versions pages */
+[data-theme='dark'] .showcaseSection {
+  color: #e3e8f0;
+}
+
+[data-theme='dark'] .versionsContainer {
+  color: #e3e8f0;
+}
+
+/* Doc sidebar & TOC — override any leftover hardcoded colours from main.css */
+[data-theme='dark'] .menu__link {
+  color: var(--ifm-menu-color);
+}
+
+[data-theme='dark'] .menu__link--active:not(.menu__link--sublist) {
+  color: var(--ifm-menu-color-active);
+}
+
+[data-theme='dark'] .table-of-contents__link {
+  color: var(--ifm-toc-link-color);
+}
+
+[data-theme='dark'] .table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+}
+
+/* Homepage diagonal background gradients in dark mode */
+[data-theme='dark'] #digitize-legal-contracts::before {
+  background: linear-gradient(135deg, #1b2540, #1b2540 40%, #0000 0, #0000) !important;
+}
+
+[data-theme='dark'] #showcase::after {
+  background: linear-gradient(-45deg, #1b2540, #1b2540 55%, #0000 0, #0000) !important;
+}
+
+/* Ensure homepage text and heading colors suit dark mode */
+[data-theme='dark'] #digitize-legal-contracts h2,
+[data-theme='dark'] #digitize-legal-contracts h2 .strong,
+[data-theme='dark'] #templates h2,
+[data-theme='dark'] #accord h2,
+[data-theme='dark'] #accord h2 .strong,
+[data-theme='dark'] #model h2,
+[data-theme='dark'] #logic h2,
+[data-theme='dark'] #try h2,
+[data-theme='dark'] #try h2 .strong,
+[data-theme='dark'] #agent-workflows h2,
+[data-theme='dark'] #agent-workflows h2 .strong {
+  color: #ffffff !important;
+}
+
