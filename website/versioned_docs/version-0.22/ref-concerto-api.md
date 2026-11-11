@@ -1110,7 +1110,7 @@ Set the default options for the serializer.
 #### serializer.toJSON(resource, [options]) ⇒ <code>Object</code>
 <p>
 Convert a [Resource](Resource) to a JavaScript object suitable for long-term
-peristent storage.
+persistent storage.
 </p>
 
 **Kind**: instance method of [<code>Serializer</code>](#module_concerto-core.Serializer)  
