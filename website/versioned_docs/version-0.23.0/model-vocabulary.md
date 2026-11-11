@@ -92,7 +92,7 @@ As you can see in the vocabularies above, a vocabulary can supplement or overrid
 
 ## API Usage
 
-Use the `VocabularyManager` classs to define new vocabularies, retrieve terms for a locale, or to validate
+Use the `VocabularyManager` class to define new vocabularies, retrieve terms for a locale, or to validate
 a vocabulary using a `ModelManager`.
 
 ### Adding a Vocabulary
@@ -137,7 +137,7 @@ const term = vocabularyManager.resolveTerm(modelManager, 'org.acme', 'en-gb', 'T
 
 ### Validating a Vocabulary Manager
 
-Use the `validate` method on the `VocabularyManager` to detect missing and redudant vocabulary 
+Use the `validate` method on the `VocabularyManager` to detect missing and redundant vocabulary 
 terms — comparing the terms in the `VocabularyManager` with the declarations in a `ModelManager`.
 The return value from `validate` is an object containing information for the missing and additional terms. 
 

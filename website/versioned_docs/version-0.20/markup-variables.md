@@ -279,7 +279,7 @@ If the delay is more than "two weeks", the Buyer is entitled to terminate this C
 
 If the variable `variableName` has a complex type `ComplexType` (such as an `asset`, a `concept`, etc.)
 ```ergo
-o ComplextType variableName
+o ComplexType variableName
 ```
 
 The corresponding instance should contain all fields in the corresponding complex type in the order they occur in the model, separated by a single white space character.
