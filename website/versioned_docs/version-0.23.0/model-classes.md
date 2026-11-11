@@ -53,7 +53,7 @@ asset Vehicle identified by vin {
 }
 ```
 
-Assets are implicitly `identified` if you do not specify your own identifing property. The property name is `$identifier`.
+Assets are implicitly `identified` if you do not specify your own identifying property. The property name is `$identifier`.
 
 Assets are typically used in your models for the long-lived identifiable Things (or nouns) in the model: cars, orders, shipping containers, products, etc.
 
@@ -67,7 +67,7 @@ participant Customer identified by email {
 }
 ```
 
-Participants are implicitly `identified` if you do not specify your own identifing property. The property name is `$identifier`.
+Participants are implicitly `identified` if you do not specify your own identifying property. The property name is `$identifier`.
 
 Participants are typically used for the identifiable people or organizations in the model: person, customer, company, business, auditor, etc.
 
