@@ -273,7 +273,7 @@ retrieve instances from [Template](#Template)</strong>
 | packageJson | <code>object</code> | the JS object for package.json (required) |
 | readme | <code>String</code> | the README.md for the template (may be null) |
 | samples | <code>object</code> | the sample markdown for the template in different locales, |
-| request | <code>object</code> | the JS object for the sample request represented as an object whose keys are the locales and whose values are the sample markdown. For example:  {      default: 'default sample markdown',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). THe `default` key represents sample template text in a non-specified language, stored in a file called `sample.md`. |
+| request | <code>object</code> | the JS object for the sample request represented as an object whose keys are the locales and whose values are the sample markdown. For example:  {      default: 'default sample markdown',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). The `default` key represents sample template text in a non-specified language, stored in a file called `sample.md`. |
 
 <a name="Metadata+getTemplateType"></a>
 
@@ -1110,4 +1110,3 @@ Extract the file location from the parse error
 | Param | Type | Description |
 | --- | --- | --- |
 | error | <code>object</code> | the error object |
-

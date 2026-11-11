@@ -62,4 +62,4 @@ const fqn = typeDeclaration.getFullyQualifiedName();
 console.log(fqn); // should equal 'org.acme.address.PostalAddress'
 ```
 
-These APIs allow you to examine the declared properties, super types and meta-properies for a modelled type.
+These APIs allow you to examine the declared properties, super types and meta-properties for a modelled type.

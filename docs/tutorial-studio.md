@@ -23,11 +23,11 @@ Begin by inspecting the `README` and `package.json` tabs within the `Metadata` s
 
 ### The Contract Text
 
-Then click on the `Text` Section on the left, which should show a `Grammar` tab, for the the natural language of the template.
+Then click on the `Text` Section on the left, which should show a `Grammar` tab, for the natural language of the template.
 
 ![Advanced-Late-2](assets/advanced/late2.png)
 
-When the text in the `Grammar` tab is in sync with the text in the `Sample` tab, this means the sample is a valid with respect to the grammar, and data is extracted, showing in `Contract Data` tab. The contract data is represented using the JSON format and contains the value of the variables declared in the contract template. For instance, the value for the `buyer` variable is `Betty Buyer`, highlighted in red:
+When the text in the `Grammar` tab is in sync with the text in the `Sample` tab, this means the sample is valid with respect to the grammar, and data is extracted, showing in `Contract Data` tab. The contract data is represented using the JSON format and contains the value of the variables declared in the contract template. For instance, the value for the `buyer` variable is `Betty Buyer`, highlighted in red:
 
 ![Advanced-Late-3](assets/advanced/late3.png)
 
