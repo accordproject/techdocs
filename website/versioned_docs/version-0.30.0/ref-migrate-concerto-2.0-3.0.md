@@ -43,7 +43,7 @@ It is recommended that you migrate your CTO files to use versioned namespaces. I
 
 ## CLI Enhancements
 
-The `concerto-cli` command line utility has been improved and extended, with support for checking semver compatability of models, incrementing namespace versions, generating code from models, and parser performance improvements.
+The `concerto-cli` command line utility has been improved and extended, with support for checking semver compatibility of models, incrementing namespace versions, generating code from models, and parser performance improvements.
 
 Please see the updated [CLI documentation](ref-concerto-cli.md) for details.
 
