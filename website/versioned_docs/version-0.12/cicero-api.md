@@ -283,7 +283,7 @@ retrieve instances from [Template](Template)</strong>
 | packageJson | <code>object</code> | the JS object for package.json (required) |
 | readme | <code>String</code> | the README.md for the template (may be null) |
 | samples | <code>object</code> | the sample text for the template in different locales, |
-| request | <code>object</code> | the JS object for the sample request represented as an object whose keys are the locales and whose values are the sample text. For example:  {      default: 'default sample text',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). THe `default` key represents sample template text in a non-specified language, stored in a file called `sample.txt`. |
+| request | <code>object</code> | the JS object for the sample request represented as an object whose keys are the locales and whose values are the sample text. For example:  {      default: 'default sample text',      en: 'sample text in english',      fr: 'exemple de texte français'  } Locale keys (with the exception of default) conform to the IETF Language Tag specification (BCP 47). The `default` key represents sample template text in a non-specified language, stored in a file called `sample.txt`. |
 
 <a name="module_cicero-core.Metadata+getTemplateType"></a>
 
@@ -1130,4 +1130,3 @@ Persists this template to a Cicero Template Archive (cta) file.
 | template | <code>Template</code> | the template to persist |
 | [language] | <code>string</code> | target language for the archive (should be 'ergo') |
 | [options] | <code>Object</code> | JSZip options |
-
