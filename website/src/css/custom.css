@@ -43,6 +43,12 @@
   display: inline-block;
   margin: 0 8px;
 }
+@media(max-width:360px){
+  .pluginWrapper.buttonWrapper {
+  display: block;
+  margin: 8px 0 ;
+}
+}
 
 .homeContainer .button,
 .heroCover .button {
