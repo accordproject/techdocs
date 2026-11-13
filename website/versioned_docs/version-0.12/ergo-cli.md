@@ -84,7 +84,7 @@ For instance, to send one request to the `volumediscount` contract:
     02:33:50 - info: {"response":{"discountRate":2.8,"$class":"org.accordproject.volumediscount.VolumeDiscountResponse"},"state":{"$class":"org.accordproject.cicero.contract.AccordContractState","stateId":"1"},"emit":[]}
 ```
 
-If contract invokation is successful, `ergorun` will print out the response, the new contract state and any emitted events.
+If contract invocation is successful, `ergorun` will print out the response, the new contract state and any emitted events.
 
 ## ergotop (REPL)
 
@@ -184,7 +184,7 @@ ergo$ call volumediscount(VolumeDiscountRequest{ netAnnualChargeVolume : 10.5 })
 Response. VolumeDiscountResponse{discountRate: 2.8} : VolumeDiscountResponse
 ```
 
-You can also invoke the contract without explicitely naming the clause by simply sending a request. The Ergo engine dispatches that request to the first clause which can handle it:
+You can also invoke the contract without explicitly naming the clause by simply sending a request. The Ergo engine dispatches that request to the first clause which can handle it:
 ```ergo
 ergo$ send VolumeDiscountRequest{ netAnnualChargeVolume : 0.1 }
 Response. VolumeDiscountResponse{discountRate: 3.0} : VolumeDiscountResponse

@@ -42,7 +42,7 @@ The Model Manager will resolve all imports to ensure that the set of declaration
 
 ## Strict:false mode
 
-For backwards compatability, and when running with `strict:false` imports may import types from unversioned namespaces, or may import all types in a namespace. 
+For backwards compatibility, and when running with `strict:false` imports may import types from unversioned namespaces, or may import all types in a namespace. 
 
 > Please migrate models to use versioned namespaces and imports as this capability will be deprecated and removed in a future major release.
 

@@ -880,7 +880,7 @@ Create the CompositeArchiveLoader. Used to delegate to a set of ArchiveLoaders.
 <a name="CompositeArchiveLoader+addArchiveLoader"></a>
 
 ### compositeArchiveLoader.addArchiveLoader(archiveLoader)
-Adds a ArchiveLoader implemenetation to the ArchiveLoader
+Adds a ArchiveLoader implementation to the ArchiveLoader
 
 **Kind**: instance method of [<code>CompositeArchiveLoader</code>](#CompositeArchiveLoader)  
 

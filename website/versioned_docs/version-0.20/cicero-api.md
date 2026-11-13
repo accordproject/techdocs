@@ -491,7 +491,7 @@ Build grammar rules from a template
 | ast | <code>object</code> | the AST from which to build the grammar |
 | templateModel | <code>ClassDeclaration</code> | the type of the parent class for this AST |
 | prefix | <code>String</code> | A unique prefix for the grammar rules |
-| parts | <code>Object</code> | Result object to acculumate rules and required sub-grammars |
+| parts | <code>Object</code> | Result object to accumulate rules and required sub-grammars |
 
 <a name="ParserManager+handleBinding"></a>
 
@@ -1060,7 +1060,7 @@ Create the CompositeArchiveLoader. Used to delegate to a set of ArchiveLoaders.
 <a name="CompositeArchiveLoader+addArchiveLoader"></a>
 
 ### compositeArchiveLoader.addArchiveLoader(archiveLoader)
-Adds a ArchiveLoader implemenetation to the ArchiveLoader
+Adds a ArchiveLoader implementation to the ArchiveLoader
 
 **Kind**: instance method of [<code>CompositeArchiveLoader</code>](#CompositeArchiveLoader)  
 
