@@ -2609,7 +2609,7 @@ false if not.
 Determine if this object is identifiable.
 
 **Kind**: instance method of [<code>Resource</code>](#module_concerto-core.Resource)  
-**Returns**: <code>boolean</code> - True if this object has an identifiying field
+**Returns**: <code>boolean</code> - True if this object has an identifying field
 false if not.  
 <a name="module_concerto-core.Resource+toJSON"></a>
 
