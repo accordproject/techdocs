@@ -2719,7 +2719,7 @@ qualified type name, false otherwise.
 <a name="module_concerto-core.Typed+toJSON"></a>
 
 #### *typed.toJSON()*
-Overriden to prevent people accidentally converting a resource to JSON
+Overridden to prevent people accidentally converting a resource to JSON
 without using the Serializer.
 
 **Kind**: instance method of [<code>Typed</code>](#module_concerto-core.Typed)  
@@ -3286,7 +3286,7 @@ missing and additional terms.
 Converts the object to JSON
 
 **Kind**: instance method of [<code>Vocabulary</code>](#module_concerto-vocabulary.Vocabulary)  
-**Returns**: <code>\*</code> - the contens of this vocabulary  
+**Returns**: <code>\*</code> - the contents of this vocabulary  
 <a name="module_concerto-vocabulary.VocabularyManager"></a>
 
 ### concerto-vocabulary.VocabularyManager
@@ -3431,7 +3431,7 @@ from a more general vocabulary if required
 <a name="module_concerto-vocabulary.VocabularyManager+generateDecoratorCommands"></a>
 
 #### vocabularyManager.generateDecoratorCommands(modelManager, locale) ⇒ <code>\*</code>
-Creates a DecoractorCommandSet with @Term decorators
+Creates a DecoratorCommandSet with @Term decorators
 to decorate all model elements based on the vocabulary for a locale.
 Pass the return value to the DecoratorManager.decorateModel to apply
 the decorators to a ModelManager.
@@ -3703,8 +3703,8 @@ a prescribed precision and inside a global range
 | userMin | <code>\*</code> | Lower bound on the range, inclusive. Defaults to systemMin |
 | userMax | <code>\*</code> | Upper bound on the range, inclusive. Defaults to systemMax |
 | precision | <code>\*</code> | The precision of values returned, e.g. a value of `1` returns only whole numbers |
-| systemMin | <code>\*</code> | Global minimum on the range, takes precidence over the userMin |
-| systemMax | <code>\*</code> | Global maximum on the range, takes precidence over the userMax |
+| systemMin | <code>\*</code> | Global minimum on the range, takes precedence over the userMin |
+| systemMax | <code>\*</code> | Global maximum on the range, takes precedence over the userMax |
 
 <a name="updateModels"></a>
 
@@ -3936,8 +3936,8 @@ Infers a Concerto model from a JSON Schema.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| defaultNamespace | <code>string</code> | a fallback namespace to use for the model if it can't be infered |
-| defaultType | <code>string</code> | a fallback name for the root concept if it can't be infered |
+| defaultNamespace | <code>string</code> | a fallback namespace to use for the model if it can't be inferred |
+| defaultType | <code>string</code> | a fallback name for the root concept if it can't be inferred |
 | schema | <code>object</code> | the input json object |
 
 <a name="capitalizeFirstLetter"></a>

@@ -2582,6 +2582,6 @@ a prescribed precision and inside a global range
 | userMin | <code>\*</code> | Lower bound on the range, inclusive. Defaults to systemMin |
 | userMax | <code>\*</code> | Upper bound on the range, inclusive. Defaults to systemMax |
 | precision | <code>\*</code> | The precision of values returned, e.g. a value of `1` returns only whole numbers |
-| systemMin | <code>\*</code> | Global minimum on the range, takes precidence over the userMin |
-| systemMax | <code>\*</code> | Global maximum on the range, takes precidence over the userMax |
+| systemMin | <code>\*</code> | Global minimum on the range, takes precedence over the userMin |
+| systemMax | <code>\*</code> | Global maximum on the range, takes precedence over the userMax |
 
