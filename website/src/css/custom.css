@@ -87,7 +87,7 @@
   color: #ffffff;
 }
 
-#features .blockContent > div {
+#features .blockContent>div {
   color: #f0f4f8;
   font-size: 0.95rem;
 }
@@ -123,7 +123,7 @@
   max-width: 480px;
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .blockContent h2 {
@@ -197,6 +197,7 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+
   .blockElement.imageAlignRight,
   .blockElement.imageAlignLeft {
     flex-direction: column;
@@ -208,5 +209,23 @@
 
   .homeContainer .projectTitle {
     font-size: 2rem;
+  }
+}
+
+/* Fix: stack hero CTA buttons on narrow mobile viewports (#556) */
+@media (max-width: 480px) {
+
+  .heroCover .pluginWrapper.buttonWrapper,
+  .homeContainer .pluginWrapper.buttonWrapper {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .homeContainer .button,
+  .heroCover .button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
