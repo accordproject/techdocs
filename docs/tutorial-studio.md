@@ -8,7 +8,7 @@ This tutorial will walk you through the steps of editing a clause template in [T
 We start with a very simple _Late Penalty and Delivery_ Clause and gradually make it more complex, adding both legal text to it and the corresponding business logic.
 
 :::note
-This tutorial uses templates written in [Ergo](ref-ergo-logic.md), the legacy Accord Project logic language. For new templates, TypeScript is recommended.
+This tutorial uses templates written in [Ergo](logic-ergo.md), the legacy Accord Project logic language. For new templates, TypeScript is recommended.
 :::
 
 ## Initial Late Delivery Clause
