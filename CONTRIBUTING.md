@@ -75,7 +75,7 @@ Before you submit your pull request consider the following guidelines:
 * Follow our [Coding Rules][developers.rules].
 * Ensure you provide a DCO sign-off for your commits using the `--signoff` option of git commit. For more information see [how this works][dcohow].
 * If the changes affect public APIs, change or add relevant [documentation][developers.documentation].
-* Run the [unit test suite][developers.unit-tests], and ensure that all tests pass.
+* Run the website lint and build checks, and ensure that both commands pass.
 
 * Commit your changes using a descriptive commit message that follows our [commit message conventions][developers.commits]. Adherence to the [commit message conventions][developers.commits] is required, because release notes are automatically generated from these messages.
 
@@ -91,10 +91,11 @@ Before you submit your pull request consider the following guidelines:
     git rebase upstream/main
   ```
 
-* Last step before creating the Pull Request, package and run all tests a last time:
+* Last step before creating the Pull Request, validate the documentation site one last time:
 
   ```text
-    npm run test
+    npm --prefix website run lint
+    npm --prefix website run build
   ```
 
 * Push your branch to GitHub:
@@ -176,8 +177,6 @@ Accord Project documentation files are made available under the [Creative Common
 [developers.commits]: DEVELOPERS.md#commits
 [developers.rules]: DEVELOPERS.md#rules
 [developers.documentation]: DEVELOPERS.md#documentation
-[developers.unit-tests]: DEVELOPERS.md#-running-the-unit-test-suite
-
 [dcohow]: https://github.com/probot/dco#how-it-works
 
 [apache]: https://github.com/accordproject/techdocs/blob/main/LICENSE
