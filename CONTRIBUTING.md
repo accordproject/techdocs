@@ -3,6 +3,7 @@
 We'd love for you to contribute to our source code and to make Accord Project technology even better than it is today! Here are the guidelines we'd like you to follow:
 
 * [Code of Conduct][contribute.coc]
+* [Where to Start][contribute.start]
 * [Questions and Problems][contribute.question]
 * [Issues and Bugs][contribute.issue]
 * [Feature Requests][contribute.feature]
@@ -13,6 +14,22 @@ We'd love for you to contribute to our source code and to make Accord Project te
 ## <a name="coc"></a> Code of Conduct
 
 Help us keep the Accord Project open and inclusive. Please read and follow our [Code of Conduct][coc].
+
+## <a name="start"></a> Where to Start
+
+### Pick up an issue
+
+We label issues that suit new contributors with `good first issue` or `help wanted`. This search lists the open, unassigned ones across every Accord Project repository:
+
+* [Open issues for new contributors][starter-issues]
+
+Comment on an issue before you start work on it, so that others know it's taken.
+
+### Review a pull request
+
+Reviewing is contributing too, and you don't need maintainer rights to do it. Check out the branch, run it, and leave a comment that says what you tested and what you found. Reviews help pull requests get merged sooner, and they're one of the fastest ways to learn the codebase. This search lists open pull requests that haven't had a review yet:
+
+* [Open pull requests waiting for a review][review-prs]
 
 ## <a name="requests"></a> Questions, Bugs, Features
 
@@ -161,8 +178,11 @@ Accord Project documentation files are made available under the [Creative Common
 
 [coc]: https://lfprojects.org/policies/code-of-conduct/
 [apdiscord]: https://discord.gg/Zm99SKhhtA
+[starter-issues]: https://github.com/search?q=org%3Aaccordproject+is%3Aissue+is%3Aopen+no%3Aassignee+label%3A%22good+first+issue%22%2C%22help+wanted%22&type=issues&s=updated&o=desc
+[review-prs]: https://github.com/search?q=org%3Aaccordproject+is%3Apr+is%3Aopen+draft%3Afalse+review%3Anone+-author%3Aapp%2Fdependabot&type=pullrequests&s=created&o=desc
 
 [contribute.coc]: CONTRIBUTING.md#coc
+[contribute.start]: CONTRIBUTING.md#start
 [contribute.question]: CONTRIBUTING.md#question
 [contribute.issue]: CONTRIBUTING.md#issue
 [contribute.feature]: CONTRIBUTING.md#feature
