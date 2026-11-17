@@ -563,12 +563,15 @@ defineLogic&lt;Self&gt;()
     <p class="claim">In the Library, a template writes only in its own volume; facts and other clauses are read through the glass. <code>self</code> is the template's own instance. A parent reaches a composed clause only through an interface the clause declares, never its raw state, and learns what the clause decided from its response. What a clause needs from above arrives as a binding or a provided fact, and what a template needs from outside arrives as a fact the host supplies. So a clause can change inside without breaking its parent, and a missing clause is found when the agreement is made, not at run time.</p>
     <div><span class="shape-label">Shape</span><pre class="shape mono"><span class="c">// The interface: a namespace of members, each describing itself</span>
 namespace org.accordproject.latepayment.api@1.2.0
-@Returns(ReminderSent) @Declines(ReminderLimitReached)
+@Returns(ReminderSent)
+@Declines(ReminderLimitReached, NothingOutstanding)
 @Emits(LateFeeAccrued)
-transaction PaymentOverdue extends Request { … }
+transaction PaymentOverdue extends Request { }
 @Returns(LatePaymentCleared)
-transaction PaymentSettled extends Request { … }
-transaction ReminderLimitReached extends Declined { }
+transaction PaymentSettled extends Request { }
+transaction ReminderLimitReached extends Declined { … }
+transaction NothingOutstanding extends Declined { }
+<span class="c">// What is owed, the clause reads as a fact its parent provides</span>
 
 <span class="c">// The clause's package.json</span>
 "accordproject": {
@@ -590,7 +593,7 @@ transaction ReminderLimitReached extends Declined { }
   "reads": {
     "sales": {
       "interface": "org.accordproject.royalty.api@^1.0.0",
-      "fact": "SalesToDate", "key": "work.workId"
+      "fact": "SalesToDate", "key": "salesAccountId"
     }
   }
 }</pre></div>
@@ -617,7 +620,7 @@ transaction ReminderLimitReached extends Declined { }
 <pre class="code"><span class="c">// Optional: the compiler makes you handle its absence.</span>
 const latePayment = licence.clauses.latePayment;
 <span class="k">if</span> (latePayment) {
-  const reply = latePayment.trigger(PaymentOverdue.create({ … }));
+  const reply = latePayment.trigger(PaymentOverdue.create({}));
   <span class="k">if</span> (ReminderLimitReached.is(reply)) {
     <span class="c">// The clause's writes are discarded. The licence may pass the</span>
     <span class="c">// decline up unchanged, decline itself, or commit its own</span>
