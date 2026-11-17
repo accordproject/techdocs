@@ -11,22 +11,11 @@ cd ./website
 npm install
 npm run start
 ```
-If you want to re-generate the JSDoc API:
-```
-npm run build:api
-```
 
-## Creating a new version of the documentation
+## Documentation versioning
 
-```
-cd ./website
-npm install
-npm run version `0.23.0`
-```
-If you want to re-generate the JSDoc API:
-```
-npm run build:api
-```
+Documentation versioning is currently disabled in the Docusaurus configuration. Update the
+current documentation in `docs/` instead of running a version-generation command.
 
 ## Commits
 When committing your changes, it is required you adhere to the [commit message conventions]. This is important because the release notes are automatically generated from these messages.
