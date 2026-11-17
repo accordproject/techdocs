@@ -1,0 +1,906 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A draft proposal for Accord Project Agreement 1.0, told as a walk around an Inn of Court.">
+<style>
+/* Base reset (the artifact viewer supplied these). */
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+</style>
+<title>The Agreement Quarter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=IM+Fell+English:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a walk through an Inn of Court. A painted "Directory" board stays
+   beside the reader; each stop is a chambers staircase (No. 1, No. 2, ...)
+   read at three depths: the board, the brief, the bundle. */
+:root {
+  /* Portland stone by day */
+  --ground: #e8e6e0;
+  --paper: #f3f2ee;
+  --ink: #1c2230;
+  --muted: #5a5f6c;
+  --rule: #c7c3b8;
+  --claret: #7a1f2c;
+  --brass: #87601a;
+  --well: #dfdcd3;
+  --hatch: #cfcabd;
+  --added: #2f5d3a;
+  --removed: #7a1f2c;
+  --display: "IM Fell English SC", "Cormorant SC", Georgia, serif;
+  --italic: "IM Fell English", Georgia, serif;
+  --body: "Newsreader", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* gaslight at dusk */
+    --ground: #0f131b; --paper: #161b25; --ink: #e7e1d2; --muted: #a29d90; --rule: #2c3341;
+    --claret: #d47a82; --brass: #e1b45e; --well: #0b0e14; --hatch: #232a38;
+    --added: #8fc59b; --removed: #e08a92; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0f131b; --paper: #161b25; --ink: #e7e1d2; --muted: #a29d90; --rule: #2c3341;
+  --claret: #d47a82; --brass: #e1b45e; --well: #0b0e14; --hatch: #232a38;
+  --added: #8fc59b; --removed: #e08a92; color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 400 1.0625rem/1.6 var(--body);
+  padding-inline: 1rem;
+  padding-block: 0 4rem;
+}
+a { color: var(--claret); text-underline-offset: 0.15em; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+code, pre, .mono { font-family: var(--mono); font-size: 0.86em; }
+h1, h2, h3 { text-wrap: balance; font-weight: 400; margin: 0; }
+p { margin: 0; }
+
+.walk {
+  max-width: 76rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 3rem;
+}
+
+/* The Directory: the painted board at a staircase door */
+.directory {
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + 1.5rem);
+  align-self: start;
+  margin-top: 1.5rem;
+  border: 1px solid var(--rule);
+  background: var(--paper);
+  padding: 1rem 1rem 1.1rem;
+}
+.directory h2 { font: 400 1.05rem/1 var(--display); letter-spacing: 0.12em; color: var(--muted); margin-bottom: 0.75rem; }
+.directory ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.15rem; }
+.directory a {
+  display: grid; grid-template-columns: 3rem 1fr; gap: 0.25rem;
+  text-decoration: none; color: var(--ink); padding: 0.2rem 0.3rem;
+  font: 400 0.98rem/1.3 var(--italic);
+  border-left: 2px solid transparent;
+}
+.directory a .no { font: 500 0.7rem/1.9 var(--mono); color: var(--muted); letter-spacing: 0.04em; }
+.directory a[aria-current="true"] { border-left-color: var(--claret); color: var(--claret); }
+.directory a:hover { color: var(--claret); }
+.directory a small { display: block; font: 400 0.68rem/1.35 var(--mono); color: var(--muted); letter-spacing: 0.02em; }
+
+main { min-width: 0; display: grid; gap: 5.5rem; padding-top: 1.5rem; }
+/* Grid children holding code or long words must be allowed to shrink. */
+main > *, .opening > *, .stop > *, .brief > *, .bundle > *, .section > *, .pair > *, .board > * { min-width: 0; }
+.kicker { overflow-wrap: anywhere; }
+
+/* Plates: illustrations, or numbered placeholders until they exist */
+.plate { margin: 0; display: grid; gap: 0.6rem; }
+.plate-art {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  max-width: 100%;
+  border: 3px double var(--rule);
+  background:
+    repeating-linear-gradient(135deg, var(--hatch) 0 1px, transparent 1px 7px),
+    var(--well);
+  display: grid; place-items: center; text-align: center;
+  overflow: hidden;
+}
+.plate-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.plate-art .label { display: grid; gap: 0.2rem; padding: 0.6rem 1rem; background: var(--paper); border: 1px solid var(--rule); }
+.plate-art .label b { font: 400 0.8rem/1 var(--mono); letter-spacing: 0.14em; color: var(--muted); text-transform: uppercase; }
+.plate-art .label span { font: 400 1.4rem/1.1 var(--display); letter-spacing: 0.04em; }
+.plate figcaption { font: italic 400 0.92rem/1.45 var(--italic); color: var(--muted); max-width: 62ch; }
+
+/* The opening */
+.opening { display: grid; gap: 1.6rem; }
+.kicker { font: 500 0.74rem/1.4 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+.kicker em { font-style: normal; color: var(--claret); }
+.opening h1 { font: 400 clamp(2.6rem, 6.5vw, 4.6rem)/0.98 var(--display); letter-spacing: 0.01em; }
+.opening h1 i { font-family: var(--italic); font-style: italic; color: var(--claret); }
+.opening .lede { font-size: 1.25rem; line-height: 1.5; max-width: 40ch; }
+.status { margin: 0; max-width: 62ch; padding: 0.6rem 0.8rem; border-left: 3px solid var(--claret); background: var(--well); font-size: 0.95rem; }
+.status b { font: 500 0.72rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--claret); margin-right: 0.4rem; }
+.manifest { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; padding-block: 0.9rem; border-block: 1px solid var(--rule); font: 400 0.82rem/1.4 var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.manifest b { color: var(--ink); font-weight: 500; }
+
+/* A stop */
+.stop { display: grid; gap: 1.8rem; scroll-margin-top: 1.5rem; }
+.board { display: grid; gap: 0.6rem; }
+.board h2 { font: 400 clamp(2rem, 4.6vw, 3.1rem)/1.02 var(--display); }
+.board h2 i { font-family: var(--italic); font-style: italic; color: var(--claret); }
+.brief { display: grid; gap: 1.3rem; max-width: 68ch; }
+.claim { font-size: 1.2rem; line-height: 1.5; }
+.shape { margin: 0; padding: 0.8rem 1rem; background: var(--well); border-left: 3px solid var(--brass); white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.55; }
+.shape .c { color: var(--muted); }
+.shape-label { font: 500 0.7rem/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; display: block; }
+dl.anatomy { margin: 0; display: grid; grid-template-columns: minmax(8rem, max-content) minmax(0, 1fr); gap: 0.45rem 1.1rem; }
+dl.anatomy dt { font: 500 0.84rem/1.55 var(--mono); color: var(--claret); }
+dl.anatomy dd { margin: 0; }
+.pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1rem 2rem; }
+.pair h3 { font: 400 1.1rem/1.2 var(--display); letter-spacing: 0.06em; margin-bottom: 0.4rem; }
+.pair ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.35rem; }
+.pair .gets h3 { color: var(--brass); }
+.receipts { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.receipt { font: 400 0.74rem/1 var(--mono); letter-spacing: 0.04em; padding: 0.4rem 0.55rem; border: 1px solid var(--rule); color: var(--muted); text-decoration: none; background: var(--paper); }
+a.receipt:hover { color: var(--claret); border-color: var(--claret); }
+
+/* The bundle: worked examples */
+.bundle { display: grid; gap: 1rem; border-top: 1px solid var(--rule); padding-top: 1.3rem; }
+.bundle > h3 { font: 400 1.35rem/1.2 var(--display); }
+.bundle > p { max-width: 68ch; }
+.compare { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+.compare figure { margin: 0; min-width: 0; display: grid; grid-template-rows: auto 1fr; }
+.compare figcaption, .code-label { font: 500 0.7rem/1.3 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 0.5rem 0.75rem; border: 1px solid var(--rule); border-bottom: 0; background: var(--paper); }
+.compare figcaption.after { color: var(--added); }
+.compare figcaption.before { color: var(--removed); }
+pre.code { margin: 0; padding: 0.85rem 0.9rem; background: var(--well); border: 1px solid var(--rule); white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.55; tab-size: 4; }
+pre.code .c { color: var(--muted); }
+pre.code .k { color: var(--claret); }
+pre.code .s { color: var(--brass); }
+ol.stages { list-style: none; counter-reset: stage; margin: 0; padding: 0; display: grid; gap: 0.7rem; }
+ol.stages li { counter-increment: stage; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); gap: 0.8rem; align-items: start; }
+ol.stages li::before { content: counter(stage, upper-roman); font: 400 1rem/1.5 var(--display); color: var(--claret); text-align: right; }
+ol.stages b { font-weight: 600; }
+ol.stages code { overflow-wrap: anywhere; }
+details { border: 1px solid var(--rule); background: var(--paper); }
+details summary { cursor: pointer; padding: 0.6rem 0.8rem; font: 500 0.78rem/1.3 var(--mono); letter-spacing: 0.06em; color: var(--muted); }
+details[open] summary { border-bottom: 1px solid var(--rule); }
+details pre.code { border: 0; }
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.5rem 0.7rem; border-bottom: 1px solid var(--rule); }
+th { font: 500 0.72rem/1.3 var(--mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+td code { font-size: 0.82em; }
+.tree { margin: 0; padding: 0.9rem 1rem; background: var(--well); border: 1px solid var(--rule); line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere; }
+.tree .doc { color: var(--claret); }
+.tree .tpl { color: var(--muted); }
+.tree .inl { color: var(--brass); }
+
+/* Closing sections */
+.section { display: grid; gap: 1.4rem; scroll-margin-top: 1.5rem; }
+.section > h2 { font: 400 clamp(1.9rem, 4vw, 2.7rem)/1.05 var(--display); }
+ol.checklist { margin: 0; padding-left: 1.6rem; display: grid; gap: 0.6rem; max-width: 70ch; }
+ol.checklist li::marker { font-family: var(--display); color: var(--claret); }
+.kind { font: 500 0.68rem/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 0.25rem 0.4rem; border: 1px solid currentColor; white-space: nowrap; }
+.kind.models { color: var(--muted); }
+.kind.proposed { color: var(--claret); }
+.kind.engine { color: var(--brass); }
+.kind.template { color: var(--added); }
+ul.plain { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.5rem; max-width: 70ch; }
+ul.plain b { font-weight: 600; }
+footer.colophon { border-top: 1px solid var(--rule); padding-top: 1.2rem; font-size: 0.92rem; color: var(--muted); display: grid; gap: 0.5rem; }
+
+@media (max-width: 60rem) {
+  .walk { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .directory {
+    top: env(safe-area-inset-top, 0px);
+    z-index: 2; margin: 0 -1rem; border-width: 0 0 1px; padding: 0.55rem 1rem;
+  }
+  .directory h2 { display: none; }
+  .directory ol { display: flex; overflow-x: auto; gap: 0.25rem; scrollbar-width: none; }
+  .directory a { display: flex; gap: 0.35rem; white-space: nowrap; border-left: 0; border-bottom: 2px solid transparent; }
+  .directory a[aria-current="true"] { border-bottom-color: var(--claret); }
+  .directory a .no { line-height: 1.6; }
+  .directory a small { display: none; }
+  main { gap: 4rem; }
+}
+@media (max-width: 30rem) {
+  dl.anatomy { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+  dl.anatomy dd { margin-bottom: 0.5rem; }
+}
+</style>
+</head>
+<body>
+<div class="walk">
+<nav class="directory" aria-label="Directory">
+  <h2>Directory</h2>
+  <ol>
+    <li><a href="#key"><span class="no">§</span><span>The Key<small>How to read this page</small></span></a></li>
+    <li><a href="#registry"><span class="no">No. 1</span><span>The Registry<small>Models</small></span></a></li>
+    <li><a href="#conveyancer"><span class="no">No. 2</span><span>The Conveyancer's<small>Documents and clauses</small></span></a></li>
+    <li><a href="#strongroom"><span class="no">No. 3</span><span>The Strongroom<small>State</small></span></a></li>
+    <li><a href="#windows"><span class="no">No. 4</span><span>The Clerks' Windows<small>Logic and inputs</small></span></a></li>
+    <li><a href="#library"><span class="no">No. 5</span><span>The Library<small>Composition and facts</small></span></a></li>
+    <li><a href="#chancery"><span class="no">No. 6</span><span>The Chancery<small>Results</small></span></a></li>
+    <li><a href="#seals"><span class="no">No. 7</span><span>The Seal Office<small>Hashes and drafting</small></span></a></li>
+    <li><a href="#recorder"><span class="no">No. 8</span><span>The Recorder<small>Effects and timers</small></span></a></li>
+    <li><a href="#moot"><span class="no">No. 9</span><span>The Moot<small>Test vectors</small></span></a></li>
+    <li><a href="#lodge"><span class="no">No. 10</span><span>The Porters' Lodge<small>The host</small></span></a></li>
+    <li><a href="#checklist"><span class="no">§</span><span>The Checklist<small>Moving a template to 1.0</small></span></a></li>
+    <li><a href="#roll"><span class="no">§</span><span>The Roll<small>Changes from the current release</small></span></a></li>
+  </ol>
+</nav>
+
+<main>
+
+<header class="opening" id="gatehouse">
+  <figure class="plate" data-scene="gatehouse">
+    <div class="plate-art"><div class="label"><b>Plate I</b><span>The Gatehouse</span></div></div>
+    <figcaption>The barrister and the lantern-headed clerk walk in under the gatehouse arch; lit chambers line the court beyond, each door with its painted name board.</figcaption>
+  </figure>
+  <p class="kicker">Accord Project · Agreement 1.0 · Draft proposal</p>
+  <h1>Agreements that keep their word, <i>wherever they run.</i></h1>
+  <p class="lede">Accord Project is open-source software for agreements that are both legal text and running code. A template holds an agreement's text, the data it is drafted from, and logic that responds when something happens, such as a payment arriving or a deadline passing. Agreement 1.0 proposes how such agreements run, so that any system can host one and get the same result: the text a party signs is the text that runs, a clause does what its interface says, and the same request gives the same answer on any host.</p>
+  <p class="status"><b>Draft</b>This is a proposal for discussion, not a released specification. Nothing on this page is built into a release yet, and names, shapes and details may change before 1.0.</p>
+  <div class="bundle" id="key">
+    <h3>How to read the walk</h3>
+    <p>An agreement is a legal instrument, so the page lays the engine out as an Inn of Court, where lawyers keep their chambers. Each room stands for one part of the design, as the table below lists, and each stop's heading names its room and its plain topic. The characters stand for the parts that act.</p>
+    <dl class="anatomy">
+      <dt>The barrister</dt><dd>The template author, who writes the terms and their logic.</dd>
+      <dt>The lantern-headed clerk</dt><dd>The engine, a small automaton. It does the same work the same way every time, and it never leaves the court: no clock, no storage, no network, no keys. It carries each request to the template's window that serves it.</dd>
+      <dt>The registrar</dt><dd>Accord Project, which publishes the models.</dd>
+      <dt>The porter</dt><dd>The host. It keeps the keys, the clock and the records, and passes work through the lodge window.</dd>
+      <dt>A petitioner</dt><dd>A caller: a person or a system making a request.</dd>
+    </dl>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Stop</th><th>Part of the design</th><th>Who does the work</th></tr></thead>
+      <tbody>
+        <tr><td><span class="mono">No. 1</span> The Registry</td><td>Models and the base types</td><td>Published by Accord Project; a published volume never changes</td></tr>
+        <tr><td><span class="mono">No. 2</span> The Conveyancer's</td><td>The agreement: its documents and their clauses</td><td>The engine binds and checks it when the agreement is made</td></tr>
+        <tr><td><span class="mono">No. 3</span> The Strongroom</td><td>State and revisions</td><td>The engine computes it; the host stores it</td></tr>
+        <tr><td><span class="mono">No. 4</span> The Clerks' Windows</td><td>Requests and inputs</td><td>The caller asks; the host attests who and when</td></tr>
+        <tr><td><span class="mono">No. 5</span> The Library</td><td>Interfaces, facts and bindings</td><td>The engine checks them; the host supplies facts</td></tr>
+        <tr><td><span class="mono">No. 6</span> The Chancery</td><td>Results: a commit, a rejection or a fault</td><td>The engine</td></tr>
+        <tr><td><span class="mono">No. 7</span> The Seal Office</td><td>Factories, hashes and drafting</td><td>The engine</td></tr>
+        <tr><td><span class="mono">No. 8</span> The Recorder</td><td>Effects, notifications and timers</td><td>The engine emits them; the host delivers them</td></tr>
+        <tr><td><span class="mono">No. 9</span> The Moot</td><td>Test vectors</td><td>Every engine runs the same ones</td></tr>
+        <tr><td><span class="mono">No. 10</span> The Porters' Lodge</td><td>What a host must do</td><td>The host</td></tr>
+      </tbody>
+    </table></div>
+    <p>Each stop reads at three depths: the name board (the heading), the brief (the claim and its anatomy) and, at most stops, the bundle (a worked example). If you know the current release, follow the plain topics, and go to the Roll at the end for every change from it.</p>
+  </div>
+  <div class="bundle" id="brief">
+    <h3>The design in brief</h3>
+    <p>At the centre is one call. The host, the system that stores an agreement and connects it to the outside world, passes in the agreement, its state, a request and what it has verified. The engine returns one of three results. Two other engine operations sit beside the call: instantiation, which checks a new agreement and commits its first state, and drafting, which turns a template and its data into text and its hash. Nothing else crosses the boundary. In the current release the engine reads the machine's clock, takes the caller's word for who is calling, and leaves its duties to the host unstated. In 1.0 the call is pure: the same inputs always give the same answer, so any host can run it, a request can be retried safely, and one engine can be checked against another.</p>
+    <p>Existing templates keep working. The current API stays beside the new one, deprecated but not removed at 1.0, and a compatibility adapter runs an existing template unchanged, keeping today's behaviour: the machine's clock and no identity. The Roll, at the end of this page, lists every change from the current release.</p>
+    <p>Around that call, an agreement holds one or more documents, such as a licence and its schedule, and each document can be built from reusable clauses. Each clause is its own template, plugged into a named slot through an interface it declares, and the engine checks the fit when the agreement is made. Data another system keeps, such as a sales total, arrives as typed facts the host supplies with each request. Authority comes from the callers the host has verified (principals), never from the template or the request. Text is identified by its hash, so a signature binds the exact words a signer saw. Shared test vectors define correct behaviour, so a second engine can prove it conforms.</p>
+    <p>Accord Project specifies only what crosses the engine's boundary. Persistence, scheduling, delivery and integrations belong to the host, which may be a mock, a serverless function or a commercial server. The operator is the business that runs the host, and it owns the calendar: business dates, cut-offs and month-end. Signed authority (approvals, delegated consents, attestations and evidence) is left to extension packages that domain communities own.</p>
+    <p>The running example is an agreement of two documents: a copyright licence, with an inline payment clause and a composed late payment clause, and the licensed-work schedule beside it. Many agreements are made from one template; the stops below follow one of them.</p>
+<pre class="shape mono">trigger(agreement, state, request, inputs)
+  → Committed | Rejection | Fault
+<span class="c">// No queries in 1.0, and nothing looked up: facts arrive
+// in the inputs. Queries come in a later minor version.</span></pre>
+      <p class="manifest">
+    <span><b>1</b> pure call</span>
+    <span><b>3</b> results</span>
+    <span><b>2</b> layers: the runtime (logic and state) and drafting (text from data)</span>
+    <span><b>3</b> templates in the example</span>
+  </p>
+  </div>
+</header>
+
+<!-- No. 1 -->
+<section class="stop" id="registry" aria-labelledby="registry-h">
+  <figure class="plate" data-scene="registry">
+    <div class="plate-art"><div class="label"><b>Plate II</b><span>The Registry</span></div></div>
+    <figcaption>The registrar makes an entry at the lectern; a volume once entered is never rewritten. The clerk carries one clean volume to the barrister, and loose papers go in the basket.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 1 · The Registry · <em>Models 1.0</em></p>
+    <h2 id="registry-h">Plain data in the register, <i>in volumes that never change.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">The Registry holds the models: type definitions written in Concerto, Accord Project's schema language. A namespace is a versioned package of types, and a concept, a transaction and an event are kinds of type. A published version is never rewritten. A template's model declares one concrete <code>TemplateData</code> subtype and, if the template has logic, one <code>StateData</code> subtype. The base namespaces also hold the types that cross the engine's boundary: the inputs and the facts they carry, principals, the three results, what logic emits, outcomes, timers, artifacts, and the decorators that describe an interface member. They replace the current <code>org.accordproject.runtime@0.2.0</code> types: <code>State</code> becomes <code>StateData</code>, and <code>Request</code> and <code>Response</code> keep their names.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono">concept CopyrightLicenseData extends TemplateData { … }
+<span class="c">// Every template with logic has a state type:</span>
+concept CopyrightLicenseState extends StateData { … }
+<span class="c">// runtime@1.0.0: Inputs, SystemPrincipal, ActorPrincipal,
+//   Assurance, Committed, Rejection, Fault, Declined, Emitted,
+//   Notification, Effect, Obligation, EffectOutcome, Timer,
+//   Artifact, OperatorRequest,
+//   and the decorators Returns, Declines, Emits
+// Composition is declared in the template's manifest,
+// not in its models.</span></pre></div>
+    <dl class="anatomy">
+      <dt>TemplateData</dt><dd>The root is the one concrete concept that extends <code>TemplateData</code>, so the <code>@template</code> decorator and the <code>Contract</code> or <code>Clause</code> supertype go. This <code>TemplateData</code> is a Concerto concept; in the current release the same name is a TypeScript alias for <code>IContract | IClause</code>.</dd>
+      <dt>StateData</dt><dd>A template with logic keeps state, even if it has nothing to keep: it then extends <code>StateData</code> with no fields. A text template has no logic and no state, so it needs no <code>StateData</code>.</dd>
+      <dt>Decorators</dt><dd><code>@Returns</code>, <code>@Declines</code> and <code>@Emits</code> are declared in the runtime namespace, each as a concept extending <code>concerto.decorator@1.0.0.Decorator</code>. The engine loads models with Concerto's check for undeclared decorators turned on, so a misspelt one fails to load.</dd>
+      <dt>PartyRef</dt><dd>A portable reference to a party.</dd>
+      <dt>PreciseAmount</dt><dd>An integer <code>unscaledValue</code>, held as a string of digits, plus a scale, with exact arithmetic. It is a string because Concerto's <code>Long</code> loses precision above 2^53. This is the <code>money@1.PreciseAmount</code> the current release already drafts.</dd>
+      <dt>Requests</dt><dd>Requests and responses are Concerto <code>transaction</code>s, including <code>EffectOutcome</code> and every <code>Declined</code>. What logic emits is a Concerto <code>event</code>.</dd>
+      <dt>@1.0.0</dt><dd>A published version never changes. A CI check enforces it, so a model can't change under a stored agreement.</dd>
+    </dl>
+    <div class="pair">
+      <div><h3>Template authors change</h3><ul>
+        <li>Remove <code>@template</code> and the <code>Contract</code> or <code>Clause</code> supertype.</li>
+        <li>If the template has logic, add a <code>StateData</code> subtype, empty if it keeps nothing.</li>
+        <li>Use <code>PreciseAmount</code> for money and <code>PartyRef</code> for parties.</li>
+      </ul></div>
+      <div class="gets"><h3>What you get</h3><ul>
+        <li>Exact money, and types that never change under you.</li>
+        <li>One model for what a host sends and receives, in any language Concerto generates.</li>
+      </ul></div>
+    </div>
+    <div class="receipts">
+      <a class="receipt" href="https://github.com/accordproject/models/pull/200">models#200</a>
+      <a class="receipt" href="https://github.com/accordproject/models/pull/205">models#205</a>
+      <a class="receipt" href="https://github.com/accordproject/concerto/issues/1640">concerto#1640</a>
+      <a class="receipt" href="https://github.com/accordproject/template-engine/issues/228">template-engine#228</a>
+    </div>
+  </div>
+</section>
+
+<!-- No. 2 -->
+<section class="stop" id="conveyancer" aria-labelledby="conveyancer-h">
+  <figure class="plate" data-scene="conveyancer">
+    <div class="plate-art"><div class="label"><b>Plate III</b><span>The Conveyancer's</span></div></div>
+    <figcaption>The barrister ties the licence in red tape while the clerk stitches the schedule, a folio of its own, beside it: two documents for one bundle.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 2 · The Conveyancer's · <em>Documents and clauses</em></p>
+    <h2 id="conveyancer-h">Every deed in one bundle, <i>each with its clauses bound in.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">At the Conveyancer's, the deeds of one agreement are tied into one bundle, and each deed has its clauses bound in. An agreement is a container of documents, as in models#200. Each document is the root of its own tree, and each clause composed into it fills a slot that the document's manifest declares. One document is primary, and a caller's request enters there. A single template is an agreement of one document.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono">Agreement { agreementId, agreementHash, primary,
+            documents, parties: PartyRef[] }
+AgreementDocument { documentId, documentHash,
+                    template: contentHash, data,
+                    clauses: map&lt;slot, Clause&gt;,
+                    references: map&lt;name, documentId&gt; }
+instance id = document id, then slot path:
+  licence, licence/late-payment, schedule</pre></div>
+    <dl class="anatomy">
+      <dt>template</dt><dd>Named by content hash, so a replay knows exactly which logic ran. A template ships as an archive: its text, models, logic and a <code>package.json</code> manifest. The engine checks every archive against its hash.</dd>
+      <dt>data</dt><dd>Canonical, complete and already merged. Where a value comes from is the host's concern; instantiation refuses incomplete or invalid data.</dd>
+      <dt>Primary</dt><dd>A caller's request enters the primary document's root, which needs logic. Outcomes and timers go straight to the instance that emitted or set them, in any document. The engine computes <code>agreementHash</code> and <code>documentHash</code>, and a supplied value must match.</dd>
+      <dt>References</dt><dd>A document reaches another only through a reference its manifest declares, by template hash or by interface, and the agreement says which document fills it. Logic reads that document's data through <code>self.documents.&lt;name&gt;</code> and, if it has logic, triggers it through its interface, as it would a clause. Each call is a savepoint. References are checked when the agreement is made and may not form a cycle.</dd>
+      <dt>Slot paths</dt><dd>Instance ids are a document id, then a slot path. A slot that holds several clauses keys each by a value from its data, never by position, so removing one moves no other.</dd>
+      <dt>No reaching up</dt><dd>A clause never reads its parent's data or state directly. What it needs from above arrives in one of two declared, typed ways, checked when the agreement is made: a binding, for a value that does not change, or a fact the nearest ancestor provides, for live state (see <a href="#library">No. 5</a>). Nothing is copied implicitly.</dd>
+      <dt>Text templates</dt><dd>A template with no logic is drafted, never triggered. It can be a document of its own, like the schedule, or fill a slot and be drafted in place, inside its parent's text. It has no state, no revision and no handlers.</dd>
+    </dl>
+    <div class="pair">
+      <div><h3>Template authors change</h3><ul>
+        <li>Nothing for a single template.</li>
+        <li>A reusable clause becomes its own archive, implements an interface, and is composed into a slot.</li>
+        <li>A document that relies on another, as a licence relies on its schedule, declares it in its manifest's <code>documents</code>.</li>
+      </ul></div>
+      <div class="gets"><h3>What you get</h3><ul>
+        <li>A clause written once and composed into any document that declares its interface.</li>
+        <li>A missing or mismatched clause found when the agreement is made, not at run time.</li>
+        <li>Each document drafted and signed as itself, inside one agreement.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="bundle">
+    <h3>One agreement: the licence and its schedule</h3>
+<pre class="tree mono">Agreement <b>licence-001</b>  <span class="tpl">primary: licence</span>
+├─ <span class="doc">Document licence</span>
+│  │  <span class="tpl">copyright-license-agreement</span>
+│  │  <span class="tpl">reads royalty.api SalesToDate</span>
+│  │  <span class="tpl">documents.schedule → schedule</span>
+│  ├─ <span class="inl">data.paymentTerms</span>  <span class="tpl">inline clause</span>
+│  └─ clauses.latePayment <span class="tpl">→ licence/late-payment</span>
+│       <span class="tpl">implements latepayment.api 1.2.0 · binds utcOffset</span>
+└─ <span class="doc">Document schedule</span>
+     <span class="tpl">licensed-work-schedule · text template</span>
+     <span class="tpl">no logic, no state</span></pre>
+  </div>
+</section>
+
+<!-- No. 3 -->
+<section class="stop" id="strongroom" aria-labelledby="strongroom-h">
+  <figure class="plate" data-scene="strongroom">
+    <div class="plate-art"><div class="label"><b>Plate IV</b><span>The Strongroom</span></div></div>
+    <figcaption>From a stool, the clerk files a tagged volume into its numbered pigeonhole while the barrister reads another.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 3 · The Strongroom · <em>Agreement state</em></p>
+    <h2 id="strongroom-h">A pigeonhole for each instance, <i>a new number for every commit.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">The Strongroom files each instance's state in its own pigeonhole, and the agreement takes a new number on every commit. The agreement's state is one index from instance id to that instance's own state. The engine takes the agreement at revision N and returns N+1. Each instance with logic also keeps its own revision, which moves only when its state changes. A caller whose decision rests on what it read can name that revision.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono">AgreementState { agreement, revision,
+                 states: map&lt;instanceId, InstanceState&gt;,
+                 pendingEffects, timers }
+InstanceState  { template, revision, state }</pre></div>
+    <dl class="anatomy">
+      <dt>revision</dt><dd>The agreement's revision orders its commits. How a host serialises concurrent requests is the host's choice.</dd>
+      <dt>expect</dt><dd>Optional. A caller's inputs may name any instance in the tree and the revision it read: <code>expect: {instance, revision}</code>. If that instance has moved on, the result is a standard <code>StaleRevision</code> Rejection, and the host may retry against the new revision. A request without <code>expect</code> is never stale: the logic judges it against the state as it stands. Outcomes and timers never carry it.</dd>
+      <dt>Approvals</dt><dd>An approval signs one instance's terms version, not its revision. The terms version is <code>digestOf({textHash, data})</code> for that instance, and its text includes any clause drafted in place. A change to the instance's own text or data, or to a clause drafted inside it, voids the approval; a change to a parent or a sibling does not. A party's acceptance of the whole agreement binds the agreement's terms version instead: the digest of every document's terms version, so a change to any document voids it. Re-pinning to a fixed template (see the example below) keeps both text and data, so approvals in progress survive it. An act with no id of its own, unlike an acceptance with its <code>acceptanceId</code>, binds the instance revision instead.</dd>
+      <dt>Revision 0</dt><dd>Making an agreement runs the <code>init</code> of each instance that has logic, in tree order, a parent before its clauses, and commits revision 0. A failing <code>init</code> creates nothing. A text template has no entry in the index.</dd>
+      <dt>Validated</dt><dd>Each entry names the template that wrote it, and its state is validated against that template's <code>StateData</code> on load and on commit.</dd>
+      <dt>Lineage</dt><dd>The engine keeps no history. A host that needs one records each commit, for example as a hash chain over the spec's one canonical JSON form.</dd>
+      <dt>pendingEffects</dt><dd>Effects still awaiting an outcome, so a duplicate <code>EffectOutcome</code> is discarded.</dd>
+    </dl>
+    <div class="pair">
+      <div><h3>Template authors change</h3><ul>
+        <li>Nothing for upgrades in 1.0. To ship a fix, the host re-pins live agreements to the new template version's hash, which needs no code (see below).</li>
+      </ul></div>
+      <div class="gets"><h3>What you get</h3><ul>
+        <li>A stored entry that says which template wrote it.</li>
+        <li>Approvals that stay valid through a re-pin, and while other parts of the agreement move.</li>
+        <li>An agreement whose signed text never changes silently.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="bundle">
+    <h3>Shipping a fix to a live licence</h3>
+    <p>An agreement is pinned to its templates by content hash. In 1.0 the host may re-pin it to a new template version, but only when nothing the parties signed or stored changes shape.</p>
+    <ol class="stages">
+      <li><span><b>The same text.</b> The new version drafts the same text hash from the same data.</span></li>
+      <li><span><b>The same state.</b> The stored state still validates against the new version's <code>StateData</code>.</span></li>
+      <li><span><b>The same slots.</b> Every slot path is unchanged, so no state key moves.</span></li>
+      <li><span><b>A check and a swap.</b> The host records the template hashes it replaced. Pending effects and timers carry across.</span></li>
+      <li><span><b>Approvals survive.</b> The terms version hashes the drafted text and data, not the template, so a logic-only fix leaves an acceptance in progress valid.</span></li>
+    </ol>
+    <p>Later minor versions add, without breaking 1.0, upcasters that change the shape of data and state (<code>.migrate(from, to, {state, data})</code>, never the text), an upgrade sent as a system request, amendments that produce a new version of the data, and a chain of text versions.</p>
+  </div>
+</section>
+
+<!-- No. 4 -->
+<section class="stop" id="windows" aria-labelledby="windows-h">
+  <figure class="plate" data-scene="windows">
+    <div class="plate-art"><div class="label"><b>Plate V</b><span>The Clerks' Windows</span></div></div>
+    <figcaption>A corridor of service windows, each with its own emblem; the clerk sends a petitioner to the right one.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 4 · The Clerks' Windows · <em>Logic and inputs</em></p>
+    <h2 id="windows-h">The caller asserts. <i>The host attests.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">Each window is a handler in the template's logic, and serves one kind of request. Logic registers one handler per request type, and one per effect type it emits, for that effect's outcome. The request is what the caller claims. The inputs are what the host vouches for: who is calling and what it verified, the business time, the <code>requestId</code>, the facts the agreement's templates read, and optionally the instance and revision the caller's decision rests on. The host does all the cryptography; the agreement deals only in principals.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono">Inputs { principal: SystemPrincipal | ActorPrincipal,
+         businessTime, requestId,
+         facts,   <span class="c">// keyed by instance and read name</span>
+         expect? { instance, revision } }
+ActorPrincipal { actor, onBehalfOf?, assurances }
+  <span class="c">// e.g. PasskeyApproval { by, digest, profile }</span>
+defineLogic&lt;Self&gt;()
+  .init((self, activate) =&gt; …)
+  .on(RequestType, (request, self) =&gt; response)
+  .onOutcome(EffectType, (outcome, self) =&gt; …)</pre></div>
+    <dl class="anatomy">
+      <dt>self.principal</dt><dd>From the host. <code>actor</code> is who is calling (a person, a system or an AI agent) and <code>onBehalfOf</code> the party it claims to act for. A lint flags any request field named like an identity, a time or a key.</dd>
+      <dt>Assurances</dt><dd>Proofs the host checked for this request, such as a passkey approval of a given digest. Each names the trust profile it was checked under, with its version: a published rule set for that kind of proof, such as which algorithms count. The package that defines the assurance type publishes its profiles.</dd>
+      <dt>self.now</dt><dd>The business time, a UTC instant that never goes backwards. The time an event happened is request data. A business date, or any other calendar position the operator owns, is a host fact, never worked out from business time.</dd>
+      <dt>self.state</dt><dd>Deep-frozen. A handler changes it only by passing <code>setState</code> a whole new value, committed with the response and discarded on a <code>Declined</code>.</dd>
+      <dt>Nothing looked up</dt><dd>Everything a run reads is in the data, the request, the inputs or the state. Outside information arrives only as data checked at instantiation, a fact the host supplies in the inputs, a request, or an effect outcome. A check at decision time, such as screening the licensee, is an effect whose outcome the clause waits for. So a replay needs nothing beyond the requests and their inputs.</dd>
+      <dt>Concurrency</dt><dd>The host's, not the template's. Logic decides against the snapshot of facts in its inputs as if nothing else happens, and an effect carries no version or precondition. The host keeps the snapshot true: it holds the records it read until their effects are taken, or checks their versions before it commits and, if one moved, triggers the request again with fresh facts.</dd>
+      <dt>Synchronous</dt><dd>Handlers are synchronous, and so are the engine operations <code>trigger</code> and <code>draft</code>: every archive is already in memory. Handlers are keyed by the classes Concerto's TypeScript codegen emits, and coverage is checked at load time.</dd>
+    </dl>
+    <div class="pair">
+      <div><h3>Template authors change</h3><ul>
+        <li>Take time and identity from <code>self</code>, never from the request.</li>
+        <li>Check that the right party approved the right digest, and leave signature checks to the host.</li>      </ul></div>
+      <div class="gets"><h3>What you get</h3><ul>
+        <li>A caller can't backdate a request, impersonate the licensee, or supply the key its own signature is checked against.</li>
+        <li>No cryptography in template code, and algorithms that change without touching an agreement.</li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="bundle">
+    <h3>Accepting the licence, in the current release and in 1.0</h3>
+    <div class="compare">
+      <figure><figcaption class="before">Current release · the logic trusts the request</figcaption>
+<pre class="code"><span class="k">class</span> LicenceLogic
+    <span class="k">extends</span> TemplateLogic&lt;ILicence, ILicenceState&gt; {
+  <span class="k">async</span> trigger(data, request: IAcceptLicence, state) {
+    <span class="c">// Who and when are whatever the caller wrote.</span>
+    <span class="k">if</span> (request.signedBy !== data.licensee.partyId)
+      <span class="k">throw new</span> Error(<span class="s">'Not the licensee'</span>);
+    <span class="c">// Any signature check is the template's own,</span>
+    <span class="c">// against a key the caller supplies.</span>
+    <span class="k">if</span> (!checkSignature(request.signature, request.publicKey))
+      <span class="k">throw new</span> Error(<span class="s">'Bad signature'</span>);
+    <span class="k">return</span> {
+      result: { $class: <span class="s">'…AcceptLicenceResponse'</span>,
+                $timestamp: request.$timestamp },
+      state: { ...state, acceptedAt: request.$timestamp },
+      events: [],
+    };
+  }
+}</pre></figure>
+      <figure><figcaption class="after">1.0 · the host verifies, the licence decides</figcaption>
+<pre class="code"><span class="c">// licence is this instance's self (see the Shape above):
+// its data, state, principal, now and draft().
+// NotLicensee and ApprovalRequired are Declined types.</span>
+.on(AcceptLicence, (request, licence) =&gt; {
+  <span class="k">const</span> { actor, assurances } = licence.principal;
+  <span class="k">if</span> (!sameParty(actor, licence.data.licensee))
+    <span class="k">return</span> NotLicensee.create({});
+  <span class="k">const</span> text = licence.draft();
+  <span class="c">// The agreement's terms version, over every document's</span>
+  <span class="c">// text and data: survives a re-pin, not an amendment.</span>
+  <span class="k">const</span> terms = licence.agreementTermsHash;
+  <span class="k">const</span> digest = digestOf({ request, textHash: text.hash,
+    approvalId: request.acceptanceId, terms });
+  <span class="k">if</span> (!assurances.some(a =&gt; PasskeyApproval.is(a)
+                         &amp;&amp; a.digest === digest))
+    <span class="k">return</span> ApprovalRequired.create({ digest });
+  licence.setState({ ...licence.state,
+                     acceptedAt: licence.now });
+  <span class="k">return</span> Accepted.create({ textHash: text.hash });
+})</pre></figure>
+    </div>
+  </div>
+</section>
+
+<!-- No. 5 -->
+<section class="stop" id="library" aria-labelledby="library-h">
+  <figure class="plate" data-scene="library">
+    <div class="plate-art"><div class="label"><b>Plate VI</b><span>The Library</span></div></div>
+    <figcaption>The barrister writes at one desk by the clerk's lantern; the other volumes can be read through their glass but not taken down.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 5 · The Library · <em>self, composition and facts</em></p>
+    <h2 id="library-h">Read through the glass. <i>Take down only what a clause declares.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">In the Library, a template writes only in its own volume; facts and other clauses are read through the glass. <code>self</code> is the template's own instance. A parent reaches a composed clause only through an interface the clause declares, never its raw state, and learns what the clause decided from its response. What a clause needs from above arrives as a binding or a provided fact, and what a template needs from outside arrives as a fact the host supplies. So a clause can change inside without breaking its parent, and a missing clause is found when the agreement is made, not at run time.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono"><span class="c">// The interface: a namespace of members, each describing itself</span>
+namespace org.accordproject.latepayment.api@1.2.0
+@Returns(ReminderSent) @Declines(ReminderLimitReached)
+@Emits(LateFeeAccrued)
+transaction PaymentOverdue extends Request { … }
+@Returns(LatePaymentCleared)
+transaction PaymentSettled extends Request { … }
+transaction ReminderLimitReached extends Declined { }
+
+<span class="c">// The clause's package.json</span>
+"accordproject": {
+  "implements": { "org.accordproject.latepayment.api": "1.2.0" }
+}
+
+<span class="c">// The licence's package.json</span>
+"accordproject": {
+  "slots": {
+    "latePayment": {
+      "interface": "org.accordproject.latepayment.api@^1.0.0",
+      "optional": true,
+      "bind": { "utcOffset": "utcOffset" }
+    }
+  },
+  "documents": {
+    "schedule": { "template": { "hash": … } }
+  },
+  "reads": {
+    "sales": {
+      "interface": "org.accordproject.royalty.api@^1.0.0",
+      "fact": "SalesToDate", "key": "work.workId"
+    }
+  }
+}</pre></div>
+    <dl class="anatomy">
+      <dt>Interfaces</dt><dd>Versioned Concerto namespaces with no marker type. Every non-abstract transaction that extends <code>Request</code> is a member. A published version never changes.</dd>
+      <dt>Members</dt><dd>Each describes itself with decorators the runtime namespace declares: <code>@Returns</code> lists what it answers with, <code>@Declines</code> what it may decline with (without it, the member never declines), and <code>@Emits</code> the notifications a template may emit while handling it. Concerto validates every argument, and the decorators survive into the metamodel JSON, so any engine or host reads them without running code. Listing several types needs variadic decorators in Concerto, tracked in concerto#1640.</dd>
+      <dt>Who they bind</dt><dd>Every instance that handles the request type, whether or not it implements the interface, so a caller can type the answers from the request type alone. The same decorators describe a root template's own requests.</dd>
+      <dt>Operator requests</dt><dd>A member that extends <code>OperatorRequest</code> is one the host sends on its own calendar, such as month end.</dd>
+      <dt>The manifest</dt><dd>A template lists the interfaces it implements, each at an exact version, its slots, each asking for an interface with a semver range or for one template by hash, the other documents it relies on, asked for the same way, and the facts it reads. The models stay plain data, and the template hash covers these four sections.</dd>
+      <dt>Slot kinds</dt><dd>Required, <code>"optional": true</code>, or <code>"many": true</code> with the path of the key in each clause's data. A clause may implement several interfaces, including two majors of one. A slot that names an interface needs a template with logic. A slot that asks for one template and names no interface can hold a text template, drafted in place.</dd>
+      <dt>Bindings</dt><dd>For values that do not change. A slot binds a top-level field of the clause's data to any path in the parent's. The engine resolves it when the agreement is made, checks the types, and stores the value in the clause's data, so the clause's text and hash show it. Agreement data may not set a bound field, and an optional source bound to a required field is refused at load. The licence binds its <code>utcOffset</code> into the late payment clause.</dd>
+      <dt>Facts</dt><dd>For values a system of record owns. A template lists them in <code>reads</code>, each with a fact interface's semver range and the path in its own data that names the record, and logic reads them from <code>self.facts</code>, typed by codegen. An optional fact is a typed <code>undefined</code>. Facts arrive in the inputs, not in caller requests, because a caller could assert them and a timer or outcome could not carry them. The licence reads <code>SalesToDate</code> from the sales registry to work out royalties, and keeps no copy.</dd>
+      <dt>Host facts</dt><dd>Before each request, outcomes and timers included, the host reads every declared fact once and passes it in the inputs, keyed by the reading instance and the read's name, with the version of the record it read. Every read in one request sees the same snapshot. The engine checks each fact is the record the key names. Logic never sees the version. A required fact missing when logic reads it is a Fault.</dd>
+      <dt>Provided facts</dt><dd>For a parent's live state. A parent lists a fact interface in <code>implements</code> and provides each fact with a pure function, <code>.provide(Fact, self =&gt; …)</code>. A clause reads it through <code>reads</code> and <code>self.facts</code>, exactly as it reads a host fact. The nearest ancestor that implements the interface provides it; if none does, the host supplies it, so one clause works composed or alone. A provider gets a read-only <code>self</code>, and a provided fact is computed when read and never recorded. Facts inform; they never authorise.</dd>
+      <dt>Clause handle</dt><dd><code>data</code> and <code>trigger</code>, with no <code>state</code>. A repeated slot is a map by key. A document handle, <code>self.documents.&lt;name&gt;</code>, is the same, with <code>trigger</code> only for a document with logic.</dd>
+      <dt>Codegen</dt><dd>Turns the slots and their interfaces into the template's <code>Self</code> type, and the decorators into types, so a handler that returns a type its member doesn't list fails to compile. Generated types are named by namespace and version, so one build can hold two versions of an interface.</dd>
+      <dt>Instantiation</dt><dd>A missing required clause, a clause that doesn't implement its slot's interface, or a binding whose types don't match fails when the agreement is made.</dd>
+      <dt>Dispatch</dt><dd>By request type, falling back to the nearest supertype. A slot that asks for <code>^1.0.0</code> accepts a clause that implements <code>1.2.0</code>.</dd>
+      <dt>Coverage</dt><dd>The engine checks at load time that logic handles every member of every interface it implements, every effect type it emits, and every fact it provides.</dd>
+    </dl>
+  </div>
+  <div class="bundle">
+    <h3>The licence calls its late payment clause when the fee is overdue</h3>
+<pre class="code"><span class="c">// Optional: the compiler makes you handle its absence.</span>
+const latePayment = licence.clauses.latePayment;
+<span class="k">if</span> (latePayment) {
+  const reply = latePayment.trigger(PaymentOverdue.create({ … }));
+  <span class="k">if</span> (ReminderLimitReached.is(reply)) {
+    <span class="c">// The clause's writes are discarded. The licence may pass the</span>
+    <span class="c">// decline up unchanged, decline itself, or commit its own</span>
+    <span class="c">// changes without the clause's.</span>
+  }
+}
+<span class="c">// A required slot needs no check: instantiation guaranteed it.</span></pre>
+  </div>
+</section>
+
+<!-- No. 6 -->
+<section class="stop" id="chancery" aria-labelledby="chancery-h">
+  <figure class="plate" data-scene="chancery">
+    <div class="plate-art"><div class="label"><b>Plate VII</b><span>The Chancery</span></div></div>
+    <figcaption>Papers gathered under one brass press, about to be sealed together; the clerk works the press, and spoiled sheets fill the basket.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 6 · The Chancery · <em>Results</em></p>
+    <h2 id="chancery-h">Sealed together, <i>or not at all.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">The Chancery seals a request's documents together under one press, or seals none of them. A request is all or nothing, and each clause call is a savepoint inside it. The engine returns one of three results, and only <code>Committed</code> changes anything. Without this, a late payment clause could be discharged by a payment the licence then refused.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Result</th><th>Means</th><th>The host</th></tr></thead>
+      <tbody>
+        <tr><td><code>Committed</code></td><td>The response, new state, notifications, effects, timers set and cancelled, artifacts, and the revision from and to</td><td>Stores it, delivers the effects and notifications, sets the timers</td></tr>
+        <tr><td><code>Rejection</code></td><td>A response that extends <code>Declined</code>, answering a caller's request or reporting <code>StaleRevision</code>, and <code>declinedBy</code>, the instance that declined; no state change, no effects, no revision</td><td>May log it and cache it by <code>requestId</code></td></tr>
+        <tr><td><code>Fault</code></td><td>An error, including a resource limit</td><td>Retries, or raises it with an operator</td></tr>
+      </tbody>
+    </table></div>
+    <dl class="anatomy">
+      <dt>Decline or fail</dt><dd>A template declines by returning a <code>Declined</code> subtype. An uncaught error is always a Fault.</dd>
+      <dt>Savepoints</dt><dd>When a clause declines, its subtree's writes, effects, timers and notifications are discarded and the parent gets the <code>Declined</code> back as a value. When the primary document's root declines, the request is a Rejection. A Fault anywhere faults the whole request.</dd>
+      <dt>Typed responses</dt><dd>A response, accepted or declined, must be assignable to a type its member's <code>@Returns</code> or <code>@Declines</code> lists; a template's own subtypes are allowed. An instance may also pass up, unchanged, a <code>Declined</code> a clause returned to it in the same request. Anything else is a Fault, at the root as at any clause.</dd>
+      <dt>declinedBy</dt><dd>The instance that made the decline, so a decline passed up unchanged says honestly which document refused. For the engine's own declines, it is the instance they concern: the <code>expect</code> instance for <code>StaleRevision</code>, the primary document's root for <code>RequestNotAccepted</code>.</dd>
+      <dt>Callers only</dt><dd>Only a caller's request is rejected. A decline from a timer firing or an operator's request comes back inside a Committed result, with the timer consumed; a decline from an outcome handler is a Fault.</dd>
+      <dt>Semantic body</dt><dd>What the vectors compare, byte for byte.</dd>
+      <dt>Provenance</dt><dd>The engine build, the semantics version and timings. Vectors exclude it, so two engines can agree.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- No. 7 -->
+<section class="stop" id="seals" aria-labelledby="seals-h">
+  <figure class="plate" data-scene="seals">
+    <div class="plate-art"><div class="label"><b>Plate VIII</b><span>The Seal Office</span></div></div>
+    <figcaption>Racks of engraved seal matrices; the clerk presses one into wax while the barrister holds out the next document.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 7 · The Seal Office · <em>Factories, hashes and drafting</em></p>
+    <h2 id="seals-h">Every value sealed by its type, <i>every text by its hash.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">The Seal Office keeps a seal for every type and every text. Every value is made with its type's generated factory. A template is named by the hash of what runs and drafts, and drafting is an engine operation inside the deterministic surface, because a signature binds the exact text the signer saw. There are two layers: the runtime, which is portable, and drafting, which runs through the TypeScript reference drafter.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono">Accepted.create({ … }) · LicensedWorkSchedule.is(data)
+<span class="c">// Files sorted by path:</span>
+templateHash = sha256(canonical([{ path, sha256 }, …]))
+TemplateReference { hash, name?, version?, location? }
+<span class="c">// Returned as an artifact:</span>
+self.draft(template?, data?) → { text, hash }</pre></div>
+    <dl class="anatomy">
+      <dt>Factories</dt><dd>Generated by <code>npm run compile</code>; no hand-written <code>$class</code>.</dd>
+      <dt>Two layers</dt><dd>The runtime layer is <code>trigger</code>: logic, state, effects, timers and facts. It is language-neutral, so a template's compiled <code>logic.ts</code> could run on an engine written in another language, and a second engine must match it byte for byte. Drafting turns a grammar and data into text, through the reference drafter. It depends on TypeScript by design, so it is shared, not reimplemented: any engine calls the reference drafter, and text hashes compare across hosts.</dd>
+      <dt>The hash</dt><dd>Covers only what runs and drafts: the grammar, the models, the logic if it has any, the <code>implements</code>, <code>slots</code>, <code>documents</code> and <code>reads</code> sections of the manifest, the engine semantics version and the default <code>utcOffset</code>. A compiled archive's hash covers its JavaScript; a source archive's covers its TypeScript, and the compiler version is recorded. The README, samples and descriptive metadata sit outside it, and a name and version are labels that point at a hash, so fixing a README needs no re-pin.</dd>
+      <dt>References</dt><dd>A parent fixes a clause with a <code>TemplateReference</code>, and the parent's hash covers the clause's, like a lockfile. The hash is authoritative; the host resolves it from any store and the engine never fetches.</dd>
+      <dt>self.draft</dt><dd>Deterministic, with an engine-owned cache, and in the vectors. The hash is SHA-256 over canonical markdown (CommonMark, NFC, LF, trailing whitespace trimmed). Text and hash come back as artifacts the host keeps as evidence. It drafts a text template too, such as the schedule. Each document drafts its own text and hash.</dd>
+      <dt>Formulas</dt><dd>Checked only by running: a formula that throws is a Fault. Grammar variables are checked against the model when the archive loads.</dd>
+      <dt>Offsets</dt><dd>Time zones are for rendering only. Drafting writes every date-time in one fixed offset: <code>utcOffset</code> from the agreement's data, else the template's default, else <code>+00:00</code>. A clause takes its parent's offset only through a binding in the parent's slot declaration; nothing is copied implicitly.</dd>
+      <dt>Runtime text</dt><dd>Data or drafted. Handlers write no prose: a string a handler writes, such as a decline's reason, is fixed text, and names, amounts and dates go in typed fields beside it. A lint flags strings built from data values. Where the wording matters, such as a formal notice the terms fix, the logic drafts it with <code>self.draft</code>. So a second engine has no formatting to match.</dd>
+      <dt>Formatting</dt><dd>Locale formatting that comes from the runtime (<code>Intl</code>, <code>toLocale*</code>) is a known risk, linted first and tracked in template-engine#228.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- No. 8 -->
+<section class="stop" id="recorder" aria-labelledby="recorder-h">
+  <figure class="plate" data-scene="recorder">
+    <div class="plate-art"><div class="label"><b>Plate IX</b><span>The Recorder</span></div></div>
+    <figcaption>Outside the Recorder, a lamplit board of pinned notices; the clerk reaches up to post a new one while the barrister reads.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 8 · The Recorder · <em>Effects, notifications and timers</em></p>
+    <h2 id="recorder-h">Logic decides. <i>The world can still say no.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">The Recorder posts what the agreement decided. What logic emits leaves the engine as data. An effect is an act the agreement depends on, and its outcome comes back as a request. A notification is for observers, and nothing comes back. Deadlines leave the same way, as timers.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono">abstract event Emitted { id, revision, ordinal }
+abstract event Notification extends Emitted { } <span class="c">// self.notify(n)</span>
+abstract event Effect extends Emitted { }       <span class="c">// self.emit(e)</span>
+abstract event Obligation extends Notification {
+  PartyRef obligor, PartyRef obligee, DateTime dueAt? }
+event PaymentObligation extends Obligation {
+  PreciseAmount amount, String description? }
+transaction EffectOutcome { effectId,
+  status: SUCCEEDED | REJECTED, detail }
+self.setTimer(id, at, request) · self.cancelTimer(id)</pre></div>
+    <dl class="anatomy">
+      <dt>Effects</dt><dd>A payment or a formal notice: anything that always gets an outcome. If the terms give delivery a consequence, such as a notice period counting from receipt, it is an effect.</dd>
+      <dt>Notifications</dt><dd>Delivered at least once from a transactional outbox, with no ordering promise; a consumer that needs order sorts by (revision, ordinal).</dd>
+      <dt>Outcomes</dt><dd>Sent by the system principal to the instance that emitted the effect, and handled by <code>onOutcome</code>. Can't be declined. Duplicates are discarded against the pending effects.</dd>
+      <dt>Pending</dt><dd>Logic marks an effect as pending when it emits it, and as done only when a SUCCEEDED outcome arrives; on REJECTED it takes the effect off again. To enforce a limit, such as a spending cap, a clause adds two amounts: what the system of record already shows, which it reads as a fact, and its own effects still pending. It never asks the system of record to reserve anything.</dd>
+      <dt>Obligations</dt><dd>Notifications that a party owes performance, such as <code>PaymentObligation</code> or <code>NoticeObligation</code>. The performance itself arrives later as a request. A <code>PaymentObligation</code>'s <code>description</code> is optional, and its strings are fixed text or drafted, like any runtime text.</dd>
+      <dt>Timers</dt><dd>For dates the terms name, per instance, computed from data with the calendar functions. A firing carries its due time, so each missed occurrence fires once, in order.</dd>
+      <dt>Operator dates</dt><dd>End of day, month-end and cut-offs are requests the host sends as the system principal to each instance whose template lists the operator's interface, such as a month-end interface, in <code>implements</code>. Such a request extends <code>OperatorRequest</code>. A missed one is sent once per occurrence, in order.</dd>
+      <dt>Time</dt><dd>ISO 8601 date-times with an optional offset, where none means UTC. No time zones and no time-zone database in the engine. A business date, or any other calendar position the operator owns, is a host fact.</dd>
+    </dl>
+  </div>
+  <div class="bundle">
+    <h3>A licence fee the payment provider refuses</h3>
+    <ol class="stages">
+      <li><span><b>The licensor asks for payment.</b> The host attests the licensor's principal and triggers <code>PaymentRequest</code>. The licence moves the fee to DUE, emits a collection effect and marks it pending, notifies a <code>PaymentObligation</code>, and sets a timer for the due date.</span></li>
+      <li><span><b>The host delivers it.</b> The payment provider refuses: the licensee's card was declined.</span></li>
+      <li><span><b>The outcome returns.</b> <code>EffectOutcome {REJECTED}</code> arrives at the delivery time and reaches the licence's <code>onOutcome</code> handler. The licence clears the pending collection and leaves the fee DUE. Nothing was ever recorded as paid.</span></li>
+      <li><span><b>The timer fires.</b> At the due date the licence triggers <code>PaymentOverdue</code> on its late payment clause, which sends the first reminder as a notice effect.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- No. 9 -->
+<section class="stop" id="moot" aria-labelledby="moot-h">
+  <figure class="plate" data-scene="moot">
+    <div class="plate-art"><div class="label"><b>Plate X</b><span>The Moot</span></div></div>
+    <figcaption>A practice moot: the barrister argues to an empty bench against a stand-in witness of card and wire, and the clerk keeps the record.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 9 · The Moot · <em>Vectors and testing</em></p>
+    <h2 id="moot-h">The record is <i>the specification.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">At the Moot, practice sessions are recorded, and the record becomes the specification. Golden test vectors define the interface: inputs to semantic body, byte for byte. They are JSON data, each engine ships a thin runner, and the spec is proven when two independent engines pass the same vectors, both drafting through the reference drafter.</p>
+    <div><span class="shape-label">Shape</span><pre class="shape mono">{ id, semantics, archives, agreement, steps }
+step 0  = instantiation (init, revision 0)
+step n  = { request, inputs, expect: { result, body } }
+archives/&lt;hash&gt;/                           <span class="c">// stored by hash</span></pre></div>
+    <dl class="anatomy">
+      <dt>Canonical form</dt><dd>RFC 8785 JSON. <code>PreciseAmount</code>'s form follows template-engine#228.</dd>
+      <dt>Facts</dt><dd>A step's inputs hold the host facts, so a replay uses the recorded values. Provided facts are not recorded: a replay computes them again.</dd>
+      <dt>Two comparisons</dt><dd>Engine conformance: the same archive gives the same bytes on every engine. Template regression: a predecessor's vectors rerun with the new archive, and every field in the old body must match; a Rejection may not become a commit, or a commit a Rejection.</dd>
+      <dt>Faults</dt><dd>Until stable Fault kinds land with template-engine#228, a Fault step expects only <code>"result": "Fault"</code>, never a body.</dd>
+      <dt>Primitive suites</dt><dd>Canonical JSON, decimals and rounding, drafting, hashing and calendars, each tested on its own as <code>{op, args, expect}</code>. Signature checks belong to the host's trust layer, not the engine.</dd>
+      <dt>Reference model</dt><dd>A formal kernel model (Lean) generates and explains the vectors where it applies.</dd>
+      <dt>Determinism</dt><dd>In 1.0 template code keeps to it by convention and lint. A sandbox of denied globals, stable Fault kinds and transient resource limits are deferred to template-engine#228.</dd>
+      <dt>Test host</dt><dd>APAP, the Accord Project Agreement Protocol and its server, is the test host. It records a template's sessions as vectors, each marked as recorded or written by hand. A recording freezes bugs too, so it is reviewed before it counts. A minor version must pass its predecessor's vectors.</dd>
+    </dl>
+    <div class="receipts">
+      <a class="receipt" href="https://github.com/accordproject/template-engine/issues/228">template-engine#228</a>
+    </div>
+  </div>
+</section>
+
+<!-- No. 10 -->
+<section class="stop" id="lodge" aria-labelledby="lodge-h">
+  <figure class="plate" data-scene="lodge">
+    <div class="plate-art"><div class="label"><b>Plate XI</b><span>The Porters' Lodge</span></div></div>
+    <figcaption>The clerk hands a tied bundle through the lodge window; the porter checks it against the open register, and a messenger waits with the next.</figcaption>
+  </figure>
+  <div class="board">
+    <p class="kicker">No. 10 · The Porters' Lodge · <em>The host</em></p>
+    <h2 id="lodge-h">The engine keeps no keys. <i>The porter keeps them all.</i></h2>
+  </div>
+  <div class="brief">
+    <p class="claim">The engine has no clock, no storage, no network and no keys; the porter at the Lodge, the host, keeps them. Loading an agreement, committing its result, delivering what it emits and verifying signatures are the host's business. Accord Project states what a host must supply and do, and APAP is the test host that implements it. Accord Project ships no separate reference host.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>The host</th><th>Requirement</th></tr></thead>
+      <tbody>
+        <tr><td>Verifies</td><td>Authenticates callers and checks signatures against the trust profiles it declares, keeping the raw signatures for the evidence</td></tr>
+        <tr><td>Supplies</td><td>The principal and its assurances, the business time, the <code>requestId</code>, any <code>expect</code> the caller names, and every fact the agreement's templates read that no ancestor provides, read once per request with its record version and keyed by the reading instance and the read's name</td></tr>
+        <tr><td>Keeps the snapshot true</td><td>Holds the records it read until the commit's effects are taken, or checks their versions before committing and triggers the request again with fresh facts</td></tr>
+        <tr><td>Persists</td><td>States and revisions, serialising concurrent requests however it likes, and lineage where it needs one</td></tr>
+        <tr><td>Delivers</td><td>Effects until each has an outcome, each outcome to the instance that emitted the effect, and notifications at least once from a transactional outbox</td></tr>
+        <tr><td>Renders</td><td>Dates in the agreement's <code>utcOffset</code>, and what a signer sees from the drafted text, recording the renderer version</td></tr>
+        <tr><td>Schedules</td><td>Fires the timers a result sets, and sends operator requests as system requests, one per occurrence</td></tr>
+        <tr><td>Deduplicates</td><td>Idempotent redelivery, and rejections cached by <code>requestId</code></td></tr>
+        <tr><td>Keeps</td><td>Audit logs, artifacts and evidence, and the template versions needed for replay</td></tr>
+      </tbody>
+    </table></div>
+    <div class="pair">
+      <div><h3>Template authors change</h3><ul>
+        <li>Nothing, to keep an existing template running: a compatibility adapter runs an existing <code>TemplateLogic</code> class as an agreement of one template, exactly as today: on the machine's clock and with no identity. You test it on APAP. To use what 1.0 adds, follow the Checklist.</li>
+      </ul></div>
+      <div class="gets"><h3>What you get</h3><ul>
+        <li>Any host: serverless, a commercial core, or a mock.</li>
+        <li>Safe retries, because the call is pure, including a retry with fresh facts.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- Checklist -->
+<section class="section" id="checklist" aria-labelledby="checklist-h">
+  <p class="kicker">For template authors</p>
+  <h2 id="checklist-h">The Checklist</h2>
+  <p>To move a template to the 1.0 API, do these in order. None of it is needed to keep a current template running under the adapter.</p>
+  <ol class="checklist">
+    <li>Import the <code>@1.0.0</code> base namespaces.</li>
+    <li>Remove <code>@template</code> and extend <code>TemplateData</code>. If the template has logic, add one <code>StateData</code> subtype, empty if it keeps nothing. A text template, such as a schedule, needs no logic and no state.</li>
+    <li>Use <code>PreciseAmount</code> for money and <code>PartyRef</code> for parties.</li>
+    <li>Optionally, move a reusable clause into its own archive and list the interface it implements in its manifest's <code>implements</code>. In the interface namespace, describe each member with <code>@Returns</code>, <code>@Declines</code> and <code>@Emits</code>. Declare the parent's slot in its manifest's <code>slots</code>, and bind any value the clause needs from the parent, such as <code>utcOffset</code>. If a document relies on another, such as a schedule, declare it in <code>documents</code>.</li>
+    <li>Declare the facts the template reads in <code>reads</code> and read them from <code>self.facts</code>. Keep no copy of what a system of record holds. To share a parent's live state with its clauses, provide it as a fact.</li>
+    <li>Replace the <code>TemplateLogic</code> class with <code>defineLogic().init().on().onOutcome()</code>. Keep handlers synchronous, and change state only with <code>setState</code>.</li>
+    <li>Take identity and time from <code>self.principal</code> and <code>self.now</code>, never from the request, and business dates from host facts. Check an approval by its assurance's digest, over the request, the text hash, the approval's id and the terms version, rather than by verifying a signature.</li>
+    <li>Decline by returning a <code>Declined</code> subtype the member lists, or pass a clause's decline up unchanged; throw only for a real error.</li>
+    <li>Emit acts the agreement depends on as effects, record them as pending, count them against the facts you read, and handle every outcome. Send what observers need, including obligations, as notifications.</li>
+    <li>Set timers for the dates the terms name, and list the operator's interfaces in <code>implements</code> for end of day or month-end.</li>
+    <li>Write no prose in handlers: keep strings fixed, and put names, amounts and dates in typed fields. Draft wording that matters with <code>self.draft</code>.</li>
+    <li>Make every value with a generated factory.</li>
+    <li>Record sessions on APAP, review them, and ship them as vectors.</li>
+  </ol>
+</section>
+
+<!-- The Roll -->
+<section class="section" id="roll" aria-labelledby="roll-h">
+  <figure class="plate" data-scene="roll">
+    <div class="plate-art"><div class="label"><b>Plate XII</b><span>The Roll</span></div></div>
+    <figcaption>In the great hall by candlelight, the barrister adds an entry to a long parchment roll.</figcaption>
+  </figure>
+  <p class="kicker">The Roll</p>
+  <h2 id="roll-h">What changes from the current release</h2>
+  <p>Each row compares the released template engine and Cicero API with the Agreement 1.0 draft. The current API keeps working beside the new one, and is deprecated, not removed, at 1.0.</p>
+  <div class="table-wrap"><table>
+    <thead><tr><th>Area</th><th>Current release</th><th>Agreement 1.0</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td><span class="kind models">Models</span></td><td><code>@template</code> marks the root, which extends the <code>Contract</code> or <code>Clause</code> envelope</td><td>The root is found by its parent type, <code>TemplateData</code>; a template with logic adds one <code>StateData</code> subtype</td><td>Models stay plain data, and every stored state names the type it must validate against</td></tr>
+      <tr><td><span class="kind models">Models</span></td><td>Most templates use <code>MonetaryAmount</code>, a floating-point <code>Double</code>, though <code>money@1.PreciseAmount</code> exists. Parties and contracts are Concerto relationships</td><td><code>PreciseAmount</code> for all money: an integer held as a string, plus a scale, with exact arithmetic. <code>PartyRef</code> for parties</td><td>Exact money, and the same bytes on every engine</td></tr>
+      <tr><td><span class="kind models">Models</span></td><td>Nothing stops a published namespace changing in place</td><td>A CI check fails the build if a published version's file changes</td><td>A model can't change under a stored agreement</td></tr>
+      <tr><td><span class="kind models">Models</span></td><td>Templates extend <code>org.accordproject.runtime@0.2.0</code> types such as <code>State</code>, <code>Request</code> and <code>Obligation</code>, and the engine fills in an obligation's contract</td><td><code>runtime@1.0.0</code>: <code>State</code> becomes <code>StateData</code>; <code>Request</code> and <code>Response</code> keep their names, and a <code>Committed</code> result carries the <code>Response</code>; an <code>Obligation</code> is a notification with <code>PartyRef</code> obligor and obligee, and no reference back to the contract</td><td>Plain references, and the same types on every host</td></tr>
+      <tr><td><span class="kind engine">Engine</span></td><td>A <code>TemplateLogic</code> subclass with async <code>init(data)</code> and <code>trigger(data, request, state)</code> methods. The host calls <code>TemplateArchiveProcessor.trigger(data, request, priorState, currentTime?, utcOffset?)</code> on one template at a time, and gets back a result, the new state and events</td><td>A plain function, <code>trigger(agreement, state, request, inputs)</code>, over the whole agreement, with logic written as <code>defineLogic().init().on().onOutcome()</code>: synchronous handlers over frozen state, replaced whole with <code>setState</code></td><td>Every handler is checked at load time, and there are no partial writes and nothing to await</td></tr>
+      <tr><td><span class="kind engine">Engine</span></td><td><code>TemplateArchiveProcessor.init(data, currentTime?, utcOffset?)</code> returns a first state for one template</td><td>Making an agreement checks and binds the whole tree, runs each instance's <code>init</code> in tree order, parent first, and commits revision 0. A failing <code>init</code> creates nothing</td><td>One step creates a checked agreement, not a loose state value</td></tr>
+      <tr><td><span class="kind engine">Engine</span></td><td><code>draft(data, format, options, currentTime?)</code> is async, renders several formats, and reads the machine clock when no time is given</td><td>Drafting is a synchronous engine operation that returns canonical markdown and its SHA-256 hash. The host renders other formats from that text and records the renderer version</td><td>A signer's text has one hash on every host</td></tr>
+      <tr><td><span class="kind engine">Engine</span></td><td>The caller passes the time, which defaults to the machine clock. The API has no notion of who is calling, so identity, and any signature and key, travel in the request</td><td>Logic reads identity and time from <code>self.principal</code> and <code>self.now</code>, which the host attests; the host does all the cryptography</td><td>A caller can't backdate a request, act as someone else, or supply the key its own signature is checked against</td></tr>
+      <tr><td><span class="kind engine">Engine</span></td><td>Logic returns a result or throws</td><td>Three results: <code>Committed</code>, <code>Rejection</code> or <code>Fault</code>. A template declines by returning a <code>Declined</code> subtype its request type lists</td><td>A host tells a decision from a defect without inspecting errors, and a caller can type every answer in advance</td></tr>
+      <tr><td><span class="kind engine">Engine</span></td><td>Everything logic emits is an event, and nothing comes back</td><td>Effects, whose outcomes come back as requests; notifications for observers; timers for the dates the terms name</td><td>The world can refuse an act after the terms decide, and the agreement handles it</td></tr>
+      <tr><td><span class="kind engine">Engine</span></td><td>One state value per contract, with no revision</td><td>One state index per agreement, a revision per instance, and an optional <code>expect {instance, revision}</code> that returns <code>StaleRevision</code></td><td>A caller can say what its decision rests on</td></tr>
+      <tr><td><span class="kind proposed">Composition</span></td><td>No composition at run time: only the template's own data and state are in scope</td><td>A clause implements a declared interface and fills a slot in its parent's manifest, checked when the agreement is made. A handle exposes <code>data</code> and <code>trigger</code>, never state. Each clause call is a savepoint inside an all-or-nothing request</td><td>A clause is written once, a missing one is found before run time, and a declined clause leaves no writes behind</td></tr>
+      <tr><td><span class="kind proposed">Composition</span></td><td>An agreement runs one template</td><td>An agreement holds several documents, as in models#200, each a tree of clauses. A caller's request enters the primary document, which reaches the others through references its manifest declares. A party's acceptance binds every document's terms</td><td>A licence and its schedules, or a master agreement and its order forms, run as one agreement, and each document is drafted and signed as itself</td></tr>
+      <tr><td><span class="kind proposed">Composition</span></td><td>A template copies data it doesn't own into its own data or state</td><td>Facts the template declares in <code>reads</code>, supplied by the host or provided by an ancestor; bindings for fixed values from the parent</td><td>No copies to keep in step, and a replay has everything it needs in the recorded inputs</td></tr>
+      <tr><td><span class="kind template">Template</span></td><td>A template is named by name and version</td><td>A template is named by the hash of what runs and drafts; a parent pins its clauses by <code>TemplateReference</code>; a fix ships to live agreements by re-pinning</td><td>A replay knows exactly which logic ran, and a signed agreement's text never changes silently</td></tr>
+      <tr><td><span class="kind template">Template</span></td><td>Logic writes prose, building strings from names, dates and amounts</td><td>Runtime text is fixed or drafted with <code>self.draft</code>; names, amounts and dates go in typed fields</td><td>A second engine has no formatting to match</td></tr>
+      <tr><td><span class="kind template">Template</span></td><td>The <code>utcOffset</code> is a call parameter that defaults to zero, outside the agreement's data and hash</td><td>Drafting writes every date-time in one fixed <code>utcOffset</code> from the agreement's data, and returns the text with its hash</td><td>The signed text never depends on the machine that drafts it</td></tr>
+      <tr><td><span class="kind models">Spec</span></td><td>Each template is tested in its own harness</td><td>Golden JSON vectors, recorded on APAP and run by a thin runner in every engine</td><td>A second engine proves it conforms byte for byte, and a new template version must pass its predecessor's vectors</td></tr>
+      <tr><td><span class="kind models">Host</span></td><td>What a host must do is unstated</td><td>Published host requirements, with APAP as the test host</td><td>Any host can run an agreement: a mock, a serverless function or a commercial server</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<footer class="colophon">
+  <p>A walk through the Accord Project Agreement 1.0 draft proposal, in ten stops. It is for discussion: nothing here is released, and names and shapes may change before 1.0.</p>
+  <p>Release criteria: composition counts as proven when a composed agreement's test vectors pass, and 1.0 freezes only after a second, independent engine passes the same vectors byte for byte.</p>
+  <p>The design builds on <a href="https://github.com/accordproject/models/pull/200">models#200</a> and <a href="https://github.com/accordproject/models/pull/205">models#205</a>, the engine in <a href="https://github.com/accordproject/template-engine/pull/187">template-engine#187</a>, and cicero-core from <a href="https://github.com/accordproject/template-archive/pull/946">template-archive#946</a> and <a href="https://github.com/accordproject/template-archive/pull/950">#950</a>. Determinism work is tracked in <a href="https://github.com/accordproject/template-engine/issues/228">template-engine#228</a>.</p>
+</footer>
+
+</main>
+</div>
+
+<script>
+// Show a plate's illustration once its image exists: images/<scene>.webp.
+document.querySelectorAll('.plate[data-scene]').forEach(plate => {
+  const art = plate.querySelector('.plate-art');
+  const img = new Image();
+  img.alt = plate.querySelector('figcaption')?.textContent ?? '';
+  img.onload = () => art.append(img);
+  img.src = '/agreement-quarter/images/' + plate.dataset.scene + '.webp';
+});
+
+// Mark the current stop in the Directory.
+const links = new Map([...document.querySelectorAll('.directory a')].map(a => [a.hash.slice(1), a]));
+const observer = new IntersectionObserver(entries => {
+  for (const entry of entries) {
+    if (!entry.isIntersecting) continue;
+    links.forEach(a => a.removeAttribute('aria-current'));
+    const link = links.get(entry.target.id);
+    if (link) {
+      link.setAttribute('aria-current', 'true');
+      // On narrow screens the Directory is a horizontal strip: keep the
+      // current stop in view without moving the page.
+      const strip = link.closest('ol');
+      if (strip.scrollWidth > strip.clientWidth) {
+        strip.scrollTo({ left: link.offsetLeft - strip.offsetLeft - 16 });
+      }
+    }
+  }
+}, { rootMargin: '-35% 0px -60% 0px' });
+links.forEach((_, id) => { const el = document.getElementById(id); if (el) observer.observe(el); });
+</script>
+</body>
+</html>
