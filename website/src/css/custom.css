@@ -1,5 +1,5 @@
 :root {
-  --ifm-color-primary: #19C6C6;
+  --ifm-color-primary: #19c6c6;
   --ifm-color-primary-dark: #16b2b2;
   --ifm-color-primary-darker: #14a8a8;
   --ifm-color-primary-darkest: #118a8a;
@@ -8,11 +8,11 @@
   --ifm-color-primary-lightest: #36e5e5;
   --ifm-navbar-background-color: #1b2540;
   --ifm-navbar-link-color: #ffffff;
-  --ifm-navbar-link-hover-color: #19C6C6;
+  --ifm-navbar-link-hover-color: #19c6c6;
   --ifm-footer-background-color: #1b2540;
   --ifm-footer-color: #ffffff;
   --ifm-footer-link-color: #adb5bd;
-  --ifm-footer-link-hover-color: #19C6C6;
+  --ifm-footer-link-hover-color: #19c6c6;
 }
 
 /* ===== HOMEPAGE HERO ===== */
@@ -35,13 +35,15 @@
 }
 
 .homeContainer .projectTitle .lead {
-  color: #19C6C6;
+  color: #19c6c6;
 }
 
 /* CTA buttons on hero */
-.pluginWrapper.buttonWrapper {
-  display: inline-block;
-  margin: 0 8px;
+.promoSection .promoRow .pluginRowBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .homeContainer .button,
@@ -55,15 +57,18 @@
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s;
   text-decoration: none !important;
   display: inline-block;
 }
 
 .homeContainer .button:hover,
 .heroCover .button:hover {
-  background: #19C6C6;
-  border-color: #19C6C6;
+  background: #19c6c6;
+  border-color: #19c6c6;
   color: #1b2540;
 }
 
@@ -74,12 +79,12 @@
 }
 
 #features .blockContent h2 {
-  color: #19C6C6;
+  color: #19c6c6;
   font-size: 1.1rem;
 }
 
 #features .blockContent h2 a {
-  color: #19C6C6;
+  color: #19c6c6;
   text-decoration: none;
 }
 
@@ -123,7 +128,7 @@
   max-width: 480px;
   width: 100%;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 
 .blockContent h2 {
@@ -191,7 +196,7 @@
 }
 
 .button-filled:hover {
-  background: #19C6C6;
+  background: #19c6c6;
   color: #1b2540 !important;
 }
 
@@ -208,5 +213,11 @@
 
   .homeContainer .projectTitle {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .promoSection .promoRow .pluginRowBlock {
+    gap: 10px;
   }
 }
