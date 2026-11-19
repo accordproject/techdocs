@@ -53,7 +53,7 @@ npm install -g lerna@^3.15.0
 Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript and Node.js and has a rich ecosystem of extensions for other languages (such Ergo). 
  
 Follow the platform specific guides below:
-See, https://code.visualstudio.com/docs/setup/
+See, https://code.visualstudio.com/docs/getstarted/overview
 * macOS
 * Linux
 * Windows
