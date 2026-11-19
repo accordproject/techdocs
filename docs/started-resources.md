@@ -24,7 +24,7 @@ Accord Project is also developing tools to help with authoring, testing and runn
 ### Editors
 
 - [Template Playground](https://playground.accordproject.org): a Web-based editor for Accord Project templates
-- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/) Editor
+- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=accordproject.concerto-vscode-extension): an Accord Project extension to the popular [Visual Studio Code](https://visualstudio.microsoft.com/) Editor
 
 ### User Interface Components
 
