@@ -202,6 +202,17 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .promoSection .promoRow .pluginRowBlock {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .promoSection .promoRow .pluginRowBlock .pluginWrapper,
+  .promoSection .promoRow .pluginRowBlock .button {
+    width: 100%;
+  }
+
   .blockElement.imageAlignRight,
   .blockElement.imageAlignLeft {
     flex-direction: column;
@@ -213,11 +224,5 @@
 
   .homeContainer .projectTitle {
     font-size: 2rem;
-  }
-}
-
-@media (max-width: 390px) {
-  .promoSection .promoRow .pluginRowBlock {
-    gap: 10px;
   }
 }
