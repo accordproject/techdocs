@@ -1,5 +1,5 @@
 :root {
-  --ifm-color-primary: #19c6c6;
+  --ifm-color-primary: #19C6C6;
   --ifm-color-primary-dark: #16b2b2;
   --ifm-color-primary-darker: #14a8a8;
   --ifm-color-primary-darkest: #118a8a;
@@ -8,11 +8,11 @@
   --ifm-color-primary-lightest: #36e5e5;
   --ifm-navbar-background-color: #1b2540;
   --ifm-navbar-link-color: #ffffff;
-  --ifm-navbar-link-hover-color: #19c6c6;
+  --ifm-navbar-link-hover-color: #19C6C6;
   --ifm-footer-background-color: #1b2540;
   --ifm-footer-color: #ffffff;
   --ifm-footer-link-color: #adb5bd;
-  --ifm-footer-link-hover-color: #19c6c6;
+  --ifm-footer-link-hover-color: #19C6C6;
 }
 
 /* ===== HOMEPAGE HERO ===== */
@@ -35,7 +35,7 @@
 }
 
 .homeContainer .projectTitle .lead {
-  color: #19c6c6;
+  color: #19C6C6;
 }
 
 /* CTA buttons on hero */
@@ -67,8 +67,8 @@
 
 .homeContainer .button:hover,
 .heroCover .button:hover {
-  background: #19c6c6;
-  border-color: #19c6c6;
+  background: #19C6C6;
+  border-color: #19C6C6;
   color: #1b2540;
 }
 
@@ -79,12 +79,12 @@
 }
 
 #features .blockContent h2 {
-  color: #19c6c6;
+  color: #19C6C6;
   font-size: 1.1rem;
 }
 
 #features .blockContent h2 a {
-  color: #19c6c6;
+  color: #19C6C6;
   text-decoration: none;
 }
 
@@ -196,7 +196,7 @@
 }
 
 .button-filled:hover {
-  background: #19c6c6;
+  background: #19C6C6;
   color: #1b2540 !important;
 }
 
