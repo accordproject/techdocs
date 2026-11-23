@@ -57,7 +57,7 @@
   font-weight: 600;
   text-transform: uppercase;
   cursor: pointer;
- transition: background 0.3s, color 0.3s, border-color 0.3s;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
   text-decoration: none !important;
   display: inline-block;
 }
