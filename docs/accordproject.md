@@ -37,7 +37,7 @@ If you are building agentic commerce experiences — payment orchestration, chec
 
 ### For developers
 
-Accord Project is open source and welcomes contributions from anyone. The stack includes a [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=accordproject.cicero-vscode-extension), the [APAP agreement server](https://github.com/accordproject/apap), and a command line interface for working with contracts. You can integrate contracts into existing applications, build new ones, or author contract logic in TypeScript.
+Accord Project is open source and welcomes contributions from anyone. The stack includes a [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=accordproject.concerto-vscode-extension), the [APAP agreement server](https://github.com/accordproject/apap), and a command line interface for working with contracts. You can integrate contracts into existing applications, build new ones, or author contract logic in TypeScript.
 
 If you are building AI agents or LLM-powered applications, Accord Project templates provide a structured, validated, and legally meaningful data layer. Templates can be invoked via the [APAP REST API](ref-apap.md) — including a **Model Context Protocol (MCP) endpoint** — so your agent can author, validate, and execute contracts as tool calls. The [Concerto](https://concerto.accordproject.org/docs/intro) schema language provides a type-safe wire format that significantly reduces hallucination risk in agent-generated contract data. See the [AI & Agent Workflows](accordproject-ai.md) guide for details.
 
