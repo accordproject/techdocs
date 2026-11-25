@@ -55,7 +55,7 @@ Contracting is undergoing a digital transformation driven by the need to deliver
 
 If you are new to Accord Project, start with [Smart Legal Contracts](accordproject-slc.md) and [Templates](accordproject-template.md), then [try it in your browser](started-playground.md). For AI and agent integration, see the [AI & Agent Workflows](accordproject-ai.md) guide; for how Accord Project positions in the agentic commerce stack, see [Agentic Commerce](accordproject-agentic-commerce.md).
 
-To start using Accord Project templates, follow the [Install Cicero](https://docs.accordproject.org/docs/next/started-installation.html) instructions in the _Getting Started_ section.
+To start using Accord Project templates, follow the [Install Cicero](started-installation.md) instructions in the _Getting Started_ section.
 
 In-depth guides for the components of a template are in the _Template Guides_ section:
 - Learn how to write contract or template text in the [Markdown Text](markup-preliminaries.md) guide
