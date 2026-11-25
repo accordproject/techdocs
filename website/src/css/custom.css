@@ -39,9 +39,11 @@
 }
 
 /* CTA buttons on hero */
-.pluginWrapper.buttonWrapper {
-  display: inline-block;
-  margin: 0 8px;
+.promoSection .promoRow .pluginRowBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .homeContainer .button,
@@ -197,6 +199,17 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .promoSection .promoRow .pluginRowBlock {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .promoSection .promoRow .pluginRowBlock .pluginWrapper,
+  .promoSection .promoRow .pluginRowBlock .button {
+    width: 100%;
+  }
+
   .blockElement.imageAlignRight,
   .blockElement.imageAlignLeft {
     flex-direction: column;
